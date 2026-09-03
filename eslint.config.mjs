@@ -19,9 +19,9 @@ const eslintConfig = defineConfig([
   {
     // CLAUDE.md §12.4f rule 36 — the public component tree may never reach
     // admin code. This boundary is what keeps the live preview honest
-    // (docs/ARCHITECTURE.md §21.2). On this machine node_modules is hoisted
-    // (exFAT), so pnpm's strictness does NOT back this up: the rule is the
-    // only enforcement. It is not optional.
+    // (docs/ARCHITECTURE.md §21.2). pnpm's isolated linker guards against
+    // phantom dependencies generally; this rule is what forbids the specific
+    // public -> admin edge. It is not optional.
     files: ["src/components/public/**/*.{ts,tsx}"],
     rules: {
       "no-restricted-imports": [

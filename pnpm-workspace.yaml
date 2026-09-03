@@ -1,12 +1,3 @@
-# The D: drive is exFAT, which does not support symlinks. pnpm's default
-# (isolated) linker requires them, so this project uses the hoisted linker.
-#
-# Trade-off (docs/INITIALIZATION.md §3): hoisted node_modules loses pnpm's
-# strict phantom-dependency protection. The components/public -> components/admin
-# import boundary (CLAUDE.md §12.4f rule 36) must therefore be enforced by the
-# ESLint no-restricted-imports rule, which is not optional.
-nodeLinker: hoisted
-
 allowBuilds:
   # esbuild links its platform binary at install time; Vitest needs it.
   esbuild: true
