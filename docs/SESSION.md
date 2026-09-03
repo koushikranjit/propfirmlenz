@@ -51,46 +51,51 @@ Remaining `[OPEN]` items are non-blocking and each carries a stated default.
 
 ## Application implementation
 
-**Phase 1 / Stage 1 (Database + Application Foundation) COMPLETE — 2026-09-04.**
+**Phase 1 / Stage 1 (Database + Foundation) COMPLETE — 2026-09-04.**
+**Phase 1 / Stage 2 (Admin auth + shell + firm workspace) COMPLETE — 2026-09-04.**
 
-Built:
+Stage 1 built the schema (26 tables, 1 migration), draft/publish, public/admin
+repository isolation, Argon2id + DB sessions, RBAC, affiliate tracking and the SEO
+foundation.
 
-- **26 tables** — the 23 enumerated entities plus `rule_values`, `firm_platforms`,
-  `firm_instruments` (the junction/EAV tables `DATABASE.md` §5.4–5.6 specifies).
-  67 CHECK constraints, 20 partial unique indexes, UUIDv7 keys, soft delete,
-  `numeric` money paired with its source currency, **no converted-money columns**.
-- **One migration** (`drizzle/0000_*.sql`, 628 lines) with hand-authored additions:
-  `citext` + `pg_trgm` extensions, trigram indexes, and append-only triggers on
-  `audit_logs` / `entity_versions`. **No `drizzle-kit push`, no `db:push` script.**
-- **Draft/publish** — `draft_payload` envelope, Zod-validated on every save,
-  `baseVersion` optimistic concurrency, publish in one transaction (apply → snapshot
-  → audit → clear draft), rollback into the draft, auto-301 on slug change.
-- **Public/admin isolation** — the public repository selects explicit column lists
-  that omit `draft_payload` and every admin-only field, so draft data is
-  structurally unable to leak.
-- **Auth** — Argon2id hashing, DB-backed sessions with hashed opaque tokens, idle +
-  absolute expiry, logout, revoke-all, immediate invalidation on suspend.
-- **RBAC** — permission catalog, 6 system roles, deny-by-default `requirePermission`.
-- **Affiliate** — link resolution (campaign → default), click recording with hashed
-  IP/UA, `is_internal` as secondary protection, inert preview CTAs as the primary one.
-- **SEO foundation** — `canonicalUrl()`, metadata builders, breadcrumb + Organization
-  JSON-LD, robots, sitemap shell, reserved-segment guard.
-- **87 tests** across 5 files, integration tests against **real PostgreSQL**.
+Stage 2 built, on top of it:
+
+- **Admin auth flow** — login page, session cookie (`__Host-` prefixed, httpOnly,
+  SameSite=Lax), logout, generic failure message for every failure mode, failed-login
+  lockout. Reuses the Stage 1 Argon2id/session services; nothing was re-implemented.
+- **Route protection** — Edge middleware as a cheap early reject, plus
+  `requireAdmin` / `requireAdminPermission` on every route and every server action.
+  Open-redirect guard on the post-login `next` path.
+- **Admin shell** — sidebar grouped Prop Firms / Management / Content / SEO / System,
+  permission-filtered, off-canvas drawer below 1024px, global search, breadcrumbs.
+- **Dashboard** — live counts only. No fabricated statistics; honest empty states.
+- **Prop firm list** — server-side search, filter, sort and pagination, all
+  schema-validated with an allowlisted sort key and a capped page size.
+- **Create + workspace** — `/admin/prop-firms/{id}`, 20 tabs with Overview / Company /
+  Branding / Verification implemented and the rest honestly marked not implemented.
+- **Draft workflow** — Save Draft / Publish / Discard wired to the Stage 1 service.
+  No draft logic was duplicated in the UI.
+- **Preview** — `/admin/preview/firms/{id}`: noindex, no-store, no canonical, no OG,
+  no JSON-LD, 404 to anonymous, inert affiliate CTA with no `/go/` href.
+- **Audit log viewer** — read-only, permission-gated, append-only preserved.
 
 Deliberately NOT built (awaiting approval):
 
-- ❌ No homepage, admin dashboard UI, or public firm pages
+- ❌ No public homepage, firm pages, challenge/review/payout pages, comparison UI
 - ❌ No business or prop-firm data of any kind
 - ❌ No Neon connection, no production credentials, no deployment
 
-### Integration-test deviation `[recorded 2026-09-04]`
+### Route change `[owner-directed 2026-09-04]`
 
-`ARCHITECTURE.md` §14 specifies a Neon branch or Testcontainers. Neither is
-available here (no Docker; connecting production Neon is forbidden), so integration
-tests use **PGlite** — real PostgreSQL 18.3 compiled to WASM, with `citext` and
-`pg_trgm` loaded. CHECK constraints, partial unique indexes, triggers, jsonb and
-transactions all behave as in production. Its one relevant limitation: single
-connection, so it cannot exercise pool behaviour.
+The admin firm workspace is **`/admin/prop-firms/{id}`**, not the previously
+documented `/admin/firms/{id}`. Directed by the owner; `ADMIN.md` §6 and
+`ARCHITECTURE.md` §22 were updated to match. The id-keyed rule itself is unchanged.
+
+### Phase-discipline note `[owner-directed 2026-09-04]`
+
+`ADMIN.md` §2.1 says Payouts and Reviews "do not appear before their phase". The owner
+asked for the full sidebar now, so those entries exist as **navigation only** and lead
+to honest "not implemented yet" pages. No Phase 2 or Phase 3 functionality was built.
 
 ---
 
@@ -377,3 +382,4 @@ canonical domain.
 | 2026-09-04 | **Project initialized.** Next.js 16.3.4 App Router, TS strict, Tailwind v4 + official tokens, Radix, Lucide, Zod, Drizzle config, Vitest/Playwright/axe/LHCI, pino, argon2. pnpm 11.25.0 via Corepack, Node 24.19.0. Logo PNGs copied checksum-verified. Git on `main`, 3 commits, no remote. **No schema, no migrations, no business data.** | typecheck ✅ lint ✅ test ✅ format ✅ · **build ❌ blocked by exFAT on D:** (verified building fine on NTFS) |
 | 2026-09-04 | **Migrated exFAT → NTFS.** Copied to `C:ProjectsProp Firm Lenz` with full git history; D: retained as backup. Removed `nodeLinker: hoisted`; **isolated linker restored and verified**. Fresh `pnpm install` (774 pkgs). | format ✅ typecheck ✅ lint ✅ test ✅ **build ✅ (5.0s)** dev ✅ (519ms) · logos checksum-identical |
 | 2026-09-04 | **Phase 1 Stage 1: database + application foundation.** 26 tables, 1 migration (67 CHECKs, append-only triggers), draft/publish with optimistic concurrency, public/admin repository isolation, Argon2id + DB sessions, RBAC, affiliate tracking, SEO foundation. Added `uuid` (UUIDv7) and `@electric-sql/pglite` (real-Postgres tests). | format ✅ typecheck ✅ lint ✅ **87 tests ✅** build ✅ db:check ✅ |
+| 2026-09-04 | **Phase 1 Stage 2: admin auth, shell and prop firm workspace.** Login/logout, Edge middleware + per-route RBAC, sidebar shell, dashboard with live counts only, firm list with validated server-side query, create + id-keyed workspace, draft/publish/discard wired to the Stage 1 service, preview route (noindex, no canonical/OG/JSON-LD, 404 anonymous, inert affiliate CTA), audit log viewer. No new dependencies. | format ✅ typecheck ✅ lint ✅ **120 tests ✅** build ✅ (21 routes) db:check ✅ |

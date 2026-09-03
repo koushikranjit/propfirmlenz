@@ -1024,7 +1024,7 @@ Locked 2026-09-03.
 
 | Surface                                        | Key                          | Example                                                                          |
 | ---------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------- |
-| **Admin** — workspace, preview, all sub-routes | **`prop_firms.id` (UUIDv7)** | `/admin/firms/{id}`, `/admin/firms/{id}?tab=offers`, `/admin/preview/firms/{id}` |
+| **Admin** — workspace, preview, all sub-routes | **`prop_firms.id` (UUIDv7)** | `/admin/prop-firms/{id}`, `/admin/preview/firms/{id}` |
 | **Public** — every indexable page              | **slug**                     | `/prop-firms/{slug}`                                                             |
 | **Affiliate redirect**                         | slug                         | `/go/{slug}`                                                                     |
 

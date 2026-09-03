@@ -169,7 +169,7 @@ Archive · Delete (soft, dependency-checked — §14).
 
 ## 6. Firm workspace
 
-Opening `Lucid Prop` enters a dedicated workspace at **`/admin/firms/{id}`**. This is where an admin
+Opening `Lucid Prop` enters a dedicated workspace at **`/admin/prop-firms/{id}`**. This is where an admin
 spends nearly all of their time, so it is designed as a persistent context, not a form.
 
 **Admin routes are keyed by the stable database id, never the slug** (`ARCHITECTURE.md` §22)

@@ -19,15 +19,7 @@ const TOKEN_BYTES = 32;
 export const IDLE_TIMEOUT_MS = 8 * 60 * 60 * 1000;
 export const ABSOLUTE_TIMEOUT_MS = 30 * 24 * 60 * 60 * 1000;
 
-/** `__Host-` prefix requires Secure, path=/, and no Domain attribute. */
-export const SESSION_COOKIE_NAME = "__Host-pfl_admin_session";
-
-export const SESSION_COOKIE_OPTIONS = {
-  httpOnly: true,
-  secure: true,
-  sameSite: "lax",
-  path: "/",
-} as const;
+export { SESSION_COOKIE_NAME, SESSION_COOKIE_OPTIONS } from "./cookies";
 
 /**
  * Hashes a session token with the configured pepper.
