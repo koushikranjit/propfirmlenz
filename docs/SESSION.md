@@ -9,8 +9,8 @@
 
 **Phase 1** — Landing page UI + Master Dashboard + database + dynamic prop firm management.
 
-Phase 1 has **not started**. The project is in the documentation and architecture preparation stage
-that precedes it (`ROADMAP.md` Phase 0).
+**Phase 1 §1.1 (Foundation) is done** — the toolchain is initialized (2026-09-04). **No Phase 1
+feature work has started**, and none may start without explicit owner approval.
 
 ---
 
@@ -35,16 +35,15 @@ incidental and deliberate: the brand, package name (`prop-firm-lenz`), and domai
 **Documentation and architecture phase COMPLETE** — owner-confirmed 2026-09-03.
 **Pre-initialization cleanup COMPLETE** — 2026-09-03.
 **Brand migration to Prop Firm Lenz COMPLETE** — 2026-09-03.
-Application implementation not started; the repository remains documentation-only.
+**Project initialization COMPLETE** — 2026-09-04. The repository is now a working Next.js
+application skeleton with no features, no schema, and no business data.
 
 `CLAUDE.md` and the **nine** `docs/` files are written, cross-referenced, and consistency-checked.
-All 16 documentation defects found in the preflight review have been fixed.
+All 16 documentation defects found in the preflight review have been fixed. The architecture is
+fully locked; **no blocking architectural decision remains.**
 
-**Documentation review is complete and the architecture is fully locked.** On 2026-09-03 the owner
-approved 12 decisions and then locked 13 more, including the draft model. **No blocking
-architectural decision remains.**
-
-**The only outstanding gate is explicit owner approval to initialise the project.**
+**The one outstanding blocker is environmental, not architectural:** the `D:` drive is exFAT, which
+prevents `pnpm build` from completing in place (see "Blocker" below).
 
 Remaining `[OPEN]` items are non-blocking and each carries a stated default.
 
