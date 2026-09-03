@@ -51,26 +51,46 @@ Remaining `[OPEN]` items are non-blocking and each carries a stated default.
 
 ## Application implementation
 
-**Initialized 2026-09-04.** Toolchain only — no features, no schema, no business data.
+**Phase 1 / Stage 1 (Database + Application Foundation) COMPLETE — 2026-09-04.**
 
-Present:
+Built:
 
-- ✅ Next.js 16.3.4 App Router · React 19.2.8 · TypeScript 5.9.3 strict (+7 extra strict flags)
-- ✅ Tailwind CSS v4.3.3 with the official tokens in `src/styles/tokens.css`
-- ✅ Radix UI 1.6.7 · Lucide 1.39.0 · Zod 4.5.4 · Inter via `next/font`
-- ✅ Drizzle ORM 0.45.2 + drizzle-kit 0.31.10 — **configuration only**
-- ✅ Vitest 4.1.11 · Playwright 1.62.1 · axe 4.13.0 · Lighthouse CI 0.15.1
-- ✅ pino 10.3.1 · @node-rs/argon2 2.2.0
-- ✅ Git on `main`, 3 commits, no remote
-- ✅ Official logo PNGs in `public/brand/` (checksum-verified unmodified)
+- **26 tables** — the 23 enumerated entities plus `rule_values`, `firm_platforms`,
+  `firm_instruments` (the junction/EAV tables `DATABASE.md` §5.4–5.6 specifies).
+  67 CHECK constraints, 20 partial unique indexes, UUIDv7 keys, soft delete,
+  `numeric` money paired with its source currency, **no converted-money columns**.
+- **One migration** (`drizzle/0000_*.sql`, 628 lines) with hand-authored additions:
+  `citext` + `pg_trgm` extensions, trigram indexes, and append-only triggers on
+  `audit_logs` / `entity_versions`. **No `drizzle-kit push`, no `db:push` script.**
+- **Draft/publish** — `draft_payload` envelope, Zod-validated on every save,
+  `baseVersion` optimistic concurrency, publish in one transaction (apply → snapshot
+  → audit → clear draft), rollback into the draft, auto-301 on slug change.
+- **Public/admin isolation** — the public repository selects explicit column lists
+  that omit `draft_payload` and every admin-only field, so draft data is
+  structurally unable to leak.
+- **Auth** — Argon2id hashing, DB-backed sessions with hashed opaque tokens, idle +
+  absolute expiry, logout, revoke-all, immediate invalidation on suspend.
+- **RBAC** — permission catalog, 6 system roles, deny-by-default `requirePermission`.
+- **Affiliate** — link resolution (campaign → default), click recording with hashed
+  IP/UA, `is_internal` as secondary protection, inert preview CTAs as the primary one.
+- **SEO foundation** — `canonicalUrl()`, metadata builders, breadcrumb + Organization
+  JSON-LD, robots, sitemap shell, reserved-segment guard.
+- **87 tests** across 5 files, integration tests against **real PostgreSQL**.
 
-Deliberately absent:
+Deliberately NOT built (awaiting approval):
 
-- ❌ No database schema, no migrations, no tables, no Neon connection
-- ❌ No `db:push` script; `drizzle-kit push` prohibited
+- ❌ No homepage, admin dashboard UI, or public firm pages
 - ❌ No business or prop-firm data of any kind
-- ❌ No landing page, admin dashboard, or UI components
-- ❌ No production credentials (`.env.example` holds names only)
+- ❌ No Neon connection, no production credentials, no deployment
+
+### Integration-test deviation `[recorded 2026-09-04]`
+
+`ARCHITECTURE.md` §14 specifies a Neon branch or Testcontainers. Neither is
+available here (no Docker; connecting production Neon is forbidden), so integration
+tests use **PGlite** — real PostgreSQL 18.3 compiled to WASM, with `citext` and
+`pg_trgm` loaded. CHECK constraints, partial unique indexes, triggers, jsonb and
+transactions all behave as in production. Its one relevant limitation: single
+connection, so it cannot exercise pool behaviour.
 
 ---
 
@@ -356,3 +376,4 @@ canonical domain.
 | 2026-09-03 | **Brand migration to Prop Firm Lenz.** 45 brand + 21 domain references migrated across all 10 files; npm package name → `prop-firm-lenz`. Official logo PNGs recorded as authoritative. Official palette locked in `DESIGN.md` §2.3 with **all 48 foreground/background pairings computed** and three binding usage constraints derived (§2.5). Added `INITIALIZATION.md` §0a (brand/domain/assets) and border tokens. Two literal filesystem paths deliberately left at the pre-rename spelling                                                                        | Brand consistent; accessibility measured, not assumed. **Still documentation-only — no code, no dependencies, no Git, no database.** Awaiting approval to initialise |
 | 2026-09-04 | **Project initialized.** Next.js 16.3.4 App Router, TS strict, Tailwind v4 + official tokens, Radix, Lucide, Zod, Drizzle config, Vitest/Playwright/axe/LHCI, pino, argon2. pnpm 11.25.0 via Corepack, Node 24.19.0. Logo PNGs copied checksum-verified. Git on `main`, 3 commits, no remote. **No schema, no migrations, no business data.** | typecheck ✅ lint ✅ test ✅ format ✅ · **build ❌ blocked by exFAT on D:** (verified building fine on NTFS) |
 | 2026-09-04 | **Migrated exFAT → NTFS.** Copied to `C:ProjectsProp Firm Lenz` with full git history; D: retained as backup. Removed `nodeLinker: hoisted`; **isolated linker restored and verified**. Fresh `pnpm install` (774 pkgs). | format ✅ typecheck ✅ lint ✅ test ✅ **build ✅ (5.0s)** dev ✅ (519ms) · logos checksum-identical |
+| 2026-09-04 | **Phase 1 Stage 1: database + application foundation.** 26 tables, 1 migration (67 CHECKs, append-only triggers), draft/publish with optimistic concurrency, public/admin repository isolation, Argon2id + DB sessions, RBAC, affiliate tracking, SEO foundation. Added `uuid` (UUIDv7) and `@electric-sql/pglite` (real-Postgres tests). | format ✅ typecheck ✅ lint ✅ **87 tests ✅** build ✅ db:check ✅ |

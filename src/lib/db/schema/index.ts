@@ -1,8 +1,13 @@
 /**
- * Drizzle schema root.
+ * Drizzle schema root — docs/DATABASE.md.
  *
- * DELIBERATELY EMPTY. Schema authoring is a separate, owner-gated step
- * (docs/INITIALIZATION.md §11 step B). No tables, no migrations, no business
- * data are created during initialization.
+ * The single TypeScript source of truth for table types. Only repositories
+ * import from here (docs/ARCHITECTURE.md §4.1); services and components never do.
  */
-export {};
+export * from "./columns";
+export * from "./identity";
+export * from "./media";
+export * from "./firms";
+export * from "./catalog";
+export * from "./commerce";
+export * from "./system";
