@@ -33,6 +33,10 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# .env.example is the environment CONTRACT (names only, never values).
+# It must be committed — docs/INITIALIZATION.md §8.
+!.env.example
+
 # vercel
 .vercel
 
