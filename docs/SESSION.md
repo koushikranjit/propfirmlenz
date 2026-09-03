@@ -74,37 +74,50 @@ Deliberately absent:
 
 ---
 
-## ⚠ Blocker — the D: drive is exFAT
+## ✅ Resolved — migrated from exFAT to NTFS `[2026-09-04]`
 
-**`pnpm build` cannot complete in `D:\Projects\Prop Firm Lens`.** Verified by experiment: the
-identical commit builds successfully when copied to NTFS.
+The exFAT build blocker is **fixed**. The project was **copied** (not moved) to NTFS:
 
-| Bundler | Failure on exFAT |
+| | |
 | --- | --- |
-| Turbopack (default) | `os error 1450` — insufficient system resources reading `node_modules` |
-| webpack (`--webpack`) | `EISDIR ... readlink` — exFAT has no symlinks, so `readlink` returns the wrong errno |
+| **Working location** | `C:ProjectsProp Firm Lenz` (NTFS) |
+| Original | `D:ProjectsProp Firm Lens` (exFAT) — **retained untouched as a backup** |
+| Git history | Preserved in full — 5 commits, branch `main`, `git fsck` clean |
 
-Workarounds already applied: pnpm `nodeLinker: hoisted`, bundler pinned to `--webpack`,
-`git config --global --add safe.directory` (exFAT records no ownership). These made install,
-typecheck, lint, test and commit work — **but not the build.**
+**exFAT workarounds removed**, since they existed only for that filesystem:
 
-**Resolution requires an owner decision** (both are outside a documentation/init task):
+- `nodeLinker: hoisted` deleted from `pnpm-workspace.yaml` — the **isolated linker is restored**,
+  verified: `.pnpm` store with 774 entries, 26 symlinked top-level entries, and transitive deps
+  (`postcss`, `scheduler`) correctly hidden. **Phantom-dependency protection is back**, so the
+  ESLint import boundary is no longer the sole defence.
+- The `.npmrc` and the exFAT comment in `eslint.config.mjs` are gone.
 
-1. **Move the project to the NTFS `C:` drive** — recommended, non-destructive, ~349 GB free.
-2. Reformat `D:` to NTFS — **destructive**, would erase the drive.
+**Retained deliberately:** `next build --webpack`. That was the documented choice in
+`INITIALIZATION.md` §4 ("prove the toolchain on stable webpack; opt in later"), not an exFAT
+workaround. Turbopack remains an explicit future opt-in.
 
-Until then: `dev`, `build`, and `start` do not work on `D:`. Everything else does.
+`git config --global --add safe.directory` for the D: path is retained — the D: copy still exists
+and would otherwise be unusable.
+
+**Build now succeeds** (5.0s, 5 routes) and the dev server starts in 519ms.
+
+### Note: `CLAUDE.md` carries a Next.js-generated block
+
+`next dev` appends a `<!-- BEGIN:nextjs-agent-rules -->` section to `CLAUDE.md` and **re-adds it
+automatically** if deleted. It is Next.js's text, **not owner-authored policy**, and it is committed
+only to keep the working tree clean. It can be suppressed by patching
+`node_modules/next/dist/server/lib/generate-agent-files.js`, which is not recommended.
 
 ---
 
 ## Next step
 
-**Owner decides how to resolve the exFAT blocker**, then Phase 1 §1.1 continues.
+**Owner approves Phase 1 feature work.** The toolchain is initialized and fully verified on NTFS.
 
 1. ✅ Documentation, architecture, brand migration — complete 2026-09-03.
 2. ✅ Git identity configured (`Koushik <koushikranjit8@gmail.com>`).
 3. ✅ Initialization executed — complete 2026-09-04.
-4. ⬜ **Resolve the exFAT build blocker** (move to `C:`, or reformat `D:`).
+4. ✅ exFAT build blocker resolved — migrated to NTFS 2026-09-04.
 5. ⬜ Owner approves Phase 1 feature work.
 
 Schema authoring (`INITIALIZATION.md` §11 step B) remains a **separate gated step**.
@@ -342,3 +355,4 @@ canonical domain.
 | 2026-09-03 | **Pre-initialization cleanup.** Applied 6 owner decisions (Node 24, pnpm, admin-by-id, DB conventions, rollup fix, defect fixes). Fixed all 16 defects. Added `ARCHITECTURE.md` §22 (identifier strategy) and `DATABASE.md` §5.10b (rollup semantics). Created `docs/INITIALIZATION.md`                                                                                                                                                                                                                                                                                 | Documentation clean and consistent. **Still documentation-only**                                                                                                     |
 | 2026-09-03 | **Brand migration to Prop Firm Lenz.** 45 brand + 21 domain references migrated across all 10 files; npm package name → `prop-firm-lenz`. Official logo PNGs recorded as authoritative. Official palette locked in `DESIGN.md` §2.3 with **all 48 foreground/background pairings computed** and three binding usage constraints derived (§2.5). Added `INITIALIZATION.md` §0a (brand/domain/assets) and border tokens. Two literal filesystem paths deliberately left at the pre-rename spelling                                                                        | Brand consistent; accessibility measured, not assumed. **Still documentation-only — no code, no dependencies, no Git, no database.** Awaiting approval to initialise |
 | 2026-09-04 | **Project initialized.** Next.js 16.3.4 App Router, TS strict, Tailwind v4 + official tokens, Radix, Lucide, Zod, Drizzle config, Vitest/Playwright/axe/LHCI, pino, argon2. pnpm 11.25.0 via Corepack, Node 24.19.0. Logo PNGs copied checksum-verified. Git on `main`, 3 commits, no remote. **No schema, no migrations, no business data.** | typecheck ✅ lint ✅ test ✅ format ✅ · **build ❌ blocked by exFAT on D:** (verified building fine on NTFS) |
+| 2026-09-04 | **Migrated exFAT → NTFS.** Copied to `C:ProjectsProp Firm Lenz` with full git history; D: retained as backup. Removed `nodeLinker: hoisted`; **isolated linker restored and verified**. Fresh `pnpm install` (774 pkgs). | format ✅ typecheck ✅ lint ✅ test ✅ **build ✅ (5.0s)** dev ✅ (519ms) · logos checksum-identical |
