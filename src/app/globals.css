@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+/* Map design tokens onto Tailwind utilities so components never use raw hex. */
+@theme inline {
+  --color-bg-base: var(--bg-base);
+  --color-bg-near-black: var(--bg-near-black);
+  --color-bg-card: var(--bg-card);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-purple-deep: var(--bg-purple-deep);
+  --color-bg-violet-deep: var(--bg-violet-deep);
+
+  --color-border-subtle: var(--border-subtle);
+  --color-border-default: var(--border-default);
+  --color-border-strong: var(--border-strong);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-metadata: var(--text-metadata);
+
+  --color-brand-cyan: var(--brand-cyan);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-indigo: var(--brand-indigo);
+  --color-brand-violet: var(--brand-violet);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+  --color-unknown: var(--unknown);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+/* docs/DESIGN.md §9 — motion is never required to understand content. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

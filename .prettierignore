@@ -1,0 +1,12 @@
+.next
+node_modules
+pnpm-lock.yaml
+coverage
+playwright-report
+test-results
+drizzle
+public
+
+# Documentation is hand-formatted and is the project's primary artifact.
+# Prettier reflows tables and rewrites emphasis markers; keep it out.
+*.md
