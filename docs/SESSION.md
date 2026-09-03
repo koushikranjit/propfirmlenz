@@ -52,39 +52,63 @@ Remaining `[OPEN]` items are non-blocking and each carries a stated default.
 
 ## Application implementation
 
-**Not started.**
+**Initialized 2026-09-04.** Toolchain only — no features, no schema, no business data.
 
-Confirmed absent from the project — deliberately, per instruction:
+Present:
 
-- ❌ No framework initialised (no Next.js, no `package.json`)
-- ❌ No dependencies installed (no `node_modules`)
-- ❌ No Git repository
-- ❌ No database, no schema, no ORM files (no Prisma, no Drizzle)
-- ❌ No application code
-- ❌ No UI components
-- ❌ No landing page
-- ❌ No admin dashboard
+- ✅ Next.js 16.3.4 App Router · React 19.2.8 · TypeScript 5.9.3 strict (+7 extra strict flags)
+- ✅ Tailwind CSS v4.3.3 with the official tokens in `src/styles/tokens.css`
+- ✅ Radix UI 1.6.7 · Lucide 1.39.0 · Zod 4.5.4 · Inter via `next/font`
+- ✅ Drizzle ORM 0.45.2 + drizzle-kit 0.31.10 — **configuration only**
+- ✅ Vitest 4.1.11 · Playwright 1.62.1 · axe 4.13.0 · Lighthouse CI 0.15.1
+- ✅ pino 10.3.1 · @node-rs/argon2 2.2.0
+- ✅ Git on `main`, 3 commits, no remote
+- ✅ Official logo PNGs in `public/brand/` (checksum-verified unmodified)
 
-The repository contains **documentation only**.
+Deliberately absent:
+
+- ❌ No database schema, no migrations, no tables, no Neon connection
+- ❌ No `db:push` script; `drizzle-kit push` prohibited
+- ❌ No business or prop-firm data of any kind
+- ❌ No landing page, admin dashboard, or UI components
+- ❌ No production credentials (`.env.example` holds names only)
+
+---
+
+## ⚠ Blocker — the D: drive is exFAT
+
+**`pnpm build` cannot complete in `D:\Projects\Prop Firm Lens`.** Verified by experiment: the
+identical commit builds successfully when copied to NTFS.
+
+| Bundler | Failure on exFAT |
+| --- | --- |
+| Turbopack (default) | `os error 1450` — insufficient system resources reading `node_modules` |
+| webpack (`--webpack`) | `EISDIR ... readlink` — exFAT has no symlinks, so `readlink` returns the wrong errno |
+
+Workarounds already applied: pnpm `nodeLinker: hoisted`, bundler pinned to `--webpack`,
+`git config --global --add safe.directory` (exFAT records no ownership). These made install,
+typecheck, lint, test and commit work — **but not the build.**
+
+**Resolution requires an owner decision** (both are outside a documentation/init task):
+
+1. **Move the project to the NTFS `C:` drive** — recommended, non-destructive, ~349 GB free.
+2. Reformat `D:` to NTFS — **destructive**, would erase the drive.
+
+Until then: `dev`, `build`, and `start` do not work on `D:`. Everything else does.
 
 ---
 
 ## Next step
 
-**Explicit owner approval to execute `docs/INITIALIZATION.md`.**
+**Owner decides how to resolve the exFAT blocker**, then Phase 1 §1.1 continues.
 
-1. ✅ Owner reviews `CLAUDE.md` and all `docs/` files — complete 2026-09-03.
-2. ✅ All blocking architectural decisions resolved — complete 2026-09-03.
-3. ✅ Pre-initialization cleanup — complete 2026-09-03.
-4. ⬜ **Owner sets Git identity** — `user.name` and `user.email` are still **UNSET**;
-   `git commit` will fail without them (`INITIALIZATION.md` §1.2).
-5. ⬜ **Owner approves execution of `INITIALIZATION.md`.**
-6. Only then: Corepack/pnpm activation, Next.js scaffold, dependencies, Git init, first commit.
+1. ✅ Documentation, architecture, brand migration — complete 2026-09-03.
+2. ✅ Git identity configured (`Koushik <koushikranjit8@gmail.com>`).
+3. ✅ Initialization executed — complete 2026-09-04.
+4. ⬜ **Resolve the exFAT build blocker** (move to `C:`, or reformat `D:`).
+5. ⬜ Owner approves Phase 1 feature work.
 
-Initialization deliberately stops **before** any schema, migration, or business data
-(`INITIALIZATION.md` §0, §11). Schema authoring is a separate gated step.
-
-On approval, Phase 1 begins at `ROADMAP.md` §1.1 (Foundation).
+Schema authoring (`INITIALIZATION.md` §11 step B) remains a **separate gated step**.
 
 ---
 
@@ -125,7 +149,20 @@ On approval, Phase 1 begins at `ROADMAP.md` §1.1 (Foundation).
 
 ## In progress
 
-Nothing. Architecture complete and locked; documentation clean; awaiting approval to initialise.
+Nothing. Initialization complete; blocked on the exFAT filesystem decision before `pnpm build`
+can run in place.
+
+### Deviations from `INITIALIZATION.md`, and why `[recorded 2026-09-04]`
+
+| # | Documented | Actual | Reason |
+| --- | --- | --- | --- |
+| 1 | `create-next-app . --no-turbopack` | Scaffolded in scratchpad, then copied | The folder name `Prop Firm Lens` is not a valid npm package name, so `.` was rejected. This is the §4 documented fallback |
+| 2 | `--no-turbopack` flag | `next build --webpack` in the script | The flag no longer exists in create-next-app; `--webpack` on `next build` achieves the same intent |
+| 3 | `corepack enable` | `corepack enable --install-directory <user dir>` | Writing shims to `C:\Program Files\nodejs` needs admin rights |
+| 4 | pnpm default (isolated) linker | `nodeLinker: hoisted` | exFAT has no symlinks. **Cost: pnpm's phantom-dependency protection is lost**, so the `components/public` → `components/admin` boundary rests entirely on the ESLint rule |
+| 5 | — | `git config --global --add safe.directory` | exFAT records no ownership; git refuses otherwise |
+| 6 | — | `*.md` added to `.prettierignore` | `pnpm format` reflowed all hand-formatted docs. Content verified intact; excluded going forward |
+| 7 | — | `.gitignore` negation `!.env.example` | The scaffold's `.env*` rule excluded the environment contract, which must be committed |
 
 ---
 
@@ -305,3 +342,4 @@ canonical domain.
 | 2026-09-03 | **Preflight review.** Read `CLAUDE.md` + all 8 `docs/` files completely; verified repository, git, and environment. Corrected an earlier incorrect claim that Node/Git were absent — both installed (Node **24.19.0**, Git **2.55.0**), simply not on the automation shell's PATH. Found **16 documentation defects**                                                                                                                                                                                                                                                   | Reported; no changes made                                                                                                                                            |
 | 2026-09-03 | **Pre-initialization cleanup.** Applied 6 owner decisions (Node 24, pnpm, admin-by-id, DB conventions, rollup fix, defect fixes). Fixed all 16 defects. Added `ARCHITECTURE.md` §22 (identifier strategy) and `DATABASE.md` §5.10b (rollup semantics). Created `docs/INITIALIZATION.md`                                                                                                                                                                                                                                                                                 | Documentation clean and consistent. **Still documentation-only**                                                                                                     |
 | 2026-09-03 | **Brand migration to Prop Firm Lenz.** 45 brand + 21 domain references migrated across all 10 files; npm package name → `prop-firm-lenz`. Official logo PNGs recorded as authoritative. Official palette locked in `DESIGN.md` §2.3 with **all 48 foreground/background pairings computed** and three binding usage constraints derived (§2.5). Added `INITIALIZATION.md` §0a (brand/domain/assets) and border tokens. Two literal filesystem paths deliberately left at the pre-rename spelling                                                                        | Brand consistent; accessibility measured, not assumed. **Still documentation-only — no code, no dependencies, no Git, no database.** Awaiting approval to initialise |
+| 2026-09-04 | **Project initialized.** Next.js 16.3.4 App Router, TS strict, Tailwind v4 + official tokens, Radix, Lucide, Zod, Drizzle config, Vitest/Playwright/axe/LHCI, pino, argon2. pnpm 11.25.0 via Corepack, Node 24.19.0. Logo PNGs copied checksum-verified. Git on `main`, 3 commits, no remote. **No schema, no migrations, no business data.** | typecheck ✅ lint ✅ test ✅ format ✅ · **build ❌ blocked by exFAT on D:** (verified building fine on NTFS) |
