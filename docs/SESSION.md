@@ -322,6 +322,28 @@ and caching with revalidation tags. **None may start without approval.**
 
 ---
 
+### Initial catalog seed `[owner-directed 2026-09-04]`
+
+`pnpm seed:firms` seeds eleven named firms through the REAL workflow — `createFirm` →
+staged draft → `publishFirm` — as an existing master admin. It is idempotent: firms match by
+slug, the LENZ offer matches by code, and a seed field is written only where the stored value is
+still empty, so a manual correction survives the next run.
+
+**The requested source could not be used.** propfirmmatch.com returns HTTP 403 to automated
+requests, and `CLAUDE.md` §12.2 rule 6 separately prohibits copying that competitor's data. Each
+firm's OWN website was used instead — primary, and no rule broken. Two firms (FundingPips,
+E8 Markets) block automated access too and are seeded as name-only drafts rather than filled from
+memory.
+
+Result: 9 published, 2 drafts, 35 fields filled, 25 platform links, 11 LENZ offers (9 published,
+2 staged with their firm). No challenges, rules, instruments, Trustpilot ratings, FAQs or
+announcements were written — the sources publish programme names and headline RANGES, not the
+per-challenge figures the schema needs, and a range is not a value.
+
+**The LENZ offer is placeholder data.** 10% has not been agreed with any firm; it exists so the
+offer component can be inspected with content in it, and it is editable in Admin without a code
+change. Set the real terms or remove it before launch.
+
 ### Core prop firm workflow locked `[owner-locked 2026-09-04]`
 
 The sixteen core fields are fixed (`ADMIN.md` §6.2). The primary editor is one page with
