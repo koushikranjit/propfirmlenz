@@ -161,3 +161,70 @@ export function parseFirmListQuery(
   const parsed = firmListQuerySchema.safeParse(flat);
   return parsed.success ? parsed.data : firmListQuerySchema.parse({});
 }
+
+/**
+ * THE SIMPLE EDITOR — docs/ADMIN.md §6.
+ *
+ * The handful of fields needed to get a firm listed and monetised. Everything
+ * else the schema holds stays editable under "Advanced"; nothing was removed
+ * from the data model, only from the default screen.
+ *
+ * Each field is genuinely optional except the name. A blank input means NOT
+ * SPECIFIED and is stored as NULL — never as an empty string, a zero, or a
+ * borrowed default (docs/PROJECT.md §6.5 `[LOCKED]`).
+ */
+export const firmEssentialsSchema = z.object({
+  name: z.string().trim().min(2, "A name is required.").max(200),
+  description: optionalText(20_000),
+  websiteUrl: optionalUrl,
+
+  /**
+   * The affiliate destination. Stored on the firm's affiliate link and NEVER
+   * exposed publicly: the public CTA points at `/go/{slug}`, which resolves it
+   * server-side (docs/ARCHITECTURE.md §11 `[LOCKED]`).
+   */
+  affiliateUrl: optionalUrl,
+
+  /** Where the firm publishes its own payout evidence. A link, not a figure. */
+  payoutInfoUrl: optionalUrl,
+
+  discountCode: optionalText(64),
+  discountPercent: z
+    .union([z.literal(""), z.coerce.number().min(0).max(100)])
+    .transform((v) => (v === "" ? null : v))
+    .nullable(),
+  /** `datetime-local`, read as UTC — see `firm-children.ts` for the reasoning. */
+  discountEndsAt: z
+    .string()
+    .trim()
+    .transform((v) => (v.length === 0 ? null : v))
+    .nullable()
+    .refine(
+      (v) =>
+        v === null ||
+        (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?$/.test(v) &&
+          !Number.isNaN(new Date(`${v}Z`).getTime())),
+      "Enter a valid date and time.",
+    )
+    .transform((v) => (v === null ? null : new Date(`${v}Z`).toISOString())),
+});
+
+export type FirmEssentialsInput = z.infer<typeof firmEssentialsSchema>;
+
+/**
+ * Derives a URL slug from a firm name.
+ *
+ * The simple editor does not ask for a slug — one fewer thing to think about
+ * when adding a firm. It stays editable under Advanced, and a rename after
+ * publishing still creates a 301 (docs/SEO.md §7).
+ */
+export function slugFromName(name: string): string {
+  return name
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 100)
+    .replace(/-+$/, "");
+}

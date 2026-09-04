@@ -29,6 +29,7 @@ function view(overrides: Partial<FirmView> = {}): FirmView {
     websiteUrl: null,
     supportEmail: null,
     supportUrl: null,
+    payoutInfoUrl: null,
     isVerified: false,
     verifiedAt: null,
     publishedAt: null,

@@ -69,6 +69,14 @@ export const propFirms = pgTable(
     websiteUrl: text("website_url"),
     supportEmail: text("support_email"),
     supportUrl: text("support_url"),
+    /**
+     * Where the firm publishes its own payout evidence or tracker.
+     *
+     * A LINK ONLY. Prop Firm Lenz stores no payout figures, no payout counts
+     * and no verification of them — payout tracking is Phase 2, and a number
+     * we cannot source is a fabricated business fact (CLAUDE.md §3).
+     */
+    payoutInfoUrl: text("payout_info_url"),
     logoMediaId: uuid("logo_media_id").references(() => media.id, {
       onDelete: "set null",
     }),

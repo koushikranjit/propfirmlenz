@@ -15,7 +15,20 @@ import {
   Textarea,
 } from "@/components/ui/primitives";
 
-/** Mirrors the server slug rule; the server remains authoritative. */
+/**
+ * ADD PROP FIRM — the fast path.
+ *
+ * A name and a short description, and the firm exists. Everything else the
+ * schema holds — company details, challenges, rules, platforms, instruments,
+ * offers, affiliate links, SEO — is entered afterwards in the workspace, where
+ * the simple fields sit on top and the structured data lives under Advanced.
+ *
+ * NO SLUG FIELD. It is derived from the name on the server and stays editable
+ * under Advanced: one less thing to think about while adding a firm, and a
+ * later rename still leaves a 301 behind (docs/SEO.md §7).
+ */
+
+/** Mirrors the server rule so the preview matches; the server is authoritative. */
 function slugify(value: string): string {
   return value
     .toLowerCase()
@@ -27,7 +40,7 @@ function Submit() {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" variant="primary" disabled={pending}>
-      {pending ? "Creating…" : "Create draft"}
+      {pending ? "Creating…" : "Create firm"}
     </Button>
   );
 }
@@ -38,14 +51,11 @@ export function CreateFirmForm() {
     {},
   );
   const [name, setName] = React.useState("");
-  const [slug, setSlug] = React.useState("");
-  const [slugTouched, setSlugTouched] = React.useState(false);
-
-  const effectiveSlug = slugTouched ? slug : slugify(name);
+  const slug = slugify(name);
 
   return (
     <form action={formAction}>
-      <Card className="flex flex-col gap-5 p-6">
+      <Card className="flex flex-col gap-5 p-5 sm:p-6">
         {state.error ? (
           <p
             role="alert"
@@ -57,10 +67,10 @@ export function CreateFirmForm() {
         ) : null}
 
         <Field
-          label="Firm name"
+          label="Prop firm name"
           htmlFor="name"
           required
-          error={state.fieldErrors?.name}
+          error={state.fieldErrors?.name ?? state.fieldErrors?.slug}
         >
           <Input
             id="name"
@@ -69,51 +79,33 @@ export function CreateFirmForm() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             aria-invalid={state.fieldErrors?.name ? true : undefined}
-            aria-describedby={
-              state.fieldErrors?.name ? "name-error" : undefined
-            }
           />
         </Field>
 
-        <Field
-          label="Slug"
-          htmlFor="slug"
-          required
-          hint="Used in the public URL: /prop-firms/{slug}. Lowercase, hyphenated."
-          error={state.fieldErrors?.slug}
-        >
-          <Input
-            id="slug"
-            name="slug"
-            required
-            value={effectiveSlug}
-            onChange={(e) => {
-              setSlugTouched(true);
-              setSlug(e.target.value);
-            }}
-            aria-invalid={state.fieldErrors?.slug ? true : undefined}
-            aria-describedby={
-              state.fieldErrors?.slug ? "slug-error" : "slug-hint"
-            }
-          />
-        </Field>
+        {slug ? (
+          <p className="-mt-2 text-xs text-text-muted">
+            Public URL will be{" "}
+            <code className="text-text-secondary">/prop-firms/{slug}</code>.
+            Editable later under Advanced.
+          </p>
+        ) : null}
 
         <Field
-          label="Description"
+          label="Short description"
           htmlFor="description"
-          hint="Optional now, but required before publishing. Leave blank if you have not researched it yet — do not guess."
+          hint="Optional now, required before publishing. Leave blank rather than guessing."
           error={state.fieldErrors?.description}
         >
-          <Textarea id="description" name="description" rows={5} />
+          <Textarea id="description" name="description" rows={4} />
         </Field>
 
-        <p className="text-xs text-text-metadata">
-          Everything else — country, website, founding year, branding — is left
-          unset and shown as &ldquo;Not specified&rdquo; until a human enters
-          it.
+        <p className="text-xs text-text-muted">
+          The next screen has the website, purchase link, discount and payout
+          link. Everything else stays optional and shows as &ldquo;Not
+          specified&rdquo; until a human enters it.
         </p>
 
-        <div className="flex gap-2">
+        <div>
           <Submit />
         </div>
       </Card>

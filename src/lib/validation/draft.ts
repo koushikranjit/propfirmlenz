@@ -60,6 +60,7 @@ export const draftFirmSchema = z
     websiteUrl: z.url().nullable().optional(),
     supportEmail: z.email().nullable().optional(),
     supportUrl: z.url().nullable().optional(),
+    payoutInfoUrl: z.url().nullable().optional(),
     logoMediaId: z.uuid().nullable().optional(),
     coverMediaId: z.uuid().nullable().optional(),
     brandColor: z

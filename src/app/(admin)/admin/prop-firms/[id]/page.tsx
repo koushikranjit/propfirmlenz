@@ -108,6 +108,8 @@ export default async function FirmWorkspacePage({
           websiteUrl: firm.websiteUrl,
           supportEmail: firm.supportEmail,
           supportUrl: firm.supportUrl,
+          payoutInfoUrl: firm.payoutInfoUrl,
+          hasLogo: firm.logoMediaId !== null,
           brandColor: firm.brandColor,
           isFeatured: firm.isFeatured,
           displayOrder: firm.displayOrder,

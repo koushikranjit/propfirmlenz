@@ -56,6 +56,18 @@ export function KeyFacts({ firm }: { firm: FirmView }) {
           </a>
         ) : null}
       </Fact>
+      <Fact label="Payout information">
+        {firm.payoutInfoUrl ? (
+          <a
+            href={firm.payoutInfoUrl}
+            rel="nofollow noopener"
+            target="_blank"
+            className="break-words text-brand-cyan underline underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
+          >
+            {displayHost(firm.payoutInfoUrl)}
+          </a>
+        ) : null}
+      </Fact>
       <Fact label="Published challenges">
         {firm.challenges.length > 0 ? String(firm.challenges.length) : null}
       </Fact>

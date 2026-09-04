@@ -6,7 +6,13 @@ import { z } from "zod";
 import { getDb } from "@/lib/db/client";
 import { requireAdmin } from "@/lib/auth/current-admin";
 import { AuthorizationError } from "@/lib/auth/permissions";
-import { createFirmSchema, editFirmSchema } from "@/lib/validation/firm";
+import {
+  createFirmSchema,
+  editFirmSchema,
+  firmEssentialsSchema,
+  slugFromName,
+} from "@/lib/validation/firm";
+import { UnsafeDestinationError, saveFirmEssentials } from "./firm-essentials";
 import {
   SlugConflictError,
   createFirm,
@@ -54,6 +60,12 @@ function toActionState(error: unknown): ActionState {
     }
     return { error: "Please correct the highlighted fields.", fieldErrors };
   }
+  if (error instanceof UnsafeDestinationError) {
+    return {
+      error: "Please correct the highlighted fields.",
+      fieldErrors: { affiliateUrl: error.message },
+    };
+  }
   if (error instanceof SlugConflictError) {
     return { error: error.message, fieldErrors: { slug: error.message } };
   }
@@ -85,9 +97,17 @@ export async function createFirmAction(
   let newId: string;
   try {
     const admin = await requireAdmin();
+    const rawName = formData.get("name");
+    const submittedSlug = formData.get("slug");
     const input = createFirmSchema.parse({
-      name: formData.get("name"),
-      slug: formData.get("slug"),
+      name: rawName,
+      // The simple form does not ask for a slug; it is derived from the name
+      // and stays editable under Advanced. A submitted slug still wins, so the
+      // Advanced path keeps working.
+      slug:
+        typeof submittedSlug === "string" && submittedSlug.trim().length > 0
+          ? submittedSlug
+          : slugFromName(typeof rawName === "string" ? rawName : ""),
       description: formData.get("description") ?? "",
     });
     const result = await createFirm(getDb(), {
@@ -141,6 +161,49 @@ export async function saveFirmAction(
         result.mode === "draft"
           ? "Draft saved. The published page is unchanged."
           : "Saved.",
+    };
+  } catch (error) {
+    return toActionState(error);
+  }
+}
+
+/**
+ * Saves the SIMPLE editor — docs/ADMIN.md §6.
+ *
+ * Partial by design: it writes only the fields that form owns, so data entered
+ * under Advanced is never wiped by a save from the simple screen.
+ */
+export async function saveFirmEssentialsAction(
+  _prev: ActionState,
+  formData: FormData,
+): Promise<ActionState> {
+  try {
+    const admin = await requireAdmin();
+    const firmId = idSchema.parse(formData.get("firmId"));
+
+    const input = firmEssentialsSchema.parse({
+      name: formData.get("name"),
+      description: formData.get("description") ?? "",
+      websiteUrl: formData.get("websiteUrl") ?? "",
+      affiliateUrl: formData.get("affiliateUrl") ?? "",
+      payoutInfoUrl: formData.get("payoutInfoUrl") ?? "",
+      discountCode: formData.get("discountCode") ?? "",
+      discountPercent: formData.get("discountPercent") ?? "",
+      discountEndsAt: formData.get("discountEndsAt") ?? "",
+    });
+
+    const result = await saveFirmEssentials(getDb(), {
+      adminUserId: admin.adminUserId,
+      firmId,
+      input,
+    });
+
+    revalidatePath(`/admin/prop-firms/${firmId}`);
+    return {
+      ok: true,
+      message: `Draft saved. ${result.pendingChanges} pending change${
+        result.pendingChanges === 1 ? "" : "s"
+      }. The published page is unchanged until you publish.`,
     };
   } catch (error) {
     return toActionState(error);

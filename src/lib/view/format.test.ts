@@ -134,6 +134,7 @@ describe("isIndexable", () => {
     websiteUrl: null,
     supportEmail: null,
     supportUrl: null,
+    payoutInfoUrl: null,
     isVerified: false,
     verifiedAt: null,
     publishedAt: null,

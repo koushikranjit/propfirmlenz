@@ -85,6 +85,9 @@ function overlayFirmFields(draft: DraftPayload): Partial<FirmView> {
     ...(d.websiteUrl !== undefined ? { websiteUrl: d.websiteUrl } : {}),
     ...(d.supportEmail !== undefined ? { supportEmail: d.supportEmail } : {}),
     ...(d.supportUrl !== undefined ? { supportUrl: d.supportUrl } : {}),
+    ...(d.payoutInfoUrl !== undefined
+      ? { payoutInfoUrl: d.payoutInfoUrl }
+      : {}),
   };
 }
 

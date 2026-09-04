@@ -347,6 +347,7 @@ export async function publishFirm(
         websiteUrl: view.websiteUrl,
         supportEmail: view.supportEmail,
         supportUrl: view.supportUrl,
+        payoutInfoUrl: view.payoutInfoUrl,
         // Not part of the public view model, so read from the draft directly.
         ...(d?.logoMediaId !== undefined ? { logoMediaId: d.logoMediaId } : {}),
         ...(d?.coverMediaId !== undefined

@@ -58,6 +58,7 @@ export async function getPublishedFirmView(
       websiteUrl: propFirms.websiteUrl,
       supportEmail: propFirms.supportEmail,
       supportUrl: propFirms.supportUrl,
+      payoutInfoUrl: propFirms.payoutInfoUrl,
       verificationStatus: propFirms.verificationStatus,
       verifiedAt: propFirms.verifiedAt,
       publishedAt: propFirms.publishedAt,
@@ -91,6 +92,7 @@ type FirmRow = {
   websiteUrl: string | null;
   supportEmail: string | null;
   supportUrl: string | null;
+  payoutInfoUrl: string | null;
   verificationStatus: string;
   verifiedAt: Date | null;
   publishedAt: Date | null;
@@ -263,6 +265,7 @@ export async function assembleView(
     websiteUrl: firm.websiteUrl,
     supportEmail: firm.supportEmail,
     supportUrl: firm.supportUrl,
+    payoutInfoUrl: firm.payoutInfoUrl,
     isVerified: firm.verificationStatus === "verified",
     verifiedAt: firm.verifiedAt?.toISOString() ?? null,
     publishedAt: firm.publishedAt?.toISOString() ?? null,
@@ -378,6 +381,7 @@ export async function getFirmRowForView(
       websiteUrl: propFirms.websiteUrl,
       supportEmail: propFirms.supportEmail,
       supportUrl: propFirms.supportUrl,
+      payoutInfoUrl: propFirms.payoutInfoUrl,
       verificationStatus: propFirms.verificationStatus,
       verifiedAt: propFirms.verifiedAt,
       publishedAt: propFirms.publishedAt,

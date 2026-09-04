@@ -127,6 +127,8 @@ export interface FirmView {
   websiteUrl: string | null;
   supportEmail: string | null;
   supportUrl: string | null;
+  /** The firm's OWN payout evidence page. A link only — no figures are stored. */
+  payoutInfoUrl: string | null;
 
   // ---- trust
   isVerified: boolean;
