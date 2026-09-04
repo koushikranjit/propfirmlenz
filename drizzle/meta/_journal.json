@@ -29,6 +29,13 @@
       "when": 1788527002440,
       "tag": "0003_thick_tyrannus",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1788542132384,
+      "tag": "0004_square_sunfire",
+      "breakpoints": true
     }
   ]
 }

@@ -49,6 +49,12 @@ export default async function TrackedWalletsPage() {
   ]);
 
   const canEdit = admin.can(PERMISSIONS.FIRM_EDIT);
+  // A firm with no name yet is still selectable; it is labelled by its id
+  // rather than given an invented one.
+  const namedFirms = firms.map((f) => ({
+    id: f.id,
+    name: f.name ?? `(untitled — ${f.id.slice(0, 8)})`,
+  }));
 
   return (
     <>
@@ -92,7 +98,7 @@ export default async function TrackedWalletsPage() {
             Outgoing transfers from this address become candidates for review.
             None of them is published until it is verified.
           </p>
-          <WalletForm firms={firms} networks={networks} />
+          <WalletForm firms={namedFirms} networks={networks} />
         </Card>
       ) : null}
 
@@ -169,7 +175,7 @@ export default async function TrackedWalletsPage() {
                   <>
                     <ScanButton walletId={wallet.id} />
                     <WalletForm
-                      firms={firms}
+                      firms={namedFirms}
                       networks={networks}
                       wallet={wallet}
                     />

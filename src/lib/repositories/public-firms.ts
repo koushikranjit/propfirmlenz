@@ -1,4 +1,14 @@
-import { and, asc, desc, eq, ilike, inArray, isNull, sql } from "drizzle-orm";
+import {
+  and,
+  asc,
+  desc,
+  eq,
+  ilike,
+  inArray,
+  isNotNull,
+  isNull,
+  sql,
+} from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
 import {
   challenges,
@@ -77,6 +87,9 @@ const summaryColumns = {
 const livePublished = and(
   eq(propFirms.status, "published"),
   isNull(propFirms.deletedAt),
+  // No slug, no public page — see public-firm-view.ts.
+  isNotNull(propFirms.slug),
+  isNotNull(propFirms.name),
 );
 
 export interface FirmDirectoryFilters {
@@ -146,6 +159,14 @@ export const DIRECTORY_PAGE_SIZE = 24;
  * Challenge aggregates are fetched in a SECOND query keyed by the page's firm
  * ids, not per row — no N+1, and no correlated subquery to mis-qualify.
  */
+
+/** Narrows a row the `livePublished` filter has already excluded nulls from. */
+function isAddressable<T extends { slug: string | null; name: string | null }>(
+  row: T,
+): row is T & { slug: string; name: string } {
+  return row.slug !== null && row.name !== null;
+}
+
 export async function listPublishedFirmSummaries(
   db: Database,
   query: FirmDirectoryQuery = {},
@@ -185,7 +206,7 @@ export async function listPublishedFirmSummaries(
     rows.map((r) => r.id),
   );
 
-  return rows.map((row) => {
+  return rows.filter(isAddressable).map((row) => {
     const stat = stats.get(row.id);
     return {
       id: row.id,
@@ -268,11 +289,16 @@ export async function countPublishedFirms(
 export async function listPublishedFirmSlugs(
   db: Database,
 ): Promise<{ slug: string; updatedAt: Date }[]> {
-  return db
+  const rows = await db
     .select({ slug: propFirms.slug, updatedAt: propFirms.updatedAt })
     .from(propFirms)
     .where(livePublished)
     .orderBy(asc(propFirms.slug));
+
+  // A firm with no slug has no URL, so it is not a sitemap entry.
+  return rows.filter(
+    (r): r is { slug: string; updatedAt: Date } => r.slug !== null,
+  );
 }
 
 /**

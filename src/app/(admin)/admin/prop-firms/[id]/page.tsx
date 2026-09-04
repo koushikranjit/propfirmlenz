@@ -105,7 +105,7 @@ export default async function FirmWorkspacePage({
         items={[
           { label: "Admin", href: "/admin" },
           { label: "Prop Firms", href: "/admin/prop-firms" },
-          { label: firm.name },
+          { label: firm.name ?? "(untitled firm)" },
         ]}
       />
       <Link

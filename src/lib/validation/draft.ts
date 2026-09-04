@@ -45,8 +45,10 @@ const money = z.object({
 
 export const draftFirmSchema = z
   .object({
-    slug: slug.optional(),
-    name: z.string().min(1).max(200).optional(),
+    // Nullable: clearing a name or a slug is a legal edit, and the draft
+    // must be able to represent it (docs/ADMIN.md §6.2).
+    slug: slug.nullable().optional(),
+    name: z.string().min(1).max(200).nullable().optional(),
     legalName: z.string().max(200).nullable().optional(),
     tagline: z.string().max(160).nullable().optional(),
     description: z.string().nullable().optional(),

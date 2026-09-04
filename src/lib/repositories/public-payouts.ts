@@ -1,4 +1,4 @@
-import { and, desc, eq, gte, isNull, sql } from "drizzle-orm";
+import { and, desc, eq, gte, isNotNull, isNull, sql } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
 import {
   blockchainNetworks,
@@ -30,6 +30,9 @@ import {
 const livePublishedFirm = and(
   eq(propFirms.status, "published"),
   isNull(propFirms.deletedAt),
+  // A payout cannot link to a firm with no public page.
+  isNotNull(propFirms.slug),
+  isNotNull(propFirms.name),
 );
 
 export interface PayoutTotals {
@@ -104,6 +107,13 @@ export async function getPayoutTotals(
   return rows[0] ?? EMPTY_TOTALS;
 }
 
+/** Narrows a row the `livePublishedFirm` filter has already excluded. */
+function isPayoutAddressable<
+  T extends { firmSlug: string | null; firmName: string | null },
+>(row: T): row is T & { firmSlug: string; firmName: string } {
+  return row.firmSlug !== null && row.firmName !== null;
+}
+
 export interface PublicPayout {
   id: string;
   firmName: string;
@@ -161,7 +171,7 @@ export async function listRecentVerifiedPayouts(
     .orderBy(desc(verifiedPayouts.transactionTimestamp))
     .limit(Math.min(Math.max(opts.limit ?? 25, 1), 100));
 
-  return rows.map((row) => ({
+  return rows.filter(isPayoutAddressable).map((row) => ({
     ...row,
     transactionTimestamp: row.transactionTimestamp.toISOString(),
   }));
@@ -184,7 +194,7 @@ export async function listFirmPayoutSummaries(
 ): Promise<FirmPayoutSummary[]> {
   const start = windowStart(opts.window ?? "all", now);
 
-  return db
+  const rows = await db
     .select({
       firmName: propFirms.name,
       firmSlug: propFirms.slug,
@@ -208,6 +218,8 @@ export async function listFirmPayoutSummaries(
     .groupBy(propFirms.id, propFirms.name, propFirms.slug)
     .orderBy(desc(sql`count(*)`))
     .limit(Math.min(Math.max(opts.limit ?? 25, 1), 100));
+
+  return rows.filter(isPayoutAddressable);
 }
 
 /** One firm's verified payout summary, for its public profile. */

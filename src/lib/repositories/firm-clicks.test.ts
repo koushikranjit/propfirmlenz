@@ -166,101 +166,150 @@ describe("buy link click stats", () => {
 });
 
 /**
- * THE CORE EDITOR'S SHAPE — docs/ADMIN.md §6.2 `[owner-locked 2026-09-04]`.
+ * THE CORE EDITOR'S SHAPE — docs/ADMIN.md §6.2 `[owner-directed 2026-09-04]`.
  *
- * Source-level assertions, because the guarantee is structural: the firm
- * workspace is ONE page of expandable sections, and the tab strip it replaced
+ * Source-level assertions, because the guarantee is structural: the editor is
+ * organised into ELEVEN categories, and the seventeen-tab strip it replaced
  * must not come back. A rendering test would pass just as well against a
- * component that still imported Radix Tabs and hid them.
+ * component that still declared the old tabs and hid them.
  */
 describe("core firm editor structure", () => {
-  const workspace = join(
-    process.cwd(),
-    "src/app/(admin)/admin/prop-firms/[id]/FirmWorkspace.tsx",
-  );
-  const source = readFileSync(workspace, "utf8");
+  const dir = "src/app/(admin)/admin/prop-firms/[id]";
+  const read = (file: string) =>
+    readFileSync(join(process.cwd(), dir, file), "utf8");
 
-  it("renders no tab strip at all", () => {
-    expect(source).not.toContain("Tabs.Root");
-    expect(source).not.toContain("Tabs.List");
-    expect(source).not.toContain("Tabs.Trigger");
-    expect(source).not.toContain("Tabs.Content");
-    expect(source).not.toMatch(/from "radix-ui"/);
+  const workspace = read("FirmWorkspace.tsx");
+  const essentials = read("EssentialsForm.tsx");
+
+  const CATEGORIES = [
+    "overview",
+    "company",
+    "branding",
+    "discount",
+    "payout-tracking",
+    "challenges",
+    "announcements",
+    "faqs",
+    "advanced",
+    "seo",
+    "verification",
+  ];
+
+  it("declares exactly the eleven categories", () => {
+    const declared = [
+      ...workspace.matchAll(/\{ value: "([a-z-]+)", label: "[^"]+" \}/g),
+    ].map((m) => m[1]);
+    expect(declared).toEqual(CATEGORIES);
   });
 
-  it("names none of the removed tabs as a primary destination", () => {
-    // Reviews, Media, Internal Notes, Redirects and the Audit Log belong to
-    // other admin sections; a tab for each is how this page became a maze.
+  it("renders a panel for every category, and no orphan panels", () => {
+    const panels = [
+      ...workspace.matchAll(/<Tabs\.Content value="([a-z-]+)"/g),
+      ...essentials.matchAll(/<Tabs\.Content value="([a-z-]+)"/g),
+    ].map((m) => m[1]);
+
+    // Overview, Company and Discount live in the essentials form; the rest in
+    // the workspace. Together they must cover the tab list exactly.
+    expect([...panels].sort()).toEqual([...CATEGORIES].sort());
+  });
+
+  it("does not bring back the seventeen-tab strip", () => {
+    // These were primary tabs and are now either inside Advanced or are
+    // separate admin systems entirely.
     for (const gone of [
       'value: "reviews"',
       'value: "media"',
       'value: "notes"',
       'value: "redirects"',
       'value: "audit"',
+      'value: "affiliate"',
+      'value: "rules"',
+      'value: "associations"',
+      'value: "offers"',
       'label: "Internal Notes"',
+      'label: "Audit Log"',
     ]) {
-      expect(source).not.toContain(gone);
+      expect(workspace).not.toContain(gone);
     }
   });
 
-  it("keeps the core sections on one page", () => {
-    for (const section of [
-      'title="Payout Tracking"',
-      'title="Challenges"',
-      'title="Announcements"',
-      'title="FAQs"',
-      'title="Advanced Information"',
+  it("keeps rules, platforms and affiliate inside Advanced", () => {
+    const advanced = workspace.slice(
+      workspace.indexOf('<Tabs.Content value="advanced">'),
+      workspace.indexOf('<Tabs.Content value="seo">'),
+    );
+    expect(advanced).toContain("<RulesTab");
+    expect(advanced).toContain("<AssociationsTab");
+    expect(advanced).toContain("<AffiliateTab");
+    expect(advanced).toContain("<OffersTab");
+  });
+
+  it("puts each core field in its category", () => {
+    const panel = (name: string) => {
+      const from = essentials.indexOf(`<Tabs.Content value="${name}"`);
+      const rest = essentials.slice(from + 1);
+      const to = rest.indexOf("<Tabs.Content value=");
+      return to === -1 ? rest : rest.slice(0, to);
+    };
+
+    const overview = panel("overview");
+    for (const field of [
+      'name="name"',
+      'name="tagline"',
+      'name="description"',
+      'name="affiliateUrl"',
+      "<BuyLinkClicks",
+      'name="trustpilotRating"',
+      'name="trustpilotUrl"',
     ]) {
-      expect(source).toContain(section);
+      expect(overview).toContain(field);
     }
-    // And the primary editor is rendered directly, not behind a section.
-    expect(source).toContain("<EssentialsForm");
+
+    const company = panel("company");
+    expect(company).toContain('name="founderName"');
+    expect(company).toContain('name="ceoName"');
+
+    const discount = panel("discount");
+    for (const field of [
+      'name="discountTitle"',
+      'name="discountCode"',
+      'name="discountDescription"',
+      'name="discountPercent"',
+      'name="discountEndsAt"',
+    ]) {
+      expect(discount).toContain(field);
+    }
+
+    // Branding carries the logo, and it is the only place that does.
+    expect(workspace).toContain("<LogoUpload");
   });
 
-  it("keeps SEO and Verification out of the primary fields", () => {
-    const essentials = readFileSync(
-      join(
-        process.cwd(),
-        "src/app/(admin)/admin/prop-firms/[id]/EssentialsForm.tsx",
-      ),
-      "utf8",
+  it("submits country and date created exactly once despite showing twice", () => {
+    // They appear under both Overview and Company. Two live inputs with the
+    // same name would race; one state with one submitted input cannot.
+    expect((essentials.match(/name="headquartersCountry"/g) ?? []).length).toBe(
+      1,
     );
-    expect(essentials).not.toContain("metaDescription");
-    expect(essentials).not.toContain("canonicalUrl");
-    expect(essentials).not.toContain("verificationStatus");
+    expect((essentials.match(/name: "foundedOn"/g) ?? []).length).toBe(1);
+    expect((essentials.match(/<CountryPicker/g) ?? []).length).toBe(2);
+    expect((essentials.match(/<FoundedFields/g) ?? []).length).toBe(2);
   });
 
-  it("requires only the name", () => {
-    const essentials = readFileSync(
-      join(
-        process.cwd(),
-        "src/app/(admin)/admin/prop-firms/[id]/EssentialsForm.tsx",
-      ),
-      "utf8",
-    );
-    // Which LABELLED fields are marked required. A field carries the marker
-    // twice — once on the Field wrapper for the visible "(required)" text and
-    // once on the input for the browser — so counting markers would overcount.
+  it("marks no field as required, including the name", () => {
     const requiredLabels = [
       ...essentials.matchAll(
         /label="([^"]+)"\s*\n\s*htmlFor="[^"]+"\s*\n\s*required/g,
       ),
     ].map((m) => m[1]);
-
-    expect(requiredLabels).toEqual(["Prop firm name"]);
-    // The slug is derived, not asked for.
-    expect(essentials).not.toContain('name="slug"');
+    expect(requiredLabels).toEqual([]);
+    // And no "(REQUIRED)" chrome on name or slug anywhere in the editor.
+    expect(essentials).not.toMatch(/name="name"[\s\S]{0,200}required/);
+    expect(workspace).not.toMatch(/name="slug"[\s\S]{0,200}required/);
   });
 
-  it("shows the logo uploader and the click count in the primary editor", () => {
-    const essentials = readFileSync(
-      join(
-        process.cwd(),
-        "src/app/(admin)/admin/prop-firms/[id]/EssentialsForm.tsx",
-      ),
-      "utf8",
-    );
-    expect(essentials).toContain("<LogoUpload");
-    expect(essentials).toContain("<BuyLinkClicks");
+  it("keeps SEO and verification out of the core fields", () => {
+    expect(essentials).not.toContain("metaDescription");
+    expect(essentials).not.toContain("canonicalUrl");
+    expect(essentials).not.toContain("verificationStatus");
   });
 });

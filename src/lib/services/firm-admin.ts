@@ -77,7 +77,9 @@ export async function createFirm(
   opts: { adminUserId: string; input: CreateFirmInput },
 ): Promise<{ id: string }> {
   await requirePermission(db, opts.adminUserId, PERMISSIONS.FIRM_CREATE);
-  await assertSlugAvailable(db, opts.input.slug);
+  // No slug is a legal state: the firm simply has no public page yet. There is
+  // nothing to collide with, so there is nothing to check.
+  if (opts.input.slug) await assertSlugAvailable(db, opts.input.slug);
 
   const [row] = await db
     .insert(propFirms)

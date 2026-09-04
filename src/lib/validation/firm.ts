@@ -60,9 +60,17 @@ const optionalEmail = z
   );
 
 /** Creation requires only what publishing will genuinely need. */
+/**
+ * Creation requires NOTHING `[owner-directed 2026-09-04]`.
+ *
+ * A firm can be created empty and filled in later. The slug is derived from
+ * the name when there is one; with no name there is no slug, and the record
+ * simply has no public page until it gets one. Nothing is invented to fill the
+ * gap — "untitled-firm" would be a URL nobody chose.
+ */
 export const createFirmSchema = z.object({
-  name: z.string().trim().min(2).max(200),
-  slug: slugSchema,
+  name: optionalText(200),
+  slug: slugSchema.nullable(),
   description: optionalText(20_000),
 });
 
@@ -182,7 +190,8 @@ export function parseFirmListQuery(
  * borrowed default (docs/PROJECT.md §6.5 `[LOCKED]`).
  */
 export const firmEssentialsSchema = z.object({
-  name: z.string().trim().min(2, "A name is required.").max(200),
+  /** Optional, like every other content field. */
+  name: optionalText(200),
   tagline: optionalText(160),
   description: optionalText(20_000),
 

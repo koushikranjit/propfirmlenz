@@ -110,8 +110,12 @@ function overlayFirmFields(
           : // Staged against a media row that no longer resolves. Showing the
             // old logo would be a lie about what publishing would do.
             { logo: null }),
-    ...(d.slug !== undefined ? { slug: d.slug } : {}),
-    ...(d.name !== undefined ? { name: d.name } : {}),
+    // A draft may CLEAR these; `FirmView` types them as strings, so absence
+    // becomes an empty string in the view and NULL again at publish. Letting
+    // null through here put a null in a field typed string, which is how
+    // publishing an empty firm used to crash.
+    ...(d.slug !== undefined ? { slug: d.slug ?? "" } : {}),
+    ...(d.name !== undefined ? { name: d.name ?? "" } : {}),
     ...(d.legalName !== undefined ? { legalName: d.legalName } : {}),
     ...(d.tagline !== undefined ? { tagline: d.tagline } : {}),
     ...(d.description !== undefined ? { description: d.description } : {}),

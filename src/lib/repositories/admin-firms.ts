@@ -32,8 +32,9 @@ import type { FirmListQuery } from "@/lib/validation/firm";
 
 export interface AdminFirmRow {
   id: string;
-  slug: string;
-  name: string;
+  /** Both nullable: no content field is required (docs/ADMIN.md §6.2). */
+  slug: string | null;
+  name: string | null;
   logoMediaId: string | null;
   headquartersCountry: string | null;
   status: string;

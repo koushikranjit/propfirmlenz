@@ -1,4 +1,4 @@
-import { and, asc, desc, eq, isNull, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, isNotNull, isNull, or, sql } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
 import {
   affiliateLinks,
@@ -37,9 +37,20 @@ import {
  *     resolved server-side inside `/go/{slug}` and never reaches the browser.
  */
 
+/**
+ * Publicly addressable: published, live, AND actually nameable.
+ *
+ * Name and slug are nullable — no content field is required to publish
+ * (docs/ADMIN.md §6.2). A firm missing either has no public page, because
+ * `/prop-firms/{slug}` cannot address it and a nameless card is not a link
+ * anyone can use. Filtering it out HERE is what lets `FirmView.name` and
+ * `.slug` stay non-null everywhere downstream.
+ */
 const livePublished = and(
   eq(propFirms.status, "published"),
   isNull(propFirms.deletedAt),
+  isNotNull(propFirms.slug),
+  isNotNull(propFirms.name),
 );
 
 /** Resolves a published firm by slug into the canonical view, or null. */
@@ -82,9 +93,17 @@ export async function getPublishedFirmView(
     .limit(1);
 
   const firm = firmRows[0];
-  if (!firm) return null;
+  // Belt and braces: the WHERE excludes these, the guard proves it to TS.
+  if (!firm || !isAddressable(firm)) return null;
 
   return assembleView(db, firm);
+}
+
+/** Narrows a row the `livePublished` filter has already excluded nulls from. */
+function isAddressable<T extends { slug: string | null; name: string | null }>(
+  row: T,
+): row is T & { slug: string; name: string } {
+  return row.slug !== null && row.name !== null;
 }
 
 type FirmRow = {
@@ -463,5 +482,12 @@ export async function getFirmRowForView(
     .leftJoin(media, eq(media.id, propFirms.logoMediaId))
     .where(and(eq(propFirms.id, id), isNull(propFirms.deletedAt)))
     .limit(1);
-  return rows[0] ?? null;
+
+  const row = rows[0];
+  if (!row) return null;
+  // The ADMIN preview may be looking at a firm with no name or slug yet, which
+  // is legal now. The view model still needs strings, so absence becomes an
+  // empty string HERE and nowhere else — it is never written back, and the
+  // preview route refuses to render a profile for it (docs/ADMIN.md §6.2).
+  return { ...row, slug: row.slug ?? "", name: row.name ?? "" };
 }

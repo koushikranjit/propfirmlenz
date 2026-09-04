@@ -324,8 +324,9 @@ describe("initial firm catalog seed", () => {
       expect(firm?.headquartersCountry).toBeNull();
       expect(firm?.founderName).toBeNull();
       expect(firm?.foundedYear).toBeNull();
-      // And it stays a draft, because there is nothing to publish.
-      expect(firm?.status).toBe("draft");
+      // It publishes now — no content field is required — and every unknown
+      // field stays NULL rather than being filled to make the page look done.
+      expect(firm?.status).toBe("published");
     }
   });
 

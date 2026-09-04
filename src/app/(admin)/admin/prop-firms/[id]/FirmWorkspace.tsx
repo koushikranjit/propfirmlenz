@@ -1,6 +1,8 @@
 "use client";
 
+import * as React from "react";
 import { useActionState } from "react";
+import { Tabs } from "radix-ui";
 import {
   type ActionState,
   discardDraftAction,
@@ -8,7 +10,14 @@ import {
   saveFirmAction,
   verifyFirmAction,
 } from "@/lib/services/firm-actions";
-import { Badge, Button, Card, Field, Input } from "@/components/ui/primitives";
+import {
+  Badge,
+  Button,
+  Card,
+  Field,
+  Input,
+  cx,
+} from "@/components/ui/primitives";
 import { StatusMessage, SubmitButton } from "@/components/admin/forms";
 import type {
   AdminCatalog,
@@ -19,6 +28,7 @@ import type {
   AdminWallet,
 } from "@/lib/repositories/admin-payouts";
 import type { FirmClickStats } from "@/lib/repositories/admin-firms";
+import { LogoUpload } from "./LogoUpload";
 import { AssociationsTab } from "./AssociationsTab";
 import { AnnouncementsSection, FaqsSection } from "./ContentSections";
 import type { StorageState } from "./LogoUpload";
@@ -31,8 +41,14 @@ import { EssentialsForm, type FirmEssentials } from "./EssentialsForm";
 
 export interface WorkspaceFirm {
   id: string;
-  name: string;
-  slug: string;
+  /**
+   * Both nullable `[owner-directed 2026-09-04]`. No content field is required
+   * to publish. A firm with no slug is saved and publishable in the database
+   * but has NO PUBLIC PAGE — the admin header says so rather than inventing
+   * one (docs/ADMIN.md §6.2).
+   */
+  name: string | null;
+  slug: string | null;
   tagline: string | null;
   description: string | null;
   legalName: string | null;
@@ -87,6 +103,28 @@ export interface WorkspaceCan {
  * only as a wallet configuration point that writes against this firm's existing
  * record (docs/PAYOUTS.md §11).
  */
+
+/**
+ * THE ELEVEN CATEGORIES `[owner-directed 2026-09-04]`.
+ *
+ * Deliberately NOT the seventeen-tab strip this replaced. Affiliate, Rules and
+ * Platforms & Instruments are inside Advanced; Reviews, Media, Internal Notes,
+ * Redirects and the Audit Log are separate admin systems and are not tabs here
+ * at all.
+ */
+const TABS = [
+  { value: "overview", label: "Overview" },
+  { value: "company", label: "Company" },
+  { value: "branding", label: "Branding" },
+  { value: "discount", label: "Discount" },
+  { value: "payout-tracking", label: "Payout Tracking" },
+  { value: "challenges", label: "Challenges" },
+  { value: "announcements", label: "Announcements" },
+  { value: "faqs", label: "FAQs" },
+  { value: "advanced", label: "Advanced" },
+  { value: "seo", label: "SEO" },
+  { value: "verification", label: "Verification" },
+] as const;
 
 /** A collapsed section. `<details>` needs no JavaScript and keeps its state. */
 function Section({
@@ -193,6 +231,9 @@ export function FirmWorkspace({
   );
 
   const readOnly = !can.edit;
+  // Client state, so a save (which re-renders from the server) leaves the
+  // admin exactly where they were rather than snapping back to Overview.
+  const [tab, setTab] = React.useState<string>("overview");
 
   // The simple editor's view model, assembled from the same props the tabs
   // already receive — no extra query, and no second source of truth.
@@ -200,7 +241,7 @@ export function FirmWorkspace({
   const defaultLink = firmChildren.affiliateLinks.find((l) => l.isDefault);
   const essentials: FirmEssentials = {
     id: firm.id,
-    name: firm.name,
+    name: firm.name ?? "",
     tagline: firm.tagline,
     description: firm.description,
     founderName: firm.founderName,
@@ -321,406 +362,385 @@ export function FirmWorkspace({
         ) : null}
       </Card>
 
-      {/* The PRIMARY screen: everything needed to list and monetise a firm. */}
-      <EssentialsForm firm={essentials} readOnly={readOnly} storage={storage} />
-
-      {/* Payout tracking: a configuration point into the separate system. */}
-      <Section
-        id="payout-tracking"
-        title="Payout Tracking"
-        meta={
-          wallets.length === 1
-            ? "1 tracked wallet"
-            : `${wallets.length} tracked wallets`
-        }
+      {/* Tab state is CLIENT state: a server action re-render keeps the
+          admin on the tab they were working in (docs/ADMIN.md §6.2). */}
+      <Tabs.Root
+        value={tab}
+        onValueChange={setTab}
+        className="flex flex-col gap-4"
       >
-        <PayoutTrackingSection
-          firmId={firm.id}
-          networks={networks}
-          wallets={wallets}
+        {/*
+        CATEGORY TABS `[owner-directed 2026-09-04]`.
+        Eleven categories, not the seventeen-tab maze this replaced. Reviews,
+        Media, Internal Notes, Redirects and the Audit Log are NOT here — they
+        are separate admin systems, and a tab apiece is how a firm editor
+        becomes the whole dashboard.
+
+        Horizontally scrollable rather than wrapped: a tab bar that reflows to
+        three rows on a laptop is the maze in a different shape.
+      */}
+        <Tabs.List
+          aria-label="Firm sections"
+          className="-mx-1 flex gap-1 overflow-x-auto px-1 pb-1"
+        >
+          {TABS.map((tab) => (
+            <Tabs.Trigger
+              key={tab.value}
+              value={tab.value}
+              className={cx(
+                "shrink-0 whitespace-nowrap rounded-[10px] border px-3.5 py-2 text-sm font-medium transition-colors",
+                "border-transparent text-text-secondary hover:bg-bg-elevated hover:text-text-primary",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan",
+                "focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base",
+                // The active tab is marked by border, background AND colour, so
+                // it does not rely on hue alone (docs/DESIGN.md §2.5 rule 5).
+                "data-[state=active]:border-brand-cyan/50 data-[state=active]:bg-bg-elevated data-[state=active]:text-brand-cyan",
+              )}
+            >
+              {tab.label}
+            </Tabs.Trigger>
+          ))}
+        </Tabs.List>
+
+        {/* Overview / Company / Discount are one form — see EssentialsForm. */}
+        <EssentialsForm
+          firm={essentials}
           readOnly={readOnly}
+          storage={storage}
         />
-      </Section>
 
-      <Section
-        id="challenges"
-        title="Challenges"
-        meta={
-          firmChildren.challenges.length === 1
-            ? "1 challenge"
-            : `${firmChildren.challenges.length} challenges`
-        }
-      >
-        <ChallengesTab
-          firmId={firm.id}
-          challenges={firmChildren.challenges}
-          staged={staged.challenges}
-          readOnly={readOnly}
-        />
-      </Section>
+        <Tabs.Content value="branding">
+          <Card className="p-5 sm:p-6">
+            <h2 className="text-sm font-semibold text-text-primary">Logo</h2>
+            <p className="mt-1 mb-4 text-sm text-text-muted">
+              PNG, JPEG or WebP. Optional, like every other field.
+            </p>
+            <LogoUpload
+              firmId={firm.id}
+              logoUrl={firm.logoUrl}
+              logoAlt={firm.logoAlt}
+              readOnly={readOnly}
+              storage={storage}
+            />
+          </Card>
+        </Tabs.Content>
 
-      <Section
-        id="announcements"
-        title="Announcements"
-        meta={
-          firmChildren.announcements.length === 1
-            ? "1 announcement"
-            : `${firmChildren.announcements.length} announcements`
-        }
-      >
-        <AnnouncementsSection
-          firmId={firm.id}
-          announcements={firmChildren.announcements}
-          staged={new Set(staged.announcements)}
-          readOnly={readOnly}
-        />
-      </Section>
+        <Tabs.Content value="payout-tracking">
+          <PayoutTrackingSection
+            firmId={firm.id}
+            networks={networks}
+            wallets={wallets}
+            readOnly={readOnly}
+          />
+        </Tabs.Content>
 
-      <Section
-        id="faqs"
-        title="FAQs"
-        meta={
-          firmChildren.faqs.length === 1
-            ? "1 FAQ"
-            : `${firmChildren.faqs.length} FAQs`
-        }
-      >
-        <FaqsSection
-          firmId={firm.id}
-          faqs={firmChildren.faqs}
-          staged={new Set(staged.faqs)}
-          readOnly={readOnly}
-        />
-      </Section>
+        <Tabs.Content value="challenges">
+          <ChallengesTab
+            firmId={firm.id}
+            challenges={firmChildren.challenges}
+            staged={staged.challenges}
+            readOnly={readOnly}
+          />
+        </Tabs.Content>
 
-      {/* Everything the schema holds that is not part of the core workflow. */}
-      <Section
-        id="advanced-firm-data"
-        title="Advanced Information"
-        meta="Company, branding, rules, platforms, instruments, offers, affiliate"
-      >
-        <div className="flex flex-col gap-3">
-          {/*
+        <Tabs.Content value="announcements">
+          <AnnouncementsSection
+            firmId={firm.id}
+            announcements={firmChildren.announcements}
+            staged={new Set(staged.announcements)}
+            readOnly={readOnly}
+          />
+        </Tabs.Content>
+
+        <Tabs.Content value="faqs">
+          <FaqsSection
+            firmId={firm.id}
+            faqs={firmChildren.faqs}
+            staged={new Set(staged.faqs)}
+            readOnly={readOnly}
+          />
+        </Tabs.Content>
+
+        <Tabs.Content value="advanced">
+          <div className="flex flex-col gap-3">
+            {/*
             One form spans company and branding so a single "Save draft"
             submits them together. It deliberately does NOT carry name, tagline
             or description — those belong to the primary editor above, and
             saving here would otherwise revert what was just typed there.
           */}
-          <form action={saveFormAction} id="firm-edit-form">
-            <input type="hidden" name="firmId" value={firm.id} />
+            <form action={saveFormAction} id="firm-edit-form">
+              <input type="hidden" name="firmId" value={firm.id} />
 
-            <Section id="advanced-company" title="Company">
-              <div className="flex flex-col gap-5">
-                <Card className="flex flex-col gap-5 p-6">
-                  <Field
-                    label="Slug"
-                    htmlFor="slug"
-                    required
-                    hint="Changing this after publishing creates a 301 redirect automatically. The admin URL is unaffected."
-                    error={err("slug")}
-                  >
-                    <Input
-                      id="slug"
-                      name="slug"
-                      defaultValue={firm.slug}
-                      required
-                      disabled={readOnly}
-                      aria-invalid={err("slug") ? true : undefined}
-                    />
-                  </Field>
-                </Card>
+              <Section id="advanced-company" title="Company">
+                <div className="flex flex-col gap-5">
+                  <Card className="flex flex-col gap-5 p-6">
+                    <Field
+                      label="Slug"
+                      htmlFor="slug"
+                      hint="Derived from the name. Leave blank and the firm has no public page until it gets one — nothing is invented to fill it. Changing it after publishing creates a 301 automatically."
+                      error={err("slug")}
+                    >
+                      <Input
+                        id="slug"
+                        name="slug"
+                        defaultValue={firm.slug ?? ""}
+                        disabled={readOnly}
+                        aria-invalid={err("slug") ? true : undefined}
+                      />
+                    </Field>
+                  </Card>
+                </div>
+                <div className="mt-5">
+                  <Card className="mt-4 grid gap-5 p-6 md:grid-cols-2">
+                    <Field
+                      label="Legal name"
+                      htmlFor="legalName"
+                      error={err("legalName")}
+                    >
+                      <Input
+                        id="legalName"
+                        name="legalName"
+                        defaultValue={firm.legalName ?? ""}
+                        disabled={readOnly}
+                      />
+                    </Field>
+                    <Field
+                      label="Founded year"
+                      htmlFor="foundedYear"
+                      hint="Leave blank if not disclosed."
+                      error={err("foundedYear")}
+                    >
+                      <Input
+                        id="foundedYear"
+                        name="foundedYear"
+                        inputMode="numeric"
+                        defaultValue={firm.foundedYear ?? ""}
+                        disabled={readOnly}
+                      />
+                    </Field>
+                    <Field
+                      label="HQ country"
+                      htmlFor="headquartersCountry"
+                      hint="Two-letter ISO code, e.g. GB."
+                      error={err("headquartersCountry")}
+                    >
+                      <Input
+                        id="headquartersCountry"
+                        name="headquartersCountry"
+                        maxLength={2}
+                        defaultValue={firm.headquartersCountry ?? ""}
+                        disabled={readOnly}
+                      />
+                    </Field>
+                    <Field
+                      label="HQ city"
+                      htmlFor="headquartersCity"
+                      error={err("headquartersCity")}
+                    >
+                      <Input
+                        id="headquartersCity"
+                        name="headquartersCity"
+                        defaultValue={firm.headquartersCity ?? ""}
+                        disabled={readOnly}
+                      />
+                    </Field>
+                    <Field
+                      label="Website"
+                      htmlFor="websiteUrl"
+                      error={err("websiteUrl")}
+                    >
+                      <Input
+                        id="websiteUrl"
+                        name="websiteUrl"
+                        type="url"
+                        defaultValue={firm.websiteUrl ?? ""}
+                        disabled={readOnly}
+                      />
+                    </Field>
+                    <Field
+                      label="Support email"
+                      htmlFor="supportEmail"
+                      error={err("supportEmail")}
+                    >
+                      <Input
+                        id="supportEmail"
+                        name="supportEmail"
+                        type="email"
+                        defaultValue={firm.supportEmail ?? ""}
+                        disabled={readOnly}
+                      />
+                    </Field>
+                    <Field
+                      label="Support URL"
+                      htmlFor="supportUrl"
+                      error={err("supportUrl")}
+                    >
+                      <Input
+                        id="supportUrl"
+                        name="supportUrl"
+                        type="url"
+                        defaultValue={firm.supportUrl ?? ""}
+                        disabled={readOnly}
+                      />
+                    </Field>
+                  </Card>
+                </div>
+              </Section>
+
+              <div className="mt-3">
+                <Section id="advanced-branding" title="Branding & ordering">
+                  <Card className="mt-4 flex flex-col gap-5 p-6">
+                    <Field
+                      label="Firm brand colour"
+                      htmlFor="brandColor"
+                      hint="The FIRM's own accent, e.g. #19E6D2. Never used for Prop Firm Lenz chrome."
+                      error={err("brandColor")}
+                    >
+                      <Input
+                        id="brandColor"
+                        name="brandColor"
+                        defaultValue={firm.brandColor ?? ""}
+                        placeholder="#000000"
+                        disabled={readOnly}
+                      />
+                    </Field>
+                    <Field
+                      label="Display order"
+                      htmlFor="displayOrder"
+                      hint="Lower sorts first."
+                      error={err("displayOrder")}
+                    >
+                      <Input
+                        id="displayOrder"
+                        name="displayOrder"
+                        inputMode="numeric"
+                        defaultValue={firm.displayOrder}
+                        disabled={readOnly}
+                      />
+                    </Field>
+                    <div className="flex items-center gap-2">
+                      <input
+                        id="isFeatured"
+                        name="isFeatured"
+                        type="checkbox"
+                        defaultChecked={firm.isFeatured}
+                        disabled={readOnly}
+                        className="size-4 rounded border-border-default bg-bg-near-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
+                      />
+                      <label
+                        htmlFor="isFeatured"
+                        className="text-sm text-text-secondary"
+                      >
+                        Featured firm
+                      </label>
+                    </div>
+
+                    <p className="text-xs text-text-metadata">
+                      Logo and cover image upload arrive with the media library
+                      in a later Phase 1 stage. Third-party firm logos are
+                      stored as uploaded and never restyled.
+                    </p>
+                  </Card>
+                </Section>
               </div>
-              <div className="mt-5">
-                <Card className="mt-4 grid gap-5 p-6 md:grid-cols-2">
-                  <Field
-                    label="Legal name"
-                    htmlFor="legalName"
-                    error={err("legalName")}
-                  >
-                    <Input
-                      id="legalName"
-                      name="legalName"
-                      defaultValue={firm.legalName ?? ""}
-                      disabled={readOnly}
-                    />
-                  </Field>
-                  <Field
-                    label="Founded year"
-                    htmlFor="foundedYear"
-                    hint="Leave blank if not disclosed."
-                    error={err("foundedYear")}
-                  >
-                    <Input
-                      id="foundedYear"
-                      name="foundedYear"
-                      inputMode="numeric"
-                      defaultValue={firm.foundedYear ?? ""}
-                      disabled={readOnly}
-                    />
-                  </Field>
-                  <Field
-                    label="HQ country"
-                    htmlFor="headquartersCountry"
-                    hint="Two-letter ISO code, e.g. GB."
-                    error={err("headquartersCountry")}
-                  >
-                    <Input
-                      id="headquartersCountry"
-                      name="headquartersCountry"
-                      maxLength={2}
-                      defaultValue={firm.headquartersCountry ?? ""}
-                      disabled={readOnly}
-                    />
-                  </Field>
-                  <Field
-                    label="HQ city"
-                    htmlFor="headquartersCity"
-                    error={err("headquartersCity")}
-                  >
-                    <Input
-                      id="headquartersCity"
-                      name="headquartersCity"
-                      defaultValue={firm.headquartersCity ?? ""}
-                      disabled={readOnly}
-                    />
-                  </Field>
-                  <Field
-                    label="Website"
-                    htmlFor="websiteUrl"
-                    error={err("websiteUrl")}
-                  >
-                    <Input
-                      id="websiteUrl"
-                      name="websiteUrl"
-                      type="url"
-                      defaultValue={firm.websiteUrl ?? ""}
-                      disabled={readOnly}
-                    />
-                  </Field>
-                  <Field
-                    label="Support email"
-                    htmlFor="supportEmail"
-                    error={err("supportEmail")}
-                  >
-                    <Input
-                      id="supportEmail"
-                      name="supportEmail"
-                      type="email"
-                      defaultValue={firm.supportEmail ?? ""}
-                      disabled={readOnly}
-                    />
-                  </Field>
-                  <Field
-                    label="Support URL"
-                    htmlFor="supportUrl"
-                    error={err("supportUrl")}
-                  >
-                    <Input
-                      id="supportUrl"
-                      name="supportUrl"
-                      type="url"
-                      defaultValue={firm.supportUrl ?? ""}
-                      disabled={readOnly}
-                    />
-                  </Field>
-                </Card>
+
+              {can.edit ? (
+                <div className="mt-4 flex gap-2">
+                  <SubmitButton variant="primary" pendingLabel="Saving…">
+                    Save draft
+                  </SubmitButton>
+                </div>
+              ) : null}
+            </form>
+
+            <Section id="advanced-rules" title="Rules">
+              <div className="mt-4">
+                <RulesTab
+                  firmId={firm.id}
+                  rules={catalog.rules}
+                  values={firmChildren.ruleValues}
+                  staged={staged.rules}
+                  readOnly={readOnly}
+                />
               </div>
             </Section>
 
-            <div className="mt-3">
-              <Section id="advanced-branding" title="Branding & ordering">
-                <Card className="mt-4 flex flex-col gap-5 p-6">
-                  <Field
-                    label="Firm brand colour"
-                    htmlFor="brandColor"
-                    hint="The FIRM's own accent, e.g. #19E6D2. Never used for Prop Firm Lenz chrome."
-                    error={err("brandColor")}
-                  >
-                    <Input
-                      id="brandColor"
-                      name="brandColor"
-                      defaultValue={firm.brandColor ?? ""}
-                      placeholder="#000000"
-                      disabled={readOnly}
-                    />
-                  </Field>
-                  <Field
-                    label="Display order"
-                    htmlFor="displayOrder"
-                    hint="Lower sorts first."
-                    error={err("displayOrder")}
-                  >
-                    <Input
-                      id="displayOrder"
-                      name="displayOrder"
-                      inputMode="numeric"
-                      defaultValue={firm.displayOrder}
-                      disabled={readOnly}
-                    />
-                  </Field>
-                  <div className="flex items-center gap-2">
-                    <input
-                      id="isFeatured"
-                      name="isFeatured"
-                      type="checkbox"
-                      defaultChecked={firm.isFeatured}
-                      disabled={readOnly}
-                      className="size-4 rounded border-border-default bg-bg-near-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
-                    />
-                    <label
-                      htmlFor="isFeatured"
-                      className="text-sm text-text-secondary"
-                    >
-                      Featured firm
-                    </label>
-                  </div>
-
-                  <p className="text-xs text-text-metadata">
-                    Logo and cover image upload arrive with the media library in
-                    a later Phase 1 stage. Third-party firm logos are stored as
-                    uploaded and never restyled.
-                  </p>
-                </Card>
-              </Section>
-            </div>
-
-            {can.edit ? (
-              <div className="mt-4 flex gap-2">
-                <SubmitButton variant="primary" pendingLabel="Saving…">
-                  Save draft
-                </SubmitButton>
+            <Section id="advanced-associations" title="Platforms & instruments">
+              <div className="mt-4">
+                <AssociationsTab
+                  firmId={firm.id}
+                  catalog={catalog}
+                  firmChildren={firmChildren}
+                  stagedPlatformIds={new Set(staged.platformIds)}
+                  stagedInstrumentIds={new Set(staged.instrumentIds)}
+                  readOnly={readOnly}
+                />
               </div>
-            ) : null}
-          </form>
+            </Section>
 
-          <Section id="advanced-rules" title="Rules">
-            <div className="mt-4">
-              <RulesTab
-                firmId={firm.id}
-                rules={catalog.rules}
-                values={firmChildren.ruleValues}
-                staged={staged.rules}
-                readOnly={readOnly}
-              />
-            </div>
-          </Section>
+            <Section id="advanced-offers" title="Offers">
+              <div className="mt-4">
+                <OffersTab
+                  firmId={firm.id}
+                  offers={firmChildren.offers}
+                  affiliateLinks={firmChildren.affiliateLinks}
+                  staged={staged.offers}
+                  readOnly={readOnly}
+                />
+              </div>
+            </Section>
 
-          <Section id="advanced-associations" title="Platforms & instruments">
-            <div className="mt-4">
-              <AssociationsTab
-                firmId={firm.id}
-                catalog={catalog}
-                firmChildren={firmChildren}
-                stagedPlatformIds={new Set(staged.platformIds)}
-                stagedInstrumentIds={new Set(staged.instrumentIds)}
-                readOnly={readOnly}
-              />
-            </div>
-          </Section>
+            <Section id="advanced-affiliate" title="Affiliate configuration">
+              <div className="mt-4">
+                <AffiliateTab
+                  firmId={firm.id}
+                  links={firmChildren.affiliateLinks}
+                  staged={staged.affiliateLinks}
+                  readOnly={readOnly}
+                  canEdit={can.affiliate}
+                />
+              </div>
+            </Section>
 
-          <Section id="advanced-offers" title="Offers">
-            <div className="mt-4">
-              <OffersTab
-                firmId={firm.id}
-                offers={firmChildren.offers}
-                affiliateLinks={firmChildren.affiliateLinks}
-                staged={staged.offers}
-                readOnly={readOnly}
-              />
-            </div>
-          </Section>
-
-          <Section id="advanced-affiliate" title="Affiliate configuration">
-            <div className="mt-4">
-              <AffiliateTab
-                firmId={firm.id}
-                links={firmChildren.affiliateLinks}
-                staged={staged.affiliateLinks}
-                readOnly={readOnly}
-                canEdit={can.affiliate}
-              />
-            </div>
-          </Section>
-
-          {/* Firm-scoped work that belongs to another system. */}
-          <div className="mt-6 border-t border-border-subtle pt-4">
-            <p className="text-xs font-semibold uppercase tracking-wide text-text-muted">
-              Managed elsewhere
-            </p>
-            <ul className="mt-2 flex flex-col gap-1 text-sm">
-              {ELSEWHERE.map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    className="rounded font-medium text-brand-cyan underline underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
-                  >
-                    {item.label}
-                  </a>
-                  <span className="text-text-muted"> — {item.note}</span>
+            {/* Firm-scoped work that belongs to another system. */}
+            <div className="mt-6 border-t border-border-subtle pt-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-text-muted">
+                Managed elsewhere
+              </p>
+              <ul className="mt-2 flex flex-col gap-1 text-sm">
+                {ELSEWHERE.map((item) => (
+                  <li key={item.href}>
+                    <a
+                      href={item.href}
+                      className="rounded font-medium text-brand-cyan underline underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
+                    >
+                      {item.label}
+                    </a>
+                    <span className="text-text-muted"> — {item.note}</span>
+                  </li>
+                ))}
+                <li className="text-text-muted">
+                  Reviews, FAQs, media, internal notes and redirects are not
+                  built yet.
                 </li>
-              ))}
-              <li className="text-text-muted">
-                Reviews, FAQs, media, internal notes and redirects are not built
-                yet.
-              </li>
-            </ul>
+              </ul>
+            </div>
           </div>
-        </div>
-      </Section>
+        </Tabs.Content>
 
-      {/* SEO — collapsed by default. */}
-      <details className="group rounded-[14px] border border-border-default bg-bg-card">
-        <summary
-          id="seo-section"
-          className="flex cursor-pointer flex-wrap items-center justify-between gap-3 px-5 py-4 marker:content-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base [&::-webkit-details-marker]:hidden"
-        >
-          <span className="flex items-center gap-2 text-sm font-semibold text-text-primary">
-            <span
-              aria-hidden
-              className="text-text-muted group-open:rotate-90"
-              style={{ display: "inline-block" }}
-            >
-              ›
-            </span>
-            SEO
-          </span>
-          <span className="text-xs text-text-muted">
-            Title, description, canonical, indexing
-          </span>
-        </summary>
-        <div className="border-t border-border-subtle p-4 sm:p-5">
+        <Tabs.Content value="seo">
           <SeoTab
             firmId={firm.id}
             seo={firmChildren.seo}
-            slug={firm.slug}
+            slug={firm.slug ?? ""}
             hasStagedSeo={staged.seo}
             readOnly={readOnly}
             canWriteSeo={can.seo}
           />
-        </div>
-      </details>
+        </Tabs.Content>
 
-      {/* Verification — collapsed by default. */}
-      <details className="group rounded-[14px] border border-border-default bg-bg-card">
-        <summary
-          id="verification-section"
-          className="flex cursor-pointer flex-wrap items-center justify-between gap-3 px-5 py-4 marker:content-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base [&::-webkit-details-marker]:hidden"
-        >
-          <span className="flex items-center gap-2 text-sm font-semibold text-text-primary">
-            <span
-              aria-hidden
-              className="text-text-muted group-open:rotate-90"
-              style={{ display: "inline-block" }}
-            >
-              ›
-            </span>
-            Verification
-          </span>
-          <span className="text-xs text-text-muted">
-            {firm.verificationStatus.replace("_", " ")}
-          </span>
-        </summary>
-        <div className="border-t border-border-subtle p-4 sm:p-5">
+        <Tabs.Content value="verification">
           <Card className="p-5">
             <h2 className="text-sm font-semibold text-text-primary">
               Verification
@@ -750,8 +770,8 @@ export function FirmWorkspace({
               </p>
             )}
           </Card>
-        </div>
-      </details>
+        </Tabs.Content>
+      </Tabs.Root>
     </div>
   );
 }

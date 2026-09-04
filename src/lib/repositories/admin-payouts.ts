@@ -66,7 +66,7 @@ export interface AdminWallet {
   isActive: boolean;
   notes: string | null;
   firmId: string;
-  firmName: string;
+  firmName: string | null;
   networkId: string;
   networkName: string;
   lastCheckedAt: Date | null;
@@ -123,7 +123,7 @@ export interface AdminCandidate {
   rejectionReason: string | null;
   detectedAt: Date;
   firmId: string;
-  firmName: string;
+  firmName: string | null;
   walletLabel: string | null;
   walletPurpose: string;
   networkName: string;
@@ -222,8 +222,8 @@ export async function countCandidatesByStatus(
 
 export interface AdminVerifiedPayout {
   id: string;
-  firmName: string;
-  firmSlug: string;
+  firmName: string | null;
+  firmSlug: string | null;
   networkName: string;
   txHash: string;
   explorerUrl: string;
@@ -271,7 +271,7 @@ export async function listVerifiedPayoutsForAdmin(
 /** Firms available to attach a wallet to, including drafts. */
 export async function listFirmOptions(
   db: Database,
-): Promise<{ id: string; name: string }[]> {
+): Promise<{ id: string; name: string | null }[]> {
   return db
     .select({ id: propFirms.id, name: propFirms.name })
     .from(propFirms)

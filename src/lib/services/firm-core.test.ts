@@ -18,6 +18,10 @@ import { saveFirmEssentials } from "./firm-essentials";
 import { stageChildOp } from "./firm-children";
 import { publishFirm } from "./firm-draft";
 import { getPublishedFirmView } from "@/lib/repositories/public-firm-view";
+import {
+  listPublishedFirmSlugs,
+  listPublishedFirmSummaries,
+} from "@/lib/repositories/public-firms";
 import { getAdminFirmChildren } from "@/lib/repositories/admin-firm-children";
 import { firmEssentialsSchema } from "@/lib/validation/firm";
 import { yearsInOperation } from "@/lib/view/firm-view";
@@ -200,6 +204,100 @@ describe("core prop firm workflow", () => {
         .where(eq(propFirms.id, id));
       expect(row?.legalName).toBe("Example Firm A Ltd");
       expect(row?.supportEmail).toBe("a@example.test");
+    });
+  });
+
+  /* ----------------------------------------- publishing with nothing set */
+
+  describe("no content field is required", () => {
+    it("creates a firm with no name and no slug at all", async () => {
+      const { id } = await createFirm(db, {
+        adminUserId: adminId,
+        input: { name: null, slug: null, description: null },
+      });
+
+      const [row] = await db
+        .select()
+        .from(propFirms)
+        .where(eq(propFirms.id, id));
+      expect(row?.name).toBeNull();
+      expect(row?.slug).toBeNull();
+      // Nothing was substituted to satisfy a constraint.
+      expect(row?.description).toBeNull();
+    });
+
+    it("publishes a completely empty firm", async () => {
+      const { id } = await createFirm(db, {
+        adminUserId: adminId,
+        input: { name: null, slug: null, description: null },
+      });
+
+      await expect(
+        publishFirm(db, { adminUserId: adminId, firmId: id }),
+      ).resolves.toBeDefined();
+
+      const [row] = await db
+        .select()
+        .from(propFirms)
+        .where(eq(propFirms.id, id));
+      expect(row?.status).toBe("published");
+      // Still empty. Publishing fills nothing in.
+      expect(row?.name).toBeNull();
+      expect(row?.slug).toBeNull();
+      expect(row?.founderName).toBeNull();
+      expect(row?.trustpilotRating).toBeNull();
+    });
+
+    it("gives an empty published firm no public page and no sitemap entry", async () => {
+      const { id } = await createFirm(db, {
+        adminUserId: adminId,
+        input: { name: null, slug: null, description: null },
+      });
+      await publishFirm(db, { adminUserId: adminId, firmId: id });
+
+      // THE POINT: publishable in the database, unreachable on the web. No
+      // invented slug means no invented URL (docs/ADMIN.md §6.2).
+      expect(await listPublishedFirmSummaries(db, {})).toHaveLength(0);
+      expect(await listPublishedFirmSlugs(db)).toHaveLength(0);
+      expect(await getPublishedFirmView(db, "")).toBeNull();
+    });
+
+    it("saves the essentials form with every field blank", async () => {
+      const { id } = await createFirm(db, {
+        adminUserId: adminId,
+        input: { name: null, slug: null, description: null },
+      });
+
+      await expect(
+        saveFirmEssentials(db, {
+          adminUserId: adminId,
+          firmId: id,
+          input: firmEssentialsSchema.parse({
+            name: "",
+            tagline: "",
+            description: "",
+            affiliateUrl: "",
+            founderName: "",
+            ceoName: "",
+            headquartersCountry: "",
+            trustpilotRating: "",
+            trustpilotUrl: "",
+            foundedOn: "",
+            payoutInfoUrl: "",
+            discountTitle: "",
+            discountCode: "",
+            discountDescription: "",
+            discountPercent: "",
+            discountEndsAt: "",
+          }),
+        }),
+      ).resolves.toBeDefined();
+
+      await publishFirm(db, { adminUserId: adminId, firmId: id });
+      // A blank discount creates no offer.
+      expect(
+        await db.select().from(offers).where(eq(offers.propFirmId, id)),
+      ).toHaveLength(0);
     });
   });
 

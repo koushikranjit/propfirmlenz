@@ -286,9 +286,16 @@ export async function runPrePublishChecks(
   const view = await materializeDraft(db, firmId);
   const failures: string[] = [];
 
-  if (!view.name.trim()) failures.push("name is required");
-  if (!view.slug.trim()) failures.push("slug is required");
-  if (!view.description?.trim()) failures.push("description is required");
+  // NO CONTENT FIELD IS REQUIRED TO PUBLISH `[owner-directed 2026-09-04]`.
+  //
+  // Name, slug and description were required here. They are not any more: an
+  // admin publishes what they have, and an empty field stays empty rather than
+  // being filled with something invented to get past a gate (CLAUDE.md §3).
+  //
+  // A firm with no slug simply has no public page — the public repositories
+  // exclude it, so publishing it cannot produce a broken URL. What remains
+  // below are INTEGRITY checks, not content ones: a slug that IS set must not
+  // collide with another firm's.
 
   // Slug must not collide with a live firm or an active redirect.
   const collision = await db
@@ -354,8 +361,10 @@ export async function publishFirm(
     await tx
       .update(propFirms)
       .set({
-        slug: view.slug,
-        name: view.name,
+        // Absence is NULL. Writing "" would fail `prop_firms_slug_ck` and
+        // would claim the firm has a name that is merely blank.
+        slug: view.slug.trim() || null,
+        name: view.name.trim() || null,
         tagline: view.tagline,
         description: view.description,
         legalName: view.legalName,

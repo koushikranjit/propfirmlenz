@@ -352,7 +352,8 @@ describe("firm draft / publish", () => {
       expect(r!.source).toBe("auto_slug_change");
     });
 
-    it("blocks publish when the pre-publish checklist fails", async () => {
+    it("publishes a firm with no description — content is not required", async () => {
+      // No content field gates publishing any more (docs/ADMIN.md §6.2).
       const [firm] = await db
         .insert(propFirms)
         .values({ slug: "no-description", name: "No Description" })
@@ -360,6 +361,33 @@ describe("firm draft / publish", () => {
 
       await expect(
         publishFirm(db, { adminUserId: publisherId, firmId: firm!.id }),
+      ).resolves.toBeDefined();
+    });
+
+    it("still blocks publish when a DRAFT stages an already-taken slug", async () => {
+      // The checklist is now INTEGRITY only, not content. Two live firms
+      // cannot share a slug, because one URL cannot address both.
+      //
+      // The collision has to arrive through a DRAFT: inserting two live rows
+      // with the same slug is refused outright by `prop_firms_slug_live_uq`,
+      // which is the stronger guarantee sitting underneath this check.
+      await db
+        .insert(propFirms)
+        .values({ slug: "taken-slug", name: "First", status: "published" });
+
+      const [second] = await db
+        .insert(propFirms)
+        .values({ slug: "second-firm", name: "Second" })
+        .returning({ id: propFirms.id });
+
+      await saveDraft(db, {
+        adminUserId: editorId,
+        firmId: second!.id,
+        payload: draft(0, editorId, { slug: "taken-slug" }),
+      });
+
+      await expect(
+        publishFirm(db, { adminUserId: publisherId, firmId: second!.id }),
       ).rejects.toBeInstanceOf(PrePublishCheckError);
     });
 

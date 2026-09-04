@@ -59,8 +59,17 @@ export const propFirms = pgTable(
   "prop_firms",
   {
     id: primaryId(),
-    slug: text("slug").notNull(),
-    name: text("name").notNull(),
+    /**
+     * NULLABLE `[owner-directed 2026-09-04]`.
+     *
+     * No content field is required to publish. A firm with no slug simply has
+     * NO PUBLIC PAGE: it is excluded from the directory, the sitemap and every
+     * public query, because /prop-firms/{slug} cannot address it. That is the
+     * honest outcome — inventing "untitled-firm" to satisfy a NOT NULL would
+     * publish a URL nobody chose and SEO junk nobody wants.
+     */
+    slug: text("slug"),
+    name: text("name"),
     legalName: text("legal_name"),
     tagline: text("tagline"),
     description: text("description"),
@@ -169,9 +178,10 @@ export const propFirms = pgTable(
       "prop_firms_verification_ck",
       sql`${t.verificationStatus} in (${sql.raw(sqlEnumList(VERIFICATION_STATUS))})`,
     ),
+    /** A slug may be absent; if present it must still be a valid slug. */
     check(
       "prop_firms_slug_ck",
-      sql`${t.slug} ~ ${sql.raw(`'${SLUG_PATTERN}'`)}`,
+      sql`${t.slug} is null or ${t.slug} ~ ${sql.raw(`'${SLUG_PATTERN}'`)}`,
     ),
     check(
       "prop_firms_tagline_len_ck",
