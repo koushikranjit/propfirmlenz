@@ -5,6 +5,10 @@ import { getDb } from "@/lib/db/client";
 import { requireAdminPermission } from "@/lib/auth/current-admin";
 import { PERMISSIONS } from "@/lib/auth/permissions";
 import { getAdminFirmById } from "@/lib/repositories/admin-firms";
+import {
+  getAdminCatalog,
+  getAdminFirmChildren,
+} from "@/lib/repositories/admin-firm-children";
 import { getCurrentVersion } from "@/lib/services/firm-draft";
 import { countDraftChanges } from "@/lib/validation/draft";
 import { Breadcrumbs } from "@/components/admin/Breadcrumbs";
@@ -38,10 +42,41 @@ export default async function FirmWorkspacePage({
   // Also covers the soft-deleted case: getAdminFirmById filters deleted_at.
   if (!firm) notFound();
 
-  const currentVersion = await getCurrentVersion(db, firm.id);
-  const pendingChanges = firm.draftPayload
-    ? countDraftChanges(firm.draftPayload)
-    : 0;
+  const [currentVersion, children, catalog] = await Promise.all([
+    getCurrentVersion(db, firm.id),
+    // PUBLISHED children. Pending edits stay in `draft_payload` and are
+    // summarised separately, so the editor can show "published + staged"
+    // without either being written into the other.
+    getAdminFirmChildren(db, firm.id),
+    getAdminCatalog(db),
+  ]);
+
+  const draft = firm.draftPayload;
+  const pendingChanges = draft ? countDraftChanges(draft) : 0;
+
+  /** What the draft has staged, keyed so each row can show its own badge. */
+  const staged = {
+    challenges: (draft?.challenges ?? []).map((op) => ({
+      key: op.id ?? `new:${op.slug ?? op.name ?? ""}`,
+      op: op._op,
+      name: op.name ?? "",
+    })),
+    rules: (draft?.ruleValues ?? []).map((op) => ({
+      ruleId: op.ruleId,
+      op: op._op,
+    })),
+    platformIds: (draft?.platforms ?? []).map((op) => op.platformId),
+    instrumentIds: (draft?.instruments ?? []).map((op) => op.instrumentId),
+    offers: (draft?.offers ?? []).map((op) => ({
+      key: op.id ?? `new:${op.title ?? ""}`,
+      op: op._op,
+    })),
+    affiliateLinks: (draft?.affiliateLinks ?? []).map((op) => ({
+      key: op.id ?? `new:${op.label ?? ""}`,
+      op: op._op,
+    })),
+    seo: draft?.seo !== undefined,
+  };
 
   return (
     <>
@@ -90,7 +125,12 @@ export default async function FirmWorkspacePage({
           verify: admin.can(PERMISSIONS.FIRM_VERIFY),
           delete: admin.can(PERMISSIONS.FIRM_DELETE),
           audit: admin.can(PERMISSIONS.AUDIT_LOG_READ),
+          affiliate: admin.can(PERMISSIONS.AFFILIATE_LINK_EDIT),
+          seo: admin.can(PERMISSIONS.SEO_WRITE),
         }}
+        firmChildren={children}
+        catalog={catalog}
+        staged={staged}
       />
     </>
   );

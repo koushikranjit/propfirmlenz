@@ -260,6 +260,7 @@ A versioned envelope, so the format can evolve without orphaning saved drafts:
   "platforms": [{ "_op": "…", "platform_id": "…" }],
   "instruments": [{ "_op": "…", "instrument_id": "…" }],
   "offers": [{ "_op": "…", "id": "…" /* fields */ }],
+  "affiliate_links": [{ "_op": "…", "id": "…" /* fields */ }],
   "seo": {/* changed seo_metadata fields */},
 }
 ```
@@ -267,6 +268,20 @@ A versioned envelope, so the format can evolve without orphaning saved drafts:
 - **Sparse, not a full copy.** Only changed fields and changed children are recorded, so a diff is
   the payload itself and `entity_versions` remains the full-snapshot store (§5.12).
 - `_op` is required on every child entry: `create`, `update`, or `delete`.
+- **`affiliate_links` `[added 2026-09-04]`** — staged like every other child, so a destination change
+  can be previewed and published atomically instead of redirecting real visitors the moment it is
+  typed. The array is optional, so drafts saved before it existed still parse and `schema_version` is
+  unchanged. **`commission_notes` is deliberately not stageable**: commercial terms are admin-only
+  and must never ride into a published snapshot or an entity version.
+- **One pending op per child `[LOCKED]`.** Staging the same child twice REPLACES the pending op
+  rather than queueing a second one — otherwise a draft accumulates intermediate states that publish
+  replays in order, and two identical creates collide on a unique index. Ops are keyed by row id; by
+  `platform_id` / `instrument_id` / `rule_id` for the collections with no row id of their own; and by
+  natural key (slug, title, label) for a create that has no id yet.
+- **Publish materialises every collection, in one transaction `[LOCKED]`.** Applying the draft means
+  applying the OPS to the tables, not writing back the materialised `FirmView` — the view collapses a
+  rule's `value_boolean` / `value_numeric` / `value_text` into one display state, so publishing from
+  it would lose which column the answer lives in.
 - `base_version` gives optimistic concurrency: if the firm has been published by someone else since
   the draft was forked, the draft is **stale** — the admin is warned and shown the difference rather
   than silently overwriting (`ADMIN.md` §7, §17).

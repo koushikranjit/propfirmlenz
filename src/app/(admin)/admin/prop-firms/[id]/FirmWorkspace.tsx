@@ -1,8 +1,6 @@
 "use client";
 
-import * as React from "react";
 import { useActionState } from "react";
-import { useFormStatus } from "react-dom";
 import { Tabs } from "radix-ui";
 import {
   type ActionState,
@@ -21,6 +19,16 @@ import {
   Textarea,
   cx,
 } from "@/components/ui/primitives";
+import { StatusMessage, SubmitButton } from "@/components/admin/forms";
+import type {
+  AdminCatalog,
+  AdminFirmChildren,
+} from "@/lib/repositories/admin-firm-children";
+import { AssociationsTab } from "./AssociationsTab";
+import { ChallengesTab, type StagedChallenge } from "./ChallengesTab";
+import { AffiliateTab, OffersTab, type StagedKey } from "./CommerceTabs";
+import { RulesTab, type StagedRule } from "./RulesTab";
+import { SeoTab } from "./SeoTab";
 
 export interface WorkspaceFirm {
   id: string;
@@ -53,6 +61,8 @@ export interface WorkspaceCan {
   verify: boolean;
   delete: boolean;
   audit: boolean;
+  affiliate: boolean;
+  seo: boolean;
 }
 
 /**
@@ -66,57 +76,15 @@ const TABS = [
   { value: "overview", label: "Overview", ready: true },
   { value: "company", label: "Company", ready: true },
   { value: "branding", label: "Branding", ready: true },
-  {
-    value: "challenges",
-    label: "Challenges",
-    ready: false,
-    phase: "a later Phase 1 stage",
-  },
-  {
-    value: "pricing",
-    label: "Pricing",
-    ready: false,
-    phase: "a later Phase 1 stage",
-  },
-  {
-    value: "trading",
-    label: "Trading",
-    ready: false,
-    phase: "a later Phase 1 stage",
-  },
-  {
-    value: "rules",
-    label: "Rules",
-    ready: false,
-    phase: "a later Phase 1 stage",
-  },
-  {
-    value: "platforms",
-    label: "Platforms",
-    ready: false,
-    phase: "a later Phase 1 stage",
-  },
-  {
-    value: "instruments",
-    label: "Instruments",
-    ready: false,
-    phase: "a later Phase 1 stage",
-  },
+  { value: "challenges", label: "Challenges", ready: true },
+  { value: "rules", label: "Rules", ready: true },
+  { value: "associations", label: "Platforms & instruments", ready: true },
+  { value: "offers", label: "Offers", ready: true },
+  { value: "affiliate", label: "Affiliate", ready: true },
+  { value: "seo", label: "SEO", ready: true },
+  { value: "verification", label: "Verification", ready: true },
   { value: "payouts", label: "Payouts", ready: false, phase: "Phase 2" },
-  {
-    value: "offers",
-    label: "Offers",
-    ready: false,
-    phase: "a later Phase 1 stage",
-  },
   { value: "reviews", label: "Reviews", ready: false, phase: "Phase 3" },
-  {
-    value: "affiliate",
-    label: "Affiliate",
-    ready: false,
-    phase: "a later Phase 1 stage",
-  },
-  { value: "seo", label: "SEO", ready: false, phase: "a later Phase 1 stage" },
   { value: "faqs", label: "FAQs", ready: false, phase: "Phase 6" },
   {
     value: "media",
@@ -124,7 +92,6 @@ const TABS = [
     ready: false,
     phase: "a later Phase 1 stage",
   },
-  { value: "verification", label: "Verification", ready: true },
   {
     value: "notes",
     label: "Internal Notes",
@@ -145,48 +112,28 @@ const TABS = [
   },
 ] as const;
 
-function SubmitButton({
-  children,
-  variant = "secondary",
-  pendingLabel,
-}: {
-  children: React.ReactNode;
-  variant?: "primary" | "secondary" | "ghost" | "danger";
-  pendingLabel: string;
-}) {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" variant={variant} disabled={pending}>
-      {pending ? pendingLabel : children}
-    </Button>
-  );
-}
-
-/** Announces action results politely to assistive technology. */
-function StatusMessage({ state }: { state: ActionState }) {
-  if (!state.error && !state.message) return null;
-  return (
-    <p
-      role="status"
-      aria-live="polite"
-      className={cx(
-        "rounded-[10px] border px-3 py-2 text-sm font-medium",
-        state.error
-          ? "border-danger/40 bg-danger/12 text-danger"
-          : "border-success/40 bg-success/12 text-success",
-      )}
-    >
-      {state.error ?? state.message}
-    </p>
-  );
+export interface WorkspaceStaged {
+  challenges: StagedChallenge[];
+  rules: StagedRule[];
+  platformIds: string[];
+  instrumentIds: string[];
+  offers: StagedKey[];
+  affiliateLinks: StagedKey[];
+  seo: boolean;
 }
 
 export function FirmWorkspace({
   firm,
   can,
+  firmChildren,
+  catalog,
+  staged,
 }: {
   firm: WorkspaceFirm;
   can: WorkspaceCan;
+  firmChildren: AdminFirmChildren;
+  catalog: AdminCatalog;
+  staged: WorkspaceStaged;
 }) {
   const [saveState, saveFormAction] = useActionState<ActionState, FormData>(
     saveFirmAction,
@@ -601,6 +548,79 @@ export function FirmWorkspace({
               </p>
             )}
           </Card>
+        </Tabs.Content>
+
+        <Tabs.Content value="challenges">
+          <div className="mt-4">
+            <ChallengesTab
+              firmId={firm.id}
+              challenges={firmChildren.challenges}
+              staged={staged.challenges}
+              readOnly={readOnly}
+            />
+          </div>
+        </Tabs.Content>
+
+        <Tabs.Content value="rules">
+          <div className="mt-4">
+            <RulesTab
+              firmId={firm.id}
+              rules={catalog.rules}
+              values={firmChildren.ruleValues}
+              staged={staged.rules}
+              readOnly={readOnly}
+            />
+          </div>
+        </Tabs.Content>
+
+        <Tabs.Content value="associations">
+          <div className="mt-4">
+            <AssociationsTab
+              firmId={firm.id}
+              catalog={catalog}
+              firmChildren={firmChildren}
+              stagedPlatformIds={new Set(staged.platformIds)}
+              stagedInstrumentIds={new Set(staged.instrumentIds)}
+              readOnly={readOnly}
+            />
+          </div>
+        </Tabs.Content>
+
+        <Tabs.Content value="offers">
+          <div className="mt-4">
+            <OffersTab
+              firmId={firm.id}
+              offers={firmChildren.offers}
+              affiliateLinks={firmChildren.affiliateLinks}
+              staged={staged.offers}
+              readOnly={readOnly}
+            />
+          </div>
+        </Tabs.Content>
+
+        <Tabs.Content value="affiliate">
+          <div className="mt-4">
+            <AffiliateTab
+              firmId={firm.id}
+              links={firmChildren.affiliateLinks}
+              staged={staged.affiliateLinks}
+              readOnly={readOnly}
+              canEdit={can.affiliate}
+            />
+          </div>
+        </Tabs.Content>
+
+        <Tabs.Content value="seo">
+          <div className="mt-4">
+            <SeoTab
+              firmId={firm.id}
+              seo={firmChildren.seo}
+              slug={firm.slug}
+              hasStagedSeo={staged.seo}
+              readOnly={readOnly}
+              canWriteSeo={can.seo}
+            />
+          </div>
         </Tabs.Content>
 
         {TABS.filter((t) => !t.ready).map((tab) => (

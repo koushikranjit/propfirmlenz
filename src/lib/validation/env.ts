@@ -6,6 +6,24 @@ import { z } from "zod";
  *
  * Never log or expose these values (docs/CLAUDE.md §6).
  */
+/**
+ * An unset variable and one set to the empty string mean the same thing:
+ * NOT CONFIGURED.
+ *
+ * `.env.example` documents the contract with bare `NAME=` lines, and the
+ * documented workflow is to copy it. Every value in that copy is therefore an
+ * empty string until someone fills it in — so `""` must resolve to "absent"
+ * rather than failing `.url()` and taking the whole build down before anyone
+ * has a database. `assertProductionEnv()` below is what actually refuses to
+ * ship without real values.
+ */
+const optionalVar = <T extends z.ZodType>(schema: T) =>
+  z.preprocess(
+    (value) =>
+      typeof value === "string" && value.trim() === "" ? undefined : value,
+    schema.optional(),
+  );
+
 const serverSchema = z.object({
   NODE_ENV: z
     .enum(["development", "test", "production"])
@@ -15,13 +33,13 @@ const serverSchema = z.object({
     .default("info"),
 
   // Neon: pooled for the app, direct for drizzle-kit (docs/ARCHITECTURE.md §3.3)
-  DATABASE_URL: z.string().url().optional(),
-  DATABASE_URL_DIRECT: z.string().url().optional(),
+  DATABASE_URL: optionalVar(z.string().url()),
+  DATABASE_URL_DIRECT: optionalVar(z.string().url()),
 
   /** Pepper for session-token hashing — a leaked DB alone yields no usable tokens. */
-  AUTH_SESSION_PEPPER: z.string().min(16).optional(),
+  AUTH_SESSION_PEPPER: optionalVar(z.string().min(16)),
   /** Salt for IP / user-agent hashing. Raw values are never stored. */
-  IP_HASH_SALT: z.string().min(16).optional(),
+  IP_HASH_SALT: optionalVar(z.string().min(16)),
 });
 
 const publicSchema = z.object({

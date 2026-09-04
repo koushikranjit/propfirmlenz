@@ -200,6 +200,59 @@ export const draftOfferSchema = z
     { message: "a percent discount must be between 0 and 100" },
   );
 
+/**
+ * Affiliate links — pending edits, like every other child `[LOCKED]`.
+ *
+ * These live in the draft for the same reason challenges do: an admin editing a
+ * published firm must be able to stage a destination change, preview it, and
+ * publish it atomically. Writing an affiliate link straight to the live table
+ * would change where real visitors are sent the instant it was typed.
+ *
+ * `destinationUrl` is validated HERE, again by the database (`^https://`), and
+ * again by `isSafeAffiliateDestination` before any `Location` header is
+ * emitted. All three layers are deliberate: `/go/{slug}` is the only route that
+ * sends a visitor off-site (docs/ARCHITECTURE.md §11.3 `[LOCKED]`).
+ *
+ * `commissionNotes` is deliberately ABSENT. Commercial terms are admin-only and
+ * are never staged in a draft, so they cannot ride into a published snapshot or
+ * an entity version that someone later inspects.
+ */
+export const draftAffiliateLinkSchema = z
+  .object({
+    _op: draftOpSchema,
+    id: z.uuid().optional(),
+    label: z.string().min(1).max(120).optional(),
+    destinationUrl: z
+      .url()
+      .refine((v) => v.startsWith("https://"), {
+        message: "must be an https:// URL",
+      })
+      .optional(),
+    network: z.string().max(120).nullable().optional(),
+    campaign: z
+      .string()
+      .regex(/^[a-zA-Z0-9_-]{1,64}$/, "letters, numbers, hyphen or underscore")
+      .nullable()
+      .optional(),
+    isDefault: z.boolean().optional(),
+    status: z.enum(["active", "paused", "archived"]).optional(),
+    startsAt: z.iso.datetime().nullable().optional(),
+    endsAt: z.iso.datetime().nullable().optional(),
+  })
+  .strict()
+  .refine((l) => l._op === "create" || l.id !== undefined, {
+    message: "update and delete require an id",
+  })
+  .refine((l) => l._op !== "create" || l.destinationUrl !== undefined, {
+    message: "a new affiliate link requires a destination URL",
+  })
+  .refine(
+    (l) => l.startsAt == null || l.endsAt == null || l.endsAt > l.startsAt,
+    {
+      message: "the end of the window must be after its start",
+    },
+  );
+
 export const draftSeoSchema = z
   .object({
     title: z.string().max(70).nullable().optional(),
@@ -236,6 +289,7 @@ export const draftPayloadSchema = z
     platforms: z.array(draftPlatformSchema).optional(),
     instruments: z.array(draftInstrumentSchema).optional(),
     offers: z.array(draftOfferSchema).optional(),
+    affiliateLinks: z.array(draftAffiliateLinkSchema).optional(),
     seo: draftSeoSchema.optional(),
   })
   .strict();
@@ -244,6 +298,11 @@ export type DraftPayload = z.infer<typeof draftPayloadSchema>;
 export type DraftFirm = z.infer<typeof draftFirmSchema>;
 export type DraftChallenge = z.infer<typeof draftChallengeSchema>;
 export type DraftOffer = z.infer<typeof draftOfferSchema>;
+export type DraftAffiliateLink = z.infer<typeof draftAffiliateLinkSchema>;
+export type DraftRuleValue = z.infer<typeof draftRuleValueSchema>;
+export type DraftPlatform = z.infer<typeof draftPlatformSchema>;
+export type DraftInstrument = z.infer<typeof draftInstrumentSchema>;
+export type DraftSeo = z.infer<typeof draftSeoSchema>;
 
 /** Creates an empty draft forked from a known published version. */
 export function emptyDraft(baseVersion: number, adminId: string): DraftPayload {
@@ -264,6 +323,7 @@ export function countDraftChanges(payload: DraftPayload): number {
     (payload.platforms?.length ?? 0) +
     (payload.instruments?.length ?? 0) +
     (payload.offers?.length ?? 0) +
+    (payload.affiliateLinks?.length ?? 0) +
     Object.keys(payload.seo ?? {}).length
   );
 }

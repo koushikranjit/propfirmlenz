@@ -139,6 +139,32 @@ Stage 3 built the public firm surface:
   Open Graph, `WebSite` (with a SearchAction pointing at the search that
   genuinely exists) and `WebPage`. Organization stays in the layout, unduplicated.
 
+**Stage 5 (2026-09-04)** made the firm editor able to manage the data the public
+profile already renders, and fixed a defect it exposed:
+
+- **Publish materialised no children.** A challenge staged in a draft was
+  validated, previewed, and then silently DROPPED at publish — `publishFirm`
+  wrote firm columns only. `firm-publish-children.ts` now materialises
+  challenges, rule values, platform and instrument associations, offers,
+  affiliate links and SEO metadata inside the same transaction, and publish
+  writes every firm column a draft can carry rather than five of them.
+- **Preview showed only firm fields and challenges.** `firm-draft-overlay.ts`
+  is a pure overlay covering every collection, so preview now reflects staged
+  rules, platforms, instruments, offers and the affiliate CTA state.
+- **Draft envelope extended** with `affiliateLinks` (schema version unchanged —
+  an optional array, so existing drafts still parse). Commission notes are
+  deliberately NOT stageable.
+- **Editor tabs**: Challenges, Rules, Platforms & instruments, Offers,
+  Affiliate, SEO — plus the existing Overview / Company / Branding /
+  Verification. Every child edit is staged in `draft_payload` through one code
+  path; none writes a published row.
+- **Permissions per collection**: `challenge:edit`, `offer:edit`,
+  `affiliate_link:edit`, `seo:write`, otherwise `firm:edit` — all enforced in
+  the service layer, never by hiding a button.
+- **Affiliate safety**: destinations validated by the form schema and by the
+  same `isSafeAffiliateDestination` that guards `/go/{slug}`. The destination
+  is admin-only and still absent from `FirmView`.
+
 Deliberately NOT built (awaiting approval):
 
 - ❌ No homepage, challenge detail pages, review/payout system, comparison UI, blog
@@ -197,7 +223,7 @@ only to keep the working tree clean. It can be suppressed by patching
 
 ## Next step
 
-**Owner approves the next stage.** Stages 1–4 are complete and verified.
+**Owner approves the next stage.** Stages 1–5 are complete and verified.
 
 1. ✅ Documentation, architecture, brand migration — complete 2026-09-03.
 2. ✅ Git identity configured (`Koushik <koushikranjit8@gmail.com>`).
@@ -208,7 +234,8 @@ only to keep the working tree clean. It can be suppressed by patching
 7. ✅ Stage 3 (public firm profile + SEO + preview integration) — 2026-09-04.
 8. ✅ Stage 3.1 (public affiliate route + documentation hardening) — 2026-09-04.
 9. ✅ Stage 4 (public homepage) — 2026-09-04.
-10. ⬜ Owner approves the next stage.
+10. ✅ Stage 5 (admin firm data management) — 2026-09-04.
+11. ⬜ Owner approves the next stage.
 
 The nearest unbuilt pieces, in dependency order: the iframe split-pane preview in the
 workspace (`ARCHITECTURE.md` §21.4), the remaining workspace tabs that populate
@@ -256,7 +283,7 @@ and caching with revalidation tags. **None may start without approval.**
 
 ## In progress
 
-Nothing. Stage 4 is complete and committed; awaiting owner approval for the next stage.
+Nothing. Stage 5 is complete and committed; awaiting owner approval for the next stage.
 
 ### Deviations from `INITIALIZATION.md`, and why `[recorded 2026-09-04]`
 
@@ -431,8 +458,9 @@ Computed WCAG ratios, not estimates. Three constraints came out of the new palet
 | 3   | **No separate requirements document exists.** The specification came from the instruction messages in this session; nothing was found in the workspace or session attachments | Documentation is built from that specification — any requirement not stated there is absent          | Confirm the docs capture the intent, or supply the missing source                                                      |
 | 4   | Two MCP connectors (Crypto.com, Webflow) require authorisation                                                                                                                | None on this project                                                                                 | Ignore, or authorise in claude.ai connector settings                                                                   |
 | 5   | **A `redirects` row with `status_code = 410` currently 404s** rather than returning a true 410                                                                                 | A deliberately-removed URL reports "not found" instead of "gone" — a weaker but not incorrect signal | Needs the URL-normalisation middleware (`SEO.md` §3.3, §8), which is not built yet                                     |
-| 6   | **Vitest worker cap.** `maxWorkers: 2` in `vitest.config.mts`                                                                                                       | Five test files each boot a PostgreSQL-in-WASM instance; at the default worker count they exhausted memory and killed a fork mid-run, surfacing as a spurious "worker exited unexpectedly" with a different pass count each time | Capped at 2 workers, verified stable across repeated runs. Raise only with a measured check                            |
-| 7   | **Public pages are `force-dynamic`.** No ISR, no cache tags                                                                                                                   | Correct but unoptimised; every request hits the database                                             | Caching and revalidation tags are a later stage (`ARCHITECTURE.md` §8)                                                 |
+| 6   | **Media upload is deferred.** The firm editor manages media REFERENCES only; there is no upload endpoint, no R2 integration, and therefore no file-type or size validation | An admin cannot attach a firm logo yet, so `FirmLogo` renders its empty box | Deliberate: inventing an upload backend was out of scope. The media library and its validation land together |
+| 7   | **Vitest worker cap.** `maxWorkers: 2` in `vitest.config.mts`                                                                                                       | Five test files each boot a PostgreSQL-in-WASM instance; at the default worker count they exhausted memory and killed a fork mid-run, surfacing as a spurious "worker exited unexpectedly" with a different pass count each time | Capped at 2 workers, verified stable across repeated runs. Raise only with a measured check                            |
+| 8   | **Public pages are `force-dynamic`.** No ISR, no cache tags                                                                                                                   | Correct but unoptimised; every request hits the database                                             | Caching and revalidation tags are a later stage (`ARCHITECTURE.md` §8)                                                 |
 
 **Resolved 2026-09-03:** all 17 blocking decisions, including the draft model, framework, and
 canonical domain.
@@ -458,3 +486,4 @@ canonical domain.
 | 2026-09-04 | **Phase 1 Stage 3: public firm profile, SEO architecture and preview integration.** Unified the two competing view models into the canonical `FirmView` (`lib/view/firm-view.ts`); `getPublishedFirmView()` and `materializeDraft()` now share `assembleView()`. Built the single `FirmProfile` component tree used by both the public route and the admin preview, `/prop-firms` (filters, crawlable pagination, honest empty states) and `/prop-firms/{slug}` (metadata, canonical, OG, breadcrumbs, WebPage + BreadcrumbList JSON-LD, 301/308 slug redirects). Database-driven sitemap with a thin-content gate. No new dependencies. | format ✅ typecheck ✅ lint ✅ **203 tests ✅** build ✅ (24 routes) |
 | 2026-09-04 | **Phase 1 Stage 3.1: public affiliate routing + documentation hardening.** Built `/go/{slug}` on the existing `resolveAffiliateLink` / `recordAffiliateClick` services — no resolution logic duplicated. Added `isSafeAffiliateDestination` (application-layer open-redirect guard over the DB's `^https://` CHECK) and pure request-classification helpers (bot, prefetch, device, referrer host, same-origin landing path, allowlisted `p`/`c`). Click is recorded before the 302 `[owner-directed]`; `ARCHITECTURE.md` §11.1–11.3 updated to match. Corrected `CLAUDE.md` rule 35 to name `getPublishedFirmView()`. No new dependencies. | format ✅ typecheck ✅ lint ✅ **244 tests ✅** build ✅ (25 routes) |
 | 2026-09-04 | **Phase 1 Stage 4: public homepage.** Built `/` inside the `(public)` group (the placeholder root route is gone): hero with real computed counts, GET-form search into `/prop-firms`, alphabetical firm grid, trust/methodology section, DB-driven browse-by facets, recently-checked list on real `verified_at`, closing CTA, definitional "what to compare" prose. Rewrote the site header (sticky, `<details>` mobile menu, no client JS) and footer (three columns, affiliate disclosure, unbuilt sections as text not links). Added `loading`/`error`/`not-found` for the public group. Two narrow repository additions; no new firm view model. `WebSite` + `WebPage` JSON-LD only. Capped vitest at 2 workers after PGlite instances exhausted memory. No new dependencies. | format ✅ typecheck ✅ lint ✅ **272 tests ✅** build ✅ (26 routes) |
+| 2026-09-04 | **Phase 1 Stage 5: admin firm data management.** Fixed a real defect — `publishFirm` wrote firm columns only, so staged challenges/rules/offers were validated, previewed, then silently dropped. Added `firm-publish-children.ts` (all six child collections + SEO materialised in the publish transaction), `firm-draft-overlay.ts` (pure, full-coverage preview overlay), `firm-children.ts` (one staging path for every child op, with per-collection permissions), an admin children repository, child form schemas, server actions, and six editor tabs. Extended the draft envelope with `affiliateLinks`. Fixed an unrelated build blocker: empty values in a copied `.env.example` failed the env schema. No new dependencies. | format ✅ typecheck ✅ lint ✅ **330 tests ✅** build ✅ (26 routes) |

@@ -260,6 +260,31 @@ The core safety mechanism. Backed by the `draft_payload` model (`DATABASE.md` §
 version, byte for byte. Editing, saving, and previewing change nothing public. **Only an explicit
 publish action changes published data.**
 
+### Child collections go through the draft too `[LOCKED — 2026-09-04]`
+
+Challenges, rule answers, platform and instrument associations, offers, affiliate links and SEO
+metadata are all staged in `draft_payload` and materialised by publish, in its transaction.
+
+There is **one** staging path. There is deliberately no "write straight to the table if the firm is
+unpublished" shortcut: one code path means one set of semantics to reason about and test, and an
+unpublished firm reaches the same end state by the same route while still being previewable first.
+
+Per-collection permissions, enforced in the SERVICE layer — hiding a control is presentation, not
+authorisation:
+
+| Collection                    | Permission            |
+| ----------------------------- | --------------------- |
+| Challenges                    | `challenge:edit`      |
+| Offers                        | `offer:edit`          |
+| Affiliate links               | `affiliate_link:edit` |
+| SEO metadata                  | `seo:write`           |
+| Rules, platforms, instruments | `firm:edit`           |
+
+**Deletes are staged, not immediate.** Removing a published child records a `delete` op; the row is
+soft-deleted — or, for the association tables that carry no history worth keeping, removed — only
+when someone publishes. "Unstage" is a separate action meaning *undo my pending edit*, which is a
+different thing from *delete the published row*.
+
 ### Rules
 
 1. **Nothing is public until published.** Saving is always safe. `[LOCKED]`

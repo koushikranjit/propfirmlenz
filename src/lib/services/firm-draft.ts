@@ -1,10 +1,14 @@
-import { and, desc, eq, isNull } from "drizzle-orm";
+import { and, desc, eq, inArray, isNull } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
 import {
+  affiliateLinks,
   auditLogs,
   entityVersions,
+  instruments,
+  platforms,
   propFirms,
   redirects,
+  rules,
 } from "@/lib/db/schema";
 import {
   assembleView,
@@ -12,6 +16,8 @@ import {
 } from "@/lib/repositories/public-firm-view";
 import type { FirmView } from "@/lib/view/firm-view";
 import { PERMISSIONS, requirePermission } from "@/lib/auth/permissions";
+import { type OverlayCatalog, overlayDraft } from "./firm-draft-overlay";
+import { applyDraftChildren } from "./firm-publish-children";
 import {
   type DraftPayload,
   countDraftChanges,
@@ -169,128 +175,89 @@ export async function materializeDraft(
   const row = await getFirmRowForView(db, firmId);
   if (!row) throw new NotFoundError("Firm");
 
-  // The published view, assembled exactly as the public page would.
+  // The published view, assembled exactly as the public page would build it.
   const base = await assembleView(db, row);
   const draft = firm.draftPayload;
   if (!draft) return base;
 
-  const d = draft.firm;
-  const view: FirmView = {
-    ...base,
-    ...(d?.slug !== undefined ? { slug: d.slug } : {}),
-    ...(d?.name !== undefined ? { name: d.name } : {}),
-    ...(d?.legalName !== undefined ? { legalName: d.legalName } : {}),
-    ...(d?.tagline !== undefined ? { tagline: d.tagline } : {}),
-    ...(d?.description !== undefined ? { description: d.description } : {}),
-    ...(d?.foundedYear !== undefined ? { foundedYear: d.foundedYear } : {}),
-    ...(d?.headquartersCountry !== undefined
-      ? { headquartersCountry: d.headquartersCountry }
-      : {}),
-    ...(d?.headquartersCity !== undefined
-      ? { headquartersCity: d.headquartersCity }
-      : {}),
-    ...(d?.websiteUrl !== undefined ? { websiteUrl: d.websiteUrl } : {}),
-    ...(d?.supportEmail !== undefined ? { supportEmail: d.supportEmail } : {}),
-    ...(d?.supportUrl !== undefined ? { supportUrl: d.supportUrl } : {}),
+  // The draft references catalog rows and affiliate links by id; the overlay
+  // is pure, so those are resolved here and handed to it.
+  const catalog = await loadOverlayCatalog(db, firmId, draft);
+  return overlayDraft(base, draft, catalog);
+}
+
+/**
+ * Resolves everything the pure overlay needs: the catalog rows the draft names,
+ * and the firm's currently-active affiliate link ids.
+ *
+ * One query per collection, and only for ids the draft actually references — a
+ * draft that touches no platforms issues no platform query.
+ */
+async function loadOverlayCatalog(
+  db: Database,
+  firmId: string,
+  draft: DraftPayload,
+): Promise<OverlayCatalog> {
+  const platformIds = (draft.platforms ?? []).map((p) => p.platformId);
+  const instrumentIds = (draft.instruments ?? []).map((i) => i.instrumentId);
+  const ruleIds = (draft.ruleValues ?? []).map((r) => r.ruleId);
+
+  const [platformRows, instrumentRows, ruleRows, affiliateRows] =
+    await Promise.all([
+      platformIds.length > 0
+        ? db
+            .select({
+              id: platforms.id,
+              name: platforms.name,
+              slug: platforms.slug,
+            })
+            .from(platforms)
+            .where(inArray(platforms.id, platformIds))
+        : Promise.resolve([]),
+
+      instrumentIds.length > 0
+        ? db
+            .select({
+              id: instruments.id,
+              name: instruments.name,
+              slug: instruments.slug,
+              assetClass: instruments.assetClass,
+            })
+            .from(instruments)
+            .where(inArray(instruments.id, instrumentIds))
+        : Promise.resolve([]),
+
+      ruleIds.length > 0
+        ? db
+            .select({
+              id: rules.id,
+              key: rules.key,
+              label: rules.label,
+              category: rules.category,
+              description: rules.description,
+            })
+            .from(rules)
+            .where(inArray(rules.id, ruleIds))
+        : Promise.resolve([]),
+
+      db
+        .select({ id: affiliateLinks.id })
+        .from(affiliateLinks)
+        .where(
+          and(
+            eq(affiliateLinks.propFirmId, firmId),
+            eq(affiliateLinks.status, "active"),
+            isNull(affiliateLinks.deletedAt),
+          ),
+        ),
+    ]);
+
+  return {
+    platforms: new Map(platformRows.map((p) => [p.id, p])),
+    instruments: new Map(instrumentRows.map((i) => [i.id, i])),
+    rules: new Map(ruleRows.map((r) => [r.id, r])),
+    activeAffiliateLinkIds: affiliateRows.map((a) => a.id),
   };
-
-  // Apply pending child ops. Synthesised rows are NEVER written to the database.
-  const byId = new Map(view.challenges.map((c) => [c.id, { ...c }]));
-  for (const op of draft.challenges ?? []) {
-    if (op._op === "delete" && op.id) {
-      byId.delete(op.id);
-      continue;
-    }
-    if (op._op === "update" && op.id) {
-      const existing = byId.get(op.id);
-      if (!existing) continue;
-      byId.set(op.id, {
-        ...existing,
-        ...(op.name !== undefined ? { name: op.name } : {}),
-        ...(op.slug !== undefined ? { slug: op.slug } : {}),
-        ...(op.challengeType !== undefined
-          ? { challengeType: op.challengeType }
-          : {}),
-        ...(op.accountSize !== undefined
-          ? {
-              accountSize: {
-                amount: op.accountSize.amount.toFixed(2),
-                currency: op.accountSize.currency,
-              },
-            }
-          : {}),
-        ...(op.price !== undefined
-          ? {
-              price:
-                op.price === null
-                  ? null
-                  : {
-                      amount: op.price.amount.toFixed(2),
-                      currency: op.price.currency,
-                    },
-            }
-          : {}),
-        ...(op.profitSplitPct !== undefined
-          ? { profitSplitPct: op.profitSplitPct?.toString() ?? null }
-          : {}),
-        ...(op.maxDailyLossPct !== undefined
-          ? { maxDailyLossPct: op.maxDailyLossPct?.toString() ?? null }
-          : {}),
-        ...(op.maxTotalDrawdownPct !== undefined
-          ? { maxTotalDrawdownPct: op.maxTotalDrawdownPct?.toString() ?? null }
-          : {}),
-        ...(op.drawdownType !== undefined
-          ? { drawdownType: op.drawdownType }
-          : {}),
-        ...(op.drawdownBasis !== undefined
-          ? { drawdownBasis: op.drawdownBasis }
-          : {}),
-        ...(op.minTradingDays !== undefined
-          ? { minTradingDays: op.minTradingDays }
-          : {}),
-        ...(op.maxTradingDays !== undefined
-          ? { maxTradingDays: op.maxTradingDays }
-          : {}),
-        ...(op.leverage !== undefined ? { leverage: op.leverage } : {}),
-      });
-      continue;
-    }
-    if (op._op === "create") {
-      // Stable synthetic id so React keys and anchors survive preview reloads.
-      const syntheticId = `draft:${op.slug ?? op.name ?? "new"}`;
-      byId.set(syntheticId, {
-        id: syntheticId,
-        name: op.name ?? "",
-        slug: op.slug ?? "",
-        challengeType: op.challengeType ?? "other",
-        accountSize: {
-          amount: op.accountSize ? op.accountSize.amount.toFixed(2) : "0.00",
-          currency: op.accountSize?.currency ?? "USD",
-        },
-        price: op.price
-          ? { amount: op.price.amount.toFixed(2), currency: op.price.currency }
-          : null,
-        profitTargetP1Pct: op.profitTargetP1Pct?.toString() ?? null,
-        profitTargetP2Pct: op.profitTargetP2Pct?.toString() ?? null,
-        profitTargetP3Pct: op.profitTargetP3Pct?.toString() ?? null,
-        maxDailyLossPct: op.maxDailyLossPct?.toString() ?? null,
-        maxTotalDrawdownPct: op.maxTotalDrawdownPct?.toString() ?? null,
-        drawdownType: op.drawdownType ?? null,
-        drawdownBasis: op.drawdownBasis ?? null,
-        minTradingDays: op.minTradingDays ?? null,
-        maxTradingDays: op.maxTradingDays ?? null,
-        profitSplitPct: op.profitSplitPct?.toString() ?? null,
-        payoutFrequencyDays: op.payoutFrequencyDays ?? null,
-        firstPayoutDays: op.firstPayoutDays ?? null,
-        leverage: op.leverage ?? null,
-        feeRefundable: op.feeRefundable ?? null,
-        hasScalingPlan: op.hasScalingPlan ?? null,
-      });
-    }
-  }
-  view.challenges = [...byId.values()];
-
-  return view;
 }
 
 /** The pre-publish checklist, run against the MATERIALISED draft. */
@@ -363,7 +330,9 @@ export async function publishFirm(
   const now = new Date();
 
   await db.transaction(async (tx) => {
-    // 1. Apply firm-level fields.
+    // 1. Apply firm-level fields. Every column a draft can carry is written, so
+    //    a field an admin edited cannot be silently discarded at publish.
+    const d = draft?.firm;
     await tx
       .update(propFirms)
       .set({
@@ -371,7 +340,23 @@ export async function publishFirm(
         name: view.name,
         tagline: view.tagline,
         description: view.description,
+        legalName: view.legalName,
+        foundedYear: view.foundedYear,
+        headquartersCountry: view.headquartersCountry,
+        headquartersCity: view.headquartersCity,
         websiteUrl: view.websiteUrl,
+        supportEmail: view.supportEmail,
+        supportUrl: view.supportUrl,
+        // Not part of the public view model, so read from the draft directly.
+        ...(d?.logoMediaId !== undefined ? { logoMediaId: d.logoMediaId } : {}),
+        ...(d?.coverMediaId !== undefined
+          ? { coverMediaId: d.coverMediaId }
+          : {}),
+        ...(d?.brandColor !== undefined ? { brandColor: d.brandColor } : {}),
+        ...(d?.isFeatured !== undefined ? { isFeatured: d.isFeatured } : {}),
+        ...(d?.displayOrder !== undefined
+          ? { displayOrder: d.displayOrder }
+          : {}),
         status: "published",
         publishedAt: firm.publishedAt ?? now,
         updatedByAdminId: opts.adminUserId,
@@ -383,6 +368,17 @@ export async function publishFirm(
           : {}),
       })
       .where(eq(propFirms.id, firm.id));
+
+    // 1b. Materialise every child collection in the SAME transaction. Without
+    //     this a challenge staged in a draft was validated, previewed, and then
+    //     silently dropped at publish.
+    if (draft) {
+      await applyDraftChildren(tx, {
+        firmId: firm.id,
+        adminUserId: opts.adminUserId,
+        draft,
+      });
+    }
 
     // 2. A slug change writes its 301 in the SAME transaction (docs/SEO.md §7).
     if (slugChanged) {
