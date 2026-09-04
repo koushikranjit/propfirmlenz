@@ -15,7 +15,6 @@ import {
   Card,
   Field,
   Input,
-  NotImplemented,
   Textarea,
   cx,
 } from "@/components/ui/primitives";
@@ -71,47 +70,47 @@ export interface WorkspaceCan {
 /**
  * Workspace tabs — docs/ADMIN.md §6.2.
  *
- * Overview / Company / Branding are implemented. Every other tab renders an
- * honest "not implemented" state rather than a fake form pretending the
- * underlying functionality exists (docs/CLAUDE.md §3).
+ * THIS EDITOR HOLDS FIRM DATA, AND NOTHING ELSE `[owner-directed 2026-09-04]`.
+ *
+ * Every tab here writes to a table the firm owns — its own columns, or a child
+ * collection the public profile renders. Payout tracking, reviews, media and
+ * the audit trail are their OWN admin sections; they are firm-scoped views of
+ * separate systems, and putting a tab for each one here is how a firm editor
+ * turns into the whole dashboard.
+ *
+ * Nothing in this list is a placeholder. A tab that renders "not implemented"
+ * costs a click to discover it does nothing, so unbuilt work is named once,
+ * below the tabs, instead of occupying the tab bar (docs/CLAUDE.md §3).
  */
 const TABS = [
-  { value: "overview", label: "Overview", ready: true },
-  { value: "company", label: "Company", ready: true },
-  { value: "branding", label: "Branding", ready: true },
-  { value: "challenges", label: "Challenges", ready: true },
-  { value: "rules", label: "Rules", ready: true },
-  { value: "associations", label: "Platforms & instruments", ready: true },
-  { value: "offers", label: "Offers", ready: true },
-  { value: "affiliate", label: "Affiliate", ready: true },
-  { value: "payouts", label: "Payouts", ready: false, phase: "Phase 2" },
-  { value: "reviews", label: "Reviews", ready: false, phase: "Phase 3" },
-  { value: "faqs", label: "FAQs", ready: false, phase: "Phase 6" },
-  {
-    value: "media",
-    label: "Media",
-    ready: false,
-    phase: "a later Phase 1 stage",
-  },
-  {
-    value: "notes",
-    label: "Internal Notes",
-    ready: false,
-    phase: "a later Phase 1 stage",
-  },
-  {
-    value: "redirects",
-    label: "Redirects",
-    ready: false,
-    phase: "a later Phase 1 stage",
-  },
-  {
-    value: "audit",
-    label: "Audit Log",
-    ready: false,
-    phase: "a later Phase 1 stage",
-  },
+  { value: "overview", label: "Overview" },
+  { value: "company", label: "Company" },
+  { value: "branding", label: "Branding" },
+  { value: "challenges", label: "Challenges" },
+  { value: "rules", label: "Rules" },
+  { value: "associations", label: "Platforms & instruments" },
+  { value: "offers", label: "Offers" },
+  { value: "affiliate", label: "Affiliate" },
 ] as const;
+
+/**
+ * Firm-related work that lives in its own admin section.
+ *
+ * Rendered as links, never as tabs: the separation is the point, and a link
+ * that goes somewhere real beats a tab that apologises.
+ */
+const ELSEWHERE: { label: string; href: string; note: string }[] = [
+  {
+    label: "Payout tracking",
+    href: "/admin/payouts",
+    note: "wallets, candidates and verified payouts",
+  },
+  {
+    label: "Audit log",
+    href: "/admin/audit-logs",
+    note: "who changed what, and when",
+  },
+];
 
 export interface WorkspaceStaged {
   challenges: StagedChallenge[];
@@ -316,11 +315,6 @@ export function FirmWorkspace({
                   )}
                 >
                   {tab.label}
-                  {!tab.ready ? (
-                    <span className="ml-1.5 text-[10px] uppercase text-text-metadata">
-                      soon
-                    </span>
-                  ) : null}
                 </Tabs.Trigger>
               ))}
             </Tabs.List>
@@ -627,15 +621,31 @@ export function FirmWorkspace({
                 />
               </div>
             </Tabs.Content>
-
-            {TABS.filter((t) => !t.ready).map((tab) => (
-              <Tabs.Content key={tab.value} value={tab.value}>
-                <div className="mt-4">
-                  <NotImplemented feature={tab.label} phase={tab.phase} />
-                </div>
-              </Tabs.Content>
-            ))}
           </Tabs.Root>
+
+          {/* Firm-scoped work that belongs to another system. */}
+          <div className="mt-6 border-t border-border-subtle pt-4">
+            <p className="text-xs font-semibold uppercase tracking-wide text-text-muted">
+              Managed elsewhere
+            </p>
+            <ul className="mt-2 flex flex-col gap-1 text-sm">
+              {ELSEWHERE.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    className="rounded font-medium text-brand-cyan underline underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
+                  >
+                    {item.label}
+                  </a>
+                  <span className="text-text-muted"> — {item.note}</span>
+                </li>
+              ))}
+              <li className="text-text-muted">
+                Reviews, FAQs, media, internal notes and redirects are not built
+                yet.
+              </li>
+            </ul>
+          </div>
         </div>
       </details>
 

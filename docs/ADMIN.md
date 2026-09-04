@@ -201,6 +201,22 @@ Always visible, never scrolls away:
 
 ### 6.2 Tabs `[PROPOSED]`
 
+**Scope rule `[owner-directed 2026-09-04, LOCKED]`: the firm editor holds FIRM DATA ONLY.**
+
+The admin and the public profile are two different experiences — **simple admin, rich
+database, rich public profile**. The editor's job is fast data entry into the structured
+tables; turning that structure into a long, detailed page is the public profile's job, and
+simplifying the editor must never remove a public section or a database capability.
+
+Firm-scoped views of *other* systems do not become tabs here. Payout tracking
+(`/admin/payouts`), reviews (`/admin/reviews`) and the audit log (`/admin/audit-logs`) are
+their own sections, linked from the editor under "Managed elsewhere". A tab for each one
+is how a firm editor becomes the whole dashboard.
+
+The primary screen is **Basic Information** (name, logo, description, website, purchase /
+affiliate link, discount, payout information URL). Everything below is collapsed:
+**Advanced Information** (the tabs), **SEO**, **Verification**.
+
 | Tab             | Contents                                                                                                                                         | Backing tables                  |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------- |
 | **Overview**    | Name, slug, legal name, tagline, description, founded year, HQ, website, support, logo, cover, featured flag, display order                      | `prop_firms`, `media`           |
@@ -214,6 +230,12 @@ Always visible, never scrolls away:
 | **Media**       | Assets attached to this firm, with alt text and usage                                                                                            | `media`, `media_usages`         |
 | **Notes**       | Private internal notes — research trail, contacts, open questions                                                                                | `internal_notes`                |
 | **History**     | Version list, diffs, rollback, plus this firm's audit trail                                                                                      | `entity_versions`, `audit_logs` |
+
+**Built as of 2026-09-04:** Overview, Company, Branding, Challenges, Rules, Platforms &
+instruments, Offers, Affiliate, plus SEO and Verification as collapsed sections. Media,
+Notes and History are specified above but **not built**, and are named once below the tab
+bar rather than occupying it — a tab that renders "not implemented" costs a click to
+discover it does nothing.
 
 **Tab rules `[LOCKED]`:**
 

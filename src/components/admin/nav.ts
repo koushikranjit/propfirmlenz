@@ -66,7 +66,7 @@ export const NAV_GROUPS: NavGroup[] = [
         phase: "Phase 3",
       },
       {
-        label: "Payouts",
+        label: "Payout Tracking",
         href: "/admin/payouts",
         icon: "Banknote",
         permission: PERMISSIONS.FIRM_READ,

@@ -321,6 +321,31 @@ and caching with revalidation tags. **None may start without approval.**
 
 ---
 
+### Admin/public separation confirmed `[owner-directed 2026-09-04]`
+
+**Simple admin + rich database + rich public profile.** The owner reviewed the public
+profile and confirmed it must stay long and detailed; simplifying the admin must never
+remove a public section or a database capability.
+
+Audited and confirmed already separate: the firm editor's primary screen is Basic
+Information with Advanced / SEO / Verification collapsed; payout tracking, reviews and the
+audit log are their own admin sections; there is no affiliate portal; public reads go
+through `FirmView` while the admin writes `draft_payload`.
+
+One defect found and fixed: the editor's Advanced section carried **15 tabs, 7 of them dead
+placeholders** — including Payouts (Phase 2) and Reviews (Phase 3), which duplicated the
+separate sections. The tab bar now holds only the 8 tabs that write firm data; Payout
+Tracking and the Audit log are links under "Managed elsewhere", and unbuilt work is named
+once in a line of text. `ADMIN.md` §6.2 records the scope rule.
+
+The public profile was **not** changed: 11 sections, covering overview, key facts, the full
+challenge table (size, price, targets, daily loss, max drawdown with type and basis, profit
+split, trading days, leverage, payout terms), rules, platforms, instruments, offers,
+verified payouts, reviews-not-yet, CTA and provenance. Pros/cons, FAQ, alternatives and
+comparisons remain absent because no data model or data exists for them.
+
+---
+
 ## In progress
 
 Nothing. The payout system is complete, validated and committed locally.
