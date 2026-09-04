@@ -526,11 +526,27 @@ audiences — exactly the audience being measured.
 GET /go/[firm-slug]?o=[offer-id]&p=[placement]&c=[campaign]
 ```
 
-1. Resolve the firm; resolve the active `affiliate_link` (offer-bound → campaign → default).
+1. Resolve the firm; resolve the active `affiliate_link` (campaign → default).
 2. If none active → **404**. Never redirect to a guessed or stale destination.
-3. Classify the request: bot signature, prefetch header, duplicate within a short window.
-4. **Redirect 302 immediately.**
-5. Record the click **after the response** (`waitUntil` / deferred write) into `affiliate_clicks`.
+3. Re-validate the stored destination (`isSafeAffiliateDestination`). A destination that is not an
+   absolute `https://` URL with a dotted host and no embedded credentials → **404**. Never repaired,
+   never fallen back from.
+4. Classify the request: bot signature, prefetch header.
+5. Record the click into `affiliate_clicks`.
+6. **Redirect 302** — never 301.
+
+**Write ordering `[owner-directed 2026-09-04]`.** The click is recorded **before** the redirect is
+returned, so a click is never lost to a response the runtime has already flushed. This supersedes
+the earlier deferred-write design (`waitUntil`) for this route; §11.3's "never block the redirect"
+now means "keep the write to a single fast insert", which it is. Revisit only with measurements.
+
+**Not yet implemented:** `?o=[offer-id]` and offer-bound link resolution. `resolveAffiliateLink`
+implements campaign → default only, and the route deliberately ignores an unknown `o` parameter
+rather than writing an unvalidated offer id into a reporting dimension.
+
+Every failure mode returns the SAME bare 404, so the route cannot be used to enumerate unpublished
+firms. The slug is used **only** for routing; the click row, the foreign keys and every reporting
+join use the ids the resolver returns, so a later slug rename cannot orphan a recorded click (§22).
 
 ### 11.2 Recorded fields
 
@@ -538,11 +554,25 @@ GET /go/[firm-slug]?o=[offer-id]&p=[placement]&c=[campaign]
 `clicked_at`, `country_code`, `device_type`, `referrer_host`, `landing_path`, `session_id`,
 `user_id` (nullable), `is_bot`, `ip_hash`, `user_agent_hash`.
 
+- `referrer_host` is the referring **host only**, never the full referring URL, which can carry
+  personal data in its query string.
+- `landing_path` is populated only for a **same-origin** referer. Another site's pathname is their
+  data, not our landing page.
+- `session_id` is reserved for a future **public visitor** session. The admin session id is never
+  written to it — logging a session identifier is prohibited (`CLAUDE.md` §6) `[LOCKED]`.
+- `placement` and `campaign` arrive from the query string and are therefore attacker-controlled.
+  Both are allowlisted by shape; a malformed value is **dropped, never rejected**, because a bad
+  parameter must not cost a real click.
+
 ### 11.3 Rules `[LOCKED]`
 
 - **302, never 301** — destinations change; a cached 301 is unrecoverable.
 - **Never store raw IP or raw user agent.** Salted SHA-256 only; the salt is a rotated secret.
-- Click writes never block the redirect. Target: < 50 ms server time.
+- **The destination comes only from `affiliate_links.destination_url`.** No query parameter, header,
+  or path segment may supply, extend, or steer it. This route is the only one that sends a visitor
+  off-site, so it is the only one that could become an open redirect — the protection is structural,
+  not a filter, and is re-checked against the stored value before any `Location` header is emitted.
+- The click write is a single insert and precedes the redirect (§11.1). Target: < 50 ms server time.
 - `/go/*` is `Disallow`ed in `robots.txt`, carries `X-Robots-Tag: noindex`, and never appears in the
   sitemap or in any internal `<a>` intended for crawling.
 - Outbound affiliate anchors carry `rel="sponsored nofollow noopener"`.

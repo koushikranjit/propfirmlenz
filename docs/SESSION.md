@@ -109,10 +109,19 @@ Stage 3 built the public firm surface:
   architecture invariants (§21.9 cases 17, 19–22), the public read path against real
   PostgreSQL, SEO templates, and the display formatters.
 
+**Stage 3.1 (2026-09-04)** closed the two documentation/route gaps Stage 3 left open:
+
+- **`/go/{slug}`** — the tracked affiliate redirect. Resolves the published firm and its
+  applicable link through the existing `resolveAffiliateLink` (campaign → default),
+  re-validates the stored destination, records the click, then 302s. Every failure
+  mode returns the same bare 404. The slug is used only for routing; the click row
+  uses the ids the resolver returns.
+- **`CLAUDE.md` rule 35** — now names `getPublishedFirmView()`, the actual canonical
+  function. Rule substance unchanged.
+
 Deliberately NOT built (awaiting approval):
 
 - ❌ No homepage, challenge detail pages, review/payout system, comparison UI, blog
-- ❌ No `/go/{slug}` affiliate redirect route yet — see Known issues
 - ❌ No business or prop-firm data of any kind
 - ❌ No Neon connection, no production credentials, no deployment
 
@@ -177,12 +186,14 @@ only to keep the working tree clean. It can be suppressed by patching
 5. ✅ Stage 1 (database + foundation) — 2026-09-04.
 6. ✅ Stage 2 (admin auth + shell + firm workspace) — 2026-09-04.
 7. ✅ Stage 3 (public firm profile + SEO + preview integration) — 2026-09-04.
-8. ⬜ Owner approves Stage 4.
+8. ✅ Stage 3.1 (public affiliate route + documentation hardening) — 2026-09-04.
+9. ⬜ Owner approves Stage 4.
 
-The nearest unbuilt pieces, in dependency order: the `/go/{slug}` affiliate redirect
-route, the iframe split-pane preview in the workspace (`ARCHITECTURE.md` §21.4), the
-remaining workspace tabs that populate challenges/rules/platforms/instruments/offers,
-and caching with revalidation tags. **None may start without approval.**
+The nearest unbuilt pieces, in dependency order: the iframe split-pane preview in the
+workspace (`ARCHITECTURE.md` §21.4), the remaining workspace tabs that populate
+challenges/rules/platforms/instruments/offers, the affiliate-link admin UI that makes
+`/go/{slug}` reachable with real data, and caching with revalidation tags.
+**None may start without approval.**
 
 ---
 
@@ -397,9 +408,8 @@ Computed WCAG ratios, not estimates. Three constraints came out of the new palet
 | 2   | **Wordmark typeface unconfirmed**                                                                                                                                             | Display face cannot be deliberately matched or contrasted against Inter                              | Non-blocking. Default: Inter throughout (`DESIGN.md` §4.1)                                                             |
 | 3   | **No separate requirements document exists.** The specification came from the instruction messages in this session; nothing was found in the workspace or session attachments | Documentation is built from that specification — any requirement not stated there is absent          | Confirm the docs capture the intent, or supply the missing source                                                      |
 | 4   | Two MCP connectors (Crypto.com, Webflow) require authorisation                                                                                                                | None on this project                                                                                 | Ignore, or authorise in claude.ai connector settings                                                                   |
-| 5   | **`/go/{slug}` is not built.** `FirmProfile` renders a tracked CTA whenever `hasAffiliateLink` is true, and that href would 404 today                                          | None in practice: no affiliate link can exist yet, so the CTA always falls back to a plain outbound link. It becomes real the moment an affiliate link is stored | Build `/go/{slug}` in Stage 4 on the existing `resolveAffiliateLink` / `recordAffiliateClick` services (`ARCHITECTURE.md` §11) |
-| 6   | **A `redirects` row with `status_code = 410` currently 404s** rather than returning a true 410                                                                                 | A deliberately-removed URL reports "not found" instead of "gone" — a weaker but not incorrect signal | Needs the URL-normalisation middleware (`SEO.md` §3.3, §8), which is not built yet                                     |
-| 7   | **Public pages are `force-dynamic`.** No ISR, no cache tags                                                                                                                   | Correct but unoptimised; every request hits the database                                             | Caching and revalidation tags are a later stage (`ARCHITECTURE.md` §8)                                                 |
+| 5   | **A `redirects` row with `status_code = 410` currently 404s** rather than returning a true 410                                                                                 | A deliberately-removed URL reports "not found" instead of "gone" — a weaker but not incorrect signal | Needs the URL-normalisation middleware (`SEO.md` §3.3, §8), which is not built yet                                     |
+| 6   | **Public pages are `force-dynamic`.** No ISR, no cache tags                                                                                                                   | Correct but unoptimised; every request hits the database                                             | Caching and revalidation tags are a later stage (`ARCHITECTURE.md` §8)                                                 |
 
 **Resolved 2026-09-03:** all 17 blocking decisions, including the draft model, framework, and
 canonical domain.
@@ -423,3 +433,4 @@ canonical domain.
 | 2026-09-04 | **Phase 1 Stage 1: database + application foundation.** 26 tables, 1 migration (67 CHECKs, append-only triggers), draft/publish with optimistic concurrency, public/admin repository isolation, Argon2id + DB sessions, RBAC, affiliate tracking, SEO foundation. Added `uuid` (UUIDv7) and `@electric-sql/pglite` (real-Postgres tests). | format ✅ typecheck ✅ lint ✅ **87 tests ✅** build ✅ db:check ✅ |
 | 2026-09-04 | **Phase 1 Stage 2: admin auth, shell and prop firm workspace.** Login/logout, Edge middleware + per-route RBAC, sidebar shell, dashboard with live counts only, firm list with validated server-side query, create + id-keyed workspace, draft/publish/discard wired to the Stage 1 service, preview route (noindex, no canonical/OG/JSON-LD, 404 anonymous, inert affiliate CTA), audit log viewer. No new dependencies. | format ✅ typecheck ✅ lint ✅ **120 tests ✅** build ✅ (21 routes) db:check ✅ |
 | 2026-09-04 | **Phase 1 Stage 3: public firm profile, SEO architecture and preview integration.** Unified the two competing view models into the canonical `FirmView` (`lib/view/firm-view.ts`); `getPublishedFirmView()` and `materializeDraft()` now share `assembleView()`. Built the single `FirmProfile` component tree used by both the public route and the admin preview, `/prop-firms` (filters, crawlable pagination, honest empty states) and `/prop-firms/{slug}` (metadata, canonical, OG, breadcrumbs, WebPage + BreadcrumbList JSON-LD, 301/308 slug redirects). Database-driven sitemap with a thin-content gate. No new dependencies. | format ✅ typecheck ✅ lint ✅ **203 tests ✅** build ✅ (24 routes) |
+| 2026-09-04 | **Phase 1 Stage 3.1: public affiliate routing + documentation hardening.** Built `/go/{slug}` on the existing `resolveAffiliateLink` / `recordAffiliateClick` services — no resolution logic duplicated. Added `isSafeAffiliateDestination` (application-layer open-redirect guard over the DB's `^https://` CHECK) and pure request-classification helpers (bot, prefetch, device, referrer host, same-origin landing path, allowlisted `p`/`c`). Click is recorded before the 302 `[owner-directed]`; `ARCHITECTURE.md` §11.1–11.3 updated to match. Corrected `CLAUDE.md` rule 35 to name `getPublishedFirmView()`. No new dependencies. | format ✅ typecheck ✅ lint ✅ **244 tests ✅** build ✅ (25 routes) |

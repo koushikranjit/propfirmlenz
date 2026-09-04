@@ -376,9 +376,10 @@ The firm workspace renders a **side-by-side editor and public-page preview**. Sp
 34. **The preview renders the same public components as the production page.**
     **Never build a separate preview UI.** A parallel implementation of the firm page is prohibited —
     it drifts from production and the preview stops being trustworthy, which defeats the feature.
-35. `getPublishedFirm()` and `materializeDraft()` return the **identical** `FirmView` type. Adding a
-    field to the public view without supplying it from the draft materialiser must be a **compile
-    error**, not a silent visual difference.
+35. `getPublishedFirmView()` and `materializeDraft()` return the **identical** `FirmView` type. Adding
+    a field to the public view without supplying it from the draft materialiser must be a **compile
+    error**, not a silent visual difference. The canonical type lives in `src/lib/view/firm-view.ts`
+    and both are assembled by the same `assembleView()`.
 36. `components/public/**` must never import from `components/admin/**`.
 37. The preview is an **iframe** on an authenticated route — required so that responsive preview is
     genuine (media queries resolve against the iframe's viewport, not the browser's). Sandboxed

@@ -31,3 +31,45 @@ export function affiliateHref(
 
   return `/go/${firmSlug}${query ? `?${query}` : ""}`;
 }
+
+/**
+ * Is a STORED destination safe to redirect a visitor to? `[LOCKED]`
+ *
+ * `/go/{slug}` is the one route that sends a visitor off-site, so it is the one
+ * route that could become an open redirect. The structural protection is that
+ * the destination comes only from `affiliate_links.destination_url` and no
+ * request input can influence it. This function is the second layer: even a
+ * stored value must be an absolute `https://` URL with a real host before it is
+ * ever emitted in a `Location` header.
+ *
+ * The database enforces `^https://` too (`affiliate_links_https_ck`). Both
+ * exist deliberately: the constraint could be dropped, or a row could predate
+ * it, and neither is a reason to redirect a visitor to `javascript:` or to a
+ * protocol-relative `//evil.example`.
+ *
+ * A destination that fails this check is a data defect. The caller must 404 —
+ * never fall back, never guess, never rewrite it into something valid
+ * (docs/ARCHITECTURE.md §11.3).
+ */
+export function isSafeAffiliateDestination(destination: string): boolean {
+  let url: URL;
+  try {
+    url = new URL(destination);
+  } catch {
+    // Relative, protocol-relative and malformed values all land here.
+    return false;
+  }
+
+  if (url.protocol !== "https:") return false;
+
+  // A partner destination is always a public, dotted host. Requiring the dot
+  // also rejects the surprising `https:///path`, which the URL parser resolves
+  // by treating `path` as the hostname — a typo that would otherwise send
+  // visitors to a host that does not exist.
+  if (!url.hostname.includes(".")) return false;
+
+  // Credentials in a redirect target are a phishing vector.
+  if (url.username.length > 0 || url.password.length > 0) return false;
+
+  return true;
+}
