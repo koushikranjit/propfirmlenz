@@ -543,6 +543,51 @@ Model and enforcement: `ARCHITECTURE.md` §6. Administration surface:
 
 ---
 
+### 11.1 First-admin bootstrap `[LOCKED — 2026-09-04]`
+
+Creating an admin requires being an admin, so the very first account cannot be
+made through the dashboard. It is created by a one-time CLI, run by an operator
+from their own machine:
+
+```
+pnpm admin:create
+```
+
+It prompts for email, full name and password, then creates ONE master admin.
+
+**Why a CLI and not a route `[LOCKED]`.** There is no setup page, no "claim
+this instance" endpoint and no registration form. An HTTP surface that can mint
+a privileged account is a permanent attack surface even when guarded, because
+the guard is one refactor away from being wrong. A test asserts that nothing
+under `src/app/` imports the bootstrap module.
+
+**Guarantees** — implemented in `src/lib/auth/bootstrap.ts` and covered by
+`bootstrap.test.ts` against a real PostgreSQL:
+
+| Property | How |
+| --- | --- |
+| Runs once only | Refuses if ANY active admin exists — not merely a master admin |
+| Atomic | The existence check, RBAC seed, user insert, role grant and audit entry share one transaction; a failure at any step rolls back all of them |
+| No second policy | Uses the application's own `hashPassword` (Argon2id) and `seedRolesAndPermissions`; the 12-character minimum is never relaxed |
+| Password never exposed | Masked while typing; never an argument or environment variable, so it reaches neither shell history nor a process listing; never printed, logged, or written to `audit_logs` |
+| Plaintext never stored | Only the Argon2id hash reaches the database |
+| Email normalised | Trimmed and lower-cased, then validated with Zod |
+
+**Production procedure.**
+
+1. Ensure `.env.local` holds the production `DATABASE_URL_DIRECT` (it is
+   gitignored and must never be committed).
+2. Run `pnpm admin:create` from the project root and answer the prompts.
+   Choose a password of at least 12 characters that has never been pasted into
+   a chat, an issue, or a commit message.
+3. Sign in at `/admin/login` and confirm the account works.
+4. Create every subsequent admin from the dashboard, where the action is
+   authorised and audited.
+
+The command is never executed automatically, by a deploy step or otherwise.
+
+---
+
 ## 12. Internal notes `[LOCKED]`
 
 - Per-entity, private, markdown-capable, with author and timestamp; pinnable.

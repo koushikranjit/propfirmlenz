@@ -21,7 +21,8 @@
     "db:migrate": "drizzle-kit migrate",
     "db:check": "drizzle-kit check",
     "db:studio": "drizzle-kit studio",
-    "verify": "pnpm typecheck && pnpm lint && pnpm test"
+    "verify": "pnpm typecheck && pnpm lint && pnpm test",
+    "admin:create": "node --experimental-transform-types --no-warnings --env-file-if-exists=.env.local --import ./scripts/ts-alias-loader.mjs scripts/create-admin.ts"
   },
   "dependencies": {
     "@node-rs/argon2": "^2.2.0",
