@@ -1,177 +1,194 @@
 import Link from "next/link";
+import { sql } from "drizzle-orm";
 import { getDb } from "@/lib/db/client";
 import { requireAdminPermission } from "@/lib/auth/current-admin";
 import { PERMISSIONS } from "@/lib/auth/permissions";
 import {
-  CANDIDATE_PAGE_SIZE,
-  countCandidatesByStatus,
-  listCandidates,
-} from "@/lib/repositories/admin-payouts";
-import { getPayoutTotals } from "@/lib/repositories/public-payouts";
-import { candidateQuerySchema } from "@/lib/validation/payouts";
-import { CANDIDATE_STATUS } from "@/lib/db/schema/payouts";
+  blockchainNetworks,
+  blockchainProviders,
+  blockchainTokens,
+  trackedWallets,
+  verifiedPayouts,
+} from "@/lib/db/schema";
+import { countCandidatesByStatus } from "@/lib/repositories/admin-payouts";
+import { credentialStatus } from "@/lib/services/payout-registry";
 import { Breadcrumbs } from "@/components/admin/Breadcrumbs";
-import { CandidateCard } from "@/components/admin/payouts/CandidateReview";
-import {
-  Button,
-  Card,
-  EmptyState,
-  PageHeader,
-} from "@/components/ui/primitives";
+import { PayoutNav } from "@/components/admin/payouts/PayoutNav";
+import { Badge, Card, PageHeader } from "@/components/ui/primitives";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Payouts" };
-
-/**
- * PAYOUT REVIEW QUEUE — docs/PAYOUTS.md §11.
- *
- * The queue is the product. Every public payout figure passed through here,
- * one decision at a time, attributed to a person.
- *
- * Viewing needs `firm:read`; DECIDING needs `firm:verify`, enforced in the
- * service — the controls below are hidden without it, but that is presentation.
- */
-
-const STATUS_LABEL: Record<string, string> = {
-  detected: "Detected",
-  match_review: "In review",
-  verified: "Verified",
-  rejected: "Rejected",
-  unverified: "Unverifiable",
+export const metadata = {
+  title: "Payout tracking",
+  robots: { index: false, follow: false },
 };
 
-export default async function AdminPayoutsPage({
-  searchParams,
-}: {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-}) {
-  const admin = await requireAdminPermission(PERMISSIONS.FIRM_READ);
-  const query = candidateQuerySchema.parse(await searchParams);
+/**
+ * PAYOUT TRACKING DASHBOARD — docs/PAYOUTS.md §11.
+ *
+ * Operational counts, every one a live query. There is no cached total and no
+ * illustrative chart: a dashboard figure that cannot be recomputed from rows
+ * is a figure nobody can act on (CLAUDE.md §3). Zero reads as zero.
+ */
+export default async function PayoutDashboardPage() {
+  await requireAdminPermission(PERMISSIONS.FIRM_READ);
   const db = getDb();
 
-  const [counts, { rows, total }, published] = await Promise.all([
-    countCandidatesByStatus(db),
-    listCandidates(db, { status: query.status, page: query.page }),
-    getPayoutTotals(db, "all"),
-  ]);
+  const [wallets, networks, tokens, payouts, providers, candidates] =
+    await Promise.all([
+      db
+        .select({
+          total: sql<number>`count(*)::int`,
+          active: sql<number>`count(*) filter (where ${trackedWallets.isActive})::int`,
+          firms: sql<number>`count(distinct ${trackedWallets.propFirmId})::int`,
+          failing: sql<number>`count(*) filter (where ${trackedWallets.lastScanError} is not null)::int`,
+          lastSync: sql<Date | null>`max(${trackedWallets.lastCheckedAt})`,
+        })
+        .from(trackedWallets),
+      db
+        .select({
+          total: sql<number>`count(*)::int`,
+          active: sql<number>`count(*) filter (where ${blockchainNetworks.isActive})::int`,
+        })
+        .from(blockchainNetworks),
+      db
+        .select({
+          total: sql<number>`count(*)::int`,
+          enabled: sql<number>`count(*) filter (where ${blockchainTokens.isEnabled})::int`,
+        })
+        .from(blockchainTokens),
+      db.select({ total: sql<number>`count(*)::int` }).from(verifiedPayouts),
+      db.select().from(blockchainProviders),
+      countCandidatesByStatus(db),
+    ]);
 
-  const canVerify = admin.can(PERMISSIONS.FIRM_VERIFY);
-  const pages = Math.max(1, Math.ceil(total / CANDIDATE_PAGE_SIZE));
+  const configured = new Map(
+    credentialStatus().map((c) => [c.key, c.configured] as const),
+  );
+
+  const pending =
+    (candidates["detected"] ?? 0) + (candidates["match_review"] ?? 0);
+
+  const stats: { label: string; value: string; note?: string }[] = [
+    {
+      label: "Firms tracked",
+      value: String(wallets[0]?.firms ?? 0),
+      note: "firms with at least one wallet",
+    },
+    {
+      label: "Active wallets",
+      value: `${wallets[0]?.active ?? 0} of ${wallets[0]?.total ?? 0}`,
+    },
+    {
+      label: "Active networks",
+      value: `${networks[0]?.active ?? 0} of ${networks[0]?.total ?? 0}`,
+    },
+    {
+      label: "Enabled tokens",
+      value: `${tokens[0]?.enabled ?? 0} of ${tokens[0]?.total ?? 0}`,
+      note: "identified by contract, never by ticker",
+    },
+    { label: "Pending candidates", value: String(pending) },
+    { label: "Verified payouts", value: String(payouts[0]?.total ?? 0) },
+  ];
 
   return (
     <>
       <Breadcrumbs
-        items={[{ label: "Admin", href: "/admin" }, { label: "Payouts" }]}
+        items={[
+          { label: "Admin", href: "/admin" },
+          { label: "Payout Tracking" },
+        ]}
       />
+      <PayoutNav current="/admin/payouts" />
       <PageHeader
-        title="Payouts"
-        description="Blockchain transactions from tracked wallets, awaiting a decision. Only verified ones appear publicly."
-        actions={
-          <div className="flex flex-wrap gap-2">
-            <Link href="/admin/payouts/wallets">
-              <Button>Tracked wallets</Button>
-            </Link>
-            <Link href="/admin/payouts/networks">
-              <Button>Networks</Button>
-            </Link>
-          </div>
-        }
+        title="Payout tracking"
+        description="Verified on-chain payouts only. Coverage is limited to the wallets and chains configured here — it is a floor, never a firm's total payout volume."
       />
 
-      <p className="mt-4 text-sm text-text-muted">
-        {published.count === 0
-          ? "No payouts are published yet."
-          : `${published.count} verified payout${
-              published.count === 1 ? "" : "s"
-            } are published across live firms.`}{" "}
-        Verified on-chain volume is a floor, never a firm&apos;s total payout
-        volume — see the{" "}
-        <Link
-          href="/payouts/methodology"
-          className="rounded text-brand-cyan underline underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
-        >
-          public methodology
-        </Link>
-        .
-      </p>
-
-      <nav aria-label="Candidate status" className="mt-6">
-        <ul className="flex flex-wrap gap-2">
-          {CANDIDATE_STATUS.map((status) => {
-            const active = status === query.status;
-            return (
-              <li key={status}>
-                <Link
-                  href={`/admin/payouts?status=${status}`}
-                  aria-current={active ? "page" : undefined}
-                  className={
-                    "inline-flex items-center gap-2 rounded-[10px] border px-3 py-2 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base " +
-                    (active
-                      ? "border-brand-cyan/50 bg-bg-elevated text-brand-cyan"
-                      : "border-border-default bg-bg-card text-text-secondary hover:border-border-strong hover:text-text-primary")
-                  }
-                >
-                  {STATUS_LABEL[status] ?? status}
-                  <span className="tabular-nums text-xs text-text-muted">
-                    {counts[status] ?? 0}
-                  </span>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-
-      <div className="mt-6 flex flex-col gap-4">
-        {rows.length === 0 ? (
-          <Card>
-            <EmptyState
-              title={`Nothing ${(
-                STATUS_LABEL[query.status] ?? query.status
-              ).toLowerCase()}`}
-              description="Candidates appear here after a tracked wallet is scanned. Record a wallet and run a scan to start."
-              action={
-                <Link href="/admin/payouts/wallets">
-                  <Button variant="primary">Tracked wallets</Button>
-                </Link>
-              }
-            />
+      <dl className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-3">
+        {stats.map((stat) => (
+          <Card key={stat.label} className="p-4">
+            <dt className="text-xs font-semibold uppercase tracking-wide text-text-muted">
+              {stat.label}
+            </dt>
+            <dd className="mt-1 text-2xl font-semibold tabular-nums text-text-primary">
+              {stat.value}
+            </dd>
+            {stat.note ? (
+              <p className="mt-1 text-xs text-text-muted">{stat.note}</p>
+            ) : null}
           </Card>
-        ) : (
-          rows.map((candidate) => (
-            <CandidateCard
-              key={candidate.id}
-              candidate={candidate}
-              canVerify={canVerify}
-            />
-          ))
-        )}
-      </div>
+        ))}
+      </dl>
 
-      {pages > 1 ? (
-        <nav aria-label="Pagination" className="mt-6 flex items-center gap-3">
-          {query.page > 1 ? (
+      <Card className="mt-4 p-5">
+        <h2 className="text-sm font-semibold text-text-primary">
+          Provider status
+        </h2>
+        {providers.length === 0 ? (
+          <p className="mt-2 text-sm text-text-muted">
+            No provider configured yet.{" "}
             <Link
-              href={`/admin/payouts?status=${query.status}&page=${query.page - 1}`}
-              className="rounded text-sm text-brand-cyan underline underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
+              href="/admin/payouts/providers"
+              className="rounded text-brand-cyan underline underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
             >
-              Previous
+              Set them up
             </Link>
-          ) : null}
-          <span className="text-sm text-text-muted">
-            Page {query.page} of {pages}
-          </span>
-          {query.page < pages ? (
-            <Link
-              href={`/admin/payouts?status=${query.status}&page=${query.page + 1}`}
-              className="rounded text-sm text-brand-cyan underline underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
-            >
-              Next
-            </Link>
-          ) : null}
-        </nav>
-      ) : null}
+            .
+          </p>
+        ) : (
+          <ul className="mt-3 flex flex-col gap-2">
+            {providers.map((p) => {
+              const hasKey = configured.get(p.key) ?? false;
+              return (
+                <li
+                  key={p.id}
+                  className="flex flex-wrap items-center justify-between gap-3 rounded-[10px] border border-border-subtle bg-bg-elevated px-4 py-2.5"
+                >
+                  <span className="text-sm text-text-secondary">{p.name}</span>
+                  <Badge
+                    tone={
+                      !hasKey
+                        ? "warning"
+                        : p.lastTestOk === true
+                          ? "success"
+                          : p.lastTestOk === false
+                            ? "danger"
+                            : "neutral"
+                    }
+                  >
+                    {!hasKey
+                      ? "Not configured"
+                      : p.lastTestOk === true
+                        ? "Connected"
+                        : p.lastTestOk === false
+                          ? "Connection failed"
+                          : "Not tested"}
+                  </Badge>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </Card>
+
+      <Card className="mt-4 p-5">
+        <h2 className="text-sm font-semibold text-text-primary">Sync health</h2>
+        <p className="mt-2 text-sm text-text-secondary">
+          {wallets[0]?.lastSync
+            ? `Last wallet scan ${new Date(wallets[0].lastSync)
+                .toISOString()
+                .slice(0, 16)
+                .replace("T", " ")} UTC.`
+            : "No wallet has been scanned yet."}
+          {wallets[0]?.failing
+            ? ` ${wallets[0].failing} wallet${
+                wallets[0].failing === 1 ? "" : "s"
+              } reported an error on the last scan — a failed scan is not the same as no payouts.`
+            : ""}
+        </p>
+      </Card>
     </>
   );
 }

@@ -6,6 +6,7 @@ import {
   adminUserRoles,
   adminUsers,
   blockchainNetworks,
+  blockchainTokens,
   blockchainTransactions,
   payoutCandidates,
   payoutVerificationEvents,
@@ -152,6 +153,14 @@ describe("blockchain payout pipeline", () => {
       .returning({ id: blockchainNetworks.id });
     networkId = network!.id;
 
+    await db.insert(blockchainTokens).values({
+      networkId,
+      contractAddress: USDT_TRON,
+      symbol: "USDT",
+      decimals: 6,
+      isEnabled: true,
+    });
+
     const [wallet] = await db
       .insert(trackedWallets)
       .values({
@@ -239,6 +248,56 @@ describe("blockchain payout pipeline", () => {
       expect(row?.amountBaseUnits).toBe(huge);
       // And it renders without going through a float.
       expect(formatBaseUnits(huge, 18)).toBe("1.23");
+    });
+
+    it("ignores a token that is not configured for the network", async () => {
+      // A contract nobody registered is not "probably a stablecoin" — it is
+      // unknown, and unknown assets do not become payout candidates.
+      const result = await scan(
+        new FixtureProvider([
+          {
+            transfers: [
+              transfer({ assetContract: "0xsomeunknowncontract0001" }),
+            ],
+            nextCursor: null,
+          },
+        ]),
+      );
+
+      expect(result.skippedUnsupportedToken).toBe(1);
+      expect(await db.select().from(blockchainTransactions)).toHaveLength(0);
+      expect(await db.select().from(payoutCandidates)).toHaveLength(0);
+    });
+
+    it("ignores a disabled token even though its contract is known", async () => {
+      await db
+        .update(blockchainTokens)
+        .set({ isEnabled: false })
+        .where(eq(blockchainTokens.networkId, networkId));
+
+      const result = await scan(
+        new FixtureProvider([{ transfers: [transfer()], nextCursor: null }]),
+      );
+
+      // No enabled token means nothing on this network is recognisable, and
+      // the scan says so instead of reporting a clean, empty result.
+      expect(result.error).toMatch(/no enabled token/i);
+      expect(await db.select().from(blockchainTransactions)).toHaveLength(0);
+    });
+
+    it("flags a decimals disagreement rather than silently rescaling", async () => {
+      // The token says 6; the provider reports 18. One of them is wrong, and
+      // the difference is a factor of a trillion.
+      const result = await scan(
+        new FixtureProvider([
+          { transfers: [transfer({ decimals: 18 })], nextCursor: null },
+        ]),
+      );
+
+      expect(result.decimalsMismatch).toBe(1);
+      // It is still recorded — the mismatch is surfaced, not used to discard
+      // a real transfer.
+      expect(result.transactionsInserted).toBe(1);
     });
 
     it("ignores a transfer that did not leave the tracked wallet", async () => {

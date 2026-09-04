@@ -62,8 +62,9 @@ describe("schema", () => {
 
     // 23 enumerated entities plus the 3 junction/EAV tables that DATABASE.md
     // §5.4–5.6 specifies as part of the rules/platforms/instruments design,
-    // plus the 6 payout-intelligence tables of docs/PAYOUTS.md §2, plus the
-    // 2 firm content tables (announcements, FAQs).
+    // plus the 6 payout-intelligence tables of docs/PAYOUTS.md §2, the 2 firm
+    // content tables (announcements, FAQs), and the 3 multi-chain
+    // configuration tables (providers, tokens, wallet-token links).
     expect(names).toEqual([
       "admin_sessions",
       "admin_user_roles",
@@ -72,6 +73,8 @@ describe("schema", () => {
       "affiliate_links",
       "audit_logs",
       "blockchain_networks",
+      "blockchain_providers",
+      "blockchain_tokens",
       "blockchain_transactions",
       "challenges",
       "entity_versions",
@@ -96,6 +99,7 @@ describe("schema", () => {
       "rule_values",
       "rules",
       "seo_metadata",
+      "tracked_wallet_tokens",
       "tracked_wallets",
       "users",
       "verified_payouts",

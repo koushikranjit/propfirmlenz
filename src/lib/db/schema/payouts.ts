@@ -1,5 +1,6 @@
 import { sql } from "drizzle-orm";
 import {
+  type AnyPgColumn,
   bigint,
   boolean,
   check,
@@ -8,6 +9,7 @@ import {
   jsonb,
   numeric,
   pgTable,
+  primaryKey,
   smallint,
   text,
   timestamp,
@@ -85,6 +87,118 @@ export const VERIFICATION_EVENTS = [
 const ADDRESS_PATTERN = "^[A-Za-z0-9:_-]{8,128}$";
 
 /**
+ * A blockchain data provider — docs/PAYOUTS.md §4.
+ *
+ * A ROW so an operator can see, enable and test each integration without a
+ * deploy. It holds NO CREDENTIAL: only the NAME of the server environment
+ * variable the key lives in. The key itself never reaches the database, the
+ * browser, a log or an audit entry (CLAUDE.md §6 `[LOCKED]`).
+ *
+ * `baseUrl` is fixed per provider and is never taken from user input — a
+ * provider whose endpoint an admin could type would be an SSRF hole.
+ */
+export const blockchainProviders = pgTable(
+  "blockchain_providers",
+  {
+    id: primaryId(),
+    /** Matches the adapter key in `src/lib/blockchain/adapters.ts`. */
+    key: text("key").notNull(),
+    name: text("name").notNull(),
+    /** The env var NAME holding the API key. Never the value. */
+    credentialEnvVar: text("credential_env_var"),
+    isEnabled: boolean("is_enabled").notNull().default(true),
+
+    /* Connection-test results. Diagnostics only — never a secret. */
+    lastTestedAt: timestamp("last_tested_at", { withTimezone: true }),
+    lastTestOk: boolean("last_test_ok"),
+    lastTestStatus: text("last_test_status"),
+    lastTestLatencyMs: integer("last_test_latency_ms"),
+    lastSuccessAt: timestamp("last_success_at", { withTimezone: true }),
+    ...timestamps(),
+  },
+  (t) => [
+    uniqueIndex("blockchain_providers_key_uq").on(t.key),
+    check(
+      "blockchain_providers_latency_ck",
+      sql`${t.lastTestLatencyMs} is null or ${t.lastTestLatencyMs} >= 0`,
+    ),
+  ],
+);
+
+/**
+ * A token, identified by NETWORK AND CONTRACT — docs/PAYOUTS.md §5 `[LOCKED]`.
+ *
+ * A ticker is not an identity. "USDT" exists independently on Ethereum, Tron,
+ * BNB Chain and a dozen others, and they are different assets with different
+ * contracts and sometimes different decimals. Matching on the symbol would let
+ * a transfer of an unrelated token that calls itself USDT be counted as a
+ * stablecoin payout.
+ *
+ * A token is tracked only when it is enabled AND its contract is recorded
+ * here. An unconfigured contract is not "probably fine" — it is unknown, and
+ * unknown assets do not become payouts.
+ */
+export const blockchainTokens = pgTable(
+  "blockchain_tokens",
+  {
+    id: primaryId(),
+    networkId: uuid("network_id")
+      .notNull()
+      .references(() => blockchainNetworks.id, { onDelete: "cascade" }),
+    /** Lower-cased contract address or mint. THE identity, with the network. */
+    contractAddress: text("contract_address").notNull(),
+    symbol: text("symbol").notNull(),
+    name: text("name"),
+    /** Exponent for base units. Wrong decimals silently mis-scale every amount. */
+    decimals: smallint("decimals").notNull(),
+    /** Where the contract was confirmed, so the next person can re-check it. */
+    sourceUrl: text("source_url"),
+    isEnabled: boolean("is_enabled").notNull().default(false),
+    ...timestamps(),
+  },
+  (t) => [
+    uniqueIndex("blockchain_tokens_network_contract_uq").on(
+      t.networkId,
+      t.contractAddress,
+    ),
+    index("blockchain_tokens_enabled_idx")
+      .on(t.networkId, t.symbol)
+      .where(sql`${t.isEnabled}`),
+    check("blockchain_tokens_decimals_ck", sql`${t.decimals} between 0 and 36`),
+    check(
+      "blockchain_tokens_contract_lower_ck",
+      sql`${t.contractAddress} = lower(${t.contractAddress})`,
+    ),
+  ],
+);
+
+/**
+ * Which tokens a wallet is tracked for.
+ *
+ * A firm may pay USDT from one address and USDC from another. Scanning every
+ * wallet for every token would raise candidates nobody asked for and burn
+ * provider quota on assets that are not payouts.
+ */
+export const trackedWalletTokens = pgTable(
+  "tracked_wallet_tokens",
+  {
+    walletId: uuid("wallet_id")
+      .notNull()
+      .references(() => trackedWallets.id, { onDelete: "cascade" }),
+    tokenId: uuid("token_id")
+      .notNull()
+      .references(() => blockchainTokens.id, { onDelete: "cascade" }),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (t) => [
+    primaryKey({ columns: [t.walletId, t.tokenId] }),
+    index("tracked_wallet_tokens_token_idx").on(t.tokenId),
+  ],
+);
+
+/**
  * A supported chain.
  *
  * A ROW, not a hard-coded list: support is added by an operator once a provider
@@ -105,6 +219,11 @@ export const blockchainNetworks = pgTable(
     explorerTxTemplate: text("explorer_tx_template").notNull(),
     /** Which provider adapter serves this network. */
     provider: text("provider").notNull(),
+    /** The provider RECORD, for status and enablement. */
+    providerId: uuid("provider_id").references(
+      (): AnyPgColumn => blockchainProviders.id,
+      { onDelete: "set null" },
+    ),
     /** Blocks required before a transaction is treated as settled. */
     confirmationsRequired: integer("confirmations_required")
       .notNull()
@@ -159,6 +278,20 @@ export const trackedWallets = pgTable(
     isActive: boolean("is_active").notNull().default(true),
     /** Admin-only research note. Never rendered publicly. */
     notes: text("notes"),
+    /**
+     * WHY this address is believed to be a payout wallet — docs/PAYOUTS.md §6.
+     *
+     * A wallet existing is not the same fact as a wallet paying traders. The
+     * evidence is recorded so a verification months later can be re-examined
+     * rather than taken on trust.
+     */
+    evidenceUrl: text("evidence_url"),
+    /** When this wallet started being used for payouts, where known. */
+    effectiveFrom: timestamp("effective_from", { withTimezone: true }),
+    lastSyncStatus: text("last_sync_status"),
+    lastSuccessfulSyncAt: timestamp("last_successful_sync_at", {
+      withTimezone: true,
+    }),
     firstSeenAt: timestamp("first_seen_at", { withTimezone: true }),
     lastCheckedAt: timestamp("last_checked_at", { withTimezone: true }),
     /** Provider-specific resume point for incremental scanning. */

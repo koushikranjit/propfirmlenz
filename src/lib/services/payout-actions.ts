@@ -17,6 +17,7 @@ import {
   saveTrackedWallet,
   scanWalletNow,
 } from "./payout-admin";
+import { seedPayoutRegistry, testProviderConnection } from "./payout-registry";
 import {
   VerificationError,
   markForReview,
@@ -100,6 +101,56 @@ export async function saveNetworkAction(
     await saveNetwork(getDb(), { adminUserId: admin.adminUserId, input });
     revalidatePayouts();
     return { ok: true, message: `Saved ${input.name}.` };
+  } catch (error) {
+    return toActionState(error);
+  }
+}
+
+/* ---------------------------------------------------------------- registry */
+
+export async function seedRegistryAction(
+  _prev: ActionState,
+  formData: FormData,
+): Promise<ActionState> {
+  // The form carries no fields; reading it keeps the signature honest.
+  void formData;
+  try {
+    const admin = await requireAdmin();
+    const report = await seedPayoutRegistry(getDb(), {
+      adminUserId: admin.adminUserId,
+    });
+    revalidatePayouts();
+    revalidatePath("/admin/payouts/providers");
+    return {
+      ok: true,
+      message:
+        `Registry updated: ${report.providersCreated} provider(s), ` +
+        `${report.networksCreated} network(s), ${report.tokensCreated} token(s) added. ` +
+        "Existing configuration was left untouched.",
+    };
+  } catch (error) {
+    return toActionState(error);
+  }
+}
+
+export async function testProviderAction(
+  _prev: ActionState,
+  formData: FormData,
+): Promise<ActionState> {
+  try {
+    const admin = await requireAdmin();
+    const providerId = z.uuid().parse(formData.get("providerId"));
+
+    const result = await testProviderConnection(getDb(), {
+      adminUserId: admin.adminUserId,
+      providerId,
+    });
+    revalidatePath("/admin/payouts/providers");
+
+    // Status only. The credential never reaches this message.
+    return result.ok
+      ? { ok: true, message: `Connected in ${result.latencyMs}ms.` }
+      : { error: `Connection failed: ${result.status}` };
   } catch (error) {
     return toActionState(error);
   }

@@ -2,9 +2,11 @@ import { and, eq, sql } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
 import {
   blockchainNetworks,
+  blockchainTokens,
   blockchainTransactions,
   payoutCandidates,
   payoutVerificationEvents,
+  trackedWalletTokens,
   trackedWallets,
 } from "@/lib/db/schema";
 import {
@@ -35,6 +37,10 @@ export interface ScanResult {
   transfersSeen: number;
   transactionsInserted: number;
   candidatesCreated: number;
+  /** Transfers of assets that are not configured, tracked, enabled tokens. */
+  skippedUnsupportedToken: number;
+  /** Configured decimals disagreeing with what the provider reported. */
+  decimalsMismatch: number;
   cursor: string | null;
   error: string | null;
 }
@@ -83,9 +89,73 @@ export async function scanWallet(
     transfersSeen: 0,
     transactionsInserted: 0,
     candidatesCreated: 0,
+    skippedUnsupportedToken: 0,
+    decimalsMismatch: 0,
     cursor: opts.resume === false ? null : wallet.scanCursor,
     error: null,
   };
+
+  /**
+   * The tokens this wallet is tracked for — docs/PAYOUTS.md §5 `[LOCKED]`.
+   *
+   * Keyed by CONTRACT, never by ticker. "USDT" exists independently on many
+   * chains, and any contract can call itself whatever it likes; matching on
+   * the symbol would let an unrelated token be counted as a stablecoin payout.
+   *
+   * A wallet with no tokens selected falls back to every enabled token on its
+   * network, so an admin who adds a wallet without picking tokens gets the
+   * network's configured stablecoins rather than silence.
+   */
+  const walletTokens = await db
+    .select({
+      contract: blockchainTokens.contractAddress,
+      symbol: blockchainTokens.symbol,
+      decimals: blockchainTokens.decimals,
+    })
+    .from(blockchainTokens)
+    .innerJoin(
+      trackedWalletTokens,
+      eq(trackedWalletTokens.tokenId, blockchainTokens.id),
+    )
+    .where(
+      and(
+        eq(trackedWalletTokens.walletId, wallet.id),
+        eq(blockchainTokens.isEnabled, true),
+      ),
+    );
+
+  const networkTokens =
+    walletTokens.length > 0
+      ? walletTokens
+      : await db
+          .select({
+            contract: blockchainTokens.contractAddress,
+            symbol: blockchainTokens.symbol,
+            decimals: blockchainTokens.decimals,
+          })
+          .from(blockchainTokens)
+          .where(
+            and(
+              eq(blockchainTokens.networkId, wallet.networkId),
+              eq(blockchainTokens.isEnabled, true),
+            ),
+          );
+
+  const supported = new Map(
+    networkTokens.map((t) => [t.contract.toLowerCase(), t]),
+  );
+
+  // No configured token means nothing is recognisable on this network. Saying
+  // so is the honest result; scanning anyway would raise candidates for assets
+  // nobody has identified.
+  if (supported.size === 0) {
+    result.error = "no enabled token is configured for this network";
+    await db
+      .update(trackedWallets)
+      .set({ lastCheckedAt: now, lastScanError: result.error })
+      .where(eq(trackedWallets.id, wallet.id));
+    return result;
+  }
 
   if (!wallet.isActive) {
     result.error = "wallet is inactive";
@@ -113,6 +183,24 @@ export async function scanWallet(
           continue;
         }
         if (transfer.status !== "success") continue;
+
+        // ONLY CONFIGURED TOKENS. An unrecognised contract is not "probably a
+        // stablecoin" — it is unknown, and unknown assets do not become
+        // payout candidates.
+        const contract = transfer.assetContract?.toLowerCase() ?? null;
+        const token = contract ? supported.get(contract) : undefined;
+        if (!token) {
+          result.skippedUnsupportedToken += 1;
+          continue;
+        }
+
+        // The configured decimals is a CROSS-CHECK, not the source of truth.
+        // A disagreement means one of the two is wrong, and a wrong exponent
+        // mis-scales every amount by orders of magnitude — so it is counted
+        // and surfaced rather than silently resolved.
+        if (token.decimals !== transfer.decimals) {
+          result.decimalsMismatch += 1;
+        }
 
         const [inserted] = await db
           .insert(blockchainTransactions)

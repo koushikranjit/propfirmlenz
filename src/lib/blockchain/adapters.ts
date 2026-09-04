@@ -1,3 +1,4 @@
+import { TronScanProvider } from "./tronscan";
 import {
   type BlockchainProvider,
   type ChainTransfer,
@@ -250,6 +251,13 @@ export class EvmExplorerProvider implements BlockchainProvider {
  * ingestion then records "provider unavailable" rather than an empty scan that
  * would look like a firm having made no payouts.
  */
+/** Providers this build can actually run. Nothing else is addressable. */
+export const SUPPORTED_PROVIDER_KEYS = [
+  "etherscan",
+  "tronscan",
+  "trongrid",
+] as const;
+
 export function providerFor(network: {
   provider: string;
   chainId: number | null;
@@ -257,6 +265,14 @@ export function providerFor(network: {
   switch (network.provider) {
     case "trongrid":
       return new TronProvider({ apiKey: process.env.TRONGRID_API_KEY });
+
+    case "tronscan": {
+      // TRONSCAN serves public data without a key but rate-limits hard; the
+      // key raises the limit rather than unlocking the endpoint, so an
+      // unconfigured key is a warning, not a blocker.
+      const apiKey = process.env.TRONSCAN_API_KEY;
+      return new TronScanProvider(apiKey ? { apiKey } : {});
+    }
 
     case "etherscan": {
       const apiKey = process.env.ETHERSCAN_API_KEY;
