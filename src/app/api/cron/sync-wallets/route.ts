@@ -10,6 +10,10 @@ export const maxDuration = 60;
 /**
  * SCHEDULED WALLET SYNC — docs/PAYOUTS.md §6.
  *
+ * Runs DAILY — the Vercel plan in use allows one cron run per day, so the
+ * schedule is 03:00 UTC rather than hourly. Raising the frequency is a
+ * one-line change in vercel.json on a plan that permits it.
+ *
  * Incremental and bounded. Each run takes the wallets checked longest ago, a
  * few pages each, resuming from the stored cursor — it never rescans a chain
  * from genesis, which would burn provider quota and find nothing new.
