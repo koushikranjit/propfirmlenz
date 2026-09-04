@@ -51,13 +51,18 @@ export async function resolveAffiliateLink(
         isNull(propFirms.deletedAt),
         eq(affiliateLinks.status, "active"),
         isNull(affiliateLinks.deletedAt),
+        // The instant is bound as an ISO STRING, not as a JS Date. A raw `sql`
+        // template passes its parameters straight through, and postgres-js
+        // cannot serialise a bare Date that way — it throws
+        // ERR_INVALID_ARG_TYPE at query time. PGlite tolerates it, so this only
+        // ever surfaced against a real Postgres driver in production.
         or(
           isNull(affiliateLinks.startsAt),
-          sql`${affiliateLinks.startsAt} <= ${now}`,
+          sql`${affiliateLinks.startsAt} <= ${now.toISOString()}::timestamptz`,
         ),
         or(
           isNull(affiliateLinks.endsAt),
-          sql`${affiliateLinks.endsAt} > ${now}`,
+          sql`${affiliateLinks.endsAt} > ${now.toISOString()}::timestamptz`,
         ),
       ),
     );

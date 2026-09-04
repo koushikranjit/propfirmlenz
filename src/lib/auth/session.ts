@@ -204,5 +204,7 @@ export async function deleteExpiredSessions(
 ): Promise<void> {
   await db
     .delete(adminSessions)
-    .where(sql`${adminSessions.expiresAt} < ${now}`);
+    // ISO string, not a bare Date: a raw `sql` template passes its parameters
+    // straight through, and postgres-js cannot serialise a Date that way.
+    .where(sql`${adminSessions.expiresAt} < ${now.toISOString()}::timestamptz`);
 }
