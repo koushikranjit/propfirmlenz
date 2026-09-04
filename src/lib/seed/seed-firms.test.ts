@@ -17,6 +17,7 @@ import {
 import { ROLES, seedRolesAndPermissions } from "@/lib/auth/permissions";
 import { getPublishedFirmView } from "@/lib/repositories/public-firm-view";
 import { listPublishedFirmSummaries } from "@/lib/repositories/public-firms";
+import { createFirm } from "@/lib/services/firm-admin";
 import { LENZ_OFFER, SEED_FIRMS } from "./firm-catalog";
 import { seedFirmCatalog } from "./seed-firms";
 
@@ -154,6 +155,42 @@ describe("initial firm catalog seed", () => {
     const links = await db.select().from(firmPlatforms);
     const keys = links.map((l) => `${l.propFirmId}:${l.platformId}`);
     expect(new Set(keys).size).toBe(keys.length);
+  });
+
+  it("reconciles onto a firm that already exists under a different slug", async () => {
+    // Exactly what a real database looks like: someone added The5ers by hand
+    // at "the5ers", while this seed's catalog says "the-5-ers".
+    await createFirm(db, {
+      adminUserId: adminId,
+      input: {
+        name: "The5ers",
+        slug: "the5ers",
+        description: "Entered by an admin before the seed ever ran.",
+      },
+    });
+
+    await seed();
+
+    const matches = await db
+      .select({ slug: propFirms.slug, description: propFirms.description })
+      .from(propFirms)
+      .where(
+        and(
+          sql`lower(${propFirms.name}) = 'the5ers'`,
+          isNull(propFirms.deletedAt),
+        ),
+      );
+
+    // ONE record, not two — and it kept the live slug rather than moving the
+    // URL and leaving a redirect behind.
+    expect(matches).toHaveLength(1);
+    expect(matches[0]?.slug).toBe("the5ers");
+    expect(matches[0]?.description).toBe(
+      "Entered by an admin before the seed ever ran.",
+    );
+
+    // And the catalog is still eleven firms, not twelve.
+    expect(await liveFirms()).toHaveLength(11);
   });
 
   it("does not overwrite an edit made between runs", async () => {

@@ -1,4 +1,4 @@
-import { and, eq, isNull, sql } from "drizzle-orm";
+import { and, eq, isNull, or, sql } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
 import {
   affiliateLinks,
@@ -106,7 +106,19 @@ export async function seedFirmCatalog(
         draftPayload: propFirms.draftPayload,
       })
       .from(propFirms)
-      .where(and(eq(propFirms.slug, seed.slug), isNull(propFirms.deletedAt)))
+      // Slug OR name. A firm an admin already created may sit under a
+      // different slug ("the5ers" where this seed says "the-5-ers"), and
+      // matching on slug alone would publish a SECOND copy of it. The stored
+      // slug wins — renaming it would move a live URL and leave a 301 behind.
+      .where(
+        and(
+          or(
+            eq(propFirms.slug, seed.slug),
+            sql`lower(${propFirms.name}) = ${seed.name.toLowerCase()}`,
+          ),
+          isNull(propFirms.deletedAt),
+        ),
+      )
       .limit(1);
 
     let firmId: string;
