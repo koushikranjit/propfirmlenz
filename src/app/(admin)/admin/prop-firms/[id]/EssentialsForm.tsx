@@ -11,6 +11,7 @@ import { Card, Field, Input, Textarea } from "@/components/ui/primitives";
 import { saveFirmEssentialsAction } from "@/lib/services/firm-actions";
 import { COUNTRIES, country } from "@/lib/geo/countries";
 import { yearsInOperation } from "@/lib/view/firm-view";
+import type { FirmClickStats } from "@/lib/repositories/admin-firms";
 import { LogoUpload, type StorageState } from "./LogoUpload";
 
 /**
@@ -51,6 +52,7 @@ export interface FirmEssentials {
   discountEndsAt: string | null;
   logoUrl: string | null;
   logoAlt: string | null;
+  clicks: FirmClickStats;
 }
 
 /** ISO -> the `datetime-local` shape, in UTC. */
@@ -121,6 +123,41 @@ function CountryField({
         </p>
       ) : null}
     </Field>
+  );
+}
+
+/**
+ * Real outbound click counts — docs/DATABASE.md §5.10a.
+ *
+ * Counted from `affiliate_clicks` at read time. Bots and internal traffic are
+ * EXCLUDED from the headline and reported separately: presenting them as
+ * trader interest would overstate the one number an affiliate decision gets
+ * made on. Zero is shown as zero (CLAUDE.md §3).
+ */
+function BuyLinkClicks({ clicks }: { clicks: FirmClickStats }) {
+  return (
+    <div className="rounded-[10px] border border-border-subtle bg-bg-elevated px-4 py-3">
+      <div className="flex flex-wrap items-baseline justify-between gap-3">
+        <span className="text-xs font-semibold uppercase tracking-wide text-text-muted">
+          Buy link clicks
+        </span>
+        <span className="text-lg font-semibold tabular-nums text-text-primary">
+          {clicks.clicks}
+        </span>
+      </div>
+      <p className="mt-1 text-xs text-text-muted">
+        {clicks.clicks === 0
+          ? "No clicks recorded yet."
+          : `${clicks.last30Days} in the last 30 days${
+              clicks.lastClickAt
+                ? `, most recent ${new Date(clicks.lastClickAt).toISOString().slice(0, 10)}`
+                : ""
+            }.`}
+        {clicks.excluded > 0
+          ? ` ${clicks.excluded} further click${clicks.excluded === 1 ? "" : "s"} were recorded but excluded as bot or internal traffic.`
+          : ""}
+      </p>
+    </div>
   );
 }
 
@@ -233,6 +270,8 @@ export function EssentialsForm({
                 aria-invalid={err("affiliateUrl") ? true : undefined}
               />
             </Field>
+
+            <BuyLinkClicks clicks={firm.clicks} />
 
             <div className="grid gap-5 sm:grid-cols-2">
               <Field

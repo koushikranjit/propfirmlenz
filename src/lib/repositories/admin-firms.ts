@@ -10,7 +10,13 @@ import {
   sql,
 } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
-import { challenges, media, offers, propFirms } from "@/lib/db/schema";
+import {
+  affiliateClicks,
+  challenges,
+  media,
+  offers,
+  propFirms,
+} from "@/lib/db/schema";
 import type { FirmListQuery } from "@/lib/validation/firm";
 
 /**
@@ -193,6 +199,49 @@ export async function getAdminFirmById(db: Database, id: string) {
     logoUrl: logo?.url ?? null,
     logoAlt: logo?.alt ?? null,
   };
+}
+
+export interface FirmClickStats {
+  /** Genuine outbound clicks: bots and internal traffic excluded. */
+  clicks: number;
+  /** Rows that WERE recorded but are excluded above, so nothing is hidden. */
+  excluded: number;
+  last30Days: number;
+  lastClickAt: Date | null;
+}
+
+/**
+ * Buy-link click counts for one firm — docs/DATABASE.md §5.10a.
+ *
+ * Counted from `affiliate_clicks`, live. There is no cached total and no
+ * estimate: a click figure that cannot be recomputed from rows is a figure
+ * nobody can check (CLAUDE.md §3).
+ *
+ * BOTS AND INTERNAL TRAFFIC ARE EXCLUDED FROM THE HEADLINE `[LOCKED]`.
+ * Reporting them as trader interest would overstate exactly the number an
+ * affiliate decision gets made on. They are returned separately rather than
+ * dropped, because "12 clicks, 40 filtered" and "12 clicks" are different
+ * facts and the second one hides a signal worth seeing.
+ */
+export async function getFirmClickStats(
+  db: Database,
+  firmId: string,
+): Promise<FirmClickStats> {
+  const genuine = sql`not ${affiliateClicks.isBot} and not ${affiliateClicks.isInternal}`;
+
+  const rows = await db
+    .select({
+      clicks: sql<number>`count(*) filter (where ${genuine})::int`,
+      excluded: sql<number>`count(*) filter (where not (${genuine}))::int`,
+      last30Days: sql<number>`count(*) filter (where ${genuine} and ${affiliateClicks.clickedAt} > now() - interval '30 days')::int`,
+      lastClickAt: sql<Date | null>`max(${affiliateClicks.clickedAt}) filter (where ${genuine})`,
+    })
+    .from(affiliateClicks)
+    .where(eq(affiliateClicks.propFirmId, firmId));
+
+  return (
+    rows[0] ?? { clicks: 0, excluded: 0, last30Days: 0, lastClickAt: null }
+  );
 }
 
 /** Dashboard counts. Real queries — never a hard-coded or estimated figure. */

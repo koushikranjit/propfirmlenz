@@ -4,7 +4,10 @@ import { z } from "zod";
 import { getDb } from "@/lib/db/client";
 import { requireAdminPermission } from "@/lib/auth/current-admin";
 import { PERMISSIONS } from "@/lib/auth/permissions";
-import { getAdminFirmById } from "@/lib/repositories/admin-firms";
+import {
+  getAdminFirmById,
+  getFirmClickStats,
+} from "@/lib/repositories/admin-firms";
 import {
   getAdminCatalog,
   getAdminFirmChildren,
@@ -47,7 +50,7 @@ export default async function FirmWorkspacePage({
   // Also covers the soft-deleted case: getAdminFirmById filters deleted_at.
   if (!firm) notFound();
 
-  const [currentVersion, children, catalog, networks, wallets] =
+  const [currentVersion, children, catalog, networks, wallets, clicks] =
     await Promise.all([
       getCurrentVersion(db, firm.id),
       // PUBLISHED children. Pending edits stay in `draft_payload` and are
@@ -59,6 +62,8 @@ export default async function FirmWorkspacePage({
       // so the firm editor can configure a wallet against THIS firm's record.
       listNetworks(db),
       listTrackedWallets(db, { firmId: firm.id }),
+      // Real rows from affiliate_clicks. Never cached, never estimated.
+      getFirmClickStats(db, firm.id),
     ]);
 
   const draft = firm.draftPayload;
@@ -132,6 +137,7 @@ export default async function FirmWorkspacePage({
           trustpilotUrl: firm.trustpilotUrl,
           logoUrl: firm.logoUrl,
           logoAlt: firm.logoAlt,
+          clicks,
           brandColor: firm.brandColor,
           isFeatured: firm.isFeatured,
           displayOrder: firm.displayOrder,

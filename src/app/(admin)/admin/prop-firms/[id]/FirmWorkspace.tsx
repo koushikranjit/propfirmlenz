@@ -18,6 +18,7 @@ import type {
   AdminNetwork,
   AdminWallet,
 } from "@/lib/repositories/admin-payouts";
+import type { FirmClickStats } from "@/lib/repositories/admin-firms";
 import { AssociationsTab } from "./AssociationsTab";
 import { AnnouncementsSection, FaqsSection } from "./ContentSections";
 import type { StorageState } from "./LogoUpload";
@@ -49,6 +50,7 @@ export interface WorkspaceFirm {
   trustpilotUrl: string | null;
   logoUrl: string | null;
   logoAlt: string | null;
+  clicks: FirmClickStats;
   brandColor: string | null;
   isFeatured: boolean;
   displayOrder: number;
@@ -219,6 +221,7 @@ export function FirmWorkspace({
     discountEndsAt: defaultOffer?.endsAt ?? null,
     logoUrl: firm.logoUrl,
     logoAlt: firm.logoAlt,
+    clicks: firm.clicks,
   };
   const err = (field: string) => saveState.fieldErrors?.[field];
 
