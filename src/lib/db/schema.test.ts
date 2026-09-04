@@ -62,7 +62,8 @@ describe("schema", () => {
 
     // 23 enumerated entities plus the 3 junction/EAV tables that DATABASE.md
     // §5.4–5.6 specifies as part of the rules/platforms/instruments design,
-    // plus the 6 payout-intelligence tables of docs/PAYOUTS.md §2.
+    // plus the 6 payout-intelligence tables of docs/PAYOUTS.md §2, plus the
+    // 2 firm content tables (announcements, FAQs).
     expect(names).toEqual([
       "admin_sessions",
       "admin_user_roles",
@@ -74,6 +75,8 @@ describe("schema", () => {
       "blockchain_transactions",
       "challenges",
       "entity_versions",
+      "firm_announcements",
+      "firm_faqs",
       "firm_instruments",
       "firm_platforms",
       "instruments",

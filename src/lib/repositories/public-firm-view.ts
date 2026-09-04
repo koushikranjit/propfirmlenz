@@ -1,8 +1,10 @@
-import { and, asc, eq, isNull, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, isNull, or, sql } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
 import {
   affiliateLinks,
   challenges,
+  firmAnnouncements,
+  firmFaqs,
   firmInstruments,
   firmPlatforms,
   instruments,
@@ -18,6 +20,7 @@ import {
   type FirmViewChallenge,
   type FirmViewRule,
   deriveRuleState,
+  yearsInOperation,
 } from "@/lib/view/firm-view";
 
 /**
@@ -53,6 +56,11 @@ export async function getPublishedFirmView(
       tagline: propFirms.tagline,
       description: propFirms.description,
       foundedYear: propFirms.foundedYear,
+      foundedOn: propFirms.foundedOn,
+      founderName: propFirms.founderName,
+      ceoName: propFirms.ceoName,
+      trustpilotRating: propFirms.trustpilotRating,
+      trustpilotUrl: propFirms.trustpilotUrl,
       headquartersCountry: propFirms.headquartersCountry,
       headquartersCity: propFirms.headquartersCity,
       websiteUrl: propFirms.websiteUrl,
@@ -87,6 +95,11 @@ type FirmRow = {
   tagline: string | null;
   description: string | null;
   foundedYear: number | null;
+  foundedOn: string | null;
+  founderName: string | null;
+  ceoName: string | null;
+  trustpilotRating: string | null;
+  trustpilotUrl: string | null;
   headquartersCountry: string | null;
   headquartersCity: string | null;
   websiteUrl: string | null;
@@ -120,6 +133,8 @@ export async function assembleView(
     ruleRows,
     offerRows,
     affiliateRows,
+    announcementRows,
+    faqRows,
   ] = await Promise.all([
     db
       .select()
@@ -241,6 +256,42 @@ export async function assembleView(
         ),
       )
       .limit(1),
+
+    // Newest first: an announcement's value decays, unlike a challenge's.
+    db
+      .select({
+        id: firmAnnouncements.id,
+        title: firmAnnouncements.title,
+        body: firmAnnouncements.body,
+        linkUrl: firmAnnouncements.linkUrl,
+        announcedAt: firmAnnouncements.announcedAt,
+      })
+      .from(firmAnnouncements)
+      .where(
+        and(
+          eq(firmAnnouncements.propFirmId, firm.id),
+          eq(firmAnnouncements.isActive, true),
+          isNull(firmAnnouncements.deletedAt),
+        ),
+      )
+      .orderBy(desc(firmAnnouncements.announcedAt))
+      .limit(20),
+
+    db
+      .select({
+        id: firmFaqs.id,
+        question: firmFaqs.question,
+        answer: firmFaqs.answer,
+      })
+      .from(firmFaqs)
+      .where(
+        and(
+          eq(firmFaqs.propFirmId, firm.id),
+          eq(firmFaqs.isActive, true),
+          isNull(firmFaqs.deletedAt),
+        ),
+      )
+      .orderBy(asc(firmFaqs.displayOrder), asc(firmFaqs.question)),
   ]);
 
   return {
@@ -260,6 +311,13 @@ export async function assembleView(
           }
         : null,
     foundedYear: firm.foundedYear,
+    foundedOn: firm.foundedOn,
+    // Derived here so every consumer — page, preview, tests — agrees.
+    yearsInOperation: yearsInOperation(firm.foundedOn),
+    founderName: firm.founderName,
+    ceoName: firm.ceoName,
+    trustpilotRating: firm.trustpilotRating,
+    trustpilotUrl: firm.trustpilotUrl,
     headquartersCountry: firm.headquartersCountry,
     headquartersCity: firm.headquartersCity,
     websiteUrl: firm.websiteUrl,
@@ -278,6 +336,11 @@ export async function assembleView(
       ...o,
       endsAt: o.endsAt?.toISOString() ?? null,
     })),
+    announcements: announcementRows.map((a) => ({
+      ...a,
+      announcedAt: a.announcedAt.toISOString(),
+    })),
+    faqs: faqRows,
     hasAffiliateLink: affiliateRows.length > 0,
   };
 }
@@ -376,6 +439,11 @@ export async function getFirmRowForView(
       tagline: propFirms.tagline,
       description: propFirms.description,
       foundedYear: propFirms.foundedYear,
+      foundedOn: propFirms.foundedOn,
+      founderName: propFirms.founderName,
+      ceoName: propFirms.ceoName,
+      trustpilotRating: propFirms.trustpilotRating,
+      trustpilotUrl: propFirms.trustpilotUrl,
       headquartersCountry: propFirms.headquartersCountry,
       headquartersCity: propFirms.headquartersCity,
       websiteUrl: propFirms.websiteUrl,

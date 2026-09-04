@@ -221,7 +221,35 @@ export const AGGREGATE_RATING_LD_ALLOWED = false;
 
 /**
  * `FAQPage` markup requires genuine, VISIBLE, published Q&A on the page
- * (docs/SEO.md §11 rule 2 `[LOCKED]`). No public surface renders FAQ content
- * yet, so no FAQ markup may be emitted. Greppable, like the rule above.
+ * (docs/SEO.md §11 rule 2 `[LOCKED]`).
+ *
+ * That condition is now MET on a firm profile that has FAQs: they are
+ * admin-entered, rendered as visible text, and never generated. The flag stays
+ * so the rule remains greppable — but the gate that matters is
+ * `buildFaqLd`, which returns null for an empty list, so a page with no FAQs
+ * still emits nothing.
  */
-export const FAQ_LD_ALLOWED = false;
+export const FAQ_LD_ALLOWED = true;
+
+/**
+ * `FAQPage` for questions ACTUALLY RENDERED on the page.
+ *
+ * Returns null when there are none. The caller passes the same array it
+ * renders, so the markup cannot describe content a reader does not see — which
+ * is the whole of rule 2.
+ */
+export function buildFaqLd(
+  faqs: { question: string; answer: string }[],
+): Record<string, unknown> | null {
+  if (!FAQ_LD_ALLOWED || faqs.length === 0) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+}

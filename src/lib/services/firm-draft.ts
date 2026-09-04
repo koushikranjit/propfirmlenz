@@ -348,6 +348,12 @@ export async function publishFirm(
         supportEmail: view.supportEmail,
         supportUrl: view.supportUrl,
         payoutInfoUrl: view.payoutInfoUrl,
+        foundedOn: view.foundedOn,
+        founderName: view.founderName,
+        ceoName: view.ceoName,
+        // `numeric` takes an exact decimal string, never a float.
+        trustpilotRating: view.trustpilotRating,
+        trustpilotUrl: view.trustpilotUrl,
         // Not part of the public view model, so read from the draft directly.
         ...(d?.logoMediaId !== undefined ? { logoMediaId: d.logoMediaId } : {}),
         ...(d?.coverMediaId !== undefined

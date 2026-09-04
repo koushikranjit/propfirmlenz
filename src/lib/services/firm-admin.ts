@@ -139,10 +139,14 @@ export async function saveFirmEdits(
     await db
       .update(propFirms)
       .set({
-        name: opts.input.name,
+        ...(opts.input.name !== undefined ? { name: opts.input.name } : {}),
         slug: opts.input.slug,
-        tagline: opts.input.tagline,
-        description: opts.input.description,
+        ...(opts.input.tagline !== undefined
+          ? { tagline: opts.input.tagline }
+          : {}),
+        ...(opts.input.description !== undefined
+          ? { description: opts.input.description }
+          : {}),
         legalName: opts.input.legalName,
         foundedYear: opts.input.foundedYear,
         headquartersCountry: opts.input.headquartersCountry,
@@ -190,10 +194,14 @@ export async function saveFirmEdits(
     updatedByAdminId: opts.adminUserId,
     firm: {
       ...(base.firm ?? {}),
-      name: opts.input.name,
+      ...(opts.input.name !== undefined ? { name: opts.input.name } : {}),
       slug: opts.input.slug,
-      tagline: opts.input.tagline,
-      description: opts.input.description,
+      ...(opts.input.tagline !== undefined
+        ? { tagline: opts.input.tagline }
+        : {}),
+      ...(opts.input.description !== undefined
+        ? { description: opts.input.description }
+        : {}),
       legalName: opts.input.legalName,
       foundedYear: opts.input.foundedYear,
       headquartersCountry: opts.input.headquartersCountry,

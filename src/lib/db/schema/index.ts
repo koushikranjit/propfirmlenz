@@ -10,5 +10,6 @@ export * from "./media";
 export * from "./firms";
 export * from "./catalog";
 export * from "./commerce";
+export * from "./content";
 export * from "./system";
 export * from "./payouts";

@@ -4,6 +4,9 @@ import { auditLogs, propFirms } from "@/lib/db/schema";
 import { PERMISSIONS, requirePermission } from "@/lib/auth/permissions";
 import {
   type DraftAffiliateLink,
+  type DraftAnnouncement,
+  type DraftFaq,
+  type DraftFirm,
   type DraftChallenge,
   type DraftInstrument,
   type DraftOffer,
@@ -44,7 +47,9 @@ export type ChildCollection =
   | "platforms"
   | "instruments"
   | "offers"
-  | "affiliateLinks";
+  | "affiliateLinks"
+  | "announcements"
+  | "faqs";
 
 /** Identity of a pending op within its collection. */
 function opKey(
@@ -65,7 +70,7 @@ function opKey(
       // the same new child twice then replaces the pending op instead of
       // queuing a second insert that would collide on a unique index the
       // moment someone published.
-      const natural = op.slug ?? op.title ?? op.label;
+      const natural = op.slug ?? op.title ?? op.label ?? op.question;
       return `new:${natural === undefined ? "unnamed" : String(natural)}`;
     }
   }
@@ -77,7 +82,9 @@ type AnyOp =
   | DraftPlatform
   | DraftInstrument
   | DraftOffer
-  | DraftAffiliateLink;
+  | DraftAffiliateLink
+  | DraftAnnouncement
+  | DraftFaq;
 
 async function loadFirmForDraft(db: Database, firmId: string) {
   const rows = await db
@@ -205,6 +212,46 @@ export async function unstageChildOp(
 }
 
 /** Stages the firm's SEO metadata. Replaces the pending block wholesale. */
+/**
+ * Stages ONE firm column into the draft.
+ *
+ * For edits that are not a form submission — a logo upload, say — where
+ * round-tripping the whole essentials form would overwrite fields the caller
+ * never saw. It merges into any existing draft rather than replacing it.
+ */
+export async function stageFirmField<K extends keyof DraftFirm>(
+  db: Database,
+  opts: {
+    adminUserId: string;
+    firmId: string;
+    field: K;
+    value: DraftFirm[K];
+  },
+): Promise<{ pendingChanges: number }> {
+  await requirePermission(db, opts.adminUserId, PERMISSIONS.FIRM_EDIT);
+
+  const firm = await loadFirmForDraft(db, opts.firmId);
+  const currentVersion = await getCurrentVersion(db, firm.id);
+  const base: DraftPayload =
+    firm.draftPayload ?? emptyDraft(currentVersion, opts.adminUserId);
+
+  const payload = draftPayloadSchema.parse({
+    ...base,
+    baseVersion: currentVersion,
+    updatedAt: new Date().toISOString(),
+    updatedByAdminId: opts.adminUserId,
+    firm: { ...(base.firm ?? {}), [opts.field]: opts.value },
+  });
+
+  await db
+    .update(propFirms)
+    // Preserved: a draft save changes nothing public (docs/SEO.md §14).
+    .set({ draftPayload: payload, updatedAt: firm.updatedAt })
+    .where(eq(propFirms.id, firm.id));
+
+  return { pendingChanges: countDraftChanges(payload) };
+}
+
 export async function stageSeo(
   db: Database,
   opts: { adminUserId: string; firmId: string; seo: DraftSeo },

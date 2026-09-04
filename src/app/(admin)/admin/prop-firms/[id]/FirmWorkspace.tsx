@@ -1,7 +1,6 @@
 "use client";
 
 import { useActionState } from "react";
-import { Tabs } from "radix-ui";
 import {
   type ActionState,
   discardDraftAction,
@@ -9,21 +8,19 @@ import {
   saveFirmAction,
   verifyFirmAction,
 } from "@/lib/services/firm-actions";
-import {
-  Badge,
-  Button,
-  Card,
-  Field,
-  Input,
-  Textarea,
-  cx,
-} from "@/components/ui/primitives";
+import { Badge, Button, Card, Field, Input } from "@/components/ui/primitives";
 import { StatusMessage, SubmitButton } from "@/components/admin/forms";
 import type {
   AdminCatalog,
   AdminFirmChildren,
 } from "@/lib/repositories/admin-firm-children";
+import type {
+  AdminNetwork,
+  AdminWallet,
+} from "@/lib/repositories/admin-payouts";
 import { AssociationsTab } from "./AssociationsTab";
+import { AnnouncementsSection, FaqsSection } from "./ContentSections";
+import { PayoutTrackingSection } from "./PayoutTrackingSection";
 import { ChallengesTab, type StagedChallenge } from "./ChallengesTab";
 import { AffiliateTab, OffersTab, type StagedKey } from "./CommerceTabs";
 import { RulesTab, type StagedRule } from "./RulesTab";
@@ -44,7 +41,13 @@ export interface WorkspaceFirm {
   supportEmail: string | null;
   supportUrl: string | null;
   payoutInfoUrl: string | null;
-  hasLogo: boolean;
+  foundedOn: string | null;
+  founderName: string | null;
+  ceoName: string | null;
+  trustpilotRating: string | null;
+  trustpilotUrl: string | null;
+  logoUrl: string | null;
+  logoAlt: string | null;
   brandColor: string | null;
   isFeatured: boolean;
   displayOrder: number;
@@ -68,30 +71,54 @@ export interface WorkspaceCan {
 }
 
 /**
- * Workspace tabs — docs/ADMIN.md §6.2.
+ * ONE PAGE, EXPANDABLE SECTIONS — docs/ADMIN.md §6.2 `[owner-locked 2026-09-04]`.
  *
- * THIS EDITOR HOLDS FIRM DATA, AND NOTHING ELSE `[owner-directed 2026-09-04]`.
+ * There is deliberately NO TAB STRIP. The primary editor is the sixteen core
+ * fields; everything else is a collapsed section on the same page, opened when
+ * it is needed. A seventeen-tab bar is how a firm editor becomes a maze.
  *
- * Every tab here writes to a table the firm owns — its own columns, or a child
- * collection the public profile renders. Payout tracking, reviews, media and
- * the audit trail are their OWN admin sections; they are firm-scoped views of
- * separate systems, and putting a tab for each one here is how a firm editor
- * turns into the whole dashboard.
- *
- * Nothing in this list is a placeholder. A tab that renders "not implemented"
- * costs a click to discover it does nothing, so unbuilt work is named once,
- * below the tabs, instead of occupying the tab bar (docs/CLAUDE.md §3).
+ * THIS EDITOR HOLDS FIRM DATA, AND NOTHING ELSE. Every section writes to a
+ * table the firm owns. Reviews, the media library and the audit trail are their
+ * OWN admin sections, linked rather than embedded — a section for each one here
+ * is how a firm editor becomes the whole dashboard. Payout tracking appears
+ * only as a wallet configuration point that writes against this firm's existing
+ * record (docs/PAYOUTS.md §11).
  */
-const TABS = [
-  { value: "overview", label: "Overview" },
-  { value: "company", label: "Company" },
-  { value: "branding", label: "Branding" },
-  { value: "challenges", label: "Challenges" },
-  { value: "rules", label: "Rules" },
-  { value: "associations", label: "Platforms & instruments" },
-  { value: "offers", label: "Offers" },
-  { value: "affiliate", label: "Affiliate" },
-] as const;
+
+/** A collapsed section. `<details>` needs no JavaScript and keeps its state. */
+function Section({
+  id,
+  title,
+  meta,
+  children,
+}: {
+  id: string;
+  title: string;
+  meta?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <details
+      id={id}
+      className="group rounded-[14px] border border-border-default bg-bg-card"
+    >
+      <summary className="flex cursor-pointer flex-wrap items-center justify-between gap-3 px-5 py-4 marker:content-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base [&::-webkit-details-marker]:hidden">
+        <span className="flex items-center gap-2 text-sm font-semibold text-text-primary">
+          <span
+            aria-hidden
+            className="text-text-muted group-open:rotate-90"
+            style={{ display: "inline-block" }}
+          >
+            ›
+          </span>
+          {title}
+        </span>
+        {meta ? <span className="text-xs text-text-muted">{meta}</span> : null}
+      </summary>
+      <div className="border-t border-border-subtle p-4 sm:p-5">{children}</div>
+    </details>
+  );
+}
 
 /**
  * Firm-related work that lives in its own admin section.
@@ -119,6 +146,8 @@ export interface WorkspaceStaged {
   instrumentIds: string[];
   offers: StagedKey[];
   affiliateLinks: StagedKey[];
+  announcements: string[];
+  faqs: string[];
   seo: boolean;
 }
 
@@ -128,12 +157,20 @@ export function FirmWorkspace({
   firmChildren,
   catalog,
   staged,
+  networks,
+  wallets,
+  storageConfigured,
 }: {
   firm: WorkspaceFirm;
   can: WorkspaceCan;
   firmChildren: AdminFirmChildren;
   catalog: AdminCatalog;
   staged: WorkspaceStaged;
+  /** Payout tracking is a separate system; these are read-only references. */
+  networks: AdminNetwork[];
+  wallets: AdminWallet[];
+  /** False when object storage has no credentials — the UI says so. */
+  storageConfigured: boolean;
 }) {
   const [saveState, saveFormAction] = useActionState<ActionState, FormData>(
     saveFirmAction,
@@ -161,17 +198,26 @@ export function FirmWorkspace({
   const essentials: FirmEssentials = {
     id: firm.id,
     name: firm.name,
+    tagline: firm.tagline,
     description: firm.description,
-    websiteUrl: firm.websiteUrl,
+    founderName: firm.founderName,
+    ceoName: firm.ceoName,
+    headquartersCountry: firm.headquartersCountry,
+    trustpilotRating: firm.trustpilotRating,
+    trustpilotUrl: firm.trustpilotUrl,
+    foundedOn: firm.foundedOn,
     payoutInfoUrl: firm.payoutInfoUrl,
     affiliateUrl: defaultLink?.destinationUrl ?? null,
+    discountTitle: defaultOffer?.title ?? null,
     discountCode: defaultOffer?.code ?? null,
+    discountDescription: defaultOffer?.description ?? null,
     discountPercent:
       defaultOffer?.discountType === "percent"
         ? (defaultOffer.discountValue ?? null)
         : null,
     discountEndsAt: defaultOffer?.endsAt ?? null,
-    hasLogo: firm.hasLogo,
+    logoUrl: firm.logoUrl,
+    logoAlt: firm.logoAlt,
   };
   const err = (field: string) => saveState.fieldErrors?.[field];
 
@@ -272,82 +318,100 @@ export function FirmWorkspace({
       </Card>
 
       {/* The PRIMARY screen: everything needed to list and monetise a firm. */}
-      <EssentialsForm firm={essentials} readOnly={readOnly} />
+      <EssentialsForm
+        firm={essentials}
+        readOnly={readOnly}
+        storageConfigured={storageConfigured}
+      />
 
-      {/* Advanced Firm Data — collapsed by default. */}
-      <details className="group rounded-[14px] border border-border-default bg-bg-card">
-        <summary
-          id="advanced-firm-data"
-          className="flex cursor-pointer flex-wrap items-center justify-between gap-3 px-5 py-4 marker:content-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base [&::-webkit-details-marker]:hidden"
-        >
-          <span className="flex items-center gap-2 text-sm font-semibold text-text-primary">
-            <span
-              aria-hidden
-              className="text-text-muted group-open:rotate-90"
-              style={{ display: "inline-block" }}
-            >
-              ›
-            </span>
-            Advanced Firm Data
-          </span>
-          <span className="text-xs text-text-muted">
-            Company, challenges, rules, platforms, instruments, offers,
-            affiliate
-          </span>
-        </summary>
-        <div className="border-t border-border-subtle p-4 sm:p-5">
-          {/* ------------------------------------------------------------ tabs */}
-          <Tabs.Root defaultValue="overview">
-            <Tabs.List
-              aria-label="Firm sections"
-              className="flex flex-wrap gap-1 border-b border-border-default pb-2"
-            >
-              {TABS.map((tab) => (
-                <Tabs.Trigger
-                  key={tab.value}
-                  value={tab.value}
-                  className={cx(
-                    "rounded-[8px] px-3 py-1.5 text-sm text-text-secondary transition-colors",
-                    "hover:bg-bg-elevated hover:text-text-primary",
-                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan",
-                    "focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base",
-                    "data-[state=active]:bg-bg-elevated data-[state=active]:text-brand-cyan",
-                  )}
-                >
-                  {tab.label}
-                </Tabs.Trigger>
-              ))}
-            </Tabs.List>
+      {/* Payout tracking: a configuration point into the separate system. */}
+      <Section
+        id="payout-tracking"
+        title="Payout Tracking"
+        meta={
+          wallets.length === 1
+            ? "1 tracked wallet"
+            : `${wallets.length} tracked wallets`
+        }
+      >
+        <PayoutTrackingSection
+          firmId={firm.id}
+          networks={networks}
+          wallets={wallets}
+          readOnly={readOnly}
+        />
+      </Section>
 
-            {/*
-              One form spans Overview / Company / Branding so a single "Save draft"
-              submits them together. Tab panels stay mounted (forceMount) so values
-              typed on one tab are not lost by switching (docs/ADMIN.md §6.2).
-            */}
-            <form action={saveFormAction} id="firm-edit-form">
-              <input type="hidden" name="firmId" value={firm.id} />
+      <Section
+        id="challenges"
+        title="Challenges"
+        meta={
+          firmChildren.challenges.length === 1
+            ? "1 challenge"
+            : `${firmChildren.challenges.length} challenges`
+        }
+      >
+        <ChallengesTab
+          firmId={firm.id}
+          challenges={firmChildren.challenges}
+          staged={staged.challenges}
+          readOnly={readOnly}
+        />
+      </Section>
 
-              <Tabs.Content
-                value="overview"
-                forceMount
-                className="data-[state=inactive]:hidden"
-              >
-                <Card className="mt-4 flex flex-col gap-5 p-6">
-                  <Field
-                    label="Firm name"
-                    htmlFor="name"
-                    required
-                    error={err("name")}
-                  >
-                    <Input
-                      id="name"
-                      name="name"
-                      defaultValue={firm.name}
-                      required
-                      disabled={readOnly}
-                      aria-invalid={err("name") ? true : undefined}
-                    />
-                  </Field>
+      <Section
+        id="announcements"
+        title="Announcements"
+        meta={
+          firmChildren.announcements.length === 1
+            ? "1 announcement"
+            : `${firmChildren.announcements.length} announcements`
+        }
+      >
+        <AnnouncementsSection
+          firmId={firm.id}
+          announcements={firmChildren.announcements}
+          staged={new Set(staged.announcements)}
+          readOnly={readOnly}
+        />
+      </Section>
+
+      <Section
+        id="faqs"
+        title="FAQs"
+        meta={
+          firmChildren.faqs.length === 1
+            ? "1 FAQ"
+            : `${firmChildren.faqs.length} FAQs`
+        }
+      >
+        <FaqsSection
+          firmId={firm.id}
+          faqs={firmChildren.faqs}
+          staged={new Set(staged.faqs)}
+          readOnly={readOnly}
+        />
+      </Section>
+
+      {/* Everything the schema holds that is not part of the core workflow. */}
+      <Section
+        id="advanced-firm-data"
+        title="Advanced Information"
+        meta="Company, branding, rules, platforms, instruments, offers, affiliate"
+      >
+        <div className="flex flex-col gap-3">
+          {/*
+            One form spans company and branding so a single "Save draft"
+            submits them together. It deliberately does NOT carry name, tagline
+            or description — those belong to the primary editor above, and
+            saving here would otherwise revert what was just typed there.
+          */}
+          <form action={saveFormAction} id="firm-edit-form">
+            <input type="hidden" name="firmId" value={firm.id} />
+
+            <Section id="advanced-company" title="Company">
+              <div className="flex flex-col gap-5">
+                <Card className="flex flex-col gap-5 p-6">
                   <Field
                     label="Slug"
                     htmlFor="slug"
@@ -364,41 +428,9 @@ export function FirmWorkspace({
                       aria-invalid={err("slug") ? true : undefined}
                     />
                   </Field>
-                  <Field
-                    label="Tagline"
-                    htmlFor="tagline"
-                    error={err("tagline")}
-                  >
-                    <Input
-                      id="tagline"
-                      name="tagline"
-                      defaultValue={firm.tagline ?? ""}
-                      maxLength={160}
-                      disabled={readOnly}
-                    />
-                  </Field>
-                  <Field
-                    label="Description"
-                    htmlFor="description"
-                    hint="Required before publishing. Leave blank rather than guessing."
-                    error={err("description")}
-                  >
-                    <Textarea
-                      id="description"
-                      name="description"
-                      rows={8}
-                      defaultValue={firm.description ?? ""}
-                      disabled={readOnly}
-                    />
-                  </Field>
                 </Card>
-              </Tabs.Content>
-
-              <Tabs.Content
-                value="company"
-                forceMount
-                className="data-[state=inactive]:hidden"
-              >
+              </div>
+              <div className="mt-5">
                 <Card className="mt-4 grid gap-5 p-6 md:grid-cols-2">
                   <Field
                     label="Legal name"
@@ -492,13 +524,11 @@ export function FirmWorkspace({
                     />
                   </Field>
                 </Card>
-              </Tabs.Content>
+              </div>
+            </Section>
 
-              <Tabs.Content
-                value="branding"
-                forceMount
-                className="data-[state=inactive]:hidden"
-              >
+            <div className="mt-3">
+              <Section id="advanced-branding" title="Branding & ordering">
                 <Card className="mt-4 flex flex-col gap-5 p-6">
                   <Field
                     label="Firm brand colour"
@@ -551,77 +581,66 @@ export function FirmWorkspace({
                     uploaded and never restyled.
                   </p>
                 </Card>
-              </Tabs.Content>
+              </Section>
+            </div>
 
-              {can.edit ? (
-                <div className="mt-4 flex gap-2">
-                  <SubmitButton variant="primary" pendingLabel="Saving…">
-                    Save draft
-                  </SubmitButton>
-                </div>
-              ) : null}
-            </form>
-
-            <Tabs.Content value="challenges">
-              <div className="mt-4">
-                <ChallengesTab
-                  firmId={firm.id}
-                  challenges={firmChildren.challenges}
-                  staged={staged.challenges}
-                  readOnly={readOnly}
-                />
+            {can.edit ? (
+              <div className="mt-4 flex gap-2">
+                <SubmitButton variant="primary" pendingLabel="Saving…">
+                  Save draft
+                </SubmitButton>
               </div>
-            </Tabs.Content>
+            ) : null}
+          </form>
 
-            <Tabs.Content value="rules">
-              <div className="mt-4">
-                <RulesTab
-                  firmId={firm.id}
-                  rules={catalog.rules}
-                  values={firmChildren.ruleValues}
-                  staged={staged.rules}
-                  readOnly={readOnly}
-                />
-              </div>
-            </Tabs.Content>
+          <Section id="advanced-rules" title="Rules">
+            <div className="mt-4">
+              <RulesTab
+                firmId={firm.id}
+                rules={catalog.rules}
+                values={firmChildren.ruleValues}
+                staged={staged.rules}
+                readOnly={readOnly}
+              />
+            </div>
+          </Section>
 
-            <Tabs.Content value="associations">
-              <div className="mt-4">
-                <AssociationsTab
-                  firmId={firm.id}
-                  catalog={catalog}
-                  firmChildren={firmChildren}
-                  stagedPlatformIds={new Set(staged.platformIds)}
-                  stagedInstrumentIds={new Set(staged.instrumentIds)}
-                  readOnly={readOnly}
-                />
-              </div>
-            </Tabs.Content>
+          <Section id="advanced-associations" title="Platforms & instruments">
+            <div className="mt-4">
+              <AssociationsTab
+                firmId={firm.id}
+                catalog={catalog}
+                firmChildren={firmChildren}
+                stagedPlatformIds={new Set(staged.platformIds)}
+                stagedInstrumentIds={new Set(staged.instrumentIds)}
+                readOnly={readOnly}
+              />
+            </div>
+          </Section>
 
-            <Tabs.Content value="offers">
-              <div className="mt-4">
-                <OffersTab
-                  firmId={firm.id}
-                  offers={firmChildren.offers}
-                  affiliateLinks={firmChildren.affiliateLinks}
-                  staged={staged.offers}
-                  readOnly={readOnly}
-                />
-              </div>
-            </Tabs.Content>
+          <Section id="advanced-offers" title="Offers">
+            <div className="mt-4">
+              <OffersTab
+                firmId={firm.id}
+                offers={firmChildren.offers}
+                affiliateLinks={firmChildren.affiliateLinks}
+                staged={staged.offers}
+                readOnly={readOnly}
+              />
+            </div>
+          </Section>
 
-            <Tabs.Content value="affiliate">
-              <div className="mt-4">
-                <AffiliateTab
-                  firmId={firm.id}
-                  links={firmChildren.affiliateLinks}
-                  staged={staged.affiliateLinks}
-                  readOnly={readOnly}
-                  canEdit={can.affiliate}
-                />
-              </div>
-            </Tabs.Content>
-          </Tabs.Root>
+          <Section id="advanced-affiliate" title="Affiliate configuration">
+            <div className="mt-4">
+              <AffiliateTab
+                firmId={firm.id}
+                links={firmChildren.affiliateLinks}
+                staged={staged.affiliateLinks}
+                readOnly={readOnly}
+                canEdit={can.affiliate}
+              />
+            </div>
+          </Section>
 
           {/* Firm-scoped work that belongs to another system. */}
           <div className="mt-6 border-t border-border-subtle pt-4">
@@ -647,7 +666,7 @@ export function FirmWorkspace({
             </ul>
           </div>
         </div>
-      </details>
+      </Section>
 
       {/* SEO — collapsed by default. */}
       <details className="group rounded-[14px] border border-border-default bg-bg-card">

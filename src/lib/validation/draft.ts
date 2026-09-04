@@ -51,6 +51,17 @@ export const draftFirmSchema = z
     tagline: z.string().max(160).nullable().optional(),
     description: z.string().nullable().optional(),
     foundedYear: z.number().int().min(1900).max(2100).nullable().optional(),
+    /** ISO date. "Years in operation" is derived from it, never stored. */
+    foundedOn: z.iso.date().nullable().optional(),
+    founderName: z.string().max(200).nullable().optional(),
+    ceoName: z.string().max(200).nullable().optional(),
+    /** Trustpilot's rating, transcribed. Never our own (docs/SEO.md §11). */
+    trustpilotRating: z.number().min(0).max(5).nullable().optional(),
+    trustpilotUrl: z
+      .url()
+      .refine((v) => v.startsWith("https://"), "must be an https:// URL")
+      .nullable()
+      .optional(),
     headquartersCountry: z
       .string()
       .regex(/^[A-Z]{2}$/)
@@ -254,6 +265,60 @@ export const draftAffiliateLinkSchema = z
     },
   );
 
+/**
+ * Announcements and FAQs — ordinary firm children.
+ *
+ * They stage, preview and publish exactly like challenges do. Neither is ever
+ * created with placeholder text: an announcement without a real date, or an FAQ
+ * without a real answer, is not a draft of anything (CLAUDE.md §3).
+ */
+export const draftAnnouncementSchema = z
+  .object({
+    _op: draftOpSchema,
+    id: z.uuid().optional(),
+    title: z.string().min(1).max(200).optional(),
+    body: z.string().max(5000).nullable().optional(),
+    linkUrl: z
+      .url()
+      .refine((v) => v.startsWith("https://"), "must be an https:// URL")
+      .nullable()
+      .optional(),
+    /** The FIRM's date for it, which is why there is no default. */
+    announcedAt: z.iso.datetime().optional(),
+    isActive: z.boolean().optional(),
+    displayOrder: z.number().int().optional(),
+  })
+  .strict()
+  .refine((a) => a._op === "create" || a.id !== undefined, {
+    message: "update and delete require an id",
+  })
+  .refine(
+    (a) =>
+      a._op !== "create" ||
+      (a.title !== undefined && a.announcedAt !== undefined),
+    { message: "a new announcement needs a title and the date it was made" },
+  );
+
+export const draftFaqSchema = z
+  .object({
+    _op: draftOpSchema,
+    id: z.uuid().optional(),
+    question: z.string().min(1).max(300).optional(),
+    answer: z.string().min(1).max(5000).optional(),
+    isActive: z.boolean().optional(),
+    displayOrder: z.number().int().optional(),
+  })
+  .strict()
+  .refine((f) => f._op === "create" || f.id !== undefined, {
+    message: "update and delete require an id",
+  })
+  .refine(
+    (f) =>
+      f._op !== "create" ||
+      (f.question !== undefined && f.answer !== undefined),
+    { message: "an FAQ needs both a question and its answer" },
+  );
+
 export const draftSeoSchema = z
   .object({
     title: z.string().max(70).nullable().optional(),
@@ -291,6 +356,8 @@ export const draftPayloadSchema = z
     instruments: z.array(draftInstrumentSchema).optional(),
     offers: z.array(draftOfferSchema).optional(),
     affiliateLinks: z.array(draftAffiliateLinkSchema).optional(),
+    announcements: z.array(draftAnnouncementSchema).optional(),
+    faqs: z.array(draftFaqSchema).optional(),
     seo: draftSeoSchema.optional(),
   })
   .strict();
@@ -304,6 +371,8 @@ export type DraftRuleValue = z.infer<typeof draftRuleValueSchema>;
 export type DraftPlatform = z.infer<typeof draftPlatformSchema>;
 export type DraftInstrument = z.infer<typeof draftInstrumentSchema>;
 export type DraftSeo = z.infer<typeof draftSeoSchema>;
+export type DraftAnnouncement = z.infer<typeof draftAnnouncementSchema>;
+export type DraftFaq = z.infer<typeof draftFaqSchema>;
 
 /** Creates an empty draft forked from a known published version. */
 export function emptyDraft(baseVersion: number, adminId: string): DraftPayload {
@@ -325,6 +394,8 @@ export function countDraftChanges(payload: DraftPayload): number {
     (payload.instruments?.length ?? 0) +
     (payload.offers?.length ?? 0) +
     (payload.affiliateLinks?.length ?? 0) +
+    (payload.announcements?.length ?? 0) +
+    (payload.faqs?.length ?? 0) +
     Object.keys(payload.seo ?? {}).length
   );
 }

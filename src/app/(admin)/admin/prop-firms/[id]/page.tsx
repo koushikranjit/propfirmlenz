@@ -9,7 +9,12 @@ import {
   getAdminCatalog,
   getAdminFirmChildren,
 } from "@/lib/repositories/admin-firm-children";
+import {
+  listNetworks,
+  listTrackedWallets,
+} from "@/lib/repositories/admin-payouts";
 import { getCurrentVersion } from "@/lib/services/firm-draft";
+import { mediaStorage } from "@/lib/media/storage";
 import { countDraftChanges } from "@/lib/validation/draft";
 import { Breadcrumbs } from "@/components/admin/Breadcrumbs";
 import { FirmWorkspace } from "./FirmWorkspace";
@@ -42,14 +47,19 @@ export default async function FirmWorkspacePage({
   // Also covers the soft-deleted case: getAdminFirmById filters deleted_at.
   if (!firm) notFound();
 
-  const [currentVersion, children, catalog] = await Promise.all([
-    getCurrentVersion(db, firm.id),
-    // PUBLISHED children. Pending edits stay in `draft_payload` and are
-    // summarised separately, so the editor can show "published + staged"
-    // without either being written into the other.
-    getAdminFirmChildren(db, firm.id),
-    getAdminCatalog(db),
-  ]);
+  const [currentVersion, children, catalog, networks, wallets] =
+    await Promise.all([
+      getCurrentVersion(db, firm.id),
+      // PUBLISHED children. Pending edits stay in `draft_payload` and are
+      // summarised separately, so the editor can show "published + staged"
+      // without either being written into the other.
+      getAdminFirmChildren(db, firm.id),
+      getAdminCatalog(db),
+      // Payout tracking is a separate system; these are read-only references
+      // so the firm editor can configure a wallet against THIS firm's record.
+      listNetworks(db),
+      listTrackedWallets(db, { firmId: firm.id }),
+    ]);
 
   const draft = firm.draftPayload;
   const pendingChanges = draft ? countDraftChanges(draft) : 0;
@@ -75,6 +85,12 @@ export default async function FirmWorkspacePage({
       key: op.id ?? `new:${op.label ?? ""}`,
       op: op._op,
     })),
+    announcements: (draft?.announcements ?? [])
+      .map((op) => op.id)
+      .filter((id): id is string => id !== undefined),
+    faqs: (draft?.faqs ?? [])
+      .map((op) => op.id)
+      .filter((id): id is string => id !== undefined),
     seo: draft?.seo !== undefined,
   };
 
@@ -109,7 +125,13 @@ export default async function FirmWorkspacePage({
           supportEmail: firm.supportEmail,
           supportUrl: firm.supportUrl,
           payoutInfoUrl: firm.payoutInfoUrl,
-          hasLogo: firm.logoMediaId !== null,
+          foundedOn: firm.foundedOn,
+          founderName: firm.founderName,
+          ceoName: firm.ceoName,
+          trustpilotRating: firm.trustpilotRating,
+          trustpilotUrl: firm.trustpilotUrl,
+          logoUrl: firm.logoUrl,
+          logoAlt: firm.logoAlt,
           brandColor: firm.brandColor,
           isFeatured: firm.isFeatured,
           displayOrder: firm.displayOrder,
@@ -133,6 +155,11 @@ export default async function FirmWorkspacePage({
         firmChildren={children}
         catalog={catalog}
         staged={staged}
+        networks={networks}
+        wallets={wallets}
+        // Checked on the SERVER: the credentials never reach the browser, only
+        // whether they exist (CLAUDE.md §6).
+        storageConfigured={mediaStorage() !== null}
       />
     </>
   );

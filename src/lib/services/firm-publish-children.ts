@@ -5,6 +5,8 @@ import {
   challenges,
   firmInstruments,
   firmPlatforms,
+  firmAnnouncements,
+  firmFaqs,
   offers,
   ruleValues,
   seoMetadata,
@@ -44,6 +46,8 @@ type ChildDraft = Pick<
   | "instruments"
   | "offers"
   | "affiliateLinks"
+  | "announcements"
+  | "faqs"
   | "seo"
 >;
 
@@ -54,6 +58,8 @@ export interface ApplyChildrenResult {
   instruments: number;
   offers: number;
   affiliateLinks: number;
+  announcements: number;
+  faqs: number;
   seo: boolean;
 }
 
@@ -85,6 +91,8 @@ export async function applyDraftChildren(
     instruments: 0,
     offers: 0,
     affiliateLinks: 0,
+    announcements: 0,
+    faqs: 0,
     seo: false,
   };
 
@@ -457,6 +465,105 @@ export async function applyDraftChildren(
       ...fields,
     });
     result.affiliateLinks += 1;
+  }
+
+  /* --------------------------------------------------------- announcements */
+  for (const op of draft.announcements ?? []) {
+    if (op._op === "delete") {
+      if (!op.id) continue;
+      await tx
+        .update(firmAnnouncements)
+        .set({ deletedAt: now })
+        .where(
+          and(
+            eq(firmAnnouncements.id, op.id),
+            eq(firmAnnouncements.propFirmId, firmId),
+          ),
+        );
+      result.announcements += 1;
+      continue;
+    }
+
+    const fields = {
+      ...(op.title !== undefined ? { title: op.title } : {}),
+      ...(op.body !== undefined ? { body: op.body } : {}),
+      ...(op.linkUrl !== undefined ? { linkUrl: op.linkUrl } : {}),
+      ...(op.announcedAt !== undefined
+        ? { announcedAt: new Date(op.announcedAt) }
+        : {}),
+      ...(op.isActive !== undefined ? { isActive: op.isActive } : {}),
+      ...(op.displayOrder !== undefined
+        ? { displayOrder: op.displayOrder }
+        : {}),
+    };
+
+    if (op._op === "update") {
+      if (!op.id) continue;
+      await tx
+        .update(firmAnnouncements)
+        .set(fields)
+        .where(
+          and(
+            eq(firmAnnouncements.id, op.id),
+            eq(firmAnnouncements.propFirmId, firmId),
+          ),
+        );
+      result.announcements += 1;
+      continue;
+    }
+
+    // A create without a title or a date is not an announcement; the draft
+    // schema refuses it, and this is the second line of that same defence.
+    if (!op.title || !op.announcedAt) continue;
+    await tx.insert(firmAnnouncements).values({
+      propFirmId: firmId,
+      title: op.title,
+      announcedAt: new Date(op.announcedAt),
+      ...fields,
+    });
+    result.announcements += 1;
+  }
+
+  /* ------------------------------------------------------------------ FAQs */
+  for (const op of draft.faqs ?? []) {
+    if (op._op === "delete") {
+      if (!op.id) continue;
+      await tx
+        .update(firmFaqs)
+        .set({ deletedAt: now })
+        .where(and(eq(firmFaqs.id, op.id), eq(firmFaqs.propFirmId, firmId)));
+      result.faqs += 1;
+      continue;
+    }
+
+    const fields = {
+      ...(op.question !== undefined ? { question: op.question } : {}),
+      ...(op.answer !== undefined ? { answer: op.answer } : {}),
+      ...(op.isActive !== undefined ? { isActive: op.isActive } : {}),
+      ...(op.displayOrder !== undefined
+        ? { displayOrder: op.displayOrder }
+        : {}),
+    };
+
+    if (op._op === "update") {
+      if (!op.id) continue;
+      await tx
+        .update(firmFaqs)
+        .set(fields)
+        .where(and(eq(firmFaqs.id, op.id), eq(firmFaqs.propFirmId, firmId)));
+      result.faqs += 1;
+      continue;
+    }
+
+    // Half an FAQ renders as a heading with nothing under it.
+    if (!op.question || !op.answer) continue;
+    await tx.insert(firmFaqs).values({
+      propFirmId: firmId,
+      question: op.question,
+      answer: op.answer,
+      ...fields,
+    });
+    result.faqs += 1;
   }
 
   /* ------------------------------------------------------------------- SEO */

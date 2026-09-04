@@ -275,7 +275,8 @@ only to keep the working tree clean. It can be suppressed by patching
 9. ✅ Stage 4 (public homepage) — 2026-09-04.
 10. ✅ Stage 5 (admin firm data management) — 2026-09-04.
 11. ✅ Blockchain payout intelligence — owner-directed, 2026-09-04.
-12. ⬜ Owner applies migration `0002` to production and approves the next stage.
+12. ✅ Core prop firm workflow locked — owner-directed, 2026-09-04.
+13. ⬜ Owner applies migrations `0002` and `0003` to production and approves the next stage.
 
 The nearest unbuilt pieces, in dependency order: the iframe split-pane preview in the
 workspace (`ARCHITECTURE.md` §21.4), the remaining workspace tabs that populate
@@ -321,6 +322,27 @@ and caching with revalidation tags. **None may start without approval.**
 
 ---
 
+### Core prop firm workflow locked `[owner-locked 2026-09-04]`
+
+The sixteen core fields are fixed (`ADMIN.md` §6.2). The primary editor is one page with
+expandable sections and **no tab strip**; only the name is required to save a draft.
+
+Added this stage: migration `0003` (additive — `founded_on`, `founder_name`, `ceo_name`,
+`trustpilot_rating`, `trustpilot_url` on `prop_firms`, plus `firm_announcements` and
+`firm_faqs`); a real R2 logo upload signed with SigV4 in `node:crypto` (no new dependency, and
+an honest "not configured" state when credentials are absent); a searchable country picker over
+ISO-3166 with derived flag emoji; years-in-operation derived at read time; discount title/code/
+description on the existing `offers` table with a public copy-code button; announcements and FAQs
+as ordinary draftable children; and a firm-scoped payout wallet configuration point that writes
+against the existing firm record.
+
+Public profile UNCHANGED in structure and now richer: flag, founder, CEO, Trustpilot (labelled as
+Trustpilot's, never ours), derived years, announcements, FAQs (with `FAQPage` JSON-LD only when
+real FAQs are rendered) and copy-code discounts. Every section still renders only with real data.
+
+One defect found by the new tests: `publishFirm` was not writing the new firm columns, so a
+staged founder or founding date would have been silently dropped at publish. Fixed.
+
 ### Admin/public separation confirmed `[owner-directed 2026-09-04]`
 
 **Simple admin + rich database + rich public profile.** The owner reviewed the public
@@ -352,9 +374,9 @@ Nothing. The payout system is complete, validated and committed locally.
 
 **Two things need the owner, and neither was done automatically:**
 
-1. **Migration `0002` has not been applied to production.** It is additive only
-   (6 CREATE TABLEs, no drop or alter of an existing object) and has been verified
-   against real PostgreSQL by the test suite. Applying it is the owner's call.
+1. **Migrations `0002` and `0003` have not been applied to production.** Both are additive
+   only (8 CREATE TABLEs and 5 ADD COLUMNs in total; no drop or alter of an existing object) and
+   both are verified against real PostgreSQL by the test suite. Applying them is the owner's call.
 2. **Nothing was deployed or pushed.**
 
 Until a network and a wallet are recorded by an admin, `/payouts` correctly shows an

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { isCountryCode } from "@/lib/geo/countries";
 import { RESERVED_SEGMENTS } from "@/lib/seo/canonical";
 
 /**
@@ -75,11 +76,18 @@ export type CreateFirmInput = z.infer<typeof createFirmSchema>;
  * fact is invented (docs/PROJECT.md §6.5 `[LOCKED]`).
  */
 export const editFirmSchema = z.object({
-  // Overview
-  name: z.string().trim().min(2).max(200),
+  /**
+   * Name, tagline and description are OPTIONAL here `[LOCKED]`.
+   *
+   * They belong to the primary editor (`firmEssentialsSchema`). Advanced saves
+   * omit them, and a field that is absent is left alone rather than written as
+   * null — otherwise saving Advanced would silently revert a name just typed
+   * on the screen above it.
+   */
+  name: z.string().trim().min(2).max(200).optional(),
   slug: slugSchema,
-  tagline: optionalText(160),
-  description: optionalText(20_000),
+  tagline: optionalText(160).optional(),
+  description: optionalText(20_000).optional(),
 
   // Company
   legalName: optionalText(200),
@@ -175,20 +183,62 @@ export function parseFirmListQuery(
  */
 export const firmEssentialsSchema = z.object({
   name: z.string().trim().min(2, "A name is required.").max(200),
+  tagline: optionalText(160),
   description: optionalText(20_000),
-  websiteUrl: optionalUrl,
 
   /**
-   * The affiliate destination. Stored on the firm's affiliate link and NEVER
-   * exposed publicly: the public CTA points at `/go/{slug}`, which resolves it
-   * server-side (docs/ARCHITECTURE.md §11 `[LOCKED]`).
+   * THE BUY LINK — one field, not two `[LOCKED]`.
+   *
+   * Where a visitor goes to buy. It is stored as the firm's default affiliate
+   * link destination and NEVER exposed publicly: the public CTA points at
+   * `/go/{slug}`, which resolves it server-side (docs/ARCHITECTURE.md §11).
+   *
+   * The plain marketing website is a separate, publicly-visible field that
+   * stays under Advanced. Merging them would publish the tracked URL.
    */
   affiliateUrl: optionalUrl,
+
+  founderName: optionalText(200),
+  ceoName: optionalText(200),
+
+  /** ISO 3166-1 alpha-2, chosen from a list — never typed by hand. */
+  headquartersCountry: z
+    .string()
+    .trim()
+    .toUpperCase()
+    .transform((v) => (v.length === 0 ? null : v))
+    .nullable()
+    .refine((v) => v === null || isCountryCode(v), "Choose a country."),
+
+  /**
+   * TRUSTPILOT'S rating, transcribed by an admin. Blank means unknown, which
+   * renders as "Not specified" — never as a zero (CLAUDE.md §3).
+   */
+  trustpilotRating: z
+    .union([z.literal(""), z.coerce.number().min(0).max(5)])
+    .transform((v) => (v === "" ? null : v))
+    .nullable(),
+  trustpilotUrl: optionalUrl,
+
+  /** The date the company was established. Years in operation is derived. */
+  foundedOn: z
+    .string()
+    .trim()
+    .transform((v) => (v.length === 0 ? null : v))
+    .nullable()
+    .refine(
+      (v) =>
+        v === null ||
+        (/^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v))),
+      "Enter a valid date.",
+    ),
 
   /** Where the firm publishes its own payout evidence. A link, not a figure. */
   payoutInfoUrl: optionalUrl,
 
+  discountTitle: optionalText(200),
   discountCode: optionalText(64),
+  discountDescription: optionalText(2000),
   discountPercent: z
     .union([z.literal(""), z.coerce.number().min(0).max(100)])
     .transform((v) => (v === "" ? null : v))

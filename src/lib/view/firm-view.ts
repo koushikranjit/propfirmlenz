@@ -110,6 +110,21 @@ export interface FirmViewOffer {
   endsAt: string | null;
 }
 
+export interface FirmViewAnnouncement {
+  id: string;
+  title: string;
+  body: string | null;
+  linkUrl: string | null;
+  /** ISO instant, the date the FIRM gave it. */
+  announcedAt: string;
+}
+
+export interface FirmViewFaq {
+  id: string;
+  question: string;
+  answer: string;
+}
+
 export interface FirmView {
   // ---- identity
   id: string;
@@ -122,6 +137,27 @@ export interface FirmView {
 
   // ---- key facts
   foundedYear: number | null;
+  /** ISO date the company was established, where the firm publishes it. */
+  foundedOn: string | null;
+  /**
+   * Full years since `foundedOn`, computed at read time.
+   *
+   * DERIVED, never stored: a stored count is wrong from the next anniversary,
+   * and a derived one cannot disagree with the date beside it. Null whenever
+   * `foundedOn` is unknown — the UI says "Not specified" rather than "0 years".
+   */
+  yearsInOperation: number | null;
+  founderName: string | null;
+  ceoName: string | null;
+  /**
+   * TRUSTPILOT'S rating and its source, not Prop Firm Lenz's `[LOCKED]`.
+   *
+   * Displayed as an external, attributed figure. It is never averaged with
+   * anything, never presented as our own, and never emitted as
+   * `AggregateRating` structured data (docs/SEO.md §11 rule 1).
+   */
+  trustpilotRating: string | null;
+  trustpilotUrl: string | null;
   headquartersCountry: string | null;
   headquartersCity: string | null;
   websiteUrl: string | null;
@@ -143,12 +179,42 @@ export interface FirmView {
   instruments: FirmViewInstrument[];
   rules: FirmViewRule[];
   offers: FirmViewOffer[];
+  announcements: FirmViewAnnouncement[];
+  faqs: FirmViewFaq[];
 
   /**
    * Whether a tracked affiliate CTA should render. NEVER the destination URL —
    * that is resolved server-side inside `/go/{slug}`.
    */
   hasAffiliateLink: boolean;
+}
+
+/**
+ * Full years between a founding date and now.
+ *
+ * Returns null for an unknown or unparseable date rather than 0 — "founded
+ * this year" and "we do not know when" are different answers, and only one of
+ * them may be shown as a number (CLAUDE.md §3).
+ */
+export function yearsInOperation(
+  foundedOn: string | null,
+  now: Date = new Date(),
+): number | null {
+  if (!foundedOn) return null;
+  const founded = new Date(foundedOn);
+  if (Number.isNaN(founded.getTime())) return null;
+  if (founded.getTime() > now.getTime()) return null;
+
+  let years = now.getUTCFullYear() - founded.getUTCFullYear();
+  const monthDelta = now.getUTCMonth() - founded.getUTCMonth();
+  // Not yet past this year's anniversary: still the previous count.
+  if (
+    monthDelta < 0 ||
+    (monthDelta === 0 && now.getUTCDate() < founded.getUTCDate())
+  ) {
+    years -= 1;
+  }
+  return years < 0 ? null : years;
 }
 
 /**

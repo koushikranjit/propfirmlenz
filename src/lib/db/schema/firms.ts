@@ -3,6 +3,7 @@ import {
   boolean,
   char,
   check,
+  date,
   index,
   integer,
   jsonb,
@@ -64,6 +65,18 @@ export const propFirms = pgTable(
     tagline: text("tagline"),
     description: text("description"),
     foundedYear: integer("founded_year"),
+    /**
+     * When the company was established, to the day where it is published.
+     *
+     * "Years in operation" is DERIVED from this at read time and is never
+     * stored: a stored count is wrong from the next anniversary onwards, and a
+     * derived one cannot disagree with the date beside it
+     * (docs/DATABASE.md §5.1 `[LOCKED]`).
+     */
+    foundedOn: date("founded_on"),
+    /** Free text. Deliberately not a people table — one name, no relations. */
+    founderName: text("founder_name"),
+    ceoName: text("ceo_name"),
     headquartersCountry: char("headquarters_country", { length: 2 }),
     headquartersCity: text("headquarters_city"),
     websiteUrl: text("website_url"),
@@ -77,6 +90,18 @@ export const propFirms = pgTable(
      * we cannot source is a fabricated business fact (CLAUDE.md §3).
      */
     payoutInfoUrl: text("payout_info_url"),
+
+    /**
+     * TRUSTPILOT'S rating, not ours `[LOCKED]`.
+     *
+     * An external figure an admin transcribed from Trustpilot, stored with the
+     * URL it came from so a reader can check it. It is never mixed with Prop
+     * Firm Lenz reviews (Phase 3), never averaged into anything, and never
+     * emitted as `AggregateRating` structured data — that markup would claim
+     * someone else's rating as this page's own.
+     */
+    trustpilotRating: numeric("trustpilot_rating", { precision: 2, scale: 1 }),
+    trustpilotUrl: text("trustpilot_url"),
     logoMediaId: uuid("logo_media_id").references(() => media.id, {
       onDelete: "set null",
     }),
@@ -155,6 +180,19 @@ export const propFirms = pgTable(
     check(
       "prop_firms_founded_year_ck",
       sql`${t.foundedYear} is null or (${t.foundedYear} between 1900 and extract(year from now())::int + 1)`,
+    ),
+    check(
+      "prop_firms_founded_on_ck",
+      sql`${t.foundedOn} is null or (${t.foundedOn} >= '1900-01-01' and ${t.foundedOn} <= (now() + interval '1 day')::date)`,
+    ),
+    /** Trustpilot's own scale. A 4.9 is possible; a 7 is a typo. */
+    check(
+      "prop_firms_trustpilot_ck",
+      sql`${t.trustpilotRating} is null or (${t.trustpilotRating} between 0 and 5)`,
+    ),
+    check(
+      "prop_firms_trustpilot_url_ck",
+      sql`${t.trustpilotUrl} is null or ${t.trustpilotUrl} like 'https://%'`,
     ),
     check(
       "prop_firms_brand_color_ck",

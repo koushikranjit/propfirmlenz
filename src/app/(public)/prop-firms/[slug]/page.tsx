@@ -17,7 +17,11 @@ import {
   firmBreadcrumbs,
   firmPath,
 } from "@/lib/seo/firm-seo";
-import { buildBreadcrumbLd, buildWebPageLd } from "@/lib/seo/metadata";
+import {
+  buildBreadcrumbLd,
+  buildFaqLd,
+  buildWebPageLd,
+} from "@/lib/seo/metadata";
 import { type FirmView, isIndexable } from "@/lib/view/firm-view";
 
 /**
@@ -95,6 +99,7 @@ export default async function FirmProfilePage({ params }: { params: Params }) {
 
   const crumbs = firmBreadcrumbs(firm);
   const payouts = await firmPayoutEvidence(getDb(), firm.id);
+  const faqLd = buildFaqLd(firm.faqs);
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
@@ -113,7 +118,7 @@ export default async function FirmProfilePage({ params }: { params: Params }) {
           - WebPage and BreadcrumbList, both mirroring what is visible;
           - NO AggregateRating or Review — no rating data exists, and it is
             prohibited before Phase 3 (docs/SEO.md §11 rule 1 `[LOCKED]`);
-          - NO FAQPage — no FAQ content is rendered on this page;
+          - FAQPage ONLY when this firm has real, visible FAQs on the page;
           - NO Organization for the firm; the site's own Organization is
             emitted once, in the public layout.
         A thin profile is noindex, so it emits no structured data at all.
@@ -128,6 +133,10 @@ export default async function FirmProfilePage({ params }: { params: Params }) {
               dateModified: firm.updatedAt,
             }),
             buildBreadcrumbLd(crumbs),
+            // Built from the SAME array the page renders, so the markup can
+            // never describe content a reader cannot see (docs/SEO.md §11
+            // rule 2). Absent entirely when the firm has no FAQs.
+            ...(faqLd ? [faqLd] : []),
           ]}
         />
       ) : null}

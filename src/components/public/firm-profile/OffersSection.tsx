@@ -1,5 +1,6 @@
 import { formatDate, formatMoney, formatPercent } from "@/lib/view/format";
 import type { FirmViewOffer } from "@/lib/view/firm-view";
+import { CopyCode } from "./CopyCode";
 import { NoData } from "./Section";
 
 /**
@@ -51,12 +52,11 @@ export function OffersSection({
               </p>
             ) : null}
 
+            {/* No code, no button — an empty copy control is a dead control. */}
             {offer.code ? (
-              <p className="mt-2 text-sm text-text-secondary">
-                Code:{" "}
-                <code className="rounded-[6px] border border-border-default bg-bg-near-black px-2 py-1 font-mono text-text-primary">
-                  {offer.code}
-                </code>
+              <p className="mt-2 flex flex-wrap items-center gap-2 text-sm text-text-secondary">
+                <span>Code:</span>
+                <CopyCode code={offer.code} />
               </p>
             ) : null}
 

@@ -201,6 +201,34 @@ Always visible, never scrolls away:
 
 ### 6.2 Tabs `[PROPOSED]`
 
+**The sixteen core fields `[owner-locked 2026-09-04]`**
+
+The primary editor is ONE PAGE with expandable sections — no tab strip. It carries exactly:
+
+| # | Field | Storage |
+| --- | --- | --- |
+| 1 | Name (**the only required field**) | `prop_firms.name`; slug derived |
+| 2 | Logo | `prop_firms.logo_media_id` → `media` (R2) |
+| 3 | Tagline | `prop_firms.tagline` |
+| 4 | Description | `prop_firms.description` |
+| 5 | Buy link | `affiliate_links.destination_url` (default link) — never public |
+| 6 | Founder | `prop_firms.founder_name` |
+| 7 | CEO | `prop_firms.ceo_name` |
+| 8 | Country | `prop_firms.headquarters_country` (ISO-2, searchable picker + flag) |
+| 9 | Trustpilot rating | `prop_firms.trustpilot_rating` / `trustpilot_url` — **external, never ours** |
+| 10 | Date created | `prop_firms.founded_on` |
+| 11 | Years in operation | **DERIVED** from `founded_on`; never stored |
+| 12 | Discount | `offers` (title, code, description, %, expiry) — one offer, not a second system |
+| 13 | Payout tracking | `tracked_wallets` against this firm's id (docs/PAYOUTS.md §11) |
+| 14 | Challenges | `challenges` — structured, collapsed |
+| 15 | Announcements | `firm_announcements` |
+| 16 | FAQs | `firm_faqs` |
+
+Adding a seventeenth primary field needs the owner's approval. Below the primary fields sit
+**Payout Tracking · Challenges · Announcements · FAQs · Advanced Information · SEO · Verification**,
+all collapsed. Advanced holds company details, branding, rules, platforms, instruments, offers and
+affiliate configuration — nothing was removed from the data model.
+
 **Scope rule `[owner-directed 2026-09-04, LOCKED]`: the firm editor holds FIRM DATA ONLY.**
 
 The admin and the public profile are two different experiences — **simple admin, rich

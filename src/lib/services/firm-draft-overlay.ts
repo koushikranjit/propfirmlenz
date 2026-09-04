@@ -1,12 +1,15 @@
 import type { DraftPayload } from "@/lib/validation/draft";
 import {
   type FirmView,
+  type FirmViewAnnouncement,
   type FirmViewChallenge,
+  type FirmViewFaq,
   type FirmViewInstrument,
   type FirmViewOffer,
   type FirmViewPlatform,
   type FirmViewRule,
   deriveRuleState,
+  yearsInOperation,
 } from "@/lib/view/firm-view";
 
 /**
@@ -60,6 +63,8 @@ export function overlayDraft(
     platforms: overlayPlatforms(base.platforms, draft, catalog),
     instruments: overlayInstruments(base.instruments, draft, catalog),
     offers: overlayOffers(base.offers, draft, now),
+    announcements: overlayAnnouncements(base.announcements, draft),
+    faqs: overlayFaqs(base.faqs, draft),
     hasAffiliateLink: overlayAffiliate(draft, catalog),
   };
 }
@@ -76,6 +81,24 @@ function overlayFirmFields(draft: DraftPayload): Partial<FirmView> {
     ...(d.tagline !== undefined ? { tagline: d.tagline } : {}),
     ...(d.description !== undefined ? { description: d.description } : {}),
     ...(d.foundedYear !== undefined ? { foundedYear: d.foundedYear } : {}),
+    // Both move together: the derived count must never lag the staged date.
+    ...(d.foundedOn !== undefined
+      ? {
+          foundedOn: d.foundedOn,
+          yearsInOperation: yearsInOperation(d.foundedOn),
+        }
+      : {}),
+    ...(d.founderName !== undefined ? { founderName: d.founderName } : {}),
+    ...(d.ceoName !== undefined ? { ceoName: d.ceoName } : {}),
+    ...(d.trustpilotRating !== undefined
+      ? {
+          trustpilotRating:
+            d.trustpilotRating === null ? null : d.trustpilotRating.toFixed(1),
+        }
+      : {}),
+    ...(d.trustpilotUrl !== undefined
+      ? { trustpilotUrl: d.trustpilotUrl }
+      : {}),
     ...(d.headquartersCountry !== undefined
       ? { headquartersCountry: d.headquartersCountry }
       : {}),
@@ -328,6 +351,94 @@ function overlayInstruments(
   }
 
   return [...byId.values()];
+}
+
+/* ------------------------------------------------- announcements and FAQs */
+
+function overlayAnnouncements(
+  published: FirmViewAnnouncement[],
+  draft: DraftPayload,
+): FirmViewAnnouncement[] {
+  const byId = new Map(published.map((a) => [a.id, { ...a }]));
+
+  for (const op of draft.announcements ?? []) {
+    if (op._op === "delete") {
+      if (op.id) byId.delete(op.id);
+      continue;
+    }
+    // An inactive announcement is not published, so preview must not show it.
+    if (op.isActive === false) {
+      if (op.id) byId.delete(op.id);
+      continue;
+    }
+
+    const patch = {
+      ...(op.title !== undefined ? { title: op.title } : {}),
+      ...(op.body !== undefined ? { body: op.body } : {}),
+      ...(op.linkUrl !== undefined ? { linkUrl: op.linkUrl } : {}),
+      ...(op.announcedAt !== undefined ? { announcedAt: op.announcedAt } : {}),
+    };
+
+    if (op._op === "update") {
+      const existing = op.id ? byId.get(op.id) : undefined;
+      if (!existing || !op.id) continue;
+      byId.set(op.id, { ...existing, ...patch });
+      continue;
+    }
+
+    if (!op.title || !op.announcedAt) continue;
+    const id = `draft:announcement:${op.title}`;
+    byId.set(id, {
+      id,
+      title: op.title,
+      body: null,
+      linkUrl: null,
+      announcedAt: op.announcedAt,
+      ...patch,
+    });
+  }
+
+  return [...byId.values()].sort((a, b) =>
+    b.announcedAt.localeCompare(a.announcedAt),
+  );
+}
+
+function overlayFaqs(
+  published: FirmViewFaq[],
+  draft: DraftPayload,
+): FirmViewFaq[] {
+  const byId = new Map(published.map((f) => [f.id, { ...f }]));
+  const order = new Map<string, number>(published.map((f, i) => [f.id, i]));
+
+  for (const op of draft.faqs ?? []) {
+    if (op._op === "delete" || op.isActive === false) {
+      if (op.id) byId.delete(op.id);
+      continue;
+    }
+
+    const patch = {
+      ...(op.question !== undefined ? { question: op.question } : {}),
+      ...(op.answer !== undefined ? { answer: op.answer } : {}),
+    };
+
+    if (op._op === "update") {
+      const existing = op.id ? byId.get(op.id) : undefined;
+      if (!existing || !op.id) continue;
+      byId.set(op.id, { ...existing, ...patch });
+      if (op.displayOrder !== undefined) order.set(op.id, op.displayOrder);
+      continue;
+    }
+
+    // Half an FAQ would render as a heading with nothing under it.
+    if (!op.question || !op.answer) continue;
+    const id = `draft:faq:${op.question}`;
+    byId.set(id, { id, question: op.question, answer: op.answer, ...patch });
+    order.set(id, op.displayOrder ?? order.size);
+  }
+
+  return [...byId.values()].sort(
+    (a, b) => (order.get(a.id) ?? 0) - (order.get(b.id) ?? 0),
+  );
 }
 
 /* -------------------------------------------------------------------- offers */

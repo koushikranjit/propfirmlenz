@@ -6,6 +6,10 @@ import { FirmHeader } from "./FirmHeader";
 import { KeyFacts } from "./KeyFacts";
 import { OffersSection } from "./OffersSection";
 import {
+  AnnouncementsSection,
+  FaqSection,
+} from "./AnnouncementsSection";
+import {
   type FirmPayoutEvidence,
   PayoutEvidenceSection,
 } from "./PayoutEvidence";
@@ -102,6 +106,18 @@ export function FirmProfile({
         <OffersSection offers={firm.offers} firmName={firm.name} />
       </Section>
 
+      {/* Rendered only when the firm has real entries — an empty section
+          would imply a firm that never announces anything. */}
+      {firm.announcements.length > 0 ? (
+        <Section
+          id="announcements"
+          title="Announcements"
+          description={`Updates ${firm.name} has published, recorded here with the date the firm gave.`}
+        >
+          <AnnouncementsSection announcements={firm.announcements} />
+        </Section>
+      ) : null}
+
       <Section
         id="payouts"
         title="Verified payouts"
@@ -127,6 +143,12 @@ export function FirmProfile({
           for {firm.name}. Nothing on this page is a rating or a ranking.
         </NoData>
       </Section>
+
+      {firm.faqs.length > 0 ? (
+        <Section id="faqs" title="Frequently asked questions">
+          <FaqSection faqs={firm.faqs} />
+        </Section>
+      ) : null}
 
       <Section id="visit" title={`Visit ${firm.name}`}>
         <AffiliateCta firm={firm} preview={preview} placement="firm_footer" />

@@ -10,7 +10,7 @@ import {
   sql,
 } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
-import { challenges, offers, propFirms } from "@/lib/db/schema";
+import { challenges, media, offers, propFirms } from "@/lib/db/schema";
 import type { FirmListQuery } from "@/lib/validation/firm";
 
 /**
@@ -173,7 +173,26 @@ export async function getAdminFirmById(db: Database, id: string) {
     .from(propFirms)
     .where(and(eq(propFirms.id, id), isNull(propFirms.deletedAt)))
     .limit(1);
-  return rows[0] ?? null;
+  const firm = rows[0];
+  if (!firm) return null;
+
+  // The logo's URL and alt text, so the editor can show what is attached
+  // rather than only that something is. Left-joined separately because the
+  // select above is the whole row and Drizzle cannot alias a join into it.
+  const logoRows = firm.logoMediaId
+    ? await db
+        .select({ url: media.publicUrl, alt: media.altText })
+        .from(media)
+        .where(eq(media.id, firm.logoMediaId))
+        .limit(1)
+    : [];
+  const logo = logoRows[0];
+
+  return {
+    ...firm,
+    logoUrl: logo?.url ?? null,
+    logoAlt: logo?.alt ?? null,
+  };
 }
 
 /** Dashboard counts. Real queries — never a hard-coded or estimated figure. */

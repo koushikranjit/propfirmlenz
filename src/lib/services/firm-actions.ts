@@ -131,11 +131,10 @@ export async function saveFirmAction(
     const admin = await requireAdmin();
     const firmId = idSchema.parse(formData.get("firmId"));
 
+    // Advanced saves carry only advanced fields; name, tagline and
+    // description are the primary editor's, and are left untouched here.
     const input = editFirmSchema.parse({
-      name: formData.get("name"),
       slug: formData.get("slug"),
-      tagline: formData.get("tagline") ?? "",
-      description: formData.get("description") ?? "",
       legalName: formData.get("legalName") ?? "",
       foundedYear: formData.get("foundedYear") ?? "",
       headquartersCountry: formData.get("headquartersCountry") ?? "",
@@ -183,11 +182,19 @@ export async function saveFirmEssentialsAction(
 
     const input = firmEssentialsSchema.parse({
       name: formData.get("name"),
+      tagline: formData.get("tagline") ?? "",
       description: formData.get("description") ?? "",
-      websiteUrl: formData.get("websiteUrl") ?? "",
       affiliateUrl: formData.get("affiliateUrl") ?? "",
+      founderName: formData.get("founderName") ?? "",
+      ceoName: formData.get("ceoName") ?? "",
+      headquartersCountry: formData.get("headquartersCountry") ?? "",
+      trustpilotRating: formData.get("trustpilotRating") ?? "",
+      trustpilotUrl: formData.get("trustpilotUrl") ?? "",
+      foundedOn: formData.get("foundedOn") ?? "",
       payoutInfoUrl: formData.get("payoutInfoUrl") ?? "",
+      discountTitle: formData.get("discountTitle") ?? "",
       discountCode: formData.get("discountCode") ?? "",
+      discountDescription: formData.get("discountDescription") ?? "",
       discountPercent: formData.get("discountPercent") ?? "",
       discountEndsAt: formData.get("discountEndsAt") ?? "",
     });

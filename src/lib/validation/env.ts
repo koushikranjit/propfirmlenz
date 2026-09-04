@@ -40,6 +40,25 @@ const serverSchema = z.object({
   AUTH_SESSION_PEPPER: optionalVar(z.string().min(16)),
   /** Salt for IP / user-agent hashing. Raw values are never stored. */
   IP_HASH_SALT: optionalVar(z.string().min(16)),
+
+  /**
+   * Cloudflare R2 — media storage (CLAUDE.md §12.4b). Optional: without them
+   * the admin says storage is not configured rather than failing an upload
+   * halfway. `missingStorageVars()` reports WHICH are absent, by name only.
+   */
+  R2_ACCOUNT_ID: optionalVar(z.string().min(1)),
+  R2_ACCESS_KEY_ID: optionalVar(z.string().min(1)),
+  R2_SECRET_ACCESS_KEY: optionalVar(z.string().min(1)),
+  R2_BUCKET: optionalVar(z.string().min(1)),
+  R2_PUBLIC_BASE_URL: optionalVar(z.string().url()),
+
+  /**
+   * Blockchain data providers (docs/PAYOUTS.md §4). Optional for the same
+   * reason: a scan run without one fails visibly instead of reporting that a
+   * firm made no payouts.
+   */
+  TRONGRID_API_KEY: optionalVar(z.string().min(1)),
+  ETHERSCAN_API_KEY: optionalVar(z.string().min(1)),
 });
 
 const publicSchema = z.object({

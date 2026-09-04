@@ -1,6 +1,7 @@
 import type * as React from "react";
 import { NotSpecified } from "@/components/ui/primitives";
-import { countryName } from "@/lib/view/format";
+import { country } from "@/lib/geo/countries";
+import { formatDate } from "@/lib/view/format";
 import type { FirmView } from "@/lib/view/firm-view";
 
 /**
@@ -12,16 +13,61 @@ import type { FirmView } from "@/lib/view/firm-view";
  * missing. Nothing here is inferred from anything else.
  */
 export function KeyFacts({ firm }: { firm: FirmView }) {
-  const location = [firm.headquartersCity, countryName(firm.headquartersCountry)]
-    .filter(Boolean)
-    .join(", ");
+  const hq = country(firm.headquartersCountry);
+  const location = [firm.headquartersCity, hq?.name].filter(Boolean).join(", ");
 
   return (
     <dl className="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
       <Fact label="Founded">
-        {firm.foundedYear ? String(firm.foundedYear) : null}
+        {formatDate(firm.foundedOn) ??
+          (firm.foundedYear ? String(firm.foundedYear) : null)}
       </Fact>
-      <Fact label="Headquarters">{location || null}</Fact>
+      {/* Derived from the founding date, never stored and never guessed. */}
+      <Fact label="Years in operation">
+        {firm.yearsInOperation === null
+          ? null
+          : `${firm.yearsInOperation}+ years`}
+      </Fact>
+      <Fact label="Headquarters">
+        {location ? (
+          <span className="inline-flex items-center gap-2">
+            {hq ? (
+              <span aria-hidden className="text-base leading-none">
+                {hq.flag}
+              </span>
+            ) : null}
+            {location}
+          </span>
+        ) : null}
+      </Fact>
+      <Fact label="Founder">{firm.founderName}</Fact>
+      <Fact label="CEO">{firm.ceoName}</Fact>
+      {/*
+        TRUSTPILOT'S rating, labelled as theirs. It is never averaged with
+        anything, never called a Prop Firm Lenz rating, and never emitted as
+        AggregateRating structured data (docs/SEO.md §11 rule 1 `[LOCKED]`).
+      */}
+      <Fact label="Trustpilot rating">
+        {firm.trustpilotRating ? (
+          <span>
+            {firm.trustpilotRating} / 5{" "}
+            <span className="text-text-muted">on Trustpilot</span>
+            {firm.trustpilotUrl ? (
+              <>
+                {" · "}
+                <a
+                  href={firm.trustpilotUrl}
+                  rel="nofollow noopener"
+                  target="_blank"
+                  className="text-brand-cyan underline underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
+                >
+                  view
+                </a>
+              </>
+            ) : null}
+          </span>
+        ) : null}
+      </Fact>
       <Fact label="Website">
         {firm.websiteUrl ? (
           <a

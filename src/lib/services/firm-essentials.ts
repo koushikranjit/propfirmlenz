@@ -80,8 +80,14 @@ export async function saveFirmEssentials(
     firm: {
       ...(base.firm ?? {}),
       name: input.name,
+      tagline: input.tagline,
       description: input.description,
-      websiteUrl: input.websiteUrl,
+      founderName: input.founderName,
+      ceoName: input.ceoName,
+      headquartersCountry: input.headquartersCountry,
+      trustpilotRating: input.trustpilotRating,
+      trustpilotUrl: input.trustpilotUrl,
+      foundedOn: input.foundedOn,
       payoutInfoUrl: input.payoutInfoUrl,
     },
   });
@@ -148,7 +154,9 @@ export async function saveFirmEssentials(
   /* ---------------------------------------------------------- discount */
 
   const hasDiscount =
+    input.discountTitle !== null ||
     input.discountCode !== null ||
+    input.discountDescription !== null ||
     input.discountPercent !== null ||
     input.discountEndsAt !== null;
 
@@ -161,6 +169,8 @@ export async function saveFirmEssentials(
       .limit(1);
 
     const fields = {
+      ...(input.discountTitle !== null ? { title: input.discountTitle } : {}),
+      description: input.discountDescription,
       code: input.discountCode,
       discountType:
         input.discountPercent === null ? null : ("percent" as const),
@@ -175,9 +185,14 @@ export async function saveFirmEssentials(
       permission: PERMISSIONS.OFFER_EDIT,
       op: existing
         ? { _op: "update", id: existing.id, ...fields }
-        : // "Discount" is a label, not a business fact. The terms, description
-          // and window stay blank until a human enters what the firm published.
-          { _op: "create", title: "Discount", ...fields },
+        : // The title falls back to a neutral label, never to an invented
+          // claim like "20% off" — the terms and window stay blank until a
+          // human enters what the firm actually published.
+          {
+            _op: "create",
+            title: input.discountTitle ?? "Discount",
+            ...fields,
+          },
     });
     pendingChanges = result.pendingChanges;
     offerStaged = true;

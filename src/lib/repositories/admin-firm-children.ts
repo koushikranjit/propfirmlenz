@@ -1,8 +1,10 @@
-import { and, asc, eq, isNull } from "drizzle-orm";
+import { and, asc, desc, eq, isNull } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
 import {
   affiliateLinks,
   challenges,
+  firmAnnouncements,
+  firmFaqs,
   firmInstruments,
   firmPlatforms,
   instruments,
@@ -113,6 +115,24 @@ export interface AdminSeoMetadata {
   keywords: string[] | null;
 }
 
+export interface AdminAnnouncement {
+  id: string;
+  title: string;
+  body: string | null;
+  linkUrl: string | null;
+  announcedAt: string;
+  isActive: boolean;
+  displayOrder: number;
+}
+
+export interface AdminFaq {
+  id: string;
+  question: string;
+  answer: string;
+  isActive: boolean;
+  displayOrder: number;
+}
+
 export interface AdminFirmChildren {
   challenges: AdminChallenge[];
   ruleValues: AdminRuleValue[];
@@ -128,6 +148,8 @@ export interface AdminFirmChildren {
   }[];
   offers: AdminOffer[];
   affiliateLinks: AdminAffiliateLink[];
+  announcements: AdminAnnouncement[];
+  faqs: AdminFaq[];
   seo: AdminSeoMetadata | null;
 }
 
@@ -145,6 +167,8 @@ export async function getAdminFirmChildren(
     instrumentRows,
     offerRows,
     affiliateRows,
+    announcementRows,
+    faqRows,
     seoRows,
   ] = await Promise.all([
     db
@@ -204,6 +228,23 @@ export async function getAdminFirmChildren(
         ),
       )
       .orderBy(asc(affiliateLinks.label)),
+
+    db
+      .select()
+      .from(firmAnnouncements)
+      .where(
+        and(
+          eq(firmAnnouncements.propFirmId, firmId),
+          isNull(firmAnnouncements.deletedAt),
+        ),
+      )
+      .orderBy(desc(firmAnnouncements.announcedAt)),
+
+    db
+      .select()
+      .from(firmFaqs)
+      .where(and(eq(firmFaqs.propFirmId, firmId), isNull(firmFaqs.deletedAt)))
+      .orderBy(asc(firmFaqs.displayOrder), asc(firmFaqs.question)),
 
     db
       .select()
@@ -278,6 +319,22 @@ export async function getAdminFirmChildren(
       // `commissionNotes` is deliberately not surfaced by the editor: it is
       // commercial detail with no bearing on the data being published, and
       // keeping it out of the form keeps it out of every snapshot and log.
+    })),
+    announcements: announcementRows.map((a) => ({
+      id: a.id,
+      title: a.title,
+      body: a.body,
+      linkUrl: a.linkUrl,
+      announcedAt: a.announcedAt.toISOString(),
+      isActive: a.isActive,
+      displayOrder: a.displayOrder,
+    })),
+    faqs: faqRows.map((f) => ({
+      id: f.id,
+      question: f.question,
+      answer: f.answer,
+      isActive: f.isActive,
+      displayOrder: f.displayOrder,
     })),
     seo: seoRow
       ? {

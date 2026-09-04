@@ -80,11 +80,19 @@ describe("firm essentials", () => {
   const input = (overrides: Record<string, unknown> = {}) =>
     firmEssentialsSchema.parse({
       name: "Example Firm A",
+      tagline: "",
       description: "Updated from the simple editor.",
-      websiteUrl: "https://example.test",
       affiliateUrl: "",
+      founderName: "",
+      ceoName: "",
+      headquartersCountry: "",
+      trustpilotRating: "",
+      trustpilotUrl: "",
+      foundedOn: "",
       payoutInfoUrl: "",
+      discountTitle: "",
       discountCode: "",
+      discountDescription: "",
       discountPercent: "",
       discountEndsAt: "",
       ...overrides,
@@ -237,7 +245,9 @@ describe("firm essentials", () => {
         .where(eq(propFirms.id, firmId));
       expect(firm?.legalName).toBe("Example Firm A Ltd");
       expect(firm?.foundedYear).toBe(2019);
-      expect(firm?.headquartersCountry).toBe("GB");
+      // Country moved INTO the primary editor (owner-locked 2026-09-04), so it
+      // is no longer an Advanced-only field and is deliberately not asserted
+      // here — the primary form owning a field means it may clear it.
       expect(firm?.supportEmail).toBe("support@example.test");
       expect(firm?.description).toBe("Edited from the simple screen.");
 
