@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getDb } from "@/lib/db/client";
 import { getPublishedFirmView } from "@/lib/repositories/public-firm-view";
 import { listPublishedFirmSlugs } from "@/lib/repositories/public-firms";
+import { getPayoutTotals } from "@/lib/repositories/public-payouts";
 import { canonicalUrl } from "@/lib/seo/canonical";
 import { firmPath } from "@/lib/seo/firm-seo";
 import { isIndexable } from "@/lib/view/firm-view";
@@ -29,7 +30,10 @@ export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const db = getDb();
-  const firms = await listPublishedFirmSlugs(db);
+  const [firms, payouts] = await Promise.all([
+    listPublishedFirmSlugs(db),
+    getPayoutTotals(db, "all"),
+  ]);
 
   // Indexability depends on the assembled profile, so it is decided by the same
   // predicate the page itself uses — the sitemap can never disagree with the
@@ -43,10 +47,34 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     {
+      url: canonicalUrl("/"),
+      changeFrequency: "daily",
+      priority: 1,
+    },
+    {
       url: canonicalUrl("/prop-firms"),
       changeFrequency: "daily",
       priority: 0.9,
     },
+    // Original methodology content, and true whether or not anything has been
+    // verified yet.
+    {
+      url: canonicalUrl("/payouts/methodology"),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    // The payout index carries nothing but an empty state until something is
+    // verified, and the page emits noindex in that state. Listing it here
+    // anyway would be the contradictory signal this file exists to avoid.
+    ...(payouts.count > 0
+      ? [
+          {
+            url: canonicalUrl("/payouts"),
+            changeFrequency: "daily" as const,
+            priority: 0.7,
+          },
+        ]
+      : []),
     ...views.flatMap((firm) =>
       firm
         ? [

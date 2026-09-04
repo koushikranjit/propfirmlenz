@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect, redirect } from "next/navigation";
 import { FirmProfile } from "@/components/public/firm-profile/FirmProfile";
+import { firmPayoutEvidence } from "@/lib/repositories/firm-payout-evidence";
 import { JsonLd } from "@/components/public/JsonLd";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { getDb } from "@/lib/db/client";
@@ -93,6 +94,7 @@ export default async function FirmProfilePage({ params }: { params: Params }) {
   }
 
   const crumbs = firmBreadcrumbs(firm);
+  const payouts = await firmPayoutEvidence(getDb(), firm.id);
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
@@ -104,7 +106,7 @@ export default async function FirmProfilePage({ params }: { params: Params }) {
       />
 
       {/* THE shared component. The admin preview renders this exact tree. */}
-      <FirmProfile firm={firm} />
+      <FirmProfile firm={firm} payouts={payouts} />
 
       {/*
         Only markup the page can back up:

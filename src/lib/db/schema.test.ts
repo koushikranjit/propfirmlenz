@@ -61,7 +61,8 @@ describe("schema", () => {
     const names = r.rows.map((x) => x.table_name).sort();
 
     // 23 enumerated entities plus the 3 junction/EAV tables that DATABASE.md
-    // §5.4–5.6 specifies as part of the rules/platforms/instruments design.
+    // §5.4–5.6 specifies as part of the rules/platforms/instruments design,
+    // plus the 6 payout-intelligence tables of docs/PAYOUTS.md §2.
     expect(names).toEqual([
       "admin_sessions",
       "admin_user_roles",
@@ -69,6 +70,8 @@ describe("schema", () => {
       "affiliate_clicks",
       "affiliate_links",
       "audit_logs",
+      "blockchain_networks",
+      "blockchain_transactions",
       "challenges",
       "entity_versions",
       "firm_instruments",
@@ -78,6 +81,8 @@ describe("schema", () => {
       "media",
       "media_usages",
       "offers",
+      "payout_candidates",
+      "payout_verification_events",
       "permissions",
       "platforms",
       "profiles",
@@ -88,7 +93,9 @@ describe("schema", () => {
       "rule_values",
       "rules",
       "seo_metadata",
+      "tracked_wallets",
       "users",
+      "verified_payouts",
     ]);
   });
 

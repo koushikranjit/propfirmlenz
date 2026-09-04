@@ -5,6 +5,10 @@ import { ChallengeTable } from "./ChallengeTable";
 import { FirmHeader } from "./FirmHeader";
 import { KeyFacts } from "./KeyFacts";
 import { OffersSection } from "./OffersSection";
+import {
+  type FirmPayoutEvidence,
+  PayoutEvidenceSection,
+} from "./PayoutEvidence";
 import { InstrumentsSection, PlatformsSection } from "./PlatformsSection";
 import { RulesSection } from "./RulesSection";
 import { NoData, Section } from "./Section";
@@ -33,9 +37,15 @@ import { NoData, Section } from "./Section";
  */
 export function FirmProfile({
   firm,
+  payouts,
   preview = false,
 }: {
   firm: FirmView;
+  /**
+   * Blockchain-verified payouts for this firm. REQUIRED, so the preview route
+   * cannot quietly omit the section the public page shows (§21.2 `[LOCKED]`).
+   */
+  payouts: FirmPayoutEvidence;
   /** True only on the authenticated admin preview route. */
   preview?: boolean;
 }) {
@@ -92,19 +102,29 @@ export function FirmProfile({
         <OffersSection offers={firm.offers} firmName={firm.name} />
       </Section>
 
+      <Section
+        id="payouts"
+        title="Verified payouts"
+        description="Payouts backed by a public blockchain transaction anyone can check. Never a firm-reported figure."
+      >
+        <PayoutEvidenceSection
+          payouts={payouts}
+          firmName={firm.name}
+          payoutInfoUrl={firm.payoutInfoUrl}
+        />
+      </Section>
+
       {/*
-        Reviews and payout tracking are Phase 2 and Phase 3 (docs/ROADMAP.md).
-        Saying so plainly is the honest state for a comparison site: silence
-        would read as "this firm has no reviews", which is a different claim
-        and one we have no data to make. No rating, count, or placeholder score
-        is rendered, and no Review / AggregateRating markup is emitted
-        (docs/SEO.md §11 rule 1 `[LOCKED]`).
+        Trader reviews are Phase 3 (docs/ROADMAP.md). Saying so plainly is the
+        honest state: silence would read as "this firm has no reviews", which is
+        a different claim and one we have no data to make. No rating, count, or
+        placeholder score is rendered, and no Review / AggregateRating markup is
+        emitted (docs/SEO.md §11 rule 1 `[LOCKED]`).
       */}
-      <Section id="reviews-and-payouts" title="Reviews and payouts">
+      <Section id="reviews" title="Trader reviews">
         <NoData>
-          Prop Firm Lenz does not publish trader reviews or payout records yet,
-          so none are shown for {firm.name}. Nothing on this page is a rating or
-          a ranking.
+          Prop Firm Lenz does not publish trader reviews yet, so none are shown
+          for {firm.name}. Nothing on this page is a rating or a ranking.
         </NoData>
       </Section>
 

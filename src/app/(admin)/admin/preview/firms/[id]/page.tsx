@@ -9,6 +9,7 @@ import { getAdminFirmById } from "@/lib/repositories/admin-firms";
 import { countDraftChanges } from "@/lib/validation/draft";
 import { PreviewBanner } from "@/components/admin/PreviewBanner";
 import { FirmProfile } from "@/components/public/firm-profile/FirmProfile";
+import { firmPayoutEvidence } from "@/lib/repositories/firm-payout-evidence";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -48,6 +49,9 @@ export default async function FirmPreviewPage({
 
   // Pure and read-only — it never writes (docs/ARCHITECTURE.md §21.3).
   const view = await materializeDraft(db, id);
+  // Verified payouts are published facts, not draft content, so the preview
+  // shows the same evidence the live page does.
+  const payouts = await firmPayoutEvidence(db, id);
   const pendingChanges = firm.draftPayload
     ? countDraftChanges(firm.draftPayload)
     : 0;
@@ -69,7 +73,7 @@ export default async function FirmPreviewPage({
           with no `/go/` href, so previewing cannot create click attribution
           (§21.7 `[LOCKED]`).
         */}
-        <FirmProfile firm={view} preview />
+        <FirmProfile firm={view} payouts={payouts} preview />
       </div>
     </div>
   );

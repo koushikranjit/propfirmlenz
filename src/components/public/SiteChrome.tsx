@@ -9,8 +9,8 @@ import { SITE_NAME } from "@/lib/seo/site";
  *
  * NAVIGATION HONESTY `[LOCKED]`
  *
- * `PRIMARY_NAV` lists only routes that are actually built. Payouts, reviews and
- * comparison are real roadmap items (docs/ROADMAP.md Phases 2–4) but have no
+ * `PRIMARY_NAV` lists only routes that are actually built. Reviews and
+ * comparison are real roadmap items (docs/ROADMAP.md Phases 3–4) but have no
  * route, so they appear in the footer as plain text with their phase — never as
  * a link that 404s. A dead nav link is worse than an absent one: it wastes a
  * click, it wastes crawl budget, and it makes the whole site look broken.
@@ -24,6 +24,7 @@ import { SITE_NAME } from "@/lib/seo/site";
 /** Built routes only. Adding an entry here requires the route to exist. */
 const PRIMARY_NAV: { href: string; label: string }[] = [
   { href: "/prop-firms", label: "Prop firms" },
+  { href: "/payouts", label: "Payouts" },
 ];
 
 /**
@@ -31,7 +32,6 @@ const PRIMARY_NAV: { href: string; label: string }[] = [
  * footer, never as links (docs/ROADMAP.md).
  */
 const PLANNED_SECTIONS: { label: string; phase: string }[] = [
-  { label: "Payout tracking", phase: "Phase 2" },
   { label: "Trader reviews", phase: "Phase 3" },
   { label: "Side-by-side comparison", phase: "Phase 4" },
 ];

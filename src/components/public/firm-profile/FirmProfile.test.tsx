@@ -2,6 +2,7 @@ import { cleanup, render, screen, within } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
 import type { FirmView } from "@/lib/view/firm-view";
 import { FirmProfile } from "./FirmProfile";
+import { EMPTY_PAYOUT_EVIDENCE } from "./PayoutEvidence";
 
 /**
  * Firm profile rendering — docs/ARCHITECTURE.md §21.9 cases 16, 19;
@@ -76,7 +77,7 @@ function challenge(
 describe("FirmProfile — affiliate safety", () => {
   it("(19) renders NO /go/ href in preview, even with an affiliate link", () => {
     const { container } = render(
-      <FirmProfile firm={view({ hasAffiliateLink: true })} preview />,
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={view({ hasAffiliateLink: true })} preview />,
     );
 
     const hrefs = [...container.querySelectorAll("a")].map((a) =>
@@ -88,7 +89,7 @@ describe("FirmProfile — affiliate safety", () => {
 
   it("renders the tracked href with sponsored rel on the public page", () => {
     const { container } = render(
-      <FirmProfile firm={view({ hasAffiliateLink: true })} />,
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={view({ hasAffiliateLink: true })} />,
     );
 
     const tracked = [...container.querySelectorAll("a")].filter((a) =>
@@ -102,7 +103,7 @@ describe("FirmProfile — affiliate safety", () => {
 
   it("marks a non-affiliate outbound link as such, without the sponsored token", () => {
     const { container } = render(
-      <FirmProfile
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE}
         firm={view({ websiteUrl: "https://example.test", hasAffiliateLink: false })}
       />,
     );
@@ -117,7 +118,7 @@ describe("FirmProfile — affiliate safety", () => {
 
   it("never exposes an affiliate destination — the view has no such field", () => {
     const { container } = render(
-      <FirmProfile firm={view({ hasAffiliateLink: true })} />,
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={view({ hasAffiliateLink: true })} />,
     );
     expect(container.innerHTML).not.toContain("http://partner");
     expect(container.innerHTML).not.toContain("destinationUrl");
@@ -126,7 +127,7 @@ describe("FirmProfile — affiliate safety", () => {
 
 describe("FirmProfile — honest empty states", () => {
   it("states that nothing is published rather than showing zeros", () => {
-    const { container } = render(<FirmProfile firm={view()} />);
+    const { container } = render(<FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={view()} />);
     const html = container.innerHTML;
 
     expect(html).toContain("No challenges have been published");
@@ -136,24 +137,79 @@ describe("FirmProfile — honest empty states", () => {
     expect(html).toContain("No description has been published");
   });
 
-  it("says reviews and payouts are not published, and shows no rating", () => {
-    const { container } = render(<FirmProfile firm={view()} />);
+  it("says reviews are not published, and shows no rating", () => {
+    const { container } = render(<FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={view()} />);
     const html = container.innerHTML;
 
-    expect(html).toContain("does not publish trader reviews or payout records");
+    expect(html).toContain("does not publish trader reviews yet");
     // No score, star, rank or count is invented anywhere (CLAUDE.md §3).
     expect(html).not.toMatch(/\b\d(\.\d)?\s*\/\s*5\b/);
     expect(html).not.toContain("out of 5");
     expect(html.toLowerCase()).not.toContain("rating:");
   });
 
+  it("never presents an absence of verified payouts as a firm not paying", () => {
+    const { container } = render(
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={view()} />,
+    );
+    const html = container.innerHTML;
+
+    expect(html).toContain("No blockchain-verified payouts have been recorded");
+    expect(html).toContain("not evidence the firm does not pay");
+    // An empty section must not imply a total of any kind.
+    expect(html).not.toMatch(/total payout volume[^—]*$0/i);
+  });
+
+  it("renders verified payouts from exact base units, with a floor caveat", () => {
+    const { container } = render(
+      <FirmProfile
+        firm={view()}
+        payouts={{
+          count: 2,
+          // Only one of the two could be priced.
+          usdValue: "1234.56",
+          usdValuedCount: 1,
+          latestAt: "2026-09-01T00:00:00.000Z",
+          recent: [
+            {
+              id: "p1",
+              firmName: "Example Firm A",
+              firmSlug: "example-firm-a",
+              networkName: "Example Chain",
+              txHash: "0xexamplehash0001",
+              explorerUrl: "https://explorer.example.test/tx/0xexamplehash0001",
+              assetSymbol: "USDT",
+              // 18 decimals: a value no JavaScript number holds exactly.
+              amountBaseUnits: "1234567890123456789",
+              decimals: 18,
+              usdValue: null,
+              transactionTimestamp: "2026-09-01T00:00:00.000Z",
+              toAddress: "ttraderexampleaddress0001",
+            },
+          ],
+        }}
+      />,
+    );
+    const html = container.innerHTML;
+
+    // Formatted from the integer, not from 1234567890123456789 / 1e18.
+    expect(html).toContain("1.23 USDT");
+    // The sum covers one of two payouts, and says so.
+    expect(html).toContain("1 of 2 priced");
+    // The claim is bounded every time it is made.
+    expect(html).toContain("a floor, not");
+    expect(html).toContain(
+      "https://explorer.example.test/tx/0xexamplehash0001",
+    );
+  });
+
   it("says a firm is not verified rather than implying it is", () => {
-    render(<FirmProfile firm={view()} />);
+    render(<FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={view()} />);
     expect(screen.getAllByText(/not yet verified/i).length).toBeGreaterThan(0);
   });
 
   it("renders 'Not specified' for facts the database does not hold", () => {
-    render(<FirmProfile firm={view()} />);
+    render(<FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={view()} />);
     expect(screen.getAllByText("Not specified").length).toBeGreaterThan(0);
   });
 });
@@ -161,7 +217,7 @@ describe("FirmProfile — honest empty states", () => {
 describe("FirmProfile — money and currency", () => {
   it("renders every amount with its own source currency", () => {
     const { container } = render(
-      <FirmProfile
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE}
         firm={view({
           challenges: [
             challenge({
@@ -181,7 +237,7 @@ describe("FirmProfile — money and currency", () => {
 
   it("refuses to imply comparability across currencies", () => {
     const { container } = render(
-      <FirmProfile
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE}
         firm={view({
           challenges: [
             challenge({
@@ -205,7 +261,7 @@ describe("FirmProfile — money and currency", () => {
 describe("FirmProfile — null semantics", () => {
   it("says a null maximum trading day count means no maximum", () => {
     const { container } = render(
-      <FirmProfile
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE}
         firm={view({
           challenges: [challenge({ minTradingDays: 3, maxTradingDays: null })],
         })}
@@ -219,7 +275,7 @@ describe("FirmProfile — null semantics", () => {
 
   it("renders a tri-state boolean's null as 'not specified'", () => {
     const { container } = render(
-      <FirmProfile
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE}
         firm={view({ challenges: [challenge({ feeRefundable: null })] })}
       />,
     );
@@ -228,7 +284,7 @@ describe("FirmProfile — null semantics", () => {
 
   it("shows an undocumented rule as 'Not specified', never as allowed", () => {
     render(
-      <FirmProfile
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE}
         firm={view({
           rules: [
             {
@@ -254,7 +310,7 @@ describe("FirmProfile — null semantics", () => {
 
   it("distinguishes an explicitly prohibited instrument from an absent one", () => {
     render(
-      <FirmProfile
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE}
         firm={view({
           instruments: [
             {
@@ -276,14 +332,14 @@ describe("FirmProfile — null semantics", () => {
 
 describe("FirmProfile — structure and accessibility", () => {
   it("renders exactly one h1, carrying the firm name", () => {
-    render(<FirmProfile firm={view()} />);
+    render(<FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={view()} />);
     const headings = screen.getAllByRole("heading", { level: 1 });
     expect(headings).toHaveLength(1);
     expect(headings[0]?.textContent).toContain("Example Firm A");
   });
 
   it("gives every section an accessible name", () => {
-    render(<FirmProfile firm={view()} />);
+    render(<FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={view()} />);
     for (const name of [
       /overview/i,
       /challenges/i,
@@ -298,7 +354,7 @@ describe("FirmProfile — structure and accessibility", () => {
 
   it("gives the challenge table a caption and row headers", () => {
     render(
-      <FirmProfile firm={view({ challenges: [challenge()] })} />,
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={view({ challenges: [challenge()] })} />,
     );
 
     const table = screen.getByRole("table");
@@ -312,7 +368,7 @@ describe("FirmProfile — structure and accessibility", () => {
 
   it("states verification with text and a date, not colour alone", () => {
     render(
-      <FirmProfile
+      <FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE}
         firm={view({ isVerified: true, verifiedAt: "2026-09-01T00:00:00.000Z" })}
       />,
     );
@@ -328,9 +384,9 @@ describe("FirmProfile — preview parity", () => {
       challenges: [challenge()],
     });
 
-    const live = render(<FirmProfile firm={firm} />).container.innerHTML;
+    const live = render(<FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={firm} />).container.innerHTML;
     cleanup();
-    const draft = render(<FirmProfile firm={firm} preview />).container
+    const draft = render(<FirmProfile payouts={EMPTY_PAYOUT_EVIDENCE} firm={firm} preview />).container
       .innerHTML;
 
     expect(live).toContain("/go/example-firm-a");

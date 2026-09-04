@@ -165,11 +165,43 @@ profile already renders, and fixed a defect it exposed:
   same `isSafeAffiliateDestination` that guards `/go/{slug}`. The destination
   is admin-only and still absent from `FirmView`.
 
+**Blockchain payout intelligence (2026-09-04)** — owner-directed, and the first
+Phase 2 work. Specification: `docs/PAYOUTS.md`.
+
+- **Schema** — 6 tables (migration `0002`, purely additive): networks, tracked
+  wallets, raw transactions, candidates, verified payouts, verification events.
+  Amounts are `numeric(78,0)` base-unit integers with `decimals` alongside;
+  a USD value cannot be stored without its rate, source and rate time (CHECK).
+- **Provider abstraction** — `TronProvider` (TronGrid) and `EvmExplorerProvider`
+  (Etherscan v2). No mock adapter ships; fixtures exist only in the test file.
+  `providerFor()` returns null when a credential is absent, and callers report
+  that as a failure rather than as an empty scan.
+- **Ingestion** — idempotent by unique key, paginated, resumable; a provider
+  failure is recorded on the wallet, never swallowed.
+- **Verification** — six conditions, all required, ending in a human holding
+  `firm:verify`. Nothing auto-verifies and nothing approves in bulk. The payout
+  row, candidate update and audit event commit in one transaction.
+- **Public** — `/payouts` (windowed, `noindex` and out of the sitemap while
+  empty), `/payouts/methodology`, and a "Verified payouts" section on each firm
+  profile passed to `FirmProfile` as a REQUIRED prop, so the preview cannot omit
+  it. Public reads never join raw transactions or candidates.
+- **Admin** — review queue, tracked wallets with on-demand scan, and networks,
+  at `/admin/payouts{,/wallets,/networks}`. Every mutation is audit-logged.
+- **Language** — every label is "verified", never "total". Verified on-chain
+  volume is a floor; an empty section is never shown as evidence a firm does
+  not pay.
+- **Tests** — 20 payout tests against real PostgreSQL (ingestion idempotency,
+  dedup, exact-integer storage, provider failure, the permission gate, each
+  verification condition, the audit trail, the USD constraint, verified-only
+  statistics, window filtering, formatter precision). Suite: 382 passing.
+
 Deliberately NOT built (awaiting approval):
 
-- ❌ No homepage, challenge detail pages, review/payout system, comparison UI, blog
-- ❌ No business or prop-firm data of any kind
-- ❌ No Neon connection, no production credentials, no deployment
+- ❌ No trader-submitted payout evidence, public accounts, or submission queue
+- ❌ No challenge detail pages, review system, comparison UI, blog
+- ❌ No business or prop-firm data of any kind — no wallet, network, or payout
+  row is seeded; every one is entered by an admin
+- ❌ Migration `0002` is NOT applied to production, and nothing is deployed
 
 ### Route change `[owner-directed 2026-09-04]`
 
@@ -181,7 +213,14 @@ documented `/admin/firms/{id}`. Directed by the owner; `ADMIN.md` §6 and
 
 `ADMIN.md` §2.1 says Payouts and Reviews "do not appear before their phase". The owner
 asked for the full sidebar now, so those entries exist as **navigation only** and lead
-to honest "not implemented yet" pages. No Phase 2 or Phase 3 functionality was built.
+to honest "not implemented yet" pages.
+
+**Superseded for Payouts, same day.** The owner directed blockchain payout
+intelligence as CRITICAL, which is Phase 2 work (`ROADMAP.md` Phase 2). `CLAUDE.md` §0
+gives the owner precedence over phase discipline. Payouts is now a real, implemented
+section; Reviews remains navigation only. The blockchain half of Phase 2 is built; the
+trader-submission half (public accounts, evidence handling, moderation queue) is not —
+see `PAYOUTS.md` §12.
 
 ---
 
@@ -235,7 +274,8 @@ only to keep the working tree clean. It can be suppressed by patching
 8. ✅ Stage 3.1 (public affiliate route + documentation hardening) — 2026-09-04.
 9. ✅ Stage 4 (public homepage) — 2026-09-04.
 10. ✅ Stage 5 (admin firm data management) — 2026-09-04.
-11. ⬜ Owner approves the next stage.
+11. ✅ Blockchain payout intelligence — owner-directed, 2026-09-04.
+12. ⬜ Owner applies migration `0002` to production and approves the next stage.
 
 The nearest unbuilt pieces, in dependency order: the iframe split-pane preview in the
 workspace (`ARCHITECTURE.md` §21.4), the remaining workspace tabs that populate
@@ -283,7 +323,17 @@ and caching with revalidation tags. **None may start without approval.**
 
 ## In progress
 
-Nothing. Stage 5 is complete and committed; awaiting owner approval for the next stage.
+Nothing. The payout system is complete, validated and committed locally.
+
+**Two things need the owner, and neither was done automatically:**
+
+1. **Migration `0002` has not been applied to production.** It is additive only
+   (6 CREATE TABLEs, no drop or alter of an existing object) and has been verified
+   against real PostgreSQL by the test suite. Applying it is the owner's call.
+2. **Nothing was deployed or pushed.**
+
+Until a network and a wallet are recorded by an admin, `/payouts` correctly shows an
+empty state, is `noindex`, and is absent from the sitemap. No seed data exists.
 
 ### Deviations from `INITIALIZATION.md`, and why `[recorded 2026-09-04]`
 

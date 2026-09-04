@@ -11,3 +11,4 @@ export * from "./firms";
 export * from "./catalog";
 export * from "./commerce";
 export * from "./system";
+export * from "./payouts";

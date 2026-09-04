@@ -516,9 +516,17 @@ describe("homepage", () => {
 
     it("keeps planned sections as text, not links", () => {
       const { container } = render(<SiteFooter />);
-      const planned = within(container).getByText(/payout tracking/i);
+      const planned = within(container).getByText(/trader reviews/i);
       expect(planned.closest("a")).toBeNull();
-      expect(container.innerHTML).toContain("Phase 2");
+      expect(container.innerHTML).toContain("Phase 3");
+    });
+
+    it("links payouts now that the route exists", () => {
+      const { container } = render(<SiteHeader />);
+      const hrefs = [...container.querySelectorAll("a")].map((a) =>
+        a.getAttribute("href"),
+      );
+      expect(hrefs).toContain("/payouts");
     });
   });
 });
