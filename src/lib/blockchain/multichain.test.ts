@@ -323,3 +323,56 @@ describe("TRONSCAN provider", () => {
     expect(JSON.stringify(failed)).not.toContain("secret");
   });
 });
+
+describe("TRONSCAN query parameters", () => {
+  /**
+   * REGRESSION — a real wallet with ~10,000 transfers returned ZERO rows.
+   *
+   * The adapter sent `confirm=true`, which TRONSCAN answers with an empty
+   * list. The scan then reported no transfers and no error: a result
+   * indistinguishable from a firm that has never paid a trader. Confirmation
+   * comes from each row's own flag, never from a filter that can silently
+   * empty the response.
+   */
+  it("never sends confirm=true, which silently empties the result", async () => {
+    let seenUrl = "";
+    await withFetch(
+      async (url) => {
+        seenUrl = String(url);
+        return json({ token_transfers: [] });
+      },
+      () =>
+        new TronScanProvider().listOutgoingTransfers({
+          address: TRANSFER.from_address,
+        }),
+    );
+
+    expect(seenUrl).not.toContain("confirm=true");
+    // The parameters that must still be there.
+    expect(seenUrl).toContain("relatedAddress=");
+    expect(seenUrl).toContain("sort=-timestamp");
+  });
+
+  it("reads confirmation from the row, not from a query filter", async () => {
+    const page = await withFetch(
+      async () =>
+        json({
+          token_transfers: [
+            { ...TRANSFER, confirmed: true },
+            { ...TRANSFER, transaction_id: "b".repeat(64), confirmed: false },
+          ],
+        }),
+      () =>
+        new TronScanProvider().listOutgoingTransfers({
+          address: TRANSFER.from_address,
+        }),
+    );
+
+    expect(page.transfers).toHaveLength(2);
+    // Confirmed: depth unknown (TRONSCAN reports a boolean), so null — the
+    // verification gate treats that as "not reported" rather than "settled".
+    expect(page.transfers[0]?.confirmations).toBeNull();
+    // Unconfirmed: 0, which the gate refuses against the network's threshold.
+    expect(page.transfers[1]?.confirmations).toBe(0);
+  });
+});

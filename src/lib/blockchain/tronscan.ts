@@ -75,7 +75,11 @@ export class TronScanProvider implements BlockchainProvider {
     url.searchParams.set("limit", String(limit));
     url.searchParams.set("start", String(offset));
     url.searchParams.set("sort", "-timestamp");
-    url.searchParams.set("confirm", "true");
+    // NO `confirm=true`. TRONSCAN returns ZERO rows for it on wallets that
+    // demonstrably have thousands of transfers — a silent empty result that
+    // is indistinguishable from a firm which never paid anyone, which is the
+    // single worst failure this system can have. Confirmation is read from
+    // each row's own `confirmed` flag below instead.
     if (options.since) {
       url.searchParams.set("start_timestamp", String(options.since.getTime()));
     }
