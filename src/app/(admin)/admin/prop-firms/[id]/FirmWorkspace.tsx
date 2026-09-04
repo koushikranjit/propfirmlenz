@@ -20,6 +20,7 @@ import type {
 } from "@/lib/repositories/admin-payouts";
 import { AssociationsTab } from "./AssociationsTab";
 import { AnnouncementsSection, FaqsSection } from "./ContentSections";
+import type { StorageState } from "./LogoUpload";
 import { PayoutTrackingSection } from "./PayoutTrackingSection";
 import { ChallengesTab, type StagedChallenge } from "./ChallengesTab";
 import { AffiliateTab, OffersTab, type StagedKey } from "./CommerceTabs";
@@ -159,7 +160,7 @@ export function FirmWorkspace({
   staged,
   networks,
   wallets,
-  storageConfigured,
+  storage,
 }: {
   firm: WorkspaceFirm;
   can: WorkspaceCan;
@@ -169,8 +170,8 @@ export function FirmWorkspace({
   /** Payout tracking is a separate system; these are read-only references. */
   networks: AdminNetwork[];
   wallets: AdminWallet[];
-  /** False when object storage has no credentials — the UI says so. */
-  storageConfigured: boolean;
+  /** Whether object storage is usable, and which variables are absent. */
+  storage: StorageState;
 }) {
   const [saveState, saveFormAction] = useActionState<ActionState, FormData>(
     saveFirmAction,
@@ -318,11 +319,7 @@ export function FirmWorkspace({
       </Card>
 
       {/* The PRIMARY screen: everything needed to list and monetise a firm. */}
-      <EssentialsForm
-        firm={essentials}
-        readOnly={readOnly}
-        storageConfigured={storageConfigured}
-      />
+      <EssentialsForm firm={essentials} readOnly={readOnly} storage={storage} />
 
       {/* Payout tracking: a configuration point into the separate system. */}
       <Section

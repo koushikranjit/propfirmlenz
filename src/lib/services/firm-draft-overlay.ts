@@ -47,6 +47,20 @@ export interface OverlayCatalog {
   >;
   /** Ids of the firm's currently-active published affiliate links. */
   activeAffiliateLinkIds: string[];
+  /**
+   * The media row a staged `logoMediaId` points at, resolved by the caller.
+   *
+   * Without this the preview would keep showing the PUBLISHED logo after an
+   * admin uploaded a new one — the staged id would be in the draft with
+   * nothing to turn it into a URL (docs/ARCHITECTURE.md §21.3).
+   */
+  logoMedia: {
+    id: string;
+    url: string;
+    alt: string;
+    width: number | null;
+    height: number | null;
+  } | null;
 }
 
 export function overlayDraft(
@@ -57,7 +71,7 @@ export function overlayDraft(
 ): FirmView {
   return {
     ...base,
-    ...overlayFirmFields(draft),
+    ...overlayFirmFields(draft, catalog),
     challenges: overlayChallenges(base.challenges, draft),
     rules: overlayRules(base.rules, draft, catalog),
     platforms: overlayPlatforms(base.platforms, draft, catalog),
@@ -71,10 +85,31 @@ export function overlayDraft(
 
 /* --------------------------------------------------------------- firm fields */
 
-function overlayFirmFields(draft: DraftPayload): Partial<FirmView> {
+function overlayFirmFields(
+  draft: DraftPayload,
+  catalog: OverlayCatalog,
+): Partial<FirmView> {
   const d = draft.firm;
   if (!d) return {};
   return {
+    // Three distinct states, and they must stay distinct: field absent means
+    // "unchanged", null means "the admin removed it", an id means "replaced".
+    ...(d.logoMediaId === undefined
+      ? {}
+      : d.logoMediaId === null
+        ? { logo: null }
+        : catalog.logoMedia && catalog.logoMedia.id === d.logoMediaId
+          ? {
+              logo: {
+                url: catalog.logoMedia.url,
+                alt: catalog.logoMedia.alt,
+                width: catalog.logoMedia.width,
+                height: catalog.logoMedia.height,
+              },
+            }
+          : // Staged against a media row that no longer resolves. Showing the
+            // old logo would be a lie about what publishing would do.
+            { logo: null }),
     ...(d.slug !== undefined ? { slug: d.slug } : {}),
     ...(d.name !== undefined ? { name: d.name } : {}),
     ...(d.legalName !== undefined ? { legalName: d.legalName } : {}),

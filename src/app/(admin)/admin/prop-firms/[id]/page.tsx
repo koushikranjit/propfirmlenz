@@ -14,7 +14,7 @@ import {
   listTrackedWallets,
 } from "@/lib/repositories/admin-payouts";
 import { getCurrentVersion } from "@/lib/services/firm-draft";
-import { mediaStorage } from "@/lib/media/storage";
+import { mediaStorage, missingStorageVars } from "@/lib/media/storage";
 import { countDraftChanges } from "@/lib/validation/draft";
 import { Breadcrumbs } from "@/components/admin/Breadcrumbs";
 import { FirmWorkspace } from "./FirmWorkspace";
@@ -157,9 +157,12 @@ export default async function FirmWorkspacePage({
         staged={staged}
         networks={networks}
         wallets={wallets}
-        // Checked on the SERVER: the credentials never reach the browser, only
-        // whether they exist (CLAUDE.md §6).
-        storageConfigured={mediaStorage() !== null}
+        // Resolved on the SERVER. Only the boolean and the variable NAMES
+        // cross to the browser — never a credential value (CLAUDE.md §6).
+        storage={{
+          configured: mediaStorage() !== null,
+          missing: missingStorageVars(),
+        }}
       />
     </>
   );

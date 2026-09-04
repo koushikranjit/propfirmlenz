@@ -5,6 +5,7 @@ import { auditLogs, media, mediaUsages, propFirms } from "@/lib/db/schema";
 import { PERMISSIONS, requirePermission } from "@/lib/auth/permissions";
 import { ImageError, inspectImage } from "@/lib/media/image";
 import {
+  type MediaStorage,
   StorageError,
   mediaStorage,
   missingStorageVars,
@@ -63,12 +64,20 @@ export async function uploadFirmLogo(
     firmId: string;
     bytes: Uint8Array;
     altText: string;
+    /**
+     * Injected only by tests, exactly as `scanWallet` takes its provider.
+     * Production passes nothing and gets the configured R2 client, so no
+     * fake storage adapter ships (docs/PAYOUTS.md §4 established the pattern).
+     */
+    storage?: MediaStorage | undefined;
   },
 ): Promise<LogoResult> {
+  // BOTH permissions. Uploading an asset and attaching it to a firm are
+  // different capabilities, and holding one is not holding the other.
   await requirePermission(db, opts.adminUserId, PERMISSIONS.MEDIA_UPLOAD);
   await requirePermission(db, opts.adminUserId, PERMISSIONS.FIRM_EDIT);
 
-  const storage = mediaStorage();
+  const storage = opts.storage ?? mediaStorage();
   if (!storage) {
     throw new LogoError(
       "NOT_CONFIGURED",

@@ -5,6 +5,7 @@ import {
   auditLogs,
   entityVersions,
   instruments,
+  media,
   platforms,
   propFirms,
   redirects,
@@ -198,11 +199,12 @@ async function loadOverlayCatalog(
   firmId: string,
   draft: DraftPayload,
 ): Promise<OverlayCatalog> {
+  const stagedLogoId = draft.firm?.logoMediaId ?? null;
   const platformIds = (draft.platforms ?? []).map((p) => p.platformId);
   const instrumentIds = (draft.instruments ?? []).map((i) => i.instrumentId);
   const ruleIds = (draft.ruleValues ?? []).map((r) => r.ruleId);
 
-  const [platformRows, instrumentRows, ruleRows, affiliateRows] =
+  const [platformRows, instrumentRows, ruleRows, affiliateRows, logoRows] =
     await Promise.all([
       platformIds.length > 0
         ? db
@@ -250,6 +252,21 @@ async function loadOverlayCatalog(
             isNull(affiliateLinks.deletedAt),
           ),
         ),
+
+      // Only when the draft actually stages one, and only if it is still live.
+      stagedLogoId
+        ? db
+            .select({
+              id: media.id,
+              url: media.publicUrl,
+              alt: media.altText,
+              width: media.width,
+              height: media.height,
+            })
+            .from(media)
+            .where(and(eq(media.id, stagedLogoId), isNull(media.deletedAt)))
+            .limit(1)
+        : Promise.resolve([]),
     ]);
 
   return {
@@ -257,6 +274,7 @@ async function loadOverlayCatalog(
     instruments: new Map(instrumentRows.map((i) => [i.id, i])),
     rules: new Map(ruleRows.map((r) => [r.id, r])),
     activeAffiliateLinkIds: affiliateRows.map((a) => a.id),
+    logoMedia: logoRows[0] ?? null,
   };
 }
 

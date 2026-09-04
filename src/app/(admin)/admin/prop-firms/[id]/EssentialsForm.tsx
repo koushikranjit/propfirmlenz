@@ -11,7 +11,7 @@ import { Card, Field, Input, Textarea } from "@/components/ui/primitives";
 import { saveFirmEssentialsAction } from "@/lib/services/firm-actions";
 import { COUNTRIES, country } from "@/lib/geo/countries";
 import { yearsInOperation } from "@/lib/view/firm-view";
-import { LogoUpload } from "./LogoUpload";
+import { LogoUpload, type StorageState } from "./LogoUpload";
 
 /**
  * THE PRIMARY EDITOR — docs/ADMIN.md §6 `[owner-locked 2026-09-04]`.
@@ -127,11 +127,11 @@ function CountryField({
 export function EssentialsForm({
   firm,
   readOnly,
-  storageConfigured,
+  storage,
 }: {
   firm: FirmEssentials;
   readOnly: boolean;
-  storageConfigured: boolean;
+  storage: StorageState;
 }) {
   const [state, formAction] = useActionState<ActionResult, FormData>(
     saveFirmEssentialsAction,
@@ -158,7 +158,7 @@ export function EssentialsForm({
             logoUrl={firm.logoUrl}
             logoAlt={firm.logoAlt}
             readOnly={readOnly}
-            storageConfigured={storageConfigured}
+            storage={storage}
           />
         </div>
       </Card>
