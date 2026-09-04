@@ -31,10 +31,8 @@ import {
   saveDraft,
   softDeleteFirm,
 } from "./firm-draft";
-import {
-  getPublishedFirmBySlug,
-  listPublishedFirms,
-} from "@/lib/repositories/public-firms";
+import { listPublishedFirmSummaries } from "@/lib/repositories/public-firms";
+import { getPublishedFirmView } from "@/lib/repositories/public-firm-view";
 
 /**
  * (4) public queries cannot access draft_payload, (6) draft validation,
@@ -175,7 +173,7 @@ describe("firm draft / publish", () => {
 
   describe("public / draft isolation", () => {
     it("editing and saving a draft changes NOTHING the public can see", async () => {
-      const before = await getPublishedFirmBySlug(db, "example-firm-a");
+      const before = await getPublishedFirmView(db, "example-firm-a");
 
       await saveDraft(db, {
         adminUserId: editorId,
@@ -186,7 +184,7 @@ describe("firm draft / publish", () => {
         }),
       });
 
-      const after = await getPublishedFirmBySlug(db, "example-firm-a");
+      const after = await getPublishedFirmView(db, "example-firm-a");
       expect(after).toEqual(before);
       expect(after!.name).toBe("Example Firm A");
     });
@@ -198,8 +196,8 @@ describe("firm draft / publish", () => {
         payload: draft(0, editorId, { name: "Secret Draft Name" }),
       });
 
-      const firm = await getPublishedFirmBySlug(db, "example-firm-a");
-      const list = await listPublishedFirms(db);
+      const firm = await getPublishedFirmView(db, "example-firm-a");
+      const list = await listPublishedFirmSummaries(db);
 
       expect(firm).not.toHaveProperty("draftPayload");
       expect(firm).not.toHaveProperty("draft_payload");
@@ -208,7 +206,7 @@ describe("firm draft / publish", () => {
     });
 
     it("the public repository never exposes admin-only fields", async () => {
-      const firm = await getPublishedFirmBySlug(db, "example-firm-a");
+      const firm = await getPublishedFirmView(db, "example-firm-a");
       for (const forbidden of [
         "draftPayload",
         "createdByAdminId",
@@ -225,12 +223,12 @@ describe("firm draft / publish", () => {
       await db
         .insert(propFirms)
         .values({ slug: "example-firm-b", name: "Example Firm B" }); // draft
-      expect(await getPublishedFirmBySlug(db, "example-firm-b")).toBeNull();
+      expect(await getPublishedFirmView(db, "example-firm-b")).toBeNull();
 
       // `admin` holds firm:delete; `publisher` deliberately does not
       // (docs/ADMIN.md §11).
       await softDeleteFirm(db, { adminUserId: adminId, firmId });
-      expect(await getPublishedFirmBySlug(db, "example-firm-a")).toBeNull();
+      expect(await getPublishedFirmView(db, "example-firm-a")).toBeNull();
     });
   });
 
@@ -243,7 +241,7 @@ describe("firm draft / publish", () => {
       });
 
       const preview = await materializeDraft(db, firmId);
-      const publicView = await getPublishedFirmBySlug(db, "example-firm-a");
+      const publicView = await getPublishedFirmView(db, "example-firm-a");
 
       expect(preview.tagline).toBe("25% off");
       expect(publicView!.tagline).toBeNull();
@@ -331,7 +329,7 @@ describe("firm draft / publish", () => {
         .where(eq(auditLogs.action, "firm.published"));
       expect(audits).toHaveLength(1);
 
-      const publicView = await getPublishedFirmBySlug(db, "example-firm-a");
+      const publicView = await getPublishedFirmView(db, "example-firm-a");
       expect(publicView!.name).toBe("Published Name");
     });
 
@@ -388,7 +386,7 @@ describe("firm draft / publish", () => {
 
   describe("discard", () => {
     it("clears the draft and leaves published columns untouched", async () => {
-      const before = await getPublishedFirmBySlug(db, "example-firm-a");
+      const before = await getPublishedFirmView(db, "example-firm-a");
       await saveDraft(db, {
         adminUserId: editorId,
         firmId,
@@ -401,9 +399,7 @@ describe("firm draft / publish", () => {
         .from(propFirms)
         .where(eq(propFirms.id, firmId));
       expect(firm!.draftPayload).toBeNull();
-      expect(await getPublishedFirmBySlug(db, "example-firm-a")).toEqual(
-        before,
-      );
+      expect(await getPublishedFirmView(db, "example-firm-a")).toEqual(before);
     });
   });
 
@@ -423,7 +419,7 @@ describe("firm draft / publish", () => {
       });
       await publishFirm(db, { adminUserId: publisherId, firmId });
 
-      const live = await getPublishedFirmBySlug(db, "example-firm-a");
+      const live = await getPublishedFirmView(db, "example-firm-a");
       expect(live!.name).toBe("Version Two");
 
       await rollbackToVersion(db, {
@@ -433,7 +429,7 @@ describe("firm draft / publish", () => {
       });
 
       // Live is UNCHANGED — the restore landed in the draft.
-      const stillLive = await getPublishedFirmBySlug(db, "example-firm-a");
+      const stillLive = await getPublishedFirmView(db, "example-firm-a");
       expect(stillLive!.name).toBe("Version Two");
 
       const preview = await materializeDraft(db, firmId);

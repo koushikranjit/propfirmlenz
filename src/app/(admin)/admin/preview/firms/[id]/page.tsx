@@ -8,6 +8,7 @@ import { materializeDraft } from "@/lib/services/firm-draft";
 import { getAdminFirmById } from "@/lib/repositories/admin-firms";
 import { countDraftChanges } from "@/lib/validation/draft";
 import { PreviewBanner } from "@/components/admin/PreviewBanner";
+import { FirmProfile } from "@/components/public/firm-profile/FirmProfile";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -55,102 +56,21 @@ export default async function FirmPreviewPage({
     <div className="min-h-screen bg-bg-base">
       <PreviewBanner pendingChanges={pendingChanges} />
 
-      <main className="mx-auto max-w-3xl px-6 py-10">
+      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
         {/*
-          The production public firm template does not exist yet (it is a later
-          stage). Rather than invent a SECOND fake public template — which would
-          drift from production and make the preview untrustworthy — this is an
-          honest placeholder that renders the materialised draft values
-          (docs/ARCHITECTURE.md §21.1).
+          THE SAME component the production page renders, given the same
+          `FirmView` — assembled by `materializeDraft` from the published rows
+          plus the draft overlay, through the same `assembleView` the public
+          repository uses. There is no preview-only firm template, and a field
+          added to the view that the materialiser does not supply is a compile
+          error (docs/ARCHITECTURE.md §21.1, §21.2 `[LOCKED]`).
 
-          When components/public/firm-profile/FirmProfile.tsx is built, this
-          route renders THAT component with the same FirmView, and this
-          placeholder is deleted.
+          `preview` changes exactly one thing: the affiliate CTA renders inert
+          with no `/go/` href, so previewing cannot create click attribution
+          (§21.7 `[LOCKED]`).
         */}
-        <div className="mb-6 rounded-[14px] border border-dashed border-border-default bg-bg-card p-4">
-          <p className="text-sm font-semibold text-text-primary">
-            Public firm template not built yet
-          </p>
-          <p className="mt-1 text-sm text-text-muted">
-            The preview infrastructure is in place. Once the public firm profile
-            component exists, this route renders that exact component with the
-            draft data — never a separate preview-only implementation.
-          </p>
-        </div>
-
-        <article className="flex flex-col gap-4">
-          <header>
-            <h1 className="text-3xl font-semibold text-text-primary">
-              {view.name}
-            </h1>
-            {view.tagline ? (
-              <p className="mt-2 text-lg text-text-secondary">{view.tagline}</p>
-            ) : null}
-            <p className="mt-2 text-sm text-text-metadata">
-              /prop-firms/{view.slug}
-              {view.isVerified ? " · Verified" : ""}
-            </p>
-          </header>
-
-          {view.description ? (
-            <p className="whitespace-pre-wrap text-text-secondary">
-              {view.description}
-            </p>
-          ) : (
-            <p className="italic text-text-metadata">
-              No description entered yet.
-            </p>
-          )}
-
-          <section>
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-text-secondary">
-              Challenges
-            </h2>
-            {view.challenges.length === 0 ? (
-              <p className="mt-2 italic text-text-metadata">
-                No challenges entered yet.
-              </p>
-            ) : (
-              <ul className="mt-2 flex flex-col gap-2">
-                {view.challenges.map((c) => (
-                  <li
-                    key={c.id}
-                    className="rounded-[10px] border border-border-default bg-bg-card px-4 py-3"
-                  >
-                    <p className="text-sm font-medium text-text-primary">
-                      {c.name}
-                    </p>
-                    <p className="text-sm tabular-nums text-text-secondary">
-                      {/* Money always renders WITH its source currency. */}
-                      {c.accountSize} {c.accountCurrency}
-                      {c.price ? ` · ${c.price} ${c.priceCurrency}` : ""}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
-
-          {/*
-            The affiliate CTA renders with correct styling and copy but NO href.
-            No request is issued, so there is nothing to attribute — this is the
-            PRIMARY protection, not a downstream filter
-            (docs/ARCHITECTURE.md §21.7 `[LOCKED]`).
-          */}
-          <div>
-            <span
-              aria-disabled="true"
-              title="Affiliate links are disabled in preview, so no click is recorded."
-              className="inline-flex h-11 cursor-not-allowed items-center rounded-[10px] bg-[image:var(--gradient-brand)] px-6 text-sm font-semibold text-white opacity-60"
-            >
-              Visit firm
-            </span>
-            <p className="mt-1 text-xs text-text-metadata">
-              Affiliate link disabled in preview — no click is recorded.
-            </p>
-          </div>
-        </article>
-      </main>
+        <FirmProfile firm={view} preview />
+      </div>
     </div>
   );
 }

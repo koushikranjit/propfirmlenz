@@ -27,6 +27,7 @@ export interface SeoOverride {
   ogImageUrl?: string | null;
   robotsIndex?: boolean;
   robotsFollow?: boolean;
+  includeInSitemap?: boolean;
 }
 
 export interface BuildMetadataInput {
@@ -126,9 +127,67 @@ export function buildOrganizationLd() {
 }
 
 /**
+ * `WebPage` JSON-LD. Describes only what the page visibly contains — no
+ * counts, prices, or ratings are asserted here (docs/SEO.md §11 rule 2).
+ */
+export function buildWebPageLd(input: {
+  path: string;
+  name: string;
+  description: string;
+  /** The entity's real `updated_at`. Never `now()`. */
+  dateModified?: string | null;
+}) {
+  const url = canonicalUrl(input.path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": url,
+    url,
+    name: input.name,
+    description: input.description,
+    isPartOf: {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: canonicalUrl("/"),
+    },
+    // Omitted entirely when unknown — never emitted as null (§11 rule 3).
+    ...(input.dateModified ? { dateModified: input.dateModified } : {}),
+  } as const;
+}
+
+/**
+ * `ItemList` for a directory page. Lists the items ACTUALLY rendered, in the
+ * order rendered, so the markup matches the visible page (§11 rule 2).
+ */
+export function buildItemListLd(
+  items: { name: string; path: string }[],
+  opts: { startPosition?: number } = {},
+) {
+  const start = opts.startPosition ?? 1;
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    numberOfItems: items.length,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: start + i,
+      name: item.name,
+      url: canonicalUrl(item.path),
+    })),
+  } as const;
+}
+
+/**
  * Rating and review markup is PROHIBITED before Phase 3, and then only from
  * genuine moderated reviews with real counts (docs/SEO.md §11 rule 1
  * `[LOCKED]`). This exists so the prohibition is greppable in code, not only
  * in prose.
  */
 export const AGGREGATE_RATING_LD_ALLOWED = false;
+
+/**
+ * `FAQPage` markup requires genuine, VISIBLE, published Q&A on the page
+ * (docs/SEO.md §11 rule 2 `[LOCKED]`). No public surface renders FAQ content
+ * yet, so no FAQ markup may be emitted. Greppable, like the rule above.
+ */
+export const FAQ_LD_ALLOWED = false;

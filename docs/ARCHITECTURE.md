@@ -851,26 +851,36 @@ purpose.
 ### 21.2 Structure — one component tree, two data sources
 
 ```
+lib/view/firm-view.ts     ← THE canonical FirmView. One definition, no variants.
+
 components/public/firm-profile/
-  FirmProfile.tsx        ← the shared page body. Used by BOTH routes. No admin imports.
+  FirmProfile.tsx         ← the shared page body. Used by BOTH routes. No admin imports.
   FirmHeader.tsx
+  KeyFacts.tsx
   ChallengeTable.tsx
-  OffersSection.tsx
   RulesSection.tsx
+  PlatformsSection.tsx    ← platforms + instruments
+  OffersSection.tsx
   AffiliateCta.tsx
-  …
+  FirmLogo.tsx
+  Section.tsx             ← section wrapper + the honest "no data" state
 
 app/(public)/prop-firms/[slug]/page.tsx
-      └─ getPublishedFirm(slug) ──────────┐
+      └─ getPublishedFirmView(slug) ──────┐
                                           ├──▶ FirmView ──▶ <FirmProfile firm={…} />
-app/(admin)/preview/firms/[id]/page.tsx   │
+app/(admin)/admin/preview/firms/[id]/page.tsx
       └─ materializeDraft(id) ────────────┘
 ```
 
-**The type is the contract `[LOCKED]`.** `getPublishedFirm()` and `materializeDraft()` return the
-**identical** `FirmView` type. Adding a field to the public view without supplying it from the draft
-materialiser is a **compile error**, not a silent visual difference. This is what makes drift
+**The type is the contract `[LOCKED]`.** `getPublishedFirmView()` and `materializeDraft()` return
+the **identical** `FirmView` type, and both build it through the same `assembleView()` in
+`repositories/public-firm-view.ts`. Adding a field to the public view without supplying it from the
+draft materialiser is a **compile error**, not a silent visual difference. This is what makes drift
 structurally impossible rather than a matter of discipline.
+
+**One profile view model `[LOCKED]`.** There is no second firm-detail shape.
+`repositories/public-firms.ts` owns only the DIRECTORY summary (`FirmSummary`) and the sitemap
+query — genuinely different concerns from a profile — and holds no competing detail type.
 
 **Import boundary `[LOCKED]`:** `components/public/**` must never import from `components/admin/**`.
 Enforced by an ESLint import rule. No admin-only variant of a public component may exist.

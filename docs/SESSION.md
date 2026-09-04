@@ -9,8 +9,9 @@
 
 **Phase 1** — Landing page UI + Master Dashboard + database + dynamic prop firm management.
 
-**Phase 1 §1.1 (Foundation) is done** — the toolchain is initialized (2026-09-04). **No Phase 1
-feature work has started**, and none may start without explicit owner approval.
+**Phase 1 §1.1 (Foundation) is done** — the toolchain is initialized (2026-09-04). **Stages 1-3 of
+Phase 1 feature work are complete** (2026-09-04). No further stage may start without explicit
+owner approval.
 
 ---
 
@@ -42,8 +43,8 @@ application skeleton with no features, no schema, and no business data.
 All 16 documentation defects found in the preflight review have been fixed. The architecture is
 fully locked; **no blocking architectural decision remains.**
 
-**The one outstanding blocker is environmental, not architectural:** the `D:` drive is exFAT, which
-prevents `pnpm build` from completing in place (see "Blocker" below).
+**No blocker remains.** The exFAT problem was resolved by migrating to NTFS (see below); `pnpm
+build` succeeds.
 
 Remaining `[OPEN]` items are non-blocking and each carries a stated default.
 
@@ -53,6 +54,7 @@ Remaining `[OPEN]` items are non-blocking and each carries a stated default.
 
 **Phase 1 / Stage 1 (Database + Foundation) COMPLETE — 2026-09-04.**
 **Phase 1 / Stage 2 (Admin auth + shell + firm workspace) COMPLETE — 2026-09-04.**
+**Phase 1 / Stage 3 (Public firm profile + SEO + preview integration) COMPLETE — 2026-09-04.**
 
 Stage 1 built the schema (26 tables, 1 migration), draft/publish, public/admin
 repository isolation, Argon2id + DB sessions, RBAC, affiliate tracking and the SEO
@@ -79,9 +81,38 @@ Stage 2 built, on top of it:
   no JSON-LD, 404 to anonymous, inert affiliate CTA with no `/go/` href.
 - **Audit log viewer** — read-only, permission-gated, append-only preserved.
 
+Stage 3 built the public firm surface:
+
+- **Canonical view model** — `src/lib/view/firm-view.ts`. `getPublishedFirmView()` and
+  `materializeDraft()` now return the **identical** `FirmView`, both assembled by the
+  same `assembleView()`. The old narrow `FirmView` in `firm-draft.ts` and the competing
+  `PublicFirm` / `PublicChallenge` detail types are **gone** — there is one profile view
+  model, one assembly path (`ARCHITECTURE.md` §21.2 `[LOCKED]`).
+- **`FirmProfile`** — `components/public/firm-profile/`. **One** implementation, rendered
+  by both `/prop-firms/{slug}` and `/admin/preview/firms/{id}`. No `AdminFirmProfile`,
+  no `PreviewFirmProfile`. The `preview` prop changes exactly one thing: the affiliate
+  CTA renders inert with no `/go/` href.
+- **`/prop-firms`** — server-rendered directory with a no-JavaScript GET filter form,
+  crawlable pagination, country/platform/verified filters, and two distinct empty states
+  ("nothing published yet" vs "nothing matches these filters").
+- **`/prop-firms/{slug}`** — profile with metadata, self-referencing canonical, Open
+  Graph, visible breadcrumbs, `WebPage` + `BreadcrumbList` JSON-LD, and 301/308 slug
+  redirects via the `redirects` table. Draft, archived and soft-deleted firms 404.
+- **Thin-content gate** — `isIndexable()` ships a stub profile as `noindex, follow` and
+  excludes it from the sitemap, so the two can never disagree.
+- **Sitemap** — generated from the database, `lastmod` from each firm's real
+  `updated_at`, never `now()`.
+- **Currency honesty** — one shared `Intl` formatter; every amount renders with its own
+  source currency, nothing is converted, and a "from" price is withheld when a firm's
+  prices span currencies.
+- **Tests** — 203 passing. Added: firm-profile rendering and affiliate-safety, source-level
+  architecture invariants (§21.9 cases 17, 19–22), the public read path against real
+  PostgreSQL, SEO templates, and the display formatters.
+
 Deliberately NOT built (awaiting approval):
 
-- ❌ No public homepage, firm pages, challenge/review/payout pages, comparison UI
+- ❌ No homepage, challenge detail pages, review/payout system, comparison UI, blog
+- ❌ No `/go/{slug}` affiliate redirect route yet — see Known issues
 - ❌ No business or prop-firm data of any kind
 - ❌ No Neon connection, no production credentials, no deployment
 
@@ -137,15 +168,21 @@ only to keep the working tree clean. It can be suppressed by patching
 
 ## Next step
 
-**Owner approves Phase 1 feature work.** The toolchain is initialized and fully verified on NTFS.
+**Owner approves Phase 1 / Stage 4.** Stages 1–3 are complete and verified.
 
 1. ✅ Documentation, architecture, brand migration — complete 2026-09-03.
 2. ✅ Git identity configured (`Koushik <koushikranjit8@gmail.com>`).
 3. ✅ Initialization executed — complete 2026-09-04.
 4. ✅ exFAT build blocker resolved — migrated to NTFS 2026-09-04.
-5. ⬜ Owner approves Phase 1 feature work.
+5. ✅ Stage 1 (database + foundation) — 2026-09-04.
+6. ✅ Stage 2 (admin auth + shell + firm workspace) — 2026-09-04.
+7. ✅ Stage 3 (public firm profile + SEO + preview integration) — 2026-09-04.
+8. ⬜ Owner approves Stage 4.
 
-Schema authoring (`INITIALIZATION.md` §11 step B) remains a **separate gated step**.
+The nearest unbuilt pieces, in dependency order: the `/go/{slug}` affiliate redirect
+route, the iframe split-pane preview in the workspace (`ARCHITECTURE.md` §21.4), the
+remaining workspace tabs that populate challenges/rules/platforms/instruments/offers,
+and caching with revalidation tags. **None may start without approval.**
 
 ---
 
@@ -186,8 +223,7 @@ Schema authoring (`INITIALIZATION.md` §11 step B) remains a **separate gated st
 
 ## In progress
 
-Nothing. Initialization complete; blocked on the exFAT filesystem decision before `pnpm build`
-can run in place.
+Nothing. Stage 3 is complete and committed; awaiting owner approval for Stage 4.
 
 ### Deviations from `INITIALIZATION.md`, and why `[recorded 2026-09-04]`
 
@@ -352,7 +388,7 @@ Computed WCAG ratios, not estimates. Three constraints came out of the new palet
 
 ## Known issues
 
-**No blocking issues.** The four below are open items with agreed handling, not blockers.
+**No blocking issues.** The items below are open with agreed handling, not blockers.
 
 | #   | Issue                                                                                                                                                                         | Impact                                                                                               | Handling                                                                                                               |
 | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -361,6 +397,9 @@ Computed WCAG ratios, not estimates. Three constraints came out of the new palet
 | 2   | **Wordmark typeface unconfirmed**                                                                                                                                             | Display face cannot be deliberately matched or contrasted against Inter                              | Non-blocking. Default: Inter throughout (`DESIGN.md` §4.1)                                                             |
 | 3   | **No separate requirements document exists.** The specification came from the instruction messages in this session; nothing was found in the workspace or session attachments | Documentation is built from that specification — any requirement not stated there is absent          | Confirm the docs capture the intent, or supply the missing source                                                      |
 | 4   | Two MCP connectors (Crypto.com, Webflow) require authorisation                                                                                                                | None on this project                                                                                 | Ignore, or authorise in claude.ai connector settings                                                                   |
+| 5   | **`/go/{slug}` is not built.** `FirmProfile` renders a tracked CTA whenever `hasAffiliateLink` is true, and that href would 404 today                                          | None in practice: no affiliate link can exist yet, so the CTA always falls back to a plain outbound link. It becomes real the moment an affiliate link is stored | Build `/go/{slug}` in Stage 4 on the existing `resolveAffiliateLink` / `recordAffiliateClick` services (`ARCHITECTURE.md` §11) |
+| 6   | **A `redirects` row with `status_code = 410` currently 404s** rather than returning a true 410                                                                                 | A deliberately-removed URL reports "not found" instead of "gone" — a weaker but not incorrect signal | Needs the URL-normalisation middleware (`SEO.md` §3.3, §8), which is not built yet                                     |
+| 7   | **Public pages are `force-dynamic`.** No ISR, no cache tags                                                                                                                   | Correct but unoptimised; every request hits the database                                             | Caching and revalidation tags are a later stage (`ARCHITECTURE.md` §8)                                                 |
 
 **Resolved 2026-09-03:** all 17 blocking decisions, including the draft model, framework, and
 canonical domain.
@@ -383,3 +422,4 @@ canonical domain.
 | 2026-09-04 | **Migrated exFAT → NTFS.** Copied to `C:ProjectsProp Firm Lenz` with full git history; D: retained as backup. Removed `nodeLinker: hoisted`; **isolated linker restored and verified**. Fresh `pnpm install` (774 pkgs). | format ✅ typecheck ✅ lint ✅ test ✅ **build ✅ (5.0s)** dev ✅ (519ms) · logos checksum-identical |
 | 2026-09-04 | **Phase 1 Stage 1: database + application foundation.** 26 tables, 1 migration (67 CHECKs, append-only triggers), draft/publish with optimistic concurrency, public/admin repository isolation, Argon2id + DB sessions, RBAC, affiliate tracking, SEO foundation. Added `uuid` (UUIDv7) and `@electric-sql/pglite` (real-Postgres tests). | format ✅ typecheck ✅ lint ✅ **87 tests ✅** build ✅ db:check ✅ |
 | 2026-09-04 | **Phase 1 Stage 2: admin auth, shell and prop firm workspace.** Login/logout, Edge middleware + per-route RBAC, sidebar shell, dashboard with live counts only, firm list with validated server-side query, create + id-keyed workspace, draft/publish/discard wired to the Stage 1 service, preview route (noindex, no canonical/OG/JSON-LD, 404 anonymous, inert affiliate CTA), audit log viewer. No new dependencies. | format ✅ typecheck ✅ lint ✅ **120 tests ✅** build ✅ (21 routes) db:check ✅ |
+| 2026-09-04 | **Phase 1 Stage 3: public firm profile, SEO architecture and preview integration.** Unified the two competing view models into the canonical `FirmView` (`lib/view/firm-view.ts`); `getPublishedFirmView()` and `materializeDraft()` now share `assembleView()`. Built the single `FirmProfile` component tree used by both the public route and the admin preview, `/prop-firms` (filters, crawlable pagination, honest empty states) and `/prop-firms/{slug}` (metadata, canonical, OG, breadcrumbs, WebPage + BreadcrumbList JSON-LD, 301/308 slug redirects). Database-driven sitemap with a thin-content gate. No new dependencies. | format ✅ typecheck ✅ lint ✅ **203 tests ✅** build ✅ (24 routes) |

@@ -14,7 +14,7 @@ import {
   ROLES,
   seedRolesAndPermissions,
 } from "@/lib/auth/permissions";
-import { getPublishedFirmBySlug } from "@/lib/repositories/public-firms";
+import { getPublishedFirmView } from "@/lib/repositories/public-firm-view";
 import {
   listAdminFirms,
   getAdminFirmById,
@@ -173,7 +173,7 @@ describe("admin firm management", () => {
       expect(firm!.dataCompletenessScore).toBeNull();
 
       // Not public.
-      expect(await getPublishedFirmBySlug(db, "example-firm-a")).toBeNull();
+      expect(await getPublishedFirmView(db, "example-firm-a")).toBeNull();
     });
 
     it("writes an audit entry", async () => {
@@ -282,7 +282,7 @@ describe("admin firm management", () => {
       });
       await publishFirm(db, { adminUserId: publisherId, firmId: id });
 
-      const before = await getPublishedFirmBySlug(db, "example-firm-a");
+      const before = await getPublishedFirmView(db, "example-firm-a");
 
       const result = await saveFirmEdits(db, {
         adminUserId: editorId,
@@ -292,7 +292,7 @@ describe("admin firm management", () => {
 
       expect(result.mode).toBe("draft");
 
-      const after = await getPublishedFirmBySlug(db, "example-firm-a");
+      const after = await getPublishedFirmView(db, "example-firm-a");
       // The public response is byte-identical, INCLUDING updated_at.
       expect(after).toEqual(before);
       expect(after!.tagline).toBeNull();

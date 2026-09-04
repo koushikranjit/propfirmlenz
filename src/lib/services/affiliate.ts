@@ -146,26 +146,9 @@ export async function countReportableClicks(
 }
 
 /**
- * The outbound link attributes required on every affiliate anchor
- * (docs/SEO.md §12 `[LOCKED]`).
+ * Link CONSTRUCTION lives in `@/lib/affiliate/link` — dependency-free, so the
+ * public component tree can render a CTA without importing this module and
+ * dragging the database driver with it. Re-exported so call sites that already
+ * import from the service keep working, and so there is still one definition.
  */
-export const AFFILIATE_REL = "sponsored nofollow noopener" as const;
-
-/**
- * Builds the tracked href. Returns null under preview, so the CTA renders with
- * correct styling and copy but NO href — no request is issued, so there is
- * nothing to attribute (docs/ARCHITECTURE.md §21.7 `[LOCKED]`).
- */
-export function affiliateHref(
-  firmSlug: string,
-  opts: { placement?: string; campaign?: string; isPreview?: boolean } = {},
-): string | null {
-  if (opts.isPreview) return null;
-
-  const params = new URLSearchParams();
-  if (opts.placement) params.set("p", opts.placement);
-  if (opts.campaign) params.set("c", opts.campaign);
-  const query = params.toString();
-
-  return `/go/${firmSlug}${query ? `?${query}` : ""}`;
-}
+export { AFFILIATE_REL, affiliateHref } from "@/lib/affiliate/link";
