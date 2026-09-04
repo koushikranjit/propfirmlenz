@@ -89,7 +89,14 @@ export interface FirmDirectoryFilters {
   verifiedOnly?: boolean | undefined;
 }
 
-export type FirmDirectorySort = "featured" | "name" | "newest";
+/**
+ * `recently_verified` orders by the real `verified_at` timestamp an admin wrote
+ * when they checked the firm's data against its published sources. It is NOT
+ * `updated_at`, which changes for unrelated reasons and would misrepresent an
+ * edit as a verification (docs/PROJECT.md §6.6 `[LOCKED]`).
+ */
+export type FirmDirectorySort =
+  "featured" | "name" | "newest" | "recently_verified";
 
 export interface FirmDirectoryQuery extends FirmDirectoryFilters {
   sort?: FirmDirectorySort | undefined;
@@ -154,11 +161,13 @@ export async function listPublishedFirmSummaries(
       ? [asc(propFirms.name)]
       : query.sort === "newest"
         ? [desc(propFirms.publishedAt), asc(propFirms.name)]
-        : [
-            desc(propFirms.isFeatured),
-            asc(propFirms.displayOrder),
-            asc(propFirms.name),
-          ];
+        : query.sort === "recently_verified"
+          ? [desc(propFirms.verifiedAt), asc(propFirms.name)]
+          : [
+              desc(propFirms.isFeatured),
+              asc(propFirms.displayOrder),
+              asc(propFirms.name),
+            ];
 
   const rows = await db
     .select(summaryColumns)
@@ -264,6 +273,39 @@ export async function listPublishedFirmSlugs(
     .from(propFirms)
     .where(livePublished)
     .orderBy(asc(propFirms.slug));
+}
+
+/**
+ * Platform facets — each with the number of PUBLISHED firms that support it.
+ *
+ * Powers the homepage's browse-by pathways. Every entry maps to a directory
+ * filter that already exists (`/prop-firms?platform={slug}`), so no link can
+ * point at an unbuilt route, and the count is computed from stored rows rather
+ * than asserted (CLAUDE.md §3).
+ */
+export interface PlatformFacet {
+  name: string;
+  slug: string;
+  firmCount: number;
+}
+
+export async function listPublishedPlatformFacets(
+  db: Database,
+  limit = 8,
+): Promise<PlatformFacet[]> {
+  return db
+    .select({
+      name: platforms.name,
+      slug: platforms.slug,
+      firmCount: sql<number>`count(distinct ${propFirms.id})::int`,
+    })
+    .from(platforms)
+    .innerJoin(firmPlatforms, eq(firmPlatforms.platformId, platforms.id))
+    .innerJoin(propFirms, eq(propFirms.id, firmPlatforms.propFirmId))
+    .where(and(eq(platforms.status, "published"), livePublished))
+    .groupBy(platforms.id, platforms.name, platforms.slug)
+    .orderBy(desc(sql`count(distinct ${propFirms.id})`), asc(platforms.name))
+    .limit(Math.min(Math.max(limit, 1), 24));
 }
 
 /** Country facets for the directory filter, computed from published rows only. */

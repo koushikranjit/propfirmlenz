@@ -119,6 +119,26 @@ Stage 3 built the public firm surface:
 - **`CLAUDE.md` rule 35** — now names `getPublishedFirmView()`, the actual canonical
   function. Rule substance unchanged.
 
+**Stage 4 (2026-09-04)** built the public landing page at `/`:
+
+- **Homepage** — hero, GET-form search into the directory, alphabetical firm grid,
+  trust/methodology section, browse-by facets, recently-checked list, closing CTA
+  and a definitional "what to compare" section. Server-rendered, database-driven,
+  no client JavaScript except the error boundary React requires.
+- **Site chrome** — sticky responsive header with a `<details>` mobile menu (no
+  client JS) and a three-column footer. Navigation links ONLY to built routes;
+  payouts, reviews and comparison appear as text with their phase, never as
+  links that would 404.
+- **Ordering** — the firm grid is alphabetical and labelled as such. `is_featured`
+  exists but has no published methodology, and PROJECT.md §7 rule 10 requires a
+  neutral published rule, so it is deliberately not used as a homepage signal.
+- **Repository** — two narrow additions to the existing public directory
+  repository: a `recently_verified` sort (on the real `verified_at`, never
+  `updated_at`) and `listPublishedPlatformFacets`. No new firm view model.
+- **SEO** — self-canonical `https://propfirmlenz.com`, unique title/description,
+  Open Graph, `WebSite` (with a SearchAction pointing at the search that
+  genuinely exists) and `WebPage`. Organization stays in the layout, unduplicated.
+
 Deliberately NOT built (awaiting approval):
 
 - ❌ No homepage, challenge detail pages, review/payout system, comparison UI, blog
@@ -177,7 +197,7 @@ only to keep the working tree clean. It can be suppressed by patching
 
 ## Next step
 
-**Owner approves Phase 1 / Stage 4.** Stages 1–3 are complete and verified.
+**Owner approves the next stage.** Stages 1–4 are complete and verified.
 
 1. ✅ Documentation, architecture, brand migration — complete 2026-09-03.
 2. ✅ Git identity configured (`Koushik <koushikranjit8@gmail.com>`).
@@ -187,13 +207,15 @@ only to keep the working tree clean. It can be suppressed by patching
 6. ✅ Stage 2 (admin auth + shell + firm workspace) — 2026-09-04.
 7. ✅ Stage 3 (public firm profile + SEO + preview integration) — 2026-09-04.
 8. ✅ Stage 3.1 (public affiliate route + documentation hardening) — 2026-09-04.
-9. ⬜ Owner approves Stage 4.
+9. ✅ Stage 4 (public homepage) — 2026-09-04.
+10. ⬜ Owner approves the next stage.
 
 The nearest unbuilt pieces, in dependency order: the iframe split-pane preview in the
 workspace (`ARCHITECTURE.md` §21.4), the remaining workspace tabs that populate
 challenges/rules/platforms/instruments/offers, the affiliate-link admin UI that makes
-`/go/{slug}` reachable with real data, and caching with revalidation tags.
-**None may start without approval.**
+`/go/{slug}` reachable with real data, the trust and legal pages (`/about`,
+`/methodology`, `/disclosure`, `/privacy`, `/terms` — Phase 1 scope, still unbuilt),
+and caching with revalidation tags. **None may start without approval.**
 
 ---
 
@@ -234,7 +256,7 @@ challenges/rules/platforms/instruments/offers, the affiliate-link admin UI that 
 
 ## In progress
 
-Nothing. Stage 3 is complete and committed; awaiting owner approval for Stage 4.
+Nothing. Stage 4 is complete and committed; awaiting owner approval for the next stage.
 
 ### Deviations from `INITIALIZATION.md`, and why `[recorded 2026-09-04]`
 
@@ -409,7 +431,8 @@ Computed WCAG ratios, not estimates. Three constraints came out of the new palet
 | 3   | **No separate requirements document exists.** The specification came from the instruction messages in this session; nothing was found in the workspace or session attachments | Documentation is built from that specification — any requirement not stated there is absent          | Confirm the docs capture the intent, or supply the missing source                                                      |
 | 4   | Two MCP connectors (Crypto.com, Webflow) require authorisation                                                                                                                | None on this project                                                                                 | Ignore, or authorise in claude.ai connector settings                                                                   |
 | 5   | **A `redirects` row with `status_code = 410` currently 404s** rather than returning a true 410                                                                                 | A deliberately-removed URL reports "not found" instead of "gone" — a weaker but not incorrect signal | Needs the URL-normalisation middleware (`SEO.md` §3.3, §8), which is not built yet                                     |
-| 6   | **Public pages are `force-dynamic`.** No ISR, no cache tags                                                                                                                   | Correct but unoptimised; every request hits the database                                             | Caching and revalidation tags are a later stage (`ARCHITECTURE.md` §8)                                                 |
+| 6   | **Vitest worker cap.** `maxWorkers: 2` in `vitest.config.mts`                                                                                                       | Five test files each boot a PostgreSQL-in-WASM instance; at the default worker count they exhausted memory and killed a fork mid-run, surfacing as a spurious "worker exited unexpectedly" with a different pass count each time | Capped at 2 workers, verified stable across repeated runs. Raise only with a measured check                            |
+| 7   | **Public pages are `force-dynamic`.** No ISR, no cache tags                                                                                                                   | Correct but unoptimised; every request hits the database                                             | Caching and revalidation tags are a later stage (`ARCHITECTURE.md` §8)                                                 |
 
 **Resolved 2026-09-03:** all 17 blocking decisions, including the draft model, framework, and
 canonical domain.
@@ -434,3 +457,4 @@ canonical domain.
 | 2026-09-04 | **Phase 1 Stage 2: admin auth, shell and prop firm workspace.** Login/logout, Edge middleware + per-route RBAC, sidebar shell, dashboard with live counts only, firm list with validated server-side query, create + id-keyed workspace, draft/publish/discard wired to the Stage 1 service, preview route (noindex, no canonical/OG/JSON-LD, 404 anonymous, inert affiliate CTA), audit log viewer. No new dependencies. | format ✅ typecheck ✅ lint ✅ **120 tests ✅** build ✅ (21 routes) db:check ✅ |
 | 2026-09-04 | **Phase 1 Stage 3: public firm profile, SEO architecture and preview integration.** Unified the two competing view models into the canonical `FirmView` (`lib/view/firm-view.ts`); `getPublishedFirmView()` and `materializeDraft()` now share `assembleView()`. Built the single `FirmProfile` component tree used by both the public route and the admin preview, `/prop-firms` (filters, crawlable pagination, honest empty states) and `/prop-firms/{slug}` (metadata, canonical, OG, breadcrumbs, WebPage + BreadcrumbList JSON-LD, 301/308 slug redirects). Database-driven sitemap with a thin-content gate. No new dependencies. | format ✅ typecheck ✅ lint ✅ **203 tests ✅** build ✅ (24 routes) |
 | 2026-09-04 | **Phase 1 Stage 3.1: public affiliate routing + documentation hardening.** Built `/go/{slug}` on the existing `resolveAffiliateLink` / `recordAffiliateClick` services — no resolution logic duplicated. Added `isSafeAffiliateDestination` (application-layer open-redirect guard over the DB's `^https://` CHECK) and pure request-classification helpers (bot, prefetch, device, referrer host, same-origin landing path, allowlisted `p`/`c`). Click is recorded before the 302 `[owner-directed]`; `ARCHITECTURE.md` §11.1–11.3 updated to match. Corrected `CLAUDE.md` rule 35 to name `getPublishedFirmView()`. No new dependencies. | format ✅ typecheck ✅ lint ✅ **244 tests ✅** build ✅ (25 routes) |
+| 2026-09-04 | **Phase 1 Stage 4: public homepage.** Built `/` inside the `(public)` group (the placeholder root route is gone): hero with real computed counts, GET-form search into `/prop-firms`, alphabetical firm grid, trust/methodology section, DB-driven browse-by facets, recently-checked list on real `verified_at`, closing CTA, definitional "what to compare" prose. Rewrote the site header (sticky, `<details>` mobile menu, no client JS) and footer (three columns, affiliate disclosure, unbuilt sections as text not links). Added `loading`/`error`/`not-found` for the public group. Two narrow repository additions; no new firm view model. `WebSite` + `WebPage` JSON-LD only. Capped vitest at 2 workers after PGlite instances exhausted memory. No new dependencies. | format ✅ typecheck ✅ lint ✅ **272 tests ✅** build ✅ (26 routes) |

@@ -127,6 +127,40 @@ export function buildOrganizationLd() {
 }
 
 /**
+ * `WebSite` JSON-LD — the HOME PAGE only (docs/SEO.md §11, ROADMAP §1.6).
+ *
+ * `SearchAction` is included because on-site search genuinely exists: the
+ * directory's `?q=` parameter is a real, server-rendered, tested name search
+ * (`/prop-firms`). SEO.md §11 permits the markup on exactly that condition —
+ * declaring a search box that does not work is a spam signal, so this builder
+ * and that parameter must be changed together.
+ */
+export function buildWebSiteLd() {
+  const home = canonicalUrl("/");
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${home}#website`,
+    name: SITE_NAME,
+    url: home,
+    description: SITE_DESCRIPTION,
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: home,
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${canonicalUrl("/prop-firms")}?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  } as const;
+}
+
+/**
  * `WebPage` JSON-LD. Describes only what the page visibly contains — no
  * counts, prices, or ratings are asserted here (docs/SEO.md §11 rule 2).
  */
