@@ -7,7 +7,7 @@ import { getDb } from "@/lib/db/client";
 import {
   type PayoutWindow,
   getPayoutTotals,
-  listFirmPayoutSummaries,
+  listFirmPayoutLeaderboard,
   listRecentVerifiedPayouts,
 } from "@/lib/repositories/public-payouts";
 import {
@@ -20,6 +20,7 @@ import {
   PayoutTotalsStrip,
   WindowTabs,
 } from "@/components/public/payouts/PayoutViews";
+import { PayoutLeaderboard } from "@/components/public/payouts/Leaderboard";
 
 /**
  * Verified on-chain payouts — docs/PAYOUTS.md §9.
@@ -69,7 +70,7 @@ export default async function PayoutsPage({
   const [totals, recent, firms] = await Promise.all([
     getPayoutTotals(db, window),
     listRecentVerifiedPayouts(db, { window, limit: 25 }),
-    listFirmPayoutSummaries(db, { window, limit: 25 }),
+    listFirmPayoutLeaderboard(db, { window, limit: 50 }),
   ]);
 
   return (
@@ -136,29 +137,17 @@ export default async function PayoutsPage({
                 id="by-firm"
                 className="text-lg font-semibold text-text-primary"
               >
-                By firm
+                Verified payouts by firm
               </h2>
-              <ul className="mt-4 divide-y divide-border-subtle rounded-[14px] border border-border-default bg-bg-card">
-                {firms.map((firm) => (
-                  <li
-                    key={firm.firmSlug}
-                    className="flex flex-wrap items-center justify-between gap-3 px-5 py-4"
-                  >
-                    <Link
-                      href={`/prop-firms/${firm.firmSlug}`}
-                      className="rounded font-medium text-text-primary hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
-                    >
-                      {firm.firmName}
-                    </Link>
-                    <span className="text-sm tabular-nums text-text-muted">
-                      {firm.count} verified payout{firm.count === 1 ? "" : "s"}
-                      {firm.usdValue
-                        ? ` · $${Number(firm.usdValue).toLocaleString("en", { maximumFractionDigits: 0 })} valued`
-                        : ""}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-1 max-w-prose text-sm text-text-muted">
+                Ranked by how many payouts we have verified, not by volume — one
+                large transfer should not outrank a hundred smaller ones on a
+                figure that is already a floor. Amounts are listed per token,
+                because different assets are never added together.
+              </p>
+              <div className="mt-4">
+                <PayoutLeaderboard rows={firms} />
+              </div>
             </section>
           ) : null}
         </>

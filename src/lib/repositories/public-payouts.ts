@@ -2,6 +2,7 @@ import { and, desc, eq, gte, isNotNull, isNull, sql } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
 import {
   blockchainNetworks,
+  media,
   propFirms,
   verifiedPayouts,
 } from "@/lib/db/schema";
@@ -175,6 +176,120 @@ export async function listRecentVerifiedPayouts(
     ...row,
     transactionTimestamp: row.transactionTimestamp.toISOString(),
   }));
+}
+
+export interface LeaderboardToken {
+  symbol: string;
+  decimals: number;
+  /** Exact base-unit sum. Rendered with formatBaseUnits, never divided. */
+  totalBaseUnits: string;
+  largestBaseUnits: string;
+  count: number;
+}
+
+export interface LeaderboardRow {
+  firmName: string;
+  firmSlug: string;
+  logoUrl: string | null;
+  count: number;
+  latestAt: string | null;
+  /** One entry per asset. Different tokens are NEVER added together. */
+  tokens: LeaderboardToken[];
+}
+
+/**
+ * THE PUBLIC LEADERBOARD — docs/PAYOUTS.md §9 `[LOCKED]`.
+ *
+ * Verified on-chain payouts per firm, aggregated PER TOKEN.
+ *
+ * WHY NOT ONE MONEY COLUMN. Every figure here is an exact base-unit integer.
+ * Collapsing USDT and USDC into a single "$" total would assert an exchange
+ * rate nobody recorded — and a dollar figure whose rate cannot be produced is
+ * exactly what `verified_payouts_usd_ck` exists to prevent. So a firm paying
+ * in two assets shows two lines, and a reader can check each against the chain.
+ *
+ * ORDERED BY WHAT WE CAN PROVE: the number of verified payouts. Not by volume,
+ * which would rank a firm that made one large transfer above one that made a
+ * hundred, on a figure that is a floor rather than a total.
+ */
+export async function listFirmPayoutLeaderboard(
+  db: Database,
+  opts: { window?: PayoutWindow; limit?: number } = {},
+  now: Date = new Date(),
+): Promise<LeaderboardRow[]> {
+  const start = windowStart(opts.window ?? "all", now);
+
+  const rows = await db
+    .select({
+      firmName: propFirms.name,
+      firmSlug: propFirms.slug,
+      logoUrl: media.publicUrl,
+      symbol: verifiedPayouts.assetSymbol,
+      decimals: verifiedPayouts.decimals,
+      count: sql<number>`count(*)::int`,
+      totalBaseUnits: sql<string>`sum(${verifiedPayouts.amountBaseUnits})::text`,
+      largestBaseUnits: sql<string>`max(${verifiedPayouts.amountBaseUnits})::text`,
+      latestAt: sql<
+        string | null
+      >`max(${verifiedPayouts.transactionTimestamp})::text`,
+    })
+    .from(verifiedPayouts)
+    .innerJoin(propFirms, eq(propFirms.id, verifiedPayouts.propFirmId))
+    .leftJoin(media, eq(media.id, propFirms.logoMediaId))
+    .where(
+      start
+        ? and(
+            livePublishedFirm,
+            gte(verifiedPayouts.transactionTimestamp, start),
+          )
+        : livePublishedFirm,
+    )
+    .groupBy(
+      propFirms.id,
+      propFirms.name,
+      propFirms.slug,
+      media.publicUrl,
+      verifiedPayouts.assetSymbol,
+      verifiedPayouts.decimals,
+    );
+
+  const byFirm = new Map<string, LeaderboardRow>();
+  for (const row of rows) {
+    if (!isPayoutAddressable(row)) continue;
+
+    const existing = byFirm.get(row.firmSlug) ?? {
+      firmName: row.firmName,
+      firmSlug: row.firmSlug,
+      logoUrl: row.logoUrl,
+      count: 0,
+      latestAt: null,
+      tokens: [],
+    };
+
+    existing.count += row.count;
+    if (
+      row.latestAt &&
+      (!existing.latestAt || row.latestAt > existing.latestAt)
+    ) {
+      existing.latestAt = row.latestAt;
+    }
+    existing.tokens.push({
+      symbol: row.symbol,
+      decimals: row.decimals,
+      totalBaseUnits: row.totalBaseUnits,
+      largestBaseUnits: row.largestBaseUnits,
+      count: row.count,
+    });
+    byFirm.set(row.firmSlug, existing);
+  }
+
+  return [...byFirm.values()]
+    .map((firm) => ({
+      ...firm,
+      tokens: firm.tokens.sort((a, b) => b.count - a.count),
+    }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, Math.min(Math.max(opts.limit ?? 50, 1), 100));
 }
 
 export interface FirmPayoutSummary {
