@@ -11,6 +11,7 @@ import { TrustSection } from "@/components/public/home/TrustSection";
 import { WhatToCompare } from "@/components/public/home/WhatToCompare";
 import { EmptyState } from "@/components/ui/primitives";
 import { getDb } from "@/lib/db/client";
+import { env } from "@/lib/validation/env";
 import {
   countPublishedFirms,
   listPublishedFirmCountries,
@@ -63,32 +64,33 @@ export function generateMetadata(): Metadata {
 }
 
 export default async function HomePage() {
-  const db = getDb();
+  const data = env.DATABASE_URL
+    ? await (async () => {
+        const db = getDb();
+        const [firms, firmCount, verifiedCount, recentlyVerified, platforms, countries] = await Promise.all([
+          listPublishedFirmSummaries(db, { sort: "name", pageSize: HOME_FIRM_LIMIT }),
+          countPublishedFirms(db),
+          countPublishedFirms(db, { verifiedOnly: true }),
+          listPublishedFirmSummaries(db, {
+            sort: "recently_verified",
+            verifiedOnly: true,
+            pageSize: RECENTLY_VERIFIED_LIMIT,
+          }),
+          listPublishedPlatformFacets(db, 8),
+          listPublishedFirmCountries(db),
+        ]);
+        return { firms, firmCount, verifiedCount, recentlyVerified, platforms, countries };
+      })()
+    : {
+        firms: [],
+        firmCount: 0,
+        verifiedCount: 0,
+        recentlyVerified: [],
+        platforms: [],
+        countries: [],
+      };
 
-  const [
-    firms,
-    firmCount,
-    verifiedCount,
-    recentlyVerified,
-    platforms,
-    countries,
-  ] = await Promise.all([
-    listPublishedFirmSummaries(db, {
-      sort: "name",
-      pageSize: HOME_FIRM_LIMIT,
-    }),
-    countPublishedFirms(db),
-    countPublishedFirms(db, { verifiedOnly: true }),
-    listPublishedFirmSummaries(db, {
-      sort: "recently_verified",
-      verifiedOnly: true,
-      pageSize: RECENTLY_VERIFIED_LIMIT,
-    }),
-    listPublishedPlatformFacets(db, 8),
-    listPublishedFirmCountries(db),
-  ]);
-
-  // A firm can only appear here with a real verification date behind it.
+  const { firms, firmCount, verifiedCount, recentlyVerified, platforms, countries } = data;
   const verified = recentlyVerified.filter((firm) => firm.verifiedAt !== null);
 
   return (
