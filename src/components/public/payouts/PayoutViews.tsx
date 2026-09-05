@@ -1,9 +1,5 @@
 import Link from "next/link";
-import type {
-  PayoutTotals,
-  PayoutWindow,
-  PublicPayout,
-} from "@/lib/repositories/public-payouts";
+import type { PublicPayout } from "@/lib/repositories/public-payouts";
 import { formatBaseUnits } from "@/lib/blockchain/provider";
 import { formatDate } from "@/lib/view/format";
 
@@ -20,94 +16,6 @@ import { formatDate } from "@/lib/view/format";
  *     on-chain payouts from wallets we happen to track — a floor, never a
  *     firm's total payout volume.
  */
-
-const WINDOW_LABEL: Record<PayoutWindow, string> = {
-  "24h": "Last 24 hours",
-  "7d": "Last 7 days",
-  "30d": "Last 30 days",
-  all: "All time",
-};
-
-const WINDOWS: PayoutWindow[] = ["24h", "7d", "30d", "all"];
-
-/** Real anchors, so the windows work without JavaScript and stay linkable. */
-export function WindowTabs({ current }: { current: PayoutWindow }) {
-  return (
-    <nav aria-label="Time period" className="mt-8">
-      <ul className="flex flex-wrap gap-2">
-        {WINDOWS.map((window) => {
-          const active = window === current;
-          return (
-            <li key={window}>
-              <Link
-                href={`/payouts?window=${window}`}
-                aria-current={active ? "page" : undefined}
-                className={
-                  "inline-flex rounded-[10px] border px-4 py-2 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base " +
-                  (active
-                    ? "border-brand-cyan/50 bg-bg-elevated text-brand-cyan"
-                    : "border-border-default bg-bg-card text-text-secondary hover:border-border-strong hover:text-text-primary")
-                }
-              >
-                {WINDOW_LABEL[window]}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
-  );
-}
-
-/** Headline figures. Every one is counted, never estimated. */
-export function PayoutTotalsStrip({ totals }: { totals: PayoutTotals }) {
-  const usd = (value: string | null) =>
-    value === null
-      ? null
-      : `$${Number(value).toLocaleString("en", { maximumFractionDigits: 0 })}`;
-
-  const stats: { label: string; value: string | null; note?: string }[] = [
-    { label: "Verified payouts", value: String(totals.count) },
-    {
-      label: "Verified value",
-      value: usd(totals.usdValue),
-      // Said plainly: a sum over only the payouts we could price would
-      // otherwise read as a sum over all of them.
-      ...(totals.usdValuedCount < totals.count
-        ? {
-            note: `${totals.usdValuedCount} of ${totals.count} priced`,
-          }
-        : {}),
-    },
-    { label: "Largest verified", value: usd(totals.largestUsd) },
-    { label: "Average verified", value: usd(totals.averageUsd) },
-  ];
-
-  return (
-    <dl className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
-      {stats.map((stat) => (
-        <div
-          key={stat.label}
-          className="rounded-[14px] border border-border-default bg-bg-card p-4"
-        >
-          <dt className="text-xs font-semibold uppercase tracking-wide text-text-muted">
-            {stat.label}
-          </dt>
-          <dd className="mt-1 text-xl font-semibold tabular-nums text-text-primary">
-            {stat.value ?? (
-              <span className="text-sm font-normal italic text-text-muted">
-                Not available
-              </span>
-            )}
-          </dd>
-          {stat.note ? (
-            <p className="mt-1 text-xs text-text-muted">{stat.note}</p>
-          ) : null}
-        </div>
-      ))}
-    </dl>
-  );
-}
 
 /** Truncates an address for display. The full value stays in the explorer link. */
 function shortAddress(address: string): string {
