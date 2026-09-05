@@ -1,4 +1,5 @@
 import type { DraftPayload } from "@/lib/validation/draft";
+import { resolveCouponCode } from "@/lib/offers/coupon";
 import {
   type FirmView,
   type FirmViewAnnouncement,
@@ -558,7 +559,14 @@ function overlayOffers(
     });
   }
 
-  return [...byId.values()];
+  // Resolved on the way out, exactly as the published query does it, so the
+  // preview shows the code the public page will show — including where a draft
+  // cleared it back to nothing (CLAUDE.md §12.4f rule 34: the preview is not a
+  // second implementation).
+  return [...byId.values()].map((offer) => ({
+    ...offer,
+    code: resolveCouponCode(offer.code),
+  }));
 }
 
 /* ---------------------------------------------------------------- affiliate */

@@ -1,5 +1,6 @@
 import { and, asc, desc, eq, isNotNull, isNull, or, sql } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
+import { resolveCouponCode } from "@/lib/offers/coupon";
 import {
   affiliateLinks,
   challenges,
@@ -351,8 +352,13 @@ export async function assembleView(
     platforms: platformRows,
     instruments: instrumentRows,
     rules: ruleRows.map(toViewRule),
+    // The coupon code is resolved HERE, in the data layer, so the profile, the
+    // admin preview and /offers all receive the same value and none of them
+    // spells the default out for itself. A stored code always wins; this only
+    // fills the gap where none was entered.
     offers: offerRows.map((o) => ({
       ...o,
+      code: resolveCouponCode(o.code),
       endsAt: o.endsAt?.toISOString() ?? null,
     })),
     announcements: announcementRows.map((a) => ({

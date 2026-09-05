@@ -69,7 +69,7 @@ export function SiteHeader() {
   const market = searchParams.get("market");
   const secondaryNav = [
     { href: "/", label: "Home", active: pathname === "/" },
-    { href: "/prop-firms?view=offers", label: "Offers", active: pathname === "/prop-firms" && searchParams.get("view") === "offers" },
+    { href: "/offers", label: "Offers", active: pathname === "/offers" },
     { href: "/prop-firms?view=challenges", label: "Challenges", active: pathname === "/prop-firms" && searchParams.get("view") === "challenges" },
     { href: "/prop-firms?sort=popular", label: "Best Sellers", active: pathname === "/prop-firms" && searchParams.get("sort") === "popular" },
     { href: "/prop-firms?verified=true", label: "Reviews", active: pathname === "/prop-firms" && searchParams.get("verified") === "true" },

@@ -4,6 +4,8 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { FirmLogo } from "@/components/public/firm-profile/FirmLogo";
 import type { FirmSummary } from "@/lib/repositories/public-firms";
+import type { PublicOffer } from "@/lib/repositories/public-offers";
+import { formatPercent } from "@/lib/view/format";
 
 type Market = "forex" | "futures" | "crypto";
 
@@ -38,35 +40,51 @@ function CopyCode({ code }: { code: string }) {
   );
 }
 
-function OfferCard({ firm, index }: { firm: FirmSummary; index: number }) {
-  const discounts = ["20% OFF", "30% OFF", "40% OFF", "10% OFF", "25% OFF", "45% OFF"];
-  const codes = ["MATCH20", "MATCH30", "MATCH40", "LENZ10", "MATCH25", "MATCH45"];
+/**
+ * One real, published offer.
+ *
+ * The discount figure and the code are whatever the database holds — the code
+ * falling back to the system default, resolved in the data layer, never spelled
+ * out here. Where a firm published no percentage the badge is simply absent
+ * (CLAUDE.md §3 `[LOCKED]`: a discount is never invented to fill a card).
+ */
+function OfferCard({ offer }: { offer: PublicOffer }) {
+  const discount =
+    offer.discountType === "percent" ? formatPercent(offer.discountValue) : null;
+
   return (
     <div className="flex min-w-0 items-center gap-3 rounded-xl border border-border-default bg-bg-card p-3 transition-colors hover:border-brand-cyan/60">
-      <Link href={`/prop-firms/${firm.slug}`} className="flex min-w-0 flex-1 items-center gap-3 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan">
-        <FirmLogo logo={firm.logo} size={48} />
+      <Link href={`/prop-firms/${offer.firmSlug}`} className="flex min-w-0 flex-1 items-center gap-3 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan">
+        <FirmLogo logo={offer.logo} size={48} />
         <div className="min-w-0">
-          <p className="truncate text-sm font-bold text-text-primary">{firm.name}</p>
-          <p className="mt-1 text-xs text-brand-cyan">{firm.isVerified ? "Verified data" : "Published profile"}</p>
+          <p className="truncate text-sm font-bold text-text-primary">{offer.firmName}</p>
+          <p className="mt-1 truncate text-xs text-brand-cyan">{offer.title}</p>
         </div>
       </Link>
       <div className="flex shrink-0 flex-col items-end gap-1">
-        <span className="text-xs font-bold text-text-primary">{discounts[index % discounts.length] ?? "OFFER"}</span>
-        <CopyCode code={codes[index % codes.length] ?? "LENZ"} />
+        {discount ? <span className="text-xs font-bold text-text-primary">{discount}</span> : null}
+        <CopyCode code={offer.code} />
       </div>
     </div>
   );
 }
 
-export function ReferencePreview({ firms }: { firms: FirmSummary[] }) {
+export function ReferencePreview({
+  firms,
+  offers,
+}: {
+  firms: FirmSummary[];
+  /** Real published offers, from the same query `/offers` uses. */
+  offers: PublicOffer[];
+}) {
   const [market, setMarket] = useState<Market>("forex");
   const [slide, setSlide] = useState(0);
   const marketLabel = market.charAt(0).toUpperCase() + market.slice(1);
   const visible = useMemo(() => {
-    if (firms.length === 0) return [];
-    const offset = (slide * 3) % firms.length;
-    return Array.from({ length: Math.min(6, firms.length) }, (_, index) => firms[(offset + index) % firms.length]).filter((firm): firm is FirmSummary => Boolean(firm));
-  }, [firms, slide]);
+    if (offers.length === 0) return [];
+    const offset = (slide * 3) % offers.length;
+    return Array.from({ length: Math.min(6, offers.length) }, (_, index) => offers[(offset + index) % offers.length]).filter((offer): offer is PublicOffer => Boolean(offer));
+  }, [offers, slide]);
   const popular = [...firms].slice(0, 3);
 
   return (
@@ -95,11 +113,11 @@ export function ReferencePreview({ firms }: { firms: FirmSummary[] }) {
               </div>
               <div className="flex items-center gap-2">
                 <button type="button" onClick={() => setSlide((current) => Math.max(0, current - 1))} className="size-8 rounded-full border border-border-default text-text-primary hover:border-brand-cyan" aria-label="Previous offers">‹</button>
-                <span className="text-xs text-text-muted">{slide + 1} / {Math.max(1, Math.ceil(firms.length / 3))}</span>
-                <button type="button" onClick={() => setSlide((current) => (current + 1) % Math.max(1, Math.ceil(firms.length / 3)))} className="size-8 rounded-full border border-border-default text-text-primary hover:border-brand-cyan" aria-label="Next offers">›</button>
+                <span className="text-xs text-text-muted">{slide + 1} / {Math.max(1, Math.ceil(offers.length / 3))}</span>
+                <button type="button" onClick={() => setSlide((current) => (current + 1) % Math.max(1, Math.ceil(offers.length / 3)))} className="size-8 rounded-full border border-border-default text-text-primary hover:border-brand-cyan" aria-label="Next offers">›</button>
               </div>
             </div>
-            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{visible.map((firm, index) => <OfferCard key={`${firm.id}-${slide}`} firm={firm} index={index} />)}</div>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{visible.length > 0 ? visible.map((offer) => <OfferCard key={`${offer.id}-${slide}`} offer={offer} />) : <p className="text-sm text-text-muted">No offers are running right now.</p>}</div>
           </div>
           <div className="rounded-2xl border border-brand-violet/70 bg-bg-card/90 p-4 sm:p-5">
             <div className="flex items-center justify-between gap-3">

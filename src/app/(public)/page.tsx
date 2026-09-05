@@ -11,6 +11,7 @@ import { TrustSection } from "@/components/public/home/TrustSection";
 import { WhatToCompare } from "@/components/public/home/WhatToCompare";
 import { EmptyState } from "@/components/ui/primitives";
 import { getDb } from "@/lib/db/client";
+import { listActiveOffers } from "@/lib/repositories/public-offers";
 import { env } from "@/lib/validation/env";
 import {
   countPublishedFirms,
@@ -79,7 +80,10 @@ export default async function HomePage() {
           listPublishedPlatformFacets(db, 8),
           listPublishedFirmCountries(db),
         ]);
-        return { firms, firmCount, verifiedCount, recentlyVerified, platforms, countries };
+        // The SAME query /offers uses, so a discount can never appear in one
+        // place and not the other.
+        const offers = await listActiveOffers(db, { limit: 12 });
+        return { firms, firmCount, verifiedCount, recentlyVerified, platforms, countries, offers };
       })()
     : {
         firms: [],
@@ -88,14 +92,15 @@ export default async function HomePage() {
         recentlyVerified: [],
         platforms: [],
         countries: [],
+        offers: [],
       };
 
-  const { firms, recentlyVerified, platforms, countries } = data;
+  const { firms, recentlyVerified, platforms, countries, offers } = data;
   const verified = recentlyVerified.filter((firm) => firm.verifiedAt !== null);
 
   return (
     <>
-      <ReferencePreview firms={firms} />
+      <ReferencePreview firms={firms} offers={offers} />
       <ReferenceLanding firms={firms} />
 
       <HomeSection

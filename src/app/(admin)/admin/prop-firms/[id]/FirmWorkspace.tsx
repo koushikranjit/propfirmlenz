@@ -38,6 +38,7 @@ import { AffiliateTab, OffersTab, type StagedKey } from "./CommerceTabs";
 import { RulesTab, type StagedRule } from "./RulesTab";
 import { SeoTab } from "./SeoTab";
 import { EssentialsForm, type FirmEssentials } from "./EssentialsForm";
+import { resolveCouponCode } from "@/lib/offers/coupon";
 
 export interface WorkspaceFirm {
   id: string;
@@ -253,7 +254,20 @@ export function FirmWorkspace({
     payoutInfoUrl: firm.payoutInfoUrl,
     affiliateUrl: defaultLink?.destinationUrl ?? null,
     discountTitle: defaultOffer?.title ?? null,
-    discountCode: defaultOffer?.code ?? null,
+    /*
+     * The code arrives pre-filled with `LENZ` — on a new firm, and on an
+     * existing one that never had a code saved. A stored code always wins, so
+     * a firm on `SAVE10` keeps `SAVE10`, and the admin can overwrite the
+     * default at any time.
+     *
+     * Resolved through the shared helper rather than spelled out here, so the
+     * admin sees exactly what the public page will show.
+     *
+     * It is the ONLY defaulted field. Title, percentage, description and
+     * expiry stay empty until an admin enters what the firm actually
+     * published: a default code implies no discount (CLAUDE.md §3 `[LOCKED]`).
+     */
+    discountCode: resolveCouponCode(defaultOffer?.code),
     discountDescription: defaultOffer?.description ?? null,
     discountPercent:
       defaultOffer?.discountType === "percent"

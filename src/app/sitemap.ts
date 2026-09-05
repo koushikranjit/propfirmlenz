@@ -4,6 +4,7 @@ import { getPublishedFirmView } from "@/lib/repositories/public-firm-view";
 import { listPublishedFirmSlugs } from "@/lib/repositories/public-firms";
 import { getPayoutTotals } from "@/lib/repositories/public-payouts";
 import { listPayoutFirmRanking } from "@/lib/repositories/payout-tracker";
+import { countActiveOffers } from "@/lib/repositories/public-offers";
 import { canonicalUrl } from "@/lib/seo/canonical";
 import { firmPath } from "@/lib/seo/firm-seo";
 import { isIndexable } from "@/lib/view/firm-view";
@@ -31,13 +32,14 @@ export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const db = getDb();
-  const [firms, payouts, ranked] = await Promise.all([
+  const [firms, payouts, ranked, offerCount] = await Promise.all([
     listPublishedFirmSlugs(db),
     getPayoutTotals(db, "all"),
     // Only firms that actually HAVE a verified payout: the ranking query
     // cannot return one that does not, so a firm's payout page reaches the
     // sitemap exactly when it has something to show.
     listPayoutFirmRanking(db, { window: "all", limit: 100 }),
+    countActiveOffers(db),
   ]);
 
   // Indexability depends on the assembled profile, so it is decided by the same
@@ -61,6 +63,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "daily",
       priority: 0.9,
     },
+    // Listed only while an offer is actually running: with none live the page
+    // emits noindex, and a noindex URL in a sitemap is the contradictory
+    // signal this file exists to avoid.
+    ...(offerCount > 0
+      ? [
+          {
+            url: canonicalUrl("/offers"),
+            changeFrequency: "daily" as const,
+            priority: 0.7,
+          },
+        ]
+      : []),
     // Original methodology content, and true whether or not anything has been
     // verified yet.
     {
