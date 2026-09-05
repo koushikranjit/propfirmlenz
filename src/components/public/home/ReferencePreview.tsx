@@ -11,9 +11,24 @@ function CopyCode({ code }: { code: string }) {
   const [copied, setCopied] = useState(false);
 
   async function copyCode() {
-    await navigator.clipboard.writeText(code);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1800);
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(code);
+      } else {
+        const input = document.createElement("textarea");
+        input.value = code;
+        input.style.position = "fixed";
+        input.style.opacity = "0";
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand("copy");
+        input.remove();
+      }
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
   }
 
   return (
@@ -81,7 +96,10 @@ export function ReferencePreview({ firms }: { firms: FirmSummary[] }) {
             <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{visible.map((firm, index) => <OfferCard key={`${firm.id}-${slide}`} firm={firm} index={index} />)}</div>
           </div>
           <div className="rounded-2xl border border-brand-violet/70 bg-bg-card/90 p-4 sm:p-5">
-            <h3 className="text-base font-bold text-text-primary">Most researched firms</h3>
+            <div className="flex items-center justify-between gap-3">
+              <h3 className="text-base font-bold text-text-primary">Most popular {marketLabel} prop firms</h3>
+              <span aria-hidden className="text-brand-cyan">◆</span>
+            </div>
             <div className="mt-4 flex flex-col gap-3">{popular.length > 0 ? popular.map((firm, index) => <Link key={firm.id} href={`/prop-firms/${firm.slug}`} className="flex items-center gap-3 rounded-xl border border-border-default bg-bg-near-black p-3 hover:border-brand-cyan/50"><span className="text-lg text-brand-cyan">{index + 1}</span><FirmLogo logo={firm.logo} size={38} /><span className="min-w-0 flex-1 truncate text-sm font-semibold text-text-primary">{firm.name}</span><span className="text-xs text-text-muted">View</span></Link>) : <p className="text-sm text-text-muted">Published firms will appear here.</p>}</div>
           </div>
         </div>
