@@ -13,6 +13,7 @@ import {
 } from "@/lib/validation/payouts";
 import {
   PayoutAdminError,
+  deleteTrackedWallet,
   saveNetwork,
   saveTrackedWallet,
   scanWalletNow,
@@ -33,8 +34,11 @@ import {
  * shared Zod schema, and lets the SERVICE enforce the permission — so a hidden
  * button remains presentation while the check remains security.
  *
- * The verify action is the sharp one: it is the only path by which anything
- * reaches a public payout statistic.
+ * TWO ACTIONS REACH THE PUBLIC FIGURES, and both are a human decision:
+ * `verifyCandidateAction` publishes one transfer, and `saveWalletAction`
+ * publishes every transfer from a wallet an admin marks verified trader
+ * payouts, now and in future (`payout-autopublish.ts`). Nothing unattended
+ * publishes anything.
  */
 
 export interface ActionState {
@@ -76,6 +80,14 @@ function revalidatePayouts(): void {
   revalidatePath("/admin/payouts");
   revalidatePath("/admin/payouts/wallets");
   revalidatePath("/admin/payouts/networks");
+  revalidatePath("/admin/payouts/candidates");
+  revalidatePath("/admin/payouts/verified");
+}
+
+/** Anything that can change a published figure must refresh the public pages. */
+function revalidatePublicPayouts(): void {
+  revalidatePath("/payouts");
+  revalidatePath("/payouts/methodology");
 }
 
 /* ---------------------------------------------------------------- networks */
@@ -176,15 +188,58 @@ export async function saveWalletAction(
       isActive: checked(formData, "isActive"),
     });
 
-    await saveTrackedWallet(getDb(), {
+    const { autoPublished } = await saveTrackedWallet(getDb(), {
       adminUserId: admin.adminUserId,
       input,
+    });
+    revalidatePayouts();
+    if (autoPublished > 0) revalidatePublicPayouts();
+
+    // The message states plainly what marking a wallet verified now does.
+    // An admin must not be able to publish payouts without knowing they did.
+    const verified =
+      input.purpose === "trader_payouts" &&
+      input.verificationStatus === "verified";
+    return {
+      ok: true,
+      message: verified
+        ? `Wallet saved and marked verified trader payouts. Its transfers publish automatically from now on${
+            autoPublished > 0
+              ? `; ${autoPublished} already-collected transfer${
+                  autoPublished === 1 ? "" : "s"
+                } published now`
+              : ""
+          }.`
+        : "Wallet saved. Transactions from it become candidates for review — nothing is published until it is verified.",
+    };
+  } catch (error) {
+    return toActionState(error);
+  }
+}
+
+/**
+ * Retires a wallet. SOFT — published payouts and their evidence are untouched.
+ *
+ * Destructive enough to need confirmation and an audit entry (CLAUDE.md §6),
+ * which is why the UI asks before submitting and the service logs it.
+ */
+export async function deleteWalletAction(
+  _prev: ActionState,
+  formData: FormData,
+): Promise<ActionState> {
+  try {
+    const admin = await requireAdmin();
+    const walletId = z.uuid().parse(formData.get("walletId"));
+
+    await deleteTrackedWallet(getDb(), {
+      adminUserId: admin.adminUserId,
+      walletId,
     });
     revalidatePayouts();
     return {
       ok: true,
       message:
-        "Wallet saved. Transactions from it become candidates for review — nothing is published until a payout is verified.",
+        "Wallet removed. It will not be scanned again; payouts already published from it are unchanged.",
     };
   } catch (error) {
     return toActionState(error);
@@ -204,21 +259,29 @@ export async function scanWalletAction(
       walletId,
     });
     revalidatePayouts();
+    if (result.autoPublished > 0) revalidatePublicPayouts();
 
     // A provider failure is reported as a failure, never as "no payouts".
     if (result.error) {
       return { error: `Scan did not complete: ${result.error}` };
     }
+
+    const published =
+      result.autoPublished > 0
+        ? ` ${result.autoPublished} published automatically from this verified wallet.`
+        : "";
     return {
       ok: true,
       message:
         result.transactionsInserted === 0
           ? `Scan complete. Saw ${result.transfersSeen} transfer${
               result.transfersSeen === 1 ? "" : "s"
-            }; nothing new to record.`
+            }; nothing new to record.${published}`
           : `Scan complete. ${result.transactionsInserted} new transaction${
               result.transactionsInserted === 1 ? "" : "s"
-            }, ${result.candidatesCreated} awaiting review.`,
+            }, ${result.candidatesCreated} candidate${
+              result.candidatesCreated === 1 ? "" : "s"
+            }.${published}`,
     };
   } catch (error) {
     return toActionState(error);

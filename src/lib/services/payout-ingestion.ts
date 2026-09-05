@@ -1,4 +1,4 @@
-import { and, eq, sql } from "drizzle-orm";
+import { and, eq, isNull, sql } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
 import {
   blockchainNetworks,
@@ -28,8 +28,10 @@ import {
  *
  * IT VERIFIES NOTHING. Ingestion records what a chain says and raises a
  * CANDIDATE. Whether that candidate is a trader payout is a separate,
- * auditable decision (`payout-verification.ts`) — a wallet label is a hint,
- * never proof.
+ * auditable decision — a wallet label is a hint, never proof. Callers run
+ * `payout-autopublish.ts` afterwards, which releases candidates only for
+ * wallets a person has already marked verified trader payouts; every other
+ * wallet's candidates wait for `payout-verification.ts`.
  */
 
 export interface ScanResult {
@@ -355,6 +357,9 @@ export async function walletsDueForScan(
     .where(
       and(
         eq(trackedWallets.isActive, true),
+        // A removed wallet stops being scanned. What it already produced,
+        // including anything published, stays exactly where it is.
+        isNull(trackedWallets.deletedAt),
         eq(blockchainNetworks.isActive, true),
       ),
     )

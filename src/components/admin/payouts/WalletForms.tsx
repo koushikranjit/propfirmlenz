@@ -1,9 +1,10 @@
 "use client";
 
 import type * as React from "react";
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
 import {
   type ActionState,
+  deleteWalletAction,
   saveNetworkAction,
   saveWalletAction,
   scanWalletAction,
@@ -14,7 +15,13 @@ import {
   StatusMessage,
   SubmitButton,
 } from "@/components/admin/forms";
-import { Card, Field, Input, Textarea } from "@/components/ui/primitives";
+import {
+  Button,
+  Card,
+  Field,
+  Input,
+  Textarea,
+} from "@/components/ui/primitives";
 import { PROVIDER_KEYS } from "@/lib/validation/payouts";
 import {
   WALLET_PURPOSES,
@@ -28,9 +35,13 @@ import type {
 /**
  * Wallet and network administration — docs/PAYOUTS.md §11.
  *
- * These forms record WHAT WE WATCH. They never record a payout: a wallet's
- * purpose is a researched classification, and every transaction leaving it
- * still has to pass review before it counts (docs/PAYOUTS.md §6 `[LOCKED]`).
+ * These forms record WHAT WE WATCH — and, for one specific combination, they
+ * are also where publishing is authorised. Marking a wallet `trader payouts`
+ * AND `verified` is the human decision that releases its transfers
+ * (docs/PAYOUTS.md §7). Every other wallet's transfers still queue for review.
+ *
+ * The form says so in words, next to the controls that do it. A publishing
+ * decision an admin can make without realising it is not a decision.
  */
 
 const titleCase = (value: string): string =>
@@ -181,6 +192,7 @@ export function WalletForm({
           id={`verificationStatus-${id}`}
           defaultValue={wallet?.verificationStatus ?? "unverified"}
           options={verificationOptions}
+          hint="Verified + trader payouts publishes this wallet's transfers automatically."
         />
         <Checkbox
           id={`isActive-${id}`}
@@ -190,6 +202,17 @@ export function WalletForm({
           hint="Turning this off stops future scans; existing payouts are untouched."
         />
       </div>
+
+      {/* The consequence, stated before the button that causes it. Marking a
+          wallet verified is now a publishing decision, and an admin must not
+          be able to make it without being told. */}
+      <p className="rounded-[10px] border border-border-default bg-bg-elevated px-3.5 py-3 text-sm text-text-secondary">
+        Setting <strong className="text-text-primary">trader payouts</strong>{" "}
+        and <strong className="text-text-primary">verified</strong> together
+        publishes every settled transfer from this address — the ones already
+        collected and every one found from now on. Leave either unset and its
+        transfers stay in the review queue.
+      </p>
 
       <Field
         label="Research notes"
@@ -225,6 +248,83 @@ export function ScanButton({ walletId }: { walletId: string }) {
       <SubmitButton size="sm" pendingLabel="Scanning…">
         Scan now
       </SubmitButton>
+      <StatusMessage state={state} />
+    </form>
+  );
+}
+
+/**
+ * Removes a wallet from tracking.
+ *
+ * TWO STEPS, DELIBERATELY. Destructive actions confirm first (CLAUDE.md §6),
+ * and the confirmation is inline rather than `window.confirm` so it is
+ * styleable, keyboard-operable and announced like the rest of the admin.
+ *
+ * The copy says what actually happens: the removal is soft, so published
+ * payouts survive it. Promising that a delete erases published evidence would
+ * be a lie in the direction that matters most.
+ */
+export function DeleteWalletButton({
+  walletId,
+  label,
+  publishedCount,
+}: {
+  walletId: string;
+  label: string;
+  publishedCount: number;
+}) {
+  const [state, action] = useActionState<ActionState, FormData>(
+    deleteWalletAction,
+    {},
+  );
+  const [confirming, setConfirming] = useState(false);
+
+  if (!confirming) {
+    return (
+      <div className="flex flex-col items-end gap-2">
+        <Button
+          type="button"
+          variant="danger"
+          size="sm"
+          onClick={() => setConfirming(true)}
+        >
+          Remove wallet
+        </Button>
+        <StatusMessage state={state} />
+      </div>
+    );
+  }
+
+  return (
+    <form
+      action={action}
+      className="flex flex-col gap-3 rounded-[10px] border border-danger/40 bg-danger/12 p-4"
+    >
+      <input type="hidden" name="walletId" value={walletId} />
+      <p className="text-sm text-text-primary">
+        Stop tracking <span className="font-medium">{label}</span>?
+      </p>
+      <p className="text-sm text-text-secondary">
+        It will not be scanned again and disappears from this list.
+        {publishedCount > 0
+          ? ` The ${publishedCount} payout${
+              publishedCount === 1 ? "" : "s"
+            } already published from it stay published — removing an address does not un-make the transfers it sent.`
+          : " Nothing has been published from it yet."}
+      </p>
+      <div className="flex flex-wrap gap-2">
+        <SubmitButton variant="danger" size="sm" pendingLabel="Removing…">
+          Yes, remove it
+        </SubmitButton>
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick={() => setConfirming(false)}
+        >
+          Keep it
+        </Button>
+      </div>
       <StatusMessage state={state} />
     </form>
   );

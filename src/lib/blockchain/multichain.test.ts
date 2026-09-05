@@ -13,7 +13,7 @@ import {
   UNCONFIGURED_TOKENS,
 } from "./registry";
 import { TronScanProvider } from "./tronscan";
-import { ProviderError, formatBaseUnits } from "./provider";
+import { ProviderError, formatBaseUnits, normaliseAddress } from "./provider";
 
 /**
  * MULTI-CHAIN, MULTI-TOKEN CONFIGURATION — docs/PAYOUTS.md §3–§6.
@@ -75,13 +75,17 @@ describe("address validation", () => {
     expect(isValidAddressFor("tron", tron)).toBe(true);
   });
 
-  it("lower-cases EVM addresses but never TRON ones", () => {
+  it("produces a matching key that agrees with the ingestion normaliser", () => {
     const mixed = "0xDAC17F958D2ee523a2206206994597C13D831ec7";
-    expect(normaliseAddressFor("evm", mixed)).toBe(mixed.toLowerCase());
+    expect(normaliseAddressFor("evm", mixed)).toBe(normaliseAddress(mixed));
 
-    // TRON base58 is case-SENSITIVE; lower-casing would destroy the address.
+    // TRON included. The matching key is NOT a usable address — the original
+    // is kept in `tracked_wallets.address` — but it must equal what ingestion
+    // writes into `from_address`. If it did not, a wallet would stop matching
+    // its own transfers and read as a firm that never paid anyone.
     const tron = "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t";
-    expect(normaliseAddressFor("tron", tron)).toBe(tron);
+    expect(normaliseAddressFor("tron", tron)).toBe(normaliseAddress(tron));
+    expect(normaliseAddressFor("tron", ` ${tron} `)).toBe(tron.toLowerCase());
   });
 });
 

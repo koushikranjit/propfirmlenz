@@ -96,7 +96,8 @@ tracked wallet -> provider -> blockchain_transactions -> payout_candidates
 - **Idempotent by construction.** Every insert is `onConflictDoNothing` against a unique key
   (`network + hash + transfer index`; one candidate per transaction). Re-running a scan after a
   crash is the intended recovery, not something to avoid.
-- **It verifies nothing.** Ingestion records what a chain says and raises a candidate.
+- **It verifies nothing.** Ingestion records what a chain says and raises a candidate. Callers run
+  auto-publish afterwards (§7.1), which acts only on wallets a person already verified.
 - **Failures are recorded** on the wallet (`last_scan_error`) and surfaced in the admin UI.
 - `confidence` (0–100) ranks the review queue. It decides nothing.
 
@@ -111,15 +112,48 @@ tracked wallet -> provider -> blockchain_transactions -> payout_candidates
 3. its hash is independently checkable, and the row carries the explorer link;
 4. it left a wallet this firm is tracked as paying from, still active;
 5. the asset and an exact non-zero amount are derivable;
-6. **a human holding `firm:verify` decided it is a trader payout.**
+6. **a human decided it is a trader payout.**
 
 Condition 6 is deliberate and non-negotiable. A rule confident enough to auto-verify would be
-confident enough to auto-publish a treasury transfer as a trader payout, and that error is invisible
-once it is in the totals. Nothing approves in bulk.
+confident enough to publish a treasury transfer as a trader payout, and that error is invisible once
+it is in the totals. **No heuristic — confidence score, wallet label alone, amount pattern — may
+ever satisfy condition 6.**
 
 The payout row, the candidate update and the audit event commit in **one transaction**. Every
 transition is appended to `payout_verification_events` with its actor: a published figure nobody can
 account for is indistinguishable from a fabricated one.
+
+### 7.1 Where condition 6 is exercised `[owner-directed 2026-09-05]`
+
+Condition 6 is a decision by a person. It may be made in **exactly two places, and nowhere else**:
+
+| Route        | Where                                         | Scope                                    |
+| ------------ | --------------------------------------------- | ---------------------------------------- |
+| Per transfer | `payout-verification.ts`, needs `firm:verify` | that one candidate                       |
+| Per wallet   | `payout-autopublish.ts`, via the wallet form  | every settled transfer from that address |
+
+**Wallet-level verification.** Marking a tracked wallet `purpose = trader_payouts` **and**
+`verification_status = verified` is a standing authorisation for that address. Its transfers then
+publish as they are ingested, and the candidates it already collected are released.
+`verified_by_admin_id` / `verified_at` record who authorised it, and every payout published this way
+is attributed to that person.
+
+Why the decision moved up a level: whether one transfer reached a funded trader is usually not
+visible on-chain, while whether an address is a firm's payout wallet is researchable and stays true
+across thousands of transfers. A queue of ten thousand rows is not a stricter standard — it is the
+same judgement, repeated until nobody makes it.
+
+**What this does not relax `[LOCKED]`:**
+
+- Conditions 1–5 are re-checked **per transfer**, every time: settled, enough confirmations,
+  non-zero, and actually sent from the tracked address.
+- **A human rejection is final.** Auto-publish only picks up candidates at `detected` or
+  `match_review`. It never revisits `rejected` or `unverified`.
+- Wallets at any other purpose or status — `unknown`, `unverified`, `disputed`, inactive, removed —
+  keep queuing for individual review.
+- Withdrawing a wallet's verification stops it publishing immediately and clears its attribution.
+- The trade-off is disclosed on the public methodology page: a verified wallet is a judgement about
+  an **address**, not about each transfer, so a mixed-use wallet can over-count.
 
 ---
 
@@ -166,14 +200,25 @@ A verified-payout claim is only worth something if the reader knows what was act
 
 ## 11. Admin surface
 
-| Route                       | View          | Act                                    |
-| --------------------------- | ------------- | -------------------------------------- |
-| `/admin/payouts`            | `firm:read`   | `firm:verify` (verify / reject / queue) |
-| `/admin/payouts/wallets`    | `firm:read`   | `firm:edit` (record wallets, scan)      |
-| `/admin/payouts/networks`   | `firm:read`   | `catalog:manage`                        |
+| Route                      | View        | Act                                          |
+| -------------------------- | ----------- | -------------------------------------------- |
+| `/admin/payouts`           | `firm:read` | `firm:verify` (verify / reject / queue)      |
+| `/admin/payouts/wallets`   | `firm:read` | `firm:edit` (record, verify, scan, remove)   |
+| `/admin/payouts/networks`  | `firm:read` | `catalog:manage`                             |
+| `/admin/payouts/providers` | `firm:read` | `catalog:manage` (seed registry, test)       |
 
 Permissions are enforced in the **services**; hidden controls are presentation only. Every mutation
 writes an `audit_logs` entry. Research notes on a wallet are admin-only and never rendered publicly.
+
+All payout routes share `PayoutNav`. It is on **every** one of them — a sub-navigation that vanishes
+on the pages it does not cover strands the operator on whichever page they landed on.
+
+**Removing a wallet is soft** (`tracked_wallets.deleted_at`), and cannot be anything else:
+`payout_candidates` and `verified_payouts` reference the wallet with `ON DELETE RESTRICT`, so a hard
+delete would either fail or take published payout history with it. A removed wallet stops being
+scanned, stops auto-publishing and disappears from the admin lists; what it already published stays
+published, because retiring an address does not un-make the transfers it sent. The confirmation step
+says exactly this before the button is pressed.
 
 ---
 

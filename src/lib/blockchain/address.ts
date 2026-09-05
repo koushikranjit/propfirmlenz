@@ -111,16 +111,23 @@ export function isValidAddressFor(
 }
 
 /**
- * The stored matching form.
+ * THE MATCHING KEY — not a display form, and not what is sent to a provider.
  *
- * EVM addresses are case-insensitive, so they are lower-cased. TRON base58 IS
- * case-sensitive — lower-casing one would destroy it — so it is left exactly
- * as the chain writes it.
+ * Lower-cased for EVERY family, TRON included. TRON base58 is genuinely
+ * case-sensitive, so this string is useless as an address — which is the
+ * point: `tracked_wallets.address` keeps the exact original for display and
+ * for the provider call, and this column exists only to be compared.
+ *
+ * It MUST agree with `normaliseAddress()` in `provider.ts`, which is what
+ * writes `blockchain_transactions.from_address`. If the two ever disagree a
+ * wallet's own transfers stop matching it: the transaction count reads zero,
+ * auto-publish finds nothing, and the wallet looks exactly like a firm that
+ * never paid anyone. That silent zero is the worst failure this system can
+ * produce, so the two normalisations are deliberately one rule.
  */
 export function normaliseAddressFor(
-  family: AddressFamily,
+  _family: AddressFamily,
   address: string,
 ): string {
-  const trimmed = address.trim();
-  return family === "evm" ? trimmed.toLowerCase() : trimmed;
+  return address.trim().toLowerCase();
 }

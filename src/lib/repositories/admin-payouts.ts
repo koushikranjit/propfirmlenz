@@ -1,4 +1,4 @@
-import { desc, eq, sql } from "drizzle-orm";
+import { and, desc, eq, isNull, sql } from "drizzle-orm";
 import type { Database } from "@/lib/db/types";
 import {
   adminUsers,
@@ -51,6 +51,7 @@ export async function listNetworks(db: Database): Promise<AdminNetwork[]> {
       walletCount: sql<number>`(
         select count(*)::int from ${trackedWallets}
         where ${trackedWallets.networkId} = ${blockchainNetworks.id}
+          and ${trackedWallets.deletedAt} is null
       )`,
     })
     .from(blockchainNetworks)
@@ -72,6 +73,9 @@ export interface AdminWallet {
   lastCheckedAt: Date | null;
   lastScanError: string | null;
   transactionCount: number;
+  /** Payouts already published from this wallet, without further review. */
+  publishedCount: number;
+  verifiedAt: Date | null;
 }
 
 export async function listTrackedWallets(
@@ -93,6 +97,11 @@ export async function listTrackedWallets(
       networkName: blockchainNetworks.name,
       lastCheckedAt: trackedWallets.lastCheckedAt,
       lastScanError: trackedWallets.lastScanError,
+      verifiedAt: trackedWallets.verifiedAt,
+      publishedCount: sql<number>`(
+        select count(*)::int from ${verifiedPayouts}
+        where ${verifiedPayouts.sourceWalletId} = ${trackedWallets.id}
+      )`,
       // How much chain data this wallet has actually produced — the honest
       // answer to "is this address doing anything?".
       transactionCount: sql<number>`(
@@ -107,12 +116,20 @@ export async function listTrackedWallets(
       blockchainNetworks,
       eq(blockchainNetworks.id, trackedWallets.networkId),
     )
+    // A removed wallet is gone from the admin. Its published payouts remain —
+    // retiring an address does not un-happen the transfers it made.
+    .where(
+      opts.firmId
+        ? and(
+            isNull(trackedWallets.deletedAt),
+            eq(trackedWallets.propFirmId, opts.firmId),
+          )
+        : isNull(trackedWallets.deletedAt),
+    )
     .orderBy(desc(trackedWallets.createdAt))
     .limit(Math.min(Math.max(opts.limit ?? 100, 1), 500));
 
-  return opts.firmId
-    ? query.where(eq(trackedWallets.propFirmId, opts.firmId))
-    : query;
+  return query;
 }
 
 export interface AdminCandidate {

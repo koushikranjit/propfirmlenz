@@ -39,16 +39,20 @@ const STEPS: { title: string; body: string }[] = [
     body: "Transfers leaving that address are read from a public blockchain data provider and stored exactly as reported — the transaction hash, block, timestamp, sender, recipient, asset and the amount in the asset's smallest unit. Nothing is rounded, converted or adjusted on the way in.",
   },
   {
-    title: "3. Each transfer becomes a candidate, not a payout",
-    body: "Every stored transfer is raised as a candidate for review. This step exists because wallets get reused: a firm may move funds to an exchange, pay a supplier, top up gas, or refund a fee from the same address it pays traders from. Counting all of it as trader payouts would be wrong in a way that is invisible once it reaches a total.",
+    title: "3. A person decides — at the wallet, or at the transfer",
+    body: "Nothing is published without a human decision, and there are two places one can be made. Either an administrator reviews a single transfer and accepts it, or they establish once that a specific address is a firm's trader payout wallet — recording the evidence for that — after which settled transfers from it are published as they are found. Wallets that are not verified in this way keep queuing their transfers for individual review.",
   },
   {
-    title: "4. A person decides",
-    body: "A candidate becomes a verified payout only when someone with verification permission reviews it and accepts it. There is no automatic promotion. A rule confident enough to approve payouts unattended would also be confident enough to publish a treasury transfer as one.",
+    title: "4. Why the decision sits at the wallet",
+    body: "It is the question that can actually be answered. Whether a particular transfer went to a funded trader is usually not visible on-chain; whether an address is the one a firm pays traders from is researchable, and stays true across thousands of transfers. Reviewing each transfer of a busy wallet one by one is not a stricter standard — it is the same judgement, repeated until nobody makes it.",
   },
   {
-    title: "5. The decision is recorded",
-    body: "Every transition — detected, matched, verified, rejected, corrected — is appended to an audit trail with the person responsible. A published figure that nobody can account for is indistinguishable from one that was made up.",
+    title: "5. The chain conditions are checked every time",
+    body: "Wallet-level verification relaxes nothing about the transaction itself. Each published transfer must have settled successfully with enough confirmations for its network, carry a non-zero amount, and have left the verified address. These are facts anyone can check, so nothing is taken on trust.",
+  },
+  {
+    title: "6. The decision is recorded",
+    body: "Every transition — detected, matched, verified, rejected — is appended to an audit trail naming the person responsible. A payout published under a wallet's verification is attributed to whoever verified that wallet. A published figure nobody can account for is indistinguishable from one that was made up.",
   },
 ];
 
@@ -56,6 +60,10 @@ const LIMITS: { title: string; body: string }[] = [
   {
     title: "This is a floor, not a total",
     body: "Verified on-chain payouts are the ones we can prove. Firms also pay by bank transfer, card, payment processors, other crypto rails, and wallets nobody has identified. A firm's real payout volume is therefore at least what is shown here, and may be far higher. Nothing on this site presents verified volume as a firm's total payout volume.",
+  },
+  {
+    title: "A verified wallet is a judgement about an address",
+    body: "Where payouts are published under a wallet's verification, what was established is that the address is a firm's trader payout wallet — not that each individual transfer went to a funded trader. If such a wallet is also used for something else, transfers that are not trader payouts can be counted. Verification is withdrawn from any address found to be mixed, which stops it publishing, and the wallet behind every payout is recorded so a claim can be traced to the address and the person who accepted it.",
   },
   {
     title: "Absence of data is not evidence of anything",

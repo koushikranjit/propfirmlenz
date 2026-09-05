@@ -25,12 +25,17 @@ import { explorerUrl } from "@/lib/blockchain/provider";
  *     link so a reader can do exactly that;
  *  4. it left a wallet this firm is actually tracked as paying from;
  *  5. the asset and an exact amount are derivable;
- *  6. a human with `firm:verify` decided it is a trader payout.
+ *  6. a human decided it is a trader payout.
  *
- * Condition 6 is deliberate. Nothing here promotes a candidate automatically:
- * a rule good enough to auto-verify would also be good enough to auto-publish
- * a treasury transfer as a trader payout, and that error is invisible once it
- * is in the totals.
+ * Condition 6 is deliberate, and NO RULE MAY SUBSTITUTE FOR IT. A heuristic
+ * good enough to auto-verify would also be good enough to publish a treasury
+ * transfer as a trader payout, and that error is invisible once it is in the
+ * totals.
+ *
+ * That decision is exercised in exactly two places, and nowhere else: HERE,
+ * per transfer, with `firm:verify`; or once per WALLET, by marking it verified
+ * trader payouts, which stands as the same person's authorisation for that
+ * address (`payout-autopublish.ts`). This module promotes nothing on its own.
  *
  * Every transition is appended to `payout_verification_events`, so any figure
  * on the public page can be traced back to the person who allowed it.

@@ -297,6 +297,28 @@ export const trackedWallets = pgTable(
     /** Provider-specific resume point for incremental scanning. */
     scanCursor: text("scan_cursor"),
     lastScanError: text("last_scan_error"),
+    /**
+     * Soft delete — the project convention (docs/DATABASE.md §1).
+     *
+     * A wallet cannot be hard-deleted: candidates and verified payouts
+     * reference it with RESTRICT, and destroying it would take real payout
+     * history with it. Removing a wallet retires it from scanning and hides
+     * it from the admin; everything it already produced survives.
+     */
+    deletedAt: timestamp("deleted_at", { withTimezone: true }),
+    /**
+     * WHO authorised this wallet, and when — docs/PAYOUTS.md §7 `[LOCKED]`.
+     *
+     * A wallet marked `trader_payouts` AND `verified` publishes its transfers
+     * automatically, so this is the person whose judgement every one of those
+     * payouts rests on. Recording it is what keeps the trail accountable once
+     * the decision moved from the transfer to the wallet.
+     */
+    verifiedByAdminId: uuid("verified_by_admin_id").references(
+      () => adminUsers.id,
+      { onDelete: "set null" },
+    ),
+    verifiedAt: timestamp("verified_at", { withTimezone: true }),
     createdByAdminId: uuid("created_by_admin_id").references(
       () => adminUsers.id,
       { onDelete: "set null" },

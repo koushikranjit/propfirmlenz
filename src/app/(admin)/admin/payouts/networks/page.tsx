@@ -5,6 +5,7 @@ import { PERMISSIONS } from "@/lib/auth/permissions";
 import { listNetworks } from "@/lib/repositories/admin-payouts";
 import { Breadcrumbs } from "@/components/admin/Breadcrumbs";
 import { EditorDisclosure } from "@/components/admin/forms";
+import { PayoutNav } from "@/components/admin/payouts/PayoutNav";
 import { NetworkForm } from "@/components/admin/payouts/WalletForms";
 import {
   Badge,
@@ -40,6 +41,7 @@ export default async function NetworksPage() {
           { label: "Networks" },
         ]}
       />
+      <PayoutNav current="/admin/payouts/networks" />
       <PageHeader
         title="Blockchain networks"
         description="The chains we can read. A network is only scanned while it is active and its provider credential is configured."
