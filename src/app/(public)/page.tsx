@@ -49,7 +49,7 @@ import { SITE_NAME } from "@/lib/seo/site";
  */
 export const dynamic = "force-dynamic";
 
-const HOME_FIRM_LIMIT = 6;
+const HOME_FIRM_LIMIT = 10;
 const RECENTLY_VERIFIED_LIMIT = 5;
 
 const HOME_DESCRIPTION =
