@@ -104,9 +104,10 @@ export function SiteHeader() {
             </div>
           </form>
           <div className="ml-auto flex items-center gap-2 sm:gap-4">
-            <div className="hidden rounded-full border border-brand-violet bg-bg-card p-1 text-sm font-semibold sm:flex">
-              <span className="rounded-full bg-[image:var(--gradient-brand)] px-4 py-2 text-bg-base">Research</span>
-              <Link href="/payouts" className="px-4 py-2 text-text-primary hover:text-brand-cyan">Payouts</Link>
+            <div className="hidden rounded-full border border-brand-violet bg-bg-card p-1 text-sm font-semibold sm:flex" aria-label="Market categories">
+              <Link href="/prop-firms?market=forex" className="rounded-full bg-[image:var(--gradient-brand)] px-4 py-2 text-bg-base">Forex</Link>
+              <Link href="/prop-firms?market=futures" className="px-4 py-2 text-text-primary hover:text-brand-cyan">Futures</Link>
+              <Link href="/prop-firms?market=crypto" className="px-4 py-2 text-text-primary hover:text-brand-cyan">Crypto <span className="ml-1 rounded-full bg-brand-cyan/20 px-1.5 py-0.5 text-[10px] text-brand-cyan">NEW</span></Link>
             </div>
             <Link href="/prop-firms" className="hidden rounded-full border border-brand-cyan/50 px-4 py-2 text-sm font-semibold text-text-primary hover:bg-bg-elevated md:inline-flex">Browse firms</Link>
             <span className="hidden rounded-full border border-border-default px-3 py-2 text-sm font-semibold text-text-primary lg:inline-flex">Live data</span>
