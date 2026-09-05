@@ -139,7 +139,14 @@ function CountryPicker({
   );
 }
 
-/** Date created plus the derived years. `submits` as above. */
+/**
+ * Date created plus the derived years. `submits` as above.
+ *
+ * MONTH AND YEAR ONLY. A firm publishes "founded 2021", or at best "July
+ * 2021"; asking for a day invites someone to pick the 1st and turn a guess
+ * into a stored fact (CLAUDE.md §3 `[LOCKED]`). The value is `YYYY-MM` and the
+ * day is never entered, never shown, and never claimed.
+ */
 function FoundedFields({
   idPrefix,
   value,
@@ -149,25 +156,28 @@ function FoundedFields({
   submits,
 }: {
   idPrefix: string;
+  /** `YYYY-MM`, or empty for unknown. */
   value: string;
   onChange: (next: string) => void;
   disabled: boolean;
   error?: string | undefined;
   submits: boolean;
 }) {
-  const years = yearsInOperation(value || null);
+  // The helper works in full dates, so the month is anchored for the maths
+  // only. Nothing about that day is stored or displayed.
+  const years = yearsInOperation(value ? `${value}-01` : null);
   return (
     <div className="grid gap-5 sm:grid-cols-2">
       <Field
         label="Date created"
         htmlFor={`${idPrefix}-foundedOn`}
-        hint="When the company was established. Leave blank if unknown."
+        hint="Month and year the company was established. Leave blank if unknown."
         error={error}
       >
         <Input
           id={`${idPrefix}-foundedOn`}
           {...(submits ? { name: "foundedOn" } : {})}
-          type="date"
+          type="month"
           value={value}
           onChange={(e) => onChange(e.target.value)}
           disabled={disabled}
@@ -251,7 +261,11 @@ export function EssentialsForm({
   const [countryName, setCountryName] = React.useState(
     country(firm.headquartersCountry)?.name ?? "",
   );
-  const [foundedOn, setFoundedOn] = React.useState(firm.foundedOn ?? "");
+  // Stored as a date, edited as a month. Any day component a legacy row holds
+  // is dropped here rather than shown as if someone had chosen it.
+  const [foundedOn, setFoundedOn] = React.useState(
+    (firm.foundedOn ?? "").slice(0, 7),
+  );
 
   const save = !readOnly ? (
     <div className="mt-5 flex flex-wrap gap-2">

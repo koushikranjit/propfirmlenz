@@ -71,6 +71,24 @@ export function formatDate(iso: string | null): string | null {
 }
 
 /**
+ * "September 2026" — a date rendered at the precision it was actually known.
+ *
+ * A founding date is entered as a month and stored on the first of it, because
+ * the column is a `date`. Rendering that day back would present a storage
+ * artefact as something somebody established (CLAUDE.md §3 `[LOCKED]`).
+ */
+export function formatMonthYear(iso: string | null): string | null {
+  if (!iso) return null;
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return null;
+  return new Intl.DateTimeFormat(DATE_LOCALE, {
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(date);
+}
+
+/**
  * "GB" -> "United Kingdom", via the platform's own region data. This resolves
  * a code to its name; it does not invent a location.
  */

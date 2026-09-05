@@ -121,19 +121,22 @@ export function AdminShell({
 
       {/* Desktop sidebar */}
       <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-border-default bg-bg-card lg:flex">
-        <div className="flex h-14 items-center border-b border-border-default px-4">
+        <div className="flex h-20 items-center border-b border-border-default px-4">
           <Link
             href="/admin"
             className="flex items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
           >
-            {/* The OFFICIAL logo asset, used unmodified (docs/DESIGN.md §3). */}
+            {/* The OFFICIAL logo, scaled only (docs/DESIGN.md §3 `[LOCKED]`).
+                The lockup's own black margin eats about a third of the box, so
+                a 28px logo left a 17px wordmark — this is the same mark at a
+                size someone can actually read. */}
             <Image
-              src="/brand/Prop Firm Lenz logo.png"
+              src="/brand/logo-576.png"
               alt="Prop Firm Lenz"
-              width={150}
-              height={30}
+              width={576}
+              height={288}
               priority
-              className="h-7 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
         </div>
@@ -164,13 +167,13 @@ export function AdminShell({
             aria-label="Admin navigation"
             className="absolute inset-y-0 left-0 flex w-72 flex-col border-r border-border-default bg-bg-card"
           >
-            <div className="flex h-14 items-center justify-between border-b border-border-default px-4">
+            <div className="flex h-20 items-center justify-between border-b border-border-default px-4">
               <Image
-                src="/brand/Prop Firm Lenz logo.png"
+                src="/brand/logo-576.png"
                 alt="Prop Firm Lenz"
-                width={150}
-                height={30}
-                className="h-7 w-auto"
+                width={576}
+                height={288}
+                className="h-12 w-auto"
               />
               <button
                 type="button"
@@ -212,6 +215,22 @@ export function AdminShell({
         >
           <Icons.Menu className="size-5" aria-hidden />
         </button>
+
+        {/* Below `lg` the sidebar is hidden, so without this the admin carried
+            no mark at all until the drawer was opened. The icon, not the
+            lockup — the bar has no room for a wordmark beside the search. */}
+        <Link
+          href="/admin"
+          className="shrink-0 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan lg:hidden"
+        >
+          <Image
+            src="/brand/icon-192.png"
+            alt="Prop Firm Lenz"
+            width={192}
+            height={192}
+            className="size-9"
+          />
+        </Link>
 
         <form action="/admin/prop-firms" className="min-w-0 flex-1 max-w-md">
           <label htmlFor="admin-global-search" className="sr-only">

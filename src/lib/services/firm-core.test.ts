@@ -25,6 +25,7 @@ import {
 import { getAdminFirmChildren } from "@/lib/repositories/admin-firm-children";
 import { firmEssentialsSchema } from "@/lib/validation/firm";
 import { yearsInOperation } from "@/lib/view/firm-view";
+import { formatMonthYear } from "@/lib/view/format";
 import { COUNTRIES, country, countryFlag } from "@/lib/geo/countries";
 import { ImageError, inspectImage } from "@/lib/media/image";
 
@@ -321,6 +322,49 @@ describe("core prop firm workflow", () => {
       expect([...names].sort((a, b) => a.localeCompare(b, "en"))).toEqual(
         names,
       );
+    });
+  });
+
+  /* ------------------------------------------------------ founding date */
+
+  describe("the founding date is month precision", () => {
+    it("accepts a month and anchors it to the first", () => {
+      // What the admin types is `YYYY-MM`. The day exists only because the
+      // column is a `date`: nobody entered it and nothing renders it.
+      expect(essentials({ foundedOn: "2021-07" }).foundedOn).toBe("2021-07-01");
+      expect(essentials({ foundedOn: " 2021-07 " }).foundedOn).toBe(
+        "2021-07-01",
+      );
+    });
+
+    it("truncates a full date written before the narrowing", () => {
+      // An older row must still round-trip through the form rather than
+      // failing to save.
+      expect(essentials({ foundedOn: "2021-07-23" }).foundedOn).toBe(
+        "2021-07-01",
+      );
+    });
+
+    it("stays null when unknown, and refuses anything that is not a month", () => {
+      expect(essentials({ foundedOn: "" }).foundedOn).toBeNull();
+      expect(() => essentials({ foundedOn: "2021" })).toThrow();
+      expect(() => essentials({ foundedOn: "2021-13" })).toThrow();
+      expect(() => essentials({ foundedOn: "July 2021" })).toThrow();
+    });
+
+    it("never renders the day it stored", async () => {
+      const { id } = await newFirm();
+      await saveFirmEssentials(db, {
+        adminUserId: adminId,
+        firmId: id,
+        input: essentials({ foundedOn: "2021-07" }),
+      });
+      await publishFirm(db, { adminUserId: adminId, firmId: id });
+
+      const view = await getPublishedFirmView(db, "example-firm-a");
+      expect(view?.foundedOn).toBe("2021-07-01");
+      // The reader sees the precision that was actually established.
+      expect(formatMonthYear(view?.foundedOn ?? null)).toBe("July 2021");
     });
   });
 

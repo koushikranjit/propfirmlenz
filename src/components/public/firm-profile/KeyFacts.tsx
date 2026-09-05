@@ -1,7 +1,7 @@
 import type * as React from "react";
 import { NotSpecified } from "@/components/ui/primitives";
 import { country } from "@/lib/geo/countries";
-import { formatDate } from "@/lib/view/format";
+import { formatMonthYear } from "@/lib/view/format";
 import type { FirmView } from "@/lib/view/firm-view";
 
 /**
@@ -19,7 +19,7 @@ export function KeyFacts({ firm }: { firm: FirmView }) {
   return (
     <dl className="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
       <Fact label="Founded">
-        {formatDate(firm.foundedOn) ??
+        {formatMonthYear(firm.foundedOn) ??
           (firm.foundedYear ? String(firm.foundedYear) : null)}
       </Fact>
       {/* Derived from the founding date, never stored and never guessed. */}

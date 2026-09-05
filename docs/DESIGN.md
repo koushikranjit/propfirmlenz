@@ -273,16 +273,40 @@ reference for the mark, the wordmark, the proportions, and the treatment.
 
 **Supplied and approved 2026-09-03** `[LOCKED]`:
 
-- [x] **Horizontal lockup** — `Prop Firm Lenz logo.png` (PNG, ~514 KB)
-- [x] **Standalone mark** — `Prop Firm Lenz Icon.png` (PNG, ~620 KB)
+- [x] **Horizontal lockup** — `Prop Firm Lenz logo.png` (1774×887, PNG, ~514 KB)
+- [x] **Standalone mark** — `Prop Firm Lenz Icon.png` (1254×1254, PNG, ~620 KB)
+
+**Delivery sizes — generated 2026-09-05, SCALE ONLY** `[LOCKED]`:
+
+The masters are the source of truth and are never edited. The files below are the **same artwork at
+fewer pixels** — no crop, no recolour, no redraw, no added padding, nothing §3.2 rule 1 forbids.
+They exist because a 620 KB PNG is not a favicon and a 514 KB PNG is not a header logo: the master
+was being served whole to render a 200px-wide mark, in the header, where LCP is measured.
+
+| File                 | Size     | Used by                                                     |
+| -------------------- | -------- | ----------------------------------------------------------- |
+| `logo-576.png`       | 576×288  | Public header and footer, admin sidebar and drawer, sign-in |
+| `icon-32.png`        | 32×32    | Browser tab                                                 |
+| `icon-192.png`       | 192×192  | Browser tab (high-DPI), admin mobile top bar                |
+| `icon-512.png`       | 512×512  | Install / home-screen icon                                  |
+| `apple-icon-180.png` | 180×180  | iOS home screen                                             |
+| `og-cover.png`       | 1200×600 | Open Graph and Twitter card, on every page                  |
+
+Paths are declared once in `src/lib/seo/site.ts` (`BRAND`, `OG_IMAGE`), so no surface can drift onto
+a different file. Regenerating them means rescaling the master — never redrawing.
+
+**Sizing note.** The lockup carries a wide black margin: the visible mark is roughly two-thirds of
+the image box. A "standard" 32px logo therefore renders a ~19px wordmark. The header uses
+`h-11 sm:h-14`, the footer `h-14 sm:h-16`, the admin sidebar `h-12`, and sign-in `h-20`.
 
 Still outstanding `[OPEN — deferred by the owner]`, **not blocking**:
 
 - [ ] **SVG masters** — horizontal lockup and standalone mark (vector, so the mark stays crisp at
-      every size). _Interim: the supplied PNGs. The header mark will not be pixel-crisp on
-      high-DPI displays until vectors exist, and the OG image generator will embed a bitmap._
-- [ ] `favicon.ico`, `icon.svg`, `apple-touch-icon.png` (180×180), and a maskable PWA icon
-      _(derivable from the supplied icon PNG by resizing only — never by redrawing)_
+      every size). _Interim: the PNGs above. The header mark is raster, so it will not be
+      pixel-perfect at every DPI until vectors exist._
+- [ ] A **maskable** PWA icon. The current icon has no safe-zone padding, so an Android launcher
+      may crop the aperture blades. That needs the master re-exported with padding by the owner —
+      padding must not be invented here.
 - [ ] A confirmed **wordmark typeface** — the letterforms read as a geometric sans (Poppins/Geist
       family of shapes), but the actual face must be confirmed rather than guessed, since the UI
       typeface should either match or deliberately contrast (§4.1)

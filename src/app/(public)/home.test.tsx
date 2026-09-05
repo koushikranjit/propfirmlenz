@@ -510,8 +510,16 @@ describe("homepage", () => {
     it("links the logo home with an accessible name", () => {
       render(<SiteHeader />);
       const logo = screen.getByAltText("Prop Firm Lenz");
-      expect(logo.getAttribute("width")).toBe("160");
-      expect(logo.getAttribute("height")).toBe("32");
+
+      // Intrinsic dimensions must be declared so the header reserves its space
+      // before the image loads (CLAUDE.md §7 — CLS ≤ 0.1). The VALUES are a
+      // design choice and will change with the logo's rendered size; that they
+      // are present and match the asset's real aspect ratio is the requirement.
+      const width = Number(logo.getAttribute("width"));
+      const height = Number(logo.getAttribute("height"));
+      expect(width).toBeGreaterThan(0);
+      expect(height).toBeGreaterThan(0);
+      expect(width / height).toBeCloseTo(2, 1);
     });
 
     it("keeps planned sections as text, not links", () => {

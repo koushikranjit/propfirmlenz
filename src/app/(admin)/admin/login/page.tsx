@@ -27,14 +27,16 @@ export default async function LoginPage({
   return (
     <main className="flex min-h-screen items-center justify-center bg-bg-base px-4 py-12">
       <div className="w-full max-w-sm">
-        <div className="mb-8 flex justify-center">
+        <div className="mb-6 flex justify-center">
+          {/* The only thing on the page besides the form, so it gets the size
+              a sign-in mark should have. */}
           <Image
-            src="/brand/Prop Firm Lenz logo.png"
+            src="/brand/logo-576.png"
             alt="Prop Firm Lenz"
-            width={220}
-            height={44}
+            width={576}
+            height={288}
             priority
-            className="h-10 w-auto"
+            className="h-20 w-auto"
           />
         </div>
 

@@ -48,15 +48,26 @@ const CTA_CLASS =
   "focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 " +
   "focus-visible:ring-offset-bg-base";
 
-function Wordmark() {
+/**
+ * The official lockup, used unmodified (docs/DESIGN.md §3 `[LOCKED]`).
+ *
+ * `logo-576.png` is the SAME artwork scaled down — no crop, no recolour, no
+ * redraw. The 1774px master is 500KB, which is half a megabyte spent on a mark
+ * that renders about 200px wide, in the header, where LCP is measured.
+ *
+ * Sized generously on purpose. The lockup carries a wide black margin, so the
+ * visible mark is roughly two-thirds of the box height: at a "standard" 32px
+ * the wordmark reads about 19px and looks like an afterthought.
+ */
+function Wordmark({ className = "h-11 sm:h-14" }: { className?: string }) {
   return (
-    /* eslint-disable-next-line @next/next/no-img-element -- the official lockup is a fixed local asset with known dimensions; the optimiser adds nothing and must not re-encode brand artwork. */
+    /* eslint-disable-next-line @next/next/no-img-element -- a fixed local asset already stored at delivery size; the optimiser would re-encode brand artwork for no gain. */
     <img
-      src="/brand/Prop Firm Lenz logo.png"
+      src="/brand/logo-576.png"
       alt={SITE_NAME}
-      width={160}
-      height={32}
-      className="h-8 w-auto"
+      width={576}
+      height={288}
+      className={`${className} w-auto`}
     />
   );
 }
@@ -68,7 +79,9 @@ export function SiteHeader() {
     // contrast never depends on what is scrolling underneath.
     <header className="sticky top-0 z-40 border-b border-border-subtle bg-bg-base/90 backdrop-blur">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="flex h-16 items-center justify-between gap-4">
+        {/* Taller than the usual 64px bar so the lockup has room to sit at a
+            legible size without crowding the nav. */}
+        <div className="flex h-18 items-center justify-between gap-4 sm:h-22">
           <Link
             href="/"
             className="flex shrink-0 items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base"
@@ -137,7 +150,9 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
-            <Wordmark />
+            {/* The footer is where the mark gets its own space, so it is the
+                one place it is not competing with navigation. */}
+            <Wordmark className="h-14 sm:h-16" />
             <p className="mt-4 max-w-xs text-sm text-text-muted">
               Structured, sourced information about proprietary trading firms,
               so a trader can research the conditions before paying for a

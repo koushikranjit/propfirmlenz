@@ -229,18 +229,27 @@ export const firmEssentialsSchema = z.object({
     .nullable(),
   trustpilotUrl: optionalUrl,
 
-  /** The date the company was established. Years in operation is derived. */
+  /**
+   * When the company was established — MONTH AND YEAR (`YYYY-MM`).
+   *
+   * Normalised to the first of that month so the existing `date` column keeps
+   * working. That day is a STORAGE ARTEFACT, not a claim: no admin enters it
+   * and nothing renders it (CLAUDE.md §3 `[LOCKED]`). A full date written
+   * before this narrowing is still accepted and truncated to its month, so an
+   * older row round-trips instead of failing to save.
+   *
+   * "Years in operation" is derived from it and never stored.
+   */
   foundedOn: z
     .string()
     .trim()
     .transform((v) => (v.length === 0 ? null : v))
     .nullable()
     .refine(
-      (v) =>
-        v === null ||
-        (/^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v))),
-      "Enter a valid date.",
-    ),
+      (v) => v === null || /^\d{4}-(0[1-9]|1[0-2])(-\d{2})?$/.test(v),
+      "Enter the month and year the company was established.",
+    )
+    .transform((v) => (v === null ? null : `${v.slice(0, 7)}-01`)),
 
   /** Where the firm publishes its own payout evidence. A link, not a figure. */
   payoutInfoUrl: optionalUrl,

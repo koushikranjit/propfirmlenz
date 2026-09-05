@@ -75,7 +75,13 @@ export const propFirms = pgTable(
     description: text("description"),
     foundedYear: integer("founded_year"),
     /**
-     * When the company was established, to the day where it is published.
+     * When the company was established — MONTH PRECISION.
+     *
+     * The column is a `date`, but only the year and month are ever entered or
+     * displayed; the day is always `01` and is a storage artefact, not a
+     * claim. Firms publish "founded 2021", not a calendar day, and recording a
+     * day nobody established would be an invented fact (CLAUDE.md §3
+     * `[LOCKED]`). Render with `formatMonthYear`, never `formatDate`.
      *
      * "Years in operation" is DERIVED from this at read time and is never
      * stored: a stored count is wrong from the next anniversary onwards, and a

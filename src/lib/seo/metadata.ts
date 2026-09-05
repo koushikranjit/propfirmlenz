@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { canonicalUrl } from "./canonical";
-import { SITE_DESCRIPTION, SITE_NAME } from "./site";
+import { BRAND, OG_IMAGE, SITE_DESCRIPTION, SITE_NAME } from "./site";
 
 /**
  * Metadata builders — docs/SEO.md §5, docs/ARCHITECTURE.md §9.
@@ -72,9 +72,16 @@ export function buildMetadata(input: BuildMetadataInput): Metadata {
       url,
       title: o.ogTitle?.trim() || title,
       description: o.ogDescription?.trim() || description,
-      ...(o.ogImageUrl ? { images: [{ url: o.ogImageUrl }] } : {}),
+      // A page's `openGraph` REPLACES the root layout's rather than merging
+      // into it, so the brand card is repeated here — otherwise every page but
+      // the home page would share with no preview image at all. A per-page
+      // override still wins where an admin has set one.
+      images: [o.ogImageUrl ? { url: o.ogImageUrl } : OG_IMAGE],
     },
-    twitter: { card: "summary_large_image" },
+    twitter: {
+      card: "summary_large_image",
+      images: [o.ogImageUrl || OG_IMAGE.url],
+    },
   };
 
   if (index) {
@@ -122,7 +129,9 @@ export function buildOrganizationLd() {
     "@type": "Organization",
     name: SITE_NAME,
     url: canonicalUrl("/"),
-    logo: canonicalUrl("/brand/Prop Firm Lenz logo.png"),
+    // The full-resolution master: this one is read by machines, not fetched
+    // on every page load, so quality matters more than bytes.
+    logo: canonicalUrl(BRAND.logoMaster),
   } as const;
 }
 
