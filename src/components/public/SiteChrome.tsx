@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation";
 import { SITE_NAME } from "@/lib/seo/site";
 
 /**
@@ -61,18 +64,25 @@ function Wordmark({ className = "h-11 sm:h-14" }: { className?: string }) {
 }
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const market = searchParams.get("market");
   const secondaryNav = [
-    { href: "/", label: "Home" },
-    { href: "/prop-firms", label: "Offers" },
-    { href: "/prop-firms", label: "Challenges" },
-    { href: "/prop-firms", label: "Best Sellers" },
-    { href: "/prop-firms?verified=true", label: "Reviews" },
-    { href: "/prop-firms?favorite=true", label: "Favorite Firms" },
-    { href: "/prop-firms", label: "Prop Firm Rules" },
-    { href: "/prop-firms", label: "Compare Firms" },
-    { href: "/payouts", label: "Spreads" },
-    { href: "/payouts", label: "Payouts" },
+    { href: "/", label: "Home", active: pathname === "/" },
+    { href: "/prop-firms?view=offers", label: "Offers", active: pathname === "/prop-firms" && searchParams.get("view") === "offers" },
+    { href: "/prop-firms?view=challenges", label: "Challenges", active: pathname === "/prop-firms" && searchParams.get("view") === "challenges" },
+    { href: "/prop-firms?sort=popular", label: "Best Sellers", active: pathname === "/prop-firms" && searchParams.get("sort") === "popular" },
+    { href: "/prop-firms?verified=true", label: "Reviews", active: pathname === "/prop-firms" && searchParams.get("verified") === "true" },
+    { href: "/prop-firms", label: "Favorite Firms", active: false },
+    { href: "/prop-firms?view=rules", label: "Prop Firm Rules", active: pathname === "/prop-firms" && searchParams.get("view") === "rules" },
+    { href: "/prop-firms?view=compare", label: "Compare Firms", active: false },
+    { href: "/payouts?view=spreads", label: "Spreads", active: pathname === "/payouts" && searchParams.get("view") === "spreads" },
+    { href: "/payouts", label: "Payouts", active: pathname === "/payouts" && !searchParams.get("view") },
   ];
+  const marketHref = (value: string) => `/prop-firms?market=${value}`;
+  const marketLinkClass = (value: string) => market === value
+    ? "rounded-full bg-[image:var(--gradient-brand)] px-4 py-2 text-bg-base"
+    : "px-4 py-2 text-text-primary hover:text-brand-cyan";
 
   return (
     <header className="sticky top-0 z-40 border-b border-border-subtle bg-bg-base/95 backdrop-blur">
@@ -104,9 +114,10 @@ export function SiteHeader() {
             </div>
           </form>
           <div className="ml-auto flex items-center gap-2 sm:gap-4">
-            <div className="hidden rounded-full border border-brand-violet bg-bg-card p-1 text-sm font-semibold sm:flex">
-              <span className="rounded-full bg-[image:var(--gradient-brand)] px-4 py-2 text-bg-base">Research</span>
-              <Link href="/payouts" className="px-4 py-2 text-text-primary hover:text-brand-cyan">Payouts</Link>
+            <div className="hidden rounded-full border border-brand-violet bg-bg-card p-1 text-sm font-semibold sm:flex" aria-label="Market categories">
+              <Link href={marketHref("forex")} className={marketLinkClass("forex")}>Forex</Link>
+              <Link href={marketHref("futures")} className={marketLinkClass("futures")}>Futures</Link>
+              <Link href={marketHref("crypto")} className={marketLinkClass("crypto")}>Crypto <span className="ml-1 rounded-full bg-brand-cyan/20 px-1.5 py-0.5 text-[10px] text-brand-cyan">NEW</span></Link>
             </div>
             <Link href="/prop-firms" className="hidden rounded-full border border-brand-cyan/50 px-4 py-2 text-sm font-semibold text-text-primary hover:bg-bg-elevated md:inline-flex">Browse firms</Link>
             <span className="hidden rounded-full border border-border-default px-3 py-2 text-sm font-semibold text-text-primary lg:inline-flex">Live data</span>
@@ -127,8 +138,8 @@ export function SiteHeader() {
         </div>
 
         <nav aria-label="Secondary" className="hidden min-h-[54px] items-end justify-between gap-2 overflow-x-auto sm:flex">
-          {secondaryNav.map((item, index) => (
-            <Link key={`${item.href}-${item.label}`} href={item.href} className={`relative whitespace-nowrap px-3 pb-4 pt-4 text-sm font-medium ${index === 0 ? "text-text-primary after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-brand-cyan" : "text-text-muted hover:text-text-primary"}`}>
+          {secondaryNav.map((item) => (
+            <Link key={`${item.href}-${item.label}`} href={item.href} aria-current={item.active ? "page" : undefined} className={`relative whitespace-nowrap px-3 pb-4 pt-4 text-sm font-medium ${item.active ? "text-text-primary after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-brand-cyan" : "text-text-muted hover:text-text-primary"}`}>
               {item.label}
               {item.label === "Compare Firms" && <span className="ml-2 rounded-full bg-brand-cyan/15 px-2 py-1 text-[10px] text-brand-cyan">New</span>}
             </Link>
