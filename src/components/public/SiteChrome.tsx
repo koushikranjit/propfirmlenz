@@ -77,7 +77,14 @@ export function SiteHeader() {
     // Sticky with a restrained blur (docs/DESIGN.md §7.7, §10 — subtle, not
     // decorative glassmorphism). The background stays opaque enough that text
     // contrast never depends on what is scrolling underneath.
-    <header className="sticky top-0 z-40 border-b border-border-subtle bg-bg-base/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-border-subtle bg-bg-base/95 backdrop-blur">
+      <div className="h-1 bg-[image:var(--gradient-brand)]" aria-hidden="true" />
+      <div className="border-b border-border-subtle bg-bg-near-black">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-xs sm:px-6">
+          <span className="font-medium text-text-secondary">Source-led prop firm research</span>
+          <Link href="/payouts" className="font-semibold text-brand-cyan hover:text-text-primary">Explore payout evidence</Link>
+        </div>
+      </div>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Taller than the usual 64px bar so the lockup has room to sit at a
             legible size without crowding the nav. */}
@@ -138,6 +145,13 @@ export function SiteHeader() {
               </ul>
             </nav>
           </details>
+        </div>
+        <div className="hidden items-center gap-6 overflow-x-auto border-t border-border-subtle py-2.5 text-xs font-medium text-text-muted sm:flex">
+          <Link href="/" className="whitespace-nowrap text-text-primary">Research desk</Link>
+          <Link href="/prop-firms" className="whitespace-nowrap hover:text-text-primary">All firms</Link>
+          <Link href="/prop-firms?verified=true" className="whitespace-nowrap hover:text-text-primary">Verified data</Link>
+          <Link href="/payouts" className="whitespace-nowrap hover:text-text-primary">Payouts</Link>
+          <span className="ml-auto whitespace-nowrap rounded-full border border-brand-cyan/30 px-2.5 py-1 text-brand-cyan">Live directory</span>
         </div>
       </div>
     </header>
