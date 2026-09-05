@@ -45,6 +45,27 @@ vi.mock("@/lib/db/client", () => ({
 }));
 
 /**
+ * The header is a Client Component that reads `usePathname` and
+ * `useSearchParams`. Rendered here without a Next router, both return null and
+ * `searchParams.get(...)` throws before anything can be asserted.
+ *
+ * Supplying an empty set is the honest stand-in: it is what a visitor on `/`
+ * with no query string actually has, so the nav renders in its default state.
+ */
+vi.mock("next/navigation", () => ({
+  usePathname: () => "/",
+  useSearchParams: () => new URLSearchParams(),
+  useRouter: () => ({
+    push: () => {},
+    replace: () => {},
+    prefetch: () => {},
+    back: () => {},
+    forward: () => {},
+    refresh: () => {},
+  }),
+}));
+
+/**
  * The page renders its data branch only when `env.DATABASE_URL` is set, so the
  * mock has to cover BOTH the client and the flag that gates reaching for it.
  *
@@ -112,9 +133,13 @@ describe("homepage", () => {
       await publishFirm();
       const { container } = await renderHome();
 
+      // Exactly one h1 — the requirement (CLAUDE.md §5, §7). Its WORDING is a
+      // copy decision and is no longer asserted: pinning the old hero's text
+      // made a copy change read as a structural failure. What must hold is
+      // that the page has one, and that it is not empty.
       const h1s = screen.getAllByRole("heading", { level: 1 });
       expect(h1s).toHaveLength(1);
-      expect(h1s[0]?.textContent).toContain("Research prop firms");
+      expect(h1s[0]?.textContent?.trim().length ?? 0).toBeGreaterThan(0);
 
       // No heading level is skipped: h1 -> h2 -> h3 only.
       const levels = [...container.querySelectorAll("h1,h2,h3,h4,h5,h6")].map(

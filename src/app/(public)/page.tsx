@@ -4,7 +4,6 @@ import { FirmCard } from "@/components/public/FirmCard";
 import { JsonLd } from "@/components/public/JsonLd";
 import { BrowseBy } from "@/components/public/home/BrowseBy";
 import { FirmSearch } from "@/components/public/home/FirmSearch";
-import { Hero } from "@/components/public/home/Hero";
 import { HomeSection } from "@/components/public/home/HomeSection";
 import { RecentlyVerified } from "@/components/public/home/RecentlyVerified";
 import { ReferencePreview } from "@/components/public/home/ReferencePreview";
@@ -50,7 +49,7 @@ import { SITE_NAME } from "@/lib/seo/site";
  */
 export const dynamic = "force-dynamic";
 
-const HOME_FIRM_LIMIT = 6;
+const HOME_FIRM_LIMIT = 10;
 const RECENTLY_VERIFIED_LIMIT = 5;
 
 const HOME_DESCRIPTION =
@@ -91,14 +90,13 @@ export default async function HomePage() {
         countries: [],
       };
 
-  const { firms, firmCount, verifiedCount, recentlyVerified, platforms, countries } = data;
+  const { firms, recentlyVerified, platforms, countries } = data;
   const verified = recentlyVerified.filter((firm) => firm.verifiedAt !== null);
 
   return (
     <>
-      <Hero firmCount={firmCount} verifiedCount={verifiedCount} />
-      <FirmSearch />
       <ReferencePreview firms={firms} />
+      <FirmSearch />
 
       <HomeSection
         id="explore"
