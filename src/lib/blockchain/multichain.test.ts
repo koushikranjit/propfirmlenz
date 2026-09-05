@@ -259,6 +259,97 @@ describe("TRONSCAN provider", () => {
     expect(page.transfers.map((t) => t.transferIndex)).toEqual([0, 1]);
   });
 
+  /* ------------------------------------------------ direction `[LOCKED]` */
+
+  it("returns only transfers OUT of the wallet, never money coming in", async () => {
+    // The endpoint is queried by `relatedAddress`, which answers with both
+    // directions — on a real firm wallet, 41 of 50 rows were incoming.
+    // Counting those would record money the firm was PAID as money it paid.
+    const incoming = {
+      ...TRANSFER,
+      transaction_id: "b".repeat(64),
+      from_address: "TEkxiTehnzSmSe2XqrBj4w32RUN966rdz8",
+      to_address: TRANSFER.from_address,
+    };
+
+    const page = await withFetch(
+      async () => json({ token_transfers: [TRANSFER, incoming] }),
+      () =>
+        new TronScanProvider().listOutgoingTransfers({
+          address: TRANSFER.from_address,
+        }),
+    );
+
+    expect(page.transfers).toHaveLength(1);
+    expect(page.transfers[0]?.txHash).toBe(TRANSFER.transaction_id);
+  });
+
+  it("matches the wallet whatever case it was recorded in", async () => {
+    const page = await withFetch(
+      async () => json({ token_transfers: [TRANSFER] }),
+      () =>
+        new TronScanProvider().listOutgoingTransfers({
+          address: `  ${TRANSFER.from_address.toLowerCase()}  `,
+        }),
+    );
+    expect(page.transfers).toHaveLength(1);
+  });
+
+  it("keeps the transfer index counted across BOTH directions", async () => {
+    /*
+     * Load-bearing, and the reason the filter runs after the index is
+     * assigned: `transfer_index` is half the storage key. Rows already
+     * recorded counted every transfer in the transaction, incoming included.
+     * Renumbering over outgoing rows only would give a stored payout a new
+     * index, and it would be inserted a SECOND time — double-counting a real
+     * payout.
+     */
+    const incomingFirst = {
+      ...TRANSFER,
+      from_address: "TEkxiTehnzSmSe2XqrBj4w32RUN966rdz8",
+      to_address: TRANSFER.from_address,
+    };
+
+    const page = await withFetch(
+      async () => json({ token_transfers: [incomingFirst, TRANSFER] }),
+      () =>
+        new TronScanProvider().listOutgoingTransfers({
+          address: TRANSFER.from_address,
+        }),
+    );
+
+    expect(page.transfers).toHaveLength(1);
+    // Index 1, not 0: the incoming row still consumed position 0.
+    expect(page.transfers[0]?.transferIndex).toBe(1);
+  });
+
+  it("pages on the raw row count, not the outgoing one", async () => {
+    // Advancing the offset by the number of OUTGOING rows would re-read the
+    // incoming ones forever and never reach the end of a wallet's history.
+    const mixed = Array.from({ length: 50 }, (_, i) =>
+      i % 2 === 0
+        ? { ...TRANSFER, transaction_id: String(i).padStart(64, "0") }
+        : {
+            ...TRANSFER,
+            transaction_id: String(i).padStart(64, "0"),
+            from_address: "TEkxiTehnzSmSe2XqrBj4w32RUN966rdz8",
+            to_address: TRANSFER.from_address,
+          },
+    );
+
+    const page = await withFetch(
+      async () => json({ token_transfers: mixed }),
+      () =>
+        new TronScanProvider().listOutgoingTransfers({
+          address: TRANSFER.from_address,
+          limit: 50,
+        }),
+    );
+
+    expect(page.transfers).toHaveLength(25);
+    expect(page.nextCursor).toBe("50");
+  });
+
   it("pages while a page is full and stops when it is short", async () => {
     const full = Array.from({ length: 50 }, (_, i) => ({
       ...TRANSFER,

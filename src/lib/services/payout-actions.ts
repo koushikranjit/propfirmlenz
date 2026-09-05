@@ -270,18 +270,27 @@ export async function scanWalletAction(
       result.autoPublished > 0
         ? ` ${result.autoPublished} published automatically from this verified wallet.`
         : "";
+    // Said out loud, so "nothing new" cannot be mistaken for a quiet wallet
+    // when the page budget actually went on money coming IN.
+    const incoming =
+      result.skippedIncoming > 0
+        ? ` ${result.skippedIncoming} incoming transfer${
+            result.skippedIncoming === 1 ? " was" : "s were"
+          } ignored — only money leaving the wallet is a payout.`
+        : "";
+
     return {
       ok: true,
       message:
         result.transactionsInserted === 0
-          ? `Scan complete. Saw ${result.transfersSeen} transfer${
+          ? `Scan complete. Saw ${result.transfersSeen} outgoing transfer${
               result.transfersSeen === 1 ? "" : "s"
-            }; nothing new to record.${published}`
+            }; nothing new to record.${incoming}${published}`
           : `Scan complete. ${result.transactionsInserted} new transaction${
               result.transactionsInserted === 1 ? "" : "s"
             }, ${result.candidatesCreated} candidate${
               result.candidatesCreated === 1 ? "" : "s"
-            }.${published}`,
+            }.${incoming}${published}`,
     };
   } catch (error) {
     return toActionState(error);

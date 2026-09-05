@@ -39,6 +39,14 @@ export interface ScanResult {
   transfersSeen: number;
   transactionsInserted: number;
   candidatesCreated: number;
+  /**
+   * Transfers INTO the wallet, which are never payouts.
+   *
+   * Counted rather than silently dropped: an operator seeing "0 new
+   * transactions" needs to be able to tell a quiet wallet from one whose page
+   * budget went entirely on money coming in.
+   */
+  skippedIncoming: number;
   /** Transfers of assets that are not configured, tracked, enabled tokens. */
   skippedUnsupportedToken: number;
   /** Configured decimals disagreeing with what the provider reported. */
@@ -91,6 +99,7 @@ export async function scanWallet(
     transfersSeen: 0,
     transactionsInserted: 0,
     candidatesCreated: 0,
+    skippedIncoming: 0,
     skippedUnsupportedToken: 0,
     decimalsMismatch: 0,
     cursor: opts.resume === false ? null : wallet.scanCursor,
@@ -176,12 +185,20 @@ export async function scanWallet(
       result.transfersSeen += transfers.length;
 
       for (const transfer of transfers) {
-        // Defensive: a provider must only return outgoing transfers, but a
-        // wrong one would attribute someone else's payment to this firm.
+        /*
+         * A PAYOUT IS MONEY LEAVING THE FIRM `[LOCKED]`.
+         *
+         * Every adapter is contracted to return outgoing transfers only, and
+         * this check is the backstop for the one that gets it wrong. It is a
+         * backstop worth keeping: a firm wallet also receives challenge fees
+         * and treasury movements, and crediting those to the firm as payouts
+         * would invent a payout record for money it was PAID.
+         */
         if (
           normaliseAddress(transfer.fromAddress) !==
           normaliseAddress(wallet.address)
         ) {
+          result.skippedIncoming += 1;
           continue;
         }
         if (transfer.status !== "success") continue;

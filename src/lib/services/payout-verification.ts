@@ -23,7 +23,8 @@ import { explorerUrl } from "@/lib/blockchain/provider";
  *  2. it settled — failed and pending transactions never count;
  *  3. its hash is independently checkable, and the row carries the explorer
  *     link so a reader can do exactly that;
- *  4. it left a wallet this firm is actually tracked as paying from;
+ *  4. it LEFT a wallet this firm is tracked as paying from — money coming IN
+ *     is never a payout;
  *  5. the asset and an exact amount are derivable;
  *  6. a human decided it is a trader payout.
  *
@@ -48,7 +49,8 @@ export class VerificationError extends Error {
       | "NOT_SETTLED"
       | "ALREADY_VERIFIED"
       | "ZERO_AMOUNT"
-      | "WALLET_INACTIVE",
+      | "WALLET_INACTIVE"
+      | "NOT_OUTGOING",
     message: string,
   ) {
     super(message);
@@ -95,6 +97,7 @@ export async function verifyCandidate(
       propFirmId: payoutCandidates.propFirmId,
       walletId: payoutCandidates.trackedWalletId,
       walletActive: trackedWallets.isActive,
+      walletAddress: trackedWallets.addressNormalized,
       transactionId: blockchainTransactions.id,
       networkId: blockchainTransactions.networkId,
       txHash: blockchainTransactions.txHash,
@@ -160,11 +163,23 @@ export async function verifyCandidate(
     );
   }
 
-  // (4) Still a wallet we track for this firm.
+  // (4) Still a wallet we track for this firm...
   if (!row.walletActive) {
     throw new VerificationError(
       "WALLET_INACTIVE",
       "The source wallet is no longer tracked.",
+    );
+  }
+  // ...and the money LEFT it. A firm's wallet also receives — challenge fees,
+  // exchange returns, treasury movements — and publishing one of those would
+  // record money the firm was PAID as money it paid out.
+  if (
+    row.fromAddress.trim().toLowerCase() !==
+    row.walletAddress.trim().toLowerCase()
+  ) {
+    throw new VerificationError(
+      "NOT_OUTGOING",
+      "That transfer went INTO the tracked wallet. Only transfers out of it are payouts.",
     );
   }
 

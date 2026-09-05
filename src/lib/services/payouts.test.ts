@@ -312,6 +312,45 @@ describe("blockchain payout pipeline", () => {
       expect(await db.select().from(blockchainTransactions)).toHaveLength(0);
     });
 
+    it("never records money coming INTO the wallet, and says how much", async () => {
+      /*
+       * A firm's payout wallet also RECEIVES — challenge fees, exchange
+       * returns, treasury top-ups. Recording those would credit the firm with
+       * paying out money it was paid. The count is reported rather than
+       * silently dropped, so "nothing new" cannot be mistaken for a quiet
+       * wallet when the page went entirely on incoming transfers.
+       */
+      const result = await scan(
+        new FixtureProvider([
+          {
+            transfers: [
+              transfer({
+                txHash: "0xincoming0001",
+                fromAddress: "atraderaddress0001",
+                toAddress: "twalletexampleaddress0001",
+              }),
+              transfer({
+                txHash: "0xincoming0002",
+                fromAddress: "anexchangeaddress0001",
+                toAddress: "twalletexampleaddress0001",
+              }),
+              transfer({ txHash: "0xoutgoing0001" }),
+            ],
+            nextCursor: null,
+          },
+        ]),
+      );
+
+      expect(result.skippedIncoming).toBe(2);
+      expect(result.transactionsInserted).toBe(1);
+
+      const rows = await db.select().from(blockchainTransactions);
+      expect(rows).toHaveLength(1);
+      expect(rows[0]?.txHash).toBe("0xoutgoing0001");
+      // Nothing incoming reached the review queue either.
+      expect(await db.select().from(payoutCandidates)).toHaveLength(1);
+    });
+
     it("ignores an unsuccessful transaction", async () => {
       await scan(
         new FixtureProvider([
@@ -422,6 +461,30 @@ describe("blockchain payout pipeline", () => {
           candidateId: await candidateId(),
         }),
       ).rejects.toMatchObject({ code: "ZERO_AMOUNT" });
+    });
+
+    it("refuses a transfer that went INTO the wallet", async () => {
+      /*
+       * Ingestion already drops incoming transfers, so this is the backstop
+       * for anything that got past it — a provider that stopped honouring the
+       * outgoing contract, or a row recorded before the filter existed.
+       * Publishing one would record money the firm was PAID as a payout, and
+       * that error is invisible once it is in the totals.
+       */
+      await db
+        .update(blockchainTransactions)
+        .set({
+          fromAddress: "atraderaddress0001",
+          toAddress: "twalletexampleaddress0001",
+        });
+
+      await expect(
+        verifyCandidate(db, {
+          adminUserId: verifierId,
+          candidateId: await candidateId(),
+        }),
+      ).rejects.toMatchObject({ code: "NOT_OUTGOING" });
+      expect(await db.select().from(verifiedPayouts)).toHaveLength(0);
     });
 
     it("refuses to verify the same candidate twice", async () => {

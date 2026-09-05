@@ -71,6 +71,18 @@ export class TronScanProvider implements BlockchainProvider {
     const offset = Number.isFinite(start) && start > 0 ? start : 0;
 
     const url = new URL("/api/token_trc20/transfers", TRONSCAN_BASE);
+    /*
+     * `relatedAddress` returns BOTH DIRECTIONS, and the rows are filtered to
+     * outgoing below.
+     *
+     * TRONSCAN does document a `fromAddress` parameter that would filter
+     * server-side, which would be better — it would stop us paging through
+     * money coming IN. It answers 401 without a key, so it cannot be verified
+     * here, and this endpoint has form for accepting a parameter and silently
+     * returning nothing for it (see the `confirm` note below). Until it can be
+     * tested against a live key, the filter stays where its behaviour is
+     * visible: in this file.
+     */
     url.searchParams.set("relatedAddress", options.address);
     url.searchParams.set("limit", String(limit));
     url.searchParams.set("start", String(offset));
@@ -101,6 +113,9 @@ export class TronScanProvider implements BlockchainProvider {
     // One row per transfer, so a hash can appear several times; the index
     // keeps the storage key unique per transfer within a transaction.
     const seenPerHash = new Map<string, number>();
+    // Matched the way the pipeline matches everywhere else, so a wallet
+    // recorded in one casing still matches its own transfers.
+    const wallet = options.address.trim().toLowerCase();
 
     for (const row of payload.token_transfers) {
       if (!row.transaction_id || !row.from_address || !row.to_address) continue;
@@ -111,8 +126,31 @@ export class TronScanProvider implements BlockchainProvider {
         (row.finalResult && row.finalResult !== "SUCCESS");
       if (reverted) continue;
 
+      /*
+       * THE INDEX IS ASSIGNED BEFORE THE DIRECTION FILTER, DELIBERATELY.
+       *
+       * `transfer_index` is half the storage key (network + hash + index).
+       * Rows already recorded had their index counted across every transfer
+       * in the transaction, incoming ones included. Counting only outgoing
+       * rows from now on would give an already-stored payout a different
+       * index on its next scan — and `onConflictDoNothing` would then insert
+       * it a SECOND time, double-counting a real payout. Keeping the
+       * derivation exactly as it was is what makes this change safe to ship
+       * against existing data.
+       */
       const index = seenPerHash.get(row.transaction_id) ?? 0;
       seenPerHash.set(row.transaction_id, index + 1);
+
+      /*
+       * ONLY MONEY LEAVING THE WALLET IS A PAYOUT `[LOCKED]`.
+       *
+       * A firm's wallet also RECEIVES — challenge fees, exchange returns,
+       * treasury top-ups. On the wallet this was measured against, 41 of every
+       * 50 rows were incoming. Dropping them here rather than downstream is
+       * what stops a scan spending its whole page budget on money coming in
+       * and reporting a firm as barely paying anyone.
+       */
+      if (row.from_address.trim().toLowerCase() !== wallet) continue;
 
       transfers.push({
         txHash: row.transaction_id,
@@ -136,7 +174,10 @@ export class TronScanProvider implements BlockchainProvider {
       });
     }
 
-    // A full page means there may be more; a short one is the end.
+    // Paged on the RAW row count, never the filtered one. The cursor is an
+    // offset into what the API returns, so advancing it by the number of
+    // outgoing rows would re-read the incoming ones forever and never reach
+    // the end of a wallet's history.
     const nextCursor =
       payload.token_transfers.length >= limit
         ? String(offset + payload.token_transfers.length)

@@ -101,6 +101,45 @@ tracked wallet -> provider -> blockchain_transactions -> payout_candidates
 - **Failures are recorded** on the wallet (`last_scan_error`) and surfaced in the admin UI.
 - `confidence` (0–100) ranks the review queue. It decides nothing.
 
+### 6.1 Only money LEAVING the wallet is a payout `[LOCKED]`
+
+A firm's payout wallet also **receives**: challenge fees, exchange returns, treasury top-ups.
+Recording those would credit the firm with paying out money it was *paid* — a fabricated payout, and
+an invisible one once it is in a total.
+
+Enforced at **three** layers, deliberately:
+
+| Layer                                     | What it does                                                    |
+| ----------------------------------------- | ---------------------------------------------------------------- |
+| Adapter (`tronscan.ts`, `adapters.ts`)    | `listOutgoingTransfers` returns outgoing rows only               |
+| Ingestion (`scanWallet`)                  | Backstop filter; counts what it drops as `skippedIncoming`       |
+| Verification (`verifyCandidate`)          | Refuses with `NOT_OUTGOING` — condition 4                        |
+
+**Why the adapter, and not only the backstop.** TronGrid takes `only_from=true` and Etherscan's
+`tokentx` is filtered in the adapter, but TRONSCAN is queried by `relatedAddress`, which answers with
+**both directions**: measured against a live firm wallet, **41 of 50 rows were incoming**. Filtering
+that downstream still worked, but the scan spent its whole page budget reading money coming in, and
+a busy firm looked like one that barely paid anyone. TRONSCAN's `fromAddress` parameter would filter
+server-side; it answers **401 without a key**, so it is unverified, and this endpoint has form for
+accepting a parameter and silently returning nothing (see `confirm=true`). The filter therefore stays
+where its behaviour is visible and tested.
+
+**The transfer index is assigned BEFORE the direction filter, and must stay that way.**
+`transfer_index` is half the storage key (`network + hash + index`). Rows already recorded counted
+every transfer in the transaction, incoming included. Renumbering over outgoing rows only would give
+a stored payout a new index, `onConflictDoNothing` would not match it, and a real payout would be
+inserted a **second time**.
+
+**Paging uses the raw row count, never the filtered one** — advancing the cursor by the number of
+outgoing rows would re-read the incoming ones forever and never reach the end of a wallet's history.
+
+`skippedIncoming` is reported in the admin scan result: "nothing new" must be distinguishable from a
+page that went entirely on money coming in.
+
+**Audited against production 2026-09-05:** 204 stored transactions, 204 outgoing, 0 incoming; 204
+published payouts, 204 outgoing, 0 incoming; 0 paid to the wallet itself. No received transfer has
+ever reached a public figure.
+
 ---
 
 ## 7. Verification — six conditions, all required `[LOCKED]`
@@ -110,7 +149,8 @@ tracked wallet -> provider -> blockchain_transactions -> payout_candidates
 1. a real transaction is on record;
 2. it settled — failed and pending never count, and confirmations meet the network's threshold;
 3. its hash is independently checkable, and the row carries the explorer link;
-4. it left a wallet this firm is tracked as paying from, still active;
+4. it LEFT a wallet this firm is tracked as paying from, still active — money coming IN is never a
+   payout (§6.1 `[LOCKED]`);
 5. the asset and an exact non-zero amount are derivable;
 6. **a human decided it is a trader payout.**
 
