@@ -3,9 +3,9 @@ import Link from "next/link";
 import { FirmCard } from "@/components/public/FirmCard";
 import { JsonLd } from "@/components/public/JsonLd";
 import { BrowseBy } from "@/components/public/home/BrowseBy";
-import { FirmSearch } from "@/components/public/home/FirmSearch";
 import { HomeSection } from "@/components/public/home/HomeSection";
 import { RecentlyVerified } from "@/components/public/home/RecentlyVerified";
+import { ReferenceLanding } from "@/components/public/home/ReferenceLanding";
 import { ReferencePreview } from "@/components/public/home/ReferencePreview";
 import { TrustSection } from "@/components/public/home/TrustSection";
 import { WhatToCompare } from "@/components/public/home/WhatToCompare";
@@ -96,7 +96,7 @@ export default async function HomePage() {
   return (
     <>
       <ReferencePreview firms={firms} />
-      <FirmSearch />
+      <ReferenceLanding firms={firms} />
 
       <HomeSection
         id="explore"
