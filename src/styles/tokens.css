@@ -42,10 +42,11 @@
   --gradient-brand: linear-gradient(
     135deg,
     #19e6d2 0%,
-    #268bff 38%,
-    #4f46e5 72%,
+    #268bff 32%,
+    #4f46e5 66%,
     #6d3df5 100%
   );
+  --gradient-brand-soft: linear-gradient(135deg, rgba(25,230,210,0.16), rgba(38,139,255,0.1) 42%, rgba(109,61,245,0.18));
 
   /* --- semantic --- */
   --success: #22c55e;
