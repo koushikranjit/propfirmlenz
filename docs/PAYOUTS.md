@@ -169,20 +169,55 @@ Where no reliable rate exists, **no dollar value is stored**. Public totals ther
 
 ## 9. Public surface `[LOCKED]`
 
-`src/lib/repositories/public-payouts.ts` is the only public reader. It never joins
-`blockchain_transactions` or `payout_candidates`, so unreviewed data is **structurally** unable to
-reach a statistic rather than filtered out by a predicate somebody might forget. Only published,
-non-deleted firms are included.
+`src/lib/repositories/public-payouts.ts` and `payout-tracker.ts` are the only public readers.
+Neither joins `blockchain_transactions` or `payout_candidates`, so unreviewed data is
+**structurally** unable to reach a statistic rather than filtered out by a predicate somebody might
+forget. Only published, non-deleted firms are included.
 
 Routes:
 
-- `/payouts` — verified payouts, time windows, per-firm summaries. `noindex` while empty (a thin
-  page), and excluded from the sitemap in that state.
-- `/payouts/methodology` — §10.
+- `/payouts` — the tracker: firms ranked by verified payout count, time windows
+  (`24h`/`7d`/`30d`/`365d`/`all`), a no-JavaScript name search, headline figures, a 12-month trend,
+  and the latest verified transactions. `noindex` while empty (a thin page) and excluded from the
+  sitemap in that state; `noindex` for any windowed or searched view, so parameter URLs never
+  compete with the canonical one.
+- `/payouts/[slug]` — one firm's breakdown: window-scoped figures, per-network counts, monthly
+  trend, and every verified transaction with its explorer link. Unpublished firms 404 here exactly
+  as they do on their profile. Enters the sitemap only once the firm has a verified payout.
+- `/payouts/methodology` — §10. `methodology` is in `RESERVED_SEGMENTS`, so no firm slug can shadow
+  it under `/payouts/`.
 - `/prop-firms/[slug]` — a "Verified payouts" section, passed to `FirmProfile` as a **required**
   prop so the admin preview cannot silently omit it (`CLAUDE.md` §12.4f rules 34–35).
 
+### 9.1 What the tracker deliberately does not show `[LOCKED]`
+
+Trackers of this shape usually also carry **payout waiting time, account size, percentage return,
+and the recipient's region**. Prop Firm Lenz publishes none of them, and must not start: a
+blockchain records a transfer — an amount and two addresses — not the request that preceded it, the
+account it came from, or who received it. Every one of those columns would have to be estimated
+(`CLAUDE.md` §3 `[LOCKED]`). The firm page states this in a sentence rather than leaving a reader to
+infer that the data is simply missing.
+
+**Ranked by verified count, never by volume.** On a figure that is already a floor, one large
+transfer would outrank a hundred smaller ones and read as the firm paying more — when it only means
+we happened to record one big row.
+
+**Rank is a position, not a score.** It describes this table's ordering. It is not a rating, a
+grade, or an endorsement, and no other page may present it as one.
+
 Naming is load-bearing: `verifiedVolume`, never `totalVolume`. No label anywhere says "total".
+
+### 9.2 Arithmetic on public figures `[LOCKED]`
+
+- Sums, maxima and means come from PostgreSQL `numeric`, which is arbitrary precision. Where one
+  asset has to be folded across chains in TypeScript, it is done in **`BigInt`** — never `Number`,
+  which is already wrong past 2^53.
+- A mean is recomputed from the combined total, never averaged from per-group averages.
+- **Assets are never added together.** A firm paying USDT and USDC shows two figures.
+- The month series charts **counts, not value**, so no cross-asset rate is ever implied, and it
+  draws quiet months as real zeros — dropping them would compress a gap into a line that looks
+  continuous. It is a server-rendered SVG: the chart must be in the HTML for a crawler, and a
+  charting runtime would cost more than the page it draws on.
 
 ---
 
