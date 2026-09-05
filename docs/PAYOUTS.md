@@ -205,6 +205,14 @@ we happened to record one big row.
 **Rank is a position, not a score.** It describes this table's ordering. It is not a rating, a
 grade, or an endorsement, and no other page may present it as one.
 
+**Amount columns sort only within one asset `[LOCKED]`.** `payouts`, `latest` and `name` always
+sort. `volume`, `largest` and `average` are offered **only once an asset chip is selected** —
+ordering a mixed table by amount would place a USDT figure above a USDC one as if they were the same
+number, which is the cross-asset comparison §8 forbids wearing a sort arrow. `isSortAvailable()`
+decides this and `listPayoutFirmRanking` **enforces** it: an amount sort with mixed assets silently
+falls back to the count rather than trusting its caller. The column header states the reason rather
+than appearing broken.
+
 Naming is load-bearing: `verifiedVolume`, never `totalVolume`. No label anywhere says "total".
 
 ### 9.2 Arithmetic on public figures `[LOCKED]`
