@@ -392,17 +392,25 @@ comparisons remain absent because no data model or data exists for them.
 
 ## In progress
 
-Nothing. The payout system is complete, validated and committed locally.
+Nothing. Migrations `0002`–`0006` are applied to production, and the build is deployed and verified
+live at `https://propfirmlenz.com` (2026-09-05).
 
-**Two things need the owner, and neither was done automatically:**
+**Wallet-level payout verification is live** (`docs/PAYOUTS.md` §7.1). Marking a tracked wallet
+`trader_payouts` + `verified` publishes its transfers automatically, under that admin's recorded
+authorisation. Every other wallet still queues for individual review, and a human rejection is
+never revisited.
 
-1. **Migrations `0002` and `0003` have not been applied to production.** Both are additive
-   only (8 CREATE TABLEs and 5 ADD COLUMNs in total; no drop or alter of an existing object) and
-   both are verified against real PostgreSQL by the test suite. Applying them is the owner's call.
-2. **Nothing was deployed or pushed.**
+**Waiting on the owner — none of it done automatically:**
 
-Until a network and a wallet are recorded by an admin, `/payouts` correctly shows an
-empty state, is `noindex`, and is absent from the sitemap. No seed data exists.
+1. **`CRON_SECRET` is not set in Vercel.** `/api/cron/sync-wallets` returns 503 until it is, so the
+   daily sync does not run.
+2. **Both blockchain API keys were pasted into a chat transcript and should be rotated**
+   (Etherscan, TRONSCAN). They are set as Vercel production environment variables, and are not in
+   the repository, the database, any log, or any client bundle.
+3. **A TRON address was filed under Ethereum Mainnet** before per-network validation existed. It
+   reports "last scan failed, 0 transactions". Remove it on the wallets page and re-add it under
+   Tron — saving a TRON address under Ethereum is now refused.
+4. **Ten firms carry a placeholder "10% off LENZ" offer.** Confirm the terms or remove them.
 
 ### Deviations from `INITIALIZATION.md`, and why `[recorded 2026-09-04]`
 
@@ -420,17 +428,14 @@ empty state, is `noindex`, and is absent from the sitemap. No seed data exists.
 
 ## Next task
 
-**Documentation, architecture, and pre-initialization cleanup are all complete**
-(owner-confirmed 2026-09-03).
+Initialisation and Phase 1 stages 1–3 are done, and the blockchain payout system is built and
+deployed. `docs/INITIALIZATION.md` is executed; the notes above record where the run deviated.
 
-**Next: owner sets Git identity, then approves execution of `docs/INITIALIZATION.md`** — Phase 1 §1.1
-(Foundation): Corepack/pnpm, Next.js App Router with TypeScript strict, Tailwind v4 + design tokens,
-Radix + Lucide, Zod, Drizzle config, pino/Sentry, testing, and CI.
-
-`docs/INITIALIZATION.md` is the approved procedure. It is **written but not executed.**
-
-No implementation task is available until initialisation is approved. The project remains
-**documentation-only**.
+**Next, and needing owner direction:** the four items under **In progress**, then whichever comes
+first — verifying a wallet so the first payouts publish, or the remaining Phase 2 work catalogued
+in `docs/PAYOUTS.md` §12 (public accounts, trader submissions, evidence media, processing-time
+distributions, `/prop-firms/[slug]/payouts`). No new stage starts without explicit approval
+(`CLAUDE.md` §4).
 
 ---
 
@@ -606,3 +611,4 @@ canonical domain.
 | 2026-09-04 | **Phase 1 Stage 3.1: public affiliate routing + documentation hardening.** Built `/go/{slug}` on the existing `resolveAffiliateLink` / `recordAffiliateClick` services — no resolution logic duplicated. Added `isSafeAffiliateDestination` (application-layer open-redirect guard over the DB's `^https://` CHECK) and pure request-classification helpers (bot, prefetch, device, referrer host, same-origin landing path, allowlisted `p`/`c`). Click is recorded before the 302 `[owner-directed]`; `ARCHITECTURE.md` §11.1–11.3 updated to match. Corrected `CLAUDE.md` rule 35 to name `getPublishedFirmView()`. No new dependencies. | format ✅ typecheck ✅ lint ✅ **244 tests ✅** build ✅ (25 routes) |
 | 2026-09-04 | **Phase 1 Stage 4: public homepage.** Built `/` inside the `(public)` group (the placeholder root route is gone): hero with real computed counts, GET-form search into `/prop-firms`, alphabetical firm grid, trust/methodology section, DB-driven browse-by facets, recently-checked list on real `verified_at`, closing CTA, definitional "what to compare" prose. Rewrote the site header (sticky, `<details>` mobile menu, no client JS) and footer (three columns, affiliate disclosure, unbuilt sections as text not links). Added `loading`/`error`/`not-found` for the public group. Two narrow repository additions; no new firm view model. `WebSite` + `WebPage` JSON-LD only. Capped vitest at 2 workers after PGlite instances exhausted memory. No new dependencies. | format ✅ typecheck ✅ lint ✅ **272 tests ✅** build ✅ (26 routes) |
 | 2026-09-04 | **Phase 1 Stage 5: admin firm data management.** Fixed a real defect — `publishFirm` wrote firm columns only, so staged challenges/rules/offers were validated, previewed, then silently dropped. Added `firm-publish-children.ts` (all six child collections + SEO materialised in the publish transaction), `firm-draft-overlay.ts` (pure, full-coverage preview overlay), `firm-children.ts` (one staging path for every child op, with per-collection permissions), an admin children repository, child form schemas, server actions, and six editor tabs. Extended the draft envelope with `affiliateLinks`. Fixed an unrelated build blocker: empty values in a copied `.env.example` failed the env schema. No new dependencies. | format ✅ typecheck ✅ lint ✅ **330 tests ✅** build ✅ (26 routes) |
+| 2026-09-05 | **Wallet-level payout verification, wallet removal, persistent payout sub-nav.** Owner directed that payout candidates should not need per-transfer review; implemented as auto-publish from wallets an admin marks `trader_payouts` + `verified`, with `verified_by_admin_id`/`verified_at` recording who authorised the address (`PAYOUTS.md` §7.1). Conditions 1–5 still re-checked per transfer; a human rejection is never revisited; withdrawing verification stops publishing and clears attribution. Added soft wallet removal with an inline confirmation (RESTRICT references make hard deletion impossible), per-network address validation on save, and `PayoutNav` on `/wallets` and `/networks` where it was missing. **Bug found:** `normaliseAddressFor` preserved TRON case while ingestion lower-cases `from_address` — a TRON wallet would have stopped matching its own transfers and read as a firm that never paid anyone. Both normalisations are now one rule. Methodology page rewritten to describe wallet-level verification and disclose its trade-off. Migration `0006` (3 columns + 1 FK, additive) applied to production | 498 tests pass (20 new, real PostgreSQL); typecheck, lint and build clean. Deployed to `https://propfirmlenz.com` and verified live; client bundles scanned, no secrets |
