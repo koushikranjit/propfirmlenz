@@ -219,6 +219,107 @@ export class StorageError extends Error {
   }
 }
 
+export interface StorageCheckStep {
+  step: "write" | "read" | "cleanup";
+  ok: boolean;
+  /** An operator-facing status. NEVER a credential (CLAUDE.md §6). */
+  detail: string;
+}
+
+export interface StorageCheck {
+  ok: boolean;
+  steps: StorageCheckStep[];
+}
+
+/**
+ * A REAL ROUND TRIP: write an object, read it back over the PUBLIC url, then
+ * delete it. Five environment variables have to agree with a bucket's actual
+ * settings, and four of the five fail loudly when they are wrong.
+ *
+ * `R2_PUBLIC_BASE_URL` is the fifth, and it is the dangerous one. If the bucket
+ * has no public access — or the value points at the S3 endpoint rather than the
+ * r2.dev host or a custom domain — every upload SUCCEEDS, a `media` row is
+ * written, and the logo 404s for every visitor. Nothing in the admin would look
+ * wrong. The read leg is the whole point of this check, not a nicety.
+ *
+ * The probe object is tiny, uniquely named and deleted afterwards. A failed
+ * cleanup is reported but not fatal: storage works, there is simply a stray
+ * object, and saying that is more useful than a red cross.
+ */
+export async function checkStorage(): Promise<StorageCheck> {
+  const config = r2Config();
+  if (!config) {
+    return {
+      ok: false,
+      steps: [
+        {
+          step: "write",
+          ok: false,
+          detail: `Not configured — missing ${missingStorageVars().join(", ")}`,
+        },
+      ],
+    };
+  }
+
+  const storage = new R2Storage(config);
+  const key = `_healthcheck/${Date.now()}-${Math.random().toString(36).slice(2, 10)}.txt`;
+  const body = new TextEncoder().encode("prop-firm-lenz storage check");
+  const steps: StorageCheckStep[] = [];
+
+  let stored: StoredObject;
+  try {
+    stored = await storage.put({ key, body, contentType: "text/plain" });
+    steps.push({ step: "write", ok: true, detail: "Uploaded to the bucket" });
+  } catch (error) {
+    steps.push({
+      step: "write",
+      ok: false,
+      detail:
+        error instanceof StorageError
+          ? `${error.message} Check the account id, keys and bucket name, and that the API token has write access.`
+          : "Could not reach the bucket.",
+    });
+    return { ok: false, steps };
+  }
+
+  let readable = false;
+  try {
+    // `no-store` so a CDN cannot answer for an object written a moment ago,
+    // which would make a broken public URL look fine.
+    const response = await fetch(stored.publicUrl, { cache: "no-store" });
+    readable = response.ok;
+    steps.push({
+      step: "read",
+      ok: readable,
+      detail: readable
+        ? "Readable at the public URL"
+        : `The public URL answered HTTP ${response.status}. Uploads would succeed and every logo would then 404 for visitors — check R2_PUBLIC_BASE_URL, and that the bucket allows public reads.`,
+    });
+  } catch {
+    steps.push({
+      step: "read",
+      ok: false,
+      detail:
+        "The public URL could not be reached. Check R2_PUBLIC_BASE_URL is the r2.dev host or your custom domain, not the S3 endpoint.",
+    });
+  }
+
+  try {
+    await storage.delete(key);
+    steps.push({ step: "cleanup", ok: true, detail: "Probe object removed" });
+  } catch {
+    steps.push({
+      step: "cleanup",
+      ok: false,
+      detail: `Probe object left behind at ${key}. Storage works; delete permission may be missing.`,
+    });
+  }
+
+  // Cleanup is reported, never fatal — an undeletable probe does not stop a
+  // logo from uploading and rendering.
+  return { ok: readable, steps };
+}
+
 /** The configured storage, or null when credentials are absent. */
 export function mediaStorage(): MediaStorage | null {
   const config = r2Config();
