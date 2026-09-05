@@ -10,6 +10,8 @@ import {
   listRecentVerifiedPayouts,
 } from "@/lib/repositories/public-payouts";
 import {
+  type RankingSort,
+  listPayoutAssets,
   listPayoutFirmRanking,
   listPayoutMonths,
 } from "@/lib/repositories/payout-tracker";
@@ -20,10 +22,12 @@ import {
 } from "@/lib/seo/metadata";
 import { PayoutTable } from "@/components/public/payouts/PayoutViews";
 import {
+  AssetTabs,
   FirmRankingTable,
   FirmSearch,
   PayoutTrend,
-  StatCard,
+  StatStrip,
+  type TrackerQuery,
   WINDOWS,
   WINDOW_LABEL,
   WindowTabs,
@@ -35,46 +39,68 @@ import {
  * Every figure is computed live from `verified_payouts`. When nothing has been
  * verified the page says so; it never falls back to a firm-reported number.
  *
- * An original Prop Firm Lenz page, built from the docs/DESIGN.md tokens — not a
- * reproduction of a competitor's tracker (CLAUDE.md §12.2 rule 6 `[LOCKED]`).
- * It carries only columns this database can actually answer: no payout waiting
+ * An original Prop Firm Lenz page, built from the docs/DESIGN.md tokens. It
+ * carries only columns this database can actually answer: no payout waiting
  * time, account size, percentage return or recipient region, none of which a
- * blockchain transfer reveals.
+ * blockchain transfer reveals (§9.1 `[LOCKED]`).
  */
 export const dynamic = "force-dynamic";
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 
-function readWindow(value: string | string[] | undefined): PayoutWindow {
-  const raw = Array.isArray(value) ? value[0] : value;
-  return WINDOWS.includes(raw as PayoutWindow) ? (raw as PayoutWindow) : "30d";
-}
+const SORTS: RankingSort[] = [
+  "payouts",
+  "latest",
+  "name",
+  "volume",
+  "largest",
+  "average",
+];
 
-function readQuery(value: string | string[] | undefined): string | undefined {
-  const raw = Array.isArray(value) ? value[0] : value;
-  const trimmed = raw?.trim().slice(0, 80);
-  return trimmed ? trimmed : undefined;
+const one = (value: string | string[] | undefined): string | undefined =>
+  Array.isArray(value) ? value[0] : value;
+
+function readQuery(params: Record<string, string | string[] | undefined>): {
+  query: TrackerQuery;
+  filtered: boolean;
+} {
+  const rawWindow = one(params.window);
+  const rawSort = one(params.sort);
+  const q = one(params.q)?.trim().slice(0, 80) || undefined;
+  const asset = one(params.asset)?.trim().slice(0, 16).toUpperCase() || undefined;
+
+  return {
+    query: {
+      window: WINDOWS.includes(rawWindow as PayoutWindow)
+        ? (rawWindow as PayoutWindow)
+        : "30d",
+      sort: SORTS.includes(rawSort as RankingSort)
+        ? (rawSort as RankingSort)
+        : "payouts",
+      ...(asset ? { asset } : {}),
+      ...(q ? { q } : {}),
+    },
+    filtered: Boolean(rawWindow || rawSort || q || asset),
+  };
 }
 
 /**
  * NOINDEX WHILE EMPTY — docs/SEO.md §9.
  *
- * With nothing verified, this page is a methodology summary and an empty state.
- * That is honest for a reader who arrives, but it is a thin page for a crawler,
- * and it disappears from the sitemap for the same reason. It becomes indexable
- * the moment there is a payout to show.
+ * With nothing verified, this page is a methodology summary and an empty state
+ * — honest for a reader, thin for a crawler, and it leaves the sitemap for the
+ * same reason. It becomes indexable the moment there is a payout to show.
  *
- * A windowed or searched view is noindex whatever the data: the canonical
- * payouts page is the unfiltered one, and near-duplicate parameter URLs must
- * not compete with it (docs/SEO.md §4).
+ * A windowed, sorted, filtered or searched view is noindex whatever the data:
+ * the canonical payouts page is the unfiltered one, and near-duplicate
+ * parameter URLs must not compete with it (docs/SEO.md §4).
  */
 export async function generateMetadata({
   searchParams,
 }: {
   searchParams: SearchParams;
 }): Promise<Metadata> {
-  const params = await searchParams;
-  const filtered = Boolean(readQuery(params.q)) || Boolean(params.window);
+  const { filtered } = readQuery(await searchParams);
   const { count } = await getPayoutTotals(getDb(), "all");
 
   return buildMetadata({
@@ -91,19 +117,23 @@ export default async function PayoutsPage({
 }: {
   searchParams: SearchParams;
 }) {
-  const params = await searchParams;
-  const window = readWindow(params.window);
-  const query = readQuery(params.q);
+  const { query } = readQuery(await searchParams);
   const db = getDb();
 
-  const [totals, firms, recent, months] = await Promise.all([
-    getPayoutTotals(db, window),
+  const [totals, firms, assets, recent, months] = await Promise.all([
+    getPayoutTotals(db, query.window),
+    // `q` is the URL's name for it; the repository calls it `query`. Mapped
+    // explicitly rather than spread, so a rename cannot silently drop the
+    // search and quietly return every firm instead.
     listPayoutFirmRanking(db, {
-      window,
+      window: query.window,
+      sort: query.sort,
+      asset: query.asset,
+      query: query.q,
       limit: 50,
-      ...(query ? { query } : {}),
     }),
-    listRecentVerifiedPayouts(db, { window, limit: 15 }),
+    listPayoutAssets(db, { window: query.window }),
+    listRecentVerifiedPayouts(db, { window: query.window, limit: 15 }),
     listPayoutMonths(db, { months: 12 }),
   ]);
 
@@ -141,54 +171,83 @@ export default async function PayoutsPage({
         </p>
       </header>
 
-      <div className="mt-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <WindowTabs current={window} basePath="/payouts" query={query} />
-        <FirmSearch action="/payouts" window={window} query={query} />
+      <div className="mt-8 flex flex-col gap-4">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <WindowTabs
+            current={query.window}
+            basePath="/payouts"
+            query={query}
+          />
+          <FirmSearch action="/payouts" query={query} />
+        </div>
+        <AssetTabs
+          assets={assets}
+          basePath="/payouts"
+          query={query}
+          total={totals.count}
+        />
       </div>
 
-      <dl className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
-        <StatCard label="Verified payouts">
-          {totals.count.toLocaleString("en")}
-        </StatCard>
-        <StatCard label="Firms with payouts">
-          {firms.length.toLocaleString("en")}
-        </StatCard>
-        <StatCard
-          label="Priced value"
-          {...(totals.usdValuedCount < totals.count
-            ? {
-                note: `${totals.usdValuedCount} of ${totals.count} carry a recorded rate`,
-              }
-            : {})}
-        >
-          {usd(totals.usdValue) ?? (
-            <span className="text-sm font-normal italic text-text-muted">
-              No recorded rates
-            </span>
-          )}
-        </StatCard>
-        <StatCard label="Period">
-          <span className="text-base">{WINDOW_LABEL[window]}</span>
-        </StatCard>
-      </dl>
+      <div className="mt-6">
+        <StatStrip
+          stats={[
+            {
+              label: "Verified payouts",
+              value: totals.count.toLocaleString("en"),
+              note: WINDOW_LABEL[query.window],
+            },
+            {
+              label: "Firms with payouts",
+              value: firms.length.toLocaleString("en"),
+              ...(query.asset ? { note: `Paying in ${query.asset}` } : {}),
+            },
+            {
+              label: "Priced value",
+              value:
+                usd(totals.usdValue) ??
+                ((
+                  <span className="text-sm font-normal italic text-text-muted">
+                    No recorded rates
+                  </span>
+                ) as React.ReactNode),
+              ...(totals.usdValuedCount < totals.count
+                ? {
+                    note: `${totals.usdValuedCount} of ${totals.count} carry a recorded rate`,
+                  }
+                : {}),
+            },
+            {
+              label: "Most recent",
+              value:
+                totals.latestAt === null ? (
+                  <span className="text-sm font-normal italic text-text-muted">
+                    None yet
+                  </span>
+                ) : (
+                  new Date(totals.latestAt).toISOString().slice(0, 10)
+                ),
+            },
+          ]}
+        />
+      </div>
 
       {firms.length === 0 ? (
         <div className="mt-8 rounded-[14px] border border-border-default bg-bg-card">
           <EmptyState
             title={
-              query
-                ? `No verified payouts for “${query}”`
+              query.q
+                ? `No verified payouts for “${query.q}”`
                 : "No verified payouts in this period"
             }
             description={
-              query
+              query.q
                 ? "No published firm matching that name has a verified payout in the selected period. Try a different name, or widen the period."
                 : "Nothing has passed blockchain verification for this period. Rather than showing figures a firm reports about itself, this page stays empty until there is a transaction anyone can check."
             }
             action={
               <Link
                 href="/payouts?window=all"
-                className="rounded-[10px] border border-border-default bg-bg-elevated px-4 py-2 text-sm font-medium text-text-primary hover:border-border-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
+                className="rounded-full border border-border-default bg-bg-elevated px-4 py-2 text-sm font-medium text-text-primary hover:border-border-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
               >
                 Show all time
               </Link>
@@ -197,13 +256,20 @@ export default async function PayoutsPage({
         </div>
       ) : (
         <>
-          <section aria-labelledby="ranking" className="mt-10">
-            <h2
-              id="ranking"
-              className="text-lg font-semibold text-text-primary"
-            >
-              Firms by verified payouts
-            </h2>
+          <section aria-labelledby="ranking" className="mt-8">
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <h2
+                id="ranking"
+                className="text-lg font-semibold text-text-primary"
+              >
+                Firms by verified payouts
+              </h2>
+              <p className="text-xs text-text-muted">
+                {query.asset
+                  ? `Showing ${query.asset} only — amount columns are sortable`
+                  : "Pick a single asset to sort by amount"}
+              </p>
+            </div>
             <p className="mt-1 max-w-3xl text-sm text-text-muted">
               Ranked by how many payouts we have verified, not by volume — one
               large transfer should not outrank a hundred smaller ones on a
@@ -211,7 +277,7 @@ export default async function PayoutsPage({
               because different tokens are never added together.
             </p>
             <div className="mt-4">
-              <FirmRankingTable firms={firms} window={window} />
+              <FirmRankingTable firms={firms} query={query} />
             </div>
           </section>
 

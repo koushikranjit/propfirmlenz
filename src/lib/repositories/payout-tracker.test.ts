@@ -12,6 +12,8 @@ import {
 } from "@/lib/db/schema";
 import {
   getFirmPayoutProfile,
+  isSortAvailable,
+  listPayoutAssets,
   listPayoutFirmRanking,
   listPayoutMonths,
 } from "./payout-tracker";
@@ -329,6 +331,140 @@ describe("payout tracker", () => {
       expect(
         await listPayoutFirmRanking(db, { window: "all", query: "'; drop--" }),
       ).toHaveLength(0);
+    });
+  });
+
+  /* -------------------------------------------------------------- sorting */
+
+  describe("sorting", () => {
+    /** Two firms whose count order is the OPPOSITE of their amount order. */
+    const twoFirms = async () => {
+      const big = await makeFirm("Example Firm A");
+      const busy = await makeFirm("Example Firm B");
+      await payout({
+        firmId: big,
+        walletId: await makeWallet(big),
+        amountBaseUnits: "9000000",
+        at: "2026-09-01T00:00:00Z",
+      });
+      const busyWallet = await makeWallet(busy);
+      for (let i = 0; i < 3; i += 1) {
+        await payout({
+          firmId: busy,
+          walletId: busyWallet,
+          amountBaseUnits: "1000000",
+          at: "2026-09-05T00:00:00Z",
+        });
+      }
+    };
+
+    it("refuses an amount sort while assets are mixed", async () => {
+      // The rule this protects: ordering a mixed table by amount would put a
+      // USDT figure above a USDC one as if they were the same number — the
+      // cross-asset comparison §8 forbids, wearing a sort arrow.
+      expect(isSortAvailable("volume")).toBe(false);
+      expect(isSortAvailable("largest")).toBe(false);
+      expect(isSortAvailable("average")).toBe(false);
+      expect(isSortAvailable("volume", "USDT")).toBe(true);
+      // These never depend on an asset.
+      expect(isSortAvailable("payouts")).toBe(true);
+      expect(isSortAvailable("latest")).toBe(true);
+      expect(isSortAvailable("name")).toBe(true);
+    });
+
+    it("falls back to the count when an amount sort is not available", async () => {
+      await twoFirms();
+      const rows = await listPayoutFirmRanking(db, {
+        window: "all",
+        sort: "volume",
+      });
+      // Not the firm with the single 9 USDT transfer.
+      expect(rows.map((r) => r.firmName)).toEqual([
+        "Example Firm B",
+        "Example Firm A",
+      ]);
+    });
+
+    it("honours an amount sort once one asset is selected", async () => {
+      await twoFirms();
+      const rows = await listPayoutFirmRanking(db, {
+        window: "all",
+        sort: "volume",
+        asset: "USDT",
+      });
+      expect(rows.map((r) => r.firmName)).toEqual([
+        "Example Firm A",
+        "Example Firm B",
+      ]);
+    });
+
+    it("sorts by name and by recency", async () => {
+      await twoFirms();
+      expect(
+        (
+          await listPayoutFirmRanking(db, { window: "all", sort: "name" })
+        ).map((r) => r.firmName),
+      ).toEqual(["Example Firm A", "Example Firm B"]);
+
+      expect(
+        (
+          await listPayoutFirmRanking(db, { window: "all", sort: "latest" })
+        ).map((r) => r.firmName),
+      ).toEqual(["Example Firm B", "Example Firm A"]);
+    });
+
+    it("restricts every figure to the selected asset", async () => {
+      const firmId = await makeFirm("Example Firm A");
+      const walletId = await makeWallet(firmId);
+      await payout({
+        firmId,
+        walletId,
+        amountBaseUnits: "1000000",
+        symbol: "USDT",
+        at: "2026-09-01T00:00:00Z",
+      });
+      await payout({
+        firmId,
+        walletId,
+        amountBaseUnits: "7000000",
+        symbol: "USDC",
+        at: "2026-09-02T00:00:00Z",
+      });
+
+      const [row] = await listPayoutFirmRanking(db, {
+        window: "all",
+        asset: "USDC",
+      });
+      // The count is the count OF THAT ASSET, not of everything.
+      expect(row?.count).toBe(1);
+      expect(row?.tokens).toHaveLength(1);
+      expect(row?.tokens[0]?.symbol).toBe("USDC");
+    });
+
+    it("lists the assets carrying payouts, most used first", async () => {
+      const firmId = await makeFirm("Example Firm A");
+      const walletId = await makeWallet(firmId);
+      await payout({
+        firmId,
+        walletId,
+        amountBaseUnits: "1000000",
+        symbol: "USDC",
+        at: "2026-09-01T00:00:00Z",
+      });
+      for (let i = 0; i < 2; i += 1) {
+        await payout({
+          firmId,
+          walletId,
+          amountBaseUnits: "1000000",
+          symbol: "USDT",
+          at: "2026-09-02T00:00:00Z",
+        });
+      }
+
+      expect(await listPayoutAssets(db, { window: "all" })).toEqual([
+        { symbol: "USDT", count: 2 },
+        { symbol: "USDC", count: 1 },
+      ]);
     });
   });
 

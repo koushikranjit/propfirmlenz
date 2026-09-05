@@ -77,15 +77,52 @@ function meanBaseUnits(total: string, count: number): string {
 }
 
 /**
- * Firms ranked by verified payout count, for one window.
+ * How the table may be ordered.
  *
- * ORDERED BY WHAT WE CAN PROVE. Not by volume: on a figure that is already a
+ * `volume`, `largest` and `average` are only offered WITH AN ASSET SELECTED
+ * `[LOCKED]`. Ordering a mixed table by amount would compare a USDT figure to
+ * a USDC one as if they were the same number — which is the cross-asset
+ * arithmetic §8 forbids, wearing a sort arrow. `applyRankingSort` enforces it,
+ * not the caller.
+ */
+export type RankingSort =
+  | "payouts"
+  | "latest"
+  | "name"
+  | "volume"
+  | "largest"
+  | "average";
+
+const AMOUNT_SORTS: RankingSort[] = ["volume", "largest", "average"];
+
+/** Whether a sort is available for the current asset filter. */
+export function isSortAvailable(sort: RankingSort, asset?: string): boolean {
+  return !AMOUNT_SORTS.includes(sort) || Boolean(asset);
+}
+
+function compareBig(a: string, b: string): number {
+  const left = BigInt(a);
+  const right = BigInt(b);
+  return left === right ? 0 : left > right ? 1 : -1;
+}
+
+/**
+ * Firms ranked for one window.
+ *
+ * DEFAULT ORDER IS VERIFIED COUNT. Not volume: on a figure that is already a
  * floor, one large transfer would outrank a hundred smaller ones and read as
  * the firm paying more, when it only means we happened to record one big row.
  */
 export async function listPayoutFirmRanking(
   db: Database,
-  opts: { window?: PayoutWindow; limit?: number; query?: string } = {},
+  opts: {
+    window?: PayoutWindow | undefined;
+    limit?: number | undefined;
+    query?: string | undefined;
+    /** Restricts every figure to one asset, and unlocks the amount sorts. */
+    asset?: string | undefined;
+    sort?: RankingSort | undefined;
+  } = {},
   now: Date = new Date(),
 ): Promise<RankedFirm[]> {
   const start = windowStart(opts.window ?? "all", now);
@@ -95,6 +132,9 @@ export async function listPayoutFirmRanking(
   const search = opts.query?.trim();
   // Parameterised, and matched against the firm's own name only.
   if (search) clauses.push(sql`${propFirms.name} ilike ${`%${search}%`}`);
+  if (opts.asset) {
+    clauses.push(eq(verifiedPayouts.assetSymbol, opts.asset));
+  }
 
   const rows = await db
     .select({
@@ -195,14 +235,81 @@ export async function listPayoutFirmRanking(
     byFirm.set(row.firmSlug, firm);
   }
 
-  return [...byFirm.values()]
-    .map((firm) => ({
-      ...firm,
-      networks: firm.networks.sort((a, b) => a.localeCompare(b, "en")),
-      tokens: firm.tokens.sort((a, b) => b.count - a.count),
-    }))
-    .sort((a, b) => b.count - a.count || a.firmName.localeCompare(b.firmName))
-    .slice(0, Math.min(Math.max(opts.limit ?? 50, 1), 100));
+  const ranked = [...byFirm.values()].map((firm) => ({
+    ...firm,
+    networks: firm.networks.sort((a, b) => a.localeCompare(b, "en")),
+    tokens: firm.tokens.sort((a, b) => b.count - a.count),
+  }));
+
+  // An amount sort with no asset selected falls back to the count. Silently
+  // comparing one token's figure to another's is the error this prevents.
+  const sort =
+    opts.sort && isSortAvailable(opts.sort, opts.asset) ? opts.sort : "payouts";
+  const byName = (a: RankedFirm, b: RankedFirm) =>
+    a.firmName.localeCompare(b.firmName, "en");
+  const amount = (firm: RankedFirm, pick: (t: RankedFirmToken) => string) =>
+    firm.tokens[0] ? pick(firm.tokens[0]) : "0";
+
+  ranked.sort((a, b) => {
+    switch (sort) {
+      case "name":
+        return byName(a, b);
+      case "latest":
+        return (b.latestAt ?? "").localeCompare(a.latestAt ?? "") || byName(a, b);
+      case "volume":
+        return (
+          compareBig(
+            amount(b, (t) => t.totalBaseUnits),
+            amount(a, (t) => t.totalBaseUnits),
+          ) || byName(a, b)
+        );
+      case "largest":
+        return (
+          compareBig(
+            amount(b, (t) => t.largestBaseUnits),
+            amount(a, (t) => t.largestBaseUnits),
+          ) || byName(a, b)
+        );
+      case "average":
+        return (
+          compareBig(
+            amount(b, (t) => t.averageBaseUnits),
+            amount(a, (t) => t.averageBaseUnits),
+          ) || byName(a, b)
+        );
+      default:
+        return b.count - a.count || byName(a, b);
+    }
+  });
+
+  return ranked.slice(0, Math.min(Math.max(opts.limit ?? 50, 1), 100));
+}
+
+export interface PayoutAsset {
+  symbol: string;
+  count: number;
+}
+
+/** Assets carrying verified payouts in the window, for the filter chips. */
+export async function listPayoutAssets(
+  db: Database,
+  opts: { window?: PayoutWindow } = {},
+  now: Date = new Date(),
+): Promise<PayoutAsset[]> {
+  const start = windowStart(opts.window ?? "all", now);
+  const clauses = [livePublishedFirm];
+  if (start) clauses.push(gte(verifiedPayouts.transactionTimestamp, start));
+
+  return db
+    .select({
+      symbol: verifiedPayouts.assetSymbol,
+      count: sql<number>`count(*)::int`,
+    })
+    .from(verifiedPayouts)
+    .innerJoin(propFirms, eq(propFirms.id, verifiedPayouts.propFirmId))
+    .where(and(...clauses))
+    .groupBy(verifiedPayouts.assetSymbol)
+    .orderBy(desc(sql`count(*)`));
 }
 
 export interface PayoutMonth {

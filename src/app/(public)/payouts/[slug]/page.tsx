@@ -22,8 +22,9 @@ import { PayoutTable } from "@/components/public/payouts/PayoutViews";
 import {
   FirmPayoutHeader,
   NotRecorded,
+  Pager,
   PayoutTrend,
-  StatCard,
+  StatStrip,
   TokenLines,
   WINDOWS,
   WINDOW_LABEL,
@@ -40,18 +41,29 @@ import { formatDate } from "@/lib/view/format";
  * WHAT THIS PAGE WILL NOT SHOW `[LOCKED]`. Payout speed, account size,
  * percentage return, and where a recipient lives are not in this database and
  * are not derivable from a transfer. They are absent rather than approximated
- * (CLAUDE.md §3).
+ * (CLAUDE.md §3), and the page says so rather than leaving a reader to guess
+ * that the data is merely missing.
  *
  * A firm that is not published 404s here, exactly as it does on its profile —
  * this route must not become a way to probe for draft firms.
  */
 export const dynamic = "force-dynamic";
 
+const PAGE_SIZE = 25;
+
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 
+const one = (value: string | string[] | undefined): string | undefined =>
+  Array.isArray(value) ? value[0] : value;
+
 function readWindow(value: string | string[] | undefined): PayoutWindow {
-  const raw = Array.isArray(value) ? value[0] : value;
+  const raw = one(value);
   return WINDOWS.includes(raw as PayoutWindow) ? (raw as PayoutWindow) : "all";
+}
+
+function readPage(value: string | string[] | undefined): number {
+  const parsed = Number.parseInt(one(value) ?? "1", 10);
+  return Number.isFinite(parsed) ? Math.min(Math.max(parsed, 1), 200) : 1;
 }
 
 export async function generateMetadata({
@@ -75,8 +87,8 @@ export async function generateMetadata({
     path: `/payouts/${firm.firmSlug}`,
     title: `${firm.firmName} verified payouts`,
     description: `Blockchain-verified payouts from ${firm.firmName}, with the transaction behind every figure. Verified on-chain payouts only — a floor, not the firm's total payout volume.`,
-    // A firm with nothing verified has no content here worth indexing, and
-    // the empty state must not compete with its profile page.
+    // A firm with nothing verified has no content here worth indexing, and its
+    // empty state must not compete with its profile page.
     ...(firm.count === 0 ? { noindex: true } : {}),
   });
 }
@@ -90,16 +102,25 @@ export default async function FirmPayoutsPage({
 }) {
   const [{ slug }, search] = await Promise.all([params, searchParams]);
   const window = readWindow(search.window);
+  const page = readPage(search.page);
   const db = getDb();
 
   const firm = await getFirmPayoutProfile(db, { slug, window });
   if (!firm) notFound();
 
   const [payouts, months] = await Promise.all([
-    listRecentVerifiedPayouts(db, { firmId: firm.firmId, window, limit: 50 }),
+    listRecentVerifiedPayouts(db, {
+      firmId: firm.firmId,
+      window,
+      // One extra row answers "is there a next page?" without a second count.
+      limit: PAGE_SIZE + 1,
+      offset: (page - 1) * PAGE_SIZE,
+    }),
     listPayoutMonths(db, { firmId: firm.firmId, months: 12 }),
   ]);
 
+  const hasNext = payouts.length > PAGE_SIZE;
+  const rows = hasNext ? payouts.slice(0, PAGE_SIZE) : payouts;
   const basePath = `/payouts/${firm.firmSlug}`;
 
   return (
@@ -118,51 +139,82 @@ export default async function FirmPayoutsPage({
         <WindowTabs current={window} basePath={basePath} />
       </div>
 
-      <dl className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
-        <StatCard label="Verified payouts" note={WINDOW_LABEL[window]}>
-          {firm.count.toLocaleString("en")}
-        </StatCard>
-        <StatCard label="Verified volume" note="Per asset, never combined">
-          <TokenLines tokens={firm.tokens} pick={(t) => t.totalBaseUnits} />
-        </StatCard>
-        <StatCard label="Largest single">
-          <TokenLines tokens={firm.tokens} pick={(t) => t.largestBaseUnits} />
-        </StatCard>
-        <StatCard label="Average size">
-          <TokenLines tokens={firm.tokens} pick={(t) => t.averageBaseUnits} />
-        </StatCard>
-        <StatCard label="First verified">
-          {formatDate(firm.firstAt) ?? <NotRecorded />}
-        </StatCard>
-        <StatCard label="Most recent">
-          {formatDate(firm.latestAt) ?? <NotRecorded />}
-        </StatCard>
-        <StatCard label="Networks">
-          {firm.networks.length === 0 ? (
-            <NotRecorded />
-          ) : (
-            <span className="flex flex-col gap-0.5 text-sm font-medium">
-              {firm.networks.map((network) => (
-                <span key={network.name} className="whitespace-nowrap">
-                  {network.name}{" "}
-                  <span className="text-xs font-normal tabular-nums text-text-muted">
-                    ({network.count.toLocaleString("en")})
+      <div className="mt-6">
+        <StatStrip
+          stats={[
+            {
+              label: "Verified payouts",
+              value: firm.count.toLocaleString("en"),
+              note: WINDOW_LABEL[window],
+            },
+            {
+              label: "Verified volume",
+              value: (
+                <TokenLines
+                  tokens={firm.tokens}
+                  pick={(t) => t.totalBaseUnits}
+                />
+              ),
+              note: "Per asset, never combined",
+            },
+            {
+              label: "Largest single",
+              value: (
+                <TokenLines
+                  tokens={firm.tokens}
+                  pick={(t) => t.largestBaseUnits}
+                />
+              ),
+            },
+            {
+              label: "Average size",
+              value: (
+                <TokenLines
+                  tokens={firm.tokens}
+                  pick={(t) => t.averageBaseUnits}
+                />
+              ),
+            },
+            {
+              label: "First verified",
+              value: formatDate(firm.firstAt) ?? <NotRecorded />,
+            },
+            {
+              label: "Most recent",
+              value: formatDate(firm.latestAt) ?? <NotRecorded />,
+            },
+            {
+              label: "Networks",
+              value:
+                firm.networks.length === 0 ? (
+                  <NotRecorded />
+                ) : (
+                  <span className="flex flex-col gap-0.5 text-sm">
+                    {firm.networks.map((network) => (
+                      <span key={network.name} className="whitespace-nowrap">
+                        {network.name}{" "}
+                        <span className="text-xs font-normal tabular-nums text-text-muted">
+                          ({network.count.toLocaleString("en")})
+                        </span>
+                      </span>
+                    ))}
                   </span>
-                </span>
-              ))}
-            </span>
-          )}
-        </StatCard>
-        <StatCard label="Assets">
-          {firm.tokens.length === 0 ? (
-            <NotRecorded />
-          ) : (
-            <span className="text-base">
-              {firm.tokens.map((t) => t.symbol).join(" · ")}
-            </span>
-          )}
-        </StatCard>
-      </dl>
+                ),
+            },
+            {
+              label: "Assets",
+              value:
+                firm.tokens.length === 0 ? (
+                  <NotRecorded />
+                ) : (
+                  <span className="text-base">
+                    {firm.tokens.map((t) => t.symbol).join(" · ")}
+                  </span>
+                ),
+            },
+          ]}
+        />
+      </div>
 
       <p className="mt-4 max-w-3xl text-sm text-text-muted">
         Payout speed, account size and percentage return are not shown because
@@ -186,7 +238,7 @@ export default async function FirmPayoutsPage({
             action={
               <Link
                 href={`${basePath}?window=all`}
-                className="rounded-[10px] border border-border-default bg-bg-elevated px-4 py-2 text-sm font-medium text-text-primary hover:border-border-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
+                className="rounded-full border border-border-default bg-bg-elevated px-4 py-2 text-sm font-medium text-text-primary hover:border-border-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan"
               >
                 Show all time
               </Link>
@@ -204,34 +256,10 @@ export default async function FirmPayoutsPage({
             </section>
           ) : null}
 
-          <section aria-labelledby="by-network" className="mt-10">
-            <h2
-              id="by-network"
-              className="text-lg font-semibold text-text-primary"
-            >
-              Where the payouts were made
-            </h2>
-            <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {firm.networks.map((network) => (
-                <li
-                  key={network.name}
-                  className="flex items-baseline justify-between gap-3 rounded-[12px] border border-border-default bg-bg-card px-4 py-3"
-                >
-                  <span className="text-sm text-text-secondary">
-                    {network.name}
-                  </span>
-                  <span className="text-sm font-semibold tabular-nums text-text-primary">
-                    {network.count.toLocaleString("en")}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
           <section aria-labelledby="transactions" className="mt-10">
             <h2
               id="transactions"
-              className="text-lg font-semibold text-text-primary"
+              className="scroll-mt-24 text-lg font-semibold text-text-primary"
             >
               Verified transactions
             </h2>
@@ -242,8 +270,14 @@ export default async function FirmPayoutsPage({
               identity.
             </p>
             <div className="mt-4">
-              <PayoutTable payouts={payouts} />
+              <PayoutTable payouts={rows} />
             </div>
+            <Pager
+              basePath={basePath}
+              window={window}
+              page={page}
+              hasNext={hasNext}
+            />
           </section>
         </>
       )}

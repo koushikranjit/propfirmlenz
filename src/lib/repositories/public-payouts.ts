@@ -139,7 +139,13 @@ export interface PublicPayout {
  */
 export async function listRecentVerifiedPayouts(
   db: Database,
-  opts: { limit?: number; window?: PayoutWindow; firmId?: string } = {},
+  opts: {
+    limit?: number;
+    /** 0-based row offset, for paging one firm's transaction list. */
+    offset?: number;
+    window?: PayoutWindow;
+    firmId?: string;
+  } = {},
   now: Date = new Date(),
 ): Promise<PublicPayout[]> {
   const start = windowStart(opts.window ?? "all", now);
@@ -170,7 +176,10 @@ export async function listRecentVerifiedPayouts(
     )
     .where(and(...clauses))
     .orderBy(desc(verifiedPayouts.transactionTimestamp))
-    .limit(Math.min(Math.max(opts.limit ?? 25, 1), 100));
+    .limit(Math.min(Math.max(opts.limit ?? 25, 1), 100))
+    // Capped: an offset a visitor can type must not turn into an unbounded
+    // scan over chain data.
+    .offset(Math.min(Math.max(opts.offset ?? 0, 0), 5_000));
 
   return rows.filter(isPayoutAddressable).map((row) => ({
     ...row,
