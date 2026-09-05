@@ -7,6 +7,7 @@ import { FirmSearch } from "@/components/public/home/FirmSearch";
 import { Hero } from "@/components/public/home/Hero";
 import { HomeSection } from "@/components/public/home/HomeSection";
 import { RecentlyVerified } from "@/components/public/home/RecentlyVerified";
+import { ReferencePreview } from "@/components/public/home/ReferencePreview";
 import { TrustSection } from "@/components/public/home/TrustSection";
 import { WhatToCompare } from "@/components/public/home/WhatToCompare";
 import { EmptyState } from "@/components/ui/primitives";
@@ -97,6 +98,7 @@ export default async function HomePage() {
     <>
       <Hero firmCount={firmCount} verifiedCount={verifiedCount} />
       <FirmSearch />
+      <ReferencePreview firms={firms} />
 
       <HomeSection
         id="explore"
