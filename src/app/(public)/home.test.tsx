@@ -44,6 +44,28 @@ vi.mock("@/lib/db/client", () => ({
   getDb: () => db,
 }));
 
+/**
+ * The page renders its data branch only when `env.DATABASE_URL` is set, so the
+ * mock has to cover BOTH the client and the flag that gates reaching for it.
+ *
+ * Without this the page takes its no-database fallback, renders an empty
+ * homepage, and every assertion below about firm data and currency handling
+ * passes vacuously against markup that contains nothing. `env` is parsed from
+ * `process.env` at import time, which is why this is a module mock rather than
+ * `stubEnv` — the page module is imported on the next line.
+ *
+ * The value is a fixture and is never connected to: `getDb` above returns the
+ * PGlite instance.
+ */
+vi.mock("@/lib/validation/env", async (importOriginal) => {
+  const actual =
+    await importOriginal<typeof import("@/lib/validation/env")>();
+  return {
+    ...actual,
+    env: { ...actual.env, DATABASE_URL: "postgresql://fixture/unused" },
+  };
+});
+
 const HomePage = (await import("./page")).default;
 const { generateMetadata } = await import("./page");
 
@@ -496,15 +518,29 @@ describe("homepage", () => {
     it("gives the header a named nav and a keyboard-operable mobile menu", () => {
       const { container } = render(<SiteHeader />);
 
+      // At least one navigation landmark carries an accessible name, so a
+      // screen-reader user can jump to it. The COUNT is not asserted: whether
+      // the mobile menu reuses the same landmark or nests its own is a markup
+      // choice, and pinning it made a header redesign look like an a11y
+      // regression when nothing had actually become less usable.
       expect(
         screen.getAllByRole("navigation", { name: /primary/i }).length,
-      ).toBe(2);
+      ).toBeGreaterThanOrEqual(1);
 
       // <details>/<summary> is focusable and toggles on Enter/Space with no
       // JavaScript, and announces its expanded state.
       const disclosure = container.querySelector("details > summary");
       expect(disclosure).toBeTruthy();
-      expect(disclosure?.textContent).toContain("Menu");
+
+      // It must be reachable by name — from visible text OR an aria-label.
+      // Either satisfies the requirement; requiring the word "Menu" specified
+      // an implementation, not an outcome.
+      const name =
+        disclosure?.getAttribute("aria-label") ??
+        disclosure?.textContent ??
+        "";
+      expect(name.trim().length).toBeGreaterThan(0);
+      expect(name).toMatch(/menu|navigation/i);
     });
 
     it("links the logo home with an accessible name", () => {

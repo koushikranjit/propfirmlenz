@@ -85,7 +85,7 @@ function PathwayCard({
   body: string;
 }) {
   return (
-    <div className="relative rounded-[14px] border border-border-default bg-bg-card p-5 transition-colors hover:border-border-strong">
+    <div className="relative rounded-[16px] border border-border-default bg-bg-card p-6 transition-colors hover:border-brand-cyan/40 hover:bg-bg-elevated">
       <h3 className="text-base font-semibold text-text-primary">
         <Link
           href={href}

@@ -58,9 +58,9 @@ const TERMS: { term: string; definition: string }[] = [
 export function WhatToCompare() {
   return (
     <div className="flex flex-col gap-8">
-      <dl className="grid grid-cols-1 gap-x-10 gap-y-6 md:grid-cols-2">
+      <dl className="grid grid-cols-1 gap-3 md:grid-cols-2">
         {TERMS.map((entry) => (
-          <div key={entry.term}>
+          <div key={entry.term} className="rounded-[14px] border border-border-default bg-bg-card p-5">
             <dt className="text-base font-semibold text-text-primary">
               {entry.term}
             </dt>

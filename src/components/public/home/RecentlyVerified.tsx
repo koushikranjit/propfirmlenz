@@ -17,7 +17,7 @@ import { formatDate } from "@/lib/view/format";
  */
 export function RecentlyVerified({ firms }: { firms: FirmSummary[] }) {
   return (
-    <ul className="divide-y divide-border-subtle rounded-[14px] border border-border-default bg-bg-card">
+    <ul className="divide-y divide-border-subtle rounded-[16px] border border-border-default bg-bg-card shadow-[0_12px_40px_rgba(0,0,0,0.14)]">
       {firms.map((firm) => {
         const verifiedOn = formatDate(firm.verifiedAt);
 

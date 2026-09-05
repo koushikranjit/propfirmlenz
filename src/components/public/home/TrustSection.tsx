@@ -45,7 +45,7 @@ export function TrustSection() {
       {PRINCIPLES.map((principle) => (
         <li
           key={principle.title}
-          className="rounded-[14px] border border-border-default bg-bg-card p-5"
+          className="rounded-[16px] border border-border-default bg-bg-card p-6 shadow-[0_12px_40px_rgba(0,0,0,0.14)] transition-colors hover:border-brand-cyan/40"
         >
           <h3 className="text-base font-semibold text-text-primary">
             {principle.title}
