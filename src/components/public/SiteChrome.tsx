@@ -21,12 +21,6 @@ import { SITE_NAME } from "@/lib/seo/site";
  * that is measured on mobile (CLAUDE.md §7).
  */
 
-/** Built routes only. Adding an entry here requires the route to exist. */
-const PRIMARY_NAV: { href: string; label: string }[] = [
-  { href: "/prop-firms", label: "Prop firms" },
-  { href: "/payouts", label: "Payouts" },
-];
-
 /**
  * Sections with a committed phase but no route yet. Rendered as TEXT in the
  * footer, never as links (docs/ROADMAP.md).
@@ -39,12 +33,6 @@ const PLANNED_SECTIONS: { label: string; phase: string }[] = [
 const NAV_LINK_CLASS =
   "rounded-[8px] px-3 py-2 text-sm font-medium text-text-secondary " +
   "hover:bg-bg-elevated hover:text-text-primary focus-visible:outline-none " +
-  "focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 " +
-  "focus-visible:ring-offset-bg-base";
-
-const CTA_CLASS =
-  "inline-flex h-10 items-center justify-center rounded-[10px] px-4 text-sm font-semibold " +
-  "text-white bg-[image:var(--gradient-brand)] focus-visible:outline-none " +
   "focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 " +
   "focus-visible:ring-offset-bg-base";
 
@@ -73,86 +61,79 @@ function Wordmark({ className = "h-11 sm:h-14" }: { className?: string }) {
 }
 
 export function SiteHeader() {
+  const secondaryNav = [
+    { href: "/", label: "Home" },
+    { href: "/prop-firms", label: "Offers" },
+    { href: "/prop-firms", label: "Challenges" },
+    { href: "/prop-firms", label: "Best Sellers" },
+    { href: "/prop-firms?verified=true", label: "Reviews" },
+    { href: "/prop-firms?favorite=true", label: "Favorite Firms" },
+    { href: "/prop-firms", label: "Prop Firm Rules" },
+    { href: "/prop-firms", label: "Compare Firms" },
+    { href: "/payouts", label: "Spreads" },
+    { href: "/payouts", label: "Payouts" },
+  ];
+
   return (
-    // Sticky with a restrained blur (docs/DESIGN.md §7.7, §10 — subtle, not
-    // decorative glassmorphism). The background stays opaque enough that text
-    // contrast never depends on what is scrolling underneath.
     <header className="sticky top-0 z-40 border-b border-border-subtle bg-bg-base/95 backdrop-blur">
-      <div className="h-1 bg-[image:var(--gradient-brand)]" aria-hidden="true" />
-      <div className="border-b border-border-subtle bg-bg-near-black">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-xs sm:px-6">
-          <span className="font-medium text-text-secondary">Source-led prop firm research</span>
-          <Link href="/payouts" className="font-semibold text-brand-cyan hover:text-text-primary">Explore payout evidence</Link>
-        </div>
+      <div className="flex h-14 items-center justify-center bg-[image:var(--gradient-brand)] px-4 text-sm font-semibold text-bg-base">
+        <span>Source-led prop firm research</span>
+        <span aria-hidden className="mx-2">→</span>
+        <Link href="/payouts" className="rounded-full bg-bg-base px-4 py-1.5 text-xs font-semibold text-text-primary hover:bg-bg-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bg-base focus-visible:ring-offset-2 focus-visible:ring-offset-brand-violet">
+          Explore payouts
+        </Link>
       </div>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Taller than the usual 64px bar so the lockup has room to sit at a
-            legible size without crowding the nav. */}
-        <div className="flex h-18 items-center justify-between gap-4 sm:h-20">
-          <Link
-            href="/"
-            className="flex shrink-0 items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base"
-          >
-            <Wordmark />
+
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-8">
+        <div className="flex min-h-[68px] items-center gap-4 border-b border-border-subtle">
+          <Link href="/" className="flex shrink-0 items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base">
+            <Wordmark className="h-12 sm:h-14" />
             <span className="sr-only">{SITE_NAME} home</span>
           </Link>
+          <span className="hidden h-7 w-px bg-border-default sm:block" aria-hidden />
+          <Link href="/prop-firms" aria-label="Browse all firms" className="hidden size-10 items-center justify-center rounded-lg text-text-primary hover:bg-bg-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan sm:flex">
+            <span aria-hidden className="grid grid-cols-3 gap-1">
+              {Array.from({ length: 9 }).map((_, index) => <span key={index} className="size-1.5 rounded-[2px] bg-current" />)}
+            </span>
+          </Link>
+          <form action="/prop-firms" method="get" role="search" className="hidden min-w-0 max-w-[290px] flex-1 sm:block">
+            <label htmlFor="site-header-search" className="sr-only">Search prop firms</label>
+            <div className="flex h-11 items-center rounded-full border border-border-default bg-bg-card px-4 focus-within:border-brand-cyan">
+              <span aria-hidden className="mr-2 text-lg text-text-muted">⌕</span>
+              <input id="site-header-search" name="q" type="search" placeholder="Search" className="min-w-0 flex-1 bg-transparent text-sm text-text-primary outline-none placeholder:text-text-muted" />
+            </div>
+          </form>
+          <div className="ml-auto flex items-center gap-2 sm:gap-4">
+            <div className="hidden rounded-full border border-brand-violet bg-bg-card p-1 text-sm font-semibold sm:flex">
+              <span className="rounded-full bg-[image:var(--gradient-brand)] px-4 py-2 text-bg-base">Research</span>
+              <Link href="/payouts" className="px-4 py-2 text-text-primary hover:text-brand-cyan">Payouts</Link>
+            </div>
+            <Link href="/prop-firms" className="hidden rounded-full border border-brand-cyan/50 px-4 py-2 text-sm font-semibold text-text-primary hover:bg-bg-elevated md:inline-flex">Browse firms</Link>
+            <span className="hidden rounded-full border border-border-default px-3 py-2 text-sm font-semibold text-text-primary lg:inline-flex">Live data</span>
+            <span className="flex size-9 items-center justify-center rounded-full bg-[image:var(--gradient-brand)] text-xs font-bold text-bg-base" aria-label="Prop Firm Lenz account">PL</span>
 
-          <nav aria-label="Primary" className="hidden items-center gap-1 sm:flex">
-            {PRIMARY_NAV.map((item) => (
-              <Link key={item.href} href={item.href} className={NAV_LINK_CLASS}>
-                {item.label}
-              </Link>
-            ))}
-            <Link href="/prop-firms" className={`${CTA_CLASS} ml-2`}>
-              Browse all firms
+            <details className="group relative sm:hidden">
+              <summary aria-label="Open navigation menu" className="flex size-10 cursor-pointer list-none items-center justify-center rounded-full border border-border-default text-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan [&::-webkit-details-marker]:hidden">
+                <span aria-hidden className="flex flex-col gap-1"><span className="h-0.5 w-5 bg-current" /><span className="h-0.5 w-5 bg-current" /><span className="h-0.5 w-5 bg-current" /></span>
+              </summary>
+              <nav aria-label="Mobile primary" className="absolute right-0 top-12 z-50 w-64 rounded-2xl border border-border-default bg-bg-card p-3 shadow-2xl">
+                <div className="flex flex-col gap-1">
+                  {secondaryNav.map((item) => <Link key={`${item.href}-${item.label}`} href={item.href} className={`${NAV_LINK_CLASS} block`}>{item.label}</Link>)}
+                </div>
+              </nav>
+            </details>
+            <span aria-hidden className="hidden text-3xl text-text-primary sm:inline">☰</span>
+          </div>
+        </div>
+
+        <nav aria-label="Secondary" className="hidden min-h-[54px] items-end justify-between gap-2 overflow-x-auto sm:flex">
+          {secondaryNav.map((item, index) => (
+            <Link key={`${item.href}-${item.label}`} href={item.href} className={`relative whitespace-nowrap px-3 pb-4 pt-4 text-sm font-medium ${index === 0 ? "text-text-primary after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-brand-cyan" : "text-text-muted hover:text-text-primary"}`}>
+              {item.label}
+              {item.label === "Compare Firms" && <span className="ml-2 rounded-full bg-brand-cyan/15 px-2 py-1 text-[10px] text-brand-cyan">New</span>}
             </Link>
-          </nav>
-
-          {/* Mobile: a disclosure, not a drawer library. No client JS. */}
-          <details className="group relative sm:hidden">
-            <summary className="flex h-10 cursor-pointer items-center gap-2 rounded-[10px] border border-border-default px-3 text-sm font-medium text-text-secondary marker:content-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base [&::-webkit-details-marker]:hidden">
-              <span
-                aria-hidden
-                className="flex flex-col gap-[3px] transition-none"
-              >
-                <span className="block h-0.5 w-4 bg-current" />
-                <span className="block h-0.5 w-4 bg-current" />
-                <span className="block h-0.5 w-4 bg-current" />
-              </span>
-              Menu
-            </summary>
-
-            <nav
-              aria-label="Primary"
-              className="absolute right-0 z-50 mt-2 w-56 rounded-[14px] border border-border-default bg-bg-card p-2 shadow-lg"
-            >
-              <ul className="flex flex-col gap-1">
-                {PRIMARY_NAV.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className={`${NAV_LINK_CLASS} block`}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-                <li className="pt-1">
-                  <Link href="/prop-firms" className={`${CTA_CLASS} w-full`}>
-                    Browse all firms
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </details>
-        </div>
-        <div className="hidden items-center gap-6 overflow-x-auto border-t border-border-subtle py-2.5 text-xs font-medium text-text-muted sm:flex">
-          <Link href="/" className="whitespace-nowrap text-text-primary">Research desk</Link>
-          <Link href="/prop-firms" className="whitespace-nowrap hover:text-text-primary">All firms</Link>
-          <Link href="/prop-firms?verified=true" className="whitespace-nowrap hover:text-text-primary">Verified data</Link>
-          <Link href="/payouts" className="whitespace-nowrap hover:text-text-primary">Payouts</Link>
-          <span className="ml-auto whitespace-nowrap rounded-full border border-brand-cyan/30 px-2.5 py-1 text-brand-cyan">Live directory</span>
-        </div>
+          ))}
+        </nav>
       </div>
     </header>
   );
