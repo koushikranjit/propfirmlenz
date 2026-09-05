@@ -56,8 +56,8 @@ function Wordmark({ className = "h-11 sm:h-14" }: { className?: string }) {
     <img
       src="/brand/logo-576.png"
       alt={SITE_NAME}
-      width={576}
-      height={288}
+      width={2172}
+      height={724}
       className={`${className} w-auto`}
     />
   );
