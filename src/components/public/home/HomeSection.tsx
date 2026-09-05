@@ -29,7 +29,7 @@ export function HomeSection({
     <section
       id={id}
       aria-labelledby={headingId}
-      className="scroll-mt-20 border-b border-border-subtle"
+      className="scroll-mt-20 border-b border-border-subtle bg-bg-base"
     >
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">

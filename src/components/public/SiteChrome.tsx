@@ -81,7 +81,7 @@ export function SiteHeader() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Taller than the usual 64px bar so the lockup has room to sit at a
             legible size without crowding the nav. */}
-        <div className="flex h-18 items-center justify-between gap-4 sm:h-22">
+        <div className="flex h-18 items-center justify-between gap-4 sm:h-20">
           <Link
             href="/"
             className="flex shrink-0 items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base"
