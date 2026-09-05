@@ -1,0 +1,5 @@
+allowBuilds:
+  # esbuild links its platform binary at install time; Vitest needs it.
+  esbuild: true
+  sharp: false
+  unrs-resolver: false

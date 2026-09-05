@@ -1,0 +1,63 @@
+{
+  "name": "prop-firm-lenz",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "db:generate": "node --env-file-if-exists=.env.local ./node_modules/drizzle-kit/bin.cjs generate",
+    "db:migrate": "node --env-file-if-exists=.env.local ./node_modules/drizzle-kit/bin.cjs migrate",
+    "db:check": "node --env-file-if-exists=.env.local ./node_modules/drizzle-kit/bin.cjs check",
+    "db:studio": "node --env-file-if-exists=.env.local ./node_modules/drizzle-kit/bin.cjs studio",
+    "verify": "pnpm typecheck && pnpm lint && pnpm test",
+    "admin:create": "node --experimental-transform-types --no-warnings --env-file-if-exists=.env.local --import ./scripts/ts-alias-loader.mjs scripts/create-admin.ts",
+    "seed:firms": "node --experimental-transform-types --no-warnings --env-file-if-exists=.env.local --import ./scripts/ts-alias-loader.mjs scripts/seed-firms.ts"
+  },
+  "dependencies": {
+    "@node-rs/argon2": "^2.2.0",
+    "drizzle-orm": "^0.45.2",
+    "lucide-react": "^1.39.0",
+    "next": "16.3.4",
+    "pino": "^10.3.1",
+    "postgres": "^3.4.9",
+    "radix-ui": "^1.6.7",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "uuid": "^14.0.2",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@electric-sql/pglite": "^0.5.8",
+    "@lhci/cli": "^0.15.1",
+    "@playwright/test": "^1.62.1",
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.1.1",
+    "drizzle-kit": "^0.31.10",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.4",
+    "eslint-plugin-import": "^2.32.0",
+    "happy-dom": "^20.13.2",
+    "prettier": "^3.9.6",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^4.1.11"
+  }
+}

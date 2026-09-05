@@ -1,0 +1,55 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1788464797552,
+      "tag": "0000_huge_marvel_boy",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1788509573448,
+      "tag": "0001_hot_cannonball",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1788510584722,
+      "tag": "0002_giant_lightspeed",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1788527002440,
+      "tag": "0003_thick_tyrannus",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1788542132384,
+      "tag": "0004_square_sunfire",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1788543729339,
+      "tag": "0005_strong_major_mapleleaf",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1788577101980,
+      "tag": "0006_silent_angel",
+      "breakpoints": true
+    }
+  ]
+}

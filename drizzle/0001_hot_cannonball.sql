@@ -1,0 +1,1 @@
+ALTER TABLE "prop_firms" ADD COLUMN "payout_info_url" text;
