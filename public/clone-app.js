@@ -4,34 +4,34 @@
   "text": "Payout data: Payout Junction",
   "url": "https://payoutjunction.com/"
  },
- "captured_at": "2026-10-14T20:12:17Z",
+ "captured_at": "2026-10-14T21:05:17Z",
  "latest_24h": [
   {
-   "average": "$1,627",
-   "count": "1,142",
+   "average": "$1,599",
+   "count": "1,167",
    "firm": "Tradeify Futures",
    "largest": "$4,500",
-   "latest": "Oct 14, 19:46 UTC",
+   "latest": "Oct 14, 20:42 UTC",
    "methods": "Rise",
-   "total": "$1,858,306"
+   "total": "$1,866,545"
   },
   {
-   "average": "$1,142",
-   "count": "689",
+   "average": "$1,138",
+   "count": "691",
    "firm": "FundedNext",
    "largest": "$13,347",
-   "latest": "Oct 14, 20:01 UTC",
+   "latest": "Oct 14, 21:05 UTC",
    "methods": "Rise Direct Crypto",
-   "total": "$786,952"
+   "total": "$786,039"
   },
   {
-   "average": "$1,310",
-   "count": "527",
+   "average": "$1,309",
+   "count": "524",
    "firm": "MyFundedFutures",
    "largest": "$10,308",
-   "latest": "Oct 14, 20:12 UTC",
+   "latest": "Oct 14, 20:57 UTC",
    "methods": "Rise",
-   "total": "$690,252"
+   "total": "$686,033"
   },
   {
    "average": "$1,405",
@@ -43,31 +43,31 @@
    "total": "$269,706"
   },
   {
-   "average": "$1,766",
-   "count": "111",
+   "average": "$930",
+   "count": "217",
+   "firm": "FundedFuturesFamily",
+   "largest": "$5,625",
+   "latest": "Oct 14, 20:57 UTC",
+   "methods": "Rise",
+   "total": "$201,753"
+  },
+  {
+   "average": "$1,685",
+   "count": "108",
    "firm": "BlueGuardian",
    "largest": "$8,730",
    "latest": "Oct 14, 17:07 UTC",
    "methods": "Rise Direct Crypto",
-   "total": "$196,060"
+   "total": "$181,977"
   },
   {
-   "average": "$937",
-   "count": "209",
-   "firm": "FundedFuturesFamily",
-   "largest": "$5,625",
-   "latest": "Oct 14, 19:40 UTC",
-   "methods": "Rise",
-   "total": "$195,846"
-  },
-  {
-   "average": "$1,981",
-   "count": "68",
+   "average": "$2,002",
+   "count": "67",
    "firm": "FundingPips",
    "largest": "$26,248",
    "latest": "Oct 14, 18:14 UTC",
    "methods": "Rise",
-   "total": "$134,683"
+   "total": "$134,118"
   },
   {
    "average": "$3,556",
@@ -88,24 +88,6 @@
    "total": "$98,001"
   },
   {
-   "average": "$482",
-   "count": "177",
-   "firm": "GoatFundedTrader",
-   "largest": "$6,423",
-   "latest": "Oct 14, 19:49 UTC",
-   "methods": "Rise Direct Crypto",
-   "total": "$85,345"
-  },
-  {
-   "average": "$1,572",
-   "count": "51",
-   "firm": "BluSky.Pro",
-   "largest": "$8,100",
-   "latest": "Oct 14, 16:54 UTC",
-   "methods": "Rise",
-   "total": "$80,182"
-  },
-  {
    "average": "$977",
    "count": "69",
    "firm": "AlphaCapitalGroup",
@@ -115,13 +97,22 @@
    "total": "$67,425"
   },
   {
-   "average": "$948",
-   "count": "67",
+   "average": "$557",
+   "count": "119",
+   "firm": "GoatFundedTrader",
+   "largest": "$6,423",
+   "latest": "Oct 14, 19:49 UTC",
+   "methods": "Rise Direct Crypto",
+   "total": "$66,314"
+  },
+  {
+   "average": "$935",
+   "count": "68",
    "firm": "Propr",
    "largest": "$9,799",
-   "latest": "Oct 14, 19:33 UTC",
+   "latest": "Oct 14, 20:49 UTC",
    "methods": "Direct Crypto On-chain",
-   "total": "$63,498"
+   "total": "$63,595"
   },
   {
    "average": "$2,749",
@@ -142,22 +133,13 @@
    "total": "$37,260"
   },
   {
-   "average": "$1,006",
-   "count": "34",
+   "average": "$1,022",
+   "count": "33",
    "firm": "FundedTraderMarkets",
    "largest": "$6,456",
    "latest": "Oct 14, 19:18 UTC",
    "methods": "Rise Direct Crypto",
-   "total": "$34,194"
-  },
-  {
-   "average": "$1,074",
-   "count": "30",
-   "firm": "TopOneFutures",
-   "largest": "$2,699",
-   "latest": "Oct 14, 19:51 UTC",
-   "methods": "Rise",
-   "total": "$32,209"
+   "total": "$33,736"
   },
   {
    "average": "$1,292",
@@ -178,22 +160,40 @@
    "total": "$30,974"
   },
   {
-   "average": "$1,192",
-   "count": "24",
+   "average": "$1,306",
+   "count": "22",
+   "firm": "BluSky.Pro",
+   "largest": "$4,500",
+   "latest": "Oct 14, 16:54 UTC",
+   "methods": "Rise",
+   "total": "$28,734"
+  },
+  {
+   "average": "$1,055",
+   "count": "27",
+   "firm": "TopOneFutures",
+   "largest": "$2,025",
+   "latest": "Oct 14, 19:51 UTC",
+   "methods": "Rise",
+   "total": "$28,484"
+  },
+  {
+   "average": "$1,197",
+   "count": "23",
    "firm": "Legends Trading",
    "largest": "$3,772",
    "latest": "Oct 14, 18:25 UTC",
    "methods": "Rise",
-   "total": "$28,612"
+   "total": "$27,532"
   },
   {
-   "average": "$1,676",
-   "count": "14",
+   "average": "$1,566",
+   "count": "15",
    "firm": "Hypernova",
    "largest": "$7,052",
-   "latest": "Oct 14, 20:02 UTC",
+   "latest": "Oct 14, 21:01 UTC",
    "methods": "Direct Crypto On-chain",
-   "total": "$23,471"
+   "total": "$23,489"
   },
   {
    "average": "$1,523",
@@ -205,13 +205,13 @@
    "total": "$22,843"
   },
   {
-   "average": "$1,077",
-   "count": "17",
+   "average": "$1,018",
+   "count": "16",
    "firm": "HolaPrime",
    "largest": "$2,814",
    "latest": "Oct 14, 15:21 UTC",
    "methods": "Rise Direct Crypto",
-   "total": "$18,309"
+   "total": "$16,286"
   },
   {
    "average": "$1,403",
@@ -257,15 +257,6 @@
    "latest": "Oct 14, 13:01 UTC",
    "methods": "Rise",
    "total": "$5,238"
-  },
-  {
-   "average": "$1,411",
-   "count": "3",
-   "firm": "AquaFunded",
-   "largest": "$2,983",
-   "latest": "Oct 14, 09:50 UTC",
-   "methods": "Rise",
-   "total": "$4,232"
   },
   {
    "average": "$3,922",
@@ -331,6 +322,15 @@
    "total": "$1,560"
   },
   {
+   "average": "$625",
+   "count": "2",
+   "firm": "AquaFunded",
+   "largest": "$1,111",
+   "latest": "Oct 14, 09:50 UTC",
+   "methods": "Rise",
+   "total": "$1,249"
+  },
+  {
    "average": "$573",
    "count": "2",
    "firm": "AlphaTraderFirm",
@@ -343,15 +343,15 @@
  "monthly": {
   "headline": {
    "range": "1\u201331 October 2026",
-   "total": "$54,412,576"
+   "total": "$54,445,109"
   },
   "rows": [
    {
     "cells": [
      "1",
      "Tradeify Futures Tracked payout method: Rise",
-     "$20,897,156",
-     "12,981",
+     "$20,905,395",
+     "13,006",
      "\u25bc 47.6%",
      "38.4%"
     ],
@@ -362,8 +362,8 @@
     "cells": [
      "2",
      "FundedNext Tracked payout method: Rise Direct Crypto",
-     "$8,153,551",
-     "6,671",
+     "$8,164,496",
+     "6,687",
      "\u25bc 54.8%",
      "15.0%"
     ],
@@ -374,8 +374,8 @@
     "cells": [
      "3",
      "MyFundedFutures Tracked payout method: Rise",
-     "$6,414,691",
-     "4,201",
+     "$6,422,019",
+     "4,207",
      "\u25bc 59.5%",
      "11.8%"
     ],
@@ -422,9 +422,9 @@
     "cells": [
      "7",
      "FundedFuturesFamily Tracked payout method: Rise",
-     "$1,727,730",
-     "1,793",
-     "\u25bc 29.5%",
+     "$1,733,637",
+     "1,801",
+     "\u25bc 29.3%",
      "3.2%"
     ],
     "firm": "FundedFuturesFamily",
@@ -506,8 +506,8 @@
     "cells": [
      "14",
      "Propr Tracked payout method: Direct Crypto",
-     "$559,742",
-     "811",
+     "$559,839",
+     "812",
      "\u25bc 45.5%",
      "1.0%"
     ],
@@ -566,8 +566,8 @@
     "cells": [
      "19",
      "Hypernova Tracked payout method: Direct Crypto",
-     "$327,589",
-     "262",
+     "$327,607",
+     "263",
      "\u25bc 47.0%",
      "0.6%"
     ],
@@ -994,10 +994,10 @@
  ],
  "stats": {
   "all_time": {
-   "count": 1025709,
+   "count": 1025766,
    "firms": 42,
    "since": "2023-10-18",
-   "usd": 1757722203.36
+   "usd": 1757754736.87
   },
   "by_month": [
    {
@@ -1267,16 +1267,16 @@
     "vs_same_quarter_last_year_same_span_pct": null
    },
    {
-    "count": 38588,
+    "count": 38645,
     "firms": 41,
     "in_progress": true,
     "quarter": "2026-Q4",
     "same_span_days": 14,
-    "usd": 54412575.86,
+    "usd": 54445109.36,
     "vs_prior_quarter_pct": -83.5,
-    "vs_prior_quarter_same_span_pct": 25.9,
+    "vs_prior_quarter_same_span_pct": 25.8,
     "vs_same_quarter_last_year_pct": -74.8,
-    "vs_same_quarter_last_year_same_span_pct": 97.6
+    "vs_same_quarter_last_year_same_span_pct": 97.3
    }
   ],
   "by_year": [
@@ -1308,93 +1308,93 @@
     "year": "2025"
    },
    {
-    "count": 570452,
+    "count": 570509,
     "firms": 42,
     "label": "2026 to date",
     "to_date": true,
-    "usd": 882790321.96,
-    "vs_prior_year_pct": 116.4,
+    "usd": 882822855.46,
+    "vs_prior_year_pct": 116.3,
     "year": "2026"
    },
    {
-    "count": 675350,
+    "count": 675382,
     "firms": 42,
     "label": "Last 12 months",
     "to_date": true,
-    "usd": 1071467446.87,
+    "usd": 1071437334.46,
     "vs_prior_year_pct": 118.7,
     "year": "last_12m"
    }
   ],
-  "generated_at": "2026-10-14T20:12:17Z",
-  "hhi_30d": 1772,
+  "generated_at": "2026-10-14T21:05:17Z",
+  "hhi_30d": 1773,
   "largest_on_record": {
    "date": "2025-11-01",
    "firm": "FundedNext",
    "usd": 346837.9
   },
   "last_12m": {
-   "count": 675350,
+   "count": 675382,
    "firms": 42,
-   "usd": 1071467446.87
+   "usd": 1071437334.46
   },
   "last_24h": {
-   "count": 3699,
+   "count": 3635,
    "firms": 37,
    "leading_firm": "Tradeify Futures",
-   "usd": 5013457.2
+   "usd": 4927189.76
   },
   "last_30d": {
-   "avg": 1428.39,
-   "count": 86043,
+   "avg": 1427.98,
+   "count": 86053,
    "firms": 42,
-   "median": 1099.76,
-   "usd": 122903388.28,
-   "vs_prior_30d_pct": 16.9
+   "median": 1099.0,
+   "usd": 122882266.31,
+   "vs_prior_30d_pct": 16.8
   },
   "month_to_date": {
-   "count": 38588,
+   "count": 38645,
    "firms": 41,
    "from": "2026-10-01T00:00:00Z",
    "leading_firm": "Tradeify Futures",
-   "usd": 54412575.86
+   "usd": 54445109.36
   },
   "size_buckets_30d": [
    {
     "bucket": "under $500",
-    "count": 19110,
+    "count": 19131,
     "hi": 500,
     "lo": 0,
     "share_of_payouts_pct": 22.2,
     "share_of_usd_pct": 3.7,
-    "usd": 4540606.3
+    "usd": 4544408.6
    },
    {
     "bucket": "$500\u2013$1,000",
-    "count": 19926,
+    "count": 19925,
     "hi": 1000,
     "lo": 500,
     "share_of_payouts_pct": 23.2,
     "share_of_usd_pct": 12.1,
-    "usd": 14899102.07
+    "usd": 14897624.24
    },
    {
     "bucket": "$1,000\u2013$2,000",
-    "count": 28267,
+    "count": 28261,
     "hi": 2000,
     "lo": 1000,
-    "share_of_payouts_pct": 32.9,
+    "share_of_payouts_pct": 32.8,
     "share_of_usd_pct": 32.3,
-    "usd": 39685011.39
+    "usd": 39672535.44
    },
    {
     "bucket": "$2,000\u2013$5,000",
-    "count": 16955,
+    "count": 16951,
     "hi": 5000,
     "lo": 2000,
     "share_of_payouts_pct": 19.7,
     "share_of_usd_pct": 38.1,
-    "usd": 46871743.25
+    "usd": 46860772.76
    },
    {
     "bucket": "$5,000\u2013$10,000",
@@ -1426,22 +1426,22 @@
   ],
   "top5_30d": [
    {
-    "count": 27152,
+    "count": 27177,
     "firm": "Tradeify Futures",
     "share": 35.7,
-    "usd": 43825960.91
+    "usd": 43834200.17
    },
    {
-    "count": 15635,
+    "count": 15636,
     "firm": "FundedNext",
     "share": 15.3,
-    "usd": 18833962.31
+    "usd": 18830493.38
    },
    {
-    "count": 9797,
+    "count": 9802,
     "firm": "MyFundedFutures",
     "share": 12.3,
-    "usd": 15136985.33
+    "usd": 15140970.73
    },
    {
     "count": 5444,
@@ -1450,32 +1450,32 @@
     "usd": 8569256.8
    },
    {
-    "count": 3280,
+    "count": 3269,
     "firm": "BlueGuardian",
     "share": 4.9,
-    "usd": 6039666.88
+    "usd": 6020712.88
    }
   ],
   "week_to_date": {
-   "count": 8429,
+   "count": 8486,
    "firms": 38,
    "from": "2026-10-12T00:00:00Z",
    "leading_firm": "Tradeify Futures",
-   "usd": 11845720.08
+   "usd": 11878253.59
   }
  },
  "weekly": {
   "headline": {
    "range": "12\u201318 October 2026",
-   "total": "$11,845,720"
+   "total": "$11,878,254"
   },
   "rows": [
    {
     "cells": [
      "1",
      "Tradeify Futures Tracked payout method: Rise",
-     "$4,018,559",
-     "2,277",
+     "$4,026,798",
+     "2,302",
      "\u25bc 62.1%",
      "33.9%"
     ],
@@ -1486,9 +1486,9 @@
     "cells": [
      "2",
      "FundedNext Tracked payout method: Rise Direct Crypto",
-     "$1,747,269",
-     "1,486",
-     "\u25bc 56.2%",
+     "$1,758,214",
+     "1,502",
+     "\u25bc 56.0%",
      "14.8%"
     ],
     "firm": "FundedNext",
@@ -1498,9 +1498,9 @@
     "cells": [
      "3",
      "MyFundedFutures Tracked payout method: Rise",
-     "$1,479,150",
-     "1,136",
-     "\u25bc 55.6%",
+     "$1,486,477",
+     "1,142",
+     "\u25bc 55.4%",
      "12.5%"
     ],
     "firm": "MyFundedFutures",
@@ -1513,7 +1513,7 @@
      "$705,200",
      "348",
      "\u25bc 52.3%",
-     "6.0%"
+     "5.9%"
     ],
     "firm": "BlueGuardian",
     "method": "Rise Direct Crypto"
@@ -1534,9 +1534,9 @@
     "cells": [
      "6",
      "FundedFuturesFamily Tracked payout method: Rise",
-     "$494,097",
-     "518",
-     "\u25bc 42.6%",
+     "$500,005",
+     "526",
+     "\u25bc 41.9%",
      "4.2%"
     ],
     "firm": "FundedFuturesFamily",
@@ -1618,8 +1618,8 @@
     "cells": [
      "13",
      "Propr Tracked payout method: Direct Crypto",
-     "$150,913",
-     "167",
+     "$151,009",
+     "168",
      "\u25bc 49.6%",
      "1.3%"
     ],
@@ -1633,7 +1633,7 @@
      "$136,096",
      "94",
      "\u25bc 46.1%",
-     "1.1%"
+     "1.2%"
     ],
     "firm": "BluSky.Pro",
     "method": "Rise"
@@ -1714,8 +1714,8 @@
     "cells": [
      "21",
      "Hypernova Tracked payout method: Direct Crypto",
-     "$74,483",
-     "47",
+     "$74,501",
+     "48",
      "\u25bc 63.0%",
      "0.6%"
     ],
@@ -1994,27 +1994,10 @@ const favoriteFaqs=[
 ['Which firms are included?','The page covers the Forex firms present in the site’s directory and challenge datasets and uses the available Trustpilot rating and review-count snapshot. Missing or withheld values are shown as an em dash.']];
 const logoFiles={"Alpha Capital":"firm-alpha-capital.png","Alpha Futures":"firm-alpha-futures.png","Apex Trader Funding":"firm-apex-trader-funding-new.svg","AquaFunded":"firm-aquafunded.svg","AquaFunded Futures":"firm-aquafunded.svg","Atmos Funded":"firm-atmos-funded.svg","Audacity Capital":"firm-audacity-capital.svg","Blue Guardian":"firm-blue-guardian.png","Blue Guardian Futures":"firm-blue-guardian.png","Blueberry Funded":"firm-blueberry-funded.png","Blueberry Futures":"firm-blueberry-funded.png","BrightFunded":"firm-brightfunded.png","City Traders Imperium":"firm-city-traders-imperium.svg","Crypto Fund Trader":"firm-crypto-fund-trader.svg","Darwinex Zero":"firm-darwinex-zero.png","DayTraders":"firm-daytraders.png","E8 Futures":"firm-e8-markets.svg","E8 Markets":"firm-e8-markets.svg","Earn2Trade":"firm-earn2trade.png","FTMO":"firm-ftmo.svg","Finotive Funding":"firm-finotive-funding.svg","Fintokei":"firm-fintokei.png","Funded Futures Family":"firm-funded-futures-family.png","Funded Trading Plus":"firm-funded-trading-plus.png","FundedElite":"firm-fundedelite.svg","FundedNext":"firm-fundednext.svg","FundedNext Futures":"firm-fundednext-futures.png","FundingPips":"firm-fundingpips.svg","FuturesElite":"firm-futureselite-new.svg","Goat Funded Futures":"firm-goat-funded-futures.png","Goat Funded Trader":"firm-goat-funded-trader.svg","Hantec Trader":"firm-hantec-trader.png","Hola Prime":"firm-hola-prime.png","Instant Funding":"firm-instant-funding.png","Lark Funding":"firm-lark-funding.svg","Lucid Trading":"firm-lucid-trading.png","Maven":"firm-maven.png","Ment Funding":"firm-ment-funding.png","Moneta Funded":"firm-moneta-funded.png","My Funded Futures":"firm-my-funded-futures.png","Nordic Funder":"firm-nordic-funder.svg","Orion Funded":"firm-orion-funded.png","Take Profit Trader":"firm-take-profit-trader-new.svg","The Trading Pit":"firm-the-trading-pit.png","The Trading Pit Futures":"firm-the-trading-pit-futures.svg","The5ers":"firm-the5ers.svg","The5ers Futures":"firm-the5ers-futures.png","ThinkCapital":"firm-thinkcapital.png","Top One Futures":"firm-top-one-futures.png","Top One Trader":"firm-top-one-trader.svg","Topstep":"firm-topstep.png","Trade The Pool":"firm-trade-the-pool-dark-new.svg","TradeDay":"firm-tradeday-new.svg","Tradeify":"firm-tradeify.png","Traders Launch":"firm-traders-launch-new.svg","WSFunded":"firm-wsfunded.png","Ylos Trading":"firm-ylos-trading-new.svg","AlphaCapitalGroup":"firm-alpha-capital.png","AlphaFutures":"firm-alpha-futures.png","AquaFutures":"firm-aquafunded.svg","BlueGuardian":"firm-blue-guardian.png","E8Markets":"firm-e8-markets.svg","FundedFuturesFamily":"firm-funded-futures-family.png","GoatFundedFutures":"firm-goat-funded-futures.png","GoatFundedTrader":"firm-goat-funded-trader.svg","HolaPrime":"firm-hola-prime.png","Instantfunding":"firm-instant-funding.png","MyFundedFutures":"firm-my-funded-futures.png","OrionFunded":"firm-orion-funded.png","TopOneFutures":"firm-top-one-futures.png","TopOneTrader":"firm-top-one-trader.svg","Tradeify Futures":"firm-tradeify.png","YlosTrading":"firm-ylos-trading-new.svg","Axi Select":"firm-axi-select.png","BEM Funding":"firm-bem-funding.png","Breakout":"firm-breakout.png","E8 Perpetuals":"firm-e8-perpetuals.png","FXIFY":"firm-fxify.png","For Traders":"firm-for-traders.png","For Traders Crypto":"firm-for-traders-crypto.png","Hola Prime Futures":"firm-hola-prime-futures.png","Leveraged":"firm-leveraged.png","Leveraged Crypto":"firm-leveraged-crypto.png","Tradeify 247":"firm-tradeify-247.png","WenCrypto":"firm-wencrypto.png"};
 const initials=n=>n.split(/\s+/).map(x=>x[0]).slice(0,2).join('').toUpperCase();
-const logoSource=n=>{
-  if(!n) return '';
-  const clean=(n||'').trim();
-  const dir=TRUSTPILOT_FIRMS.find(f=>f.name===clean || f.name.toLowerCase()===clean.toLowerCase());
-  if(dir?.logo && dir.logo.startsWith('data:')) return dir.logo;
-  const baseName=clean.replace(/\s+(Futures|Crypto)$/i,'').trim();
-  const baseDir=TRUSTPILOT_FIRMS.find(f=>f.name===baseName || f.name.toLowerCase()===baseName.toLowerCase());
-  if(baseDir?.logo && baseDir.logo.startsWith('data:')) return baseDir.logo;
-  const mapped=logoFiles[clean]||logoFiles[baseName];
-  if(mapped && mapped.startsWith('data:')) return mapped;
-  return dir?.logo || '';
-};
+const logoSource=n=>{const mapped=logoFiles[n];if(mapped)return `assets/firm-logos/${mapped}`;const directory=TRUSTPILOT_FIRMS.find(f=>f.name===n),fallback=directory?.logo||directory?.logo_file;if(!fallback)return '';return fallback.startsWith('assets/')?fallback:`assets/firm-logos/${fallback}`};
 const logo=n=>{const src=logoSource(n);return src?`<span class="logo-wrap firm-logo-frame"><img class="firm-logo" src="${src}" alt="${n} logo" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="firm-initial" hidden aria-label="${n}">${initials(n)}</span></span>`:`<span class="logo-wrap firm-logo-frame"><span class="firm-initial" aria-label="${n}">${initials(n)}</span></span>`};
-const platformSvgs={
-  'cTrader': '<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#E65100"/><text x="12" y="15" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold" font-family="sans-serif">cTr</text></svg>',
-  'MT5': '<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#1B75BC"/><text x="12" y="15" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold" font-family="sans-serif">MT5</text></svg>',
-  'MT4': '<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#005A9C"/><text x="12" y="15" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold" font-family="sans-serif">MT4</text></svg>',
-  'Match-Trader': '<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#7B1FA2"/><text x="12" y="15" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold" font-family="sans-serif">M-T</text></svg>',
-  'DXtrade': '<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#2E7D32"/><text x="12" y="15" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold" font-family="sans-serif">DX</text></svg>'
-};
-const platformIcon=p=>{const svg=platformSvgs[p];return svg?`<span class="platform" title="${p}" aria-label="${p}">${svg}</span>`:'';};
+const platformFiles={'cTrader':{file:'ctrader.png',label:'cTrader'},'MT5':{file:'mt5.png',label:'MetaTrader 5'},'MT4':{file:'mt4.png',label:'MetaTrader 4'},'Match-Trader':{file:'mt4.png',label:'MetaTrader 4'},'DXtrade':{file:'dxtrade.png',label:'DXtrade'}};
+const platformIcon=p=>{const item=platformFiles[p];return item?`<span class="platform" title="${item.label}" aria-label="${item.label}"><img src="assets/platforms/${item.file}" alt="" aria-hidden="true"></span>`:''};
 const promo=pct=>pct==null||Number(pct)<=0?'<span class="asset-tag">—</span>':`<span class="promo"><span class="pct">${pct}% OFF</span><button class="copy" type="button" data-copy="LENZ" aria-label="Copy promo code LENZ">LENZ ⧉</button></span>`;
 let offerPage=0,videoIndex=0,market='forex',view='firms',currentFilter='popular',query='',sortKey='rank',sortDir='asc';
 const favorites=new Set();
@@ -2037,11 +2020,11 @@ function renderOfferList(){const all=forexOffers().filter(x=>(offersFilter!=='ex
 function sourceFirms(){const category=categoryTrustpilotFirms(),sourceOrder=new Map(category.map((t,index)=>[t.name,index])),ranked=[...category].sort((a,b)=>{const ar=firms.find(f=>f.name===a.name)?.rank,br=firms.find(f=>f.name===b.name)?.rank;if(ar!=null&&br!=null)return ar-br;if(ar!=null)return -1;if(br!=null)return 1;return sourceOrder.get(a.name)-sourceOrder.get(b.name)});return ranked.map((t,index)=>{const detailed=firms.find(f=>f.name===t.name);const profile=PROFILE_SOURCE.find(p=>p.name===t.name);const offer=OFFER_CATALOG.find(o=>o.name===t.name);return {...(detailed||{}),buyLink:detailed?.buyLink||CHECKOUT_LINKS[t.name]||offer?.buyLink||'',assets:detailed?.assets??profile?.assets??[],country:detailed?.country??profile?.country??null,favorites:detailed?.favorites||0,flag:detailed?.flag||profile?.country_code?.toLowerCase()||'',maxAllocation:detailed?.maxAllocation??profile?.max_allocation??null,name:t.name,platforms:detailed?.platforms??profile?.platforms??[],promoPct:detailed?.promoPct??(offer?Number.parseFloat(offer.discount)||null:null),rank:index+1,rating:t.trustpilotRating,reviews:t.trustpilotReviews||0,years:detailed?.years??profile?.years??null}})}
 function numericAllocation(v){if(!v)return -1;const n=parseFloat(v.replace(/[^0-9.]/g,''));return v.includes('M')?n*1000000:n*1000}
 function filteredFirms(){let list=sourceFirms().filter(f=>f.name.toLowerCase().includes(query));if(currentFilter==='favorite')list=list.filter(f=>favorites.has(f.name));if(currentFilter==='new')list=list.filter(f=>typeof f.years==='number'&&f.years<=2);const val=(f,key)=>key==='allocation'?numericAllocation(f.maxAllocation):key==='years'?parseFloat(f.years)||-1:Number(f[key]??-1);return [...list].sort((a,b)=>{const av=val(a,sortKey),bv=val(b,sortKey);if(av===bv)return a.rank-b.rank;return sortDir==='asc'?av-bv:bv-av})}
-function rankCard(f){const hasCountry=!!f.country,assets=(f.assets||[]).filter(a=>market==='forex'?!['Crypto','Futures'].includes(a):a===marketLabel()),platforms=f.platforms||[],t=trustpilotFor(f.name),count=t?.trustpilotReviews==null?null:Number(t.trustpilotReviews);return `<article class="rank-card"><span class="rank-num">${f.rank<=3?'★':f.rank}</span><div class="firm-cell">${logo(f.name)}<div><strong>${safe(f.name)}</strong>${f.favorites?`<span class="fav-count">♥ ${Number(f.favorites).toLocaleString()}</span>`:''}</div><button class="favorite ${favorites.has(f.name)?'on':''}" type="button" data-favorite="${safe(f.name)}" aria-label="Favorite ${safe(f.name)}">${favorites.has(f.name)?'♥':'♡'}</button></div><div class="rating-cell">${t?.trustpilotRating==null?'<span aria-label="Trustpilot score unavailable">—</span>':`<span class="score">${t.trustpilotRating.toFixed(1)}</span><span class="rating-out-of">/ 5</span>`}<span class="review">${count==null?'—':`${count.toLocaleString()} Trustpilot reviews`}</span></div><div class="country-cell">${hasCountry?`<img src="https://flagcdn.com/24x18/${(f.flag||'').toLowerCase()}.png" alt="${safe(f.country)} flag"><span>${safe(f.country)}</span>`:'<span>—</span>'}</div><div class="years-ring"><b>${f.years??'—'}</b></div><div class="taglist">${assets.length?assets.map(a=>`<span class="asset-tag">${safe(a)}</span>`).join(''):'<span class="asset-tag">—</span>'}</div><div class="platforms">${platforms.length?platforms.map(platformIcon).join(''):'<span class="asset-tag">—</span>'}</div><div class="alloc"><b>${f.maxAllocation??'—'}</b>${f.maxAllocation?'<span class="bar"><i></i></span>':''}</div>${promo(f.promoPct)}<a class="firm-action" href="#page-offers" data-page="offers">Offers</a></article>`}
+function rankCard(f){const hasCountry=!!f.country,assets=(f.assets||[]).filter(a=>market==='forex'?!['Crypto','Futures'].includes(a):a===marketLabel()),platforms=f.platforms||[],t=trustpilotFor(f.name),count=t?.trustpilotReviews==null?null:Number(t.trustpilotReviews);return `<article class="rank-card"><span class="rank-num">${f.rank<=3?'★':f.rank}</span><div class="firm-cell">${logo(f.name)}<div><strong>${safe(f.name)}</strong>${f.favorites?`<span class="fav-count">♥ ${Number(f.favorites).toLocaleString()}</span>`:''}</div><button class="favorite ${favorites.has(f.name)?'on':''}" type="button" data-favorite="${safe(f.name)}" aria-label="Favorite ${safe(f.name)}">${favorites.has(f.name)?'♥':'♡'}</button></div><div class="rating-cell">${t?.trustpilotRating==null?'<span aria-label="Trustpilot score unavailable">—</span>':`<span class="score">${t.trustpilotRating.toFixed(1)}</span><span class="rating-out-of">/ 5</span>`}<span class="review">${count==null?'—':`${count.toLocaleString()} Trustpilot reviews`}</span></div><div class="country-cell">${hasCountry?`<img src="assets/flags/${f.flag}.png" alt="${safe(f.country)} flag"><span>${safe(f.country)}</span>`:'<span>—</span>'}</div><div class="years-ring"><b>${f.years??'—'}</b></div><div class="taglist">${assets.length?assets.map(a=>`<span class="asset-tag">${safe(a)}</span>`).join(''):'<span class="asset-tag">—</span>'}</div><div class="platforms">${platforms.length?platforms.map(platformIcon).join(''):'<span class="asset-tag">—</span>'}</div><div class="alloc"><b>${f.maxAllocation??'—'}</b>${f.maxAllocation?'<span class="bar"><i></i></span>':''}</div>${promo(f.promoPct)}<a class="firm-action" href="#page-offers" data-page="offers">Offers</a></article>`}
 function altCard(f,type){const heart=`<button class="favorite ${favorites.has(f.name)?'on':''}" type="button" data-favorite="${safe(f.name)}" aria-label="Favorite ${safe(f.name)}">${favorites.has(f.name)?'♥':'♡'}</button>`;if(type==='challenges'){const assets=(f.assets||[]).filter(a=>market==='forex'?!['Crypto','Futures'].includes(a):a===marketLabel());return `<article class="alt-card">${logo(f.name)}<div><h3>${safe(f.name)}</h3><p>Rating ${f.rating==null?'—':`${f.rating} / 5`}</p><p>${f.maxAllocation?`Maximum allocation ${safe(f.maxAllocation)}`:'Maximum allocation —'}</p></div>${promo(f.promoPct)}<div class="taglist wide">${assets.length?assets.map(a=>`<span class="asset-tag">${safe(a)}</span>`).join(''):'<span class="asset-tag">Challenge data unavailable</span>'}</div></article>`}if(type==='reviews')return `<article class="alt-card">${logo(f.name)}<div><h3>${safe(f.name)}</h3>${trustpilotBadge(f.name)}</div>${heart}<div class="wide">${promo(f.promoPct)}</div></article>`;return ''}
 function offerViewItems(){return featuredMarketFirms()}
 function renderMain(){document.querySelector('#favTotal').textContent=favorites.size;document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));const head=document.querySelector('#rankHead'),list=document.querySelector('#rankList');if(view==='firms'){head.style.display='';list.className='';const data=filteredFirms();list.innerHTML=data.length?data.map(rankCard).join(''):'<div class="empty-state">No firms match this view.</div>'}else{head.style.display='none';list.className='alt-grid';let data=view==='offers'?offerViewItems():filteredFirms();data=data.filter(f=>f.name.toLowerCase().includes(query));list.innerHTML=data.length?(view==='offers'?data.map(f=>`<article class="alt-card">${logo(f.name)}<div><h3>${f.name}</h3>${trustpilotBadge(f.name)}<p>Use code LENZ</p></div>${promo(f.promoPct)}</article>`).join(''):data.map(f=>altCard(f,view)).join('')):'<div class="empty-state">No firms match this view.</div>'}document.querySelectorAll('[data-sort]').forEach(b=>b.classList.toggle('on',b.dataset.sort===sortKey));document.querySelector('#viewAll').style.display=query||currentFilter!=='all'?'flex':'none'}
-function renderVideos(){const ordered=[...videos.slice(videoIndex),...videos.slice(0,videoIndex)];document.querySelector('#videoRail').innerHTML=ordered.map(v=>`<div class="video"><button class="video-facade" type="button" data-video-play="${v[1]}" aria-label="Play ${safe(v[0])}"><img src="https://img.youtube.com/vi/${v[1]}/hqdefault.jpg" alt="Thumbnail for ${safe(v[0])}"><span class="video-play" aria-hidden="true">▶</span></button></div>`).join('');renderDots('#videoDots',videos.length,videoIndex,'data-video-dot')}
+function renderVideos(){const ordered=[...videos.slice(videoIndex),...videos.slice(0,videoIndex)];document.querySelector('#videoRail').innerHTML=ordered.map(v=>`<div class="video"><button class="video-facade" type="button" data-video-play="${v[1]}" aria-label="Play ${safe(v[0])}"><img src="assets/video-thumbnails/${v[1]}.jpg" alt="Thumbnail for ${safe(v[0])}"><span class="video-play" aria-hidden="true">▶</span></button></div>`).join('');renderDots('#videoDots',videos.length,videoIndex,'data-video-dot')}
 function playVideo(button){const id=button.dataset.videoPlay;const frame=document.createElement('iframe');frame.src=`https://www.youtube.com/embed/${id}?autoplay=1`;frame.title=button.getAttribute('aria-label')||'YouTube video';frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';frame.referrerPolicy='strict-origin-when-cross-origin';frame.allowFullscreen=true;button.replaceWith(frame)}
 function updateMarketCopy(){
   const label=marketLabel(),categoryFirms=categoryTrustpilotFirms();
