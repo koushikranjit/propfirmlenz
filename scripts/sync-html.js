@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const rawCss = fs.readFileSync(path.join(__dirname, '../src/app/clone.css'), 'utf8');
-const css = rawCss.replaceAll("url('/assets/logo-mark.png')", "url('assets/logo-mark.png')");
+const css = rawCss.replaceAll('/assets/logo-mark.png', 'assets/logo-mark.png');
 const body = fs.readFileSync(path.join(__dirname, '../src/app/clone-body.html'), 'utf8');
 const js = fs.readFileSync(path.join(__dirname, '../public/clone-app.js'), 'utf8');
 
@@ -33,4 +33,3 @@ ${js}
 fs.writeFileSync(path.join(__dirname, '../public/index.html'), htmlContent, 'utf8');
 fs.writeFileSync(path.join(__dirname, '../public/clone.html'), htmlContent, 'utf8');
 console.log('Successfully synchronized public/index.html and public/clone.html');
-

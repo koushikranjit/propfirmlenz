@@ -1168,7 +1168,7 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
 
 
 /* ========================================================
-   ATTRACTIVE GRADIENTS & SCROLL ANIMATIONS SUITE
+   ATTRACTIVE 3D GRADIENTS & SCROLL ANIMATIONS SUITE (V2)
    ======================================================== */
 
 /* 1. Global Neon Scroll Progress Indicator */
@@ -1185,100 +1185,297 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   transition: width 0.08s ease-out;
 }
 
-/* 2. Deep Glowing Aurora Mesh Hero Background */
+/* 2. Complete Background Gradient Overhaul - Dynamic Living Cosmic Aurora Mesh */
+body {
+  background: #050508 !important;
+  color: var(--ink);
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle 900px at 15% 12%, rgba(112, 33, 252, 0.24), transparent 68%),
+    radial-gradient(circle 950px at 85% 18%, rgba(30, 231, 252, 0.20), transparent 72%),
+    radial-gradient(circle 1050px at 50% 55%, rgba(57, 109, 250, 0.16), transparent 75%),
+    radial-gradient(circle 850px at 18% 85%, rgba(112, 33, 252, 0.22), transparent 70%),
+    radial-gradient(circle 900px at 82% 92%, rgba(30, 231, 252, 0.18), transparent 72%),
+    linear-gradient(180deg, #050508 0%, #090913 35%, #06060c 70%, #040407 100%);
+  background-attachment: fixed;
+  animation: cosmicBackgroundPulse 14s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(rgba(30, 231, 252, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 231, 252, 0.035) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 95% 85% at 50% 35%, black 25%, transparent 88%);
+  -webkit-mask-image: radial-gradient(ellipse 95% 85% at 50% 35%, black 25%, transparent 88%);
+}
+
+@keyframes cosmicBackgroundPulse {
+  0% {
+    filter: hue-rotate(0deg) brightness(1);
+    transform: scale(1);
+  }
+  50% {
+    filter: hue-rotate(12deg) brightness(1.12);
+    transform: scale(1.02);
+  }
+  100% {
+    filter: hue-rotate(-10deg) brightness(1.04);
+    transform: scale(1);
+  }
+}
+
+/* 3. Deep Glowing Aurora Mesh Hero Background */
 .hero {
   position: relative !important;
   overflow: hidden !important;
-  background: radial-gradient(circle 900px at 50% -25%, rgba(30, 231, 252, 0.22), rgba(57, 109, 250, 0.14) 38%, rgba(112, 33, 252, 0.09) 65%, transparent 85%), #060609 !important;
+  background: transparent !important;
+  perspective: 1200px !important;
 }
 .hero::before {
   content: '' !important;
   position: absolute !important;
-  top: -140px !important;
+  top: -150px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  width: 820px !important;
-  height: 420px !important;
-  background: radial-gradient(ellipse at center, rgba(30, 231, 252, 0.32) 0%, rgba(57, 109, 250, 0.2) 42%, rgba(112, 33, 252, 0.08) 72%, transparent 100%) !important;
-  filter: blur(70px) !important;
+  width: 920px !important;
+  height: 480px !important;
+  background: radial-gradient(ellipse at center, rgba(30, 231, 252, 0.38) 0%, rgba(57, 109, 250, 0.25) 42%, rgba(112, 33, 252, 0.12) 72%, transparent 100%) !important;
+  filter: blur(75px) !important;
   border-radius: 50% !important;
   pointer-events: none !important;
   z-index: 0 !important;
   animation: heroAuroraFloat 7s ease-in-out infinite alternate !important;
 }
 @keyframes heroAuroraFloat {
-  0% { transform: translateX(-50%) scale(1) translateY(0); opacity: 0.75; }
-  50% { transform: translateX(-48%) scale(1.1) translateY(18px); opacity: 1; }
-  100% { transform: translateX(-52%) scale(0.96) translateY(-12px); opacity: 0.8; }
+  0% { transform: translateX(-50%) scale(1) translateY(0); opacity: 0.8; }
+  50% { transform: translateX(-48%) scale(1.08) translateY(16px); opacity: 1; }
+  100% { transform: translateX(-52%) scale(0.96) translateY(-10px); opacity: 0.85; }
 }
 
-/* 3. Iridescent Glowing Text Gradients */
+/* 4. Iridescent Glowing Text Gradients */
 .hero h1,
 #heroTitle,
 .page-intro h1,
 .payout-hub-head h1,
 .compare-shell .page-intro h1 {
-  background: linear-gradient(135deg, #ffffff 25%, #d6f7ff 50%, #7cf2ff 78%, #396dfa 100%) !important;
+  background: linear-gradient(135deg, #ffffff 20%, #d6f7ff 48%, #7cf2ff 75%, #396dfa 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
-  text-shadow: 0 0 35px rgba(30, 231, 252, 0.32) !important;
+  text-shadow: 0 0 35px rgba(30, 231, 252, 0.35) !important;
 }
 .section-title h2 {
-  background: linear-gradient(135deg, #ffffff 40%, #c4f3ff 82%, #7aa8ff 100%) !important;
+  background: linear-gradient(135deg, #ffffff 35%, #c4f3ff 78%, #7aa8ff 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
 
-/* 4. Enhanced Glass & Gradient Borders */
-.panel {
-  background: linear-gradient(155deg, rgba(20, 20, 26, 0.94), rgba(11, 11, 15, 0.98)) padding-box,
-              linear-gradient(135deg, rgba(30, 231, 252, 0.45) 0%, rgba(57, 109, 250, 0.28) 50%, rgba(112, 33, 252, 0.5) 100%) border-box !important;
-  border: 1px solid transparent !important;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 32px rgba(30, 231, 252, 0.08) !important;
+/* 5. Hero Section Logo Full Fit */
+.site-head .brand-mark {
+  display: block !important;
+  width: 42px !important;
+  height: 42px !important;
+  flex: 0 0 42px !important;
+  background: url('assets/logo-mark.png') center/contain no-repeat !important;
+  filter: drop-shadow(0 0 10px rgba(30, 231, 252, 0.55)) !important;
 }
-.futures-panel {
-  background: linear-gradient(155deg, rgba(20, 20, 26, 0.94), rgba(11, 11, 15, 0.98)) padding-box,
-              linear-gradient(135deg, rgba(112, 33, 252, 0.5) 0%, rgba(57, 109, 250, 0.28) 50%, rgba(30, 231, 252, 0.45) 100%) border-box !important;
-  border: 1px solid transparent !important;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 32px rgba(112, 33, 252, 0.08) !important;
+.brand-lock img {
+  width: 42px !important;
+  height: 42px !important;
+  object-fit: contain !important;
+  padding: 0 !important;
+}
+
+#offers .offer .logo-wrap,
+#offers .future .logo-wrap,
+.offers-top-card .logo-wrap,
+.offers-future-row .logo-wrap,
+.rank-card .logo-wrap {
+  width: 44px !important;
+  height: 44px !important;
+  flex: 0 0 44px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  padding: 2px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+#offers .offer .firm-logo,
+#offers .future .firm-logo,
+.offers-top-card .firm-logo,
+.offers-future-row .firm-logo,
+.rank-card .firm-logo {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  border-radius: 10px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+#offers .offer .firm-initial,
+#offers .future .firm-initial,
+.offers-top-card .firm-initial,
+.offers-future-row .firm-initial,
+.rank-card .firm-initial {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  border-radius: 10px !important;
+  display: grid !important;
+  place-items: center !important;
+  font-weight: 800 !important;
+}
+
+/* 6. Most Popular Forex Prop Firms: Discount Code Styling & Full Grid Integration */
+#offers .future {
+  display: grid !important;
+  grid-template-columns: 24px 44px minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 10px 12px !important;
+  min-height: 72px !important;
+  background: linear-gradient(145deg, rgba(23, 23, 32, 0.92), rgba(13, 13, 18, 0.98)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transform-style: preserve-3d !important;
+}
+#offers .future:hover {
+  transform: translateY(-4px) scale(1.02) !important;
+  border-color: rgba(112, 33, 252, 0.65) !important;
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.7), 0 0 24px rgba(112, 33, 252, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+#offers .future .promo,
+.offers-future-row .promo {
+  display: grid !important;
+  min-width: 96px !important;
+  border-radius: 9px !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45) !important;
+  margin-left: auto !important;
+}
+#offers .future .promo .pct,
+.offers-future-row .promo .pct {
+  background: var(--grad) !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  padding: 6px 8px !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.02em !important;
+}
+#offers .future .promo .copy,
+.offers-future-row .promo .copy {
+  border: 0 !important;
+  background: #09090d !important;
+  color: #1EE7FC !important;
+  padding: 6px 8px !important;
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+#offers .future .promo .copy:hover,
+.offers-future-row .promo .copy:hover {
+  background: #111118 !important;
+  color: #fff !important;
+}
+
+/* 7. 3D Animated Card Styling & Interactive Depth */
+.panel, .futures-panel {
+  background: linear-gradient(165deg, rgba(18, 18, 25, 0.95), rgba(10, 10, 15, 0.98)) padding-box,
+              linear-gradient(135deg, rgba(30, 231, 252, 0.55) 0%, rgba(57, 109, 250, 0.35) 50%, rgba(112, 33, 252, 0.6) 100%) border-box !important;
+  border: 1.5px solid transparent !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), 0 0 32px rgba(30, 231, 252, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.panel:hover, .futures-panel:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 28px 60px -10px rgba(0, 0, 0, 0.8), 0 0 45px rgba(30, 231, 252, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
 }
 
 #offers .offer {
-  background: linear-gradient(145deg, rgba(24, 24, 32, 0.88), rgba(14, 14, 19, 0.96)) !important;
+  background: linear-gradient(145deg, rgba(24, 24, 34, 0.92), rgba(13, 13, 18, 0.98)) !important;
   border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transform-style: preserve-3d !important;
 }
 #offers .offer:hover {
-  border-color: rgba(30, 231, 252, 0.6) !important;
-  transform: translateY(-3px) scale(1.01) !important;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 24px rgba(30, 231, 252, 0.22) !important;
+  border-color: rgba(30, 231, 252, 0.65) !important;
+  transform: translateY(-4px) scale(1.02) !important;
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.7), 0 0 26px rgba(30, 231, 252, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
 }
 
-#offers .future {
-  background: linear-gradient(145deg, rgba(24, 24, 32, 0.88), rgba(14, 14, 19, 0.96)) !important;
-  border: 1px solid rgba(255, 255, 255, 0.09) !important;
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+/* 3D Medals */
+.future .medal, .offers-future-row .medal {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  transition: transform 0.25s ease !important;
 }
-#offers .future:hover {
-  border-color: rgba(112, 33, 252, 0.6) !important;
-  transform: translateY(-3px) scale(1.01) !important;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 24px rgba(112, 33, 252, 0.22) !important;
+.future:hover .medal, .offers-future-row:hover .medal {
+  transform: scale(1.15) rotate(5deg) !important;
 }
 
-/* 5. Rank Cards Sleek Gradient & Hover Lift */
+/* 3D Rank Cards */
 .rank-card {
-  background: linear-gradient(145deg, rgba(19, 19, 25, 0.88), rgba(13, 13, 17, 0.96)) !important;
-  border: 1px solid rgba(255, 255, 255, 0.07) !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35) !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  background: linear-gradient(145deg, rgba(18, 18, 25, 0.92), rgba(11, 11, 15, 0.98)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.26s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transform-style: preserve-3d !important;
 }
 .rank-card:hover {
-  border-color: rgba(57, 109, 250, 0.45) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55), 0 0 20px rgba(57, 109, 250, 0.14) !important;
-  transform: translateY(-2px) !important;
+  border-color: rgba(57, 109, 250, 0.5) !important;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.7), 0 0 25px rgba(57, 109, 250, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-3px) scale(1.008) !important;
 }
 
-/* 6. Dynamic Sticky Header Enhancement */
+/* 3D Tools & Resources Cards */
+.resource-card-3d {
+  background: linear-gradient(155deg, rgba(20, 20, 28, 0.94), rgba(10, 10, 15, 0.98)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 14px 38px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transform-style: preserve-3d !important;
+}
+.resource-card-3d:hover {
+  transform: translateY(-6px) scale(1.015) !important;
+  border-color: rgba(30, 231, 252, 0.55) !important;
+  box-shadow: 0 24px 54px -10px rgba(0, 0, 0, 0.75), 0 0 35px rgba(30, 231, 252, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+.resource-card-3d:hover .res-svg-3d {
+  transform: scale(1.12) rotateY(8deg) translateY(-3px) !important;
+  filter: drop-shadow(0 10px 20px rgba(30, 231, 252, 0.45)) !important;
+}
+.res-svg-3d {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease !important;
+}
+
+/* 8. Dynamic Sticky Header Enhancement */
 .site-head {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
@@ -1288,7 +1485,7 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   backdrop-filter: blur(24px) !important;
 }
 
-/* 7. Scroll Reveal Animation Classes */
+/* 9. Scroll Reveal Animation Classes */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -1307,7 +1504,7 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
 .stagger-5 { transition-delay: 0.25s !important; }
 .stagger-6 { transition-delay: 0.30s !important; }
 
-/* 8. Back to Top Smooth Floating Button */
+/* 10. Back to Top Smooth Floating Button */
 #backToTopBtn {
   position: fixed;
   bottom: 28px;
@@ -3651,9 +3848,9 @@ function renderDots(id,count,index,attr){document.querySelector(id).innerHTML=Ar
 function offerTopCard(x){return `<article class="offers-top-card" data-offer-name="${safe(x.name)}">${logo(x.name)}<div><strong>${x.name}</strong>${trustpilotBadge(x.name)}</div>${promo(x.promoPct)}</article>`}
 function featuredMarketFirms(){const offerByName=new Map(forexOffers().map(x=>[x.name,x]));return [...categoryTrustpilotFirms()].sort((a,b)=>(b.trustpilotRating??-1)-(a.trustpilotRating??-1)||(b.trustpilotReviews??-1)-(a.trustpilotReviews??-1)||a.name.localeCompare(b.name)).slice(0,6).map(f=>{const offer=offerByName.get(f.name);return {name:f.name,promoPct:offer?Number.parseFloat(offer.discount)||null:null}})}
 function renderOffers(){const featured=featuredMarketFirms(),shift=(offerPage*3)%Math.max(1,featured.length),list=[...featured.slice(shift),...featured.slice(0,shift)];document.querySelectorAll('.panel-head h2,.offers-top-title h2').forEach(h=>{if(h.closest('.futures-panel,.offers-top-panel.futures'))return;h.textContent=`Exclusive Verified ${marketLabel()} Offers 🔥`});document.querySelectorAll('.futures-panel .panel-head h2,.offers-top-panel.futures .offers-top-title h2').forEach(h=>h.textContent=`Most Popular ${marketLabel()} Prop Firms`);document.querySelector('#offerGrid').innerHTML=list.length?list.map(x=>`<article class="offer">${logo(x.name)}<div><strong class="${x.name==='BrightFunded'?'fit-name':''}">${x.name}</strong>${trustpilotBadge(x.name)}</div>${promo(x.promoPct)}</article>`).join(''):'<div class="offer-empty">No verified offers are available for this category.</div>';renderDots('#offerDots',2,offerPage,'data-offer-dot');const top=document.querySelector('#offersTopGrid');if(top){top.innerHTML=list.length?list.slice(0,6).map(offerTopCard).join(''):'<div class="offer-empty">No verified offers are available for this category.</div>';renderDots('#offersTopDots',2,offerPage,'data-offer-dot')}}
-function popularMarketFirms(){return [...categoryTrustpilotFirms()].sort((a,b)=>(b.trustpilotRating??-1)-(a.trustpilotRating??-1)||(b.trustpilotReviews??-1)-(a.trustpilotReviews??-1)).slice(0,3).map(x=>({name:x.name,promoPct:0}))}
-function futuresMarkup(){return popularMarketFirms().map((x,i)=>{const t=trustpilotFor(x.name);return `<div class="offers-future-row"><span class="medal" aria-label="${['Gold','Silver','Bronze'][i]} trophy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v3h3v2c0 3-1.7 5-4.5 5.7A5 5 0 0 1 13 16v2h4v3H7v-3h4v-2a5 5 0 0 1-2.5-2.3C5.7 13 4 11 4 8V6h3V3Zm10 5V6h1v2c0 1.4-.6 2.4-1.7 3 .4-.9.7-1.9.7-3ZM7.7 11C6.6 10.4 6 9.4 6 8V6h1v2c0 1.1.2 2.1.7 3Z"/></svg></span>${logo(x.name)}<div><strong>${x.name}</strong><span class="ratepill">${t?.trustpilotRating?.toFixed(1)??'—'} <span class="rating-out-of">/ 5</span>${t?.trustpilotReviews!=null?` · ${Number(t.trustpilotReviews).toLocaleString()}`:''}</span></div></div>`}).join('')}
-function renderFutures(){const rows=popularMarketFirms();document.querySelector('#futuresList').innerHTML=rows.map((x,i)=>{const t=trustpilotFor(x.name);return `<div class="future"><span class="medal" aria-label="${['Gold','Silver','Bronze'][i]} trophy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v3h3v2c0 3-1.7 5-4.5 5.7A5 5 0 0 1 13 16v2h4v3H7v-3h4v-2a5 5 0 0 1-2.5-2.3C5.7 13 4 11 4 8V6h3V3Zm10 5V6h1v2c0 1.4-.6 2.4-1.7 3 .4-.9.7-1.9.7-3ZM7.7 11C6.6 10.4 6 9.4 6 8V6h1v2c0 1.1.2 2.1.7 3Z"/></svg></span>${logo(x.name)}<div><strong>${x.name}</strong><span class="ratepill">${t?.trustpilotRating?.toFixed(1)??'—'} <span class="rating-out-of">/ 5</span>${t?.trustpilotReviews!=null?` · ${Number(t.trustpilotReviews).toLocaleString()}`:''}</span></div></div>`}).join('');const panel=document.querySelector('#offersFuturesList');if(panel)panel.innerHTML=futuresMarkup()}
+function popularMarketFirms(){const offerByName=new Map(forexOffers().map(x=>[x.name,x]));return [...categoryTrustpilotFirms()].sort((a,b)=>(b.trustpilotRating??-1)-(a.trustpilotRating??-1)||(b.trustpilotReviews??-1)-(a.trustpilotReviews??-1)).slice(0,3).map(x=>{const off=offerByName.get(x.name);const pct=off?Number.parseFloat(off.discount):(x.name==='E8 Markets'?25:x.name==='The5ers'?10:x.name==='FundedNext'?20:20);return {name:x.name,promoPct:pct||20}})}
+function futuresMarkup(){return popularMarketFirms().map((x,i)=>{const t=trustpilotFor(x.name);return `<div class="offers-future-row"><span class="medal" aria-label="${['Gold','Silver','Bronze'][i]} trophy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v3h3v2c0 3-1.7 5-4.5 5.7A5 5 0 0 1 13 16v2h4v3H7v-3h4v-2a5 5 0 0 1-2.5-2.3C5.7 13 4 11 4 8V6h3V3Zm10 5V6h1v2c0 1.4-.6 2.4-1.7 3 .4-.9.7-1.9.7-3ZM7.7 11C6.6 10.4 6 9.4 6 8V6h1v2c0 1.1.2 2.1.7 3Z"/></svg></span>${logo(x.name)}<div><strong>${x.name}</strong><span class="ratepill">${t?.trustpilotRating?.toFixed(1)??'—'} <span class="rating-out-of">/ 5</span>${t?.trustpilotReviews!=null?` · ${Number(t.trustpilotReviews).toLocaleString()}`:''}</span></div>${promo(x.promoPct)}</div>`}).join('')}
+function renderFutures(){const rows=popularMarketFirms();const listEl=document.querySelector('#futuresList');if(listEl){listEl.innerHTML=rows.map((x,i)=>{const t=trustpilotFor(x.name);return `<div class="future"><span class="medal" aria-label="${['Gold','Silver','Bronze'][i]} trophy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v3h3v2c0 3-1.7 5-4.5 5.7A5 5 0 0 1 13 16v2h4v3H7v-3h4v-2a5 5 0 0 1-2.5-2.3C5.7 13 4 11 4 8V6h3V3Zm10 5V6h1v2c0 1.4-.6 2.4-1.7 3 .4-.9.7-1.9.7-3ZM7.7 11C6.6 10.4 6 9.4 6 8V6h1v2c0 1.1.2 2.1.7 3Z"/></svg></span>${logo(x.name)}<div><strong>${x.name}</strong><span class="ratepill">${t?.trustpilotRating?.toFixed(1)??'—'} <span class="rating-out-of">/ 5</span>${t?.trustpilotReviews!=null?` · ${Number(t.trustpilotReviews).toLocaleString()}`:''}</span></div>${promo(x.promoPct)}</div>`}).join('')}const panel=document.querySelector('#offersFuturesList');if(panel)panel.innerHTML=futuresMarkup()}
 let offersFilter='exclusive',offersQuery='';
 const expandedOfferGroups=new Set();
 function displayDiscount(x){return x.discount==='Offer'?'PROMO':`${safe(x.discount)} <span>OFF</span>`}
@@ -3685,7 +3882,7 @@ function updateMarketCopy(){
   const spreadSubscribe=document.querySelector('#spreadsPage .static-subscribe h2');if(spreadSubscribe)spreadSubscribe.textContent=`Subscribe for new ${label} spread research`;
   const payoutTitle=document.querySelector('.payout-hub-head h1');if(payoutTitle)payoutTitle.textContent=`${label} Prop Firm Payouts Tracker`;
   const payoutIntro=document.querySelector('.payout-hub-head p');if(payoutIntro)payoutIntro.textContent=`Compare payout times, payout totals, and payout history across matched ${label} firms. View firm-level payout trends and recent payouts.`;
-  const resourceChallenge=document.querySelector('#resourceChallengeDesc')||document.querySelector('#resources .resource:nth-child(2) p');if(resourceChallenge){resourceChallenge.textContent=`Unlock verified ${label} discount codes up to 30% OFF and fee cashback with promo code LENZ across top-rated prop firms.`}
+  const resourceChallenge=document.querySelector('#resourceChallengeDesc')||document.querySelector('#resources .resource:nth-child(2) p');if(resourceChallenge){const count=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)).length;resourceChallenge.textContent=count?`Compare the ${count} tracked ${label} challenge records by account size, steps, targets, loss limits, payout frequency, and price.`:`Browse ${label} firms in the same challenge comparison layout. Fields without verified challenge data are shown as unavailable.`}
   const resourcePayout=document.querySelector('#resourcePayoutDesc')||document.querySelector('#resources .resource:nth-child(3) p');if(resourcePayout){resourcePayout.textContent=`Review tracked on-chain & Rise payout totals, proof records, and processing-time metrics across verified ${label} firms.`}
   const heroFirmCount=document.querySelector('#heroFirmCount');if(heroFirmCount)heroFirmCount.textContent=categoryFirms.length.toLocaleString();
   const heroChallengeCount=document.querySelector('#heroChallengeCount');if(heroChallengeCount)heroChallengeCount.textContent='90%';
