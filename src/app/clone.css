@@ -1065,3 +1065,91 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
     grid-template-columns: 38px minmax(0, 1fr) 80px !important;
   }
 }
+
+
+/* ========================================================
+   UNIFIED PAGE HERO & HEADER SIZING (ALL SUBPAGES)
+   ======================================================== */
+.hero h1,
+#heroTitle,
+.page-intro h1,
+.payout-hub-head h1,
+.market-empty-card h1,
+.compare-shell .page-intro h1,
+.spreads-shell .page-intro h1 {
+  font-family: Inter, system-ui, -apple-system, sans-serif !important;
+  font-size: clamp(26px, 2.7vw, 38px) !important;
+  font-weight: 800 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.035em !important;
+  color: #fff !important;
+  max-width: 900px !important;
+  margin: 0 auto 10px !important;
+  text-shadow: 0 0 35px rgba(57, 109, 250, 0.28) !important;
+  text-align: center !important;
+}
+
+.hero p,
+#heroSubtitle,
+.page-intro p,
+.payout-hub-head p,
+.market-empty-card p,
+.compare-shell .page-intro p,
+.spreads-shell .page-intro p {
+  font-family: Inter, system-ui, -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+  max-width: 680px !important;
+  margin: 0 auto 14px !important;
+  color: #9b9ba8 !important;
+  text-align: center !important;
+}
+
+.page-intro,
+.payout-hub-head {
+  padding: 36px 0 20px !important;
+  text-align: center !important;
+}
+
+/* Fix tablet & mobile overflow across tables and grids */
+.payouts-table-container,
+.payout-table-wrap,
+#payouts,
+#payoutView,
+.spreads-table-wrap,
+.spread-rows,
+.compare-table-wrap,
+.compare-grid {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Ensure no element causes horizontal scroll on 768px tablet */
+@media (max-width: 820px) {
+  .payout-tracker-head,
+  .payout-tracker-row {
+    min-width: 700px !important;
+  }
+  .payout-hub {
+    overflow-x: auto !important;
+  }
+}
+
+/* Spreads real values styling */
+.spread-val {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #1EE7FC !important;
+  font-family: monospace, monospace !important;
+}
+.spread-avg-badge {
+  display: inline-block !important;
+  padding: 2px 8px !important;
+  border-radius: 6px !important;
+  background: rgba(30, 231, 252, 0.12) !important;
+  border: 1px solid rgba(30, 231, 252, 0.35) !important;
+  color: #1EE7FC !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}

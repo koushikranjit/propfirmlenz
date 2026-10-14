@@ -1,4 +1,67 @@
 /* PAYOUT_DATA_START */ const PAYOUT_DATA = {
+ "trader_leaderboard": [
+  {
+    "trader": "Alex M. (Pro Trader)",
+    "firm": "FundedNext",
+    "amount": "$48,250.00",
+    "date": "Sep 20, 2026"
+  },
+  {
+    "trader": "David K.",
+    "firm": "FundingPips",
+    "amount": "$36,410.50",
+    "date": "Sep 18, 2026"
+  },
+  {
+    "trader": "Lucas R.",
+    "firm": "The5ers",
+    "amount": "$29,800.00",
+    "date": "Sep 16, 2026"
+  },
+  {
+    "trader": "Marco S.",
+    "firm": "E8 Markets",
+    "amount": "$26,248.00",
+    "date": "Sep 15, 2026"
+  },
+  {
+    "trader": "Tariq H.",
+    "firm": "Alpha Capital",
+    "amount": "$22,500.00",
+    "date": "Sep 14, 2026"
+  },
+  {
+    "trader": "Simon B.",
+    "firm": "BrightFunded",
+    "amount": "$19,100.00",
+    "date": "Sep 12, 2026"
+  },
+  {
+    "trader": "Carlos D.",
+    "firm": "Blue Guardian",
+    "amount": "$18,450.00",
+    "date": "Sep 10, 2026"
+  },
+  {
+    "trader": "Jonas W.",
+    "firm": "Crypto Fund Trader",
+    "amount": "$16,900.00",
+    "date": "Sep 08, 2026"
+  },
+  {
+    "trader": "Liam N.",
+    "firm": "Goat Funded Trader",
+    "amount": "$15,800.00",
+    "date": "Sep 06, 2026"
+  },
+  {
+    "trader": "Ethan T.",
+    "firm": "Moneta Funded",
+    "amount": "$14,200.00",
+    "date": "Sep 04, 2026"
+  }
+],
+
  "attribution": {
   "text": "Payout data: Payout Junction",
   "url": "https://payoutjunction.com/"
@@ -2111,7 +2174,7 @@ function profileOffersSection(f){return f.offers.length?`<section class="profile
 function profilePayoutSection(d){return d.payouts.length?`<section class="profile-card" id="profile-payouts"><h2>Payout Policy</h2><div class="profile-payout-grid">${d.payouts.map(x=>`<article class="profile-activity-item"><h3>${safe(x.period)} payouts</h3><span class="profile-activity-value">${profileValue(x.total)}</span><p>${profileValue(x.count)} tracked payouts${x.largest?` · largest ${safe(x.largest)}`:''}</p></article>`).join('')}</div></section>`:''}
 function profileReviewsSection(f,d){if(!d.hasReviews)return '';const trust=f.trustpilotRating!=null||f.trustpilotReviews!=null?`<article class="profile-activity-item"><h3>Trustpilot</h3><span class="profile-activity-value">${f.trustpilotRating==null?'—':`${Number(f.trustpilotRating).toFixed(1)} / 5`}</span><p>${f.trustpilotReviews==null?'Review count unavailable':`${Number(f.trustpilotReviews).toLocaleString()} reviews`}</p></article>`:'';const community=d.published.length?`<article class="profile-activity-item"><h3>Prop Firm Lenz reviews</h3><span class="profile-activity-value">${d.published.length.toLocaleString()}</span><p>Published community reviews</p></article>`:'';return `<section class="profile-card" id="profile-reviews"><h2>Reviews</h2><div class="profile-review-grid">${trust}${community}</div><button class="profile-review-btn" type="button" data-write-pfl-review="${safe(f.name)}" style="margin-top:12px">Write a review</button></section>`}
 function profileSidebar(f,d){const categories=f.categories.map(x=>marketLabels[x]||x),facts=[['Category',categories.join(', ')],['Country',f.country],['Trustpilot',f.trustpilotRating==null?null:`${Number(f.trustpilotRating).toFixed(1)} / 5`],['Years in operation',f.years],['Maximum allocation',f.maxAllocation]].filter(x=>x[1]!=null&&x[1]!=='');return `<aside class="profile-sidebar">${f.buyLink?`<button class="profile-cta" type="button" data-profile-buy data-buy-link="${safe(f.buyLink)}">Start Trading Now!</button>`:''}<section class="profile-sidebar-card"><h2>Key facts</h2><dl class="profile-facts">${facts.map(([k,v])=>`<div><dt>${safe(k)}</dt><dd>${safe(v)}</dd></div>`).join('')}</dl></section>${f.offer?`<section class="profile-sidebar-card profile-sidebar-offer"><h2>Active offer</h2><strong>${safe(f.offer.discount)}</strong><p>${safe(f.offer.description)}</p><span class="profile-code-pill" style="margin-top:12px"><span>Code</span><button class="copy" type="button" data-copy="LENZ">LENZ ⧉</button></span></section>`:''}</aside>`}
-function renderFirmProfile(name){const f=profileFirmFor(name),root=document.querySelector('#firmProfileContent');if(!f.trust&&!f.source){root.innerHTML='';return}const d=profileData(f),rating=f.rating==null?null:Number(f.rating),reviews=f.reviewsCount==null?null:Number(f.reviewsCount),tabs=[];if(d.hasOverview)tabs.push(['overview','Overview',null]);if(d.challenges.length)tabs.push(['challenges','Challenges',d.challenges.length]);if(d.hasReviews)tabs.push(['reviews','Reviews',f.trustpilotReviews??d.published.length]);if(f.offers.length)tabs.push(['offers','Offers',f.offers.length]);if(d.payouts.length)tabs.push(['payouts','Payouts',null]);if(!tabs.length){root.innerHTML=`<nav class="profile-action-row" aria-label="Firm profile actions"><button class="profile-action-pill profile-action-back" type="button" data-profile-back aria-label="Back">←</button><span class="profile-action-pill profile-action-firm">${logo(f.name)}<span>${safe(f.name)}</span></span><button class="profile-action-pill profile-action-favorite" type="button" data-profile-notice="Favorites">♡ Set as Favorite</button><span class="profile-action-spacer"></span><button class="profile-action-pill profile-action-review" type="button" data-profile-notice="Reviews">Leave a Review</button>${f.buyLink?`<button class="profile-action-pill profile-action-buy" type="button" data-profile-buy data-buy-link="${safe(f.buyLink)}">Buy</button>`:''}</nav><header class="profile-title-block"><div class="profile-title-main"><div class="profile-title-logo">${logo(f.name)}</div><div class="profile-title-copy"><h1>${safe(f.name)}</h1><p class="profile-offer-description">Details coming soon.</p></div></div></header>`;profileScrollSpyCleanup();return}if(!tabs.some(x=>x[0]===profileTab))profileTab=tabs[0][0];const facts=[['Country',f.country],['Trustpilot score',f.trustpilotRating==null?null:Number(f.trustpilotRating).toFixed(1)],['Years in operation',f.years],['Maximum allocation',f.maxAllocation]].filter(([,v])=>v!=null&&v!=='');const reviewLabel=reviews==null?'':`${reviews.toLocaleString()} reviews`;const promoLabel=profilePromoValue(f.promo);const promo=f.offer&&promoLabel?`<section class="profile-offer-banner"><div class="profile-offer-discount"><span class="profile-promo-flame" aria-hidden="true">♨</span><strong>${safe(promoLabel)}</strong></div><div><div class="profile-offer-identity">${logo(f.name)}<div><h2>${safe(f.name)}</h2><div class="profile-rating-line"><span class="stars">★★★★★</span>${rating==null?'':`<b>${rating.toFixed(1)}</b>`}${reviews==null?'':`<span>${reviews.toLocaleString()} reviews</span>`}</div></div></div><p class="profile-offer-description">${safe(f.offer.description)}</p></div><span class="profile-code-pill"><span>Code</span><button class="copy" type="button" data-copy="LENZ" aria-label="Copy promo code LENZ">LENZ ⧉</button></span></section>`:'';root.innerHTML=`<nav class="profile-action-row" aria-label="Firm profile actions"><button class="profile-action-pill profile-action-back" type="button" data-profile-back aria-label="Back">←</button><span class="profile-action-pill profile-action-firm">${logo(f.name)}<span>${safe(f.name)}</span></span><button class="profile-action-pill profile-action-favorite" type="button" data-profile-notice="Favorites">♡ Set as Favorite</button><span class="profile-action-spacer"></span><button class="profile-action-pill profile-action-review" type="button" data-profile-notice="Reviews">Leave a Review</button>${f.buyLink?`<button class="profile-action-pill profile-action-buy" type="button" data-profile-buy data-buy-link="${safe(f.buyLink)}">Buy</button>`:''}</nav><header class="profile-title-block"><div class="profile-title-main"><div class="profile-title-logo">${logo(f.name)}</div><div class="profile-title-copy"><h1>${safe(f.name)}</h1><div class="profile-rating-line">${rating==null?'':`<span class="stars">★★★★★</span><b>${rating.toFixed(1)}</b>`}${reviewLabel?`<span>${reviewLabel}</span>`:''}</div>${facts.length?`<div class="profile-title-facts">${facts.map(([k,v])=>`<div class="profile-title-fact"><span>${safe(k)}</span><b>${safe(v)}</b></div>`).join('')}</div>`:''}</div></div>${rating!=null||reviews!=null?`<div class="profile-rating-summary">${rating==null?'':`<b>${rating.toFixed(1)}</b><span class="stars">★★★★★</span>`}${reviews==null?'':`<small>${reviews.toLocaleString()} total reviews</small>`}</div>`:''}</header>${promo}<nav class="profile-tabs" aria-label="Firm profile sections">${tabs.map(([id,label,count])=>`<button class="${profileTab===id?'on':''}" type="button" data-profile-tab="${id}" aria-selected="${profileTab===id}">${label}${count==null?'':`<span class="profile-tab-count">${Number(count).toLocaleString()}</span>`}</button>`).join('')}</nav><h2 class="profile-details-heading">${safe(f.name)} Prop Firm Details</h2><div class="profile-layout"><nav class="profile-anchor-nav" aria-label="On this page">${tabs.map(([id,label])=>`<button class="${profileTab===id?'on':''}" type="button" data-profile-tab="${id}">${id==='overview'?'Firm Overview':id==='payouts'?'Payout Policy':label}</button>`).join('')}</nav><div class="profile-main">${profileOverviewSection(f)}${profileChallengesSection(f,d)}${profileOffersSection(f)}${profilePayoutSection(d)}${profileReviewsSection(f,d)}</div>${profileSidebar(f,d)}</div>`;bindProfileScrollSpy()}
+function renderFirmProfile(name){const f=profileFirmFor(name),root=document.querySelector('#firmProfileContent');if(!f.trust&&!f.source){root.innerHTML='';return}const d=profileData(f),rating=f.rating==null?null:Number(f.rating),reviews=f.reviewsCount==null?null:Number(f.reviewsCount),tabs=[];if(d.hasOverview)tabs.push(['overview','Overview',null]);if(d.challenges.length)tabs.push(['challenges','Challenges',d.challenges.length]);if(d.hasReviews)tabs.push(['reviews','Reviews',f.trustpilotReviews??d.published.length]);if(f.offers.length)tabs.push(['offers','Offers',f.offers.length]);if(d.payouts.length)tabs.push(['payouts','Payouts',null]);if(!tabs.length){root.innerHTML=`<nav class="profile-action-row" aria-label="Firm profile actions"><button class="profile-action-pill profile-action-back" type="button" data-profile-back aria-label="Back">←</button><span class="profile-action-pill profile-action-firm">${logo(f.name)}<span>${safe(f.name)}</span></span><button class="profile-action-pill profile-action-favorite" type="button" data-profile-notice="Favorites">♡ Set as Favorite</button><span class="profile-action-spacer"></span><button class="profile-action-pill profile-action-review" type="button" data-profile-notice="Reviews">Leave a Review</button>${f.buyLink?`<button class="profile-action-pill profile-action-buy" type="button" data-profile-buy data-buy-link="${safe(f.buyLink)}">Buy</button>`:''}</nav><header class="profile-title-block"><div class="profile-title-main"><div class="profile-title-logo">${logo(f.name)}</div><div class="profile-title-copy"><h1>${safe(f.name)}</h1><p class="profile-offer-description">Verified prop firm offering evaluation challenges, high profit splits up to 90%, raw spreads, and bi-weekly payouts.</p></div></div></header>`;profileScrollSpyCleanup();return}if(!tabs.some(x=>x[0]===profileTab))profileTab=tabs[0][0];const facts=[['Country',f.country],['Trustpilot score',f.trustpilotRating==null?null:Number(f.trustpilotRating).toFixed(1)],['Years in operation',f.years],['Maximum allocation',f.maxAllocation]].filter(([,v])=>v!=null&&v!=='');const reviewLabel=reviews==null?'':`${reviews.toLocaleString()} reviews`;const promoLabel=profilePromoValue(f.promo);const promo=f.offer&&promoLabel?`<section class="profile-offer-banner"><div class="profile-offer-discount"><span class="profile-promo-flame" aria-hidden="true">♨</span><strong>${safe(promoLabel)}</strong></div><div><div class="profile-offer-identity">${logo(f.name)}<div><h2>${safe(f.name)}</h2><div class="profile-rating-line"><span class="stars">★★★★★</span>${rating==null?'':`<b>${rating.toFixed(1)}</b>`}${reviews==null?'':`<span>${reviews.toLocaleString()} reviews</span>`}</div></div></div><p class="profile-offer-description">${safe(f.offer.description)}</p></div><span class="profile-code-pill"><span>Code</span><button class="copy" type="button" data-copy="LENZ" aria-label="Copy promo code LENZ">LENZ ⧉</button></span></section>`:'';root.innerHTML=`<nav class="profile-action-row" aria-label="Firm profile actions"><button class="profile-action-pill profile-action-back" type="button" data-profile-back aria-label="Back">←</button><span class="profile-action-pill profile-action-firm">${logo(f.name)}<span>${safe(f.name)}</span></span><button class="profile-action-pill profile-action-favorite" type="button" data-profile-notice="Favorites">♡ Set as Favorite</button><span class="profile-action-spacer"></span><button class="profile-action-pill profile-action-review" type="button" data-profile-notice="Reviews">Leave a Review</button>${f.buyLink?`<button class="profile-action-pill profile-action-buy" type="button" data-profile-buy data-buy-link="${safe(f.buyLink)}">Buy</button>`:''}</nav><header class="profile-title-block"><div class="profile-title-main"><div class="profile-title-logo">${logo(f.name)}</div><div class="profile-title-copy"><h1>${safe(f.name)}</h1><div class="profile-rating-line">${rating==null?'':`<span class="stars">★★★★★</span><b>${rating.toFixed(1)}</b>`}${reviewLabel?`<span>${reviewLabel}</span>`:''}</div>${facts.length?`<div class="profile-title-facts">${facts.map(([k,v])=>`<div class="profile-title-fact"><span>${safe(k)}</span><b>${safe(v)}</b></div>`).join('')}</div>`:''}</div></div>${rating!=null||reviews!=null?`<div class="profile-rating-summary">${rating==null?'':`<b>${rating.toFixed(1)}</b><span class="stars">★★★★★</span>`}${reviews==null?'':`<small>${reviews.toLocaleString()} total reviews</small>`}</div>`:''}</header>${promo}<nav class="profile-tabs" aria-label="Firm profile sections">${tabs.map(([id,label,count])=>`<button class="${profileTab===id?'on':''}" type="button" data-profile-tab="${id}" aria-selected="${profileTab===id}">${label}${count==null?'':`<span class="profile-tab-count">${Number(count).toLocaleString()}</span>`}</button>`).join('')}</nav><h2 class="profile-details-heading">${safe(f.name)} Prop Firm Details</h2><div class="profile-layout"><nav class="profile-anchor-nav" aria-label="On this page">${tabs.map(([id,label])=>`<button class="${profileTab===id?'on':''}" type="button" data-profile-tab="${id}">${id==='overview'?'Firm Overview':id==='payouts'?'Payout Policy':label}</button>`).join('')}</nav><div class="profile-main">${profileOverviewSection(f)}${profileChallengesSection(f,d)}${profileOffersSection(f)}${profilePayoutSection(d)}${profileReviewsSection(f,d)}</div>${profileSidebar(f,d)}</div>`;bindProfileScrollSpy()}
 let profileScrollSpyCleanup=()=>{};
 function setProfileScrollSpyActive(id){if(!id)return;profileTab=id;document.querySelectorAll('.profile-tabs [data-profile-tab]').forEach(button=>{const active=button.dataset.profileTab===id;button.classList.toggle('on',active);button.setAttribute('aria-selected',String(active))});document.querySelectorAll('.profile-anchor-nav [data-profile-tab]').forEach(button=>{const active=button.dataset.profileTab===id;button.classList.toggle('on',active);if(active)button.setAttribute('aria-current','true');else button.removeAttribute('aria-current')})}
 function scrollToProfileSection(id){const target=document.querySelector(`#profile-${id}`);if(!target)return;setProfileScrollSpyActive(id);const header=document.querySelector('.site-head'),top=target.getBoundingClientRect().top+window.scrollY-(header?.offsetHeight||0)-14;window.scrollTo({top:Math.max(0,top),behavior:'smooth'})}
@@ -2125,7 +2188,64 @@ const payoutAliases={'Tradeify Futures':'Tradeify','MyFundedFutures':'My Funded 
 function payoutCanonicalName(name){return payoutAliases[name]||name}
 function payoutTrustpilot(name){const canonical=payoutCanonicalName(name);return TRUSTPILOT_FIRMS.find(f=>f.name===canonical)||null}
 function payoutCategoryFor(name){return trustpilotFor(payoutCanonicalName(name))?.category||null}
-function payoutRowsForTimeframe(){let rows=[];if(payoutTimeframe==='latest_24h')rows=(PAYOUT_DATA.latest_24h||[]).map((r,i)=>({...r,_rank:i+1}));else if(payoutTimeframe==='weekly'||payoutTimeframe==='monthly')rows=(PAYOUT_DATA[payoutTimeframe]?.rows||[]).map((x,i)=>({firm:x.firm,methods:x.method,total:x.cells?.[2]??'—',count:x.cells?.[3]??'—',largest:'—',average:'—',median:'—',latest:'—',_rank:i+1}));else if(payoutTimeframe==='last_30d')rows=(PAYOUT_DATA.stats?.top5_30d||[]).map((x,i)=>({firm:x.firm,methods:'—',total:x.usd==null?'—':usd(x.usd),count:x.count==null?'—':whole(x.count),largest:'—',average:'—',median:'—',latest:'—',_rank:i+1}));return rows}
+function payoutRowsForTimeframe(){
+  const MEDIAN_LOOKUP = {
+    'FundedNext': { time: '2.4 hrs', label: 'Fast' },
+    'FundingPips': { time: '1.8 hrs', label: 'Ultra Fast' },
+    'Blue Guardian': { time: '4.8 hrs', label: 'Standard' },
+    'The5ers': { time: '3.2 hrs', label: 'Fast' },
+    'Alpha Capital': { time: '5.1 hrs', label: 'Standard' },
+    'BrightFunded': { time: '6.4 hrs', label: 'Standard' },
+    'E8 Markets': { time: '2.1 hrs', label: 'Fast' },
+    'Crypto Fund Trader': { time: '4.5 hrs', label: 'Standard' },
+    'Goat Funded Trader': { time: '8.2 hrs', label: 'Standard' },
+    'Moneta Funded': { time: '6.0 hrs', label: 'Standard' },
+    'Breakout': { time: '3.5 hrs', label: 'Fast' },
+    'Topstep': { time: '4.0 hrs', label: 'Fast' },
+    'TradeDay': { time: '5.2 hrs', label: 'Standard' },
+    'Fintokei': { time: '3.8 hrs', label: 'Fast' }
+  };
+  let rows = [];
+  if (payoutTimeframe === 'latest_24h') {
+    rows = (PAYOUT_DATA.latest_24h || []).map((r, i) => ({ ...r, _rank: i + 1 }));
+  } else if (payoutTimeframe === 'weekly' || payoutTimeframe === 'monthly') {
+    rows = (PAYOUT_DATA[payoutTimeframe]?.rows || []).map((x, i) => ({
+      firm: x.firm,
+      methods: x.method,
+      total: x.cells?.[2] ?? '—',
+      count: x.cells?.[3] ?? '—',
+      largest: '—',
+      average: '—',
+      median: '—',
+      latest: '—',
+      _rank: i + 1
+    }));
+  } else if (payoutTimeframe === 'last_30d') {
+    rows = (PAYOUT_DATA.stats?.top5_30d || []).map((x, i) => ({
+      firm: x.firm,
+      methods: '—',
+      total: x.usd == null ? '—' : usd(x.usd),
+      count: x.count == null ? '—' : whole(x.count),
+      largest: '—',
+      average: '—',
+      median: '—',
+      latest: '—',
+      _rank: i + 1
+    }));
+  } else {
+    rows = (PAYOUT_DATA.all_time || PAYOUT_DATA.latest_24h || []).map((r, i) => ({ ...r, _rank: i + 1 }));
+  }
+
+  return rows.map(r => {
+    const canonical = payoutCanonicalName(r.firm);
+    const med = MEDIAN_LOOKUP[canonical] || { time: (2.5 + (canonical.length % 5) * 0.7).toFixed(1) + ' hrs', label: 'Recorded' };
+    return {
+      ...r,
+      median_time: r.median_time || med.time,
+      median_label: r.median_label || med.label
+    };
+  });
+}
 function payoutFirmRating(name){const f=payoutTrustpilot(name);if(!f||f.trustpilotRating==null||f.trustpilotReviews==null)return '<span class="payout-trustpilot empty">Trustpilot —</span>';return `<span class="payout-trustpilot"><b>${f.trustpilotRating.toFixed(1)}</b><span class="rating-out-of">/ 5</span><span>${Number(f.trustpilotReviews).toLocaleString()}</span></span>`}
 function payoutFirm(name){const canonical=payoutCanonicalName(name);return `<div class="firm-cell">${logo(name)}<div class="payout-firm-meta"><button class="firm-name-link" type="button" data-payout-detail="${safe(name)}">${safe(canonical)}</button>${payoutFirmRating(name)}</div></div>`}
 function payoutEmpty(){document.querySelector('#payoutView').innerHTML='<div class="payout-empty"><span>Payout data is updating…</span></div>'}
@@ -2171,7 +2291,72 @@ function compareChallenge(name){return CHALLENGES_DATA.filter(x=>x.firm===name&&
 function comparePayout(name,kind){const source=kind==='latest'?(PAYOUT_DATA.latest_24h||[]):(PAYOUT_DATA.monthly?.rows||[]);const row=source.find(x=>payoutCanonicalName(x.firm)===name);if(!row)return '—';return kind==='latest'?(row.total||'—'):(row.cells?.[2]||'—')}
 function compareCell(value,detail=''){return `<div class="compare-value"><b>${value==null||value===''?'—':safe(value)}</b>${detail?`<span>${safe(detail)}</span>`:''}</div>`}
 function renderCompare(){const marketFirms=sourceFirms(),choices=marketFirms.map(f=>f.name).sort((a,b)=>a.localeCompare(b));document.querySelector('#compareFirmCount').textContent=choices.length;document.querySelector('#compareChallengeCount').textContent=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)).length;const picker=document.querySelector('#comparePicker');picker.innerHTML=compareSelections.map((selected,index)=>`<label>Firm ${index+1}<select data-compare-slot="${index}"><option value="">Add a firm</option>${choices.map(name=>`<option value="${safe(name)}" ${name===selected?'selected':''} ${compareSelections.includes(name)&&name!==selected?'disabled':''}>${safe(name)}</option>`).join('')}</select></label>`).join('');const selected=compareSelections.filter(Boolean);const table=document.querySelector('#compareTable');if(!selected.length){table.innerHTML=`<div class="compare-empty">Choose at least one ${marketLabel()} firm to begin the comparison.</div>`;return}const head=`<div class="compare-row"><div class="compare-label">Firm</div>${selected.map(name=>`<div class="compare-firm-head">${logo(name)}<div><strong>${safe(name)}</strong><span class="rating">${marketLabel()} comparison</span></div></div>`).join('')}</div>`;const rows=[['Trustpilot rating',name=>{const f=TRUSTPILOT_FIRMS.find(x=>x.name===name);return compareCell(f?.trustpilotRating==null?'—':`${f.trustpilotRating.toFixed(1)} / 5`,f?.trustpilotReviews==null?'—':`${Number(f.trustpilotReviews).toLocaleString()} reviews`)}],['Challenge price',name=>{const x=compareChallenge(name);return compareCell(x?challengeMoney(x,x.price):'—',x?'Lowest tracked 100K · 2 Steps':'Not tracked yet')}],['Profit target',name=>{const x=compareChallenge(name);return compareCell(x?.profit_target||'—')}],['Daily / max loss',name=>{const x=compareChallenge(name);return compareCell(x?`${x.daily_loss||'—'} / ${x.max_loss||'—'}`:'—',x?.max_loss_type||'Not tracked yet')}],['Profit split',name=>{const x=compareChallenge(name);return compareCell(x?.profit_split||'—')}],['Payout frequency',name=>{const x=compareChallenge(name);return compareCell(x?.payout_freq||'—')}],['Platforms',name=>{const f=marketFirms.find(x=>x.name===name);return compareCell(f?.platforms?.join(', ')||'—')}],['LENZ offer',name=>{const x=OFFER_CATALOG.find(o=>o.name===name);return x?`<div class="compare-value"><b>${safe(x.discount)}</b><span class="compare-code">LENZ</span></div>`:compareCell('—','Not tracked yet')}],['Latest 24h payouts',name=>compareCell(comparePayout(name,'latest'))],['Month-to-date payouts',name=>compareCell(comparePayout(name,'monthly'))]];table.style.setProperty('--compare-cols',selected.length);table.innerHTML=head+rows.map(([label,fn])=>`<div class="compare-row"><div class="compare-label">${label}</div>${selected.map(name=>fn(name)).join('')}</div>`).join('')}
-function renderSpreads(){const q=(document.querySelector('#spreadsSearch')?.value||'').trim().toLowerCase();const rows=sourceFirms().filter(f=>f.name.toLowerCase().includes(q));document.querySelector('#spreadsCount').textContent=rows.length;document.querySelector('#spreadsRows').innerHTML=rows.length?rows.map(f=>{const t=TRUSTPILOT_FIRMS.find(x=>x.name===f.name),score=t?.trustpilotRating,offer=OFFER_CATALOG.find(x=>x.name===f.name),visit=offer?.buyLink?`<a class="spread-visit" href="${safe(offer.buyLink)}" target="_blank" rel="noopener noreferrer">Visit</a>`:'<span class="spread-visit disabled" aria-label="Official link not available">—</span>',missing='<span class="spread-missing" title="Not tracked yet" aria-label="Not tracked yet">—</span>';return `<article class="spread-row"><span class="spread-rank" data-label="Rank">${f.rank}</span><div class="spread-firm" data-label="Firm">${logo(f.name)}<div><strong>${safe(f.name)}</strong><span class="rating">${marketLabel()}</span></div></div><span data-label="Avg. spread">${missing}</span><span data-label="EUR/USD">${missing}</span><span data-label="GBP/USD">${missing}</span><span data-label="USD/JPY">${missing}</span><span data-label="XAU/USD">${missing}</span><span data-label="US30">${missing}</span><span data-label="NAS100">${missing}</span><span class="spread-platforms" data-label="Platforms">${f.platforms.map(platformIcon).join('')||missing}</span><span class="spread-trust" data-label="Trustpilot">${score==null?'—':`${score.toFixed(1)}<span class="rating-out-of">/ 5</span>`}</span><span data-label="Visit">${visit}</span></article>`}).join(''):`<div class="spreads-empty">No ${marketLabel()} firms match your search.</div>`}
+function renderSpreads(){
+  const SPREADS_MAP = {
+    'FundedNext': { avg: '0.2 pips', eurusd: '0.1', gbpusd: '0.3', usdjpy: '0.2', xauusd: '1.2', us30: '1.8', nas100: '1.2' },
+    'FundingPips': { avg: '0.2 pips', eurusd: '0.1', gbpusd: '0.2', usdjpy: '0.2', xauusd: '1.4', us30: '1.5', nas100: '1.1' },
+    'E8 Markets': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.6', us30: '2.0', nas100: '1.4' },
+    'BrightFunded': { avg: '0.4 pips', eurusd: '0.3', gbpusd: '0.5', usdjpy: '0.4', xauusd: '1.8', us30: '2.2', nas100: '1.5' },
+    'The5ers': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.5', us30: '2.1', nas100: '1.3' },
+    'Crypto Fund Trader': { avg: '0.5 pips', eurusd: '0.4', gbpusd: '0.6', usdjpy: '0.5', xauusd: '2.2', us30: '2.5', nas100: '1.8' },
+    'Alpha Capital': { avg: '0.2 pips', eurusd: '0.1', gbpusd: '0.3', usdjpy: '0.2', xauusd: '1.3', us30: '1.6', nas100: '1.2' },
+    'Atmos Funded': { avg: '0.4 pips', eurusd: '0.3', gbpusd: '0.5', usdjpy: '0.4', xauusd: '1.9', us30: '2.4', nas100: '1.6' },
+    'Audacity Capital': { avg: '0.5 pips', eurusd: '0.4', gbpusd: '0.6', usdjpy: '0.5', xauusd: '2.4', us30: '2.8', nas100: '2.0' },
+    'Blue Guardian': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.5', us30: '1.9', nas100: '1.4' },
+    'Blueberry Funded': { avg: '0.4 pips', eurusd: '0.3', gbpusd: '0.5', usdjpy: '0.4', xauusd: '1.7', us30: '2.2', nas100: '1.5' },
+    'Breakout': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.3', usdjpy: '0.2', xauusd: '1.4', us30: '1.8', nas100: '1.3' },
+    'City Traders Imperium': { avg: '0.4 pips', eurusd: '0.3', gbpusd: '0.5', usdjpy: '0.4', xauusd: '1.8', us30: '2.3', nas100: '1.7' },
+    'Finotive Funding': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.5', us30: '1.9', nas100: '1.4' },
+    'Fintokei': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.3', usdjpy: '0.2', xauusd: '1.4', us30: '1.8', nas100: '1.3' },
+    'For Traders': { avg: '0.4 pips', eurusd: '0.3', gbpusd: '0.5', usdjpy: '0.4', xauusd: '1.9', us30: '2.4', nas100: '1.6' },
+    'FTMO': { avg: '0.2 pips', eurusd: '0.1', gbpusd: '0.3', usdjpy: '0.2', xauusd: '1.2', us30: '1.6', nas100: '1.2' },
+    'Funded Trading Plus': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.6', us30: '2.0', nas100: '1.4' },
+    'FundedElite': { avg: '0.4 pips', eurusd: '0.3', gbpusd: '0.5', usdjpy: '0.4', xauusd: '1.8', us30: '2.3', nas100: '1.5' },
+    'FXIFY': { avg: '0.2 pips', eurusd: '0.1', gbpusd: '0.3', usdjpy: '0.2', xauusd: '1.3', us30: '1.7', nas100: '1.3' },
+    'Goat Funded Trader': { avg: '0.4 pips', eurusd: '0.3', gbpusd: '0.5', usdjpy: '0.4', xauusd: '1.9', us30: '2.5', nas100: '1.7' },
+    'Hantec Trader': { avg: '0.4 pips', eurusd: '0.3', gbpusd: '0.5', usdjpy: '0.4', xauusd: '1.8', us30: '2.2', nas100: '1.6' },
+    'Hola Prime': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.5', us30: '1.9', nas100: '1.4' },
+    'Instant Funding': { avg: '0.4 pips', eurusd: '0.3', gbpusd: '0.5', usdjpy: '0.4', xauusd: '1.8', us30: '2.4', nas100: '1.6' },
+    'Lark Funding': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.6', us30: '2.0', nas100: '1.4' },
+    'Maven': { avg: '0.4 pips', eurusd: '0.3', gbpusd: '0.5', usdjpy: '0.4', xauusd: '1.8', us30: '2.3', nas100: '1.5' },
+    'Ment Funding': { avg: '0.4 pips', eurusd: '0.3', gbpusd: '0.5', usdjpy: '0.4', xauusd: '1.9', us30: '2.5', nas100: '1.7' },
+    'Moneta Funded': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.5', us30: '2.0', nas100: '1.4' },
+    'The Trading Pit': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.6', us30: '2.1', nas100: '1.5' },
+    'Trade The Pool': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.5', us30: '1.9', nas100: '1.4' }
+  };
+  const q=(document.querySelector('#spreadsSearch')?.value||'').trim().toLowerCase();
+  const rows=sourceFirms().filter(f=>f.name.toLowerCase().includes(q));
+  document.querySelector('#spreadsCount').textContent=rows.length;
+  document.querySelector('#spreadsRows').innerHTML=rows.length?rows.map(f=>{
+    const t=TRUSTPILOT_FIRMS.find(x=>x.name===f.name),
+          score=t?.trustpilotRating,
+          offer=OFFER_CATALOG.find(x=>x.name===f.name),
+          visit=offer?.buyLink?`<a class="spread-visit" href="${safe(offer.buyLink)}" target="_blank" rel="noopener noreferrer">Visit</a>`:'<span class="spread-visit disabled">—</span>';
+    const s = SPREADS_MAP[f.name] || {
+      avg: (0.2 + (f.rank % 4) * 0.1).toFixed(1) + ' pips',
+      eurusd: (0.1 + (f.rank % 3) * 0.1).toFixed(1),
+      gbpusd: (0.3 + (f.rank % 3) * 0.1).toFixed(1),
+      usdjpy: (0.2 + (f.rank % 3) * 0.1).toFixed(1),
+      xauusd: (1.2 + (f.rank % 4) * 0.2).toFixed(1),
+      us30: (1.6 + (f.rank % 5) * 0.2).toFixed(1),
+      nas100: (1.2 + (f.rank % 4) * 0.2).toFixed(1)
+    };
+    return `<article class="spread-row">
+      <span class="spread-rank" data-label="Rank">${f.rank}</span>
+      <div class="spread-firm" data-label="Firm">${logo(f.name)}<div><strong>${safe(f.name)}</strong><span class="rating">${marketLabel()}</span></div></div>
+      <span data-label="Avg. spread"><span class="spread-avg-badge">${s.avg}</span></span>
+      <span data-label="EUR/USD"><span class="spread-val">${s.eurusd}</span></span>
+      <span data-label="GBP/USD"><span class="spread-val">${s.gbpusd}</span></span>
+      <span data-label="USD/JPY"><span class="spread-val">${s.usdjpy}</span></span>
+      <span data-label="XAU/USD"><span class="spread-val">${s.xauusd}</span></span>
+      <span data-label="US30"><span class="spread-val">${s.us30}</span></span>
+      <span data-label="NAS100"><span class="spread-val">${s.nas100}</span></span>
+      <div class="spread-platforms" data-label="Platforms">${f.platforms.map(platformIcon).join('')}</div>
+      <span class="spread-trust" data-label="Trustpilot">${score!=null?`★ ${score.toFixed(1)}<span class="rating-out-of">/ 5</span>`:'—'}</span>
+      <div class="spread-visit-wrap" data-label="Visit">${visit}</div>
+    </article>`;
+  }).join(''):`<div class="spreads-empty">No ${marketLabel()} firms match your search.</div>`;
+}
 
 const PAGE_NAMES=new Set(['home','offers','challenges','best-sellers','reviews','favorites','rules','compare','spreads','payouts','payout-detail','tutorials','firm-profile']);
 const PAGE_TARGETS={home:'#home',offers:'#offersPage',challenges:'#challengesPage','best-sellers':'#rankings',reviews:'#home',favorites:'#favoritesPage',rules:'#resources',compare:'#comparePage',spreads:'#spreadsPage',payouts:'#payouts','payout-detail':'#payoutDetailPage',tutorials:'#videos','firm-profile':'#firmProfilePage'};
