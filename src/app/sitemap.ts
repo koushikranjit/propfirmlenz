@@ -30,17 +30,29 @@ import { isIndexable } from "@/lib/view/firm-view";
  */
 export const dynamic = "force-dynamic";
 
+import { env } from "@/lib/validation/env";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const db = getDb();
-  const [firms, payouts, ranked, offerCount] = await Promise.all([
-    listPublishedFirmSlugs(db),
-    getPayoutTotals(db, "all"),
-    // Only firms that actually HAVE a verified payout: the ranking query
-    // cannot return one that does not, so a firm's payout page reaches the
-    // sitemap exactly when it has something to show.
-    listPayoutFirmRanking(db, { window: "all", limit: 100 }),
-    countActiveOffers(db),
-  ]);
+  const defaultEntries: MetadataRoute.Sitemap = [
+    {
+      url: canonicalUrl("/"),
+      changeFrequency: "daily",
+      priority: 1,
+    },
+  ];
+
+  if (!env.DATABASE_URL) {
+    return defaultEntries;
+  }
+
+  try {
+    const db = getDb();
+    const [firms, payouts, ranked, offerCount] = await Promise.all([
+      listPublishedFirmSlugs(db),
+      getPayoutTotals(db, "all"),
+      listPayoutFirmRanking(db, { window: "all", limit: 100 }),
+      countActiveOffers(db),
+    ]);
 
   // Indexability depends on the assembled profile, so it is decided by the same
   // predicate the page itself uses — the sitemap can never disagree with the
@@ -115,4 +127,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     })),
   ];
+  } catch (error) {
+    console.error("Sitemap generation fallback:", error);
+    return defaultEntries;
+  }
 }

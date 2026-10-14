@@ -10,10 +10,6 @@ import Link from "next/link";
  * It says which URL failed only in the general sense — it never echoes the
  * requested path back into the markup, which would reflect arbitrary input.
  */
-export const metadata = {
-  title: "Page not found",
-  robots: { index: false, follow: true },
-};
 
 export default function PublicNotFound() {
   return (

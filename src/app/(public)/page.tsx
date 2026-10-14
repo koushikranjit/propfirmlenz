@@ -67,23 +67,36 @@ export function generateMetadata(): Metadata {
 export default async function HomePage() {
   const data = env.DATABASE_URL
     ? await (async () => {
-        const db = getDb();
-        const [firms, firmCount, verifiedCount, recentlyVerified, platforms, countries] = await Promise.all([
-          listPublishedFirmSummaries(db, { sort: "name", pageSize: HOME_FIRM_LIMIT }),
-          countPublishedFirms(db),
-          countPublishedFirms(db, { verifiedOnly: true }),
-          listPublishedFirmSummaries(db, {
-            sort: "recently_verified",
-            verifiedOnly: true,
-            pageSize: RECENTLY_VERIFIED_LIMIT,
-          }),
-          listPublishedPlatformFacets(db, 8),
-          listPublishedFirmCountries(db),
-        ]);
-        // The SAME query /offers uses, so a discount can never appear in one
-        // place and not the other.
-        const offers = await listActiveOffers(db, { limit: 12 });
-        return { firms, firmCount, verifiedCount, recentlyVerified, platforms, countries, offers };
+        try {
+          const db = getDb();
+          const [firms, firmCount, verifiedCount, recentlyVerified, platforms, countries] = await Promise.all([
+            listPublishedFirmSummaries(db, { sort: "name", pageSize: HOME_FIRM_LIMIT }),
+            countPublishedFirms(db),
+            countPublishedFirms(db, { verifiedOnly: true }),
+            listPublishedFirmSummaries(db, {
+              sort: "recently_verified",
+              verifiedOnly: true,
+              pageSize: RECENTLY_VERIFIED_LIMIT,
+            }),
+            listPublishedPlatformFacets(db, 8),
+            listPublishedFirmCountries(db),
+          ]);
+          // The SAME query /offers uses, so a discount can never appear in one
+          // place and not the other.
+          const offers = await listActiveOffers(db, { limit: 12 });
+          return { firms, firmCount, verifiedCount, recentlyVerified, platforms, countries, offers };
+        } catch (error) {
+          console.error("HomePage query fallback:", error);
+          return {
+            firms: [],
+            firmCount: 0,
+            verifiedCount: 0,
+            recentlyVerified: [],
+            platforms: [],
+            countries: [],
+            offers: [],
+          };
+        }
       })()
     : {
         firms: [],

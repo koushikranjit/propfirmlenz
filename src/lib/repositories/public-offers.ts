@@ -119,7 +119,12 @@ export async function listActiveOffers(
       discountType: row.discountType,
       discountValue: row.discountValue,
       discountCurrency: row.discountCurrency,
-      endsAt: row.endsAt?.toISOString() ?? null,
+      endsAt:
+        row.endsAt instanceof Date
+          ? row.endsAt.toISOString()
+          : row.endsAt
+            ? String(row.endsAt)
+            : null,
       hasAffiliateLink: row.affiliateLinkId !== null,
     }));
 }
