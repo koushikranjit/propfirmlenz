@@ -94,7 +94,152 @@
 
 <section class="firm-profile-page" id="firmProfilePage" data-page-panel="firm-profile" hidden><div class="firm-profile-shell"><div id="firmProfileContent" aria-live="polite"></div></div></section>
 <section class="section" id="videos" data-page-panel="home tutorials"><div class="shell"><div class="section-title"><div><h2>Watch our Latest Videos</h2><p>Prop trading insights, firm reviews, and practical explainers.</p></div><div class="arrows"><button class="arrow" id="videoPrev" aria-label="Previous videos">‹</button><button class="arrow" id="videoNext" aria-label="Next videos">›</button></div></div><div class="video-rail" id="videoRail"></div><div class="carousel-dots" id="videoDots" aria-label="Video pages"></div><div class="yt-strip"><span class="yt">▶</span><span><strong>YouTube</strong></span><a class="firm-action" href="https://www.youtube.com/watch?v=fbU-zF3Viok" target="_blank" rel="noopener noreferrer">All Videos</a></div></div></section>
-<section class="section" id="resources" data-page-panel="home rules"><div class="shell"><div class="section-title"><div><h2>Tools and Resources</h2><p>Practical ways to narrow your search.</p></div></div><div class="resource-grid"><article class="resource"><span class="resource-icon">01</span><div><h3>Forex Firm Lists</h3><p>Compare the firms in the directory by country, trading platforms, maximum allocation, ratings, and available offers.</p><a href="#page-compare" data-page="compare">Compare Firms →</a></div></article><article class="resource"><span class="resource-icon">02</span><div><h3>Challenge Comparison</h3><p>Compare the 62 tracked Forex challenge records by account size, steps, targets, loss limits, payout frequency, and price.</p><a href="#page-challenges" data-page="challenges">Compare Challenges →</a></div></article><article class="resource"><span class="resource-icon">03</span><div><h3>Payout Tracker</h3><p>Review tracked payout totals, counts, records, and available processing-time metrics across matched firms.</p><a href="#page-payouts" data-page="payouts">View Payouts →</a></div></article></div></div></section>
+<section class="section" id="resources" data-page-panel="home rules"><div class="shell"><div class="section-title"><div><h2>Tools and Resources</h2><p>Practical interactive suites and data models to narrow your search.</p></div></div><div class="resource-grid">
+  <!-- 01 Forex Firm Lists -->
+  <article class="resource resource-card-3d" id="resCardFirms">
+    <div class="res-card-glow"></div>
+    <div class="res-card-top">
+      <div class="res-badge-3d">
+        <span class="num">01</span>
+        <span class="label">Directory Matrix</span>
+      </div>
+      <div class="res-visual-3d" aria-hidden="true">
+        <svg class="res-svg-3d" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="resGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1EE7FC"/>
+              <stop offset="50%" stop-color="#396DFA"/>
+              <stop offset="100%" stop-color="#7021FC"/>
+            </linearGradient>
+            <filter id="resGlow1" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+          <polygon points="50,15 88,32 50,49 12,32" fill="rgba(30,231,252,0.06)" stroke="rgba(30,231,252,0.3)" stroke-width="1.2"/>
+          <polygon points="50,27 82,41 50,55 18,41" fill="rgba(57,109,250,0.12)" stroke="url(#resGrad1)" stroke-width="1.5"/>
+          <polygon points="50,8 70,17 50,26 30,17" fill="rgba(30,231,252,0.25)" stroke="#1EE7FC" stroke-width="1.5" filter="url(#resGlow1)"/>
+          <polygon points="30,17 50,26 50,38 30,29" fill="rgba(30,231,252,0.15)" stroke="#1EE7FC" stroke-width="1"/>
+          <polygon points="70,17 50,26 50,38 70,29" fill="rgba(112,33,252,0.35)" stroke="#7021FC" stroke-width="1"/>
+          <circle cx="50" cy="8" r="3" fill="#1EE7FC" filter="url(#resGlow1)"/>
+          <circle cx="18" cy="41" r="2.5" fill="#396DFA"/>
+          <circle cx="82" cy="41" r="2.5" fill="#7021FC"/>
+          <circle cx="50" cy="65" r="2" fill="#1EE7FC"/>
+          <ellipse cx="50" cy="38" rx="42" ry="16" fill="none" stroke="rgba(30,231,252,0.2)" stroke-dasharray="3 3"/>
+        </svg>
+      </div>
+    </div>
+    <div class="res-card-body">
+      <h3>Forex Firm Lists</h3>
+      <p id="resourceFirmsDesc">Compare firms in the live directory by headquarters, trading platforms, maximum funded allocation, verified ratings, and active promo discounts.</p>
+      <div class="res-chips">
+        <span class="res-chip">20+ Verified Firms</span>
+        <span class="res-chip">Platforms &amp; Spreads</span>
+        <span class="res-chip">Tier-1 Regs</span>
+      </div>
+    </div>
+    <a class="res-btn-3d" href="#page-compare" data-page="compare">
+      <span>Compare Firms</span>
+      <span class="arrow">→</span>
+    </a>
+  </article>
+
+  <!-- 02 Challenge Comparison -->
+  <article class="resource resource-card-3d" id="resCardChallenges">
+    <div class="res-card-glow"></div>
+    <div class="res-card-top">
+      <div class="res-badge-3d">
+        <span class="num">02</span>
+        <span class="label">Evaluation Engine</span>
+      </div>
+      <div class="res-visual-3d" aria-hidden="true">
+        <svg class="res-svg-3d" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="resGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#396DFA"/>
+              <stop offset="100%" stop-color="#1EE7FC"/>
+            </linearGradient>
+            <filter id="resGlow2" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+          <polygon points="20,44 36,36 36,60 20,68" fill="rgba(57,109,250,0.25)" stroke="#396DFA" stroke-width="1.2"/>
+          <polygon points="36,36 52,44 52,68 36,60" fill="rgba(30,231,252,0.18)" stroke="#1EE7FC" stroke-width="1.2"/>
+          <polygon points="20,44 36,36 52,44 36,52" fill="rgba(30,231,252,0.3)" stroke="#1EE7FC" stroke-width="1.2"/>
+          <polygon points="48,28 64,20 64,52 48,60" fill="rgba(112,33,252,0.3)" stroke="#7021FC" stroke-width="1.2"/>
+          <polygon points="64,20 80,28 80,60 64,52" fill="rgba(57,109,250,0.25)" stroke="#396DFA" stroke-width="1.2"/>
+          <polygon points="48,28 64,20 80,28 64,36" fill="rgba(57,109,250,0.4)" stroke="#396DFA" stroke-width="1.2"/>
+          <path d="M 28 42 L 50 24 L 72 12" stroke="url(#resGrad2)" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 2"/>
+          <circle cx="72" cy="12" r="5" fill="#1EE7FC" filter="url(#resGlow2)"/>
+          <circle cx="72" cy="12" r="2" fill="#fff"/>
+          <polygon points="72,5 77,10 72,15 67,10" fill="rgba(30,231,252,0.4)"/>
+        </svg>
+      </div>
+    </div>
+    <div class="res-card-body">
+      <h3>Challenge Comparison</h3>
+      <p id="resourceChallengeDesc">Compare the 62 tracked Forex challenge records by account size, steps, targets, loss limits, payout frequency, and price.</p>
+      <div class="res-chips">
+        <span class="res-chip">62 Challenges</span>
+        <span class="res-chip">1-Step &amp; 2-Step</span>
+        <span class="res-chip">Drawdown Limits</span>
+      </div>
+    </div>
+    <a class="res-btn-3d" href="#page-challenges" data-page="challenges">
+      <span>Compare Challenges</span>
+      <span class="arrow">→</span>
+    </a>
+  </article>
+
+  <!-- 03 Payout Tracker -->
+  <article class="resource resource-card-3d" id="resCardPayouts">
+    <div class="res-card-glow"></div>
+    <div class="res-card-top">
+      <div class="res-badge-3d">
+        <span class="num">03</span>
+        <span class="label">Verified Vault</span>
+      </div>
+      <div class="res-visual-3d" aria-hidden="true">
+        <svg class="res-svg-3d" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="resGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1EE7FC"/>
+              <stop offset="60%" stop-color="#396DFA"/>
+              <stop offset="100%" stop-color="#7021FC"/>
+            </linearGradient>
+            <filter id="resGlow3" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+          <polygon points="50,14 80,29 50,44 20,29" fill="rgba(30,231,252,0.25)" stroke="#1EE7FC" stroke-width="1.5" filter="url(#resGlow3)"/>
+          <polygon points="20,29 50,44 50,68 20,53" fill="rgba(14,24,38,0.9)" stroke="rgba(30,231,252,0.4)" stroke-width="1.2"/>
+          <polygon points="80,29 50,44 50,68 80,53" fill="rgba(24,18,44,0.9)" stroke="rgba(112,33,252,0.5)" stroke-width="1.2"/>
+          <circle cx="50" cy="54" r="8" fill="rgba(30,231,252,0.15)" stroke="#1EE7FC" stroke-width="1.2"/>
+          <path d="M47 54 L49.5 56.5 L53.5 52.5" stroke="#1EE7FC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="50" cy="14" r="3.5" fill="#35db86" filter="url(#resGlow3)"/>
+          <line x1="25" y1="20" x2="15" y2="14" stroke="rgba(30,231,252,0.4)" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="75" y1="20" x2="85" y2="14" stroke="rgba(112,33,252,0.5)" stroke-width="1" stroke-dasharray="2 2"/>
+          <line x1="50" y1="70" x2="50" y2="78" stroke="rgba(30,231,252,0.4)" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+    <div class="res-card-body">
+      <h3>Payout Tracker</h3>
+      <p id="resourcePayoutDesc">Review tracked on-chain &amp; Rise payout totals, proof records, and processing-time metrics across verified firms.</p>
+      <div class="res-chips">
+        <span class="res-chip">Tracked Blockchain Data</span>
+        <span class="res-chip">Processing Speeds</span>
+        <span class="res-chip">Live Proof</span>
+      </div>
+    </div>
+    <a class="res-btn-3d" href="#page-payouts" data-page="payouts">
+      <span>View Payouts</span>
+      <span class="arrow">→</span>
+    </a>
+  </article>
+</div></div></section>
 <section class="section" id="faq" data-page-panel="home offers reviews favorites"><div class="shell faq-wrap"><div class="section-title faq-title"><div><h2 id="faqTitle">Homepage FAQ (Forex)</h2></div></div><div class="faq" id="faqList"></div><a class="view-all" href="#footer">Help Center</a></div></section>
 <section class="section" hidden><div class="shell"><div class="newsletter"><span class="kicker">RESEARCH UPDATES</span><h2>Subscribe for new Forex comparison updates</h2><form class="subscribe" id="subscribe"><input type="email" name="email" placeholder="Email address" aria-label="Email address" required><button type="submit">Subscribe</button></form><p class="form-note" aria-live="polite"></p></div></div></section>
 </main>
