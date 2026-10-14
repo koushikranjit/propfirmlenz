@@ -12,6 +12,30 @@ const nextConfig: NextConfig = {
           source: "/clone",
           destination: "/clone.html",
         },
+        {
+          source: "/challenges",
+          destination: "/clone.html",
+        },
+        {
+          source: "/comparisons",
+          destination: "/clone.html",
+        },
+        {
+          source: "/spreads",
+          destination: "/clone.html",
+        },
+        {
+          source: "/reviews",
+          destination: "/clone.html",
+        },
+        {
+          source: "/payouts",
+          destination: "/clone.html",
+        },
+        {
+          source: "/offers",
+          destination: "/clone.html",
+        },
       ],
     };
   },
