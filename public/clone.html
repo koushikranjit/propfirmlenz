@@ -6,6 +6,9 @@
 <meta name="artifact-revision" content="firm-profile-reference-layout-2026-10-08b">
 <meta name="color-scheme" content="dark">
 <title>Prop Firm Lenz — Compare Prop Trading Firms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 :root{color-scheme:dark;--bg:#050506;--surface:#0c0c10;--card:#121217;--card2:#17171e;--ink:#fff;--muted:#9b9ba7;--line:#292932;--accent:#1EE7FC;--purple:#7021FC;--green:#1EE7FC;--orange:#ff8a2b;--shadow:0 18px 60px rgba(0,0,0,.34);--grad:linear-gradient(115deg,#1EE7FC 0%,#396DFA 52%,#7021FC 100%)}
@@ -741,7 +744,6 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
 #offers .future{grid-template-columns:28px 58px minmax(0,1fr)!important}
 @media(max-width:960px){.resource-grid{grid-template-columns:1fr!important;gap:16px!important}.resource-card-3d{padding:20px 18px!important}}
 
-
 /* ========================================================
    HERO & OFFERS SIZE ADJUSTMENTS
    ======================================================== */
@@ -1164,9 +1166,185 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   font-weight: 800 !important;
 }
 
+
+/* ========================================================
+   ATTRACTIVE GRADIENTS & SCROLL ANIMATIONS SUITE
+   ======================================================== */
+
+/* 1. Global Neon Scroll Progress Indicator */
+#scrollProgressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #1EE7FC 0%, #396DFA 50%, #7021FC 100%);
+  z-index: 9999;
+  box-shadow: 0 0 12px rgba(30, 231, 252, 0.8), 0 0 24px rgba(112, 33, 252, 0.5);
+  pointer-events: none;
+  transition: width 0.08s ease-out;
+}
+
+/* 2. Deep Glowing Aurora Mesh Hero Background */
+.hero {
+  position: relative !important;
+  overflow: hidden !important;
+  background: radial-gradient(circle 900px at 50% -25%, rgba(30, 231, 252, 0.22), rgba(57, 109, 250, 0.14) 38%, rgba(112, 33, 252, 0.09) 65%, transparent 85%), #060609 !important;
+}
+.hero::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -140px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 820px !important;
+  height: 420px !important;
+  background: radial-gradient(ellipse at center, rgba(30, 231, 252, 0.32) 0%, rgba(57, 109, 250, 0.2) 42%, rgba(112, 33, 252, 0.08) 72%, transparent 100%) !important;
+  filter: blur(70px) !important;
+  border-radius: 50% !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  animation: heroAuroraFloat 7s ease-in-out infinite alternate !important;
+}
+@keyframes heroAuroraFloat {
+  0% { transform: translateX(-50%) scale(1) translateY(0); opacity: 0.75; }
+  50% { transform: translateX(-48%) scale(1.1) translateY(18px); opacity: 1; }
+  100% { transform: translateX(-52%) scale(0.96) translateY(-12px); opacity: 0.8; }
+}
+
+/* 3. Iridescent Glowing Text Gradients */
+.hero h1,
+#heroTitle,
+.page-intro h1,
+.payout-hub-head h1,
+.compare-shell .page-intro h1 {
+  background: linear-gradient(135deg, #ffffff 25%, #d6f7ff 50%, #7cf2ff 78%, #396dfa 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 35px rgba(30, 231, 252, 0.32) !important;
+}
+.section-title h2 {
+  background: linear-gradient(135deg, #ffffff 40%, #c4f3ff 82%, #7aa8ff 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* 4. Enhanced Glass & Gradient Borders */
+.panel {
+  background: linear-gradient(155deg, rgba(20, 20, 26, 0.94), rgba(11, 11, 15, 0.98)) padding-box,
+              linear-gradient(135deg, rgba(30, 231, 252, 0.45) 0%, rgba(57, 109, 250, 0.28) 50%, rgba(112, 33, 252, 0.5) 100%) border-box !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 32px rgba(30, 231, 252, 0.08) !important;
+}
+.futures-panel {
+  background: linear-gradient(155deg, rgba(20, 20, 26, 0.94), rgba(11, 11, 15, 0.98)) padding-box,
+              linear-gradient(135deg, rgba(112, 33, 252, 0.5) 0%, rgba(57, 109, 250, 0.28) 50%, rgba(30, 231, 252, 0.45) 100%) border-box !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 32px rgba(112, 33, 252, 0.08) !important;
+}
+
+#offers .offer {
+  background: linear-gradient(145deg, rgba(24, 24, 32, 0.88), rgba(14, 14, 19, 0.96)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+#offers .offer:hover {
+  border-color: rgba(30, 231, 252, 0.6) !important;
+  transform: translateY(-3px) scale(1.01) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 24px rgba(30, 231, 252, 0.22) !important;
+}
+
+#offers .future {
+  background: linear-gradient(145deg, rgba(24, 24, 32, 0.88), rgba(14, 14, 19, 0.96)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+#offers .future:hover {
+  border-color: rgba(112, 33, 252, 0.6) !important;
+  transform: translateY(-3px) scale(1.01) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 24px rgba(112, 33, 252, 0.22) !important;
+}
+
+/* 5. Rank Cards Sleek Gradient & Hover Lift */
+.rank-card {
+  background: linear-gradient(145deg, rgba(19, 19, 25, 0.88), rgba(13, 13, 17, 0.96)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.rank-card:hover {
+  border-color: rgba(57, 109, 250, 0.45) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55), 0 0 20px rgba(57, 109, 250, 0.14) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* 6. Dynamic Sticky Header Enhancement */
+.site-head {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.site-head.scrolled {
+  background: rgba(5, 5, 8, 0.94) !important;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.65), 0 1px 0 rgba(30, 231, 252, 0.18) !important;
+  backdrop-filter: blur(24px) !important;
+}
+
+/* 7. Scroll Reveal Animation Classes */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 0.05s !important; }
+.stagger-2 { transition-delay: 0.10s !important; }
+.stagger-3 { transition-delay: 0.15s !important; }
+.stagger-4 { transition-delay: 0.20s !important; }
+.stagger-5 { transition-delay: 0.25s !important; }
+.stagger-6 { transition-delay: 0.30s !important; }
+
+/* 8. Back to Top Smooth Floating Button */
+#backToTopBtn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1EE7FC, #396DFA, #7021FC);
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 90;
+  box-shadow: 0 8px 24px rgba(30, 231, 252, 0.35);
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#backToTopBtn.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+#backToTopBtn:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 12px 30px rgba(30, 231, 252, 0.55);
+}
+
 </style>
 </head>
 <body data-market-theme="forex">
+<div id="scrollProgressBar" aria-hidden="true"></div>
+<button id="backToTopBtn" type="button" aria-label="Back to top">↑</button>
 <header class="site-head">
   <div class="shell head-main">
     <a class="brand-lock" href="#page-home" data-page="home"><span class="brand-mark" aria-hidden="true"></span><span>Prop Firm Lenz</span></a>
@@ -1175,12 +1353,12 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
     <div class="header-auth desktop-auth" aria-label="Account access"><button class="login" type="button" data-account-notice>Log in</button><button class="signup" type="button" data-account-notice>Sign up</button></div>
     <button class="menu" type="button" aria-label="Close navigation menu" aria-expanded="true" aria-controls="headerMenu"></button>
   </div>
-  <nav class="navrow" id="headerMenu" aria-label="Main navigation"><div class="shell navlinks"><div class="mobile-nav-tools"><input class="searchbox" id="mobileSearch" type="search" placeholder="⌕  Search firms" aria-label="Search firms"><div class="market-switch mobile-market-switch" role="group" aria-label="Market scope"><button class="on" type="button" data-market="forex" aria-pressed="true">Forex</button><button type="button" data-market="futures" aria-pressed="false">Futures</button><button type="button" data-market="crypto" aria-pressed="false">Crypto</button></div></div><a class="active" href="#page-home" data-page="home">Home</a><a href="#page-offers" data-page="offers">Offers</a><a href="#page-challenges" data-page="challenges">Challenges</a><a href="#page-best-sellers" data-page="best-sellers">Best Sellers</a><a href="#page-reviews" data-page="reviews">Reviews</a><a href="#page-favorites" data-page="favorites">Favorites</a><a href="#page-compare" data-page="compare">Compare Firms <span class="badge">New</span></a><a href="#page-spreads" data-page="spreads">Spreads</a><a href="#page-payouts" data-page="payouts">Payouts</a></div></nav>
+  <nav class="navrow" id="headerMenu" aria-label="Main navigation"><div class="shell navlinks"><div class="mobile-nav-tools"><input class="searchbox" id="mobileSearch" type="search" placeholder="⌕  Search firms" aria-label="Search firms"><div class="market-switch mobile-market-switch" role="group" aria-label="Market scope"><button class="on" type="button" data-market="forex" aria-pressed="true">Forex</button><button type="button" data-market="futures" aria-pressed="false">Futures</button><button type="button" data-market="crypto" aria-pressed="false">Crypto</button></div></div><a class="active" href="#page-home" data-page="home">Home</a><a href="#page-offers" data-page="offers">Offers</a><a href="#page-best-sellers" data-page="best-sellers">Best Sellers</a><a href="#page-reviews" data-page="reviews">Reviews</a><a href="#page-favorites" data-page="favorites">Favorites</a><a href="#page-compare" data-page="compare">Compare Firms <span class="badge">New</span></a><a href="#page-payouts" data-page="payouts">Payouts</a></div></nav>
 </header>
 <main>
 <section class="market-empty-page" id="marketEmpty" aria-live="polite" hidden><div class="market-empty-card"><h1 id="marketEmptyTitle">Futures Prop Firms</h1><p id="marketEmptyMessage">Browse verified firm listings. Unavailable details are shown as an em dash.</p><div class="market-directory" id="marketDirectory"></div></div></section>
-<section class="hero" id="home" data-page-panel="home offers challenges best-sellers reviews favorites rules tutorials"><div class="shell"><h1 id="heroTitle">Compare the Best Prop Trading Firms of 2026</h1><p id="heroSubtitle">Trusted platform to compare prop trading firms using verified data and insights, including reviews, rules, and rankings.</p><div class="stats"><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.7 2.8 8.1 7 10 4.2-1.9 7-5.3 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-5"/></svg></span><span><b id="heroFirmCount">—</b><span id="heroFirmLabel">Firms Covered</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4h11a2 2 0 0 1 2 2v11"/><rect x="3" y="7" width="14" height="13" rx="2"/><path d="M7 11h6M7 15h4"/></svg></span><span><b id="heroChallengeCount">—</b><span id="heroChallengeLabel">Forex Challenges</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="m12 8 .9 1.8 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2L9.1 10l2-.3L12 8Z"/></svg></span><span><b id="heroOfferCount">—</b><span id="heroOfferLabel">Tracked Offers</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.4 3.8 5.4 3.8 9S14.5 18.6 12 21c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3Z"/></svg></span><span><b id="heroPayoutFirmCount">—</b><span id="heroPayoutLabel">Payout Firms</span></span></div></div></div></section>
-<section class="section" id="offers" data-page-panel="home challenges best-sellers reviews favorites rules payouts tutorials"><div class="shell feature-panels">
+<section class="hero" id="home" data-page-panel="home offers best-sellers reviews favorites rules tutorials"><div class="shell"><h1 id="heroTitle">Compare the Best Prop Trading Firms of 2026</h1><p id="heroSubtitle">Trusted platform to compare prop trading firms using verified data and insights, including reviews, rules, and rankings.</p><div class="stats"><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.7 2.8 8.1 7 10 4.2-1.9 7-5.3 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-5"/></svg></span><span><b id="heroFirmCount">—</b><span id="heroFirmLabel">Firms Covered</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span><span><b id="heroChallengeCount">90%</b><span id="heroChallengeLabel">Max Profit Split</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="m12 8 .9 1.8 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2L9.1 10l2-.3L12 8Z"/></svg></span><span><b id="heroOfferCount">—</b><span id="heroOfferLabel">Tracked Offers</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.4 3.8 5.4 3.8 9S14.5 18.6 12 21c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3Z"/></svg></span><span><b id="heroPayoutFirmCount">—</b><span id="heroPayoutLabel">Payout Firms</span></span></div></div></div></section>
+<section class="section" id="offers" data-page-panel="home best-sellers reviews favorites rules payouts tutorials"><div class="shell feature-panels">
   <article class="panel"><div class="panel-head"><h2>Exclusive Verified Forex Offers 🔥</h2><div class="arrows"><button class="arrow" data-offer-page="prev" aria-label="Previous offers">‹</button><button class="arrow" data-offer-page="next" aria-label="Next offers">›</button></div></div><div class="offer-grid" id="offerGrid"></div><div class="carousel-dots" id="offerDots" aria-label="Offer pages"></div></article>
   <article class="panel futures-panel" id="popularForex"><div class="panel-head"><h2>Most Popular Forex Prop Firms</h2></div><div class="futures-list" id="futuresList"></div></article>
 </div></section>
@@ -1195,30 +1373,16 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
     <article class="offers-top-panel"><div class="offers-top-title"><h2>Exclusive Verified Forex Offers 🔥</h2><div class="arrows"><button class="arrow" type="button" data-offer-page="prev" aria-label="Previous offers">‹</button><button class="arrow" type="button" data-offer-page="next" aria-label="Next offers">›</button></div></div><div class="offers-top-grid" id="offersTopGrid"></div><div class="carousel-dots offers-top-dots" id="offersTopDots" aria-label="Offer pages"></div></article>
     <article class="offers-top-panel futures"><div class="offers-top-title"><h2>Most Popular Forex Prop Firms</h2></div><div class="offers-future-list" id="offersFuturesList"></div></article>
   </div>
-  <nav class="offers-page-tabs" aria-label="Comparison views"><button type="button" data-page="compare">Firms</button><button type="button" data-page="challenges">Challenges</button><button class="active" type="button" data-page="offers" aria-current="page">Offers</button><button type="button" data-page="reviews">Reviews</button></nav>
+  <nav class="offers-page-tabs" aria-label="Comparison views"><button type="button" data-page="compare">Firms</button><button class="active" type="button" data-page="offers" aria-current="page">Offers</button><button type="button" data-page="reviews">Reviews</button></nav>
   <div class="offers-controls"><div class="offers-subtabs" role="tablist" aria-label="Offer types"><button type="button" data-offer-filter="extra">🔥 Extra Account Offers</button><button class="on" type="button" data-offer-filter="exclusive">◆ Exclusive Offers</button><button type="button" data-offer-filter="all">◈ All Offers</button></div><label class="offers-search-wrap"><span aria-hidden="true">⌕</span><input class="offers-search" id="offersSearch" type="search" placeholder="Search" aria-label="Search offers"></label></div>
   <div class="offers-list-head"><h2 id="offersListTitle">Exclusive Offers <span>—</span></h2><span class="offers-live">Offer snapshot · Sep 21, 2026</span></div>
   <div class="offer-list" id="offersOfferList"></div>
 </div></section>
 
-<section class="challenges-page" id="challengesPage" data-page-panel="challenges" hidden><div class="challenge-shell">
-  <nav class="challenge-tabs" aria-label="Comparison views"><button type="button" data-page="compare">Firms</button><button class="active" type="button" aria-current="page">Challenges</button><button type="button" data-page="offers">Offers</button><button type="button" data-page="reviews">Reviews</button></nav>
-  <div class="challenge-toolbar">
-    <div class="challenge-filters">
-      <select class="challenge-select" id="challengeAsset" aria-label="Filter challenges by asset"><option value="all">Assets: All</option><option value="FX" selected>Assets: FX</option></select>
-      <select class="challenge-select" id="challengeSize" aria-label="Filter challenges by account size"><option value="all">Size: All</option><option value="100K">Size: 100K</option></select>
-      <select class="challenge-select" id="challengeSteps" aria-label="Filter challenges by steps"><option value="all">Steps: All</option><option value="2 Steps">Steps: 2 Steps</option></select>
-    </div>
-    <div class="challenge-count">Challenges <b id="challengeCount">62</b></div>
-    <div class="challenge-tools"><label class="visually-hidden" for="challengeSort">Sort challenges</label><select class="challenge-select challenge-sort" id="challengeSort"><option value="popularity">Sort: Popularity</option><option value="price">Sort: Price</option><option value="rating">Sort: Rating</option></select><input class="challenge-search" id="challengeSearch" type="search" placeholder="Search firm" aria-label="Search challenges by firm"></div>
-  </div>
-  <div class="challenge-snapshot"><span class="challenge-method">◇ Verified comparison snapshot</span><span>FX · $100K · 2 Steps · captured <strong>September 21, 2026</strong></span></div>
-  <div class="challenge-table" id="challengeTable"><div class="challenge-head"><span>Firm / Rating</span><span>Account Size</span><span>Steps</span><span>Profit Target</span><span>Daily Loss</span><span>Max Loss</span><span>Max Loss Type</span><span>PT:DD</span><span>Profit Split</span><span>Payout Freq.</span><span>Popularity</span><span>Price</span><span>Buy</span></div><div id="challengeRows"></div></div>
-  <nav class="challenge-pagination" id="challengePagination" aria-label="Challenge pages"></nav>
-</div></section>
+<!-- challengesPage removed -->
 
 <section class="reviews-page" id="reviewsPage" data-page-panel="reviews" hidden><div class="reviews-shell">
-  <nav class="reviews-tabs" aria-label="Comparison views"><button type="button" data-page="compare">Firms</button><button type="button" data-page="challenges">Challenges</button><button type="button" data-page="offers">Offers</button><button class="active" type="button" data-page="reviews" aria-current="page">Reviews</button></nav>
+  <nav class="reviews-tabs" aria-label="Comparison views"><button type="button" data-page="compare">Firms</button><button type="button" data-page="offers">Offers</button><button class="active" type="button" data-page="reviews" aria-current="page">Reviews</button></nav>
   <div class="review-source-toggle" role="tablist" aria-label="Review source"><button class="on" type="button" data-review-source="trustpilot" role="tab" aria-selected="true">Trustpilot</button><button type="button" data-review-source="pfl" role="tab" aria-selected="false">PFL Reviews</button></div>
   <div class="reviews-filter-row" id="trustpilotFilters"><div class="reviews-filters"><button class="reviews-filter" type="button" id="reviewFilterButton">☷ Filter</button></div><div class="review-slider"><label for="reviewAmount">Amount of Reviews</label><output id="reviewAmountValue" for="reviewAmount">0+</output><input id="reviewAmount" type="range" min="0" max="80000" step="1000" value="0"><span class="review-slider-max">80K+</span></div><div class="reviews-filters"><button class="reviews-filter on" type="button">All Reviews</button></div><button class="post-review" type="button" data-post-review>Post a Review</button></div>
   <div class="reviews-title-row"><div><h2>Prop Firm Reviews <span class="review-total-number">492092</span></h2><p id="reviewTotals">69 firms ranked by Trustpilot TrustScore</p></div><div class="reviews-title-tools"><button class="review-method" type="button" data-review-methodology>◇ How We Rank Firms</button></div></div>
@@ -1228,7 +1392,7 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
 </div></section>
 
 <section class="section" id="rankings" data-page-panel="home best-sellers"><div class="shell">
-  <nav class="jump-tabs" aria-label="Comparison views"><button class="active" type="button" data-view="firms">Firms</button><button type="button" data-view="challenges">Challenges</button><button type="button" data-view="offers">Offers</button><button type="button" data-view="reviews">Reviews</button></nav>
+  <nav class="jump-tabs" aria-label="Comparison views"><button class="active" type="button" data-view="firms">Firms</button><button type="button" data-view="offers">Offers</button><button type="button" data-view="reviews">Reviews</button></nav>
   <div class="filter-row"><div class="filters"><span class="filter-btn" aria-hidden="true">☷ Filter</span><button class="filter-btn on" data-filter="popular">Popular</button><button class="filter-btn" id="favoriteFilter" data-filter="favorite">♡ Favorite <span id="favTotal">0</span>/1</button><button class="filter-btn" data-filter="new">New</button><button class="filter-btn" data-filter="all">All</button></div><div class="filter-meta"><button class="verify-pill" type="button" data-methodology>◇ How We Verify and Rank Firms</button><span class="snapshot">● Snapshot · Sep 21, 2026</span></div></div>
   <div class="rank-head" id="rankHead"><button data-sort="favorites">Popularity</button><button data-sort="rank">Firm · Rank</button><button data-sort="reviews">Reviews</button><span>Country</span><button data-sort="years">Years</button><span>Assets</span><span>Platforms</span><button data-sort="allocation">Max allocations</button><span>Promo</span><span>Actions</span></div>
   <div id="rankList"></div><a class="view-all" href="#rankings" id="viewAll">View All</a>
@@ -1240,18 +1404,6 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   <div class="info-grid"><section class="info-panel"><h2>Comparison methodology</h2><p>Trustpilot values use the site’s external rating snapshot. Challenge terms use the lowest-priced tracked 100K, two-step entry for each selected firm. LENZ offers come from the current offer catalog. Payout figures use matching firm rows from the embedded payout snapshot; unavailable values remain an em dash.</p></section><section class="info-panel"><h2>Before choosing a firm</h2><ul><li>Confirm the current rules and eligibility with the firm.</li><li>Compare drawdown type as well as the headline price.</li><li>Treat payout volume as activity data, not a quality guarantee.</li></ul></section></div>
   <section class="page-faq"><h2>Compare Firms FAQ</h2><details><summary>Which challenge does the comparison use?</summary><p>It uses the lowest-priced 100K, two-step challenge currently present in the site’s challenge dataset for that firm.</p></details><details><summary>Why does a field show an em dash?</summary><p>The site does not have a verified value for that firm and field. Missing values are never estimated.</p></details><details><summary>Are payout totals a guarantee of future payouts?</summary><p>No. They show tracked historical activity for the displayed snapshot and do not predict future results.</p></details><details><summary>Can I compare more than four firms?</summary><p>You can compare four at a time. Change any selector to review another firm without reloading the page.</p></details></section>
   <section class="static-subscribe"><span>Research updates</span><h2>Subscribe for new Forex comparison updates</h2><p>Email subscription delivery is not available on this page yet.</p><span class="subscribe-state" aria-disabled="true">Subscriptions unavailable</span></section>
-</div></section>
-
-<section class="spreads-page" id="spreadsPage" data-page-panel="spreads" hidden><div class="spreads-shell">
-  <header class="page-intro"><h1>Best Forex Prop Firm Spreads</h1><p>Compare the firms and platforms covered by Prop Firm Lenz. Compare verified raw spreads and typical execution pricing across leading prop firms and trading platforms (cTrader, MT5, DXtrade).</p></header>
-  <div class="spreads-toolbar"><div class="spreads-filters"><span class="spread-filter">Filter</span><span class="spread-filter on">Forex</span></div><input class="spreads-search" id="spreadsSearch" type="search" placeholder="Search firms" aria-label="Search spread firms"></div>
-  <p class="spreads-count">Forex firms <b id="spreadsCount">—</b></p>
-  <div class="spreads-table"><div class="spreads-head"><span>Rank</span><span>Firm</span><span>Avg. Spread</span><span>EUR/USD</span><span>GBP/USD</span><span>USD/JPY</span><span>XAU/USD</span><span>US30</span><span>NAS100</span><span>Platforms</span><span>Trustpilot</span><span>Visit</span></div><div id="spreadsRows"></div></div>
-  <p class="spread-method-note"><strong>Spread status:</strong> not tracked yet. No spread figure on this page is copied, inferred, or estimated.</p>
-  <div class="info-grid"><section class="info-panel"><h2>How to read spread data</h2><p>A spread is the difference between the bid and ask price. It can vary by instrument, platform, account type, liquidity, and market conditions. Comparable measurements require a consistent observation window and account setup.</p></section><section class="info-panel"><h2>Methodology</h2><p>Firm names, logos, platforms, and Trustpilot values come from the site’s existing datasets. Spread cells remain “Not tracked yet” until a verified, consistently measured dataset is available. Rank follows the directory order and is not a spread-performance ranking.</p></section></div>
-  <section class="additional-info"><div class="review-info-icon" aria-hidden="true">i</div><div><h2>Additional Information</h2><p>Low advertised spreads do not describe total trading cost on their own. Commissions, slippage, execution, instrument hours, and each firm’s current rules can materially change the effective cost.</p></div></section>
-  <section class="page-faq"><h2>Spreads FAQ</h2><details><summary>Why are all spread cells blank?</summary><p>Prop Firm Lenz does not yet have a verified spread dataset. The em dash is an honest unavailable state, not a zero spread.</p></details><details><summary>Are the platform listings verified?</summary><p>They are rendered from the platform fields already stored for each Forex firm in the site’s directory dataset.</p></details><details><summary>Can spreads change during the day?</summary><p>Yes. Spreads can widen around news, session changes, rollover, and lower-liquidity periods.</p></details><details><summary>Does the lowest spread mean the best firm?</summary><p>No. Compare total cost, challenge rules, drawdown, platform access, reviews, and payout history together.</p></details></section>
-  <section class="static-subscribe"><span>Research updates</span><h2>Subscribe for new Forex spread research</h2><p>Email subscription delivery is not available on this page yet.</p><span class="subscribe-state" aria-disabled="true">Subscriptions unavailable</span></section>
 </div></section>
 
 <section class="payout-hub" id="payouts" data-page-panel="payouts" hidden><div class="shell payout-shell">
@@ -1313,50 +1465,46 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
     </a>
   </article>
 
-  <!-- 02 Challenge Comparison -->
-  <article class="resource resource-card-3d" id="resCardChallenges">
+  <!-- 02 Verified Deals & Promos -->
+  <article class="resource resource-card-3d" id="resCardOffers">
     <div class="res-card-glow"></div>
     <div class="res-card-top">
       <div class="res-badge-3d">
         <span class="num">02</span>
-        <span class="label">Evaluation Engine</span>
+        <span class="label">Discount Vault</span>
       </div>
       <div class="res-visual-3d" aria-hidden="true">
         <svg class="res-svg-3d" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="resGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#396DFA"/>
-              <stop offset="100%" stop-color="#1EE7FC"/>
+              <stop offset="0%" stop-color="#1EE7FC"/>
+              <stop offset="50%" stop-color="#396DFA"/>
+              <stop offset="100%" stop-color="#7021FC"/>
             </linearGradient>
             <filter id="resGlow2" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="3" result="blur"/>
               <feComposite in="SourceGraphic" in2="blur" operator="over"/>
             </filter>
           </defs>
-          <polygon points="20,44 36,36 36,60 20,68" fill="rgba(57,109,250,0.25)" stroke="#396DFA" stroke-width="1.2"/>
-          <polygon points="36,36 52,44 52,68 36,60" fill="rgba(30,231,252,0.18)" stroke="#1EE7FC" stroke-width="1.2"/>
-          <polygon points="20,44 36,36 52,44 36,52" fill="rgba(30,231,252,0.3)" stroke="#1EE7FC" stroke-width="1.2"/>
-          <polygon points="48,28 64,20 64,52 48,60" fill="rgba(112,33,252,0.3)" stroke="#7021FC" stroke-width="1.2"/>
-          <polygon points="64,20 80,28 80,60 64,52" fill="rgba(57,109,250,0.25)" stroke="#396DFA" stroke-width="1.2"/>
-          <polygon points="48,28 64,20 80,28 64,36" fill="rgba(57,109,250,0.4)" stroke="#396DFA" stroke-width="1.2"/>
-          <path d="M 28 42 L 50 24 L 72 12" stroke="url(#resGrad2)" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 2"/>
-          <circle cx="72" cy="12" r="5" fill="#1EE7FC" filter="url(#resGlow2)"/>
-          <circle cx="72" cy="12" r="2" fill="#fff"/>
-          <polygon points="72,5 77,10 72,15 67,10" fill="rgba(30,231,252,0.4)"/>
+          <rect x="22" y="24" width="56" height="34" rx="8" fill="rgba(30,231,252,0.12)" stroke="url(#resGrad2)" stroke-width="1.5"/>
+          <path d="M36 24 V18 A14 14 0 0 1 64 18 V24" fill="none" stroke="#1EE7FC" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="50" cy="41" r="5" fill="#1EE7FC" filter="url(#resGlow2)"/>
+          <circle cx="50" cy="41" r="2" fill="#fff"/>
+          <path d="M50 46 V51" stroke="#1EE7FC" stroke-width="1.8" stroke-linecap="round"/>
         </svg>
       </div>
     </div>
     <div class="res-card-body">
-      <h3>Challenge Comparison</h3>
-      <p id="resourceChallengeDesc">Compare the 62 tracked Forex challenge records by account size, steps, targets, loss limits, payout frequency, and price.</p>
+      <h3>Exclusive Deals &amp; Promos</h3>
+      <p id="resourceChallengeDesc">Unlock verified discount codes up to 30% OFF and fee cashback with promo code LENZ across top-rated prop firms.</p>
       <div class="res-chips">
-        <span class="res-chip">62 Challenges</span>
-        <span class="res-chip">1-Step &amp; 2-Step</span>
-        <span class="res-chip">Drawdown Limits</span>
+        <span class="res-chip">Up to 30% OFF</span>
+        <span class="res-chip">Code: LENZ</span>
+        <span class="res-chip">Verified Deals</span>
       </div>
     </div>
-    <a class="res-btn-3d" href="#page-challenges" data-page="challenges">
-      <span>Compare Challenges</span>
+    <a class="res-btn-3d" href="#page-offers" data-page="offers">
+      <span>Browse Exclusive Offers</span>
       <span class="arrow">→</span>
     </a>
   </article>
@@ -1413,8 +1561,8 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
 <section class="section" hidden><div class="shell"><div class="newsletter"><span class="kicker">RESEARCH UPDATES</span><h2>Subscribe for new Forex comparison updates</h2><form class="subscribe" id="subscribe"><input type="email" name="email" placeholder="Email address" aria-label="Email address" required><button type="submit">Subscribe</button></form><p class="form-note" aria-live="polite"></p></div></div></section>
 </main>
 <footer id="footer"><div class="shell"><a class="brand-lock footer-brand" href="#page-home" data-page="home"><img src="assets/logo.png" alt=""><span>Prop Firm Lenz</span></a><div class="footer-main">
-  <div class="footer-col"><h3>EXPLORE</h3><a href="#page-home" data-page="home">Home</a><a href="#page-offers" data-page="offers">Offers</a><a href="#page-challenges" data-page="challenges">Challenges</a><a href="#page-best-sellers" data-page="best-sellers">Best Sellers</a></div>
-  <div class="footer-col"><h3>RESEARCH</h3><a href="#page-reviews" data-page="reviews">Reviews</a><a href="#page-favorites" data-page="favorites">Favorites</a><a href="#page-compare" data-page="compare">Compare Firms</a><a href="#page-spreads" data-page="spreads">Spreads</a></div>
+  <div class="footer-col"><h3>EXPLORE</h3><a href="#page-home" data-page="home">Home</a><a href="#page-offers" data-page="offers">Offers</a><a href="#page-best-sellers" data-page="best-sellers">Best Sellers</a></div>
+  <div class="footer-col"><h3>RESEARCH</h3><a href="#page-reviews" data-page="reviews">Reviews</a><a href="#page-favorites" data-page="favorites">Favorites</a><a href="#page-compare" data-page="compare">Compare Firms</a></div>
   <div class="footer-col"><h3>PAYOUT DATA</h3><a href="#page-payouts" data-page="payouts">Overview</a><a href="#page-payouts" data-payout-view="statistics">Statistics</a><a href="#page-payouts" data-payout-view="weekly">Weekly</a><a href="#page-payouts" data-payout-view="monthly">Monthly</a></div>
   <div class="footer-col"><h3>PAYOUT RESEARCH</h3><a href="#page-payouts" data-payout-view="records">Records</a><a href="#page-payouts" data-payout-view="methodology">Methodology</a><a href="#page-payouts" data-payout-view="about">About</a></div>
 </div>
@@ -3537,9 +3685,13 @@ function updateMarketCopy(){
   const spreadSubscribe=document.querySelector('#spreadsPage .static-subscribe h2');if(spreadSubscribe)spreadSubscribe.textContent=`Subscribe for new ${label} spread research`;
   const payoutTitle=document.querySelector('.payout-hub-head h1');if(payoutTitle)payoutTitle.textContent=`${label} Prop Firm Payouts Tracker`;
   const payoutIntro=document.querySelector('.payout-hub-head p');if(payoutIntro)payoutIntro.textContent=`Compare payout times, payout totals, and payout history across matched ${label} firms. View firm-level payout trends and recent payouts.`;
-  const resourceChallenge=document.querySelector('#resourceChallengeDesc')||document.querySelector('#resources .resource:nth-child(2) p');if(resourceChallenge){const count=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)).length;resourceChallenge.textContent=count?`Compare the ${count} tracked ${label} challenge records by account size, steps, targets, loss limits, payout frequency, and price.`:`Browse ${label} firms in the same challenge comparison layout. Fields without verified challenge data are shown as unavailable.`}
+  const resourceChallenge=document.querySelector('#resourceChallengeDesc')||document.querySelector('#resources .resource:nth-child(2) p');if(resourceChallenge){resourceChallenge.textContent=`Unlock verified ${label} discount codes up to 30% OFF and fee cashback with promo code LENZ across top-rated prop firms.`}
   const resourcePayout=document.querySelector('#resourcePayoutDesc')||document.querySelector('#resources .resource:nth-child(3) p');if(resourcePayout){resourcePayout.textContent=`Review tracked on-chain & Rise payout totals, proof records, and processing-time metrics across verified ${label} firms.`}
-  document.querySelector('#heroFirmCount').textContent=categoryFirms.length.toLocaleString();document.querySelector('#heroChallengeLabel').textContent=`${label} Challenges`;document.querySelector('#heroOfferLabel').textContent='Tracked Offers';document.querySelector('#faqTitle').textContent=`Homepage FAQ (${label})`
+  const heroFirmCount=document.querySelector('#heroFirmCount');if(heroFirmCount)heroFirmCount.textContent=categoryFirms.length.toLocaleString();
+  const heroChallengeCount=document.querySelector('#heroChallengeCount');if(heroChallengeCount)heroChallengeCount.textContent='90%';
+  const heroChallengeLabel=document.querySelector('#heroChallengeLabel');if(heroChallengeLabel)heroChallengeLabel.textContent='Max Profit Split';
+  const heroOfferLabel=document.querySelector('#heroOfferLabel');if(heroOfferLabel)heroOfferLabel.textContent='Tracked Offers';
+  const faqTitle=document.querySelector('#faqTitle');if(faqTitle)faqTitle.textContent=`Homepage FAQ (${label})`;
 }
 function showMarketState(scroll=true){updateMarketCopy();openPage(currentPage,{replace:true,scroll})}
 function selectMarket(next,scroll=true){if(!['forex','futures','crypto'].includes(next))return;market=next;view='firms';query='';currentFilter='all';sortKey='rank';sortDir='asc';offerPage=0;challengePage=1;payoutPage=1;payoutQuery='';compareSelections=sourceFirms().slice(0,3).map(f=>f.name).concat(['']).slice(0,4);document.querySelectorAll('#globalSearch,#mobileSearch').forEach(input=>{input.value=''});document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',b.dataset.filter==='all'));renderOffers();renderFutures();renderOfferList();renderMain();renderChallenges();renderReviews();renderFavoriteFirms();renderCompare();renderSpreads();showMarketState(scroll)}
@@ -3574,7 +3726,7 @@ function challengeRatingMarkup(x){const t=trustpilotFor(x.firm);if(!t||t.trustpi
 function challengeRow(x,index){const link=challengeBuyLink(x.firm),unavailable=x._unavailable===true;return `<article class="challenge-row"><div class="challenge-firm" data-label="Firm / Rating">${logo(x.firm)}<div><strong>${safe(x.firm)}</strong>${challengeRatingMarkup(x)}</div></div><span class="challenge-value" data-label="Account Size">${safe(challengeBlank(x.account_size))}</span><span class="challenge-value" data-label="Steps">${safe(challengeBlank(x.steps))}</span><span class="challenge-value" data-label="Profit Target">${safe(challengeBlank(x.profit_target))}</span><span class="challenge-value" data-label="Daily Loss">${safe(challengeBlank(x.daily_loss))}</span><span class="challenge-value" data-label="Max Loss">${safe(challengeBlank(x.max_loss))}</span><span class="challenge-muted" data-label="Max Loss Type">${safe(challengeBlank(x.max_loss_type))}</span><span class="challenge-value" data-label="PT:DD">${safe(challengeBlank(x.pt_dd))}</span><span class="challenge-value" data-label="Profit Split">${safe(challengeBlank(x.profit_split))}</span><span class="challenge-muted" data-label="Payout Frequency" title="${safe(challengeBlank(x.payout_freq))}">${safe(challengeBlank(x.payout_freq))}</span><span class="challenge-pop" data-label="Popularity">${unavailable?'—':`◆ ${Number(x.popularity).toLocaleString()}`}</span><span class="challenge-price" data-label="Price"><b>${challengeMoney(x,x.price)}</b>${x.price_original!=null?`<del>${challengeMoney(x,x.price_original)}</del>`:''}</span><button class="challenge-buy" type="button" data-challenge-buy data-buy-link="${safe(link)}" data-challenge-row="${index}" ${unavailable&&!link?'disabled aria-label="Challenge unavailable"':''}>${unavailable&&!link?'—':'Buy'}</button><div class="challenge-terms" hidden>${unavailable?'Verified challenge terms are unavailable for this firm.':'Use code <strong>LENZ</strong>. Check the firm’s official terms for eligibility and current availability before buying.'}</div></article>`}
 function challengeFiltered(){const categoryNames=new Set(categoryTrustpilotFirms().map(f=>f.name));let list=CHALLENGES_DATA.filter(x=>categoryNames.has(x.firm));if(!list.length)list=categoryTrustpilotFirms().map(f=>({firm:f.name,account_size:null,steps:null,profit_target:null,daily_loss:null,max_loss:null,max_loss_type:null,pt_dd:null,profit_split:null,payout_freq:null,popularity:0,price:null,price_original:null,price_currency:null,_unavailable:true}));list=list.filter(x=>x.firm.toLowerCase().includes(challengeQuery));if(challengeAsset!=='all'&&market==='forex')list=list.filter(()=>challengeAsset==='FX');if(challengeSize!=='all')list=list.filter(x=>x.account_size===challengeSize);if(challengeSteps!=='all')list=list.filter(x=>x.steps===challengeSteps);return [...list].sort((a,b)=>{if(challengeSort==='price')return Number(a.price??Infinity)-Number(b.price??Infinity);if(challengeSort==='rating')return Number(b.rating??-1)-Number(a.rating??-1)||Number(b.reviews_count??-1)-Number(a.reviews_count??-1);return Number(b.popularity||0)-Number(a.popularity||0)||a.firm.localeCompare(b.firm)})}
 function challengePageButtons(totalPages){if(totalPages<=1)return [];const values=totalPages<=5?Array.from({length:totalPages},(_,i)=>i+1):challengePage<=2?[1,2,'…',totalPages]:challengePage>=totalPages-1?[1,'…',totalPages-1,totalPages]:[1,'…',challengePage-1,challengePage,challengePage+1,'…',totalPages];return values}
-function renderChallenges(){const all=challengeFiltered(),pages=Math.max(1,Math.ceil(all.length/10));challengePage=Math.min(challengePage,pages);document.querySelector('#challengeCount').textContent=all.length;const snap=document.querySelector('.challenge-snapshot span:last-child');if(snap)snap.innerHTML=`${marketLabel()} · verified fields only · captured <strong>September 21, 2026</strong>`;const slice=all.slice((challengePage-1)*10,challengePage*10);document.querySelector('#challengeRows').innerHTML=slice.length?slice.map((x,i)=>challengeRow(x,(challengePage-1)*10+i)).join(''):'<div class="challenge-empty">No challenges match these filters.</div>';const items=challengePageButtons(pages);document.querySelector('#challengePagination').innerHTML=`<button class="page-word" type="button" data-challenge-nav="prev" ${challengePage===1?'disabled':''}>Previous</button>${items.map(x=>x==='…'?'<span aria-hidden="true">…</span>':`<button class="${x===challengePage?'current':''}" type="button" data-challenge-page="${x}" ${x===challengePage?'aria-current="page"':''}>${x}</button>`).join('')}<button class="page-word" type="button" data-challenge-nav="next" ${challengePage===pages?'disabled':''}>Next</button>`}
+function renderChallenges(){const rowsEl=document.querySelector('#challengeRows');if(!rowsEl)return;const all=challengeFiltered(),pages=Math.max(1,Math.ceil(all.length/10));challengePage=Math.min(challengePage,pages);const countEl=document.querySelector('#challengeCount');if(countEl)countEl.textContent=all.length;const snap=document.querySelector('.challenge-snapshot span:last-child');if(snap)snap.innerHTML=`${marketLabel()} · verified fields only · captured <strong>September 21, 2026</strong>`;const slice=all.slice((challengePage-1)*10,challengePage*10);rowsEl.innerHTML=slice.length?slice.map((x,i)=>challengeRow(x,(challengePage-1)*10+i)).join(''):'<div class="challenge-empty">No challenges match these filters.</div>';const pagEl=document.querySelector('#challengePagination');if(pagEl){const items=challengePageButtons(pages);pagEl.innerHTML=`<button class="page-word" type="button" data-challenge-nav="prev" ${challengePage===1?'disabled':''}>Previous</button>${items.map(x=>x==='…'?'<span aria-hidden="true">…</span>':`<button class="${x===challengePage?'current':''}" type="button" data-challenge-page="${x}" ${x===challengePage?'aria-current="page"':''}>${x}</button>`).join('')}<button class="page-word" type="button" data-challenge-nav="next" ${challengePage===pages?'disabled':''}>Next</button>`}}
 
 let payoutView='payouts',payoutMode='payouts',payoutQuery='',payoutSort='total',payoutSortDir='desc',payoutTimeframe='latest_24h',payoutCategory='forex',payoutPage=1,payoutDetailFirm='',payoutDetailTimeframe='7d',payoutDetailPage=1;
 const moneyNumber=value=>Number(String(value??0).replace(/[^0-9.-]/g,''))||0;
@@ -3720,7 +3872,7 @@ let compareSelections=['FundedNext','FundingPips','Alpha Capital',''];
 function compareChallenge(name){return CHALLENGES_DATA.filter(x=>x.firm===name&&x.account_size==='100K'&&x.steps==='2 Steps').sort((a,b)=>Number(a.price)-Number(b.price)||Number(b.popularity)-Number(a.popularity))[0]||null}
 function comparePayout(name,kind){const source=kind==='latest'?(PAYOUT_DATA.latest_24h||[]):(PAYOUT_DATA.monthly?.rows||[]);const row=source.find(x=>payoutCanonicalName(x.firm)===name);if(!row)return '—';return kind==='latest'?(row.total||'—'):(row.cells?.[2]||'—')}
 function compareCell(value,detail=''){return `<div class="compare-value"><b>${value==null||value===''?'—':safe(value)}</b>${detail?`<span>${safe(detail)}</span>`:''}</div>`}
-function renderCompare(){const marketFirms=sourceFirms(),choices=marketFirms.map(f=>f.name).sort((a,b)=>a.localeCompare(b));document.querySelector('#compareFirmCount').textContent=choices.length;document.querySelector('#compareChallengeCount').textContent=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)).length;const picker=document.querySelector('#comparePicker');picker.innerHTML=compareSelections.map((selected,index)=>`<label>Firm ${index+1}<select data-compare-slot="${index}"><option value="">Add a firm</option>${choices.map(name=>`<option value="${safe(name)}" ${name===selected?'selected':''} ${compareSelections.includes(name)&&name!==selected?'disabled':''}>${safe(name)}</option>`).join('')}</select></label>`).join('');const selected=compareSelections.filter(Boolean);const table=document.querySelector('#compareTable');if(!selected.length){table.innerHTML=`<div class="compare-empty">Choose at least one ${marketLabel()} firm to begin the comparison.</div>`;return}const head=`<div class="compare-row"><div class="compare-label">Firm</div>${selected.map(name=>`<div class="compare-firm-head">${logo(name)}<div><strong>${safe(name)}</strong><span class="rating">${marketLabel()} comparison</span></div></div>`).join('')}</div>`;const rows=[['Trustpilot rating',name=>{const f=TRUSTPILOT_FIRMS.find(x=>x.name===name);return compareCell(f?.trustpilotRating==null?'—':`${f.trustpilotRating.toFixed(1)} / 5`,f?.trustpilotReviews==null?'—':`${Number(f.trustpilotReviews).toLocaleString()} reviews`)}],['Challenge price',name=>{const x=compareChallenge(name);return compareCell(x?challengeMoney(x,x.price):'—',x?'Lowest tracked 100K · 2 Steps':'Not tracked yet')}],['Profit target',name=>{const x=compareChallenge(name);return compareCell(x?.profit_target||'—')}],['Daily / max loss',name=>{const x=compareChallenge(name);return compareCell(x?`${x.daily_loss||'—'} / ${x.max_loss||'—'}`:'—',x?.max_loss_type||'Not tracked yet')}],['Profit split',name=>{const x=compareChallenge(name);return compareCell(x?.profit_split||'—')}],['Payout frequency',name=>{const x=compareChallenge(name);return compareCell(x?.payout_freq||'—')}],['Platforms',name=>{const f=marketFirms.find(x=>x.name===name);return compareCell(f?.platforms?.join(', ')||'—')}],['LENZ offer',name=>{const x=OFFER_CATALOG.find(o=>o.name===name);return x?`<div class="compare-value"><b>${safe(x.discount)}</b><span class="compare-code">LENZ</span></div>`:compareCell('—','Not tracked yet')}],['Latest 24h payouts',name=>compareCell(comparePayout(name,'latest'))],['Month-to-date payouts',name=>compareCell(comparePayout(name,'monthly'))]];table.style.setProperty('--compare-cols',selected.length);table.innerHTML=head+rows.map(([label,fn])=>`<div class="compare-row"><div class="compare-label">${label}</div>${selected.map(name=>fn(name)).join('')}</div>`).join('')}
+function renderCompare(){const marketFirms=sourceFirms(),choices=marketFirms.map(f=>f.name).sort((a,b)=>a.localeCompare(b));const cfc=document.querySelector('#compareFirmCount');if(cfc)cfc.textContent=choices.length;const ccc=document.querySelector('#compareChallengeCount');if(ccc)ccc.textContent=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)).length;const picker=document.querySelector('#comparePicker');if(!picker)return;picker.innerHTML=compareSelections.map((selected,index)=>`<label>Firm ${index+1}<select data-compare-slot="${index}"><option value="">Add a firm</option>${choices.map(name=>`<option value="${safe(name)}" ${name===selected?'selected':''} ${compareSelections.includes(name)&&name!==selected?'disabled':''}>${safe(name)}</option>`).join('')}</select></label>`).join('');const selected=compareSelections.filter(Boolean);const table=document.querySelector('#compareTable');if(!table)return;if(!selected.length){table.innerHTML=`<div class="compare-empty">Choose at least one ${marketLabel()} firm to begin the comparison.</div>`;return}const head=`<div class="compare-row"><div class="compare-label">Firm</div>${selected.map(name=>`<div class="compare-firm-head">${logo(name)}<div><strong>${safe(name)}</strong><span class="rating">${marketLabel()} comparison</span></div></div>`).join('')}</div>`;const rows=[['Trustpilot rating',name=>{const f=TRUSTPILOT_FIRMS.find(x=>x.name===name);return compareCell(f?.trustpilotRating==null?'—':`${f.trustpilotRating.toFixed(1)} / 5`,f?.trustpilotReviews==null?'—':`${Number(f.trustpilotReviews).toLocaleString()} reviews`)}],['Challenge price',name=>{const x=compareChallenge(name);return compareCell(x?challengeMoney(x,x.price):'—',x?'Lowest tracked 100K · 2 Steps':'Not tracked yet')}],['Profit target',name=>{const x=compareChallenge(name);return compareCell(x?.profit_target||'—')}],['Daily / max loss',name=>{const x=compareChallenge(name);return compareCell(x?`${x.daily_loss||'—'} / ${x.max_loss||'—'}`:'—',x?.max_loss_type||'Not tracked yet')}],['Profit split',name=>{const x=compareChallenge(name);return compareCell(x?.profit_split||'—')}],['Payout frequency',name=>{const x=compareChallenge(name);return compareCell(x?.payout_freq||'—')}],['Platforms',name=>{const f=marketFirms.find(x=>x.name===name);return compareCell(f?.platforms?.join(', ')||'—')}],['LENZ offer',name=>{const x=OFFER_CATALOG.find(o=>o.name===name);return x?`<div class="compare-value"><b>${safe(x.discount)}</b><span class="compare-code">LENZ</span></div>`:compareCell('—','Not tracked yet')}],['Latest 24h payouts',name=>compareCell(comparePayout(name,'latest'))],['Month-to-date payouts',name=>compareCell(comparePayout(name,'monthly'))]];table.style.setProperty('--compare-cols',selected.length);table.innerHTML=head+rows.map(([label,fn])=>`<div class="compare-row"><div class="compare-label">${label}</div>${selected.map(name=>fn(name)).join('')}</div>`).join('')}
 function renderSpreads(){
   const SPREADS_MAP = {
     'FundedNext': { avg: '0.2 pips', eurusd: '0.1', gbpusd: '0.3', usdjpy: '0.2', xauusd: '1.2', us30: '1.8', nas100: '1.2' },
@@ -3754,10 +3906,11 @@ function renderSpreads(){
     'The Trading Pit': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.6', us30: '2.1', nas100: '1.5' },
     'Trade The Pool': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.5', us30: '1.9', nas100: '1.4' }
   };
+  const spreadsRows=document.querySelector('#spreadsRows');if(!spreadsRows)return;
   const q=(document.querySelector('#spreadsSearch')?.value||'').trim().toLowerCase();
   const rows=sourceFirms().filter(f=>f.name.toLowerCase().includes(q));
-  document.querySelector('#spreadsCount').textContent=rows.length;
-  document.querySelector('#spreadsRows').innerHTML=rows.length?rows.map(f=>{
+  const countEl=document.querySelector('#spreadsCount');if(countEl)countEl.textContent=rows.length;
+  spreadsRows.innerHTML=rows.length?rows.map(f=>{
     const t=TRUSTPILOT_FIRMS.find(x=>x.name===f.name),
           score=t?.trustpilotRating,
           offer=OFFER_CATALOG.find(x=>x.name===f.name),
@@ -3788,27 +3941,27 @@ function renderSpreads(){
   }).join(''):`<div class="spreads-empty">No ${marketLabel()} firms match your search.</div>`;
 }
 
-const PAGE_NAMES=new Set(['home','offers','challenges','best-sellers','reviews','favorites','rules','compare','spreads','payouts','payout-detail','tutorials','firm-profile']);
-const PAGE_TARGETS={home:'#home',offers:'#offersPage',challenges:'#challengesPage','best-sellers':'#rankings',reviews:'#home',favorites:'#favoritesPage',rules:'#resources',compare:'#comparePage',spreads:'#spreadsPage',payouts:'#payouts','payout-detail':'#payoutDetailPage',tutorials:'#videos','firm-profile':'#firmProfilePage'};
+const PAGE_NAMES=new Set(['home','offers','best-sellers','reviews','favorites','rules','compare','payouts','payout-detail','tutorials','firm-profile']);
+const PAGE_TARGETS={home:'#home',offers:'#offersPage','best-sellers':'#rankings',reviews:'#home',favorites:'#favoritesPage',rules:'#resources',compare:'#comparePage',payouts:'#payouts','payout-detail':'#payoutDetailPage',tutorials:'#videos','firm-profile':'#firmProfilePage'};
 const LEGACY_ROUTES={home:'home',offers:'offers',rankings:'compare',faq:'reviews',resources:'rules',payouts:'payouts',videos:'tutorials',futures:'offers'};
 let currentPage='home',routeHistoryIndex=Number(history.state?.pflRouteIndex)||0;
 function configurePage(page){
   const reviewPage=page==='reviews',label=marketLabel(),categoryFirms=categoryTrustpilotFirms(),categoryChallenges=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)),reviewVolume=categoryFirms.reduce((sum,f)=>sum+(Number(f.trustpilotReviews)||0),0),payoutFirmCount=new Set([...(PAYOUT_DATA.latest_24h||[]),...(PAYOUT_DATA.weekly?.rows||[]),...(PAYOUT_DATA.monthly?.rows||[])].filter(x=>firmInMarket(payoutCanonicalName(x.firm))).map(x=>payoutCanonicalName(x.firm))).size;
   updateMarketCopy();
-  document.querySelector('#heroTitle').textContent=`Compare the Best ${label} Prop Trading Firms of 2026`;
-  document.querySelector('#heroSubtitle').textContent=reviewPage?`Compare ${label} prop firms using real Trustpilot reviews and PFL community reviews.`:`Trusted platform to compare ${label} prop trading firms using verified data and insights, including reviews, rules, and rankings.`;
-  document.querySelector('#heroFirmCount').textContent=categoryFirms.length.toLocaleString();
-  document.querySelector('#heroFirmLabel').textContent=reviewPage?'Verified Prop Firms':'Firms Covered';
-  document.querySelector('#heroChallengeCount').textContent=categoryChallenges.length.toLocaleString();
-  document.querySelector('#heroChallengeLabel').textContent=reviewPage?'Tracked Challenges':`${label} Challenges`;
-  document.querySelector('#heroOfferCount').textContent=reviewPage?reviewVolume.toLocaleString():forexOffers().length.toLocaleString();
-  document.querySelector('#heroOfferLabel').textContent=reviewPage?'Trustpilot Reviews':'Tracked Offers';
-  document.querySelector('#heroPayoutFirmCount').textContent=payoutFirmCount.toLocaleString();
-  document.querySelector('#heroPayoutLabel').textContent=reviewPage?'Payout Firms':'Payout Firms';
+  const heroTitle=document.querySelector('#heroTitle');if(heroTitle)heroTitle.textContent=`Compare the Best ${label} Prop Trading Firms of 2026`;
+  const heroSubtitle=document.querySelector('#heroSubtitle');if(heroSubtitle)heroSubtitle.textContent=reviewPage?`Compare ${label} prop firms using real Trustpilot reviews and PFL community reviews.`:`Trusted platform to compare ${label} prop trading firms using verified data and insights, including reviews, rules, and rankings.`;
+  const heroFirmCount=document.querySelector('#heroFirmCount');if(heroFirmCount)heroFirmCount.textContent=categoryFirms.length.toLocaleString();
+  const heroFirmLabel=document.querySelector('#heroFirmLabel');if(heroFirmLabel)heroFirmLabel.textContent=reviewPage?'Verified Prop Firms':'Firms Covered';
+  const heroChallengeCount=document.querySelector('#heroChallengeCount');if(heroChallengeCount)heroChallengeCount.textContent='90%';
+  const heroChallengeLabel=document.querySelector('#heroChallengeLabel');if(heroChallengeLabel)heroChallengeLabel.textContent='Max Profit Split';
+  const heroOfferCount=document.querySelector('#heroOfferCount');if(heroOfferCount)heroOfferCount.textContent=reviewPage?reviewVolume.toLocaleString():forexOffers().length.toLocaleString();
+  const heroOfferLabel=document.querySelector('#heroOfferLabel');if(heroOfferLabel)heroOfferLabel.textContent=reviewPage?'Trustpilot Reviews':'Tracked Offers';
+  const heroPayoutFirmCount=document.querySelector('#heroPayoutFirmCount');if(heroPayoutFirmCount)heroPayoutFirmCount.textContent=payoutFirmCount.toLocaleString();
+  const heroPayoutLabel=document.querySelector('#heroPayoutLabel');if(heroPayoutLabel)heroPayoutLabel.textContent='Payout Firms';
   if(page==='challenges'){challengePage=1;renderChallenges()}
   else if(page==='best-sellers'){view='firms';currentFilter='popular';sortKey='favorites';sortDir='desc'}
-  else if(page==='reviews'){reviewMinimum=0;reviewSource='trustpilot';document.querySelector('#reviewAmount').value='0';document.querySelector('#reviewAmountValue').textContent='0+';renderReviews()}
-  else if(page==='favorites'){favoriteQuery='';document.querySelector('#favoriteSearch').value='';renderFavoriteFirms()}
+  else if(page==='reviews'){reviewMinimum=0;reviewSource='trustpilot';const ra=document.querySelector('#reviewAmount');if(ra)ra.value='0';const rav=document.querySelector('#reviewAmountValue');if(rav)rav.textContent='0+';renderReviews()}
+  else if(page==='favorites'){favoriteQuery='';const fs=document.querySelector('#favoriteSearch');if(fs)fs.value='';renderFavoriteFirms()}
   else if(page==='compare'){renderCompare()}
   else if(page==='spreads'){renderSpreads()}
   document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',b.dataset.filter===currentFilter));
@@ -3845,23 +3998,24 @@ document.addEventListener('click',e=>{const profileName=e.target.closest('[data-
 document.addEventListener('keydown',e=>{const profileName=e.target.closest?.('[data-firm-profile]');if(profileName&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openFirmProfile(profileName.dataset.firmProfile);return}if(e.key==='Escape')closeModals()});
 window.addEventListener('hashchange',()=>openPage(pageFromHash(),{replace:true,scroll:true}));
 function runGlobalSearch(value,source){query=value.trim().toLowerCase();document.querySelectorAll('#globalSearch,#mobileSearch').forEach(input=>{if(input!==source)input.value=value});openPage('best-sellers',{configure:false});renderMain()}
-document.querySelector('#globalSearch').addEventListener('input',e=>runGlobalSearch(e.target.value,e.target));
-document.querySelector('#mobileSearch').addEventListener('input',e=>runGlobalSearch(e.target.value,e.target));
-document.querySelector('#videoPrev').addEventListener('click',()=>{videoIndex=(videoIndex+videos.length-1)%videos.length;renderVideos()});
-document.querySelector('#videoNext').addEventListener('click',()=>{videoIndex=(videoIndex+1)%videos.length;renderVideos()});
-document.querySelector('#viewAll').addEventListener('click',e=>{e.preventDefault();query='';currentFilter='all';sortKey='rank';sortDir='asc';document.querySelectorAll('#globalSearch,#mobileSearch').forEach(input=>{input.value=''});document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',b.dataset.filter==='all'));renderMain()});
-['challengeAsset','challengeSize','challengeSteps','challengeSort'].forEach(id=>document.querySelector('#'+id).addEventListener('change',e=>{if(id==='challengeAsset')challengeAsset=e.target.value;else if(id==='challengeSize')challengeSize=e.target.value;else if(id==='challengeSteps')challengeSteps=e.target.value;else challengeSort=e.target.value;challengePage=1;renderChallenges()}));
-document.querySelector('#challengeSearch').addEventListener('input',e=>{challengeQuery=e.target.value.trim().toLowerCase();challengePage=1;renderChallenges()});
-document.querySelector('#offersSearch').addEventListener('input',e=>{offersQuery=e.target.value.trim().toLowerCase();renderOfferList()});
-document.querySelector('#reviewAmount').addEventListener('input',e=>{reviewMinimum=Number(e.target.value);document.querySelector('#reviewAmountValue').textContent=reviewMinimum===0?'0+':`${reviewMinimum>=1000?`${reviewMinimum/1000}K`:reviewMinimum}+`;renderReviews()});
-document.querySelector('#favoriteSearch').addEventListener('input',e=>{favoriteQuery=e.target.value.trim().toLowerCase();renderFavoriteFirms()});
-document.querySelector('#comparePicker').addEventListener('change',e=>{const select=e.target.closest('[data-compare-slot]');if(!select)return;compareSelections[Number(select.dataset.compareSlot)]=select.value;renderCompare()});
-document.querySelector('#spreadsSearch').addEventListener('input',renderSpreads);
-document.querySelector('#heroFirmCount').textContent=TRUSTPILOT_FIRMS.length.toLocaleString();
-document.querySelector('#heroChallengeCount').textContent=CHALLENGES_DATA.length.toLocaleString();
-document.querySelector('#heroOfferCount').textContent=forexOffers().length.toLocaleString();
+document.querySelector('#globalSearch')?.addEventListener('input',e=>runGlobalSearch(e.target.value,e.target));
+document.querySelector('#mobileSearch')?.addEventListener('input',e=>runGlobalSearch(e.target.value,e.target));
+document.querySelector('#videoPrev')?.addEventListener('click',()=>{videoIndex=(videoIndex+videos.length-1)%videos.length;renderVideos()});
+document.querySelector('#videoNext')?.addEventListener('click',()=>{videoIndex=(videoIndex+1)%videos.length;renderVideos()});
+document.querySelector('#viewAll')?.addEventListener('click',e=>{e.preventDefault();query='';currentFilter='all';sortKey='rank';sortDir='asc';document.querySelectorAll('#globalSearch,#mobileSearch').forEach(input=>{input.value=''});document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',b.dataset.filter==='all'));renderMain()});
+['challengeAsset','challengeSize','challengeSteps','challengeSort'].forEach(id=>document.querySelector('#'+id)?.addEventListener?.('change',e=>{if(id==='challengeAsset')challengeAsset=e.target.value;else if(id==='challengeSize')challengeSize=e.target.value;else if(id==='challengeSteps')challengeSteps=e.target.value;else challengeSort=e.target.value;challengePage=1;renderChallenges()}));
+document.querySelector('#challengeSearch')?.addEventListener?.('input',e=>{challengeQuery=e.target.value.trim().toLowerCase();challengePage=1;renderChallenges()});
+document.querySelector('#offersSearch')?.addEventListener?.('input',e=>{offersQuery=e.target.value.trim().toLowerCase();renderOfferList()});
+document.querySelector('#reviewAmount')?.addEventListener?.('input',e=>{reviewMinimum=Number(e.target.value);const rav=document.querySelector('#reviewAmountValue');if(rav)rav.textContent=reviewMinimum===0?'0+':`${reviewMinimum>=1000?`${reviewMinimum/1000}K`:reviewMinimum}+`;renderReviews()});
+document.querySelector('#favoriteSearch')?.addEventListener?.('input',e=>{favoriteQuery=e.target.value.trim().toLowerCase();renderFavoriteFirms()});
+document.querySelector('#comparePicker')?.addEventListener?.('change',e=>{const select=e.target.closest('[data-compare-slot]');if(!select)return;compareSelections[Number(select.dataset.compareSlot)]=select.value;renderCompare()});
+document.querySelector('#spreadsSearch')?.addEventListener?.('input',renderSpreads);
+if(document.querySelector('#heroFirmCount'))document.querySelector('#heroFirmCount').textContent=TRUSTPILOT_FIRMS.length.toLocaleString();
+if(document.querySelector('#heroChallengeCount'))document.querySelector('#heroChallengeCount').textContent='90%';
+if(document.querySelector('#heroChallengeLabel'))document.querySelector('#heroChallengeLabel').textContent='Max Profit Split';
+if(document.querySelector('#heroOfferCount'))document.querySelector('#heroOfferCount').textContent=forexOffers().length.toLocaleString();
 const forexPayoutFirmCount=new Set([...(PAYOUT_DATA.latest_24h||[]),...(PAYOUT_DATA.weekly?.rows||[]),...(PAYOUT_DATA.monthly?.rows||[])].filter(x=>FOREX_NAMES.has(payoutCanonicalName(x.firm))).map(x=>payoutCanonicalName(x.firm))).size;
-document.querySelector('#heroPayoutFirmCount').textContent=forexPayoutFirmCount.toLocaleString();
+if(document.querySelector('#heroPayoutFirmCount'))document.querySelector('#heroPayoutFirmCount').textContent=forexPayoutFirmCount.toLocaleString();
 renderOfferList();
 decorateFirmNames();
 bindHomeForm();
@@ -3892,6 +4046,84 @@ document.addEventListener('submit', function(e) {
     setTimeout(() => { closeModals(); if (succ) succ.style.display = 'none'; showToast('Delay report logged for verification!'); }, 1800);
   }
 });
+
+
+/* ========================================================
+   SCROLL ANIMATIONS & DYNAMIC HEADER CONTROLLER
+   ======================================================== */
+(function initScrollAnimations() {
+  if (typeof window === 'undefined' || typeof document === 'undefined') return;
+
+  function bindScroll() {
+    const header = document.querySelector('.site-head');
+    const bar = document.getElementById('scrollProgressBar');
+    const btt = document.getElementById('backToTopBtn');
+
+    if (btt && !btt.onclick) {
+      btt.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    const onScroll = () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = maxScroll > 0 ? (scrollY / maxScroll) * 100 : 0;
+
+      if (bar) bar.style.width = pct + '%';
+      if (header) header.classList.toggle('scrolled', scrollY > 40);
+      if (btt) btt.classList.toggle('is-visible', scrollY > 400);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Scroll reveal observer
+    const targets = document.querySelectorAll(
+      '.section, #offers, #rankings, #resources, #videos, #faq, .panel, .futures-panel, .resource-card-3d, .rank-card, .payout-hub, .compare-page'
+    );
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -30px 0px',
+        threshold: 0.05
+      });
+
+      targets.forEach((el, index) => {
+        el.classList.add('scroll-reveal');
+        if (el.classList.contains('resource-card-3d') || el.classList.contains('rank-card')) {
+          el.classList.add('stagger-' + ((index % 6) + 1));
+        }
+        observer.observe(el);
+      });
+    } else {
+      targets.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // Dynamic Mutation Observer for rankCards
+    const observerTarget = document.querySelector('#rankList');
+    if (observerTarget && window.MutationObserver) {
+      const rankObserver = new MutationObserver(() => {
+        document.querySelectorAll('#rankList .rank-card:not(.scroll-reveal)').forEach((card, idx) => {
+          card.classList.add('scroll-reveal', 'stagger-' + ((idx % 6) + 1), 'is-visible');
+        });
+      });
+      rankObserver.observe(observerTarget, { childList: true });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindScroll);
+  } else {
+    bindScroll();
+  }
+})();
+
 </script>
 </body>
 </html>

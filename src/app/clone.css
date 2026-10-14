@@ -1153,3 +1153,177 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   font-size: 12px !important;
   font-weight: 800 !important;
 }
+
+
+/* ========================================================
+   ATTRACTIVE GRADIENTS & SCROLL ANIMATIONS SUITE
+   ======================================================== */
+
+/* 1. Global Neon Scroll Progress Indicator */
+#scrollProgressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #1EE7FC 0%, #396DFA 50%, #7021FC 100%);
+  z-index: 9999;
+  box-shadow: 0 0 12px rgba(30, 231, 252, 0.8), 0 0 24px rgba(112, 33, 252, 0.5);
+  pointer-events: none;
+  transition: width 0.08s ease-out;
+}
+
+/* 2. Deep Glowing Aurora Mesh Hero Background */
+.hero {
+  position: relative !important;
+  overflow: hidden !important;
+  background: radial-gradient(circle 900px at 50% -25%, rgba(30, 231, 252, 0.22), rgba(57, 109, 250, 0.14) 38%, rgba(112, 33, 252, 0.09) 65%, transparent 85%), #060609 !important;
+}
+.hero::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -140px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 820px !important;
+  height: 420px !important;
+  background: radial-gradient(ellipse at center, rgba(30, 231, 252, 0.32) 0%, rgba(57, 109, 250, 0.2) 42%, rgba(112, 33, 252, 0.08) 72%, transparent 100%) !important;
+  filter: blur(70px) !important;
+  border-radius: 50% !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  animation: heroAuroraFloat 7s ease-in-out infinite alternate !important;
+}
+@keyframes heroAuroraFloat {
+  0% { transform: translateX(-50%) scale(1) translateY(0); opacity: 0.75; }
+  50% { transform: translateX(-48%) scale(1.1) translateY(18px); opacity: 1; }
+  100% { transform: translateX(-52%) scale(0.96) translateY(-12px); opacity: 0.8; }
+}
+
+/* 3. Iridescent Glowing Text Gradients */
+.hero h1,
+#heroTitle,
+.page-intro h1,
+.payout-hub-head h1,
+.compare-shell .page-intro h1 {
+  background: linear-gradient(135deg, #ffffff 25%, #d6f7ff 50%, #7cf2ff 78%, #396dfa 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 35px rgba(30, 231, 252, 0.32) !important;
+}
+.section-title h2 {
+  background: linear-gradient(135deg, #ffffff 40%, #c4f3ff 82%, #7aa8ff 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* 4. Enhanced Glass & Gradient Borders */
+.panel {
+  background: linear-gradient(155deg, rgba(20, 20, 26, 0.94), rgba(11, 11, 15, 0.98)) padding-box,
+              linear-gradient(135deg, rgba(30, 231, 252, 0.45) 0%, rgba(57, 109, 250, 0.28) 50%, rgba(112, 33, 252, 0.5) 100%) border-box !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 32px rgba(30, 231, 252, 0.08) !important;
+}
+.futures-panel {
+  background: linear-gradient(155deg, rgba(20, 20, 26, 0.94), rgba(11, 11, 15, 0.98)) padding-box,
+              linear-gradient(135deg, rgba(112, 33, 252, 0.5) 0%, rgba(57, 109, 250, 0.28) 50%, rgba(30, 231, 252, 0.45) 100%) border-box !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 32px rgba(112, 33, 252, 0.08) !important;
+}
+
+#offers .offer {
+  background: linear-gradient(145deg, rgba(24, 24, 32, 0.88), rgba(14, 14, 19, 0.96)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+#offers .offer:hover {
+  border-color: rgba(30, 231, 252, 0.6) !important;
+  transform: translateY(-3px) scale(1.01) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 24px rgba(30, 231, 252, 0.22) !important;
+}
+
+#offers .future {
+  background: linear-gradient(145deg, rgba(24, 24, 32, 0.88), rgba(14, 14, 19, 0.96)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+#offers .future:hover {
+  border-color: rgba(112, 33, 252, 0.6) !important;
+  transform: translateY(-3px) scale(1.01) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 24px rgba(112, 33, 252, 0.22) !important;
+}
+
+/* 5. Rank Cards Sleek Gradient & Hover Lift */
+.rank-card {
+  background: linear-gradient(145deg, rgba(19, 19, 25, 0.88), rgba(13, 13, 17, 0.96)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.rank-card:hover {
+  border-color: rgba(57, 109, 250, 0.45) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55), 0 0 20px rgba(57, 109, 250, 0.14) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* 6. Dynamic Sticky Header Enhancement */
+.site-head {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.site-head.scrolled {
+  background: rgba(5, 5, 8, 0.94) !important;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.65), 0 1px 0 rgba(30, 231, 252, 0.18) !important;
+  backdrop-filter: blur(24px) !important;
+}
+
+/* 7. Scroll Reveal Animation Classes */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 0.05s !important; }
+.stagger-2 { transition-delay: 0.10s !important; }
+.stagger-3 { transition-delay: 0.15s !important; }
+.stagger-4 { transition-delay: 0.20s !important; }
+.stagger-5 { transition-delay: 0.25s !important; }
+.stagger-6 { transition-delay: 0.30s !important; }
+
+/* 8. Back to Top Smooth Floating Button */
+#backToTopBtn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1EE7FC, #396DFA, #7021FC);
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 90;
+  box-shadow: 0 8px 24px rgba(30, 231, 252, 0.35);
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#backToTopBtn.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+#backToTopBtn:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 12px 30px rgba(30, 231, 252, 0.55);
+}

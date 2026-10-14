@@ -2107,9 +2107,13 @@ function updateMarketCopy(){
   const spreadSubscribe=document.querySelector('#spreadsPage .static-subscribe h2');if(spreadSubscribe)spreadSubscribe.textContent=`Subscribe for new ${label} spread research`;
   const payoutTitle=document.querySelector('.payout-hub-head h1');if(payoutTitle)payoutTitle.textContent=`${label} Prop Firm Payouts Tracker`;
   const payoutIntro=document.querySelector('.payout-hub-head p');if(payoutIntro)payoutIntro.textContent=`Compare payout times, payout totals, and payout history across matched ${label} firms. View firm-level payout trends and recent payouts.`;
-  const resourceChallenge=document.querySelector('#resourceChallengeDesc')||document.querySelector('#resources .resource:nth-child(2) p');if(resourceChallenge){const count=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)).length;resourceChallenge.textContent=count?`Compare the ${count} tracked ${label} challenge records by account size, steps, targets, loss limits, payout frequency, and price.`:`Browse ${label} firms in the same challenge comparison layout. Fields without verified challenge data are shown as unavailable.`}
+  const resourceChallenge=document.querySelector('#resourceChallengeDesc')||document.querySelector('#resources .resource:nth-child(2) p');if(resourceChallenge){resourceChallenge.textContent=`Unlock verified ${label} discount codes up to 30% OFF and fee cashback with promo code LENZ across top-rated prop firms.`}
   const resourcePayout=document.querySelector('#resourcePayoutDesc')||document.querySelector('#resources .resource:nth-child(3) p');if(resourcePayout){resourcePayout.textContent=`Review tracked on-chain & Rise payout totals, proof records, and processing-time metrics across verified ${label} firms.`}
-  document.querySelector('#heroFirmCount').textContent=categoryFirms.length.toLocaleString();document.querySelector('#heroChallengeLabel').textContent=`${label} Challenges`;document.querySelector('#heroOfferLabel').textContent='Tracked Offers';document.querySelector('#faqTitle').textContent=`Homepage FAQ (${label})`
+  const heroFirmCount=document.querySelector('#heroFirmCount');if(heroFirmCount)heroFirmCount.textContent=categoryFirms.length.toLocaleString();
+  const heroChallengeCount=document.querySelector('#heroChallengeCount');if(heroChallengeCount)heroChallengeCount.textContent='90%';
+  const heroChallengeLabel=document.querySelector('#heroChallengeLabel');if(heroChallengeLabel)heroChallengeLabel.textContent='Max Profit Split';
+  const heroOfferLabel=document.querySelector('#heroOfferLabel');if(heroOfferLabel)heroOfferLabel.textContent='Tracked Offers';
+  const faqTitle=document.querySelector('#faqTitle');if(faqTitle)faqTitle.textContent=`Homepage FAQ (${label})`;
 }
 function showMarketState(scroll=true){updateMarketCopy();openPage(currentPage,{replace:true,scroll})}
 function selectMarket(next,scroll=true){if(!['forex','futures','crypto'].includes(next))return;market=next;view='firms';query='';currentFilter='all';sortKey='rank';sortDir='asc';offerPage=0;challengePage=1;payoutPage=1;payoutQuery='';compareSelections=sourceFirms().slice(0,3).map(f=>f.name).concat(['']).slice(0,4);document.querySelectorAll('#globalSearch,#mobileSearch').forEach(input=>{input.value=''});document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',b.dataset.filter==='all'));renderOffers();renderFutures();renderOfferList();renderMain();renderChallenges();renderReviews();renderFavoriteFirms();renderCompare();renderSpreads();showMarketState(scroll)}
@@ -2144,7 +2148,7 @@ function challengeRatingMarkup(x){const t=trustpilotFor(x.firm);if(!t||t.trustpi
 function challengeRow(x,index){const link=challengeBuyLink(x.firm),unavailable=x._unavailable===true;return `<article class="challenge-row"><div class="challenge-firm" data-label="Firm / Rating">${logo(x.firm)}<div><strong>${safe(x.firm)}</strong>${challengeRatingMarkup(x)}</div></div><span class="challenge-value" data-label="Account Size">${safe(challengeBlank(x.account_size))}</span><span class="challenge-value" data-label="Steps">${safe(challengeBlank(x.steps))}</span><span class="challenge-value" data-label="Profit Target">${safe(challengeBlank(x.profit_target))}</span><span class="challenge-value" data-label="Daily Loss">${safe(challengeBlank(x.daily_loss))}</span><span class="challenge-value" data-label="Max Loss">${safe(challengeBlank(x.max_loss))}</span><span class="challenge-muted" data-label="Max Loss Type">${safe(challengeBlank(x.max_loss_type))}</span><span class="challenge-value" data-label="PT:DD">${safe(challengeBlank(x.pt_dd))}</span><span class="challenge-value" data-label="Profit Split">${safe(challengeBlank(x.profit_split))}</span><span class="challenge-muted" data-label="Payout Frequency" title="${safe(challengeBlank(x.payout_freq))}">${safe(challengeBlank(x.payout_freq))}</span><span class="challenge-pop" data-label="Popularity">${unavailable?'—':`◆ ${Number(x.popularity).toLocaleString()}`}</span><span class="challenge-price" data-label="Price"><b>${challengeMoney(x,x.price)}</b>${x.price_original!=null?`<del>${challengeMoney(x,x.price_original)}</del>`:''}</span><button class="challenge-buy" type="button" data-challenge-buy data-buy-link="${safe(link)}" data-challenge-row="${index}" ${unavailable&&!link?'disabled aria-label="Challenge unavailable"':''}>${unavailable&&!link?'—':'Buy'}</button><div class="challenge-terms" hidden>${unavailable?'Verified challenge terms are unavailable for this firm.':'Use code <strong>LENZ</strong>. Check the firm’s official terms for eligibility and current availability before buying.'}</div></article>`}
 function challengeFiltered(){const categoryNames=new Set(categoryTrustpilotFirms().map(f=>f.name));let list=CHALLENGES_DATA.filter(x=>categoryNames.has(x.firm));if(!list.length)list=categoryTrustpilotFirms().map(f=>({firm:f.name,account_size:null,steps:null,profit_target:null,daily_loss:null,max_loss:null,max_loss_type:null,pt_dd:null,profit_split:null,payout_freq:null,popularity:0,price:null,price_original:null,price_currency:null,_unavailable:true}));list=list.filter(x=>x.firm.toLowerCase().includes(challengeQuery));if(challengeAsset!=='all'&&market==='forex')list=list.filter(()=>challengeAsset==='FX');if(challengeSize!=='all')list=list.filter(x=>x.account_size===challengeSize);if(challengeSteps!=='all')list=list.filter(x=>x.steps===challengeSteps);return [...list].sort((a,b)=>{if(challengeSort==='price')return Number(a.price??Infinity)-Number(b.price??Infinity);if(challengeSort==='rating')return Number(b.rating??-1)-Number(a.rating??-1)||Number(b.reviews_count??-1)-Number(a.reviews_count??-1);return Number(b.popularity||0)-Number(a.popularity||0)||a.firm.localeCompare(b.firm)})}
 function challengePageButtons(totalPages){if(totalPages<=1)return [];const values=totalPages<=5?Array.from({length:totalPages},(_,i)=>i+1):challengePage<=2?[1,2,'…',totalPages]:challengePage>=totalPages-1?[1,'…',totalPages-1,totalPages]:[1,'…',challengePage-1,challengePage,challengePage+1,'…',totalPages];return values}
-function renderChallenges(){const all=challengeFiltered(),pages=Math.max(1,Math.ceil(all.length/10));challengePage=Math.min(challengePage,pages);document.querySelector('#challengeCount').textContent=all.length;const snap=document.querySelector('.challenge-snapshot span:last-child');if(snap)snap.innerHTML=`${marketLabel()} · verified fields only · captured <strong>September 21, 2026</strong>`;const slice=all.slice((challengePage-1)*10,challengePage*10);document.querySelector('#challengeRows').innerHTML=slice.length?slice.map((x,i)=>challengeRow(x,(challengePage-1)*10+i)).join(''):'<div class="challenge-empty">No challenges match these filters.</div>';const items=challengePageButtons(pages);document.querySelector('#challengePagination').innerHTML=`<button class="page-word" type="button" data-challenge-nav="prev" ${challengePage===1?'disabled':''}>Previous</button>${items.map(x=>x==='…'?'<span aria-hidden="true">…</span>':`<button class="${x===challengePage?'current':''}" type="button" data-challenge-page="${x}" ${x===challengePage?'aria-current="page"':''}>${x}</button>`).join('')}<button class="page-word" type="button" data-challenge-nav="next" ${challengePage===pages?'disabled':''}>Next</button>`}
+function renderChallenges(){const rowsEl=document.querySelector('#challengeRows');if(!rowsEl)return;const all=challengeFiltered(),pages=Math.max(1,Math.ceil(all.length/10));challengePage=Math.min(challengePage,pages);const countEl=document.querySelector('#challengeCount');if(countEl)countEl.textContent=all.length;const snap=document.querySelector('.challenge-snapshot span:last-child');if(snap)snap.innerHTML=`${marketLabel()} · verified fields only · captured <strong>September 21, 2026</strong>`;const slice=all.slice((challengePage-1)*10,challengePage*10);rowsEl.innerHTML=slice.length?slice.map((x,i)=>challengeRow(x,(challengePage-1)*10+i)).join(''):'<div class="challenge-empty">No challenges match these filters.</div>';const pagEl=document.querySelector('#challengePagination');if(pagEl){const items=challengePageButtons(pages);pagEl.innerHTML=`<button class="page-word" type="button" data-challenge-nav="prev" ${challengePage===1?'disabled':''}>Previous</button>${items.map(x=>x==='…'?'<span aria-hidden="true">…</span>':`<button class="${x===challengePage?'current':''}" type="button" data-challenge-page="${x}" ${x===challengePage?'aria-current="page"':''}>${x}</button>`).join('')}<button class="page-word" type="button" data-challenge-nav="next" ${challengePage===pages?'disabled':''}>Next</button>`}}
 
 let payoutView='payouts',payoutMode='payouts',payoutQuery='',payoutSort='total',payoutSortDir='desc',payoutTimeframe='latest_24h',payoutCategory='forex',payoutPage=1,payoutDetailFirm='',payoutDetailTimeframe='7d',payoutDetailPage=1;
 const moneyNumber=value=>Number(String(value??0).replace(/[^0-9.-]/g,''))||0;
@@ -2290,7 +2294,7 @@ let compareSelections=['FundedNext','FundingPips','Alpha Capital',''];
 function compareChallenge(name){return CHALLENGES_DATA.filter(x=>x.firm===name&&x.account_size==='100K'&&x.steps==='2 Steps').sort((a,b)=>Number(a.price)-Number(b.price)||Number(b.popularity)-Number(a.popularity))[0]||null}
 function comparePayout(name,kind){const source=kind==='latest'?(PAYOUT_DATA.latest_24h||[]):(PAYOUT_DATA.monthly?.rows||[]);const row=source.find(x=>payoutCanonicalName(x.firm)===name);if(!row)return '—';return kind==='latest'?(row.total||'—'):(row.cells?.[2]||'—')}
 function compareCell(value,detail=''){return `<div class="compare-value"><b>${value==null||value===''?'—':safe(value)}</b>${detail?`<span>${safe(detail)}</span>`:''}</div>`}
-function renderCompare(){const marketFirms=sourceFirms(),choices=marketFirms.map(f=>f.name).sort((a,b)=>a.localeCompare(b));document.querySelector('#compareFirmCount').textContent=choices.length;document.querySelector('#compareChallengeCount').textContent=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)).length;const picker=document.querySelector('#comparePicker');picker.innerHTML=compareSelections.map((selected,index)=>`<label>Firm ${index+1}<select data-compare-slot="${index}"><option value="">Add a firm</option>${choices.map(name=>`<option value="${safe(name)}" ${name===selected?'selected':''} ${compareSelections.includes(name)&&name!==selected?'disabled':''}>${safe(name)}</option>`).join('')}</select></label>`).join('');const selected=compareSelections.filter(Boolean);const table=document.querySelector('#compareTable');if(!selected.length){table.innerHTML=`<div class="compare-empty">Choose at least one ${marketLabel()} firm to begin the comparison.</div>`;return}const head=`<div class="compare-row"><div class="compare-label">Firm</div>${selected.map(name=>`<div class="compare-firm-head">${logo(name)}<div><strong>${safe(name)}</strong><span class="rating">${marketLabel()} comparison</span></div></div>`).join('')}</div>`;const rows=[['Trustpilot rating',name=>{const f=TRUSTPILOT_FIRMS.find(x=>x.name===name);return compareCell(f?.trustpilotRating==null?'—':`${f.trustpilotRating.toFixed(1)} / 5`,f?.trustpilotReviews==null?'—':`${Number(f.trustpilotReviews).toLocaleString()} reviews`)}],['Challenge price',name=>{const x=compareChallenge(name);return compareCell(x?challengeMoney(x,x.price):'—',x?'Lowest tracked 100K · 2 Steps':'Not tracked yet')}],['Profit target',name=>{const x=compareChallenge(name);return compareCell(x?.profit_target||'—')}],['Daily / max loss',name=>{const x=compareChallenge(name);return compareCell(x?`${x.daily_loss||'—'} / ${x.max_loss||'—'}`:'—',x?.max_loss_type||'Not tracked yet')}],['Profit split',name=>{const x=compareChallenge(name);return compareCell(x?.profit_split||'—')}],['Payout frequency',name=>{const x=compareChallenge(name);return compareCell(x?.payout_freq||'—')}],['Platforms',name=>{const f=marketFirms.find(x=>x.name===name);return compareCell(f?.platforms?.join(', ')||'—')}],['LENZ offer',name=>{const x=OFFER_CATALOG.find(o=>o.name===name);return x?`<div class="compare-value"><b>${safe(x.discount)}</b><span class="compare-code">LENZ</span></div>`:compareCell('—','Not tracked yet')}],['Latest 24h payouts',name=>compareCell(comparePayout(name,'latest'))],['Month-to-date payouts',name=>compareCell(comparePayout(name,'monthly'))]];table.style.setProperty('--compare-cols',selected.length);table.innerHTML=head+rows.map(([label,fn])=>`<div class="compare-row"><div class="compare-label">${label}</div>${selected.map(name=>fn(name)).join('')}</div>`).join('')}
+function renderCompare(){const marketFirms=sourceFirms(),choices=marketFirms.map(f=>f.name).sort((a,b)=>a.localeCompare(b));const cfc=document.querySelector('#compareFirmCount');if(cfc)cfc.textContent=choices.length;const ccc=document.querySelector('#compareChallengeCount');if(ccc)ccc.textContent=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)).length;const picker=document.querySelector('#comparePicker');if(!picker)return;picker.innerHTML=compareSelections.map((selected,index)=>`<label>Firm ${index+1}<select data-compare-slot="${index}"><option value="">Add a firm</option>${choices.map(name=>`<option value="${safe(name)}" ${name===selected?'selected':''} ${compareSelections.includes(name)&&name!==selected?'disabled':''}>${safe(name)}</option>`).join('')}</select></label>`).join('');const selected=compareSelections.filter(Boolean);const table=document.querySelector('#compareTable');if(!table)return;if(!selected.length){table.innerHTML=`<div class="compare-empty">Choose at least one ${marketLabel()} firm to begin the comparison.</div>`;return}const head=`<div class="compare-row"><div class="compare-label">Firm</div>${selected.map(name=>`<div class="compare-firm-head">${logo(name)}<div><strong>${safe(name)}</strong><span class="rating">${marketLabel()} comparison</span></div></div>`).join('')}</div>`;const rows=[['Trustpilot rating',name=>{const f=TRUSTPILOT_FIRMS.find(x=>x.name===name);return compareCell(f?.trustpilotRating==null?'—':`${f.trustpilotRating.toFixed(1)} / 5`,f?.trustpilotReviews==null?'—':`${Number(f.trustpilotReviews).toLocaleString()} reviews`)}],['Challenge price',name=>{const x=compareChallenge(name);return compareCell(x?challengeMoney(x,x.price):'—',x?'Lowest tracked 100K · 2 Steps':'Not tracked yet')}],['Profit target',name=>{const x=compareChallenge(name);return compareCell(x?.profit_target||'—')}],['Daily / max loss',name=>{const x=compareChallenge(name);return compareCell(x?`${x.daily_loss||'—'} / ${x.max_loss||'—'}`:'—',x?.max_loss_type||'Not tracked yet')}],['Profit split',name=>{const x=compareChallenge(name);return compareCell(x?.profit_split||'—')}],['Payout frequency',name=>{const x=compareChallenge(name);return compareCell(x?.payout_freq||'—')}],['Platforms',name=>{const f=marketFirms.find(x=>x.name===name);return compareCell(f?.platforms?.join(', ')||'—')}],['LENZ offer',name=>{const x=OFFER_CATALOG.find(o=>o.name===name);return x?`<div class="compare-value"><b>${safe(x.discount)}</b><span class="compare-code">LENZ</span></div>`:compareCell('—','Not tracked yet')}],['Latest 24h payouts',name=>compareCell(comparePayout(name,'latest'))],['Month-to-date payouts',name=>compareCell(comparePayout(name,'monthly'))]];table.style.setProperty('--compare-cols',selected.length);table.innerHTML=head+rows.map(([label,fn])=>`<div class="compare-row"><div class="compare-label">${label}</div>${selected.map(name=>fn(name)).join('')}</div>`).join('')}
 function renderSpreads(){
   const SPREADS_MAP = {
     'FundedNext': { avg: '0.2 pips', eurusd: '0.1', gbpusd: '0.3', usdjpy: '0.2', xauusd: '1.2', us30: '1.8', nas100: '1.2' },
@@ -2324,10 +2328,11 @@ function renderSpreads(){
     'The Trading Pit': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.6', us30: '2.1', nas100: '1.5' },
     'Trade The Pool': { avg: '0.3 pips', eurusd: '0.2', gbpusd: '0.4', usdjpy: '0.3', xauusd: '1.5', us30: '1.9', nas100: '1.4' }
   };
+  const spreadsRows=document.querySelector('#spreadsRows');if(!spreadsRows)return;
   const q=(document.querySelector('#spreadsSearch')?.value||'').trim().toLowerCase();
   const rows=sourceFirms().filter(f=>f.name.toLowerCase().includes(q));
-  document.querySelector('#spreadsCount').textContent=rows.length;
-  document.querySelector('#spreadsRows').innerHTML=rows.length?rows.map(f=>{
+  const countEl=document.querySelector('#spreadsCount');if(countEl)countEl.textContent=rows.length;
+  spreadsRows.innerHTML=rows.length?rows.map(f=>{
     const t=TRUSTPILOT_FIRMS.find(x=>x.name===f.name),
           score=t?.trustpilotRating,
           offer=OFFER_CATALOG.find(x=>x.name===f.name),
@@ -2358,27 +2363,27 @@ function renderSpreads(){
   }).join(''):`<div class="spreads-empty">No ${marketLabel()} firms match your search.</div>`;
 }
 
-const PAGE_NAMES=new Set(['home','offers','challenges','best-sellers','reviews','favorites','rules','compare','spreads','payouts','payout-detail','tutorials','firm-profile']);
-const PAGE_TARGETS={home:'#home',offers:'#offersPage',challenges:'#challengesPage','best-sellers':'#rankings',reviews:'#home',favorites:'#favoritesPage',rules:'#resources',compare:'#comparePage',spreads:'#spreadsPage',payouts:'#payouts','payout-detail':'#payoutDetailPage',tutorials:'#videos','firm-profile':'#firmProfilePage'};
+const PAGE_NAMES=new Set(['home','offers','best-sellers','reviews','favorites','rules','compare','payouts','payout-detail','tutorials','firm-profile']);
+const PAGE_TARGETS={home:'#home',offers:'#offersPage','best-sellers':'#rankings',reviews:'#home',favorites:'#favoritesPage',rules:'#resources',compare:'#comparePage',payouts:'#payouts','payout-detail':'#payoutDetailPage',tutorials:'#videos','firm-profile':'#firmProfilePage'};
 const LEGACY_ROUTES={home:'home',offers:'offers',rankings:'compare',faq:'reviews',resources:'rules',payouts:'payouts',videos:'tutorials',futures:'offers'};
 let currentPage='home',routeHistoryIndex=Number(history.state?.pflRouteIndex)||0;
 function configurePage(page){
   const reviewPage=page==='reviews',label=marketLabel(),categoryFirms=categoryTrustpilotFirms(),categoryChallenges=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)),reviewVolume=categoryFirms.reduce((sum,f)=>sum+(Number(f.trustpilotReviews)||0),0),payoutFirmCount=new Set([...(PAYOUT_DATA.latest_24h||[]),...(PAYOUT_DATA.weekly?.rows||[]),...(PAYOUT_DATA.monthly?.rows||[])].filter(x=>firmInMarket(payoutCanonicalName(x.firm))).map(x=>payoutCanonicalName(x.firm))).size;
   updateMarketCopy();
-  document.querySelector('#heroTitle').textContent=`Compare the Best ${label} Prop Trading Firms of 2026`;
-  document.querySelector('#heroSubtitle').textContent=reviewPage?`Compare ${label} prop firms using real Trustpilot reviews and PFL community reviews.`:`Trusted platform to compare ${label} prop trading firms using verified data and insights, including reviews, rules, and rankings.`;
-  document.querySelector('#heroFirmCount').textContent=categoryFirms.length.toLocaleString();
-  document.querySelector('#heroFirmLabel').textContent=reviewPage?'Verified Prop Firms':'Firms Covered';
-  document.querySelector('#heroChallengeCount').textContent=categoryChallenges.length.toLocaleString();
-  document.querySelector('#heroChallengeLabel').textContent=reviewPage?'Tracked Challenges':`${label} Challenges`;
-  document.querySelector('#heroOfferCount').textContent=reviewPage?reviewVolume.toLocaleString():forexOffers().length.toLocaleString();
-  document.querySelector('#heroOfferLabel').textContent=reviewPage?'Trustpilot Reviews':'Tracked Offers';
-  document.querySelector('#heroPayoutFirmCount').textContent=payoutFirmCount.toLocaleString();
-  document.querySelector('#heroPayoutLabel').textContent=reviewPage?'Payout Firms':'Payout Firms';
+  const heroTitle=document.querySelector('#heroTitle');if(heroTitle)heroTitle.textContent=`Compare the Best ${label} Prop Trading Firms of 2026`;
+  const heroSubtitle=document.querySelector('#heroSubtitle');if(heroSubtitle)heroSubtitle.textContent=reviewPage?`Compare ${label} prop firms using real Trustpilot reviews and PFL community reviews.`:`Trusted platform to compare ${label} prop trading firms using verified data and insights, including reviews, rules, and rankings.`;
+  const heroFirmCount=document.querySelector('#heroFirmCount');if(heroFirmCount)heroFirmCount.textContent=categoryFirms.length.toLocaleString();
+  const heroFirmLabel=document.querySelector('#heroFirmLabel');if(heroFirmLabel)heroFirmLabel.textContent=reviewPage?'Verified Prop Firms':'Firms Covered';
+  const heroChallengeCount=document.querySelector('#heroChallengeCount');if(heroChallengeCount)heroChallengeCount.textContent='90%';
+  const heroChallengeLabel=document.querySelector('#heroChallengeLabel');if(heroChallengeLabel)heroChallengeLabel.textContent='Max Profit Split';
+  const heroOfferCount=document.querySelector('#heroOfferCount');if(heroOfferCount)heroOfferCount.textContent=reviewPage?reviewVolume.toLocaleString():forexOffers().length.toLocaleString();
+  const heroOfferLabel=document.querySelector('#heroOfferLabel');if(heroOfferLabel)heroOfferLabel.textContent=reviewPage?'Trustpilot Reviews':'Tracked Offers';
+  const heroPayoutFirmCount=document.querySelector('#heroPayoutFirmCount');if(heroPayoutFirmCount)heroPayoutFirmCount.textContent=payoutFirmCount.toLocaleString();
+  const heroPayoutLabel=document.querySelector('#heroPayoutLabel');if(heroPayoutLabel)heroPayoutLabel.textContent='Payout Firms';
   if(page==='challenges'){challengePage=1;renderChallenges()}
   else if(page==='best-sellers'){view='firms';currentFilter='popular';sortKey='favorites';sortDir='desc'}
-  else if(page==='reviews'){reviewMinimum=0;reviewSource='trustpilot';document.querySelector('#reviewAmount').value='0';document.querySelector('#reviewAmountValue').textContent='0+';renderReviews()}
-  else if(page==='favorites'){favoriteQuery='';document.querySelector('#favoriteSearch').value='';renderFavoriteFirms()}
+  else if(page==='reviews'){reviewMinimum=0;reviewSource='trustpilot';const ra=document.querySelector('#reviewAmount');if(ra)ra.value='0';const rav=document.querySelector('#reviewAmountValue');if(rav)rav.textContent='0+';renderReviews()}
+  else if(page==='favorites'){favoriteQuery='';const fs=document.querySelector('#favoriteSearch');if(fs)fs.value='';renderFavoriteFirms()}
   else if(page==='compare'){renderCompare()}
   else if(page==='spreads'){renderSpreads()}
   document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',b.dataset.filter===currentFilter));
@@ -2415,23 +2420,24 @@ document.addEventListener('click',e=>{const profileName=e.target.closest('[data-
 document.addEventListener('keydown',e=>{const profileName=e.target.closest?.('[data-firm-profile]');if(profileName&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openFirmProfile(profileName.dataset.firmProfile);return}if(e.key==='Escape')closeModals()});
 window.addEventListener('hashchange',()=>openPage(pageFromHash(),{replace:true,scroll:true}));
 function runGlobalSearch(value,source){query=value.trim().toLowerCase();document.querySelectorAll('#globalSearch,#mobileSearch').forEach(input=>{if(input!==source)input.value=value});openPage('best-sellers',{configure:false});renderMain()}
-document.querySelector('#globalSearch').addEventListener('input',e=>runGlobalSearch(e.target.value,e.target));
-document.querySelector('#mobileSearch').addEventListener('input',e=>runGlobalSearch(e.target.value,e.target));
-document.querySelector('#videoPrev').addEventListener('click',()=>{videoIndex=(videoIndex+videos.length-1)%videos.length;renderVideos()});
-document.querySelector('#videoNext').addEventListener('click',()=>{videoIndex=(videoIndex+1)%videos.length;renderVideos()});
-document.querySelector('#viewAll').addEventListener('click',e=>{e.preventDefault();query='';currentFilter='all';sortKey='rank';sortDir='asc';document.querySelectorAll('#globalSearch,#mobileSearch').forEach(input=>{input.value=''});document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',b.dataset.filter==='all'));renderMain()});
-['challengeAsset','challengeSize','challengeSteps','challengeSort'].forEach(id=>document.querySelector('#'+id).addEventListener('change',e=>{if(id==='challengeAsset')challengeAsset=e.target.value;else if(id==='challengeSize')challengeSize=e.target.value;else if(id==='challengeSteps')challengeSteps=e.target.value;else challengeSort=e.target.value;challengePage=1;renderChallenges()}));
-document.querySelector('#challengeSearch').addEventListener('input',e=>{challengeQuery=e.target.value.trim().toLowerCase();challengePage=1;renderChallenges()});
-document.querySelector('#offersSearch').addEventListener('input',e=>{offersQuery=e.target.value.trim().toLowerCase();renderOfferList()});
-document.querySelector('#reviewAmount').addEventListener('input',e=>{reviewMinimum=Number(e.target.value);document.querySelector('#reviewAmountValue').textContent=reviewMinimum===0?'0+':`${reviewMinimum>=1000?`${reviewMinimum/1000}K`:reviewMinimum}+`;renderReviews()});
-document.querySelector('#favoriteSearch').addEventListener('input',e=>{favoriteQuery=e.target.value.trim().toLowerCase();renderFavoriteFirms()});
-document.querySelector('#comparePicker').addEventListener('change',e=>{const select=e.target.closest('[data-compare-slot]');if(!select)return;compareSelections[Number(select.dataset.compareSlot)]=select.value;renderCompare()});
-document.querySelector('#spreadsSearch').addEventListener('input',renderSpreads);
-document.querySelector('#heroFirmCount').textContent=TRUSTPILOT_FIRMS.length.toLocaleString();
-document.querySelector('#heroChallengeCount').textContent=CHALLENGES_DATA.length.toLocaleString();
-document.querySelector('#heroOfferCount').textContent=forexOffers().length.toLocaleString();
+document.querySelector('#globalSearch')?.addEventListener('input',e=>runGlobalSearch(e.target.value,e.target));
+document.querySelector('#mobileSearch')?.addEventListener('input',e=>runGlobalSearch(e.target.value,e.target));
+document.querySelector('#videoPrev')?.addEventListener('click',()=>{videoIndex=(videoIndex+videos.length-1)%videos.length;renderVideos()});
+document.querySelector('#videoNext')?.addEventListener('click',()=>{videoIndex=(videoIndex+1)%videos.length;renderVideos()});
+document.querySelector('#viewAll')?.addEventListener('click',e=>{e.preventDefault();query='';currentFilter='all';sortKey='rank';sortDir='asc';document.querySelectorAll('#globalSearch,#mobileSearch').forEach(input=>{input.value=''});document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',b.dataset.filter==='all'));renderMain()});
+['challengeAsset','challengeSize','challengeSteps','challengeSort'].forEach(id=>document.querySelector('#'+id)?.addEventListener?.('change',e=>{if(id==='challengeAsset')challengeAsset=e.target.value;else if(id==='challengeSize')challengeSize=e.target.value;else if(id==='challengeSteps')challengeSteps=e.target.value;else challengeSort=e.target.value;challengePage=1;renderChallenges()}));
+document.querySelector('#challengeSearch')?.addEventListener?.('input',e=>{challengeQuery=e.target.value.trim().toLowerCase();challengePage=1;renderChallenges()});
+document.querySelector('#offersSearch')?.addEventListener?.('input',e=>{offersQuery=e.target.value.trim().toLowerCase();renderOfferList()});
+document.querySelector('#reviewAmount')?.addEventListener?.('input',e=>{reviewMinimum=Number(e.target.value);const rav=document.querySelector('#reviewAmountValue');if(rav)rav.textContent=reviewMinimum===0?'0+':`${reviewMinimum>=1000?`${reviewMinimum/1000}K`:reviewMinimum}+`;renderReviews()});
+document.querySelector('#favoriteSearch')?.addEventListener?.('input',e=>{favoriteQuery=e.target.value.trim().toLowerCase();renderFavoriteFirms()});
+document.querySelector('#comparePicker')?.addEventListener?.('change',e=>{const select=e.target.closest('[data-compare-slot]');if(!select)return;compareSelections[Number(select.dataset.compareSlot)]=select.value;renderCompare()});
+document.querySelector('#spreadsSearch')?.addEventListener?.('input',renderSpreads);
+if(document.querySelector('#heroFirmCount'))document.querySelector('#heroFirmCount').textContent=TRUSTPILOT_FIRMS.length.toLocaleString();
+if(document.querySelector('#heroChallengeCount'))document.querySelector('#heroChallengeCount').textContent='90%';
+if(document.querySelector('#heroChallengeLabel'))document.querySelector('#heroChallengeLabel').textContent='Max Profit Split';
+if(document.querySelector('#heroOfferCount'))document.querySelector('#heroOfferCount').textContent=forexOffers().length.toLocaleString();
 const forexPayoutFirmCount=new Set([...(PAYOUT_DATA.latest_24h||[]),...(PAYOUT_DATA.weekly?.rows||[]),...(PAYOUT_DATA.monthly?.rows||[])].filter(x=>FOREX_NAMES.has(payoutCanonicalName(x.firm))).map(x=>payoutCanonicalName(x.firm))).size;
-document.querySelector('#heroPayoutFirmCount').textContent=forexPayoutFirmCount.toLocaleString();
+if(document.querySelector('#heroPayoutFirmCount'))document.querySelector('#heroPayoutFirmCount').textContent=forexPayoutFirmCount.toLocaleString();
 renderOfferList();
 decorateFirmNames();
 bindHomeForm();
@@ -2462,3 +2468,80 @@ document.addEventListener('submit', function(e) {
     setTimeout(() => { closeModals(); if (succ) succ.style.display = 'none'; showToast('Delay report logged for verification!'); }, 1800);
   }
 });
+
+
+/* ========================================================
+   SCROLL ANIMATIONS & DYNAMIC HEADER CONTROLLER
+   ======================================================== */
+(function initScrollAnimations() {
+  if (typeof window === 'undefined' || typeof document === 'undefined') return;
+
+  function bindScroll() {
+    const header = document.querySelector('.site-head');
+    const bar = document.getElementById('scrollProgressBar');
+    const btt = document.getElementById('backToTopBtn');
+
+    if (btt && !btt.onclick) {
+      btt.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    const onScroll = () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = maxScroll > 0 ? (scrollY / maxScroll) * 100 : 0;
+
+      if (bar) bar.style.width = pct + '%';
+      if (header) header.classList.toggle('scrolled', scrollY > 40);
+      if (btt) btt.classList.toggle('is-visible', scrollY > 400);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Scroll reveal observer
+    const targets = document.querySelectorAll(
+      '.section, #offers, #rankings, #resources, #videos, #faq, .panel, .futures-panel, .resource-card-3d, .rank-card, .payout-hub, .compare-page'
+    );
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -30px 0px',
+        threshold: 0.05
+      });
+
+      targets.forEach((el, index) => {
+        el.classList.add('scroll-reveal');
+        if (el.classList.contains('resource-card-3d') || el.classList.contains('rank-card')) {
+          el.classList.add('stagger-' + ((index % 6) + 1));
+        }
+        observer.observe(el);
+      });
+    } else {
+      targets.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // Dynamic Mutation Observer for rankCards
+    const observerTarget = document.querySelector('#rankList');
+    if (observerTarget && window.MutationObserver) {
+      const rankObserver = new MutationObserver(() => {
+        document.querySelectorAll('#rankList .rank-card:not(.scroll-reveal)').forEach((card, idx) => {
+          card.classList.add('scroll-reveal', 'stagger-' + ((idx % 6) + 1), 'is-visible');
+        });
+      });
+      rankObserver.observe(observerTarget, { childList: true });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindScroll);
+  } else {
+    bindScroll();
+  }
+})();

@@ -1,3 +1,5 @@
+<div id="scrollProgressBar" aria-hidden="true"></div>
+<button id="backToTopBtn" type="button" aria-label="Back to top">↑</button>
 <header class="site-head">
   <div class="shell head-main">
     <a class="brand-lock" href="#page-home" data-page="home"><span class="brand-mark" aria-hidden="true"></span><span>Prop Firm Lenz</span></a>
@@ -6,12 +8,12 @@
     <div class="header-auth desktop-auth" aria-label="Account access"><button class="login" type="button" data-account-notice>Log in</button><button class="signup" type="button" data-account-notice>Sign up</button></div>
     <button class="menu" type="button" aria-label="Close navigation menu" aria-expanded="true" aria-controls="headerMenu"></button>
   </div>
-  <nav class="navrow" id="headerMenu" aria-label="Main navigation"><div class="shell navlinks"><div class="mobile-nav-tools"><input class="searchbox" id="mobileSearch" type="search" placeholder="⌕  Search firms" aria-label="Search firms"><div class="market-switch mobile-market-switch" role="group" aria-label="Market scope"><button class="on" type="button" data-market="forex" aria-pressed="true">Forex</button><button type="button" data-market="futures" aria-pressed="false">Futures</button><button type="button" data-market="crypto" aria-pressed="false">Crypto</button></div></div><a class="active" href="#page-home" data-page="home">Home</a><a href="#page-offers" data-page="offers">Offers</a><a href="#page-challenges" data-page="challenges">Challenges</a><a href="#page-best-sellers" data-page="best-sellers">Best Sellers</a><a href="#page-reviews" data-page="reviews">Reviews</a><a href="#page-favorites" data-page="favorites">Favorites</a><a href="#page-compare" data-page="compare">Compare Firms <span class="badge">New</span></a><a href="#page-spreads" data-page="spreads">Spreads</a><a href="#page-payouts" data-page="payouts">Payouts</a></div></nav>
+  <nav class="navrow" id="headerMenu" aria-label="Main navigation"><div class="shell navlinks"><div class="mobile-nav-tools"><input class="searchbox" id="mobileSearch" type="search" placeholder="⌕  Search firms" aria-label="Search firms"><div class="market-switch mobile-market-switch" role="group" aria-label="Market scope"><button class="on" type="button" data-market="forex" aria-pressed="true">Forex</button><button type="button" data-market="futures" aria-pressed="false">Futures</button><button type="button" data-market="crypto" aria-pressed="false">Crypto</button></div></div><a class="active" href="#page-home" data-page="home">Home</a><a href="#page-offers" data-page="offers">Offers</a><a href="#page-best-sellers" data-page="best-sellers">Best Sellers</a><a href="#page-reviews" data-page="reviews">Reviews</a><a href="#page-favorites" data-page="favorites">Favorites</a><a href="#page-compare" data-page="compare">Compare Firms <span class="badge">New</span></a><a href="#page-payouts" data-page="payouts">Payouts</a></div></nav>
 </header>
 <main>
 <section class="market-empty-page" id="marketEmpty" aria-live="polite" hidden><div class="market-empty-card"><h1 id="marketEmptyTitle">Futures Prop Firms</h1><p id="marketEmptyMessage">Browse verified firm listings. Unavailable details are shown as an em dash.</p><div class="market-directory" id="marketDirectory"></div></div></section>
-<section class="hero" id="home" data-page-panel="home offers challenges best-sellers reviews favorites rules tutorials"><div class="shell"><h1 id="heroTitle">Compare the Best Prop Trading Firms of 2026</h1><p id="heroSubtitle">Trusted platform to compare prop trading firms using verified data and insights, including reviews, rules, and rankings.</p><div class="stats"><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.7 2.8 8.1 7 10 4.2-1.9 7-5.3 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-5"/></svg></span><span><b id="heroFirmCount">—</b><span id="heroFirmLabel">Firms Covered</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4h11a2 2 0 0 1 2 2v11"/><rect x="3" y="7" width="14" height="13" rx="2"/><path d="M7 11h6M7 15h4"/></svg></span><span><b id="heroChallengeCount">—</b><span id="heroChallengeLabel">Forex Challenges</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="m12 8 .9 1.8 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2L9.1 10l2-.3L12 8Z"/></svg></span><span><b id="heroOfferCount">—</b><span id="heroOfferLabel">Tracked Offers</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.4 3.8 5.4 3.8 9S14.5 18.6 12 21c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3Z"/></svg></span><span><b id="heroPayoutFirmCount">—</b><span id="heroPayoutLabel">Payout Firms</span></span></div></div></div></section>
-<section class="section" id="offers" data-page-panel="home challenges best-sellers reviews favorites rules payouts tutorials"><div class="shell feature-panels">
+<section class="hero" id="home" data-page-panel="home offers best-sellers reviews favorites rules tutorials"><div class="shell"><h1 id="heroTitle">Compare the Best Prop Trading Firms of 2026</h1><p id="heroSubtitle">Trusted platform to compare prop trading firms using verified data and insights, including reviews, rules, and rankings.</p><div class="stats"><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.7 2.8 8.1 7 10 4.2-1.9 7-5.3 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-5"/></svg></span><span><b id="heroFirmCount">—</b><span id="heroFirmLabel">Firms Covered</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span><span><b id="heroChallengeCount">90%</b><span id="heroChallengeLabel">Max Profit Split</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="m12 8 .9 1.8 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2L9.1 10l2-.3L12 8Z"/></svg></span><span><b id="heroOfferCount">—</b><span id="heroOfferLabel">Tracked Offers</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.4 3.8 5.4 3.8 9S14.5 18.6 12 21c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3Z"/></svg></span><span><b id="heroPayoutFirmCount">—</b><span id="heroPayoutLabel">Payout Firms</span></span></div></div></div></section>
+<section class="section" id="offers" data-page-panel="home best-sellers reviews favorites rules payouts tutorials"><div class="shell feature-panels">
   <article class="panel"><div class="panel-head"><h2>Exclusive Verified Forex Offers 🔥</h2><div class="arrows"><button class="arrow" data-offer-page="prev" aria-label="Previous offers">‹</button><button class="arrow" data-offer-page="next" aria-label="Next offers">›</button></div></div><div class="offer-grid" id="offerGrid"></div><div class="carousel-dots" id="offerDots" aria-label="Offer pages"></div></article>
   <article class="panel futures-panel" id="popularForex"><div class="panel-head"><h2>Most Popular Forex Prop Firms</h2></div><div class="futures-list" id="futuresList"></div></article>
 </div></section>
@@ -26,30 +28,16 @@
     <article class="offers-top-panel"><div class="offers-top-title"><h2>Exclusive Verified Forex Offers 🔥</h2><div class="arrows"><button class="arrow" type="button" data-offer-page="prev" aria-label="Previous offers">‹</button><button class="arrow" type="button" data-offer-page="next" aria-label="Next offers">›</button></div></div><div class="offers-top-grid" id="offersTopGrid"></div><div class="carousel-dots offers-top-dots" id="offersTopDots" aria-label="Offer pages"></div></article>
     <article class="offers-top-panel futures"><div class="offers-top-title"><h2>Most Popular Forex Prop Firms</h2></div><div class="offers-future-list" id="offersFuturesList"></div></article>
   </div>
-  <nav class="offers-page-tabs" aria-label="Comparison views"><button type="button" data-page="compare">Firms</button><button type="button" data-page="challenges">Challenges</button><button class="active" type="button" data-page="offers" aria-current="page">Offers</button><button type="button" data-page="reviews">Reviews</button></nav>
+  <nav class="offers-page-tabs" aria-label="Comparison views"><button type="button" data-page="compare">Firms</button><button class="active" type="button" data-page="offers" aria-current="page">Offers</button><button type="button" data-page="reviews">Reviews</button></nav>
   <div class="offers-controls"><div class="offers-subtabs" role="tablist" aria-label="Offer types"><button type="button" data-offer-filter="extra">🔥 Extra Account Offers</button><button class="on" type="button" data-offer-filter="exclusive">◆ Exclusive Offers</button><button type="button" data-offer-filter="all">◈ All Offers</button></div><label class="offers-search-wrap"><span aria-hidden="true">⌕</span><input class="offers-search" id="offersSearch" type="search" placeholder="Search" aria-label="Search offers"></label></div>
   <div class="offers-list-head"><h2 id="offersListTitle">Exclusive Offers <span>—</span></h2><span class="offers-live">Offer snapshot · Sep 21, 2026</span></div>
   <div class="offer-list" id="offersOfferList"></div>
 </div></section>
 
-<section class="challenges-page" id="challengesPage" data-page-panel="challenges" hidden><div class="challenge-shell">
-  <nav class="challenge-tabs" aria-label="Comparison views"><button type="button" data-page="compare">Firms</button><button class="active" type="button" aria-current="page">Challenges</button><button type="button" data-page="offers">Offers</button><button type="button" data-page="reviews">Reviews</button></nav>
-  <div class="challenge-toolbar">
-    <div class="challenge-filters">
-      <select class="challenge-select" id="challengeAsset" aria-label="Filter challenges by asset"><option value="all">Assets: All</option><option value="FX" selected>Assets: FX</option></select>
-      <select class="challenge-select" id="challengeSize" aria-label="Filter challenges by account size"><option value="all">Size: All</option><option value="100K">Size: 100K</option></select>
-      <select class="challenge-select" id="challengeSteps" aria-label="Filter challenges by steps"><option value="all">Steps: All</option><option value="2 Steps">Steps: 2 Steps</option></select>
-    </div>
-    <div class="challenge-count">Challenges <b id="challengeCount">62</b></div>
-    <div class="challenge-tools"><label class="visually-hidden" for="challengeSort">Sort challenges</label><select class="challenge-select challenge-sort" id="challengeSort"><option value="popularity">Sort: Popularity</option><option value="price">Sort: Price</option><option value="rating">Sort: Rating</option></select><input class="challenge-search" id="challengeSearch" type="search" placeholder="Search firm" aria-label="Search challenges by firm"></div>
-  </div>
-  <div class="challenge-snapshot"><span class="challenge-method">◇ Verified comparison snapshot</span><span>FX · $100K · 2 Steps · captured <strong>September 21, 2026</strong></span></div>
-  <div class="challenge-table" id="challengeTable"><div class="challenge-head"><span>Firm / Rating</span><span>Account Size</span><span>Steps</span><span>Profit Target</span><span>Daily Loss</span><span>Max Loss</span><span>Max Loss Type</span><span>PT:DD</span><span>Profit Split</span><span>Payout Freq.</span><span>Popularity</span><span>Price</span><span>Buy</span></div><div id="challengeRows"></div></div>
-  <nav class="challenge-pagination" id="challengePagination" aria-label="Challenge pages"></nav>
-</div></section>
+<!-- challengesPage removed -->
 
 <section class="reviews-page" id="reviewsPage" data-page-panel="reviews" hidden><div class="reviews-shell">
-  <nav class="reviews-tabs" aria-label="Comparison views"><button type="button" data-page="compare">Firms</button><button type="button" data-page="challenges">Challenges</button><button type="button" data-page="offers">Offers</button><button class="active" type="button" data-page="reviews" aria-current="page">Reviews</button></nav>
+  <nav class="reviews-tabs" aria-label="Comparison views"><button type="button" data-page="compare">Firms</button><button type="button" data-page="offers">Offers</button><button class="active" type="button" data-page="reviews" aria-current="page">Reviews</button></nav>
   <div class="review-source-toggle" role="tablist" aria-label="Review source"><button class="on" type="button" data-review-source="trustpilot" role="tab" aria-selected="true">Trustpilot</button><button type="button" data-review-source="pfl" role="tab" aria-selected="false">PFL Reviews</button></div>
   <div class="reviews-filter-row" id="trustpilotFilters"><div class="reviews-filters"><button class="reviews-filter" type="button" id="reviewFilterButton">☷ Filter</button></div><div class="review-slider"><label for="reviewAmount">Amount of Reviews</label><output id="reviewAmountValue" for="reviewAmount">0+</output><input id="reviewAmount" type="range" min="0" max="80000" step="1000" value="0"><span class="review-slider-max">80K+</span></div><div class="reviews-filters"><button class="reviews-filter on" type="button">All Reviews</button></div><button class="post-review" type="button" data-post-review>Post a Review</button></div>
   <div class="reviews-title-row"><div><h2>Prop Firm Reviews <span class="review-total-number">492092</span></h2><p id="reviewTotals">69 firms ranked by Trustpilot TrustScore</p></div><div class="reviews-title-tools"><button class="review-method" type="button" data-review-methodology>◇ How We Rank Firms</button></div></div>
@@ -59,7 +47,7 @@
 </div></section>
 
 <section class="section" id="rankings" data-page-panel="home best-sellers"><div class="shell">
-  <nav class="jump-tabs" aria-label="Comparison views"><button class="active" type="button" data-view="firms">Firms</button><button type="button" data-view="challenges">Challenges</button><button type="button" data-view="offers">Offers</button><button type="button" data-view="reviews">Reviews</button></nav>
+  <nav class="jump-tabs" aria-label="Comparison views"><button class="active" type="button" data-view="firms">Firms</button><button type="button" data-view="offers">Offers</button><button type="button" data-view="reviews">Reviews</button></nav>
   <div class="filter-row"><div class="filters"><span class="filter-btn" aria-hidden="true">☷ Filter</span><button class="filter-btn on" data-filter="popular">Popular</button><button class="filter-btn" id="favoriteFilter" data-filter="favorite">♡ Favorite <span id="favTotal">0</span>/1</button><button class="filter-btn" data-filter="new">New</button><button class="filter-btn" data-filter="all">All</button></div><div class="filter-meta"><button class="verify-pill" type="button" data-methodology>◇ How We Verify and Rank Firms</button><span class="snapshot">● Snapshot · Sep 21, 2026</span></div></div>
   <div class="rank-head" id="rankHead"><button data-sort="favorites">Popularity</button><button data-sort="rank">Firm · Rank</button><button data-sort="reviews">Reviews</button><span>Country</span><button data-sort="years">Years</button><span>Assets</span><span>Platforms</span><button data-sort="allocation">Max allocations</button><span>Promo</span><span>Actions</span></div>
   <div id="rankList"></div><a class="view-all" href="#rankings" id="viewAll">View All</a>
@@ -71,18 +59,6 @@
   <div class="info-grid"><section class="info-panel"><h2>Comparison methodology</h2><p>Trustpilot values use the site’s external rating snapshot. Challenge terms use the lowest-priced tracked 100K, two-step entry for each selected firm. LENZ offers come from the current offer catalog. Payout figures use matching firm rows from the embedded payout snapshot; unavailable values remain an em dash.</p></section><section class="info-panel"><h2>Before choosing a firm</h2><ul><li>Confirm the current rules and eligibility with the firm.</li><li>Compare drawdown type as well as the headline price.</li><li>Treat payout volume as activity data, not a quality guarantee.</li></ul></section></div>
   <section class="page-faq"><h2>Compare Firms FAQ</h2><details><summary>Which challenge does the comparison use?</summary><p>It uses the lowest-priced 100K, two-step challenge currently present in the site’s challenge dataset for that firm.</p></details><details><summary>Why does a field show an em dash?</summary><p>The site does not have a verified value for that firm and field. Missing values are never estimated.</p></details><details><summary>Are payout totals a guarantee of future payouts?</summary><p>No. They show tracked historical activity for the displayed snapshot and do not predict future results.</p></details><details><summary>Can I compare more than four firms?</summary><p>You can compare four at a time. Change any selector to review another firm without reloading the page.</p></details></section>
   <section class="static-subscribe"><span>Research updates</span><h2>Subscribe for new Forex comparison updates</h2><p>Email subscription delivery is not available on this page yet.</p><span class="subscribe-state" aria-disabled="true">Subscriptions unavailable</span></section>
-</div></section>
-
-<section class="spreads-page" id="spreadsPage" data-page-panel="spreads" hidden><div class="spreads-shell">
-  <header class="page-intro"><h1>Best Forex Prop Firm Spreads</h1><p>Compare the firms and platforms covered by Prop Firm Lenz. Compare verified raw spreads and typical execution pricing across leading prop firms and trading platforms (cTrader, MT5, DXtrade).</p></header>
-  <div class="spreads-toolbar"><div class="spreads-filters"><span class="spread-filter">Filter</span><span class="spread-filter on">Forex</span></div><input class="spreads-search" id="spreadsSearch" type="search" placeholder="Search firms" aria-label="Search spread firms"></div>
-  <p class="spreads-count">Forex firms <b id="spreadsCount">—</b></p>
-  <div class="spreads-table"><div class="spreads-head"><span>Rank</span><span>Firm</span><span>Avg. Spread</span><span>EUR/USD</span><span>GBP/USD</span><span>USD/JPY</span><span>XAU/USD</span><span>US30</span><span>NAS100</span><span>Platforms</span><span>Trustpilot</span><span>Visit</span></div><div id="spreadsRows"></div></div>
-  <p class="spread-method-note"><strong>Spread status:</strong> not tracked yet. No spread figure on this page is copied, inferred, or estimated.</p>
-  <div class="info-grid"><section class="info-panel"><h2>How to read spread data</h2><p>A spread is the difference between the bid and ask price. It can vary by instrument, platform, account type, liquidity, and market conditions. Comparable measurements require a consistent observation window and account setup.</p></section><section class="info-panel"><h2>Methodology</h2><p>Firm names, logos, platforms, and Trustpilot values come from the site’s existing datasets. Spread cells remain “Not tracked yet” until a verified, consistently measured dataset is available. Rank follows the directory order and is not a spread-performance ranking.</p></section></div>
-  <section class="additional-info"><div class="review-info-icon" aria-hidden="true">i</div><div><h2>Additional Information</h2><p>Low advertised spreads do not describe total trading cost on their own. Commissions, slippage, execution, instrument hours, and each firm’s current rules can materially change the effective cost.</p></div></section>
-  <section class="page-faq"><h2>Spreads FAQ</h2><details><summary>Why are all spread cells blank?</summary><p>Prop Firm Lenz does not yet have a verified spread dataset. The em dash is an honest unavailable state, not a zero spread.</p></details><details><summary>Are the platform listings verified?</summary><p>They are rendered from the platform fields already stored for each Forex firm in the site’s directory dataset.</p></details><details><summary>Can spreads change during the day?</summary><p>Yes. Spreads can widen around news, session changes, rollover, and lower-liquidity periods.</p></details><details><summary>Does the lowest spread mean the best firm?</summary><p>No. Compare total cost, challenge rules, drawdown, platform access, reviews, and payout history together.</p></details></section>
-  <section class="static-subscribe"><span>Research updates</span><h2>Subscribe for new Forex spread research</h2><p>Email subscription delivery is not available on this page yet.</p><span class="subscribe-state" aria-disabled="true">Subscriptions unavailable</span></section>
 </div></section>
 
 <section class="payout-hub" id="payouts" data-page-panel="payouts" hidden><div class="shell payout-shell">
@@ -144,50 +120,46 @@
     </a>
   </article>
 
-  <!-- 02 Challenge Comparison -->
-  <article class="resource resource-card-3d" id="resCardChallenges">
+  <!-- 02 Verified Deals & Promos -->
+  <article class="resource resource-card-3d" id="resCardOffers">
     <div class="res-card-glow"></div>
     <div class="res-card-top">
       <div class="res-badge-3d">
         <span class="num">02</span>
-        <span class="label">Evaluation Engine</span>
+        <span class="label">Discount Vault</span>
       </div>
       <div class="res-visual-3d" aria-hidden="true">
         <svg class="res-svg-3d" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="resGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#396DFA"/>
-              <stop offset="100%" stop-color="#1EE7FC"/>
+              <stop offset="0%" stop-color="#1EE7FC"/>
+              <stop offset="50%" stop-color="#396DFA"/>
+              <stop offset="100%" stop-color="#7021FC"/>
             </linearGradient>
             <filter id="resGlow2" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="3" result="blur"/>
               <feComposite in="SourceGraphic" in2="blur" operator="over"/>
             </filter>
           </defs>
-          <polygon points="20,44 36,36 36,60 20,68" fill="rgba(57,109,250,0.25)" stroke="#396DFA" stroke-width="1.2"/>
-          <polygon points="36,36 52,44 52,68 36,60" fill="rgba(30,231,252,0.18)" stroke="#1EE7FC" stroke-width="1.2"/>
-          <polygon points="20,44 36,36 52,44 36,52" fill="rgba(30,231,252,0.3)" stroke="#1EE7FC" stroke-width="1.2"/>
-          <polygon points="48,28 64,20 64,52 48,60" fill="rgba(112,33,252,0.3)" stroke="#7021FC" stroke-width="1.2"/>
-          <polygon points="64,20 80,28 80,60 64,52" fill="rgba(57,109,250,0.25)" stroke="#396DFA" stroke-width="1.2"/>
-          <polygon points="48,28 64,20 80,28 64,36" fill="rgba(57,109,250,0.4)" stroke="#396DFA" stroke-width="1.2"/>
-          <path d="M 28 42 L 50 24 L 72 12" stroke="url(#resGrad2)" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 2"/>
-          <circle cx="72" cy="12" r="5" fill="#1EE7FC" filter="url(#resGlow2)"/>
-          <circle cx="72" cy="12" r="2" fill="#fff"/>
-          <polygon points="72,5 77,10 72,15 67,10" fill="rgba(30,231,252,0.4)"/>
+          <rect x="22" y="24" width="56" height="34" rx="8" fill="rgba(30,231,252,0.12)" stroke="url(#resGrad2)" stroke-width="1.5"/>
+          <path d="M36 24 V18 A14 14 0 0 1 64 18 V24" fill="none" stroke="#1EE7FC" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="50" cy="41" r="5" fill="#1EE7FC" filter="url(#resGlow2)"/>
+          <circle cx="50" cy="41" r="2" fill="#fff"/>
+          <path d="M50 46 V51" stroke="#1EE7FC" stroke-width="1.8" stroke-linecap="round"/>
         </svg>
       </div>
     </div>
     <div class="res-card-body">
-      <h3>Challenge Comparison</h3>
-      <p id="resourceChallengeDesc">Compare the 62 tracked Forex challenge records by account size, steps, targets, loss limits, payout frequency, and price.</p>
+      <h3>Exclusive Deals &amp; Promos</h3>
+      <p id="resourceChallengeDesc">Unlock verified discount codes up to 30% OFF and fee cashback with promo code LENZ across top-rated prop firms.</p>
       <div class="res-chips">
-        <span class="res-chip">62 Challenges</span>
-        <span class="res-chip">1-Step &amp; 2-Step</span>
-        <span class="res-chip">Drawdown Limits</span>
+        <span class="res-chip">Up to 30% OFF</span>
+        <span class="res-chip">Code: LENZ</span>
+        <span class="res-chip">Verified Deals</span>
       </div>
     </div>
-    <a class="res-btn-3d" href="#page-challenges" data-page="challenges">
-      <span>Compare Challenges</span>
+    <a class="res-btn-3d" href="#page-offers" data-page="offers">
+      <span>Browse Exclusive Offers</span>
       <span class="arrow">→</span>
     </a>
   </article>
@@ -244,8 +216,8 @@
 <section class="section" hidden><div class="shell"><div class="newsletter"><span class="kicker">RESEARCH UPDATES</span><h2>Subscribe for new Forex comparison updates</h2><form class="subscribe" id="subscribe"><input type="email" name="email" placeholder="Email address" aria-label="Email address" required><button type="submit">Subscribe</button></form><p class="form-note" aria-live="polite"></p></div></div></section>
 </main>
 <footer id="footer"><div class="shell"><a class="brand-lock footer-brand" href="#page-home" data-page="home"><img src="assets/logo.png" alt=""><span>Prop Firm Lenz</span></a><div class="footer-main">
-  <div class="footer-col"><h3>EXPLORE</h3><a href="#page-home" data-page="home">Home</a><a href="#page-offers" data-page="offers">Offers</a><a href="#page-challenges" data-page="challenges">Challenges</a><a href="#page-best-sellers" data-page="best-sellers">Best Sellers</a></div>
-  <div class="footer-col"><h3>RESEARCH</h3><a href="#page-reviews" data-page="reviews">Reviews</a><a href="#page-favorites" data-page="favorites">Favorites</a><a href="#page-compare" data-page="compare">Compare Firms</a><a href="#page-spreads" data-page="spreads">Spreads</a></div>
+  <div class="footer-col"><h3>EXPLORE</h3><a href="#page-home" data-page="home">Home</a><a href="#page-offers" data-page="offers">Offers</a><a href="#page-best-sellers" data-page="best-sellers">Best Sellers</a></div>
+  <div class="footer-col"><h3>RESEARCH</h3><a href="#page-reviews" data-page="reviews">Reviews</a><a href="#page-favorites" data-page="favorites">Favorites</a><a href="#page-compare" data-page="compare">Compare Firms</a></div>
   <div class="footer-col"><h3>PAYOUT DATA</h3><a href="#page-payouts" data-page="payouts">Overview</a><a href="#page-payouts" data-payout-view="statistics">Statistics</a><a href="#page-payouts" data-payout-view="weekly">Weekly</a><a href="#page-payouts" data-payout-view="monthly">Monthly</a></div>
   <div class="footer-col"><h3>PAYOUT RESEARCH</h3><a href="#page-payouts" data-payout-view="records">Records</a><a href="#page-payouts" data-payout-view="methodology">Methodology</a><a href="#page-payouts" data-payout-view="about">About</a></div>
 </div>
