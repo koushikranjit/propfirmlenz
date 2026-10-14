@@ -731,3 +731,337 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
 .resource-card-3d:hover .res-btn-3d .arrow{transform:translateX(5px)}
 #offers .future{grid-template-columns:28px 58px minmax(0,1fr)!important}
 @media(max-width:960px){.resource-grid{grid-template-columns:1fr!important;gap:16px!important}.resource-card-3d{padding:20px 18px!important}}
+
+/* ========================================================
+   HERO & OFFERS SIZE ADJUSTMENTS
+   ======================================================== */
+
+/* 1. Hero Section compact & modern sizing */
+.hero {
+  padding: 36px 0 20px !important;
+}
+.hero h1, #heroTitle {
+  font-family: Inter, system-ui, -apple-system, sans-serif !important;
+  font-size: clamp(26px, 2.7vw, 38px) !important;
+  font-weight: 800 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.035em !important;
+  color: #fff !important;
+  max-width: 900px !important;
+  margin: 0 auto 10px !important;
+  text-shadow: 0 0 35px rgba(57, 109, 250, 0.28) !important;
+}
+.hero p, #heroSubtitle {
+  font-family: Inter, system-ui, -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+  max-width: 680px !important;
+  margin: 0 auto 14px !important;
+  color: #9b9ba8 !important;
+}
+.stats {
+  margin-top: 14px !important;
+  gap: 8px !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+}
+.stat {
+  min-height: 32px !important;
+  padding: 4px 14px 4px 7px !important;
+  gap: 8px !important;
+  border-radius: 999px !important;
+}
+.stat-icon {
+  width: 24px !important;
+  height: 24px !important;
+  flex: 0 0 24px !important;
+}
+.stat-icon svg {
+  width: 13px !important;
+  height: 13px !important;
+}
+.stat b {
+  font-size: 13px !important;
+  font-weight: 800 !important;
+}
+.stat span {
+  font-size: 11px !important;
+}
+
+/* 2. Offers Section size adjustments */
+#offers.section {
+  padding: 24px 0 32px !important;
+}
+.feature-panels {
+  display: grid !important;
+  grid-template-columns: 1.68fr 0.92fr !important;
+  gap: 16px !important;
+  align-items: stretch !important;
+}
+.panel {
+  padding: 16px 18px 18px !important;
+  border-radius: 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.panel-head {
+  margin-bottom: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+}
+.panel-head h2 {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 !important;
+  color: #fff !important;
+}
+.arrows {
+  display: flex !important;
+  gap: 6px !important;
+}
+.arrow {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  font-size: 15px !important;
+  display: grid !important;
+  place-items: center !important;
+}
+
+/* 3. Offer cards (left 6 cards) proportional sizing */
+.offer-grid, #offerGrid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  flex: 1 !important;
+}
+#offers .offer {
+  display: grid !important;
+  grid-template-columns: 38px minmax(0, 1fr) 82px !important;
+  align-items: center !important;
+  gap: 7px !important;
+  min-height: 74px !important;
+  max-height: 82px !important;
+  padding: 10px 8px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: linear-gradient(145deg, #15151b, #0f0f13) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+  transition: all 0.2s ease !important;
+}
+#offers .offer:hover {
+  border-color: rgba(30, 231, 252, 0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5), 0 0 16px rgba(30, 231, 252, 0.12) !important;
+}
+#offers .offer .logo-wrap {
+  width: 38px !important;
+  height: 38px !important;
+  flex: 0 0 38px !important;
+}
+#offers .offer .firm-logo {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 9px !important;
+  padding: 3px !important;
+  object-fit: contain !important;
+}
+#offers .offer .firm-initial:not([hidden]) {
+  display: grid !important;
+  place-items: center !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 9px !important;
+  padding: 0 !important;
+}
+#offers .offer strong {
+  display: block !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.015em !important;
+  color: #fff !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin: 0 0 2px !important;
+}
+#offers .offer .rating {
+  display: flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+  font-size: 10px !important;
+  color: #1EE7FC !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+#offers .offer .rating .trustpilot-line {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  font-size: 10px !important;
+  color: #1EE7FC !important;
+}
+#offers .offer .promo {
+  min-width: 82px !important;
+  width: 82px !important;
+  border-radius: 7px !important;
+  border: 1px solid rgba(30, 231, 252, 0.35) !important;
+  overflow: hidden !important;
+  text-align: center !important;
+}
+#offers .offer .promo .pct {
+  padding: 5px 3px !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  background: var(--grad) !important;
+  color: #fff !important;
+}
+#offers .offer .copy {
+  padding: 4px 3px !important;
+  font-size: 10.5px !important;
+  font-weight: 800 !important;
+  background: #09090c !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+#offers .offer .copy:hover {
+  color: #1EE7FC !important;
+  background: #071B25 !important;
+}
+#offers .carousel-dots {
+  margin-top: 10px !important;
+}
+
+/* 4. Most Popular Forex Prop Firms (right panel rows) */
+.futures-panel, #popularForex {
+  padding: 16px 18px 18px !important;
+}
+.futures-list, #futuresList {
+  display: grid !important;
+  grid-template-rows: repeat(3, 1fr) !important;
+  gap: 10px !important;
+  flex: 1 !important;
+}
+#offers .future {
+  display: grid !important;
+  grid-template-columns: 26px 42px minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-height: 74px !important;
+  max-height: 82px !important;
+  padding: 10px 14px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: linear-gradient(145deg, #15151b, #0f0f13) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+  transition: all 0.2s ease !important;
+}
+#offers .future:hover {
+  border-color: rgba(112, 33, 252, 0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5), 0 0 16px rgba(112, 33, 252, 0.12) !important;
+}
+#offers .future .medal {
+  width: 24px !important;
+  height: 24px !important;
+  display: grid !important;
+  place-items: center !important;
+  flex: 0 0 24px !important;
+}
+#offers .future .medal svg {
+  width: 22px !important;
+  height: 22px !important;
+}
+#offers .future .logo-wrap {
+  width: 42px !important;
+  height: 42px !important;
+  flex: 0 0 42px !important;
+}
+#offers .future .firm-logo {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 10px !important;
+  padding: 4px !important;
+  object-fit: contain !important;
+}
+#offers .future .firm-initial:not([hidden]) {
+  display: grid !important;
+  place-items: center !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 10px !important;
+  padding: 0 !important;
+}
+#offers .future strong {
+  display: block !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  color: #fff !important;
+  margin: 0 0 3px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+#offers .future .ratepill {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  font-size: 11.5px !important;
+  color: #7CF2FF !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 5. Jump tabs below offers */
+.jump-tabs {
+  margin: 24px 0 16px !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+.jump-tabs button {
+  padding: 8px 20px !important;
+  border-radius: 99px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 1024px) {
+  .feature-panels {
+    grid-template-columns: 1fr !important;
+  }
+  .offer-grid, #offerGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 640px) {
+  .offer-grid, #offerGrid {
+    grid-template-columns: 1fr !important;
+  }
+  #offers .offer {
+    grid-template-columns: 38px minmax(0, 1fr) 80px !important;
+  }
+}
