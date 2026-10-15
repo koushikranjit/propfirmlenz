@@ -2557,6 +2557,483 @@ footer#footer .bottom-copy {
   }
 }
 
+/* ========================================================
+   3D ANIMATED VIDEOS SECTION (PFL CINEMA STUDIO)
+   ======================================================== */
+.videos-section-3d {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 72px 0 54px !important;
+}
+.videos-section-3d::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 25%;
+  width: 550px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(30, 231, 252, 0.08) 0%, rgba(112, 33, 252, 0.04) 60%, transparent 80%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+.videos-header-3d {
+  position: relative;
+  z-index: 1;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  margin-bottom: 28px !important;
+  gap: 20px !important;
+}
+.videos-badge-wrap {
+  margin-bottom: 12px !important;
+}
+.videos-badge-3d {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 14px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, rgba(30, 231, 252, 0.12), rgba(112, 33, 252, 0.15)) !important;
+  border: 1px solid rgba(30, 231, 252, 0.35) !important;
+  box-shadow: 0 0 20px rgba(30, 231, 252, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  color: #1EE7FC !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+.badge-pulse-dot {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: #ff334b !important;
+  box-shadow: 0 0 10px #ff334b !important;
+  animation: liveDotPulse 1.8s infinite ease-in-out !important;
+}
+@keyframes liveDotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.4; }
+}
+.videos-main-title {
+  font-size: clamp(26px, 3.2vw, 38px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  margin: 0 0 8px !important;
+  background: linear-gradient(135deg, #ffffff 40%, #1EE7FC 95%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 35px rgba(30, 231, 252, 0.2) !important;
+}
+.videos-main-sub {
+  color: #9b9ba8 !important;
+  font-size: 14.5px !important;
+  margin: 0 !important;
+  max-width: 620px !important;
+  line-height: 1.5 !important;
+}
+.arrow-3d {
+  background: linear-gradient(145deg, rgba(25, 28, 40, 0.9), rgba(14, 16, 24, 0.95)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  width: 44px !important;
+  height: 44px !important;
+  font-size: 20px !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  display: grid !important;
+  place-items: center !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.arrow-3d:hover {
+  border-color: #1EE7FC !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(30, 231, 252, 0.35) !important;
+  transform: translateY(-2px) scale(1.05) !important;
+  color: #1EE7FC !important;
+}
+
+/* 3D Rail Grid */
+.video-rail-3d-wrap {
+  position: relative !important;
+  z-index: 1 !important;
+  perspective: 1400px !important;
+  margin-bottom: 22px !important;
+}
+.video-rail-3d {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+}
+
+/* 3D Video Card */
+.video-card-3d {
+  position: relative !important;
+  background: linear-gradient(155deg, rgba(20, 23, 34, 0.88), rgba(11, 13, 20, 0.97)) padding-box,
+              linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(30, 231, 252, 0.2) 40%, rgba(112, 33, 252, 0.25) 100%) border-box !important;
+  border: 1px solid transparent !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
+  transform-style: preserve-3d !important;
+}
+.video-card-3d:hover {
+  transform: translateY(-8px) scale(1.02) perspective(1000px) rotateX(2.5deg) rotateY(-1.2deg) !important;
+  border-color: rgba(30, 231, 252, 0.45) !important;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.65), 0 0 35px rgba(30, 231, 252, 0.22) !important;
+}
+.video-card-glow {
+  position: absolute !important;
+  inset: -2px !important;
+  border-radius: 20px !important;
+  background: radial-gradient(circle at 50% 0%, rgba(30, 231, 252, 0.25), rgba(112, 33, 252, 0) 70%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.35s ease !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+.video-card-3d:hover .video-card-glow {
+  opacity: 1 !important;
+}
+
+/* Video Thumbnail Wrap & Facade */
+.video-thumb-wrap {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  overflow: hidden !important;
+  background: #08090d !important;
+  border-radius: 16px 16px 0 0 !important;
+}
+.video-thumb-wrap .video-facade {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  cursor: pointer !important;
+  overflow: hidden !important;
+}
+.video-thumb-wrap img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease !important;
+}
+.video-card-3d:hover .video-thumb-wrap img {
+  transform: scale(1.08) !important;
+  filter: brightness(1.06) !important;
+}
+.video-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.65) 100%) !important;
+  transition: background 0.3s ease !important;
+}
+.video-card-3d:hover .video-overlay {
+  background: linear-gradient(180deg, rgba(30, 231, 252, 0.1) 0%, rgba(5, 7, 12, 0.75) 100%) !important;
+}
+.video-tag-pill {
+  position: absolute !important;
+  top: 10px !important;
+  left: 10px !important;
+  padding: 4px 10px !important;
+  border-radius: 8px !important;
+  background: rgba(13, 17, 26, 0.85) !important;
+  border: 1px solid rgba(30, 231, 252, 0.4) !important;
+  color: #1EE7FC !important;
+  font-size: 10.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35) !important;
+  z-index: 2 !important;
+}
+.video-duration-pill {
+  position: absolute !important;
+  bottom: 10px !important;
+  right: 10px !important;
+  padding: 3px 8px !important;
+  border-radius: 6px !important;
+  background: rgba(0, 0, 0, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #fff !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  z-index: 2 !important;
+}
+
+/* 3D Animated Floating Play Button */
+.video-play-3d {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 58px !important;
+  height: 58px !important;
+  display: grid !important;
+  place-items: center !important;
+  z-index: 3 !important;
+  pointer-events: none !important;
+}
+.video-play-pulse {
+  position: absolute !important;
+  inset: -6px !important;
+  border-radius: 50% !important;
+  background: rgba(30, 231, 252, 0.4) !important;
+  animation: videoPulse 2.2s infinite ease-out !important;
+}
+@keyframes videoPulse {
+  0% { transform: scale(0.9); opacity: 0.85; }
+  60% { transform: scale(1.4); opacity: 0; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+.video-play-core {
+  position: relative !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle at 35% 35%, #1EE7FC 0%, #396DFA 55%, #7021FC 100%) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 20px rgba(30, 231, 252, 0.5), inset 0 2px 2px rgba(255, 255, 255, 0.4) !important;
+  display: grid !important;
+  place-items: center !important;
+  color: #ffffff !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+}
+.video-facade:hover .video-play-core {
+  transform: scale(1.15) rotate(6deg) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 32px rgba(30, 231, 252, 0.8), inset 0 2px 3px rgba(255, 255, 255, 0.6) !important;
+}
+.video-player-frame {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  background: #000 !important;
+}
+
+/* Video Card Body */
+.video-body-3d {
+  padding: 16px 16px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  flex: 1 !important;
+  z-index: 1 !important;
+}
+.video-kicker-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  font-size: 11px !important;
+}
+.video-kicker-tag {
+  color: #a0a0b2 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+.video-views {
+  color: #7b7b8a !important;
+  font-size: 11px !important;
+}
+.video-title-3d {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  transition: color 0.2s ease !important;
+}
+.video-card-3d:hover .video-title-3d {
+  color: #1EE7FC !important;
+}
+.video-footer-row {
+  margin-top: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 10px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+.video-learn-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  color: #1EE7FC !important;
+  transition: transform 0.2s ease, color 0.2s ease !important;
+}
+.video-card-3d:hover .video-learn-btn {
+  transform: translateX(4px) !important;
+  color: #fff !important;
+}
+.video-learn-btn .arrow-icon {
+  font-size: 10px !important;
+}
+.video-hd-pill {
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  color: #f28a2e !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  background: rgba(242, 138, 46, 0.12) !important;
+  border: 1px solid rgba(242, 138, 46, 0.25) !important;
+}
+
+/* 3D VIP YouTube Banner */
+.yt-strip-3d {
+  position: relative !important;
+  margin-top: 24px !important;
+  border-radius: 18px !important;
+  background: linear-gradient(145deg, rgba(22, 25, 36, 0.88), rgba(13, 15, 22, 0.95)) padding-box,
+              linear-gradient(135deg, rgba(255, 51, 75, 0.3), rgba(30, 231, 252, 0.15) 50%, rgba(112, 33, 252, 0.3)) border-box !important;
+  border: 1px solid transparent !important;
+  padding: 16px 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  overflow: hidden !important;
+}
+.yt-strip-glow {
+  position: absolute !important;
+  left: -80px !important;
+  top: -40px !important;
+  width: 240px !important;
+  height: 160px !important;
+  background: radial-gradient(circle, rgba(255, 51, 75, 0.18) 0%, transparent 70%) !important;
+  filter: blur(35px) !important;
+  pointer-events: none !important;
+}
+.yt-strip-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  z-index: 1 !important;
+}
+.yt-badge-3d {
+  position: relative !important;
+  width: 48px !important;
+  height: 36px !important;
+  border-radius: 10px !important;
+  background: linear-gradient(135deg, #ff1a38, #cc001a) !important;
+  box-shadow: 0 6px 18px rgba(255, 26, 56, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+  display: grid !important;
+  place-items: center !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  flex-shrink: 0 !important;
+}
+.yt-info strong {
+  display: block !important;
+  font-size: 14.5px !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  margin-bottom: 2px !important;
+}
+.yt-info span {
+  font-size: 12px !important;
+  color: #9b9ba8 !important;
+}
+.yt-subscribe-btn-3d {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 11px 22px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #1EE7FC 0%, #396DFA 50%, #7021FC 100%) !important;
+  box-shadow: 0 6px 20px rgba(30, 231, 252, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  overflow: hidden !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  z-index: 1 !important;
+}
+.yt-subscribe-btn-3d:hover {
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 10px 28px rgba(30, 231, 252, 0.5), 0 0 20px rgba(112, 33, 252, 0.4) !important;
+}
+.btn-shine {
+  position: absolute !important;
+  top: -50% !important;
+  left: -60% !important;
+  width: 40% !important;
+  height: 200% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent) !important;
+  transform: rotate(25deg) !important;
+  animation: btnSweep 3.5s infinite !important;
+}
+@keyframes btnSweep {
+  0% { left: -60%; }
+  25% { left: 140%; }
+  100% { left: 140%; }
+}
+.btn-content {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+.arrow-3d-mark {
+  transition: transform 0.2s ease !important;
+}
+.yt-subscribe-btn-3d:hover .arrow-3d-mark {
+  transform: translateX(4px) !important;
+}
+
+/* Responsive Videos Section */
+@media (max-width: 1024px) {
+  .video-rail-3d {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+}
+@media (max-width: 640px) {
+  .video-rail-3d {
+    grid-template-columns: 1fr !important;
+  }
+  .videos-header-3d {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .yt-strip-3d {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+  }
+  .yt-subscribe-btn-3d {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
 </style>
 </head>
 <body data-market-theme="forex">
@@ -2631,7 +3108,61 @@ footer#footer .bottom-copy {
 <section class="payout-detail-page" id="payoutDetailPage" data-page-panel="payout-detail" hidden><div class="payout-detail-shell"><button class="payout-detail-back" type="button" data-page="payouts" aria-label="Back to payouts">←</button><div id="payoutDetailContent"></div></div></section>
 
 <section class="firm-profile-page" id="firmProfilePage" data-page-panel="firm-profile" hidden><div class="firm-profile-shell"><div id="firmProfileContent" aria-live="polite"></div></div></section>
-<section class="section" id="videos" data-page-panel="home tutorials"><div class="shell"><div class="section-title"><div><h2>Watch our Latest Videos</h2><p>Prop trading insights, firm reviews, and practical explainers.</p></div><div class="arrows"><button class="arrow" id="videoPrev" aria-label="Previous videos">‹</button><button class="arrow" id="videoNext" aria-label="Next videos">›</button></div></div><div class="video-rail" id="videoRail"></div><div class="carousel-dots" id="videoDots" aria-label="Video pages"></div><div class="yt-strip"><span class="yt">▶</span><span><strong>YouTube</strong></span><a class="firm-action" href="https://www.youtube.com/watch?v=fbU-zF3Viok" target="_blank" rel="noopener noreferrer">All Videos</a></div></div></section>
+<section class="section videos-section-3d" id="videos" data-page-panel="home tutorials">
+  <div class="shell">
+    <div class="videos-header-3d">
+      <div class="videos-header-left">
+        <div class="videos-badge-wrap">
+          <span class="videos-badge-3d">
+            <span class="badge-pulse-dot" aria-hidden="true"></span>
+            <span class="badge-icon">🎬</span>
+            <span class="badge-text">PFL Media Studio · Verified Masterclasses</span>
+          </span>
+        </div>
+        <h2 class="videos-main-title">Watch our Latest Videos</h2>
+        <p class="videos-main-sub">Prop trading insights, firm evaluation rules, live payout audits, and strategy breakdowns.</p>
+      </div>
+      <div class="videos-controls-3d">
+        <div class="arrows">
+          <button class="arrow arrow-3d" id="videoPrev" aria-label="Previous videos">‹</button>
+          <button class="arrow arrow-3d" id="videoNext" aria-label="Next videos">›</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="video-rail-3d-wrap">
+      <div class="video-rail video-rail-3d" id="videoRail"></div>
+    </div>
+    
+    <div class="carousel-dots video-dots-3d" id="videoDots" aria-label="Video pages"></div>
+    
+    <div class="yt-strip-3d">
+      <div class="yt-strip-glow" aria-hidden="true"></div>
+      <div class="yt-strip-left">
+        <div class="yt-badge-3d">
+          <span class="yt-play-icon">▶</span>
+          <span class="yt-live-glow" aria-hidden="true"></span>
+        </div>
+        <div class="yt-info">
+          <strong>Prop Firm Lenz Studio</strong>
+          <span>Weekly Video Breakdowns · 28K+ Traders · Free Discord Alpha</span>
+        </div>
+      </div>
+      <div class="yt-strip-right">
+        <a class="yt-subscribe-btn-3d" href="https://www.youtube.com/watch?v=fbU-zF3Viok" target="_blank" rel="noopener noreferrer">
+          <span class="btn-shine" aria-hidden="true"></span>
+          <span class="btn-content">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            <span>Watch All Videos</span>
+            <span class="arrow-3d-mark">→</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section" id="resources" data-page-panel="home rules"><div class="shell"><div class="section-title"><div><h2>Tools and Resources</h2><p>Practical interactive suites and data models to narrow your search.</p></div></div><div class="resource-grid">
   <!-- 01 Forex Firm Lists -->
   <article class="resource resource-card-3d" id="resCardFirms">
@@ -5190,7 +5721,12 @@ const trustpilotFor=name=>TRUSTPILOT_FIRMS.find(f=>f.name===name)||null;
 const firmInMarket=(name,category=market)=>firmHasCategory(trustpilotFor(name),category);
 const trustpilotBadge=name=>{const f=trustpilotFor(name),count=f?.trustpilotReviews==null?null:Number(f.trustpilotReviews);return f&&f.trustpilotRating!=null?`<span class="trustpilot-line">★ ${f.trustpilotRating.toFixed(1)} · ${count==null?'—':count.toLocaleString()} reviews</span>`:''};
 const forexOffers=()=>OFFER_CATALOG.filter(x=>firmInMarket(x.name));
-const videos=[['YouTube video 1','q3fx_50NZDo'],['YouTube video 2','9rNUYpiTRNQ'],['YouTube video 3','T6WXeMK3jZg'],['YouTube video 4','mGALw2X0sWQ']];
+const videos=[
+  { id: 'q3fx_50NZDo', title: 'Best Prop Firms of 2026: Complete Comparison & Rules Breakdown', tag: 'Deep Dive', duration: '14:22', views: '48.2K views', category: 'Comparison' },
+  { id: '9rNUYpiTRNQ', title: 'How to Pass Any Prop Firm Challenge: Drawdown Secrets & Risk Guide', tag: 'Strategy', duration: '18:45', views: '92.6K views', category: 'Rules & Risk' },
+  { id: 'T6WXeMK3jZg', title: 'Top 5 Forex Prop Firms With Fastest Verified On-Chain Payouts', tag: 'Payout Audit', duration: '12:10', views: '64.1K views', category: 'Payouts' },
+  { id: 'mGALw2X0sWQ', title: 'Futures vs Forex Prop Trading: Which Challenge Should You Buy?', tag: 'Masterclass', duration: '16:30', views: '38.5K views', category: 'Analysis' }
+];
 const faqs=[
 ['Which Forex prop firm is the best?','The best fit depends on your trading style, challenge rules, platform needs, and payout preferences. Compare the verified fields together rather than relying on one headline score.'],
 ['What should I compare in a Forex challenge?','Compare the entry price, profit target, daily and maximum loss limits, drawdown type, profit split, payout frequency, and supported platform.'],
@@ -5241,8 +5777,44 @@ function rankCard(f){const hasCountry=!!f.country,assets=(f.assets||[]).filter(a
 function altCard(f,type){const heart=`<button class="favorite ${favorites.has(f.name)?'on':''}" type="button" data-favorite="${safe(f.name)}" aria-label="Favorite ${safe(f.name)}">${favorites.has(f.name)?'♥':'♡'}</button>`;if(type==='challenges'){const assets=(f.assets||[]).filter(a=>market==='forex'?!['Crypto','Futures'].includes(a):a===marketLabel());return `<article class="alt-card">${logo(f.name)}<div><h3>${safe(f.name)}</h3><p>Rating ${f.rating==null?'—':`${f.rating} / 5`}</p><p>${f.maxAllocation?`Maximum allocation ${safe(f.maxAllocation)}`:'Maximum allocation —'}</p></div>${promo(f.promoPct)}<div class="taglist wide">${assets.length?assets.map(a=>`<span class="asset-tag">${safe(a)}</span>`).join(''):'<span class="asset-tag">Challenge data unavailable</span>'}</div></article>`}if(type==='reviews')return `<article class="alt-card">${logo(f.name)}<div><h3>${safe(f.name)}</h3>${trustpilotBadge(f.name)}</div>${heart}<div class="wide">${promo(f.promoPct)}</div></article>`;return ''}
 function offerViewItems(){return featuredMarketFirms()}
 function renderMain(){document.querySelector('#favTotal').textContent=favorites.size;document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));const head=document.querySelector('#rankHead'),list=document.querySelector('#rankList');if(view==='firms'){head.style.display='';list.className='';const data=filteredFirms();list.innerHTML=data.length?data.map(rankCard).join(''):'<div class="empty-state">No firms match this view.</div>'}else{head.style.display='none';list.className='alt-grid';let data=view==='offers'?offerViewItems():filteredFirms();data=data.filter(f=>f.name.toLowerCase().includes(query));list.innerHTML=data.length?(view==='offers'?data.map(f=>`<article class="alt-card">${logo(f.name)}<div><h3>${f.name}</h3>${trustpilotBadge(f.name)}<p>Use code LENZ</p></div>${promo(f.promoPct)}</article>`).join(''):data.map(f=>altCard(f,view)).join('')):'<div class="empty-state">No firms match this view.</div>'}document.querySelectorAll('[data-sort]').forEach(b=>b.classList.toggle('on',b.dataset.sort===sortKey));document.querySelector('#viewAll').style.display=query||currentFilter!=='all'?'flex':'none'}
-function renderVideos(){const ordered=[...videos.slice(videoIndex),...videos.slice(0,videoIndex)];document.querySelector('#videoRail').innerHTML=ordered.map(v=>`<div class="video"><button class="video-facade" type="button" data-video-play="${v[1]}" aria-label="Play ${safe(v[0])}"><img src="assets/video-thumbnails/${v[1]}.jpg" alt="Thumbnail for ${safe(v[0])}"><span class="video-play" aria-hidden="true">▶</span></button></div>`).join('');renderDots('#videoDots',videos.length,videoIndex,'data-video-dot')}
-function playVideo(button){const id=button.dataset.videoPlay;const frame=document.createElement('iframe');frame.src=`https://www.youtube.com/embed/${id}?autoplay=1`;frame.title=button.getAttribute('aria-label')||'YouTube video';frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';frame.referrerPolicy='strict-origin-when-cross-origin';frame.allowFullscreen=true;button.replaceWith(frame)}
+function renderVideos(){
+  const ordered=[...videos.slice(videoIndex),...videos.slice(0,videoIndex)];
+  document.querySelector('#videoRail').innerHTML=ordered.map((v, i)=>{
+    const id=v.id||v[1], title=v.title||v[0], tag=v.tag||'Masterclass', duration=v.duration||'HD', views=v.views||'Verified';
+    return `<article class="video-card-3d" data-video-index="${i}">
+      <div class="video-card-glow" aria-hidden="true"></div>
+      <div class="video-thumb-wrap">
+        <button class="video-facade" type="button" data-video-play="${id}" aria-label="Play ${safe(title)}">
+          <img src="assets/video-thumbnails/${id}.jpg" alt="Thumbnail for ${safe(title)}" loading="lazy">
+          <div class="video-overlay" aria-hidden="true"></div>
+          <span class="video-tag-pill">${safe(tag)}</span>
+          <span class="video-duration-pill">${safe(duration)}</span>
+          <span class="video-play-3d" aria-hidden="true">
+            <span class="video-play-pulse"></span>
+            <span class="video-play-core">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="video-body-3d">
+        <div class="video-kicker-row">
+          <span class="video-kicker-tag">${safe(v.category||'Masterclass')}</span>
+          <span class="video-views">👁️ ${safe(views)}</span>
+        </div>
+        <h3 class="video-title-3d" title="${safe(title)}">${safe(title)}</h3>
+        <div class="video-footer-row">
+          <span class="video-learn-btn">Watch Breakdown <span class="arrow-icon">▶</span></span>
+          <span class="video-hd-pill">4K UHD</span>
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+  renderDots('#videoDots',videos.length,videoIndex,'data-video-dot');
+}
+function playVideo(button){const id=button.dataset.videoPlay;const frame=document.createElement('iframe');frame.src=`https://www.youtube.com/embed/${id}?autoplay=1`;frame.title=button.getAttribute('aria-label')||'YouTube video';frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';frame.referrerPolicy='strict-origin-when-cross-origin';frame.allowFullscreen=true;frame.className='video-player-frame';button.replaceWith(frame)}
 function updateMarketCopy(){
   const label=marketLabel(),categoryFirms=categoryTrustpilotFirms();
   document.body.dataset.marketTheme=market;

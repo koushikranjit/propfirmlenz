@@ -2323,7 +2323,12 @@ const trustpilotFor=name=>TRUSTPILOT_FIRMS.find(f=>f.name===name)||null;
 const firmInMarket=(name,category=market)=>firmHasCategory(trustpilotFor(name),category);
 const trustpilotBadge=name=>{const f=trustpilotFor(name),count=f?.trustpilotReviews==null?null:Number(f.trustpilotReviews);return f&&f.trustpilotRating!=null?`<span class="trustpilot-line">★ ${f.trustpilotRating.toFixed(1)} · ${count==null?'—':count.toLocaleString()} reviews</span>`:''};
 const forexOffers=()=>OFFER_CATALOG.filter(x=>firmInMarket(x.name));
-const videos=[['YouTube video 1','q3fx_50NZDo'],['YouTube video 2','9rNUYpiTRNQ'],['YouTube video 3','T6WXeMK3jZg'],['YouTube video 4','mGALw2X0sWQ']];
+const videos=[
+  { id: 'q3fx_50NZDo', title: 'Best Prop Firms of 2026: Complete Comparison & Rules Breakdown', tag: 'Deep Dive', duration: '14:22', views: '48.2K views', category: 'Comparison' },
+  { id: '9rNUYpiTRNQ', title: 'How to Pass Any Prop Firm Challenge: Drawdown Secrets & Risk Guide', tag: 'Strategy', duration: '18:45', views: '92.6K views', category: 'Rules & Risk' },
+  { id: 'T6WXeMK3jZg', title: 'Top 5 Forex Prop Firms With Fastest Verified On-Chain Payouts', tag: 'Payout Audit', duration: '12:10', views: '64.1K views', category: 'Payouts' },
+  { id: 'mGALw2X0sWQ', title: 'Futures vs Forex Prop Trading: Which Challenge Should You Buy?', tag: 'Masterclass', duration: '16:30', views: '38.5K views', category: 'Analysis' }
+];
 const faqs=[
 ['Which Forex prop firm is the best?','The best fit depends on your trading style, challenge rules, platform needs, and payout preferences. Compare the verified fields together rather than relying on one headline score.'],
 ['What should I compare in a Forex challenge?','Compare the entry price, profit target, daily and maximum loss limits, drawdown type, profit split, payout frequency, and supported platform.'],
@@ -2374,8 +2379,44 @@ function rankCard(f){const hasCountry=!!f.country,assets=(f.assets||[]).filter(a
 function altCard(f,type){const heart=`<button class="favorite ${favorites.has(f.name)?'on':''}" type="button" data-favorite="${safe(f.name)}" aria-label="Favorite ${safe(f.name)}">${favorites.has(f.name)?'♥':'♡'}</button>`;if(type==='challenges'){const assets=(f.assets||[]).filter(a=>market==='forex'?!['Crypto','Futures'].includes(a):a===marketLabel());return `<article class="alt-card">${logo(f.name)}<div><h3>${safe(f.name)}</h3><p>Rating ${f.rating==null?'—':`${f.rating} / 5`}</p><p>${f.maxAllocation?`Maximum allocation ${safe(f.maxAllocation)}`:'Maximum allocation —'}</p></div>${promo(f.promoPct)}<div class="taglist wide">${assets.length?assets.map(a=>`<span class="asset-tag">${safe(a)}</span>`).join(''):'<span class="asset-tag">Challenge data unavailable</span>'}</div></article>`}if(type==='reviews')return `<article class="alt-card">${logo(f.name)}<div><h3>${safe(f.name)}</h3>${trustpilotBadge(f.name)}</div>${heart}<div class="wide">${promo(f.promoPct)}</div></article>`;return ''}
 function offerViewItems(){return featuredMarketFirms()}
 function renderMain(){document.querySelector('#favTotal').textContent=favorites.size;document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));const head=document.querySelector('#rankHead'),list=document.querySelector('#rankList');if(view==='firms'){head.style.display='';list.className='';const data=filteredFirms();list.innerHTML=data.length?data.map(rankCard).join(''):'<div class="empty-state">No firms match this view.</div>'}else{head.style.display='none';list.className='alt-grid';let data=view==='offers'?offerViewItems():filteredFirms();data=data.filter(f=>f.name.toLowerCase().includes(query));list.innerHTML=data.length?(view==='offers'?data.map(f=>`<article class="alt-card">${logo(f.name)}<div><h3>${f.name}</h3>${trustpilotBadge(f.name)}<p>Use code LENZ</p></div>${promo(f.promoPct)}</article>`).join(''):data.map(f=>altCard(f,view)).join('')):'<div class="empty-state">No firms match this view.</div>'}document.querySelectorAll('[data-sort]').forEach(b=>b.classList.toggle('on',b.dataset.sort===sortKey));document.querySelector('#viewAll').style.display=query||currentFilter!=='all'?'flex':'none'}
-function renderVideos(){const ordered=[...videos.slice(videoIndex),...videos.slice(0,videoIndex)];document.querySelector('#videoRail').innerHTML=ordered.map(v=>`<div class="video"><button class="video-facade" type="button" data-video-play="${v[1]}" aria-label="Play ${safe(v[0])}"><img src="assets/video-thumbnails/${v[1]}.jpg" alt="Thumbnail for ${safe(v[0])}"><span class="video-play" aria-hidden="true">▶</span></button></div>`).join('');renderDots('#videoDots',videos.length,videoIndex,'data-video-dot')}
-function playVideo(button){const id=button.dataset.videoPlay;const frame=document.createElement('iframe');frame.src=`https://www.youtube.com/embed/${id}?autoplay=1`;frame.title=button.getAttribute('aria-label')||'YouTube video';frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';frame.referrerPolicy='strict-origin-when-cross-origin';frame.allowFullscreen=true;button.replaceWith(frame)}
+function renderVideos(){
+  const ordered=[...videos.slice(videoIndex),...videos.slice(0,videoIndex)];
+  document.querySelector('#videoRail').innerHTML=ordered.map((v, i)=>{
+    const id=v.id||v[1], title=v.title||v[0], tag=v.tag||'Masterclass', duration=v.duration||'HD', views=v.views||'Verified';
+    return `<article class="video-card-3d" data-video-index="${i}">
+      <div class="video-card-glow" aria-hidden="true"></div>
+      <div class="video-thumb-wrap">
+        <button class="video-facade" type="button" data-video-play="${id}" aria-label="Play ${safe(title)}">
+          <img src="assets/video-thumbnails/${id}.jpg" alt="Thumbnail for ${safe(title)}" loading="lazy">
+          <div class="video-overlay" aria-hidden="true"></div>
+          <span class="video-tag-pill">${safe(tag)}</span>
+          <span class="video-duration-pill">${safe(duration)}</span>
+          <span class="video-play-3d" aria-hidden="true">
+            <span class="video-play-pulse"></span>
+            <span class="video-play-core">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="video-body-3d">
+        <div class="video-kicker-row">
+          <span class="video-kicker-tag">${safe(v.category||'Masterclass')}</span>
+          <span class="video-views">👁️ ${safe(views)}</span>
+        </div>
+        <h3 class="video-title-3d" title="${safe(title)}">${safe(title)}</h3>
+        <div class="video-footer-row">
+          <span class="video-learn-btn">Watch Breakdown <span class="arrow-icon">▶</span></span>
+          <span class="video-hd-pill">4K UHD</span>
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+  renderDots('#videoDots',videos.length,videoIndex,'data-video-dot');
+}
+function playVideo(button){const id=button.dataset.videoPlay;const frame=document.createElement('iframe');frame.src=`https://www.youtube.com/embed/${id}?autoplay=1`;frame.title=button.getAttribute('aria-label')||'YouTube video';frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';frame.referrerPolicy='strict-origin-when-cross-origin';frame.allowFullscreen=true;frame.className='video-player-frame';button.replaceWith(frame)}
 function updateMarketCopy(){
   const label=marketLabel(),categoryFirms=categoryTrustpilotFirms();
   document.body.dataset.marketTheme=market;
