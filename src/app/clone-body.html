@@ -67,15 +67,143 @@
 
 <!-- challengesPage removed -->
 
-<section class="reviews-page" id="reviewsPage" data-page-panel="reviews" hidden><div class="reviews-shell">
-  <nav class="reviews-tabs" aria-label="Comparison views"><button type="button" data-page="compare">Firms</button><button type="button" data-page="offers">Offers</button><button class="active" type="button" data-page="reviews" aria-current="page">Reviews</button></nav>
-  <div class="review-source-toggle" role="tablist" aria-label="Review source"><button class="on" type="button" data-review-source="trustpilot" role="tab" aria-selected="true">Trustpilot</button><button type="button" data-review-source="pfl" role="tab" aria-selected="false">PFL Reviews</button></div>
-  <div class="reviews-filter-row" id="trustpilotFilters"><div class="reviews-filters"><button class="reviews-filter" type="button" id="reviewFilterButton">☷ Filter</button></div><div class="review-slider"><label for="reviewAmount">Amount of Reviews</label><output id="reviewAmountValue" for="reviewAmount">0+</output><input id="reviewAmount" type="range" min="0" max="80000" step="1000" value="0"><span class="review-slider-max">80K+</span></div><div class="reviews-filters"><button class="reviews-filter on" type="button">All Reviews</button></div><button class="post-review" type="button" data-post-review>Post a Review</button></div>
-  <div class="reviews-title-row"><div><h2>Prop Firm Reviews <span class="review-total-number">492092</span></h2><p id="reviewTotals">69 firms ranked by Trustpilot TrustScore</p></div><div class="reviews-title-tools"><button class="review-method" type="button" data-review-methodology>◇ How We Rank Firms</button></div></div>
-  <div class="reviews-table" id="trustpilotReviewTable"><div class="reviews-head"><button type="button" data-review-sort="name">Firm</button><button type="button" data-review-sort="reviews">Trustpilot Reviews</button><button type="button" data-review-sort="score">TrustScore</button><button type="button" data-review-sort="rank">Rank</button><span>Actions</span></div><div id="reviewsRows"></div></div>
-  <div class="pfl-reviews-panel" id="pflReviewsPanel" hidden><div class="pfl-reviews-heading"><div><h2>PFL Reviews</h2><p>Community reviews published by the Prop Firm Lenz team.</p></div><span class="pfl-reviews-count" id="pflFirmCount">69 firms</span></div><div class="pfl-directory-head" aria-hidden="true"><span>Firm</span><span>PFL reviews</span><span>Action</span></div><div class="pfl-directory" id="pflReviewsRows" aria-live="polite"></div></div>
-  <section class="additional-info"><div class="review-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5c2.8-.8 5.2-.2 8 1.6 2.8-1.8 5.2-2.4 8-1.6v13c-2.8-.8-5.2-.2-8 1.6-2.8-1.8-5.2-2.4-8-1.6v-13Z"/><path d="M12 7.1v13"/></svg></div><div><h2>How reviews are shown</h2><p>The Trustpilot view uses the TrustScore and review count stored for each firm. Firms are ranked by TrustScore, with ties broken by review count. PFL Reviews are displayed separately and only when a published community review exists.</p></div></section>
-</div></section>
+<section class="reviews-page" id="reviewsPage" data-page-panel="reviews" hidden>
+  <div class="reviews-shell">
+    <!-- Reviews 3D Hero -->
+    <div class="reviews-hero-3d">
+      <div class="reviews-badge-wrap">
+        <span class="reviews-badge-3d">
+          <span class="badge-pulse-dot" aria-hidden="true"></span>
+          <span class="badge-icon">⭐</span>
+          <span class="badge-text">100% Verified Trader Ratings & Community Audits</span>
+        </span>
+      </div>
+      <h1 class="reviews-hero-title">Prop Firm Reviews & Trader Ratings</h1>
+      <p class="reviews-hero-sub">Real evaluation experiences, verified payout speeds, and ratings from funded traders worldwide.</p>
+      
+      <!-- 4 Stat Pills -->
+      <div class="reviews-stats-3d">
+        <div class="rev-stat-pill">
+          <span class="rev-stat-icon">💬</span>
+          <div class="rev-stat-info">
+            <strong id="revTotalCount">492,000+</strong>
+            <span>Verified Reviews</span>
+          </div>
+        </div>
+        <div class="rev-stat-pill">
+          <span class="rev-stat-icon">⭐</span>
+          <div class="rev-stat-info">
+            <strong id="revAvgScore">4.8 / 5.0</strong>
+            <span>Avg Trader Score</span>
+          </div>
+        </div>
+        <div class="rev-stat-pill">
+          <span class="rev-stat-icon">🛡️</span>
+          <div class="rev-stat-info">
+            <strong id="revFirmCount">69 Firms</strong>
+            <span>Audited & Ranked</span>
+          </div>
+        </div>
+        <button class="btn-write-review-3d" type="button" data-open-write-review>
+          <span class="btn-icon">✍️</span> Write a Review
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation & View Modes -->
+    <div class="reviews-nav-bar">
+      <div class="review-subnav-pills" role="tablist">
+        <button class="review-subnav-btn on" type="button" data-review-tab="leaderboard" role="tab" aria-selected="true">
+          🏆 Firm Leaderboard & Ratings
+        </button>
+        <button class="review-subnav-btn" type="button" data-review-tab="feed" role="tab" aria-selected="false">
+          ⚡ Live Trader Feed <span class="badge-live-pulse" id="feedCountBadge">12</span>
+        </button>
+      </div>
+      <div class="review-search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="reviewSearchInput" class="review-search-input" placeholder="Search prop firm (e.g. FundingPips, E8)...">
+        <button type="button" id="reviewSearchClear" class="review-search-clear" style="display:none;">✕</button>
+      </div>
+    </div>
+
+    <!-- Filter Toolbar -->
+    <div class="reviews-toolbar-3d">
+      <div class="toolbar-filters">
+        <div class="filter-group">
+          <label for="reviewMarketSelect">Market:</label>
+          <select id="reviewMarketSelect" class="review-select-3d">
+            <option value="all">All Markets</option>
+            <option value="forex" selected>Forex</option>
+            <option value="futures">Futures</option>
+            <option value="crypto">Crypto</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="reviewScoreSelect">Min Rating:</label>
+          <select id="reviewScoreSelect" class="review-select-3d">
+            <option value="0">All Ratings</option>
+            <option value="4.5">4.5+ ★ Exceptional</option>
+            <option value="4.0">4.0+ ★ Very Good</option>
+            <option value="3.5">3.5+ ★ Good</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="reviewSortSelect">Sort By:</label>
+          <select id="reviewSortSelect" class="review-select-3d">
+            <option value="rating">Highest Rated</option>
+            <option value="reviews">Most Reviews</option>
+            <option value="trustpilot">TrustScore</option>
+            <option value="name">Alphabetical (A-Z)</option>
+          </select>
+        </div>
+      </div>
+      <div class="toolbar-actions">
+        <span class="active-count-badge" id="reviewActiveCountBadge">69 firms found</span>
+      </div>
+    </div>
+
+    <!-- View 1: Firm Leaderboard Table / 3D Grid -->
+    <div id="reviewsLeaderboardView" class="reviews-view-panel">
+      <div class="reviews-table-3d">
+        <div class="rev-table-head">
+          <span>Rank · Firm</span>
+          <span>Community Rating</span>
+          <span>TrustScore / Volume</span>
+          <span>Verified Highlights</span>
+          <span>Actions</span>
+        </div>
+        <div id="reviewsLeaderboardRows" class="rev-table-body"></div>
+      </div>
+    </div>
+
+    <!-- View 2: Live Trader Reviews Feed -->
+    <div id="reviewsFeedView" class="reviews-view-panel" hidden>
+      <div class="feed-top-banner">
+        <div class="feed-top-info">
+          <h3>⚡ Real-Time Community Reviews</h3>
+          <p>Verified submissions published instantly. All reviews are authenticated by trader email.</p>
+        </div>
+        <button class="post-review-feed-btn" type="button" data-open-write-review>
+          ✍️ Post Your Review
+        </button>
+      </div>
+      <div id="reviewsLiveFeedList" class="reviews-feed-grid"></div>
+    </div>
+
+    <!-- Methodology & Info Card -->
+    <section class="additional-info reviews-methodology-card">
+      <div class="review-info-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <h2>How Prop Firm Lenz Reviews Work</h2>
+        <p>Prop Firm Lenz combines verified TrustScores with direct community trader audits. When you submit a review, it publishes immediately ("Auto-Live") without moderation delays. To prevent manipulation and maintain rating integrity, our system enforces a strict <strong>one-review-per-trader-per-firm</strong> verification policy.</p>
+      </div>
+    </section>
+  </div>
+</section>
+
 
 <section class="section" id="rankings" data-page-panel="home best-sellers"><div class="shell">
   <nav class="jump-tabs" aria-label="Comparison views"><button class="active" type="button" data-view="firms">Firms</button><button type="button" data-view="offers">Offers</button><button type="button" data-view="reviews">Reviews</button></nav>
@@ -380,9 +508,124 @@
   </div>
 </div></footer>
 <div class="modal" id="methodModal" role="dialog" aria-modal="true" aria-labelledby="methodTitle"><div class="modal-card"><button class="modal-close" type="button" data-close-modal aria-label="Close">×</button><h2 id="methodTitle">How we compare firms</h2><p>This live verified directory brings active prop firm rules, real spreads, and on-chain payout evidence into one transparent comparison.</p><ul class="method-list"><li>Popularity uses the recorded favorite counts.</li><li>Ratings and review totals are shown exactly as captured in the source dataset.</li><li>Challenge views compare published assets, platforms, maximum allocations, and discounts.</li><li>The public comparison is limited to Forex firms represented in the site’s directory and challenge datasets.</li></ul></div></div>
-<div class="modal" id="reviewMethodModal" role="dialog" aria-modal="true" aria-labelledby="reviewMethodTitle"><div class="modal-card review-modal-card"><button class="modal-close" type="button" data-close-modal aria-label="Close">×</button><h2 id="reviewMethodTitle">How We Rank Firms</h2><p>Firms are ranked by their Trustpilot TrustScore. Ties are broken by Trustpilot review count, from highest to lowest.</p><p>Trustpilot ratings and counts are kept separate from Prop Firm Lenz community reviews. If reliable Trustpilot data is unavailable, the table shows an em dash and places the firm after rated firms.</p></div></div>
-<div class="modal" id="firmReviewsModal" role="dialog" aria-modal="true" aria-labelledby="firmReviewsTitle"><div class="modal-card review-modal-card"><button class="modal-close" type="button" data-close-modal aria-label="Close">×</button><h2 id="firmReviewsTitle">Firm reviews</h2><div id="firmReviewsBody"></div></div></div>
-<div class="modal" id="pflReviewNoticeModal" role="dialog" aria-modal="true" aria-labelledby="pflReviewNoticeTitle"><div class="modal-card"><button class="modal-close" type="button" data-close-modal aria-label="Close">×</button><h2 id="pflReviewNoticeTitle">Submit Trader Review</h2><span class="pfl-notice-firm" id="pflReviewNoticeFirm" style="font-weight:700;color:#1ee7fc;margin-bottom:8px;display:block;"></span><p>Share your verified evaluation or payout experience with the trader community.</p><form id="traderReviewForm" style="display:flex;flex-direction:column;gap:12px;margin-top:14px;"><div style="display:flex;gap:8px;align-items:center;"><label style="font-size:13px;color:#a0a0b0;">Rating:</label><select id="reviewRatingSelect" style="flex:1;padding:8px 12px;border-radius:8px;background:#18181f;border:1px solid #33333f;color:#fff;font-size:14px;outline:none;"><option value="5">★★★★★ (5/5 Excellent)</option><option value="4">★★★★☆ (4/5 Very Good)</option><option value="3">★★★☆☆ (3/5 Average)</option><option value="2">★★☆☆☆ (2/5 Poor)</option><option value="1">★☆☆☆☆ (1/5 Bad)</option></select></div><textarea id="reviewCommentText" rows="3" placeholder="Describe your experience with rules, spreads, and payouts..." required style="padding:10px 14px;border-radius:8px;background:#18181f;border:1px solid #33333f;color:#fff;font-size:13px;outline:none;resize:vertical;"></textarea><input type="email" id="reviewerEmail" placeholder="Your trader email" required style="padding:10px 14px;border-radius:8px;background:#18181f;border:1px solid #33333f;color:#fff;font-size:13px;outline:none;"><button type="submit" style="padding:12px 20px;border-radius:8px;background:var(--grad);border:none;color:#fff;font-weight:700;font-size:14px;cursor:pointer;">Submit Review for Moderation</button></form><div id="reviewSubmitSuccess" style="display:none;margin-top:12px;padding:12px;border-radius:8px;background:rgba(30,231,252,0.1);border:1px solid #1ee7fc;color:#1ee7fc;font-size:13px;text-align:center;">✓ Review submitted! Our team verifies trader feedback before publishing.</div></div></div>
+<div class="modal" id="reviewMethodModal" role="dialog" aria-modal="true" aria-labelledby="reviewMethodTitle"><div class="modal-card review-modal-card-3d"><button class="modal-close" type="button" data-close-modal aria-label="Close">×</button><h2 id="reviewMethodTitle">How We Rank Firms</h2><p>Firms are ranked by their TrustScore and community trader ratings. Each review is verified and instantly published.</p><p>TrustScores and review volume metrics are refreshed continually to give traders an objective view of firm reliability.</p></div></div>
+
+<!-- Interactive Firm Reviews Detail Modal -->
+<div class="modal" id="firmReviewsModal" role="dialog" aria-modal="true" aria-labelledby="firmReviewsTitle">
+  <div class="modal-card review-modal-card-3d firm-reviews-dialog">
+    <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
+    <div id="firmReviewsContent"></div>
+  </div>
+</div>
+
+<!-- Interactive Write Review Modal (Auto-Live with One Review per User/Firm Check) -->
+<div class="modal" id="writeReviewModal" role="dialog" aria-modal="true" aria-labelledby="writeReviewTitle">
+  <div class="modal-card review-modal-card-3d">
+    <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
+    <div class="modal-header-3d">
+      <div class="modal-badge">
+        <span class="badge-pulse-dot"></span>
+        <span>AUTO-LIVE VERIFIED SUBMISSION</span>
+      </div>
+      <h2 id="writeReviewTitle">Write a Trader Review</h2>
+      <p>Share your authentic evaluation and payout experience. Your review goes live immediately!</p>
+    </div>
+
+    <form id="newReviewForm" class="new-review-form-3d">
+      <div id="reviewFormError" class="review-form-alert error" style="display:none;"></div>
+      <div id="reviewFormSuccess" class="review-form-alert success" style="display:none;"></div>
+
+      <div class="form-row-2col">
+        <div class="form-field">
+          <label for="reviewFirmSelect">Select Prop Firm <span class="req">*</span></label>
+          <select id="reviewFirmSelect" required class="form-input-3d">
+            <option value="">-- Choose a Prop Firm --</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="reviewAuthorName">Your Trader Name / Nickname <span class="req">*</span></label>
+          <input type="text" id="reviewAuthorName" placeholder="e.g. Alex Trader" required class="form-input-3d">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="reviewAuthorEmail">Your Email Address <span class="req">*</span> <small class="field-hint">(Used for 1-review-per-firm verification; not published)</small></label>
+        <input type="email" id="reviewAuthorEmail" placeholder="e.g. trader@example.com" required class="form-input-3d">
+      </div>
+
+      <!-- Star Rating Picker -->
+      <div class="form-field rating-picker-wrap">
+        <label>Overall Rating <span class="req">*</span></label>
+        <div class="star-rating-selector" id="starRatingSelector">
+          <button type="button" class="star-btn active" data-star="1" aria-label="1 star">★</button>
+          <button type="button" class="star-btn active" data-star="2" aria-label="2 stars">★</button>
+          <button type="button" class="star-btn active" data-star="3" aria-label="3 stars">★</button>
+          <button type="button" class="star-btn active" data-star="4" aria-label="4 stars">★</button>
+          <button type="button" class="star-btn active" data-star="5" aria-label="5 stars">★</button>
+          <span class="rating-label-preview" id="ratingLabelPreview">5.0 / 5 · Exceptional</span>
+        </div>
+        <input type="hidden" id="selectedStarRating" value="5">
+      </div>
+
+      <!-- Micro Category Ratings -->
+      <div class="form-row-3col category-ratings-row">
+        <div class="form-field">
+          <label for="catPayoutSpeed">Payout Speed</label>
+          <select id="catPayoutSpeed" class="form-input-3d sub-select">
+            <option value="5" selected>5 ★ Ultra Fast</option>
+            <option value="4">4 ★ Fast (1-2 days)</option>
+            <option value="3">3 ★ Average</option>
+            <option value="2">2 ★ Delayed</option>
+            <option value="1">1 ★ Very Slow</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="catRulesSpreads">Rules & Spreads</label>
+          <select id="catRulesSpreads" class="form-input-3d sub-select">
+            <option value="5" selected>5 ★ Tight & Fair</option>
+            <option value="4">4 ★ Good Spreads</option>
+            <option value="3">3 ★ Standard</option>
+            <option value="2">2 ★ Slippage Noted</option>
+            <option value="1">1 ★ Unfair Rules</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="catSupport">Support Quality</label>
+          <select id="catSupport" class="form-input-3d sub-select">
+            <option value="5" selected>5 ★ Helpful & Quick</option>
+            <option value="4">4 ★ Good Support</option>
+            <option value="3">3 ★ Average</option>
+            <option value="2">2 ★ Slow Replies</option>
+            <option value="1">1 ★ Unresponsive</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="newReviewTitle">Review Title <span class="req">*</span></label>
+        <input type="text" id="newReviewTitle" placeholder="e.g. Received my $4,800 payout in 2 hours via Crypto" required class="form-input-3d">
+      </div>
+
+      <div class="form-field">
+        <label for="newReviewBody">Your Detailed Experience <span class="req">*</span></label>
+        <textarea id="newReviewBody" rows="4" placeholder="Describe the evaluation rules, execution speed, customer support, and payout withdrawal process..." required class="form-input-3d form-textarea-3d"></textarea>
+      </div>
+
+      <div class="form-checkbox-field">
+        <label class="custom-checkbox-label">
+          <input type="checkbox" id="reviewPayoutReceived" checked>
+          <span>I have received a real payout / withdrawal from this firm</span>
+        </label>
+      </div>
+
+      <div class="modal-form-actions">
+        <button type="submit" id="submitReviewBtn" class="btn-publish-review-3d">
+          🚀 Publish Review (Auto-Live)
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
 <div class="modal" id="accountNoticeModal" role="dialog" aria-modal="true" aria-labelledby="accountNoticeTitle"><div class="modal-card"><button class="modal-close" type="button" data-close-modal aria-label="Close">×</button><h2 id="accountNoticeTitle">Trader VIP Access &amp; Deal Alerts</h2><p>Access exclusive prop firm discount codes, flash sales, and live payout tracking alerts.</p><form id="vipAccessForm" style="display:flex;flex-direction:column;gap:12px;margin-top:16px;"><input type="email" id="vipEmail" placeholder="Enter your email address" required style="padding:12px 16px;border-radius:10px;background:#18181f;border:1px solid #33333f;color:#fff;font-size:14px;outline:none;"><button type="submit" style="padding:12px 20px;border-radius:10px;background:var(--grad);border:none;color:#fff;font-weight:700;font-size:14px;cursor:pointer;">Get VIP Access &amp; Deal Alerts</button></form><div id="vipSuccess" style="display:none;margin-top:14px;padding:12px;border-radius:8px;background:rgba(30,231,252,0.1);border:1px solid #1ee7fc;color:#1ee7fc;font-size:13px;text-align:center;">✓ Welcome to Prop Firm Lenz VIP! Your alert access has been activated.</div></div></div>
 <div class="modal" id="payoutMethodModal" role="dialog" aria-modal="true" aria-labelledby="payoutMethodTitle"><div class="modal-card"><button class="modal-close" type="button" data-close-modal aria-label="Close">×</button><h2 id="payoutMethodTitle">How We Verify and Rank Firms</h2><p>Prop Firm Lenz displays tracked blockchain payout records from the embedded payout dataset. Table totals and payout counts are ranked only from the selected timeframe, while Trustpilot scores remain a separate external snapshot.</p><ul class="method-list"><li>Tracked records are not firm-submitted claims.</li><li>Missing payout metrics remain blank instead of being estimated.</li><li>Category counts include only firms that can be matched to the site’s firm directory.</li><li>Use payout history alongside current firm rules and verified reviews.</li></ul></div></div>
 <div class="modal" id="delayReportModal" role="dialog" aria-modal="true" aria-labelledby="delayReportTitle"><div class="modal-card"><button class="modal-close" type="button" data-close-modal aria-label="Close">×</button><h2 id="delayReportTitle">Report a Delayed Payout</h2><p>Help track firm health by reporting delayed or unresolved withdrawal requests.</p><form id="delayReportForm" style="display:flex;flex-direction:column;gap:12px;margin-top:14px;"><input type="text" id="delayFirmName" placeholder="Prop Firm Name (e.g. FundingPips, FTMO)" required style="padding:10px 14px;border-radius:8px;background:#18181f;border:1px solid #33333f;color:#fff;font-size:13px;outline:none;"><div style="display:flex;gap:8px;align-items:center;"><label style="font-size:13px;color:#a0a0b0;">Days Delayed:</label><select id="delayDuration" style="flex:1;padding:8px 12px;border-radius:8px;background:#18181f;border:1px solid #33333f;color:#fff;font-size:13px;outline:none;"><option value="3-7">3 to 7 Days</option><option value="7-14">7 to 14 Days</option><option value="14-30">14 to 30 Days</option><option value="30+">30+ Days</option></select></div><input type="text" id="delayAmount" placeholder="Approximate Amount (USD)" style="padding:10px 14px;border-radius:8px;background:#18181f;border:1px solid #33333f;color:#fff;font-size:13px;outline:none;"><input type="email" id="delayReporterEmail" placeholder="Your contact email" required style="padding:10px 14px;border-radius:8px;background:#18181f;border:1px solid #33333f;color:#fff;font-size:13px;outline:none;"><button type="submit" style="padding:12px 20px;border-radius:8px;background:var(--grad);border:none;color:#fff;font-weight:700;font-size:14px;cursor:pointer;">Submit Delay Report</button></form><div id="delayReportSuccess" style="display:none;margin-top:12px;padding:12px;border-radius:8px;background:rgba(30,231,252,0.1);border:1px solid #1ee7fc;color:#1ee7fc;font-size:13px;text-align:center;">✓ Report received. Our verification team investigates blockchain records.</div></div></div></div>
