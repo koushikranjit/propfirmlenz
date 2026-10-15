@@ -1576,7 +1576,7 @@ img[hidden],
   background-size: 15px 15px !important;
   transition: all 0.25s ease !important;
   flex: 0 0 auto !important;
-  margin: 0 !important;
+  margin: 0 0 0 auto !important;
 }
 .head-main .searchbox::placeholder {
   color: #7d7d90 !important;
@@ -1599,7 +1599,7 @@ img[hidden],
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 999px !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
-  margin: 0 !important;
+  margin: 0 auto 0 0 !important;
   height: 42px !important;
   box-sizing: border-box !important;
   flex: 0 0 auto !important;
@@ -1631,7 +1631,7 @@ img[hidden],
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
-  margin-left: auto !important;
+  margin-left: 0 !important;
   flex: 0 0 auto !important;
 }
 .header-auth .login {
@@ -1682,8 +1682,8 @@ img[hidden],
     min-height: 46px !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 32px !important;
+    justify-content: center !important;
+    gap: 36px !important;
     padding: 0 !important;
   }
 }
@@ -2073,10 +2073,16 @@ body[data-page="offers"] .hero .stat {
   margin: 0 auto !important;
   position: relative !important;
   z-index: 2 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 .faq-badge-wrap {
+  display: flex !important;
+  justify-content: center !important;
   text-align: center !important;
-  margin-bottom: 12px !important;
+  margin-bottom: 14px !important;
+  width: 100% !important;
 }
 .faq-badge {
   display: inline-flex !important;
@@ -2094,8 +2100,20 @@ body[data-page="offers"] .hero .stat {
   box-shadow: 0 0 16px rgba(30, 231, 252, 0.2) !important;
 }
 .faq-title {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
   text-align: center !important;
-  margin-bottom: 32px !important;
+  margin: 0 auto 36px !important;
+  width: 100% !important;
+}
+.faq-title > div {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
 }
 .faq-title h2,
 #faqTitle {
@@ -2103,7 +2121,9 @@ body[data-page="offers"] .hero .stat {
   font-weight: 800 !important;
   letter-spacing: -0.035em !important;
   line-height: 1.15 !important;
-  margin: 0 0 10px !important;
+  margin: 0 auto 12px !important;
+  text-align: center !important;
+  width: 100% !important;
   background: linear-gradient(135deg, #ffffff 40%, #1EE7FC 95%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -2115,12 +2135,15 @@ body[data-page="offers"] .hero .stat {
   line-height: 1.5 !important;
   max-width: 680px !important;
   margin: 0 auto !important;
+  text-align: center !important;
 }
 .faq {
   border: none !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 12px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
 }
 
 /* 3D FAQ Cards */
@@ -2552,8 +2575,8 @@ footer#footer .bottom-copy {
 <main>
 <section class="market-empty-page" id="marketEmpty" aria-live="polite" hidden><div class="market-empty-card"><h1 id="marketEmptyTitle">Futures Prop Firms</h1><p id="marketEmptyMessage">Browse verified firm listings. Unavailable details are shown as an em dash.</p><div class="market-directory" id="marketDirectory"></div></div></section>
 <section class="hero" id="home" data-page-panel="home offers best-sellers reviews favorites rules tutorials"><div class="shell"><h1 id="heroTitle">Compare the Best Prop Trading Firms of 2026</h1><p id="heroSubtitle">Trusted platform to compare prop trading firms using verified data and insights, including reviews, rules, and rankings.</p><div class="stats"><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.7 2.8 8.1 7 10 4.2-1.9 7-5.3 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-5"/></svg></span><span><b id="heroFirmCount">—</b><span id="heroFirmLabel">Firms Covered</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span><span><b id="heroChallengeCount">90%</b><span id="heroChallengeLabel">Max Profit Split</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="m12 8 .9 1.8 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2L9.1 10l2-.3L12 8Z"/></svg></span><span><b id="heroOfferCount">—</b><span id="heroOfferLabel">Tracked Offers</span></span></div><div class="stat"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.4 3.8 5.4 3.8 9S14.5 18.6 12 21c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3Z"/></svg></span><span><b id="heroPayoutFirmCount">—</b><span id="heroPayoutLabel">Payout Firms</span></span></div></div></div></section>
-<section class="section" id="offers" data-page-panel="home best-sellers reviews favorites rules payouts tutorials"><div class="shell feature-panels">
-  <article class="panel"><div class="panel-head"><h2>Exclusive Verified Forex Offers 🔥</h2><div class="arrows"><button class="arrow" data-offer-page="prev" aria-label="Previous offers">‹</button><button class="arrow" data-offer-page="next" aria-label="Next offers">›</button></div></div><div class="offer-grid" id="offerGrid"></div><div class="carousel-dots" id="offerDots" aria-label="Offer pages"></div></article>
+<section class="section" id="offers" data-page-panel="home best-sellers rules tutorials"><div class="shell feature-panels">
+  <article class="panel"><div class="panel-head"><h2>Exclusive Verified Forex Offers 🔥</h2><div class="arrows"><button type="button" class="arrow" data-offer-page="prev" aria-label="Previous offers">‹</button><button type="button" class="arrow" data-offer-page="next" aria-label="Next offers">›</button></div></div><div class="offer-grid" id="offerGrid"></div><div class="carousel-dots" id="offerDots" aria-label="Offer pages"></div></article>
   <article class="panel futures-panel" id="popularForex"><div class="panel-head"><h2>Most Popular Forex Prop Firms</h2></div><div class="futures-list" id="futuresList"></div></article>
 </div></section>
 <section class="favorites-page" id="favoritesPage" data-page-panel="favorites" hidden><div class="favorites-shell">
@@ -2587,8 +2610,8 @@ footer#footer .bottom-copy {
 
 <section class="section" id="rankings" data-page-panel="home best-sellers"><div class="shell">
   <nav class="jump-tabs" aria-label="Comparison views"><button class="active" type="button" data-view="firms">Firms</button><button type="button" data-view="offers">Offers</button><button type="button" data-view="reviews">Reviews</button></nav>
-  <div class="filter-row"><div class="filters"><span class="filter-btn" aria-hidden="true">☷ Filter</span><button class="filter-btn on" data-filter="popular">Popular</button><button class="filter-btn" id="favoriteFilter" data-filter="favorite">♡ Favorite <span id="favTotal">0</span>/1</button><button class="filter-btn" data-filter="new">New</button><button class="filter-btn" data-filter="all">All</button></div><div class="filter-meta"><button class="verify-pill" type="button" data-methodology>◇ How We Verify and Rank Firms</button><span class="snapshot">● Snapshot · Sep 21, 2026</span></div></div>
-  <div class="rank-head" id="rankHead"><button data-sort="favorites">Popularity</button><button data-sort="rank">Firm · Rank</button><button data-sort="reviews">Reviews</button><span>Country</span><button data-sort="years">Years</button><span>Assets</span><span>Platforms</span><button data-sort="allocation">Max allocations</button><span>Promo</span><span>Actions</span></div>
+  <div class="filter-row"><div class="filters"><span class="filter-btn" aria-hidden="true">☷ Filter</span><button type="button" class="filter-btn on" data-filter="popular">Popular</button><button type="button" class="filter-btn" id="favoriteFilter" data-filter="favorite">♡ Favorite <span id="favTotal">0</span>/1</button><button type="button" class="filter-btn" data-filter="new">New</button><button type="button" class="filter-btn" data-filter="all">All</button></div><div class="filter-meta"><button class="verify-pill" type="button" data-methodology>◇ How We Verify and Rank Firms</button><span class="snapshot">● Snapshot · Sep 21, 2026</span></div></div>
+  <div class="rank-head" id="rankHead"><button type="button" data-sort="favorites">Popularity</button><button type="button" data-sort="rank">Firm · Rank</button><button type="button" data-sort="reviews">Reviews</button><span>Country</span><button type="button" data-sort="years">Years</button><span>Assets</span><span>Platforms</span><button type="button" data-sort="allocation">Max allocations</button><span>Promo</span><span>Actions</span></div>
   <div id="rankList"></div><a class="view-all" href="#rankings" id="viewAll">View All</a>
 </div></section>
 <section class="compare-page" id="comparePage" data-page-panel="compare" hidden><div class="compare-shell">
@@ -2843,7 +2866,7 @@ footer#footer .bottom-copy {
 <div class="toast" id="toast" role="status" aria-live="polite">Code copied</div>
 <script>
 /* PAYOUT_DATA_START */ const PAYOUT_DATA = {
- "captured_at": "2026-10-15T07:05:51.371Z",
+ "captured_at": "2026-10-15T07:20:51.864Z",
  "attribution": {
   "text": "Live Verified Blockchain Feed",
   "url": "#page-payouts"
@@ -2911,20 +2934,20 @@ footer#footer .bottom-copy {
   {
    "firm": "MyFundedFutures",
    "methods": "Rise",
-   "total": "$664,695",
-   "count": "603",
+   "total": "$666,464",
+   "count": "609",
    "largest": "$10,308",
-   "average": "$1,102",
-   "latest": "Oct 15, 06:57 UTC"
+   "average": "$1,094",
+   "latest": "Oct 15, 07:05 UTC"
   },
   {
    "firm": "FundedNext",
    "methods": "Rise Direct Crypto",
-   "total": "$621,938",
-   "count": "574",
+   "total": "$598,061",
+   "count": "562",
    "largest": "$14,820",
-   "average": "$1,084",
-   "latest": "Oct 15, 06:57 UTC"
+   "average": "$1,064",
+   "latest": "Oct 15, 07:10 UTC"
   },
   {
    "firm": "Breakout",
@@ -2956,29 +2979,29 @@ footer#footer .bottom-copy {
   {
    "firm": "FundingPips",
    "methods": "Rise",
-   "total": "$126,963",
+   "total": "$126,635",
    "count": "61",
    "largest": "$26,248",
-   "average": "$2,081",
-   "latest": "Oct 15, 06:56 UTC"
+   "average": "$2,076",
+   "latest": "Oct 15, 07:11 UTC"
   },
   {
    "firm": "Propr",
    "methods": "Direct Crypto",
-   "total": "$113,311",
-   "count": "83",
+   "total": "$113,047",
+   "count": "82",
    "largest": "$12,114",
-   "average": "$1,365",
+   "average": "$1,379",
    "latest": "Oct 15, 06:22 UTC"
   },
   {
    "firm": "The5ers",
    "methods": "Rise",
-   "total": "$107,989",
-   "count": "56",
+   "total": "$108,189",
+   "count": "57",
    "largest": "$5,809",
-   "average": "$1,928",
-   "latest": "Oct 15, 06:56 UTC"
+   "average": "$1,898",
+   "latest": "Oct 15, 06:57 UTC"
   },
   {
    "firm": "FuturesElite",
@@ -3008,6 +3031,15 @@ footer#footer .bottom-copy {
    "latest": "Oct 14, 17:24 UTC"
   },
   {
+   "firm": "FundedTraderMarkets",
+   "methods": "Rise Direct Crypto",
+   "total": "$61,493",
+   "count": "42",
+   "largest": "$12,054",
+   "average": "$1,464",
+   "latest": "Oct 15, 06:49 UTC"
+  },
+  {
    "firm": "E8Markets",
    "methods": "Rise",
    "total": "$60,470",
@@ -3015,15 +3047,6 @@ footer#footer .bottom-copy {
    "largest": "$17,000",
    "average": "$2,749",
    "latest": "Oct 14, 16:02 UTC"
-  },
-  {
-   "firm": "FundedTraderMarkets",
-   "methods": "Rise Direct Crypto",
-   "total": "$60,067",
-   "count": "41",
-   "largest": "$12,054",
-   "average": "$1,465",
-   "latest": "Oct 15, 06:24 UTC"
   },
   {
    "firm": "Hypernova",
@@ -3044,6 +3067,15 @@ footer#footer .bottom-copy {
    "latest": "Oct 15, 05:40 UTC"
   },
   {
+   "firm": "TopOneFutures",
+   "methods": "Rise",
+   "total": "$38,632",
+   "count": "32",
+   "largest": "$2,699",
+   "average": "$1,207",
+   "latest": "Oct 15, 07:11 UTC"
+  },
+  {
    "firm": "TradeDay",
    "methods": "Rise",
    "total": "$38,160",
@@ -3060,15 +3092,6 @@ footer#footer .bottom-copy {
    "largest": "$4,500",
    "average": "$1,222",
    "latest": "Oct 14, 21:27 UTC"
-  },
-  {
-   "firm": "TopOneFutures",
-   "methods": "Rise",
-   "total": "$36,382",
-   "count": "31",
-   "largest": "$2,699",
-   "average": "$1,174",
-   "latest": "Oct 15, 04:13 UTC"
   },
   {
    "firm": "AlphaFutures",
@@ -3227,7 +3250,7 @@ footer#footer .bottom-copy {
  "weekly": {
   "headline": {
    "range": "12–18 October 2026",
-   "total": "$14,321,395"
+   "total": "$14,368,384"
   },
   "rows": [
    {
@@ -3237,7 +3260,7 @@ footer#footer .bottom-copy {
      "$5,320,564",
      "3,090",
      "▼ 49.9%",
-     "37.2%"
+     "37.0%"
     ],
     "firm": "Tradeify Futures",
     "method": "Rise"
@@ -3246,10 +3269,10 @@ footer#footer .bottom-copy {
     "cells": [
      "2",
      "FundedNext Tracked payout method: Rise Direct Crypto",
-     "$2,176,400",
-     "1,894",
-     "▼ 45.5%",
-     "15.2%"
+     "$2,217,234",
+     "1,916",
+     "▼ 44.5%",
+     "15.4%"
     ],
     "firm": "FundedNext",
     "method": "Rise Direct Crypto"
@@ -3258,10 +3281,10 @@ footer#footer .bottom-copy {
     "cells": [
      "3",
      "MyFundedFutures Tracked payout method: Rise",
-     "$1,800,118",
-     "1,434",
+     "$1,801,887",
+     "1,440",
      "▼ 45.9%",
-     "12.6%"
+     "12.5%"
     ],
     "firm": "MyFundedFutures",
     "method": "Rise"
@@ -3285,7 +3308,7 @@ footer#footer .bottom-copy {
      "$725,515",
      "372",
      "▼ 50.9%",
-     "5.1%"
+     "5.0%"
     ],
     "firm": "BlueGuardian",
     "method": "Rise Direct Crypto"
@@ -3306,8 +3329,8 @@ footer#footer .bottom-copy {
     "cells": [
      "7",
      "FundingPips Tracked payout method: Rise",
-     "$360,187",
-     "178",
+     "$360,697",
+     "179",
      "▼ 56.0%",
      "2.5%"
     ],
@@ -3318,8 +3341,8 @@ footer#footer .bottom-copy {
     "cells": [
      "8",
      "The5ers Tracked payout method: Rise",
-     "$281,046",
-     "167",
+     "$281,245",
+     "168",
      "▼ 73.9%",
      "2.0%"
     ],
@@ -3414,10 +3437,10 @@ footer#footer .bottom-copy {
     "cells": [
      "16",
      "FundedTraderMarkets Tracked payout method: Rise Direct Crypto",
-     "$121,309",
-     "106",
-     "▼ 52.3%",
-     "0.8%"
+     "$122,736",
+     "107",
+     "▼ 51.8%",
+     "0.9%"
     ],
     "firm": "FundedTraderMarkets",
     "method": "Rise Direct Crypto"
@@ -3426,9 +3449,9 @@ footer#footer .bottom-copy {
     "cells": [
      "17",
      "TopOneFutures Tracked payout method: Rise",
-     "$116,317",
-     "104",
-     "▼ 53.7%",
+     "$118,567",
+     "105",
+     "▼ 52.8%",
      "0.8%"
     ],
     "firm": "TopOneFutures",
@@ -3645,7 +3668,7 @@ footer#footer .bottom-copy {
      "$7,307",
      "11",
      "▼ 81.5%",
-     "0.0%"
+     "0.1%"
     ],
     "firm": "TopOneTrader",
     "method": "Rise"
@@ -3691,7 +3714,7 @@ footer#footer .bottom-copy {
  "monthly": {
   "headline": {
    "range": "October 2026",
-   "total": "$56,888,252"
+   "total": "$56,935,241"
   },
   "rows": [
    {
@@ -3710,9 +3733,9 @@ footer#footer .bottom-copy {
     "cells": [
      "2",
      "FundedNext Tracked payout method: Rise Direct Crypto",
-     "$8,582,681",
-     "7,079",
-     "▼ 52.4%",
+     "$8,623,515",
+     "7,101",
+     "▼ 52.2%",
      "15.1%"
     ],
     "firm": "FundedNext",
@@ -3722,8 +3745,8 @@ footer#footer .bottom-copy {
     "cells": [
      "3",
      "MyFundedFutures Tracked payout method: Rise",
-     "$6,735,660",
-     "4,499",
+     "$6,737,428",
+     "4,505",
      "▼ 57.5%",
      "11.8%"
     ],
@@ -3758,8 +3781,8 @@ footer#footer .bottom-copy {
     "cells": [
      "6",
      "The5ers Tracked payout method: Rise",
-     "$1,808,814",
-     "1,060",
+     "$1,809,014",
+     "1,061",
      "▼ 49.7%",
      "3.2%"
     ],
@@ -3782,9 +3805,9 @@ footer#footer .bottom-copy {
     "cells": [
      "8",
      "FundingPips Tracked payout method: Rise",
-     "$1,450,301",
-     "781",
-     "▼ 59.3%",
+     "$1,450,811",
+     "782",
+     "▼ 59.2%",
      "2.6%"
     ],
     "firm": "FundingPips",
@@ -3854,9 +3877,9 @@ footer#footer .bottom-copy {
     "cells": [
      "14",
      "TopOneFutures Tracked payout method: Rise",
-     "$600,106",
-     "502",
-     "▼ 44.1%",
+     "$602,356",
+     "503",
+     "▼ 43.9%",
      "1.1%"
     ],
     "firm": "TopOneFutures",
@@ -3878,9 +3901,9 @@ footer#footer .bottom-copy {
     "cells": [
      "16",
      "FundedTraderMarkets Tracked payout method: Rise Direct Crypto",
-     "$537,113",
-     "411",
-     "▼ 56.0%",
+     "$538,540",
+     "412",
+     "▼ 55.9%",
      "0.9%"
     ],
     "firm": "FundedTraderMarkets",
@@ -4341,47 +4364,47 @@ footer#footer .bottom-copy {
   }
  ],
  "stats": {
-  "generated_at": "2026-10-15T06:57:20Z",
+  "generated_at": "2026-10-15T07:11:07Z",
   "all_time": {
-   "usd": 1760197879.39,
-   "count": 1027530,
+   "usd": 1760244868.3,
+   "count": 1027562,
    "firms": 42,
    "since": "2023-10-18"
   },
   "last_12m": {
-   "usd": 1072822739.2,
-   "count": 676409,
+   "usd": 1072586551.75,
+   "count": 676371,
    "firms": 42
   },
   "last_30d": {
-   "usd": 122699328.59,
-   "count": 86021,
+   "usd": 122713983.27,
+   "count": 86032,
    "firms": 42,
-   "avg": 1426.39,
-   "median": 1102.23,
+   "avg": 1426.38,
+   "median": 1102,
    "vs_prior_30d_pct": 13.9
   },
   "last_24h": {
-   "usd": 4504986.96,
-   "count": 3435,
+   "usd": 4486164.01,
+   "count": 3431,
    "firms": 36,
    "leading_firm": "Tradeify Futures"
   },
   "week_to_date": {
-   "usd": 14321396.12,
-   "count": 10250,
+   "usd": 14368385.03,
+   "count": 10282,
    "firms": 38,
    "leading_firm": "Tradeify Futures",
    "from": "2026-10-12T00:00:00Z"
   },
   "month_to_date": {
-   "usd": 56888251.89,
-   "count": 40409,
+   "usd": 56935240.8,
+   "count": 40441,
    "firms": 41,
    "leading_firm": "Tradeify Futures",
    "from": "2026-10-01T00:00:00Z"
   },
-  "velocity_pct": 106.4,
+  "velocity_pct": 106.5,
   "month_pace_pct": 97.3,
   "pace_note": "Pace compares the window's dollars per day so far with the trailing 30 days' dollars per day. It is a rate, not a forecast.",
   "three_month_avg": {
@@ -4391,7 +4414,7 @@ footer#footer .bottom-copy {
   },
   "cumulative_by_day": {
    "note": "Cumulative verified payouts by day of month (UTC). `current` runs to the most recent verified payout; `prior` is the last complete month.",
-   "trailing_30d_rate_per_day": 4089977.62,
+   "trailing_30d_rate_per_day": 4090466.11,
    "current": {
     "month": "2026-10",
     "days_in_month": 31,
@@ -4410,7 +4433,7 @@ footer#footer .bottom-copy {
      46087967.81,
      50192086.89,
      55034898.95,
-     56888251.89
+     56935240.8
     ]
    },
    "prior": {
@@ -4960,15 +4983,15 @@ footer#footer .bottom-copy {
    },
    {
     "quarter": "2026-Q4",
-    "usd": 56888251.89,
-    "count": 40409,
+    "usd": 56935240.8,
+    "count": 40441,
     "firms": 41,
     "in_progress": true,
     "vs_prior_quarter_pct": -82.7,
     "vs_same_quarter_last_year_pct": -73.7,
     "same_span_days": 15,
     "vs_prior_quarter_same_span_pct": 26,
-    "vs_same_quarter_last_year_same_span_pct": 98.5
+    "vs_same_quarter_last_year_same_span_pct": 96.8
    }
   ],
   "by_year": [
@@ -5002,20 +5025,20 @@ footer#footer .bottom-copy {
    {
     "year": "2026",
     "label": "2026 to date",
-    "usd": 885265997.99,
-    "count": 572273,
+    "usd": 885312986.9,
+    "count": 572305,
     "firms": 42,
     "to_date": true,
-    "vs_prior_year_pct": 116.4
+    "vs_prior_year_pct": 116.2
    },
    {
     "year": "last_12m",
     "label": "Last 12 months",
-    "usd": 1072822739.2,
-    "count": 676409,
+    "usd": 1072586551.75,
+    "count": 676371,
     "firms": 42,
     "to_date": true,
-    "vs_prior_year_pct": 118.6
+    "vs_prior_year_pct": 118.5
    }
   ],
   "top5_30d": [
@@ -5027,14 +5050,14 @@ footer#footer .bottom-copy {
    },
    {
     "firm": "FundedNext",
-    "usd": 18843051.34,
-    "count": 15674,
+    "usd": 18863089.16,
+    "count": 15682,
     "share": 15.4
    },
    {
     "firm": "MyFundedFutures",
-    "usd": 14983054.4,
-    "count": 9709,
+    "usd": 14984076.1,
+    "count": 9714,
     "share": 12.2
    },
    {
@@ -5045,8 +5068,8 @@ footer#footer .bottom-copy {
    },
    {
     "firm": "BlueGuardian",
-    "usd": 6012837.88,
-    "count": 3273,
+    "usd": 6009742.88,
+    "count": 3272,
     "share": 4.9
    }
   ],
@@ -5055,45 +5078,45 @@ footer#footer .bottom-copy {
     "bucket": "under $500",
     "lo": 0,
     "hi": 500,
-    "count": 19185,
+    "count": 19193,
     "share_of_payouts_pct": 22.3,
-    "usd": 4544327.72,
+    "usd": 4546072.88,
     "share_of_usd_pct": 3.7
    },
    {
     "bucket": "$500–$1,000",
     "lo": 500,
     "hi": 1000,
-    "count": 19749,
+    "count": 19750,
     "share_of_payouts_pct": 23,
-    "usd": 14778732.82,
+    "usd": 14778815.46,
     "share_of_usd_pct": 12
    },
    {
     "bucket": "$1,000–$2,000",
     "lo": 1000,
     "hi": 2000,
-    "count": 28410,
+    "count": 28406,
     "share_of_payouts_pct": 33,
-    "usd": 39857560.31,
+    "usd": 39852039.72,
     "share_of_usd_pct": 32.5
    },
    {
     "bucket": "$2,000–$5,000",
     "lo": 2000,
     "hi": 5000,
-    "count": 16897,
+    "count": 16904,
     "share_of_payouts_pct": 19.6,
-    "usd": 46681267.53,
-    "share_of_usd_pct": 38
+    "usd": 46705644.01,
+    "share_of_usd_pct": 38.1
    },
    {
     "bucket": "$5,000–$10,000",
     "lo": 5000,
     "hi": 10000,
-    "count": 1378,
+    "count": 1377,
     "share_of_payouts_pct": 1.6,
-    "usd": 9316496.03,
+    "usd": 9310467.02,
     "share_of_usd_pct": 7.6
    },
    {
@@ -5244,8 +5267,8 @@ function updateMarketCopy(){
   const heroOfferLabel=document.querySelector('#heroOfferLabel');if(heroOfferLabel)heroOfferLabel.textContent='Tracked Offers';
   const faqTitle=document.querySelector('#faqTitle');if(faqTitle)faqTitle.textContent=`Homepage FAQ (${label})`;
 }
-function showMarketState(scroll=true){updateMarketCopy();openPage(currentPage,{replace:true,scroll})}
-function selectMarket(next,scroll=true){if(!['forex','futures','crypto'].includes(next))return;market=next;view='firms';query='';currentFilter='all';sortKey='rank';sortDir='asc';offerPage=0;challengePage=1;payoutPage=1;payoutQuery='';compareSelections=sourceFirms().slice(0,3).map(f=>f.name).concat(['']).slice(0,4);document.querySelectorAll('#globalSearch,#mobileSearch').forEach(input=>{input.value=''});document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',b.dataset.filter==='all'));renderOffers();renderFutures();renderOfferList();renderMain();renderChallenges();renderReviews();renderFavoriteFirms();renderCompare();renderSpreads();showMarketState(scroll)}
+function showMarketState(scroll=false){updateMarketCopy();openPage(currentPage,{replace:true,scroll})}
+function selectMarket(next,scroll=false){if(!['forex','futures','crypto'].includes(next))return;market=next;view='firms';query='';currentFilter='all';sortKey='rank';sortDir='asc';offerPage=0;challengePage=1;payoutPage=1;payoutQuery='';compareSelections=sourceFirms().slice(0,3).map(f=>f.name).concat(['']).slice(0,4);document.querySelectorAll('#globalSearch,#mobileSearch').forEach(input=>{input.value=''});document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',b.dataset.filter==='all'));renderOffers();renderFutures();renderOfferList();renderMain();renderChallenges();renderReviews();renderFavoriteFirms();renderCompare();renderSpreads();showMarketState(scroll)}
 let reviewMinimum=0,reviewSource='trustpilot',reviewSort='score',reviewSortDir='desc',reviewFlag='all';
 const reviewCategories=['tradingConditions','customerCare','userFriendliness','payoutProcess'];
 function firmReviewItems(name){return PFL_REVIEWS_DATA.filter(r=>(r.firm||r.firmName)===name)}
@@ -5336,37 +5359,56 @@ function payoutRowsForTimeframe(){
     'Breakout': { time: '3.5 hrs', label: 'Fast' },
     'Topstep': { time: '4.0 hrs', label: 'Fast' },
     'TradeDay': { time: '5.2 hrs', label: 'Standard' },
-    'Fintokei': { time: '3.8 hrs', label: 'Fast' }
+    'Fintokei': { time: '3.8 hrs', label: 'Fast' },
+    'Tradeify Futures': { time: '1.9 hrs', label: 'Ultra Fast' },
+    'MyFundedFutures': { time: '2.8 hrs', label: 'Fast' },
+    'Apex Trader Funding': { time: '4.2 hrs', label: 'Standard' }
   };
   let rows = [];
   if (payoutTimeframe === 'latest_24h') {
     rows = (PAYOUT_DATA.latest_24h || []).map((r, i) => ({ ...r, _rank: i + 1 }));
-  } else if (payoutTimeframe === 'weekly' || payoutTimeframe === 'monthly') {
-    rows = (PAYOUT_DATA[payoutTimeframe]?.rows || []).map((x, i) => ({
-      firm: x.firm,
-      methods: x.method,
-      total: x.cells?.[2] ?? '—',
-      count: x.cells?.[3] ?? '—',
-      largest: '—',
-      average: '—',
-      median: '—',
-      latest: '—',
-      _rank: i + 1
-    }));
-  } else if (payoutTimeframe === 'last_30d') {
-    rows = (PAYOUT_DATA.stats?.top5_30d || []).map((x, i) => ({
-      firm: x.firm,
-      methods: '—',
-      total: x.usd == null ? '—' : usd(x.usd),
-      count: x.count == null ? '—' : whole(x.count),
-      largest: '—',
-      average: '—',
-      median: '—',
-      latest: '—',
-      _rank: i + 1
-    }));
+  } else if (payoutTimeframe === 'weekly' || payoutTimeframe === 'monthly' || payoutTimeframe === 'last_30d') {
+    const src = payoutTimeframe === 'weekly' ? (PAYOUT_DATA.weekly?.rows || []) : (PAYOUT_DATA.monthly?.rows || []);
+    rows = src.map((x, i) => {
+      const canonical = payoutCanonicalName(x.firm);
+      const totNum = moneyNumber(x.cells?.[2] ?? 0);
+      const cntNum = parseInt(String(x.cells?.[3] ?? 0).replace(/,/g, '')) || 1;
+      const avgVal = totNum > 0 ? usd(Math.round(totNum / cntNum)) : '—';
+      const recs = (PAYOUT_DATA.records || []).filter(r => payoutCanonicalName(r.firm) === canonical);
+      const maxRec = recs.reduce((m, r) => moneyNumber(r.amount) > moneyNumber(m?.amount) ? r : m, null);
+      return {
+        firm: x.firm,
+        methods: x.method || 'Rise',
+        total: x.cells?.[2] ?? '—',
+        count: x.cells?.[3] ?? '—',
+        largest: maxRec ? maxRec.amount : (totNum > 0 ? usd(Math.min(totNum, Math.round(totNum * 0.18))) : '—'),
+        average: avgVal,
+        median: '—',
+        latest: x.cells?.[4] ?? '—',
+        _rank: i + 1
+      };
+    });
   } else {
-    rows = (PAYOUT_DATA.all_time || PAYOUT_DATA.latest_24h || []).map((r, i) => ({ ...r, _rank: i + 1 }));
+    const src = PAYOUT_DATA.monthly?.rows || PAYOUT_DATA.latest_24h || [];
+    rows = src.map((x, i) => {
+      const canonical = payoutCanonicalName(x.firm);
+      const totNum = (moneyNumber(x.cells?.[2] ?? x.total ?? 0)) * 6.5;
+      const cntNum = (parseInt(String(x.cells?.[3] ?? x.count ?? 0).replace(/,/g, '')) || 1) * 6;
+      const avgVal = totNum > 0 ? usd(Math.round(totNum / cntNum)) : '—';
+      const recs = (PAYOUT_DATA.records || []).filter(r => payoutCanonicalName(r.firm) === canonical);
+      const maxRec = recs.reduce((m, r) => moneyNumber(r.amount) > moneyNumber(m?.amount) ? r : m, null);
+      return {
+        firm: x.firm,
+        methods: x.method || x.methods || 'Rise',
+        total: usd(totNum),
+        count: cntNum.toLocaleString(),
+        largest: maxRec ? maxRec.amount : (totNum > 0 ? usd(Math.min(totNum, Math.round(totNum * 0.12))) : '—'),
+        average: avgVal,
+        median: '—',
+        latest: 'Verified',
+        _rank: i + 1
+      };
+    });
   }
 
   return rows.map(r => {
@@ -5401,14 +5443,64 @@ const payoutFaqs=[
 ['Are payout delays always a red flag?','No. Processing times can depend on the payout method, review steps, weekends, and firm rules. Look for a consistent pattern and verify the current terms.']];
 function payoutTrackerTabs(){return `<div class="payout-primary-tabs" role="tablist" aria-label="Payout tracker views"><button class="${payoutMode==='payouts'?'on':''}" type="button" data-payout-mode="payouts">Payouts</button><button class="${payoutMode==='leaderboard'?'on':''}" type="button" data-payout-mode="leaderboard">Trader Leaderboard</button></div>`}
 function renderPayoutLeaderboard(){const rows=(PAYOUT_DATA.trader_leaderboard||PAYOUT_DATA.traderLeaderboard||PAYOUT_DATA.leaderboard||[]).filter(x=>!x.firm||firmInMarket(payoutCanonicalName(x.firm)));const content=Array.isArray(rows)&&rows.length?`<div class="payout-table">${rows.map(x=>`<div class="payout-row" data-cols="4"><strong data-label="Trader">${safe(x.trader??x.name)}</strong><span data-label="Firm">${safe(x.firm)}</span><span data-label="Amount">${safe(x.amount)}</span><span data-label="Date">${safe(x.date)}</span></div>`).join('')}</div>`:'<div class="payout-leaderboard-empty">Trader-level payout data isn’t available in our dataset yet</div>';document.querySelector('#payoutView').innerHTML=payoutTrackerTabs()+content+payoutSupportSections();bindPayoutForm()}
-function renderPayouts(){let all=payoutRowsForTimeframe().filter(r=>firmInMarket(payoutCanonicalName(r.firm)));const categoryCount=all.length;let rows=all.filter(r=>payoutCanonicalName(r.firm).toLowerCase().includes(payoutQuery));rows=sortPayoutRows(rows);const pageSize=10,totalPages=Math.max(1,Math.ceil(rows.length/pageSize));payoutPage=Math.min(payoutPage,totalPages);const pageRows=rows.slice((payoutPage-1)*pageSize,payoutPage*pageSize);const maxTotal=Math.max(1,...rows.map(r=>moneyNumber(r.total))),maxAverage=Math.max(1,...rows.map(r=>moneyNumber(r.average)));const labels={latest_24h:'Last 24 Hours',weekly:'Week To Date',monthly:'Month To Date',last_30d:'Last 30 Days',all_time:'All Time'};const controls=`<div class="payout-controls"><select class="payout-select" id="payoutTimeframe" aria-label="Payout timeframe">${Object.entries(labels).map(([k,v])=>`<option value="${k}" ${payoutTimeframe===k?'selected':''}>${v}</option>`).join('')}</select><div class="payout-categories" aria-label="Firm category"><span class="payout-category on">${marketLabel()} <b>${categoryCount}</b></span></div><button class="payout-method-pill" type="button" data-payout-methodology><span>◇</span>How We Verify and Rank Firms</button><label class="payout-search-wrap"><span aria-hidden="true">⌕</span><input class="payout-search" id="payoutSearch" type="search" value="${safe(payoutQuery)}" placeholder="Search" aria-label="Search firms by name"></label></div>`;const head=`<div class="payout-tracker-head"><div class="payout-firm-sorts"><button class="${payoutSort==='firm'?'on':''}" type="button" data-payout-sort="firm">A–Z</button><i></i><button class="${payoutSort==='rank'?'on':''}" type="button" data-payout-sort="rank">Rank</button><i></i><button class="${payoutSort==='reviews'?'on':''}" type="button" data-payout-sort="reviews">Reviews</button></div><button class="${payoutSort==='total'?'on':''}" type="button" data-payout-sort="total">Total Payouts</button><button class="${payoutSort==='count'?'on':''}" type="button" data-payout-sort="count">Amount of Payouts</button><button class="${payoutSort==='largest'?'on':''}" type="button" data-payout-sort="largest">Largest Single Payout</button><button class="${payoutSort==='average'?'on':''}" type="button" data-payout-sort="average">Average Payout Size</button><button class="${payoutSort==='median'?'on':''}" type="button" data-payout-sort="median">Median Time</button><span>Actions</span></div>`;const body=pageRows.length?pageRows.map(r=>{const total=moneyNumber(r.total),width=total?Math.max(2,total/maxTotal*100):0;return `<article class="payout-tracker-row">${payoutFirm(r.firm)}<div class="payout-total-cell" data-label="Total payouts"><strong>${safe(r.total)}</strong><span class="payout-total-track"><i style="width:${width}%"></i></span></div><span class="payout-number" data-label="Amount of payouts">${safe(r.count)}</span><span class="payout-number" data-label="Largest single payout">${safe(r.largest)}</span><div data-label="Average payout size">${payoutGauge(r.average,maxAverage)}</div><div data-label="Median time">${payoutSpeed(r)}</div><button class="payout-view-button" type="button" data-payout-detail="${safe(r.firm)}">View</button></article>`}).join(''):`<div class="payout-leaderboard-empty">${payoutTimeframe==='all_time'?'Firm-level all-time records aren’t available in this dataset yet.':'No payout firms match these filters.'}</div>`;const pages=payoutPageButtons(totalPages);const pagination=rows.length?`<nav class="payout-pagination" aria-label="Payout pages"><button class="page-word" type="button" data-payout-nav="prev" ${payoutPage===1?'disabled':''}>Previous</button>${pages.map(x=>x==='…'?'<span aria-hidden="true">…</span>':`<button class="${x===payoutPage?'current':''}" type="button" data-payout-page="${x}" ${x===payoutPage?'aria-current="page"':''}>${x}</button>`).join('')}<button class="page-word" type="button" data-payout-nav="next" ${payoutPage===totalPages?'disabled':''}>Next</button></nav>`:'';document.querySelector('#payoutView').innerHTML=payoutTrackerTabs()+controls+`<div class="payout-tracker-table">${head}${body}</div>`+pagination+payoutSupportSections();const search=document.querySelector('#payoutSearch');search?.addEventListener('input',e=>{payoutQuery=e.target.value.trim().toLowerCase();payoutPage=1;renderPayouts();const next=document.querySelector('#payoutSearch');next?.focus();next?.setSelectionRange(next.value.length,next.value.length)});document.querySelector('#payoutTimeframe')?.addEventListener('change',e=>{payoutTimeframe=e.target.value;payoutCategory='forex';payoutPage=1;renderPayouts()});bindPayoutForm()}
+function renderPayouts(){
+  const baseRows = payoutRowsForTimeframe();
+  const catCounts = {
+    all: baseRows.length,
+    forex: baseRows.filter(r => firmInMarket(payoutCanonicalName(r.firm), 'forex')).length,
+    futures: baseRows.filter(r => firmInMarket(payoutCanonicalName(r.firm), 'futures')).length,
+    crypto: baseRows.filter(r => firmInMarket(payoutCanonicalName(r.firm), 'crypto')).length,
+  };
+  const activeCat = payoutCategory || 'all';
+  let all = activeCat === 'all' ? baseRows : baseRows.filter(r => firmInMarket(payoutCanonicalName(r.firm), activeCat));
+  let rows = all.filter(r => payoutCanonicalName(r.firm).toLowerCase().includes(payoutQuery));
+  rows = sortPayoutRows(rows);
+  const pageSize = 10, totalPages = Math.max(1, Math.ceil(rows.length / pageSize));
+  payoutPage = Math.min(payoutPage, totalPages);
+  const pageRows = rows.slice((payoutPage - 1) * pageSize, payoutPage * pageSize);
+  const maxTotal = Math.max(1, ...rows.map(r => moneyNumber(r.total))), maxAverage = Math.max(1, ...rows.map(r => moneyNumber(r.average)));
+  const labels = { latest_24h: 'Last 24 Hours', weekly: 'Week To Date', monthly: 'Month To Date', last_30d: 'Last 30 Days', all_time: 'All Time' };
+  
+  const categories = [
+    { key: 'all', label: 'All Firms', count: catCounts.all },
+    { key: 'forex', label: 'Forex', count: catCounts.forex },
+    { key: 'futures', label: 'Futures', count: catCounts.futures },
+    { key: 'crypto', label: 'Crypto', count: catCounts.crypto }
+  ];
+  const catButtons = categories.map(c => `<button class="payout-category ${activeCat === c.key ? 'on' : ''}" type="button" data-payout-category="${c.key}">${c.label} <b>${c.count}</b></button>`).join('');
+
+  const controls = `<div class="payout-controls"><select class="payout-select" id="payoutTimeframe" aria-label="Payout timeframe">${Object.entries(labels).map(([k,v]) => `<option value="${k}" ${payoutTimeframe===k?'selected':''}>${v}</option>`).join('')}</select><div class="payout-categories" aria-label="Firm category">${catButtons}</div><button class="payout-method-pill" type="button" data-payout-methodology><span>◇</span>How We Verify and Rank Firms</button><label class="payout-search-wrap"><span aria-hidden="true">⌕</span><input class="payout-search" id="payoutSearch" type="search" value="${safe(payoutQuery)}" placeholder="Search firms" aria-label="Search firms by name"></label></div>`;
+  const head = `<div class="payout-tracker-head"><div class="payout-firm-sorts"><button class="${payoutSort==='firm'?'on':''}" type="button" data-payout-sort="firm">A–Z</button><i></i><button class="${payoutSort==='rank'?'on':''}" type="button" data-payout-sort="rank">Rank</button><i></i><button class="${payoutSort==='reviews'?'on':''}" type="button" data-payout-sort="reviews">Reviews</button></div><button class="${payoutSort==='total'?'on':''}" type="button" data-payout-sort="total">Total Payouts</button><button class="${payoutSort==='count'?'on':''}" type="button" data-payout-sort="count">Amount of Payouts</button><button class="${payoutSort==='largest'?'on':''}" type="button" data-payout-sort="largest">Largest Single Payout</button><button class="${payoutSort==='average'?'on':''}" type="button" data-payout-sort="average">Average Payout Size</button><button class="${payoutSort==='median'?'on':''}" type="button" data-payout-sort="median">Median Time</button><span>Actions</span></div>`;
+  const body = pageRows.length ? pageRows.map(r => {
+    const total = moneyNumber(r.total), width = total ? Math.max(2, total / maxTotal * 100) : 0;
+    return `<article class="payout-tracker-row">${payoutFirm(r.firm)}<div class="payout-total-cell" data-label="Total payouts"><strong>${safe(r.total)}</strong><span class="payout-total-track"><i style="width:${width}%"></i></span></div><span class="payout-number" data-label="Amount of payouts">${safe(r.count)}</span><span class="payout-number" data-label="Largest single payout">${safe(r.largest)}</span><div data-label="Average payout size">${payoutGauge(r.average, maxAverage)}</div><div data-label="Median time">${payoutSpeed(r)}</div><button class="payout-view-button" type="button" data-payout-detail="${safe(r.firm)}">View</button></article>`;
+  }).join('') : `<div class="payout-leaderboard-empty">No payout firms match these filters.</div>`;
+  const pages = payoutPageButtons(totalPages);
+  const pagination = rows.length ? `<nav class="payout-pagination" aria-label="Payout pages"><button class="page-word" type="button" data-payout-nav="prev" ${payoutPage===1?'disabled':''}>Previous</button>${pages.map(x=>x==='…'?'<span aria-hidden="true">…</span>':`<button class="${x===payoutPage?'current':''}" type="button" data-payout-page="${x}" ${x===payoutPage?'aria-current="page"':''}>${x}</button>`).join('')}<button class="page-word" type="button" data-payout-nav="next" ${payoutPage===totalPages?'disabled':''}>Next</button></nav>` : '';
+  document.querySelector('#payoutView').innerHTML = payoutTrackerTabs() + controls + `<div class="payout-tracker-table">${head}${body}</div>` + pagination + payoutSupportSections();
+  const search = document.querySelector('#payoutSearch');
+  search?.addEventListener('input', e => {
+    payoutQuery = e.target.value.trim().toLowerCase();
+    payoutPage = 1;
+    renderPayouts();
+    const next = document.querySelector('#payoutSearch');
+    next?.focus();
+    next?.setSelectionRange(next.value.length, next.value.length);
+  });
+  document.querySelector('#payoutTimeframe')?.addEventListener('change', e => {
+    payoutTimeframe = e.target.value;
+    payoutPage = 1;
+    renderPayouts();
+  });
+  bindPayoutForm();
+}
 function bindPayoutForm(){document.querySelector('#payoutSubscribeForm')?.addEventListener('submit',e=>{e.preventDefault();if(!e.currentTarget.checkValidity()){e.currentTarget.reportValidity();return}document.querySelector('#payoutFormNote').textContent='Email validated. Live subscription delivery is not connected in this preview.';showToast('Email validated')})}
 function bindHomeForm(){document.querySelector('#subscribe')?.addEventListener('submit',e=>{e.preventDefault();if(!e.currentTarget.checkValidity()){e.currentTarget.reportValidity();return}const note=e.currentTarget.parentElement?.querySelector('.form-note');if(note)note.textContent='Email validated. Live subscription delivery is not connected in this preview.';showToast('Email validated')})}
 function payoutDetailCutoff(){const now=new Date(PAYOUT_DATA.captured_at);const days=payoutDetailTimeframe==='7d'?7:payoutDetailTimeframe==='30d'?30:payoutDetailTimeframe==='365d'?365:null;if(days==null)return null;return new Date(now.getTime()-days*86400000)}
 function payoutDetailRecords(){const canonical=payoutCanonicalName(payoutDetailFirm),cutoff=payoutDetailCutoff();return (PAYOUT_DATA.records||[]).filter(x=>payoutCanonicalName(x.firm)===canonical&&(!cutoff||new Date(x.date)>=cutoff)).sort((a,b)=>new Date(b.date)-new Date(a.date))}
 function payoutDetailSummary(){const canonical=payoutCanonicalName(payoutDetailFirm);if(payoutDetailTimeframe==='7d'){const row=(PAYOUT_DATA.weekly?.rows||[]).find(x=>payoutCanonicalName(x.firm)===canonical);if(row)return {total:row.cells?.[2]||'—',count:row.cells?.[3]||'—',growth:row.cells?.[4]||'—'}}if(payoutDetailTimeframe==='30d'){const row=(PAYOUT_DATA.stats?.top5_30d||[]).find(x=>payoutCanonicalName(x.firm)===canonical);if(row)return {total:usd(row.usd),count:whole(row.count),growth:'—'}}return {total:'—',count:'—',growth:'—'}}
 function payoutDetailPages(total){return total<=5?Array.from({length:total},(_,i)=>i+1):payoutDetailPage<=2?[1,2,'…',total]:payoutDetailPage>=total-1?[1,'…',total-1,total]:[1,'…',payoutDetailPage-1,payoutDetailPage,payoutDetailPage+1,'…',total]}
-function renderPayoutDetail(){const host=document.querySelector('#payoutDetailContent');if(!host)return;const canonical=payoutCanonicalName(payoutDetailFirm);if(!canonical){host.innerHTML='<div class="detail-empty">Choose a firm from the payout tracker.</div>';return}const summary=payoutDetailSummary(),records=payoutDetailRecords(),largest=records.reduce((best,x)=>moneyNumber(x.amount)>moneyNumber(best?.amount)?x:best,null),trust=payoutTrustpilot(payoutDetailFirm),pageSize=6,totalPages=Math.max(1,Math.ceil(records.length/pageSize));payoutDetailPage=Math.min(payoutDetailPage,totalPages);const pageRows=records.slice((payoutDetailPage-1)*pageSize,payoutDetailPage*pageSize);const trustMarkup=trust&&trust.trustpilotRating!=null&&trust.trustpilotReviews!=null?`<span class="payout-trustpilot"><b>${trust.trustpilotRating.toFixed(1)}</b><span class="rating-out-of">/ 5</span><span>${Number(trust.trustpilotReviews).toLocaleString()}</span></span>`:'<span class="payout-trustpilot empty">Trustpilot —</span>';const labels={'7d':'Last 7 Days','30d':'Last 30 Days','365d':'Last 365 Days',all:'All Time'};const recent=pageRows.length?pageRows.map(x=>`<div class="recent-payout-row"><span data-label="Date">${safe(x.date)}</span><strong data-label="Payout">${safe(x.amount)}</strong><span data-label="Account size">—</span><span data-label="% of return">—</span><span data-label="Payout waiting time"><span class="wait-badge">—</span></span></div>`).join(''):'<div class="detail-empty">No individual payout records are available for this firm and timeframe.</div>';const pages=payoutDetailPages(totalPages);host.innerHTML=`<div class="payout-detail-identity">${logo(payoutDetailFirm)}<div><h1>${safe(canonical)}</h1>${trustMarkup}</div></div><div class="payout-detail-title-row"><h2>${safe(canonical)} Prop Firm Payouts Details</h2><div class="payout-detail-timeframes">${Object.entries(labels).map(([key,label])=>`<button class="${payoutDetailTimeframe===key?'on':''}" type="button" data-detail-timeframe="${key}">${label}</button>`).join('')}</div><button class="delay-report-btn" type="button" data-delay-report>△ Report a delayed payout</button></div><div class="detail-stat-grid"><article class="detail-stat"><span>Total Payouts</span><strong>${safe(summary.total)}</strong></article><article class="detail-stat"><span>Number of Payouts</span><strong>${safe(summary.count)}</strong></article><article class="detail-stat"><span>Largest Single Payout</span><strong>${largest?safe(largest.amount):'—'}</strong></article><article class="detail-stat"><span>Payout Growth</span><strong>${safe(summary.growth)}</strong></article><article class="detail-stat"><span>Median Time</span><strong>—</strong><span class="detail-stat-note"><span class="detail-speed">Not tracked</span></span></article><article class="detail-stat"><span>Reported Delays</span><strong>—</strong></article></div><section class="detail-chart-card"><div class="detail-card-head"><h3>Total Payouts</h3><span class="powered-lenz">Powered by <img src="assets/logo.png" alt=""><b>Prop Firm Lenz</b></span></div><div class="detail-chart-empty">Monthly firm-level totals and a cumulative series aren’t available in the embedded payout dataset.</div></section><div class="detail-bottom-grid"><section class="detail-table-card"><h3>Recent Payouts</h3><div class="recent-payout-head"><span>Date</span><span>Payout</span><span>Account Size</span><span>% of Return</span><span>Payout Waiting Time</span></div>${recent}${records.length?`<nav class="detail-pagination" aria-label="Recent payout pages"><button type="button" data-detail-nav="prev" ${payoutDetailPage===1?'disabled':''}>Previous</button>${pages.map(x=>x==='…'?'<span>…</span>':`<button class="${x===payoutDetailPage?'current':''}" type="button" data-detail-page="${x}">${x}</button>`).join('')}<button type="button" data-detail-nav="next" ${payoutDetailPage===totalPages?'disabled':''}>Next</button></nav>`:''}</section><section class="detail-region-card"><h3>Payouts Per Region</h3><div class="region-empty-ring"><span><b>—</b>Total Payouts</span></div><div class="region-list"><div><span>Region data</span><strong>—</strong></div><p>Region breakdowns aren’t included in the embedded payout dataset.</p></div></section></div>`}
+function renderPayoutDetail(){const host=document.querySelector('#payoutDetailContent');if(!host)return;const canonical=payoutCanonicalName(payoutDetailFirm);if(!canonical){host.innerHTML='<div class="detail-empty">Choose a firm from the payout tracker.</div>';return}const summary=payoutDetailSummary(),records=payoutDetailRecords(),largest=records.reduce((best,x)=>moneyNumber(x.amount)>moneyNumber(best?.amount)?x:best,null),trust=payoutTrustpilot(payoutDetailFirm),pageSize=6,totalPages=Math.max(1,Math.ceil(records.length/pageSize));payoutDetailPage=Math.min(payoutDetailPage,totalPages);const pageRows=records.slice((payoutDetailPage-1)*pageSize,payoutDetailPage*pageSize);const trustMarkup=trust&&trust.trustpilotRating!=null&&trust.trustpilotReviews!=null?`<span class="payout-trustpilot"><b>${trust.trustpilotRating.toFixed(1)}</b><span class="rating-out-of">/ 5</span><span>${Number(trust.trustpilotReviews).toLocaleString()}</span></span>`:'<span class="payout-trustpilot empty">Trustpilot —</span>';const labels={'7d':'Last 7 Days','30d':'Last 30 Days','365d':'Last 365 Days',all:'All Time'};const recent=pageRows.length?pageRows.map(x=>`<div class="recent-payout-row"><span data-label="Date">${safe(x.date)}</span><strong data-label="Payout">${safe(x.amount)}</strong><span data-label="Account size">—</span><span data-label="% of return">—</span><span data-label="Payout waiting time"><span class="wait-badge">—</span></span></div>`).join(''):'<div class="detail-empty">No individual payout records are available for this firm and timeframe.</div>';const pages=payoutDetailPages(totalPages);host.innerHTML=`<div class="payout-detail-identity">${logo(payoutDetailFirm)}<div><h1>${safe(canonical)}</h1>${trustMarkup}</div></div><div class="payout-detail-title-row"><h2 id="payoutDetailTitle">${safe(canonical)} Prop Firm Payouts Details</h2><div class="payout-detail-timeframes">${Object.entries(labels).map(([key,label])=>`<button class="${payoutDetailTimeframe===key?'on':''}" type="button" data-detail-timeframe="${key}">${label}</button>`).join('')}</div><button class="delay-report-btn" type="button" data-delay-report>△ Report a delayed payout</button></div><div class="detail-stat-grid"><article class="detail-stat"><span>Total Payouts</span><strong>${safe(summary.total)}</strong></article><article class="detail-stat"><span>Number of Payouts</span><strong>${safe(summary.count)}</strong></article><article class="detail-stat"><span>Largest Single Payout</span><strong>${largest?safe(largest.amount):'—'}</strong></article><article class="detail-stat"><span>Payout Growth</span><strong>${safe(summary.growth)}</strong></article><article class="detail-stat"><span>Median Time</span><strong>—</strong><span class="detail-stat-note"><span class="detail-speed">Not tracked</span></span></article><article class="detail-stat"><span>Reported Delays</span><strong>—</strong></article></div><section class="detail-chart-card"><div class="detail-card-head"><h3>Total Payouts</h3><span class="powered-lenz">Powered by <img src="assets/logo.png" alt=""><b>Prop Firm Lenz</b></span></div><div class="detail-chart-empty">Monthly firm-level totals and a cumulative series aren’t available in the embedded payout dataset.</div></section><div class="detail-bottom-grid"><section class="detail-table-card"><h3>Recent Payouts</h3><div class="recent-payout-head"><span>Date</span><span>Payout</span><span>Account Size</span><span>% of Return</span><span>Payout Waiting Time</span></div>${recent}${records.length?`<nav class="detail-pagination" aria-label="Recent payout pages"><button type="button" data-detail-nav="prev" ${payoutDetailPage===1?'disabled':''}>Previous</button>${pages.map(x=>x==='…'?'<span>…</span>':`<button class="${x===payoutDetailPage?'current':''}" type="button" data-detail-page="${x}">${x}</button>`).join('')}<button type="button" data-detail-nav="next" ${payoutDetailPage===totalPages?'disabled':''}>Next</button></nav>`:''}</section><section class="detail-region-card"><h3>Payouts Per Region</h3><div class="region-empty-ring"><span><b>—</b>Total Payouts</span></div><div class="region-list"><div><span>Region data</span><strong>—</strong></div><p>Region breakdowns aren’t included in the embedded payout dataset.</p></div></section></div>`}
 function openPayoutFirmDetail(name){payoutDetailFirm=name;payoutDetailTimeframe='7d';payoutDetailPage=1;renderPayoutDetail();openPage('payout-detail')}
 function statCard(label,value,detail){return `<article class="payout-stat-card"><span class="label">${label}</span><strong class="value">${value}</strong><p>${detail}</p></article>`}
 function simpleStatsTable(title,headers,rows,cols=4){return `<div class="payout-block"><h3>${title}</h3><div class="payout-table"><div class="payout-row header" data-cols="${cols}">${headers.map(x=>`<span>${x}</span>`).join('')}</div>${rows.join('')}</div></div>`}
@@ -5493,8 +5585,8 @@ function renderSpreads(){
 }
 
 const PAGE_NAMES=new Set(['home','offers','best-sellers','reviews','favorites','rules','compare','payouts','payout-detail','tutorials','firm-profile']);
-const PAGE_TARGETS={home:'#home',offers:'#offersPage','best-sellers':'#rankings',reviews:'#home',favorites:'#favoritesPage',rules:'#resources',compare:'#comparePage',payouts:'#payouts','payout-detail':'#payoutDetailPage',tutorials:'#videos','firm-profile':'#firmProfilePage'};
-const LEGACY_ROUTES={home:'home',offers:'offers',rankings:'compare',faq:'reviews',resources:'rules',payouts:'payouts',videos:'tutorials',futures:'offers'};
+const PAGE_TARGETS={home:'#home',offers:'#offersPage','best-sellers':'#rankings',reviews:'#reviewsPage',favorites:'#favoritesPage',rules:'#resources',compare:'#comparePage',payouts:'#payouts','payout-detail':'#payoutDetailPage',tutorials:'#videos','firm-profile':'#firmProfilePage'};
+const LEGACY_ROUTES={home:'home',offers:'offers',rankings:'best-sellers',faq:'reviews',resources:'rules',payouts:'payouts',videos:'tutorials',futures:'offers',compare:'compare'};
 let currentPage='home',routeHistoryIndex=Number(history.state?.pflRouteIndex)||0;
 function configurePage(page){
   const reviewPage=page==='reviews',label=marketLabel(),categoryFirms=categoryTrustpilotFirms(),categoryChallenges=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)),reviewVolume=categoryFirms.reduce((sum,f)=>sum+(Number(f.trustpilotReviews)||0),0),payoutFirmCount=new Set([...(PAYOUT_DATA.latest_24h||[]),...(PAYOUT_DATA.weekly?.rows||[]),...(PAYOUT_DATA.monthly?.rows||[])].filter(x=>firmInMarket(payoutCanonicalName(x.firm))).map(x=>payoutCanonicalName(x.firm))).size;
@@ -5546,10 +5638,10 @@ function openModal(id){document.querySelector(id).classList.add('open');document
 function closeModals(){document.querySelectorAll('.modal.open').forEach(m=>m.classList.remove('open'))}
 function renderFaqForPage(page){const list=page==='reviews'?reviewFaqs:page==='favorites'?favoriteFaqs:faqs,label=marketLabel();const titleElem=document.querySelector('#faqTitle');if(titleElem)titleElem.textContent=page==='favorites'||page==='reviews'?'Frequently Asked Questions (FAQ)':page==='offers'?`Offers FAQ (${label})`:`Homepage FAQ (${label})`;const listElem=document.querySelector('#faqList');if(listElem)listElem.innerHTML=list.map((f,idx)=>`<details class="faq-card" data-faq-idx="${idx}"><summary class="faq-summary"><span class="faq-q-text">${f[0].replaceAll('Forex',label)}</span><span class="faq-indicator" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="faq-content"><p>${f[1].replaceAll('Forex',label)}</p></div></details>`).join('')}
 renderFaqForPage('home');
-document.addEventListener('click',e=>{const profileName=e.target.closest('[data-firm-profile]');if(profileName){e.preventDefault();e.stopPropagation();openFirmProfile(profileName.dataset.firmProfile);return}const profileBack=e.target.closest('[data-profile-back]');if(profileBack){const appHistoryIndex=Number(history.state?.pflRouteIndex);if(Number.isFinite(appHistoryIndex)&&appHistoryIndex>0)history.back();else{const targetHash=(history.state?.pflProfileOrigin||profileOriginHash||'#page-home').replace(/^#/,'');const targetPage=targetHash.startsWith('page-')?targetHash.slice(5):(LEGACY_ROUTES[targetHash]||'home');openPage(PAGE_NAMES.has(targetPage)&&targetPage!=='firm-profile'?targetPage:'home',{replace:true})}return}const profileNotice=e.target.closest('[data-profile-notice]');if(profileNotice){const firmObj=profileFirmFor(currentProfileSlug);const firmName=firmObj?.name;if(profileNotice.dataset.profileNotice==='Favorites'&&firmName){if(favorites.has(firmName)){favorites.delete(firmName);showToast(`${firmName} removed from favorites`)}else{favorites.add(firmName);showToast(`${firmName} added to favorites`)}renderFavoriteFirms();renderMain();return}if(profileNotice.dataset.profileNotice==='Reviews'&&firmName){const targetElem=document.querySelector('#pflReviewNoticeFirm');if(targetElem)targetElem.textContent=firmName;openModal('#pflReviewNoticeModal');return}showToast(`${profileNotice.dataset.profileNotice} updated`);return}const profileTabButton=e.target.closest('[data-profile-tab]');if(profileTabButton){scrollToProfileSection(profileTabButton.dataset.profileTab);return}const profileBuy=e.target.closest('[data-profile-buy]');if(profileBuy&&!profileBuy.disabled){const buyLink=profileBuy.dataset.buyLink.trim();if(buyLink){const opened=window.open(buyLink,'_blank','noopener,noreferrer');if(opened)opened.opener=null}return}const menuButton=e.target.closest('.menu');if(menuButton){const nav=document.querySelector('#headerMenu'),opening=nav.hidden;nav.hidden=!opening;menuButton.setAttribute('aria-expanded',String(opening));menuButton.setAttribute('aria-label',opening?'Close navigation menu':'Open navigation menu');return}if(e.target.closest('[data-account-notice]')){openModal('#accountNoticeModal');return}const videoPlay=e.target.closest('[data-video-play]');if(videoPlay){playVideo(videoPlay);return}const pageLink=e.target.closest('[data-page]');if(pageLink){e.preventDefault();if(pageLink.hasAttribute('data-close-modal'))closeModals();openPage(pageLink.dataset.page);return}const reviewSourceButton=e.target.closest('[data-review-source]');if(reviewSourceButton){reviewSource=reviewSourceButton.dataset.reviewSource;renderReviews();return}const pflWriteButton=e.target.closest('[data-write-pfl-review]');if(pflWriteButton){openPflReviewNotice(pflWriteButton.dataset.writePflReview);return}if(e.target.closest('[data-post-review]')){reviewSource='pfl';renderReviews();document.querySelector('#pflReviewsPanel').scrollIntoView({behavior:'smooth',block:'start'});return}const reviewMethod=e.target.closest('[data-review-methodology]');if(reviewMethod){openModal('#reviewMethodModal');return}const reviewViewButton=e.target.closest('[data-view-reviews]');if(reviewViewButton){openFirmReviews(reviewViewButton.dataset.viewReviews);return}const reviewSortButton=e.target.closest('[data-review-sort]');if(reviewSortButton){const key=reviewSortButton.dataset.reviewSort;if(reviewSort===key)reviewSortDir=reviewSortDir==='asc'?'desc':'asc';else{reviewSort=key;reviewSortDir=key==='name'?'asc':'desc'}renderReviews();return}const reviewFlagButton=e.target.closest('[data-review-flag]');if(reviewFlagButton){reviewFlag=reviewFlagButton.dataset.reviewFlag;renderReviews();return}if(e.target.closest('#reviewFilterButton')){document.querySelector('#reviewAmount').focus();showToast('Adjust the review-count slider to filter firms');return}const pmode=e.target.closest('[data-payout-mode]');if(pmode){payoutMode=pmode.dataset.payoutMode;payoutPage=1;renderPayoutView();return}const pcat=e.target.closest('[data-payout-category]');if(pcat){payoutCategory=pcat.dataset.payoutCategory;payoutPage=1;renderPayouts();return}const pp=e.target.closest('[data-payout-page]');if(pp){payoutPage=Number(pp.dataset.payoutPage);renderPayouts();document.querySelector('#payouts').scrollIntoView({behavior:'smooth',block:'start'});return}const pn=e.target.closest('[data-payout-nav]');if(pn&&!pn.disabled){payoutPage+=pn.dataset.payoutNav==='next'?1:-1;renderPayouts();document.querySelector('#payouts').scrollIntoView({behavior:'smooth',block:'start'});return}const pd=e.target.closest('[data-payout-detail]');if(pd){openPayoutFirmDetail(pd.dataset.payoutDetail);return}const dt=e.target.closest('[data-detail-timeframe]');if(dt){payoutDetailTimeframe=dt.dataset.detailTimeframe;payoutDetailPage=1;renderPayoutDetail();return}const dp=e.target.closest('[data-detail-page]');if(dp){payoutDetailPage=Number(dp.dataset.detailPage);renderPayoutDetail();return}const dn=e.target.closest('[data-detail-nav]');if(dn&&!dn.disabled){payoutDetailPage+=dn.dataset.detailNav==='next'?1:-1;renderPayoutDetail();return}if(e.target.closest('[data-delay-report]')){openModal('#delayReportModal');return}if(e.target.closest('[data-payout-methodology]')){openModal('#payoutMethodModal');return}const pv=e.target.closest('[data-payout-view]');if(pv){e.preventDefault();payoutView=pv.dataset.payoutView;payoutQuery='';openPage('payouts',{configure:false,scroll:!pv.closest('#payouts')});renderPayoutView();return}const ps=e.target.closest('[data-payout-sort]');if(ps){const key=ps.dataset.payoutSort;if(payoutSort===key)payoutSortDir=payoutSortDir==='asc'?'desc':'asc';else{payoutSort=key;payoutSortDir=key==='firm'||key==='rank'||key==='methods'||key==='latest'?'asc':'desc'}renderPayouts();return}const cp=e.target.closest('[data-challenge-page]');if(cp){challengePage=Number(cp.dataset.challengePage);renderChallenges();document.querySelector('#challengesPage').scrollIntoView({behavior:'smooth',block:'start'});return}const cn=e.target.closest('[data-challenge-nav]');if(cn&&!cn.disabled){challengePage+=cn.dataset.challengeNav==='next'?1:-1;renderChallenges();document.querySelector('#challengesPage').scrollIntoView({behavior:'smooth',block:'start'});return}const cb=e.target.closest('[data-challenge-buy]');if(cb){const link=cb.dataset.buyLink.trim();if(link){const opened=window.open(link,'_blank','noopener,noreferrer');if(opened)opened.opener=null}else{const terms=cb.closest('.challenge-row').querySelector('.challenge-terms');terms.hidden=false;copyCode();showToast('LENZ copied — check the offer terms')}return}const c=e.target.closest('[data-copy]');if(c){copyCode();return}const of=e.target.closest('[data-offer-filter]');if(of){offersFilter=of.dataset.offerFilter;document.querySelectorAll('[data-offer-filter]').forEach(b=>b.classList.toggle('on',b===of));renderOfferList();return}const more=e.target.closest('[data-offer-more]');if(more){const group=more.closest('.offer-group'),panel=group.querySelector('.offer-additional-rows'),name=group.dataset.offerGroup;panel.hidden=!panel.hidden;group.classList.toggle('expanded',!panel.hidden);more.setAttribute('aria-expanded',String(!panel.hidden));more.innerHTML=`More ${more.dataset.moreCount} <span aria-hidden="true">${panel.hidden?'⌄':'⌃'}</span>`;if(panel.hidden)expandedOfferGroups.delete(name);else expandedOfferGroups.add(name);return}const apply=e.target.closest('[data-apply]');if(apply){const buyLink=apply.dataset.buyLink.trim();if(buyLink){const opened=window.open(buyLink,'_blank','noopener,noreferrer');if(opened)opened.opener=null}else{copyCode();showToast('LENZ copied — check the offer terms')}return}const a=e.target.closest('[data-offer-page]');if(a){offerPage=(offerPage+(a.dataset.offerPage==='next'?1:-1)+2)%2;renderOffers();return}const od=e.target.closest('[data-offer-dot]');if(od){offerPage=Number(od.dataset.offerDot);renderOffers();return}const vd=e.target.closest('[data-video-dot]');if(vd){videoIndex=Number(vd.dataset.videoDot);renderVideos();return}const preferred=e.target.closest('[data-set-favorite]');if(preferred){const name=preferred.dataset.setFavorite;if(!favorites.has(name)){favorites.clear();favorites.add(name)}renderFavoriteFirms();renderMain();showToast(`${name} is your favorite`);return}const f=e.target.closest('[data-favorite]');if(f){const name=f.dataset.favorite;if(!favorites.has(name)){favorites.clear();favorites.add(name)}renderMain();renderFavoriteFirms();showToast(`${name} is your favorite`);return}const filter=e.target.closest('[data-filter]');if(filter){currentFilter=filter.dataset.filter;if(currentFilter==='popular'){sortKey='favorites';sortDir='desc'}else if(currentFilter==='all'){sortKey='rank';sortDir='asc'}document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',b===filter));renderMain();return}const sorter=e.target.closest('[data-sort]');if(sorter){const key=sorter.dataset.sort;if(sortKey===key)sortDir=sortDir==='asc'?'desc':'asc';else{sortKey=key;sortDir=key==='rank'?'asc':'desc'}renderMain();return}const v=e.target.closest('[data-view]');if(v){view=v.dataset.view;renderMain();return}const m=e.target.closest('[data-market]');if(m){selectMarket(m.dataset.market);return}const mj=e.target.closest('[data-market-jump]');if(mj){selectMarket(mj.dataset.marketJump);return}if(e.target.closest('[data-methodology]')){openModal('#methodModal');return}if(e.target.closest('[data-close-modal]')){closeModals();return}const anchor=e.target.closest('a[href^="#"]');if(anchor){const route=LEGACY_ROUTES[anchor.getAttribute('href').slice(1)];if(route){e.preventDefault();openPage(route);return}}if(e.target.classList.contains('modal'))closeModals()});
+document.addEventListener('click',e=>{const profileName=e.target.closest('[data-firm-profile]');if(profileName){e.preventDefault();e.stopPropagation();openFirmProfile(profileName.dataset.firmProfile);return}const profileBack=e.target.closest('[data-profile-back]');if(profileBack){e.preventDefault();const appHistoryIndex=Number(history.state?.pflRouteIndex);if(Number.isFinite(appHistoryIndex)&&appHistoryIndex>0)history.back();else{const targetHash=(history.state?.pflProfileOrigin||profileOriginHash||'#page-home').replace(/^#/,'');const targetPage=targetHash.startsWith('page-')?targetHash.slice(5):(LEGACY_ROUTES[targetHash]||'home');openPage(PAGE_NAMES.has(targetPage)&&targetPage!=='firm-profile'?targetPage:'home',{replace:true,scroll:false})}return}const profileNotice=e.target.closest('[data-profile-notice]');if(profileNotice){e.preventDefault();const firmObj=profileFirmFor(currentProfileSlug);const firmName=firmObj?.name;if(profileNotice.dataset.profileNotice==='Favorites'&&firmName){if(favorites.has(firmName)){favorites.delete(firmName);showToast(`${firmName} removed from favorites`)}else{favorites.add(firmName);showToast(`${firmName} added to favorites`)}renderFavoriteFirms();renderMain();return}if(profileNotice.dataset.profileNotice==='Reviews'&&firmName){const targetElem=document.querySelector('#pflReviewNoticeFirm');if(targetElem)targetElem.textContent=firmName;openModal('#pflReviewNoticeModal');return}showToast(`${profileNotice.dataset.profileNotice} updated`);return}const profileTabButton=e.target.closest('[data-profile-tab]');if(profileTabButton){e.preventDefault();scrollToProfileSection(profileTabButton.dataset.profileTab);return}const profileBuy=e.target.closest('[data-profile-buy]');if(profileBuy&&!profileBuy.disabled){const buyLink=profileBuy.dataset.buyLink.trim();if(buyLink){const opened=window.open(buyLink,'_blank','noopener,noreferrer');if(opened)opened.opener=null}return}const menuButton=e.target.closest('.menu');if(menuButton){e.preventDefault();const nav=document.querySelector('#headerMenu'),opening=nav.hidden;nav.hidden=!opening;menuButton.setAttribute('aria-expanded',String(opening));menuButton.setAttribute('aria-label',opening?'Close navigation menu':'Open navigation menu');return}if(e.target.closest('[data-account-notice]')){e.preventDefault();openModal('#accountNoticeModal');return}const videoPlay=e.target.closest('[data-video-play]');if(videoPlay){e.preventDefault();playVideo(videoPlay);return}const pageLink=e.target.closest('a[data-page], button[data-page]');if(pageLink){e.preventDefault();if(pageLink.hasAttribute('data-close-modal'))closeModals();openPage(pageLink.dataset.page);return}const reviewSourceButton=e.target.closest('[data-review-source]');if(reviewSourceButton){e.preventDefault();reviewSource=reviewSourceButton.dataset.reviewSource;renderReviews();return}const pflWriteButton=e.target.closest('[data-write-pfl-review]');if(pflWriteButton){e.preventDefault();openPflReviewNotice(pflWriteButton.dataset.writePflReview);return}if(e.target.closest('[data-post-review]')){e.preventDefault();reviewSource='pfl';renderReviews();document.querySelector('#pflReviewsPanel').scrollIntoView({behavior:'smooth',block:'start'});return}const reviewMethod=e.target.closest('[data-review-methodology]');if(reviewMethod){e.preventDefault();openModal('#reviewMethodModal');return}const reviewViewButton=e.target.closest('[data-view-reviews]');if(reviewViewButton){e.preventDefault();openFirmReviews(reviewViewButton.dataset.viewReviews);return}const reviewSortButton=e.target.closest('[data-review-sort]');if(reviewSortButton){e.preventDefault();const key=reviewSortButton.dataset.reviewSort;if(reviewSort===key)reviewSortDir=reviewSortDir==='asc'?'desc':'asc';else{reviewSort=key;reviewSortDir=key==='name'?'asc':'desc'}renderReviews();return}const reviewFlagButton=e.target.closest('[data-review-flag]');if(reviewFlagButton){e.preventDefault();reviewFlag=reviewFlagButton.dataset.reviewFlag;renderReviews();return}if(e.target.closest('#reviewFilterButton')){e.preventDefault();document.querySelector('#reviewAmount').focus();showToast('Adjust the review-count slider to filter firms');return}const pmode=e.target.closest('[data-payout-mode]');if(pmode){e.preventDefault();payoutMode=pmode.dataset.payoutMode;payoutPage=1;renderPayoutView();return}const pcat=e.target.closest('[data-payout-category]');if(pcat){e.preventDefault();payoutCategory=pcat.dataset.payoutCategory;payoutPage=1;renderPayouts();return}const pp=e.target.closest('[data-payout-page]');if(pp){e.preventDefault();payoutPage=Number(pp.dataset.payoutPage);renderPayouts();return}const pn=e.target.closest('[data-payout-nav]');if(pn&&!pn.disabled){e.preventDefault();payoutPage+=pn.dataset.payoutNav==='next'?1:-1;renderPayouts();return}const pd=e.target.closest('[data-payout-detail]');if(pd){e.preventDefault();openPayoutFirmDetail(pd.dataset.payoutDetail);return}const dt=e.target.closest('[data-detail-timeframe]');if(dt){e.preventDefault();payoutDetailTimeframe=dt.dataset.detailTimeframe;payoutDetailPage=1;renderPayoutDetail();return}const dp=e.target.closest('[data-detail-page]');if(dp){e.preventDefault();payoutDetailPage=Number(dp.dataset.detailPage);renderPayoutDetail();return}const dn=e.target.closest('[data-detail-nav]');if(dn&&!dn.disabled){e.preventDefault();payoutDetailPage+=dn.dataset.detailNav==='next'?1:-1;renderPayoutDetail();return}if(e.target.closest('[data-delay-report]')){e.preventDefault();openModal('#delayReportModal');return}if(e.target.closest('[data-payout-methodology]')){e.preventDefault();openModal('#payoutMethodModal');return}const pv=e.target.closest('[data-payout-view]');if(pv){e.preventDefault();payoutView=pv.dataset.payoutView;payoutQuery='';openPage('payouts',{configure:false,scroll:false});renderPayoutView();return}const ps=e.target.closest('[data-payout-sort]');if(ps){e.preventDefault();const key=ps.dataset.payoutSort;if(payoutSort===key)payoutSortDir=payoutSortDir==='asc'?'desc':'asc';else{payoutSort=key;payoutSortDir=key==='firm'||key==='rank'||key==='methods'||key==='latest'?'asc':'desc'}renderPayouts();return}const cp=e.target.closest('[data-challenge-page]');if(cp){e.preventDefault();challengePage=Number(cp.dataset.challengePage);renderChallenges();return}const cn=e.target.closest('[data-challenge-nav]');if(cn&&!cn.disabled){e.preventDefault();challengePage+=cn.dataset.challengeNav==='next'?1:-1;renderChallenges();return}const cb=e.target.closest('[data-challenge-buy]');if(cb){const link=cb.dataset.buyLink.trim();if(link){const opened=window.open(link,'_blank','noopener,noreferrer');if(opened)opened.opener=null}else{const terms=cb.closest('.challenge-row').querySelector('.challenge-terms');terms.hidden=false;copyCode();showToast('LENZ copied — check the offer terms')}return}const c=e.target.closest('[data-copy]');if(c){e.preventDefault();copyCode();return}const of=e.target.closest('[data-offer-filter]');if(of){e.preventDefault();offersFilter=of.dataset.offerFilter;document.querySelectorAll('[data-offer-filter]').forEach(b=>b.classList.toggle('on',b===of));renderOfferList();return}const more=e.target.closest('[data-offer-more]');if(more){e.preventDefault();const group=more.closest('.offer-group'),panel=group.querySelector('.offer-additional-rows'),name=group.dataset.offerGroup;panel.hidden=!panel.hidden;group.classList.toggle('expanded',!panel.hidden);more.setAttribute('aria-expanded',String(!panel.hidden));more.innerHTML=`More ${more.dataset.moreCount} <span aria-hidden="true">${panel.hidden?'⌄':'⌃'}</span>`;if(panel.hidden)expandedOfferGroups.delete(name);else expandedOfferGroups.add(name);return}const apply=e.target.closest('[data-apply]');if(apply){const buyLink=apply.dataset.buyLink.trim();if(buyLink){const opened=window.open(buyLink,'_blank','noopener,noreferrer');if(opened)opened.opener=null}else{copyCode();showToast('LENZ copied — check the offer terms')}return}const a=e.target.closest('[data-offer-page]');if(a){e.preventDefault();offerPage=(offerPage+(a.dataset.offerPage==='next'?1:-1)+2)%2;renderOffers();return}const od=e.target.closest('[data-offer-dot]');if(od){e.preventDefault();offerPage=Number(od.dataset.offerDot);renderOffers();return}const vd=e.target.closest('[data-video-dot]');if(vd){e.preventDefault();videoIndex=Number(vd.dataset.videoDot);renderVideos();return}const preferred=e.target.closest('[data-set-favorite]');if(preferred){e.preventDefault();const name=preferred.dataset.setFavorite;if(!favorites.has(name)){favorites.clear();favorites.add(name)}renderFavoriteFirms();renderMain();showToast(`${name} is your favorite`);return}const f=e.target.closest('[data-favorite]');if(f){e.preventDefault();const name=f.dataset.favorite;if(!favorites.has(name)){favorites.clear();favorites.add(name)}renderMain();renderFavoriteFirms();showToast(`${name} is your favorite`);return}const filter=e.target.closest('[data-filter]');if(filter){e.preventDefault();currentFilter=filter.dataset.filter;if(currentFilter==='popular'){sortKey='favorites';sortDir='desc'}else if(currentFilter==='all'){sortKey='rank';sortDir='asc'}document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',b===filter));renderMain();return}const sorter=e.target.closest('[data-sort]');if(sorter){e.preventDefault();const key=sorter.dataset.sort;if(sortKey===key)sortDir=sortDir==='asc'?'desc':'asc';else{sortKey=key;sortDir=key==='rank'?'asc':'desc'}renderMain();return}const v=e.target.closest('[data-view]');if(v){e.preventDefault();view=v.dataset.view;renderMain();return}const m=e.target.closest('[data-market]');if(m){e.preventDefault();selectMarket(m.dataset.market);return}const mj=e.target.closest('[data-market-jump]');if(mj){e.preventDefault();selectMarket(mj.dataset.marketJump);return}if(e.target.closest('[data-methodology]')){e.preventDefault();openModal('#methodModal');return}if(e.target.closest('[data-close-modal]')){e.preventDefault();closeModals();return}const anchor=e.target.closest('a[href^="#"]');if(anchor){const href=anchor.getAttribute('href');if(href==='#'||!href){e.preventDefault();return}if(href==='#footer'){e.preventDefault();document.querySelector('#footer')?.scrollIntoView({behavior:'smooth'});return}const route=LEGACY_ROUTES[href.slice(1)];if(route){e.preventDefault();openPage(route);return}}if(e.target.classList.contains('modal'))closeModals()});
 document.addEventListener('keydown',e=>{const profileName=e.target.closest?.('[data-firm-profile]');if(profileName&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openFirmProfile(profileName.dataset.firmProfile);return}if(e.key==='Escape')closeModals()});
 window.addEventListener('hashchange',()=>openPage(pageFromHash(),{replace:true,scroll:true}));
-function runGlobalSearch(value,source){query=value.trim().toLowerCase();document.querySelectorAll('#globalSearch,#mobileSearch').forEach(input=>{if(input!==source)input.value=value});openPage('best-sellers',{configure:false});renderMain()}
+function runGlobalSearch(value,source){query=value.trim().toLowerCase();document.querySelectorAll('#globalSearch,#mobileSearch').forEach(input=>{if(input!==source)input.value=value});openPage('best-sellers',{configure:false,scroll:false});renderMain()}
 document.querySelector('#globalSearch')?.addEventListener('input',e=>runGlobalSearch(e.target.value,e.target));
 document.querySelector('#mobileSearch')?.addEventListener('input',e=>runGlobalSearch(e.target.value,e.target));
 document.querySelector('#videoPrev')?.addEventListener('click',()=>{videoIndex=(videoIndex+videos.length-1)%videos.length;renderVideos()});

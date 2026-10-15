@@ -1564,7 +1564,7 @@ img[hidden],
   background-size: 15px 15px !important;
   transition: all 0.25s ease !important;
   flex: 0 0 auto !important;
-  margin: 0 !important;
+  margin: 0 0 0 auto !important;
 }
 .head-main .searchbox::placeholder {
   color: #7d7d90 !important;
@@ -1587,7 +1587,7 @@ img[hidden],
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 999px !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
-  margin: 0 !important;
+  margin: 0 auto 0 0 !important;
   height: 42px !important;
   box-sizing: border-box !important;
   flex: 0 0 auto !important;
@@ -1619,7 +1619,7 @@ img[hidden],
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
-  margin-left: auto !important;
+  margin-left: 0 !important;
   flex: 0 0 auto !important;
 }
 .header-auth .login {
@@ -1670,8 +1670,8 @@ img[hidden],
     min-height: 46px !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 32px !important;
+    justify-content: center !important;
+    gap: 36px !important;
     padding: 0 !important;
   }
 }
@@ -2061,10 +2061,16 @@ body[data-page="offers"] .hero .stat {
   margin: 0 auto !important;
   position: relative !important;
   z-index: 2 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 .faq-badge-wrap {
+  display: flex !important;
+  justify-content: center !important;
   text-align: center !important;
-  margin-bottom: 12px !important;
+  margin-bottom: 14px !important;
+  width: 100% !important;
 }
 .faq-badge {
   display: inline-flex !important;
@@ -2082,8 +2088,20 @@ body[data-page="offers"] .hero .stat {
   box-shadow: 0 0 16px rgba(30, 231, 252, 0.2) !important;
 }
 .faq-title {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
   text-align: center !important;
-  margin-bottom: 32px !important;
+  margin: 0 auto 36px !important;
+  width: 100% !important;
+}
+.faq-title > div {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
 }
 .faq-title h2,
 #faqTitle {
@@ -2091,7 +2109,9 @@ body[data-page="offers"] .hero .stat {
   font-weight: 800 !important;
   letter-spacing: -0.035em !important;
   line-height: 1.15 !important;
-  margin: 0 0 10px !important;
+  margin: 0 auto 12px !important;
+  text-align: center !important;
+  width: 100% !important;
   background: linear-gradient(135deg, #ffffff 40%, #1EE7FC 95%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -2103,12 +2123,15 @@ body[data-page="offers"] .hero .stat {
   line-height: 1.5 !important;
   max-width: 680px !important;
   margin: 0 auto !important;
+  text-align: center !important;
 }
 .faq {
   border: none !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 12px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
 }
 
 /* 3D FAQ Cards */
