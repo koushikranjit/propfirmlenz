@@ -62,3 +62,7 @@ yarn.lock
 
 # TypeScript incremental build info
 *.tsbuildinfo
+
+# Scratch scripts and temporary test files
+scratch/
+

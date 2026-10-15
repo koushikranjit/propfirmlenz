@@ -44691,7 +44691,7 @@ let currentPage='home',routeHistoryIndex=Number(history.state?.pflRouteIndex)||0
 function configurePage(page){
   const reviewPage=page==='reviews',label=marketLabel(),categoryFirms=categoryTrustpilotFirms(),categoryChallenges=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)),reviewVolume=categoryFirms.reduce((sum,f)=>sum+(Number(f.trustpilotReviews)||0),0),payoutFirmCount=new Set([...(PAYOUT_DATA.latest_24h||[]),...(PAYOUT_DATA.weekly?.rows||[]),...(PAYOUT_DATA.monthly?.rows||[])].filter(x=>firmInMarket(payoutCanonicalName(x.firm))).map(x=>payoutCanonicalName(x.firm))).size;
   updateMarketCopy();
-  const heroTitle=document.querySelector('#heroTitle');if(heroTitle)heroTitle.textContent=`Compare the Best ${label} Prop Trading Firms of 2026`;
+  const heroTitle=document.querySelector('#heroTitle');if(heroTitle)heroTitle.innerHTML=`Compare the Best <span class="hero-gradient-text">${label} Prop Trading Firms</span> of <span class="hero-year-highlight">2026</span>`;
   const heroSubtitle=document.querySelector('#heroSubtitle');if(heroSubtitle)heroSubtitle.textContent=reviewPage?`Compare ${label} prop firms using real Trustpilot reviews and PFL community reviews.`:`Trusted platform to compare ${label} prop trading firms using verified data and insights, including reviews, rules, and rankings.`;
   const heroFirmCount=document.querySelector('#heroFirmCount');if(heroFirmCount)heroFirmCount.textContent=categoryFirms.length.toLocaleString();
   const heroFirmLabel=document.querySelector('#heroFirmLabel');if(heroFirmLabel)heroFirmLabel.textContent=reviewPage?'Verified Prop Firms':'Firms Covered';
