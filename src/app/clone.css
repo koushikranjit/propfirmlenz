@@ -5607,69 +5607,68 @@ footer#footer .bottom-copy {
   margin: 0 auto 28px !important;
 }
 
-.stats {
-  display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important;
-  gap: 12px !important;
-  max-width: 1080px !important;
+/* ==========================================================================
+   SLEEK HERO STAT PILLS (Image 2 Reference: [Icon] Number Label)
+   ========================================================================== */
+.stats, .hero-stat-pills {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 12px 14px !important;
+  max-width: 1180px !important;
   margin: 0 auto !important;
 }
 
-.stat {
-  display: flex !important;
+.stat, .hero-stat-pill {
+  display: inline-flex !important;
   align-items: center !important;
-  gap: 14px !important;
-  padding: 12px 18px !important;
-  background: rgba(8, 29, 42, 0.75) !important;
-  border: 1px solid rgba(0, 240, 255, 0.22) !important;
-  border-radius: 999px !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(12px) !important;
-  transition: all 0.25s ease !important;
+  gap: 8px !important;
+  padding: 8px 18px 8px 13px !important;
+  border-radius: 9999px !important;
+  background: linear-gradient(135deg, rgba(26, 18, 44, 0.78) 0%, rgba(15, 14, 30, 0.88) 100%) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(168, 85, 247, 0.28) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: default !important;
+  white-space: nowrap !important;
+  min-height: auto !important;
 }
 
-.stat:hover {
+.stat:hover, .hero-stat-pill:hover {
   transform: translateY(-2px) !important;
-  border-color: rgba(0, 240, 255, 0.5) !important;
-  box-shadow: 0 12px 30px rgba(0, 240, 255, 0.18) !important;
+  border-color: rgba(236, 72, 153, 0.5) !important;
+  box-shadow: 0 8px 25px -2px rgba(168, 85, 247, 0.35), 0 0 15px rgba(236, 72, 153, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
 }
 
-.stat-icon {
-  width: 34px !important;
-  height: 34px !important;
-  flex: 0 0 34px !important;
-  border-radius: 50% !important;
-  display: grid !important;
-  place-items: center !important;
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(112, 33, 252, 0.3)) !important;
-  border: 1px solid rgba(0, 240, 255, 0.35) !important;
-  color: #00F0FF !important;
+.pfl-hero-stat-svg {
+  flex-shrink: 0 !important;
+  display: block !important;
+  filter: drop-shadow(0 0 6px rgba(217, 70, 239, 0.6)) !important;
 }
 
-.stat-copy {
-  display: flex !important;
-  flex-direction: column !important;
-  text-align: left !important;
-}
-
-.stat b {
-  font-family: 'Outfit', sans-serif !important;
-  font-size: 17px !important;
+.stat strong, .stat b, .hero-stat-pill strong {
+  font-family: 'Outfit', Inter, sans-serif !important;
+  font-size: 15px !important;
   font-weight: 800 !important;
   color: #FFFFFF !important;
-  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1 !important;
 }
 
-.stat span {
-  font-size: 11px !important;
-  font-weight: 600 !important;
-  color: #94A3B8 !important;
+.stat span, .hero-stat-pill span {
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  color: #9DA4BE !important;
+  line-height: 1 !important;
   white-space: nowrap !important;
 }
 
 @media (max-width: 860px) {
-  .stats {
-    grid-template-columns: repeat(2, 1fr) !important;
+  .stats, .hero-stat-pills {
+    gap: 8px 10px !important;
   }
 }
 
@@ -5677,15 +5676,15 @@ footer#footer .bottom-copy {
   .hero {
     padding: 38px 0 24px !important;
   }
-  .stat {
-    padding: 10px 14px !important;
-    gap: 10px !important;
+  .stat, .hero-stat-pill {
+    padding: 6px 14px 6px 10px !important;
+    gap: 6px !important;
   }
-  .stat b {
-    font-size: 15px !important;
+  .stat strong, .stat b, .hero-stat-pill strong {
+    font-size: 13.5px !important;
   }
-  .stat span {
-    font-size: 10px !important;
+  .stat span, .hero-stat-pill span {
+    font-size: 12px !important;
   }
 }
 
@@ -6210,8 +6209,10 @@ footer#footer .bottom-copy {
   line-height: 1.5 !important;
 }
 
-.hero .stats {
-  margin-top: 4px !important;
+.hero .stats,
+.hero .hero-stat-pills {
+  margin-top: 18px !important;
+  margin-bottom: 22px !important;
 }
 
 #offers.section {
@@ -6499,5 +6500,243 @@ footer#footer .bottom-copy {
 .powered-by-pfl-pill .lenz-hl {
   color: #00F0FF !important;
 }
+
+/* ==========================================================================
+   ULTRA-PREMIUM GRADING COLOR SYSTEM (Eye-Catchy Modern Gradients & Aurora Cosmos)
+   ========================================================================== */
+
+/* 1. Global Core Variables */
+:root {
+  --theme: #00F0FF;
+  --theme-mid: #38BDF8;
+  --theme-deep: #A855F7;
+  --theme-rgb: 0 240 255;
+  --theme-mid-rgb: 56 189 248;
+  --theme-deep-rgb: 168 85 247;
+  --accent: #00F0FF;
+  --purple: #A855F7;
+  --pink: #EC4899;
+  --grad: linear-gradient(135deg, #00F0FF 0%, #38BDF8 30%, #6366F1 70%, #A855F7 100%);
+  --grad-hot: linear-gradient(135deg, #FF2E93 0%, #EC4899 40%, #8B5CF6 100%);
+  --grad-amber: linear-gradient(135deg, #F59E0B 0%, #EC4899 50%, #8B5CF6 100%);
+  --grad-glow: linear-gradient(135deg, rgba(0, 240, 255, 0.45), rgba(168, 85, 247, 0.45));
+}
+
+/* 2. Hero Section Typography with Crisp Specular Gradient */
+#heroTitle,
+.hero h1 {
+  background: linear-gradient(135deg, #FFFFFF 15%, #E0F2FE 45%, #38BDF8 75%, #C084FC 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+  filter: drop-shadow(0 4px 30px rgba(56, 189, 248, 0.28)) !important;
+  letter-spacing: -0.035em !important;
+}
+
+.page-intro h1,
+.payout-hub-head h1,
+.favorites-head h2,
+.reviews-hub-head h1,
+.compare-head h1,
+.spreads-head h1 {
+  background: linear-gradient(135deg, #FFFFFF 20%, #E2E8F0 50%, #67E8F9 80%, #A855F7 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  letter-spacing: -0.03em !important;
+}
+
+/* 3. Hero 3D Badge Glowing Neon Pill */
+.hero-badge-3d {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.12) 0%, rgba(168, 85, 247, 0.16) 100%) !important;
+  border: 1px solid rgba(0, 240, 255, 0.45) !important;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.22), 0 0 45px rgba(168, 85, 247, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.hero-badge-3d .badge-tag {
+  background: linear-gradient(135deg, #00F0FF 0%, #3B82F6 100%) !important;
+  color: #030814 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.6) !important;
+}
+
+/* 4. Global Cosmic Aurora Canvas Background (Rich Depth, No Muddy Grays) */
+main,
+.hero,
+.offers-page,
+.challenges-page,
+.reviews-page,
+.favorites-page,
+.payout-hub,
+.payout-detail-page,
+.compare-page,
+.spreads-page {
+  background:
+    radial-gradient(ellipse 75% 38% at 8% 0%, rgba(57, 109, 250, 0.35), transparent 72%),
+    radial-gradient(ellipse 65% 34% at 92% 8%, rgba(0, 240, 255, 0.26), transparent 70%),
+    radial-gradient(ellipse 55% 30% at 50% 22%, rgba(139, 92, 246, 0.18), transparent 65%),
+    radial-gradient(circle at 82% 40%, rgba(236, 72, 153, 0.14), transparent 55%),
+    radial-gradient(circle at 18% 55%, rgba(0, 240, 255, 0.1), transparent 50%),
+    linear-gradient(180deg, #070914 0%, #090e24 14%, #070917 30%, #05060e 52%, #04050a 100%) !important;
+  box-shadow: inset 140px 0 180px -145px rgba(139, 92, 246, 0.55), inset -140px 0 180px -145px rgba(0, 240, 255, 0.5) !important;
+}
+
+/* 5. Featured Panels & Offer Grids (3D Radiant Gradient Borders) */
+.panel,
+.offers-top-panel {
+  background:
+    linear-gradient(160deg, rgba(13, 17, 34, 0.94), rgba(7, 9, 20, 0.98)) padding-box,
+    linear-gradient(135deg, rgba(0, 240, 255, 0.6) 0%, rgba(99, 102, 241, 0.45) 45%, rgba(168, 85, 247, 0.7) 100%) border-box !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 24px 70px -15px rgba(0, 0, 0, 0.75), 0 0 40px -10px rgba(0, 240, 255, 0.2) !important;
+}
+
+.futures-panel,
+.offers-top-panel.futures {
+  background:
+    linear-gradient(160deg, rgba(17, 14, 30, 0.94), rgba(9, 8, 18, 0.98)) padding-box,
+    linear-gradient(135deg, rgba(245, 158, 11, 0.6) 0%, rgba(236, 72, 153, 0.5) 48%, rgba(168, 85, 247, 0.7) 100%) border-box !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 24px 70px -15px rgba(0, 0, 0, 0.75), 0 0 40px -10px rgba(236, 72, 153, 0.18) !important;
+}
+
+.offer,
+.future {
+  background: rgba(16, 20, 38, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(12px) !important;
+  border-radius: 14px !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.offer:hover,
+.future:hover {
+  background: rgba(22, 28, 54, 0.85) !important;
+  border-color: rgba(0, 240, 255, 0.45) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 32px -5px rgba(0, 0, 0, 0.6), 0 0 22px -2px rgba(0, 240, 255, 0.28) !important;
+}
+
+/* 6. Discount Badges & Glowing Promo Tags */
+.offer .promo .pct,
+.offer-discount {
+  background: linear-gradient(135deg, #00F0FF 0%, #3B82F6 100%) !important;
+  color: #030814 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.5) !important;
+  letter-spacing: -0.01em !important;
+}
+
+.offer .promo .code-badge,
+.offer-code {
+  background: rgba(0, 240, 255, 0.08) !important;
+  border: 1px dashed rgba(0, 240, 255, 0.55) !important;
+  color: #00F0FF !important;
+  box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.06) !important;
+}
+
+/* 7. Action CTAs & Premium Gradient Buttons */
+.signup,
+.subscribe button,
+.post-review,
+.apply-btn,
+.challenge-buy,
+.btn-primary,
+.delay-modal-actions a,
+.favorite-offer,
+.review-view-all-btn {
+  background: linear-gradient(135deg, #00F0FF 0%, #38BDF8 30%, #6366F1 70%, #A855F7 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  border: 0 !important;
+  box-shadow: 0 6px 22px -3px rgba(0, 240, 255, 0.45), 0 0 16px rgba(139, 92, 246, 0.35) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.signup:hover,
+.subscribe button:hover,
+.post-review:hover,
+.apply-btn:hover,
+.challenge-buy:hover,
+.btn-primary:hover,
+.favorite-offer:hover {
+  filter: brightness(1.15) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 32px rgba(0, 240, 255, 0.6), 0 0 25px rgba(139, 92, 246, 0.55) !important;
+}
+
+/* 8. Market Switcher Glowing Capsule */
+.market-switch {
+  background: rgba(14, 18, 36, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+}
+
+.market-switch button.on {
+  background: linear-gradient(135deg, #00F0FF 0%, #38BDF8 100%) !important;
+  color: #040D1A !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5) !important;
+}
+
+.navlinks a.active:after {
+  background: linear-gradient(90deg, #00F0FF 0%, #8B5CF6 100%) !important;
+  box-shadow: 0 0 12px #00F0FF !important;
+}
+
+/* 9. Rankings Table & Leaderboard Cards */
+.rank-card {
+  background: rgba(14, 17, 34, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.rank-card:hover {
+  background: rgba(20, 25, 48, 0.88) !important;
+  border-color: rgba(0, 240, 255, 0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 22px rgba(0, 240, 255, 0.2) !important;
+}
+
+.medal[data-rank="1"],
+.medal:first-child {
+  background: linear-gradient(135deg, #FFD700 0%, #F59E0B 100%) !important;
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.5) !important;
+  color: #050505 !important;
+}
+
+.medal[data-rank="2"] {
+  background: linear-gradient(135deg, #F1F5F9 0%, #94A3B8 100%) !important;
+  box-shadow: 0 0 14px rgba(148, 163, 184, 0.45) !important;
+  color: #050505 !important;
+}
+
+.medal[data-rank="3"] {
+  background: linear-gradient(135deg, #FB923C 0%, #C2410C 100%) !important;
+  box-shadow: 0 0 14px rgba(251, 146, 60, 0.45) !important;
+  color: #050505 !important;
+}
+
+/* 10. Progress Bars & Glowing Tracks */
+.progress-track i,
+.payout-total-track i,
+.favorite-progress i,
+.review-count .bar i {
+  background: linear-gradient(90deg, #00F0FF 0%, #38BDF8 50%, #A855F7 100%) !important;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.6) !important;
+}
+
+/* 11. Category & Filter Pills */
+.payout-tf-btn.on,
+.payout-category.on,
+.filter-btn.on,
+.jump-tabs button.active {
+  background: linear-gradient(135deg, #00F0FF 0%, #38BDF8 100%) !important;
+  color: #040D1A !important;
+  font-weight: 800 !important;
+  border-color: #00F0FF !important;
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.45) !important;
+}
+
 
 
