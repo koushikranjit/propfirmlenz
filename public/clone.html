@@ -886,17 +886,6 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   padding: 0 !important;
   object-fit: contain !important;
 }
-#offers .offer .firm-initial:not([hidden]) {
-  grid-area: 1 / 1 !important;
-  display: grid !important;
-  place-items: center !important;
-  font-size: 12px !important;
-  font-weight: 800 !important;
-  width: 100% !important;
-  height: 100% !important;
-  border-radius: 9px !important;
-  padding: 0 !important;
-}
 #offers .offer strong {
   display: block !important;
   font-size: 12.5px !important;
@@ -1017,17 +1006,6 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   border-radius: 9px !important;
   padding: 0 !important;
   object-fit: contain !important;
-}
-#offers .future .firm-initial:not([hidden]) {
-  grid-area: 1 / 1 !important;
-  display: grid !important;
-  place-items: center !important;
-  font-size: 13px !important;
-  font-weight: 800 !important;
-  width: 100% !important;
-  height: 100% !important;
-  border-radius: 9px !important;
-  padding: 0 !important;
 }
 #offers .future strong {
   display: block !important;
@@ -1368,23 +1346,13 @@ span.firm-initial[hidden] {
   display: none !important;
 }
 
-/* Only display initials when the image has failed or is missing */
-.logo-wrap > .firm-initial:not([hidden]),
-.firm-logo-frame > .firm-initial:not([hidden]),
-.firm-initial:not([hidden]) {
-  grid-area: 1 / 1 !important;
-  width: 100% !important;
-  height: 100% !important;
-  padding: 0 !important;
-  border-radius: 9px !important;
-  display: grid !important;
-  place-items: center !important;
-  font-weight: 800 !important;
-  font-size: 13px !important;
-  background: var(--grad) !important;
-  color: #fff !important;
-  border: none !important;
-  box-shadow: none !important;
+/* Delete all text demo logo initials completely - only real logos are displayed */
+.firm-initial,
+span.firm-initial,
+[hidden],
+img[hidden],
+.firm-logo[hidden] {
+  display: none !important;
 }
 
 /* 6. Most Popular Forex Prop Firms: Discount Code Styling & Full Grid Integration */
@@ -3876,9 +3844,8 @@ const favoriteFaqs=[
 ['How does search work?','Type any part of a firm name in the search box. The list filters immediately while keeping the Trustpilot-based ranking order.'],
 ['Which firms are included?','The page covers the Forex firms present in the site’s directory and challenge datasets and uses the available Trustpilot rating and review-count snapshot. Missing or withheld values are shown as an em dash.']];
 const logoFiles={"Alpha Capital":"firm-alpha-capital.png","Alpha Futures":"firm-alpha-futures.png","Apex Trader Funding":"firm-apex-trader-funding-new.svg","AquaFunded":"firm-aquafunded.svg","AquaFunded Futures":"firm-aquafunded.svg","Atmos Funded":"firm-atmos-funded.svg","Audacity Capital":"firm-audacity-capital.svg","Blue Guardian":"firm-blue-guardian.png","Blue Guardian Futures":"firm-blue-guardian.png","Blueberry Funded":"firm-blueberry-funded.png","Blueberry Futures":"firm-blueberry-funded.png","BrightFunded":"firm-brightfunded.png","City Traders Imperium":"firm-city-traders-imperium.svg","Crypto Fund Trader":"firm-crypto-fund-trader.svg","Darwinex Zero":"firm-darwinex-zero.png","DayTraders":"firm-daytraders.png","E8 Futures":"firm-e8-markets.svg","E8 Markets":"firm-e8-markets.svg","Earn2Trade":"firm-earn2trade.png","FTMO":"firm-ftmo.svg","Finotive Funding":"firm-finotive-funding.svg","Fintokei":"firm-fintokei.png","Funded Futures Family":"firm-funded-futures-family.png","Funded Trading Plus":"firm-funded-trading-plus.png","FundedElite":"firm-fundedelite.svg","FundedNext":"firm-fundednext.svg","FundedNext Futures":"firm-fundednext-futures.png","FundingPips":"firm-fundingpips.svg","FuturesElite":"firm-futureselite-new.svg","Goat Funded Futures":"firm-goat-funded-futures.png","Goat Funded Trader":"firm-goat-funded-trader.svg","Hantec Trader":"firm-hantec-trader.png","Hola Prime":"firm-hola-prime.png","Instant Funding":"firm-instant-funding.png","Lark Funding":"firm-lark-funding.svg","Lucid Trading":"firm-lucid-trading.png","Maven":"firm-maven.png","Ment Funding":"firm-ment-funding.png","Moneta Funded":"firm-moneta-funded.png","My Funded Futures":"firm-my-funded-futures.png","Nordic Funder":"firm-nordic-funder.svg","Orion Funded":"firm-orion-funded.png","Take Profit Trader":"firm-take-profit-trader-new.svg","The Trading Pit":"firm-the-trading-pit.png","The Trading Pit Futures":"firm-the-trading-pit-futures.svg","The5ers":"firm-the5ers.svg","The5ers Futures":"firm-the5ers-futures.png","ThinkCapital":"firm-thinkcapital.png","Top One Futures":"firm-top-one-futures.png","Top One Trader":"firm-top-one-trader.svg","Topstep":"firm-topstep.png","Trade The Pool":"firm-trade-the-pool-dark-new.svg","TradeDay":"firm-tradeday-new.svg","Tradeify":"firm-tradeify.png","Traders Launch":"firm-traders-launch-new.svg","WSFunded":"firm-wsfunded.png","Ylos Trading":"firm-ylos-trading-new.svg","AlphaCapitalGroup":"firm-alpha-capital.png","AlphaFutures":"firm-alpha-futures.png","AquaFutures":"firm-aquafunded.svg","BlueGuardian":"firm-blue-guardian.png","E8Markets":"firm-e8-markets.svg","FundedFuturesFamily":"firm-funded-futures-family.png","GoatFundedFutures":"firm-goat-funded-futures.png","GoatFundedTrader":"firm-goat-funded-trader.svg","HolaPrime":"firm-hola-prime.png","Instantfunding":"firm-instant-funding.png","MyFundedFutures":"firm-my-funded-futures.png","OrionFunded":"firm-orion-funded.png","TopOneFutures":"firm-top-one-futures.png","TopOneTrader":"firm-top-one-trader.svg","Tradeify Futures":"firm-tradeify.png","YlosTrading":"firm-ylos-trading-new.svg","Axi Select":"firm-axi-select.png","BEM Funding":"firm-bem-funding.png","Breakout":"firm-breakout.png","E8 Perpetuals":"firm-e8-perpetuals.png","FXIFY":"firm-fxify.png","For Traders":"firm-for-traders.png","For Traders Crypto":"firm-for-traders-crypto.png","Hola Prime Futures":"firm-hola-prime-futures.png","Leveraged":"firm-leveraged.png","Leveraged Crypto":"firm-leveraged-crypto.png","Tradeify 247":"firm-tradeify-247.png","WenCrypto":"firm-wencrypto.png"};
-const initials=n=>n.split(/\s+/).map(x=>x[0]).slice(0,2).join('').toUpperCase();
-const logoSource=n=>{const mapped=logoFiles[n];if(mapped)return `assets/firm-logos/${mapped}`;const directory=TRUSTPILOT_FIRMS.find(f=>f.name===n),fallback=directory?.logo||directory?.logo_file;if(!fallback)return '';return fallback.startsWith('assets/')?fallback:`assets/firm-logos/${fallback}`};
-const logo=n=>{const src=logoSource(n);return src?`<span class="logo-wrap firm-logo-frame"><img class="firm-logo" src="${src}" alt="${n} logo" onerror="this.hidden=true;this.style.display='none';var s=this.nextElementSibling;if(s){s.removeAttribute('hidden');s.style.display='grid';}"><span class="firm-initial" hidden style="display:none;" aria-label="${n}">${initials(n)}</span></span>`:`<span class="logo-wrap firm-logo-frame"><span class="firm-initial" aria-label="${n}">${initials(n)}</span></span>`};
+const logoSource=n=>{const mapped=logoFiles[n];if(mapped)return `assets/firm-logos/${mapped}`;const directory=TRUSTPILOT_FIRMS.find(f=>f.name===n),fallback=directory?.logo||directory?.logo_file;if(fallback)return fallback.startsWith('assets/')?fallback:`assets/firm-logos/${fallback}`;return 'assets/logo-mark.png'};
+const logo=n=>{const src=logoSource(n);return `<span class="logo-wrap firm-logo-frame"><img class="firm-logo" src="${src}" alt="${safe(n)} logo"></span>`};
 const platformFiles={'cTrader':{file:'ctrader.png',label:'cTrader'},'MT5':{file:'mt5.png',label:'MetaTrader 5'},'MT4':{file:'mt4.png',label:'MetaTrader 4'},'Match-Trader':{file:'mt4.png',label:'MetaTrader 4'},'DXtrade':{file:'dxtrade.png',label:'DXtrade'}};
 const platformIcon=p=>{const item=platformFiles[p];return item?`<span class="platform" title="${item.label}" aria-label="${item.label}"><img src="assets/platforms/${item.file}" alt="" aria-hidden="true"></span>`:''};
 const promo=pct=>pct==null||Number(pct)<=0?'<span class="asset-tag">—</span>':`<span class="promo"><span class="pct">${pct}% OFF</span><button class="copy" type="button" data-copy="LENZ" aria-label="Copy promo code LENZ">LENZ ⧉</button></span>`;

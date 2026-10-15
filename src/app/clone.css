@@ -874,17 +874,6 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   padding: 0 !important;
   object-fit: contain !important;
 }
-#offers .offer .firm-initial:not([hidden]) {
-  grid-area: 1 / 1 !important;
-  display: grid !important;
-  place-items: center !important;
-  font-size: 12px !important;
-  font-weight: 800 !important;
-  width: 100% !important;
-  height: 100% !important;
-  border-radius: 9px !important;
-  padding: 0 !important;
-}
 #offers .offer strong {
   display: block !important;
   font-size: 12.5px !important;
@@ -1005,17 +994,6 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   border-radius: 9px !important;
   padding: 0 !important;
   object-fit: contain !important;
-}
-#offers .future .firm-initial:not([hidden]) {
-  grid-area: 1 / 1 !important;
-  display: grid !important;
-  place-items: center !important;
-  font-size: 13px !important;
-  font-weight: 800 !important;
-  width: 100% !important;
-  height: 100% !important;
-  border-radius: 9px !important;
-  padding: 0 !important;
 }
 #offers .future strong {
   display: block !important;
@@ -1356,23 +1334,13 @@ span.firm-initial[hidden] {
   display: none !important;
 }
 
-/* Only display initials when the image has failed or is missing */
-.logo-wrap > .firm-initial:not([hidden]),
-.firm-logo-frame > .firm-initial:not([hidden]),
-.firm-initial:not([hidden]) {
-  grid-area: 1 / 1 !important;
-  width: 100% !important;
-  height: 100% !important;
-  padding: 0 !important;
-  border-radius: 9px !important;
-  display: grid !important;
-  place-items: center !important;
-  font-weight: 800 !important;
-  font-size: 13px !important;
-  background: var(--grad) !important;
-  color: #fff !important;
-  border: none !important;
-  box-shadow: none !important;
+/* Delete all text demo logo initials completely - only real logos are displayed */
+.firm-initial,
+span.firm-initial,
+[hidden],
+img[hidden],
+.firm-logo[hidden] {
+  display: none !important;
 }
 
 /* 6. Most Popular Forex Prop Firms: Discount Code Styling & Full Grid Integration */
