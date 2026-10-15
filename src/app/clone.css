@@ -6218,3 +6218,286 @@ footer#footer .bottom-copy {
   padding-top: 14px !important;
 }
 
+/* ==========================================================================
+   GLOBAL FIX: Review Info Icon & Additional Info Cards (No Giant Icons Anywhere)
+   ========================================================================== */
+.additional-info .review-info-icon,
+.favorites-info .review-info-icon,
+.payout-additional .review-info-icon,
+.reviews-methodology-card .review-info-icon,
+.review-info-icon {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+  flex: 0 0 44px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 12px !important;
+  background: rgba(30, 231, 252, 0.12) !important;
+  border: 1px solid rgba(30, 231, 252, 0.35) !important;
+  color: #1EE7FC !important;
+}
+
+.additional-info .review-info-icon svg,
+.favorites-info .review-info-icon svg,
+.payout-additional .review-info-icon svg,
+.reviews-methodology-card .review-info-icon svg,
+.review-info-icon svg {
+  width: 22px !important;
+  height: 22px !important;
+  max-width: 22px !important;
+  max-height: 22px !important;
+  display: block !important;
+  fill: currentColor !important;
+}
+
+.additional-info,
+.favorites-info,
+.payout-additional,
+.reviews-methodology-card {
+  display: grid !important;
+  grid-template-columns: 44px minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 16px !important;
+  padding: 16px 20px !important;
+  border-radius: 16px !important;
+  min-height: auto !important;
+  max-height: none !important;
+  background: linear-gradient(145deg, rgba(16, 22, 34, 0.8), rgba(9, 13, 20, 0.95)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ==========================================================================
+   PURE PFL PARTNER EMBED BADGE (Universal, No Rating Num, 100% PFL)
+   ========================================================================== */
+.pfl-embed-badge-preview {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background: #060812 !important;
+  border: 1px solid rgba(0, 240, 255, 0.32) !important;
+  border-radius: 10px !important;
+  padding: 8px 18px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55), 0 0 14px rgba(0, 240, 255, 0.12) !important;
+  transition: all 0.2s ease !important;
+}
+
+.pfl-embed-badge-preview:hover {
+  border-color: #00F0FF !important;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.65), 0 0 22px rgba(0, 240, 255, 0.22) !important;
+  transform: translateY(-2px) !important;
+}
+
+.pfl-embed-status {
+  font-family: 'Outfit', Inter, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  letter-spacing: -0.01em !important;
+}
+
+.pfl-embed-star-boxes {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+}
+
+.pfl-embed-star-boxes span {
+  width: 20px !important;
+  height: 20px !important;
+  background: #00B67A !important;
+  display: grid !important;
+  place-items: center !important;
+  color: #FFFFFF !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  border-radius: 3px !important;
+  box-shadow: 0 2px 6px rgba(0, 182, 122, 0.25) !important;
+}
+
+.pfl-embed-brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-left: 3px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+}
+
+.pfl-embed-brand img {
+  width: 22px !important;
+  height: 22px !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.6)) !important;
+}
+
+.pfl-embed-brand .lenz-hl {
+  color: #00F0FF !important;
+}
+
+/* ==========================================================================
+   STREAMLINED GOOGLE AUTH & EASY REVIEW FORM
+   ========================================================================== */
+.review-auth-card {
+  background: linear-gradient(135deg, rgba(20, 28, 46, 0.7), rgba(12, 16, 28, 0.9)) !important;
+  border: 1px solid rgba(0, 240, 255, 0.25) !important;
+  border-radius: 14px !important;
+  padding: 14px 18px !important;
+  margin-bottom: 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  flex-wrap: wrap !important;
+}
+
+.review-auth-status {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.review-auth-avatar {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #4285F4, #34A853) !important;
+  color: #FFFFFF !important;
+  display: grid !important;
+  place-items: center !important;
+  font-weight: 800 !important;
+  font-size: 15px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.review-auth-meta strong {
+  display: block !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+}
+
+.review-auth-meta span {
+  display: block !important;
+  font-size: 12px !important;
+  color: #94A3B8 !important;
+}
+
+.btn-google-sign-in {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 10px 18px !important;
+  border-radius: 10px !important;
+  background: #FFFFFF !important;
+  color: #1F2937 !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  border: 0 !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-google-sign-in:hover {
+  background: #F3F4F6 !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn-auth-switch {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  color: #CBD5E1 !important;
+  font-size: 12px !important;
+  padding: 6px 12px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-auth-switch:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+}
+
+.star-rating-selector {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 0 !important;
+}
+
+.star-rating-selector .star-btn {
+  background: transparent !important;
+  border: 0 !important;
+  font-size: 32px !important;
+  color: rgba(255, 255, 255, 0.2) !important;
+  cursor: pointer !important;
+  padding: 2px !important;
+  transition: all 0.15s ease !important;
+  line-height: 1 !important;
+}
+
+.star-rating-selector .star-btn.active,
+.star-rating-selector .star-btn.hover {
+  color: #FBBF24 !important;
+  text-shadow: 0 0 16px rgba(251, 191, 36, 0.6) !important;
+  transform: scale(1.1) !important;
+}
+
+.rating-label-preview {
+  margin-left: 14px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: #00F0FF !important;
+}
+
+/* ==========================================================================
+   POWERED BY PROP FIRM LENZ PILL (Payout Firm Detail Chart)
+   ========================================================================== */
+.powered-by-pfl-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: linear-gradient(135deg, rgba(20, 28, 44, 0.9), rgba(10, 14, 24, 0.95)) !important;
+  border: 1px solid rgba(0, 240, 255, 0.35) !important;
+  border-radius: 999px !important;
+  padding: 6px 15px !important;
+  color: #94A3B8 !important;
+  font-family: 'Outfit', Inter, sans-serif !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 240, 255, 0.1) !important;
+  transition: all 0.2s ease !important;
+}
+
+.powered-by-pfl-pill:hover {
+  border-color: #00F0FF !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), 0 0 16px rgba(0, 240, 255, 0.22) !important;
+}
+
+.powered-by-pfl-pill img {
+  width: 20px !important;
+  height: 20px !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.6)) !important;
+}
+
+.powered-by-pfl-pill strong {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+
+.powered-by-pfl-pill .lenz-hl {
+  color: #00F0FF !important;
+}
+
+

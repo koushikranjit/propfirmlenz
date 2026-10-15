@@ -52,7 +52,7 @@
   <header class="favorites-head"><h2>Favorite Firms List</h2><p>Pick your favorite prop firm and show your support. Your pick applies to your visit and can be changed at any time.</p></header>
   <div class="favorites-controls"><div class="favorites-count">Forex firms <b id="favoritesCount">—</b></div><button class="review-method favorites-method" type="button" data-review-methodology>◇ How We Verify and Rank Firms</button><label class="favorites-search-wrap"><span aria-hidden="true">⌕</span><input class="favorites-search" id="favoriteSearch" type="search" placeholder="Search firms" aria-label="Search favorite firms"></label></div>
   <div class="favorites-list"><div class="favorites-list-head"><span>Rank</span><span>Firm</span><span>Trustpilot review volume</span><span>Offer</span><span>Favorite</span></div><div id="favoriteFirmRows"></div></div>
-  <section class="additional-info favorites-info"><div class="review-info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5c2.8-.8 5.2-.2 8 1.6 2.8-1.8 5.2-2.4 8-1.6v13c-2.8-.8-5.2-.2-8 1.6-2.8-1.8-5.2-2.4-8-1.6v-13Z"/><path d="M12 7.1v13"/></svg></div><div><h2>Additional Information</h2><p>This list ranks the Forex firms covered by Prop Firm Lenz using the Trustpilot rating snapshot shown for each firm. Firms with unavailable or withheld scores appear after rated firms, and the review-volume bars use the largest verified review count in this list as the scale.</p><p>Your favorite is private to this visit. It is kept only in this page’s temporary memory, is not published or shared, and resets when you reload the page.</p></div></section>
+  <section class="additional-info favorites-info"><div class="review-info-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M4 5.5c2.8-.8 5.2-.2 8 1.6 2.8-1.8 5.2-2.4 8-1.6v13c-2.8-.8-5.2-.2-8 1.6-2.8-1.8-5.2-2.4-8-1.6v-13Z"/><path d="M12 7.1v13"/></svg></div><div><h2>Additional Information</h2><p>This list ranks the Forex firms covered by Prop Firm Lenz using the Trustpilot rating snapshot shown for each firm. Firms with unavailable or withheld scores appear after rated firms, and the review-volume bars use the largest verified review count in this list as the scale.</p><p>Your favorite is private to this visit. It is kept only in this page’s temporary memory, is not published or shared, and resets when you reload the page.</p></div></section>
 </div></section>
 <section class="offers-page" id="offersPage" data-page-panel="offers" hidden><div class="offers-page-shell">
   <div class="offers-top-layout">
@@ -110,33 +110,23 @@
       </div>
     </div>
 
-    <!-- Prop Firm Lenz Partner Badge & Embed Widget (Used by Prop Firms like The 5%ers) -->
+    <!-- Prop Firm Lenz Official Partner Embed Badge (Pure PFL, No Trustpilot, Universal) -->
     <div class="pfl-partner-widget-card">
       <div class="pfl-widget-info">
         <div class="pfl-widget-info-icon">⭐</div>
         <div>
-          <h4>Prop Firm Partner Rating Badge</h4>
-          <p>Official verified badge embedded on leading prop firm homepages (e.g. The 5%ers, FundingPips).</p>
+          <h4>Prop Firm Lenz Partner Verification Badge</h4>
+          <p>Official embed badge used by verified prop trading firms (e.g. The 5%ers, FundingPips) on their websites to showcase verified status.</p>
         </div>
       </div>
       <div class="pfl-embed-badge-preview">
-        <div class="pfl-embed-badge-tp">
-          <span>Excellent</span>
-          <div class="tp-box-stars">
-            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-          </div>
-          <span class="tp-brand-text">Trustpilot</span>
+        <span class="pfl-embed-status">Excellent</span>
+        <div class="pfl-embed-star-boxes">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
         </div>
-        <div class="pfl-embed-badge-divider"></div>
-        <div class="pfl-embed-badge-pfl">
-          <div class="pfl-badge-score-pill">
-            <span>4.8</span>
-            <span class="stars">★★★★★</span>
-          </div>
-          <div class="pfl-badge-brand-name">
-            <img src="assets/logo.png" alt="Prop Firm Lenz icon">
-            <span>Prop Firm <span class="lenz-hl">Lenz</span></span>
-          </div>
+        <div class="pfl-embed-brand">
+          <img src="assets/logo.png" alt="Prop Firm Lenz logo">
+          <span>Prop Firm <span class="lenz-hl">Lenz</span></span>
         </div>
       </div>
       <button type="button" class="btn-copy-widget-code" data-copy-partner-widget>
@@ -566,37 +556,57 @@
     <div class="modal-header-3d">
       <div class="modal-badge">
         <span class="badge-pulse-dot"></span>
-        <span>AUTO-LIVE VERIFIED SUBMISSION</span>
+        <span>VERIFIED TRADER REVIEWS</span>
       </div>
       <h2 id="writeReviewTitle">Write a Trader Review</h2>
-      <p>Share your authentic evaluation and payout experience. Your review goes live immediately!</p>
+      <p>Share your authentic evaluation and payout experience. One review per prop firm per verified Google account.</p>
+    </div>
+
+    <!-- Google Sign-In Status Card -->
+    <div class="review-auth-card" id="reviewAuthCard">
+      <div class="review-auth-status" id="reviewAuthLoggedOut" style="display:flex;align-items:center;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:grid;place-items:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2c0 2.8.7 5.5 1.9 7.8l3.7-2.9z"/><path fill="#34A853" d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 16.5C3.7 20.3 7.5 23.5 12 23.5z"/></svg>
+          </div>
+          <div>
+            <strong style="color:#fff;font-size:13.5px;display:block;">Google Sign-In Required</strong>
+            <span style="color:#94a3b8;font-size:12px;display:block;">Sign in to verify your trader identity &amp; prevent spam</span>
+          </div>
+        </div>
+        <button type="button" class="btn-google-sign-in" id="reviewGoogleAuthBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2c0 2.8.7 5.5 1.9 7.8l3.7-2.9z"/><path fill="#34A853" d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 16.5C3.7 20.3 7.5 23.5 12 23.5z"/></svg>
+          <span>Sign in with Google</span>
+        </button>
+      </div>
+
+      <div class="review-auth-status" id="reviewAuthLoggedIn" style="display:none;align-items:center;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px;">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="review-auth-avatar" id="reviewAuthAvatar">G</div>
+          <div class="review-auth-meta">
+            <strong id="reviewAuthName">Alex Trader</strong>
+            <span id="reviewAuthEmail">alex.trader@gmail.com</span>
+          </div>
+        </div>
+        <button type="button" class="btn-auth-switch" id="reviewAuthSwitchBtn">Sign Out</button>
+      </div>
     </div>
 
     <form id="newReviewForm" class="new-review-form-3d">
       <div id="reviewFormError" class="review-form-alert error" style="display:none;"></div>
       <div id="reviewFormSuccess" class="review-form-alert success" style="display:none;"></div>
 
-      <div class="form-row-2col">
-        <div class="form-field">
-          <label for="reviewFirmSelect">Select Prop Firm <span class="req">*</span></label>
-          <select id="reviewFirmSelect" required class="form-input-3d">
-            <option value="">-- Choose a Prop Firm --</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label for="reviewAuthorName">Your Trader Name / Nickname <span class="req">*</span></label>
-          <input type="text" id="reviewAuthorName" placeholder="e.g. Alex Trader" required class="form-input-3d">
-        </div>
-      </div>
-
+      <!-- 1. Select Prop Firm -->
       <div class="form-field">
-        <label for="reviewAuthorEmail">Your Email Address <span class="req">*</span> <small class="field-hint">(Used for 1-review-per-firm verification; not published)</small></label>
-        <input type="email" id="reviewAuthorEmail" placeholder="e.g. trader@example.com" required class="form-input-3d">
+        <label for="reviewFirmSelect">Select Prop Firm <span class="req">*</span></label>
+        <select id="reviewFirmSelect" required class="form-input-3d">
+          <option value="">-- Choose a Prop Firm --</option>
+        </select>
       </div>
 
-      <!-- Star Rating Picker -->
+      <!-- 2. Interactive Star Rating -->
       <div class="form-field rating-picker-wrap">
-        <label>Overall Rating <span class="req">*</span></label>
+        <label>Select Rating Star <span class="req">*</span></label>
         <div class="star-rating-selector" id="starRatingSelector">
           <button type="button" class="star-btn active" data-star="1" aria-label="1 star">★</button>
           <button type="button" class="star-btn active" data-star="2" aria-label="2 stars">★</button>
@@ -608,60 +618,28 @@
         <input type="hidden" id="selectedStarRating" value="5">
       </div>
 
-      <!-- Micro Category Ratings -->
-      <div class="form-row-3col category-ratings-row">
-        <div class="form-field">
-          <label for="catPayoutSpeed">Payout Speed</label>
-          <select id="catPayoutSpeed" class="form-input-3d sub-select">
-            <option value="5" selected>5 ★ Ultra Fast</option>
-            <option value="4">4 ★ Fast (1-2 days)</option>
-            <option value="3">3 ★ Average</option>
-            <option value="2">2 ★ Delayed</option>
-            <option value="1">1 ★ Very Slow</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label for="catRulesSpreads">Rules & Spreads</label>
-          <select id="catRulesSpreads" class="form-input-3d sub-select">
-            <option value="5" selected>5 ★ Tight & Fair</option>
-            <option value="4">4 ★ Good Spreads</option>
-            <option value="3">3 ★ Standard</option>
-            <option value="2">2 ★ Slippage Noted</option>
-            <option value="1">1 ★ Unfair Rules</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label for="catSupport">Support Quality</label>
-          <select id="catSupport" class="form-input-3d sub-select">
-            <option value="5" selected>5 ★ Helpful & Quick</option>
-            <option value="4">4 ★ Good Support</option>
-            <option value="3">3 ★ Average</option>
-            <option value="2">2 ★ Slow Replies</option>
-            <option value="1">1 ★ Unresponsive</option>
-          </select>
-        </div>
+      <!-- 3. Subject -->
+      <div class="form-field">
+        <label for="newReviewTitle">Subject <span class="req">*</span></label>
+        <input type="text" id="newReviewTitle" placeholder="e.g. Fast 2-hour payout & tight spreads on EURUSD" required class="form-input-3d">
       </div>
 
+      <!-- 4. Review Body -->
       <div class="form-field">
-        <label for="newReviewTitle">Review Title <span class="req">*</span></label>
-        <input type="text" id="newReviewTitle" placeholder="e.g. Received my $4,800 payout in 2 hours via Crypto" required class="form-input-3d">
-      </div>
-
-      <div class="form-field">
-        <label for="newReviewBody">Your Detailed Experience <span class="req">*</span></label>
-        <textarea id="newReviewBody" rows="4" placeholder="Describe the evaluation rules, execution speed, customer support, and payout withdrawal process..." required class="form-input-3d form-textarea-3d"></textarea>
+        <label for="newReviewBody">Review <span class="req">*</span></label>
+        <textarea id="newReviewBody" rows="4" placeholder="Describe your experience with rules, execution, customer support, and payout withdrawal..." required class="form-input-3d form-textarea-3d"></textarea>
       </div>
 
       <div class="form-checkbox-field">
         <label class="custom-checkbox-label">
           <input type="checkbox" id="reviewPayoutReceived" checked>
-          <span>I have received a real payout / withdrawal from this firm</span>
+          <span>I have traded with or received a withdrawal from this firm</span>
         </label>
       </div>
 
       <div class="modal-form-actions">
         <button type="submit" id="submitReviewBtn" class="btn-publish-review-3d">
-          🚀 Publish Review (Auto-Live)
+          🚀 Submit Verified Review
         </button>
       </div>
     </form>
