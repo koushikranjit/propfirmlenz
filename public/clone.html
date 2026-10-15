@@ -3107,14 +3107,16 @@ footer#footer .bottom-copy {
   font-weight: 800 !important;
   letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
-  color: #D6F4FF !important;
+  color: #E2E8F0 !important;
 }
 
 .hero-badge-3d .badge-tag {
   padding: 2px 8px !important;
   border-radius: 999px !important;
-  background: linear-gradient(135deg, #00F0FF, #396DFA) !important;
-  color: #041116 !important;
+  background: rgba(0, 240, 255, 0.15) !important;
+  border: 1px solid rgba(0, 240, 255, 0.45) !important;
+  color: #00F0FF !important;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.25) !important;
   font-size: 10px !important;
   font-weight: 900 !important;
   letter-spacing: 0.04em !important;
@@ -3125,7 +3127,7 @@ footer#footer .bottom-copy {
   50% { opacity: 0.45; transform: scale(0.85); }
 }
 
-/* Hero Headline */
+/* Hero Headline - Clean, Crisp, High-Contrast 3D White */
 .hero h1,
 #heroTitle {
   font-family: 'Outfit', Inter, system-ui, -apple-system, sans-serif !important;
@@ -3134,26 +3136,24 @@ footer#footer .bottom-copy {
   line-height: 1.15 !important;
   letter-spacing: -0.035em !important;
   color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: none !important;
+  filter: none !important;
   text-align: center !important;
   max-width: 980px !important;
   margin: 0 auto 16px !important;
   text-wrap: balance !important;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.7), 0 0 45px rgba(30, 231, 252, 0.22) !important;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.95), 0 0 35px rgba(255, 255, 255, 0.15) !important;
 }
 
-.hero-gradient-text {
-  background: linear-gradient(135deg, #00F0FF 0%, #38BDF8 30%, #818CF8 65%, #C084FC 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  filter: drop-shadow(0 4px 28px rgba(0, 240, 255, 0.4)) !important;
-  display: inline !important;
-}
-
+.hero-gradient-text,
 .hero-year-highlight {
-  background: linear-gradient(180deg, #FFFFFF 0%, #A5F3FC 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.5)) !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  color: #FFFFFF !important;
+  filter: none !important;
+  text-shadow: none !important;
   display: inline !important;
 }
 
@@ -3163,10 +3163,10 @@ footer#footer .bottom-copy {
   font-family: Inter, system-ui, -apple-system, sans-serif !important;
   font-size: 16.5px !important;
   line-height: 1.6 !important;
-  color: #CFE0F2 !important;
+  color: #94A3B8 !important;
   max-width: 720px !important;
   margin: 0 auto 26px !important;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8) !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
   text-align: center !important;
 }
 
@@ -3303,7 +3303,7 @@ footer#footer .bottom-copy {
 .hero .stat .stat-copy span {
   font-size: 13px !important;
   font-weight: 600 !important;
-  color: #9AB4D0 !important;
+  color: #CBD5E1 !important;
   letter-spacing: 0.01em !important;
   line-height: 1 !important;
 }
@@ -4077,7 +4077,7 @@ footer#footer .bottom-copy {
         <span class="badge-tag">2026</span>
       </div>
     </div>
-    <h1 id="heroTitle">Compare the Best <span class="hero-gradient-text">Forex Prop Trading Firms</span> of <span class="hero-year-highlight">2026</span></h1>
+    <h1 id="heroTitle">Compare the Best Forex Prop Trading Firms of 2026</h1>
     <p id="heroSubtitle">Trusted platform to compare Forex prop trading firms using verified data and insights, including reviews, rules, and rankings.</p>
     <div class="stats">
       <div class="stat stat-pill-firms">
@@ -49136,7 +49136,7 @@ let currentPage='home',routeHistoryIndex=Number(history.state?.pflRouteIndex)||0
 function configurePage(page){
   const reviewPage=page==='reviews',label=marketLabel(),categoryFirms=categoryTrustpilotFirms(),categoryChallenges=CHALLENGES_DATA.filter(x=>firmInMarket(x.firm)),reviewVolume=categoryFirms.reduce((sum,f)=>sum+(Number(f.trustpilotReviews)||0),0),payoutFirmCount=new Set([...(PAYOUT_DATA.latest_24h||[]),...(PAYOUT_DATA.weekly?.rows||[]),...(PAYOUT_DATA.monthly?.rows||[])].filter(x=>firmInMarket(payoutCanonicalName(x.firm))).map(x=>payoutCanonicalName(x.firm))).size;
   updateMarketCopy();
-  const heroTitle=document.querySelector('#heroTitle');if(heroTitle)heroTitle.innerHTML=`Compare the Best <span class="hero-gradient-text">${label} Prop Trading Firms</span> of <span class="hero-year-highlight">2026</span>`;
+  const heroTitle=document.querySelector('#heroTitle');if(heroTitle)heroTitle.textContent=`Compare the Best ${label} Prop Trading Firms of 2026`;
   const heroSubtitle=document.querySelector('#heroSubtitle');if(heroSubtitle)heroSubtitle.textContent=reviewPage?`Compare ${label} prop firms using real Trustpilot reviews and PFL community reviews.`:`Trusted platform to compare ${label} prop trading firms using verified data and insights, including reviews, rules, and rankings.`;
   const heroFirmCount=document.querySelector('#heroFirmCount');if(heroFirmCount)heroFirmCount.textContent=categoryFirms.length.toLocaleString();
   const heroFirmLabel=document.querySelector('#heroFirmLabel');if(heroFirmLabel)heroFirmLabel.textContent=reviewPage?'Verified Prop Firms':'Firms Covered';
