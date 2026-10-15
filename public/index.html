@@ -853,12 +853,12 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
 }
 #offers .offer {
   display: grid !important;
-  grid-template-columns: 38px minmax(0, 1fr) 82px !important;
+  grid-template-columns: 44px minmax(0, 1fr) 82px !important;
   align-items: center !important;
-  gap: 7px !important;
+  gap: 10px !important;
   min-height: 74px !important;
   max-height: 82px !important;
-  padding: 10px 8px !important;
+  padding: 10px 10px !important;
   border-radius: 12px !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   background: linear-gradient(145deg, #15151b, #0f0f13) !important;
@@ -872,24 +872,28 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5), 0 0 16px rgba(30, 231, 252, 0.12) !important;
 }
 #offers .offer .logo-wrap {
-  width: 38px !important;
-  height: 38px !important;
-  flex: 0 0 38px !important;
+  width: 44px !important;
+  height: 44px !important;
+  flex: 0 0 44px !important;
+  display: inline-grid !important;
+  place-items: center !important;
 }
 #offers .offer .firm-logo {
-  width: 38px !important;
-  height: 38px !important;
+  grid-area: 1 / 1 !important;
+  width: 100% !important;
+  height: 100% !important;
   border-radius: 9px !important;
-  padding: 3px !important;
+  padding: 0 !important;
   object-fit: contain !important;
 }
 #offers .offer .firm-initial:not([hidden]) {
+  grid-area: 1 / 1 !important;
   display: grid !important;
   place-items: center !important;
   font-size: 12px !important;
   font-weight: 800 !important;
-  width: 38px !important;
-  height: 38px !important;
+  width: 100% !important;
+  height: 100% !important;
   border-radius: 9px !important;
   padding: 0 !important;
 }
@@ -1000,25 +1004,29 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   height: 22px !important;
 }
 #offers .future .logo-wrap {
-  width: 42px !important;
-  height: 42px !important;
-  flex: 0 0 42px !important;
+  width: 44px !important;
+  height: 44px !important;
+  flex: 0 0 44px !important;
+  display: inline-grid !important;
+  place-items: center !important;
 }
 #offers .future .firm-logo {
-  width: 42px !important;
-  height: 42px !important;
-  border-radius: 10px !important;
-  padding: 4px !important;
+  grid-area: 1 / 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 9px !important;
+  padding: 0 !important;
   object-fit: contain !important;
 }
 #offers .future .firm-initial:not([hidden]) {
+  grid-area: 1 / 1 !important;
   display: grid !important;
   place-items: center !important;
   font-size: 13px !important;
   font-weight: 800 !important;
-  width: 42px !important;
-  height: 42px !important;
-  border-radius: 10px !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 9px !important;
   padding: 0 !important;
 }
 #offers .future strong {
@@ -1300,48 +1308,83 @@ body::after {
   padding: 0 !important;
 }
 
+/* Master Logo Frame: strictly 1-cell grid stack so img and fallback never sit side-by-side */
+.firm-logo-frame,
+.logo-wrap {
+  display: inline-grid !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: 1fr !important;
+  place-items: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  background: rgba(18, 18, 26, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
+}
+
 #offers .offer .logo-wrap,
 #offers .future .logo-wrap,
 .offers-top-card .logo-wrap,
 .offers-future-row .logo-wrap,
-.rank-card .logo-wrap {
+.rank-card .logo-wrap,
+.firm-cell .logo-wrap,
+.compare-firm-head .logo-wrap,
+.favorite-firm-cell .logo-wrap,
+.review-firm .logo-wrap,
+.payout-tracker-row .logo-wrap,
+.payout-row .logo-wrap {
   width: 44px !important;
   height: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
   flex: 0 0 44px !important;
-  border-radius: 12px !important;
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  padding: 2px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
-  overflow: hidden !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  padding: 3px !important;
 }
-#offers .offer .firm-logo,
-#offers .future .firm-logo,
-.offers-top-card .firm-logo,
-.offers-future-row .firm-logo,
-.rank-card .firm-logo {
+
+.logo-wrap > .firm-logo,
+.firm-logo-frame > .firm-logo,
+.firm-logo {
+  grid-area: 1 / 1 !important;
   width: 100% !important;
   height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
   padding: 0 !important;
-  border-radius: 10px !important;
+  border-radius: 9px !important;
   object-fit: contain !important;
+  object-position: center !important;
   display: block !important;
+  border: none !important;
+  box-shadow: none !important;
 }
-#offers .offer .firm-initial,
-#offers .future .firm-initial,
-.offers-top-card .firm-initial,
-.offers-future-row .firm-initial,
-.rank-card .firm-initial {
+
+/* Hidden elements MUST NEVER display under any selector */
+[hidden],
+img[hidden],
+.firm-logo[hidden],
+.firm-initial[hidden],
+span.firm-initial[hidden] {
+  display: none !important;
+}
+
+/* Only display initials when the image has failed or is missing */
+.logo-wrap > .firm-initial:not([hidden]),
+.firm-logo-frame > .firm-initial:not([hidden]),
+.firm-initial:not([hidden]) {
+  grid-area: 1 / 1 !important;
   width: 100% !important;
   height: 100% !important;
   padding: 0 !important;
-  border-radius: 10px !important;
+  border-radius: 9px !important;
   display: grid !important;
   place-items: center !important;
   font-weight: 800 !important;
+  font-size: 13px !important;
+  background: var(--grad) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* 6. Most Popular Forex Prop Firms: Discount Code Styling & Full Grid Integration */
@@ -3835,7 +3878,7 @@ const favoriteFaqs=[
 const logoFiles={"Alpha Capital":"firm-alpha-capital.png","Alpha Futures":"firm-alpha-futures.png","Apex Trader Funding":"firm-apex-trader-funding-new.svg","AquaFunded":"firm-aquafunded.svg","AquaFunded Futures":"firm-aquafunded.svg","Atmos Funded":"firm-atmos-funded.svg","Audacity Capital":"firm-audacity-capital.svg","Blue Guardian":"firm-blue-guardian.png","Blue Guardian Futures":"firm-blue-guardian.png","Blueberry Funded":"firm-blueberry-funded.png","Blueberry Futures":"firm-blueberry-funded.png","BrightFunded":"firm-brightfunded.png","City Traders Imperium":"firm-city-traders-imperium.svg","Crypto Fund Trader":"firm-crypto-fund-trader.svg","Darwinex Zero":"firm-darwinex-zero.png","DayTraders":"firm-daytraders.png","E8 Futures":"firm-e8-markets.svg","E8 Markets":"firm-e8-markets.svg","Earn2Trade":"firm-earn2trade.png","FTMO":"firm-ftmo.svg","Finotive Funding":"firm-finotive-funding.svg","Fintokei":"firm-fintokei.png","Funded Futures Family":"firm-funded-futures-family.png","Funded Trading Plus":"firm-funded-trading-plus.png","FundedElite":"firm-fundedelite.svg","FundedNext":"firm-fundednext.svg","FundedNext Futures":"firm-fundednext-futures.png","FundingPips":"firm-fundingpips.svg","FuturesElite":"firm-futureselite-new.svg","Goat Funded Futures":"firm-goat-funded-futures.png","Goat Funded Trader":"firm-goat-funded-trader.svg","Hantec Trader":"firm-hantec-trader.png","Hola Prime":"firm-hola-prime.png","Instant Funding":"firm-instant-funding.png","Lark Funding":"firm-lark-funding.svg","Lucid Trading":"firm-lucid-trading.png","Maven":"firm-maven.png","Ment Funding":"firm-ment-funding.png","Moneta Funded":"firm-moneta-funded.png","My Funded Futures":"firm-my-funded-futures.png","Nordic Funder":"firm-nordic-funder.svg","Orion Funded":"firm-orion-funded.png","Take Profit Trader":"firm-take-profit-trader-new.svg","The Trading Pit":"firm-the-trading-pit.png","The Trading Pit Futures":"firm-the-trading-pit-futures.svg","The5ers":"firm-the5ers.svg","The5ers Futures":"firm-the5ers-futures.png","ThinkCapital":"firm-thinkcapital.png","Top One Futures":"firm-top-one-futures.png","Top One Trader":"firm-top-one-trader.svg","Topstep":"firm-topstep.png","Trade The Pool":"firm-trade-the-pool-dark-new.svg","TradeDay":"firm-tradeday-new.svg","Tradeify":"firm-tradeify.png","Traders Launch":"firm-traders-launch-new.svg","WSFunded":"firm-wsfunded.png","Ylos Trading":"firm-ylos-trading-new.svg","AlphaCapitalGroup":"firm-alpha-capital.png","AlphaFutures":"firm-alpha-futures.png","AquaFutures":"firm-aquafunded.svg","BlueGuardian":"firm-blue-guardian.png","E8Markets":"firm-e8-markets.svg","FundedFuturesFamily":"firm-funded-futures-family.png","GoatFundedFutures":"firm-goat-funded-futures.png","GoatFundedTrader":"firm-goat-funded-trader.svg","HolaPrime":"firm-hola-prime.png","Instantfunding":"firm-instant-funding.png","MyFundedFutures":"firm-my-funded-futures.png","OrionFunded":"firm-orion-funded.png","TopOneFutures":"firm-top-one-futures.png","TopOneTrader":"firm-top-one-trader.svg","Tradeify Futures":"firm-tradeify.png","YlosTrading":"firm-ylos-trading-new.svg","Axi Select":"firm-axi-select.png","BEM Funding":"firm-bem-funding.png","Breakout":"firm-breakout.png","E8 Perpetuals":"firm-e8-perpetuals.png","FXIFY":"firm-fxify.png","For Traders":"firm-for-traders.png","For Traders Crypto":"firm-for-traders-crypto.png","Hola Prime Futures":"firm-hola-prime-futures.png","Leveraged":"firm-leveraged.png","Leveraged Crypto":"firm-leveraged-crypto.png","Tradeify 247":"firm-tradeify-247.png","WenCrypto":"firm-wencrypto.png"};
 const initials=n=>n.split(/\s+/).map(x=>x[0]).slice(0,2).join('').toUpperCase();
 const logoSource=n=>{const mapped=logoFiles[n];if(mapped)return `assets/firm-logos/${mapped}`;const directory=TRUSTPILOT_FIRMS.find(f=>f.name===n),fallback=directory?.logo||directory?.logo_file;if(!fallback)return '';return fallback.startsWith('assets/')?fallback:`assets/firm-logos/${fallback}`};
-const logo=n=>{const src=logoSource(n);return src?`<span class="logo-wrap firm-logo-frame"><img class="firm-logo" src="${src}" alt="${n} logo" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="firm-initial" hidden aria-label="${n}">${initials(n)}</span></span>`:`<span class="logo-wrap firm-logo-frame"><span class="firm-initial" aria-label="${n}">${initials(n)}</span></span>`};
+const logo=n=>{const src=logoSource(n);return src?`<span class="logo-wrap firm-logo-frame"><img class="firm-logo" src="${src}" alt="${n} logo" onerror="this.hidden=true;this.style.display='none';var s=this.nextElementSibling;if(s){s.removeAttribute('hidden');s.style.display='grid';}"><span class="firm-initial" hidden style="display:none;" aria-label="${n}">${initials(n)}</span></span>`:`<span class="logo-wrap firm-logo-frame"><span class="firm-initial" aria-label="${n}">${initials(n)}</span></span>`};
 const platformFiles={'cTrader':{file:'ctrader.png',label:'cTrader'},'MT5':{file:'mt5.png',label:'MetaTrader 5'},'MT4':{file:'mt4.png',label:'MetaTrader 4'},'Match-Trader':{file:'mt4.png',label:'MetaTrader 4'},'DXtrade':{file:'dxtrade.png',label:'DXtrade'}};
 const platformIcon=p=>{const item=platformFiles[p];return item?`<span class="platform" title="${item.label}" aria-label="${item.label}"><img src="assets/platforms/${item.file}" alt="" aria-hidden="true"></span>`:''};
 const promo=pct=>pct==null||Number(pct)<=0?'<span class="asset-tag">—</span>':`<span class="promo"><span class="pct">${pct}% OFF</span><button class="copy" type="button" data-copy="LENZ" aria-label="Copy promo code LENZ">LENZ ⧉</button></span>`;

@@ -841,12 +841,12 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
 }
 #offers .offer {
   display: grid !important;
-  grid-template-columns: 38px minmax(0, 1fr) 82px !important;
+  grid-template-columns: 44px minmax(0, 1fr) 82px !important;
   align-items: center !important;
-  gap: 7px !important;
+  gap: 10px !important;
   min-height: 74px !important;
   max-height: 82px !important;
-  padding: 10px 8px !important;
+  padding: 10px 10px !important;
   border-radius: 12px !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   background: linear-gradient(145deg, #15151b, #0f0f13) !important;
@@ -860,24 +860,28 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5), 0 0 16px rgba(30, 231, 252, 0.12) !important;
 }
 #offers .offer .logo-wrap {
-  width: 38px !important;
-  height: 38px !important;
-  flex: 0 0 38px !important;
+  width: 44px !important;
+  height: 44px !important;
+  flex: 0 0 44px !important;
+  display: inline-grid !important;
+  place-items: center !important;
 }
 #offers .offer .firm-logo {
-  width: 38px !important;
-  height: 38px !important;
+  grid-area: 1 / 1 !important;
+  width: 100% !important;
+  height: 100% !important;
   border-radius: 9px !important;
-  padding: 3px !important;
+  padding: 0 !important;
   object-fit: contain !important;
 }
 #offers .offer .firm-initial:not([hidden]) {
+  grid-area: 1 / 1 !important;
   display: grid !important;
   place-items: center !important;
   font-size: 12px !important;
   font-weight: 800 !important;
-  width: 38px !important;
-  height: 38px !important;
+  width: 100% !important;
+  height: 100% !important;
   border-radius: 9px !important;
   padding: 0 !important;
 }
@@ -988,25 +992,29 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
   height: 22px !important;
 }
 #offers .future .logo-wrap {
-  width: 42px !important;
-  height: 42px !important;
-  flex: 0 0 42px !important;
+  width: 44px !important;
+  height: 44px !important;
+  flex: 0 0 44px !important;
+  display: inline-grid !important;
+  place-items: center !important;
 }
 #offers .future .firm-logo {
-  width: 42px !important;
-  height: 42px !important;
-  border-radius: 10px !important;
-  padding: 4px !important;
+  grid-area: 1 / 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 9px !important;
+  padding: 0 !important;
   object-fit: contain !important;
 }
 #offers .future .firm-initial:not([hidden]) {
+  grid-area: 1 / 1 !important;
   display: grid !important;
   place-items: center !important;
   font-size: 13px !important;
   font-weight: 800 !important;
-  width: 42px !important;
-  height: 42px !important;
-  border-radius: 10px !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 9px !important;
   padding: 0 !important;
 }
 #offers .future strong {
@@ -1288,48 +1296,83 @@ body::after {
   padding: 0 !important;
 }
 
+/* Master Logo Frame: strictly 1-cell grid stack so img and fallback never sit side-by-side */
+.firm-logo-frame,
+.logo-wrap {
+  display: inline-grid !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: 1fr !important;
+  place-items: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  background: rgba(18, 18, 26, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
+}
+
 #offers .offer .logo-wrap,
 #offers .future .logo-wrap,
 .offers-top-card .logo-wrap,
 .offers-future-row .logo-wrap,
-.rank-card .logo-wrap {
+.rank-card .logo-wrap,
+.firm-cell .logo-wrap,
+.compare-firm-head .logo-wrap,
+.favorite-firm-cell .logo-wrap,
+.review-firm .logo-wrap,
+.payout-tracker-row .logo-wrap,
+.payout-row .logo-wrap {
   width: 44px !important;
   height: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
   flex: 0 0 44px !important;
-  border-radius: 12px !important;
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  padding: 2px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
-  overflow: hidden !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  padding: 3px !important;
 }
-#offers .offer .firm-logo,
-#offers .future .firm-logo,
-.offers-top-card .firm-logo,
-.offers-future-row .firm-logo,
-.rank-card .firm-logo {
+
+.logo-wrap > .firm-logo,
+.firm-logo-frame > .firm-logo,
+.firm-logo {
+  grid-area: 1 / 1 !important;
   width: 100% !important;
   height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
   padding: 0 !important;
-  border-radius: 10px !important;
+  border-radius: 9px !important;
   object-fit: contain !important;
+  object-position: center !important;
   display: block !important;
+  border: none !important;
+  box-shadow: none !important;
 }
-#offers .offer .firm-initial,
-#offers .future .firm-initial,
-.offers-top-card .firm-initial,
-.offers-future-row .firm-initial,
-.rank-card .firm-initial {
+
+/* Hidden elements MUST NEVER display under any selector */
+[hidden],
+img[hidden],
+.firm-logo[hidden],
+.firm-initial[hidden],
+span.firm-initial[hidden] {
+  display: none !important;
+}
+
+/* Only display initials when the image has failed or is missing */
+.logo-wrap > .firm-initial:not([hidden]),
+.firm-logo-frame > .firm-initial:not([hidden]),
+.firm-initial:not([hidden]) {
+  grid-area: 1 / 1 !important;
   width: 100% !important;
   height: 100% !important;
   padding: 0 !important;
-  border-radius: 10px !important;
+  border-radius: 9px !important;
   display: grid !important;
   place-items: center !important;
   font-weight: 800 !important;
+  font-size: 13px !important;
+  background: var(--grad) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* 6. Most Popular Forex Prop Firms: Discount Code Styling & Full Grid Integration */
