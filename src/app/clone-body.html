@@ -2,7 +2,7 @@
 <button id="backToTopBtn" type="button" aria-label="Back to top">↑</button>
 <header class="site-head">
   <div class="shell head-main">
-    <a class="brand-lock" href="#page-home" data-page="home"><img src="assets/logo.png" alt="Prop Firm Lenz logo"><span>Prop Firm Lenz</span></a>
+    <a class="brand-lock" href="#page-home" data-page="home"><img src="assets/logo.png" alt="Prop Firm Lenz logo"><span>Prop Firm <span class="brand-lenz-text">Lenz</span></span></a>
     <input class="searchbox" id="globalSearch" type="search" placeholder="Search firms..." aria-label="Search firms">
     <div class="market-switch" role="group" aria-label="Market scope"><button class="on" type="button" data-market="forex" aria-pressed="true">Forex</button><button type="button" data-market="futures" aria-pressed="false">Futures</button><button type="button" data-market="crypto" aria-pressed="false">Crypto</button></div>
     <div class="header-auth desktop-auth" aria-label="Account access"><button class="login" type="button" data-account-notice>Log in</button><button class="signup" type="button" data-account-notice>Sign up</button></div>
@@ -12,14 +12,14 @@
 </header>
 <main>
 <section class="market-empty-page" id="marketEmpty" aria-live="polite" hidden><div class="market-empty-card"><h1 id="marketEmptyTitle">Futures Prop Firms</h1><p id="marketEmptyMessage">Browse verified firm listings. Unavailable details are shown as an em dash.</p><div class="market-directory" id="marketDirectory"></div></div></section>
-<section class="hero" id="home" data-page-panel="home offers best-sellers reviews favorites rules tutorials">
+<section class="hero" id="home" data-page-panel="home offers best-sellers reviews favorites rules tutorials payouts">
   <div class="shell">
     <div class="hero-badge-wrap">
       <div class="hero-badge-3d">
         <span class="badge-pulse-dot" aria-hidden="true"></span>
         <span class="badge-icon">✦</span>
-        <span class="badge-text">#1 Verified Prop Firm Directory &amp; Payout Tracker</span>
-        <span class="badge-tag">2026</span>
+        <span class="badge-text" id="heroBadgeText">#1 Verified Prop Firm Directory &amp; Payout Tracker</span>
+        <span class="badge-tag" id="heroBadgeTag">2026</span>
       </div>
     </div>
     <h1 id="heroTitle">Compare the Best Forex Prop Trading Firms of 2026</h1>
@@ -110,11 +110,52 @@
       </div>
     </div>
 
-    <!-- Navigation & View Modes -->
+    <!-- Prop Firm Lenz Partner Badge & Embed Widget (Used by Prop Firms like The 5%ers) -->
+    <div class="pfl-partner-widget-card">
+      <div class="pfl-widget-info">
+        <div class="pfl-widget-info-icon">⭐</div>
+        <div>
+          <h4>Prop Firm Partner Rating Badge</h4>
+          <p>Official verified badge embedded on leading prop firm homepages (e.g. The 5%ers, FundingPips).</p>
+        </div>
+      </div>
+      <div class="pfl-embed-badge-preview">
+        <div class="pfl-embed-badge-tp">
+          <span>Excellent</span>
+          <div class="tp-box-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <span class="tp-brand-text">Trustpilot</span>
+        </div>
+        <div class="pfl-embed-badge-divider"></div>
+        <div class="pfl-embed-badge-pfl">
+          <div class="pfl-badge-score-pill">
+            <span>4.8</span>
+            <span class="stars">★★★★★</span>
+          </div>
+          <div class="pfl-badge-brand-name">
+            <img src="assets/logo.png" alt="Prop Firm Lenz icon">
+            <span>Prop Firm <span class="lenz-hl">Lenz</span></span>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-copy-widget-code" data-copy-partner-widget>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy Embed Badge Code
+      </button>
+    </div>
+
+    <!-- Navigation & View Modes (Dual Category: Trustpilot & Prop Firm Lenz Ratings) -->
     <div class="reviews-nav-bar">
       <div class="review-subnav-pills" role="tablist">
         <button class="review-subnav-btn on" type="button" data-review-tab="leaderboard" role="tab" aria-selected="true">
-          🏆 Firm Leaderboard & Ratings
+          🏆 All Firm Ratings
+        </button>
+        <button class="review-subnav-btn" type="button" data-review-tab="trustpilot" role="tab" aria-selected="false">
+          🟢 Trustpilot Ratings
+        </button>
+        <button class="review-subnav-btn" type="button" data-review-tab="pfl" role="tab" aria-selected="false">
+          🟣 Prop Firm Lenz Community
         </button>
         <button class="review-subnav-btn" type="button" data-review-tab="feed" role="tab" aria-selected="false">
           ⚡ Live Trader Feed <span class="badge-live-pulse" id="feedCountBadge">12</span>
@@ -168,9 +209,9 @@
       <div class="reviews-table-3d">
         <div class="rev-table-head">
           <span>Rank · Firm</span>
-          <span>Community Rating</span>
-          <span>TrustScore / Volume</span>
-          <span>Verified Highlights</span>
+          <span>🟢 Trustpilot Rating &amp; Count</span>
+          <span>🟣 PFL Community Rating &amp; Reviews</span>
+          <span>Trader Highlights</span>
           <span>Actions</span>
         </div>
         <div id="reviewsLeaderboardRows" class="rev-table-body"></div>
@@ -447,7 +488,7 @@
     <div class="footer-brand-info">
       <a class="brand-lock footer-brand" href="#page-home" data-page="home">
         <img src="assets/logo.png" alt="Prop Firm Lenz logo">
-        <span>Prop Firm Lenz</span>
+        <span>Prop Firm <span class="brand-lenz-text">Lenz</span></span>
       </a>
       <p class="footer-tagline">The trusted intelligence platform for prop firm traders. Unbiased data, verified community reviews, and real-time blockchain payout tracking.</p>
       <div class="footer-status-pill">

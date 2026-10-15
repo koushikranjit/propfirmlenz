@@ -19,8 +19,9 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#0f172a" />
         <link rel="canonical" href="https://propfirmlenz.com" />
-        <link rel="icon" href="/brand/favicon.jpg" />
-        <link rel="apple-touch-icon" href="/brand/favicon.jpg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/brand/icon-32.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/brand/icon-192.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-icon-180.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

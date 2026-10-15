@@ -5420,3 +5420,583 @@ footer#footer .bottom-copy {
 }
 
 
+
+/* ==========================================================================
+   ENHANCED LOGO & BRAND TYPOGRAPHY (Professional Fintech Partner Standard)
+   ========================================================================== */
+.brand-lock {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 13px !important;
+  text-decoration: none !important;
+  user-select: none !important;
+}
+
+.brand-lock img {
+  width: 44px !important;
+  height: 44px !important;
+  flex: 0 0 44px !important;
+  object-fit: contain !important;
+  border-radius: 10px !important;
+  filter: drop-shadow(0 0 14px rgba(0, 240, 255, 0.4)) !important;
+  transition: transform 0.25s ease, filter 0.25s ease !important;
+}
+
+.brand-lock:hover img {
+  transform: scale(1.06) rotate(-2deg) !important;
+  filter: drop-shadow(0 0 22px rgba(0, 240, 255, 0.65)) !important;
+}
+
+.brand-lock span {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1 !important;
+  color: #FFFFFF !important;
+  white-space: nowrap !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.brand-lock .brand-lenz-text {
+  color: #00F0FF !important;
+  text-shadow: 0 0 16px rgba(0, 240, 255, 0.55) !important;
+  margin-left: 5px !important;
+}
+
+/* Footer brand sizing */
+.brand-lock.footer-brand {
+  gap: 15px !important;
+  margin-bottom: 22px !important;
+}
+
+.brand-lock.footer-brand img {
+  width: 50px !important;
+  height: 50px !important;
+  flex: 0 0 50px !important;
+}
+
+.brand-lock.footer-brand span {
+  font-size: 25px !important;
+}
+
+/* ==========================================================================
+   REVIEWS METHODOLOGY CARD & FIX MASSIVE GAP BEFORE FAQ
+   ========================================================================== */
+.reviews-methodology-card {
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+  padding: 20px 26px !important;
+  margin: 32px 0 24px 0 !important;
+  background: linear-gradient(135deg, rgba(8, 29, 42, 0.95), rgba(12, 14, 22, 0.9)) !important;
+  border: 1px solid rgba(0, 240, 255, 0.25) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35) !important;
+  height: auto !important;
+  min-height: auto !important;
+  overflow: hidden !important;
+}
+
+.reviews-methodology-card .review-info-icon {
+  width: 44px !important;
+  height: 44px !important;
+  flex: 0 0 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  display: grid !important;
+  place-items: center !important;
+  background: linear-gradient(135deg, #00F0FF, #396DFA) !important;
+  border-radius: 12px !important;
+  color: #030812 !important;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.4) !important;
+}
+
+.reviews-methodology-card .review-info-icon svg {
+  width: 22px !important;
+  height: 22px !important;
+  max-width: 22px !important;
+  max-height: 22px !important;
+  display: block !important;
+  fill: currentColor !important;
+}
+
+.reviews-methodology-card h2 {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  margin: 0 0 6px 0 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.reviews-methodology-card p {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: #94A3B8 !important;
+  margin: 0 !important;
+}
+
+/* ==========================================================================
+   HERO SECTION UNIFICATION: SINGLE CONSISTENT HERO ACROSS ALL PAGES
+   ========================================================================== */
+/* Hide duplicate internal reviews-hero-3d so the page uses the top unified hero */
+.reviews-hero-3d {
+  display: none !important;
+}
+
+.hero {
+  padding: 56px 0 36px !important;
+  text-align: center !important;
+}
+
+.hero-badge-wrap {
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom: 16px !important;
+}
+
+.hero-badge-3d {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 6px 18px !important;
+  border-radius: 999px !important;
+  background: rgba(8, 29, 42, 0.85) !important;
+  border: 1px solid rgba(0, 240, 255, 0.35) !important;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #E2E8F0 !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.hero-badge-3d .badge-icon {
+  color: #00F0FF !important;
+  font-size: 14px !important;
+}
+
+.hero-badge-3d .badge-tag {
+  background: linear-gradient(135deg, #00F0FF, #396DFA) !important;
+  color: #030812 !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  padding: 2px 7px !important;
+  border-radius: 999px !important;
+  text-transform: uppercase !important;
+}
+
+.hero h1 {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif !important;
+  font-size: clamp(32px, 4.2vw, 54px) !important;
+  line-height: 1.08 !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.04em !important;
+  color: #FFFFFF !important;
+  max-width: 960px !important;
+  margin: 0 auto 16px !important;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.6) !important;
+}
+
+.hero p {
+  font-size: clamp(14px, 1.2vw, 16.5px) !important;
+  line-height: 1.55 !important;
+  color: #94A3B8 !important;
+  max-width: 740px !important;
+  margin: 0 auto 28px !important;
+}
+
+.stats {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 12px !important;
+  max-width: 1080px !important;
+  margin: 0 auto !important;
+}
+
+.stat {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 12px 18px !important;
+  background: rgba(8, 29, 42, 0.75) !important;
+  border: 1px solid rgba(0, 240, 255, 0.22) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(12px) !important;
+  transition: all 0.25s ease !important;
+}
+
+.stat:hover {
+  transform: translateY(-2px) !important;
+  border-color: rgba(0, 240, 255, 0.5) !important;
+  box-shadow: 0 12px 30px rgba(0, 240, 255, 0.18) !important;
+}
+
+.stat-icon {
+  width: 34px !important;
+  height: 34px !important;
+  flex: 0 0 34px !important;
+  border-radius: 50% !important;
+  display: grid !important;
+  place-items: center !important;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(112, 33, 252, 0.3)) !important;
+  border: 1px solid rgba(0, 240, 255, 0.35) !important;
+  color: #00F0FF !important;
+}
+
+.stat-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: left !important;
+}
+
+.stat b {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  line-height: 1.2 !important;
+}
+
+.stat span {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: #94A3B8 !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 860px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    padding: 38px 0 24px !important;
+  }
+  .stat {
+    padding: 10px 14px !important;
+    gap: 10px !important;
+  }
+  .stat b {
+    font-size: 15px !important;
+  }
+  .stat span {
+    font-size: 10px !important;
+  }
+}
+
+/* ==========================================================================
+   PROP FIRM LENZ PARTNER EMBED WIDGET (As Seen on 5ers / Prop Firm Sites)
+   ========================================================================== */
+.pfl-partner-widget-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(12, 18, 32, 0.95), rgba(7, 11, 22, 0.95));
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 18px;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
+
+.pfl-widget-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pfl-widget-info-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.18), rgba(112, 33, 252, 0.22));
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  color: #00F0FF;
+}
+
+.pfl-widget-info h4 {
+  margin: 0 0 3px 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+}
+
+.pfl-widget-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #94A3B8;
+}
+
+/* The actual embeddable badge component matching 5ers example */
+.pfl-embed-badge-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: #060910;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  padding: 8px 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.pfl-embed-badge-tp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.pfl-embed-badge-tp .tp-box-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.pfl-embed-badge-tp .tp-box-stars span {
+  width: 17px;
+  height: 17px;
+  background: #00B67A;
+  display: grid;
+  place-items: center;
+  color: #FFFFFF;
+  font-size: 10px;
+  border-radius: 2px;
+}
+
+.pfl-embed-badge-tp .tp-brand-text {
+  color: #00B67A;
+  font-weight: 800;
+}
+
+.pfl-embed-badge-divider {
+  width: 1px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pfl-embed-badge-pfl {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.pfl-badge-score-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.22), rgba(0, 240, 255, 0.15));
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.pfl-badge-score-pill .stars {
+  color: #C084FC;
+  font-size: 11px;
+}
+
+.pfl-badge-brand-name {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.pfl-badge-brand-name img {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+}
+
+.pfl-badge-brand-name .lenz-hl {
+  color: #00F0FF;
+}
+
+.btn-copy-widget-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  background: linear-gradient(135deg, #00F0FF, #396DFA);
+  border: 0;
+  border-radius: 999px;
+  color: #030812;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-copy-widget-code:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(0, 240, 255, 0.45);
+}
+
+/* ==========================================================================
+   REVIEW LEADERBOARD: DUAL CATEGORY (TRUSTPILOT & PFL COMMUNITY)
+   ========================================================================== */
+.rev-table-head {
+  display: grid !important;
+  grid-template-columns: 2.1fr 1.6fr 1.8fr 1.3fr 1.6fr !important;
+  gap: 16px !important;
+  padding: 14px 20px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  color: #64748B !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.rev-firm-card-3d {
+  display: grid !important;
+  grid-template-columns: 2.1fr 1.6fr 1.8fr 1.3fr 1.6fr !important;
+  gap: 16px !important;
+  align-items: center !important;
+  padding: 16px 20px !important;
+  background: rgba(10, 16, 28, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 16px !important;
+  margin-bottom: 10px !important;
+  transition: all 0.22s ease !important;
+}
+
+.rev-firm-card-3d:hover {
+  background: rgba(14, 22, 38, 0.85) !important;
+  border-color: rgba(0, 240, 255, 0.35) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 240, 255, 0.12) !important;
+  transform: translateY(-1.5px) !important;
+}
+
+/* Category 1: Trustpilot Rating Cell */
+.rev-dual-cat-tp {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.rev-tp-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.tp-badge-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 2px 7px !important;
+  border-radius: 4px !important;
+  background: rgba(0, 182, 122, 0.16) !important;
+  border: 1px solid rgba(0, 182, 122, 0.35) !important;
+  color: #00B67A !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+}
+
+.rev-tp-score-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+}
+
+.rev-tp-score-row strong {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+}
+
+.rev-tp-score-row .tp-stars {
+  color: #00B67A !important;
+  font-size: 12px !important;
+}
+
+.rev-tp-count {
+  font-size: 11px !important;
+  color: #94A3B8 !important;
+}
+
+/* Category 2: PFL Community Reviews Cell */
+.rev-dual-cat-pfl {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.rev-pfl-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.pfl-badge-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 2px 7px !important;
+  border-radius: 4px !important;
+  background: rgba(168, 85, 247, 0.16) !important;
+  border: 1px solid rgba(168, 85, 247, 0.35) !important;
+  color: #C084FC !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+}
+
+.rev-pfl-score-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+}
+
+.rev-pfl-score-row strong {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #00F0FF !important;
+}
+
+.rev-pfl-score-row .pfl-stars {
+  color: #C084FC !important;
+  font-size: 12px !important;
+}
+
+.rev-pfl-count {
+  font-size: 11px !important;
+  color: #94A3B8 !important;
+}
+
+@media (max-width: 1024px) {
+  .rev-table-head {
+    display: none !important;
+  }
+  .rev-firm-card-3d {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+  }
+  .rev-firm-cell {
+    grid-column: 1 / -1 !important;
+  }
+  .rev-actions-cell {
+    grid-column: 1 / -1 !important;
+  }
+}
