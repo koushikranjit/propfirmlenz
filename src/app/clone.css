@@ -1543,3 +1543,724 @@ img[hidden],
   transform: translateY(-3px) scale(1.08);
   box-shadow: 0 12px 30px rgba(30, 231, 252, 0.55);
 }
+
+
+/* ========================================================
+   11. OFFERS PAGE HERO & TOP LAYOUT SIZE PERFECTION
+   ======================================================== */
+body[data-page="offers"] .hero {
+  padding: 22px 0 14px !important;
+}
+body[data-page="offers"] .hero h1,
+body[data-page="offers"] #heroTitle {
+  font-size: clamp(22px, 2.3vw, 32px) !important;
+  margin-bottom: 6px !important;
+}
+body[data-page="offers"] .hero p,
+body[data-page="offers"] #heroSubtitle {
+  font-size: 13.5px !important;
+  margin-bottom: 10px !important;
+}
+body[data-page="offers"] .hero .stats {
+  margin-top: 8px !important;
+  gap: 8px !important;
+}
+body[data-page="offers"] .hero .stat {
+  min-height: 28px !important;
+  padding: 3px 12px 3px 6px !important;
+}
+
+/* Offers page top container */
+#offersPage .offers-page-shell {
+  width: min(1380px, calc(100% - 48px)) !important;
+  margin: 0 auto !important;
+}
+#offersPage .offers-top-layout {
+  display: grid !important;
+  grid-template-columns: 1.75fr 0.95fr !important;
+  gap: 16px !important;
+  margin-top: 14px !important;
+  align-items: stretch !important;
+}
+#offersPage .offers-top-panel {
+  padding: 16px 18px 18px !important;
+  border-radius: 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background: linear-gradient(150deg, rgba(16, 20, 29, 0.96), rgba(9, 11, 16, 0.98)) padding-box,
+              linear-gradient(125deg, #1EE7FC, #396DFA 52%, #7021FC) border-box !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.42), 0 0 30px rgba(30, 231, 252, 0.08) !important;
+}
+#offersPage .offers-top-panel.futures {
+  background: linear-gradient(150deg, rgba(22, 18, 25, 0.96), rgba(10, 11, 16, 0.98)) padding-box,
+              linear-gradient(125deg, #f28a2e, #396DFA 52%, #7021FC) border-box !important;
+}
+#offersPage .offers-top-title {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  min-height: 28px !important;
+  margin-bottom: 12px !important;
+}
+#offersPage .offers-top-title h2 {
+  font-size: 15.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 !important;
+  color: #fff !important;
+}
+#offersPage .offers-top-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(2, minmax(74px, 82px)) !important;
+  gap: 9px !important;
+  flex: 1 !important;
+}
+#offersPage .offers-top-card {
+  display: grid !important;
+  grid-template-columns: 42px minmax(0, 1fr) 92px !important;
+  align-items: center !important;
+  gap: 9px !important;
+  min-height: 74px !important;
+  max-height: 82px !important;
+  height: 100% !important;
+  padding: 9px 11px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: linear-gradient(145deg, #15151b, #0f0f13) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+  transition: all 0.2s ease !important;
+}
+#offersPage .offers-top-card:hover {
+  border-color: rgba(30, 231, 252, 0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5), 0 0 16px rgba(30, 231, 252, 0.12) !important;
+}
+#offersPage .offers-top-card .logo-wrap,
+#offersPage .offers-top-card .firm-logo {
+  width: 42px !important;
+  height: 42px !important;
+  flex: 0 0 42px !important;
+}
+#offersPage .offers-top-card strong {
+  display: block !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  color: #fff !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin: 0 0 2px !important;
+}
+#offersPage .offers-top-card .rating {
+  font-size: 10.5px !important;
+  color: #1EE7FC !important;
+  margin-top: 3px !important;
+}
+#offersPage .offers-top-card .promo {
+  min-width: 90px !important;
+  width: 90px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(30, 231, 252, 0.35) !important;
+  overflow: hidden !important;
+  text-align: center !important;
+}
+#offersPage .offers-top-card .promo .pct {
+  padding: 6px 4px !important;
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  background: var(--grad) !important;
+  color: #fff !important;
+}
+#offersPage .offers-top-card .copy {
+  padding: 5px 4px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  background: #09090c !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Offers page right panel rows */
+#offersPage .offers-future-list {
+  display: grid !important;
+  grid-template-rows: repeat(3, minmax(72px, 80px)) !important;
+  gap: 9px !important;
+  flex: 1 !important;
+}
+#offersPage .offers-future-row {
+  display: grid !important;
+  grid-template-columns: 24px 40px minmax(0, 1fr) 92px !important;
+  align-items: center !important;
+  gap: 9px !important;
+  min-height: 72px !important;
+  max-height: 80px !important;
+  height: 100% !important;
+  padding: 8px 12px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: linear-gradient(145deg, #15151b, #0f0f13) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+  transition: all 0.2s ease !important;
+}
+#offersPage .offers-future-row:hover {
+  border-color: rgba(112, 33, 252, 0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5), 0 0 16px rgba(112, 33, 252, 0.12) !important;
+}
+#offersPage .offers-future-row .medal {
+  width: 24px !important;
+  height: 24px !important;
+  display: grid !important;
+  place-items: center !important;
+  flex: 0 0 24px !important;
+}
+#offersPage .offers-future-row .logo-wrap,
+#offersPage .offers-future-row .firm-logo {
+  width: 40px !important;
+  height: 40px !important;
+  flex: 0 0 40px !important;
+}
+#offersPage .offers-future-row strong {
+  display: block !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  color: #fff !important;
+  margin: 0 0 2px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+#offersPage .offers-future-row .ratepill {
+  font-size: 10.5px !important;
+  color: #7CF2FF !important;
+}
+#offersPage .offers-future-row .promo {
+  min-width: 90px !important;
+  width: 90px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(112, 33, 252, 0.4) !important;
+  overflow: hidden !important;
+  text-align: center !important;
+}
+#offersPage .offers-future-row .promo .pct {
+  padding: 6px 4px !important;
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  background: linear-gradient(115deg, #1EE7FC 0%, #7021FC 100%) !important;
+  color: #fff !important;
+}
+#offersPage .offers-future-row .copy {
+  padding: 5px 4px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  background: #09090c !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+#offersPage .offers-top-dots {
+  margin-top: 8px !important;
+}
+
+@media (max-width: 1060px) {
+  #offersPage .offers-top-layout {
+    grid-template-columns: 1fr !important;
+  }
+  #offersPage .offers-top-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: auto !important;
+  }
+}
+@media (max-width: 600px) {
+  #offersPage .offers-top-grid {
+    grid-template-columns: 1fr !important;
+  }
+  #offersPage .offers-top-card {
+    grid-template-columns: 38px minmax(0, 1fr) 88px !important;
+  }
+}
+
+/* ========================================================
+   12. HOMEPAGE FAQ (3D & HIGH-ATTRACTIVE DESIGN)
+   ======================================================== */
+#faq.section {
+  position: relative !important;
+  padding: 72px 0 64px !important;
+  background: radial-gradient(ellipse 65% 55% at 50% 15%, rgba(30, 231, 252, 0.07), transparent 70%),
+              radial-gradient(ellipse 55% 45% at 85% 65%, rgba(112, 33, 252, 0.06), transparent 70%),
+              transparent !important;
+}
+.faq-wrap {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+.faq-badge-wrap {
+  text-align: center !important;
+  margin-bottom: 12px !important;
+}
+.faq-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 6px 16px !important;
+  border-radius: 999px !important;
+  background: rgba(30, 231, 252, 0.08) !important;
+  border: 1px solid rgba(30, 231, 252, 0.35) !important;
+  color: #1EE7FC !important;
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 0 16px rgba(30, 231, 252, 0.2) !important;
+}
+.faq-title {
+  text-align: center !important;
+  margin-bottom: 32px !important;
+}
+.faq-title h2,
+#faqTitle {
+  font-size: clamp(28px, 3.2vw, 42px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1.15 !important;
+  margin: 0 0 10px !important;
+  background: linear-gradient(135deg, #ffffff 40%, #1EE7FC 95%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 35px rgba(30, 231, 252, 0.25) !important;
+}
+.faq-sub {
+  color: #9b9ba8 !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  max-width: 680px !important;
+  margin: 0 auto !important;
+}
+.faq {
+  border: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+/* 3D FAQ Cards */
+.faq details,
+.faq-card {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  background: linear-gradient(145deg, rgba(20, 24, 34, 0.82), rgba(11, 13, 19, 0.94)) padding-box,
+              linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(30, 231, 252, 0.15) 50%, rgba(112, 33, 252, 0.25)) border-box !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  overflow: hidden !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+.faq details:hover,
+.faq-card:hover {
+  transform: translateY(-2px) scale(1.005) !important;
+  border-color: rgba(30, 231, 252, 0.45) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 0 25px rgba(30, 231, 252, 0.15) !important;
+}
+.faq details[open],
+.faq-card[open] {
+  background: linear-gradient(145deg, rgba(16, 25, 36, 0.94), rgba(9, 14, 22, 0.98)) padding-box,
+              linear-gradient(135deg, #1EE7FC, #396DFA 50%, #7021FC) border-box !important;
+  border-color: transparent !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 35px rgba(30, 231, 252, 0.2) !important;
+}
+.faq summary,
+.faq-summary {
+  list-style: none !important;
+  cursor: pointer !important;
+  padding: 18px 22px !important;
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  user-select: none !important;
+}
+.faq summary::-webkit-details-marker {
+  display: none !important;
+}
+.faq summary::after {
+  display: none !important;
+}
+.faq-q-text {
+  flex: 1 !important;
+  line-height: 1.35 !important;
+}
+.faq-indicator {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  background: rgba(30, 231, 252, 0.1) !important;
+  border: 1px solid rgba(30, 231, 252, 0.3) !important;
+  display: grid !important;
+  place-items: center !important;
+  color: #1EE7FC !important;
+  flex: 0 0 32px !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+.faq details[open] .faq-indicator {
+  transform: rotate(180deg) !important;
+  background: linear-gradient(135deg, #1EE7FC, #7021FC) !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 16px rgba(30, 231, 252, 0.5) !important;
+}
+.faq-content {
+  padding: 0 22px 18px !important;
+  border-top: 1px solid rgba(30, 231, 252, 0.12) !important;
+  margin-top: 4px !important;
+  padding-top: 14px !important;
+  animation: faqFadeSlide 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.faq-content p,
+.faq details p {
+  color: #b5b5c4 !important;
+  font-size: 14.5px !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+}
+@keyframes faqFadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 3D Help Center Card */
+.faq-help-card {
+  margin-top: 32px !important;
+  padding: 22px 28px !important;
+  border-radius: 20px !important;
+  background: linear-gradient(145deg, rgba(20, 24, 34, 0.88), rgba(11, 14, 21, 0.95)) padding-box,
+              linear-gradient(135deg, rgba(30, 231, 252, 0.4), rgba(112, 33, 252, 0.4)) border-box !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45), 0 0 35px rgba(30, 231, 252, 0.12) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  flex-wrap: wrap !important;
+}
+.faq-help-icon {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, rgba(30, 231, 252, 0.16), rgba(112, 33, 252, 0.2)) !important;
+  border: 1px solid rgba(30, 231, 252, 0.35) !important;
+  display: grid !important;
+  place-items: center !important;
+  color: #1EE7FC !important;
+  flex: 0 0 52px !important;
+  box-shadow: 0 0 20px rgba(30, 231, 252, 0.25) !important;
+}
+.faq-help-info {
+  flex: 1 !important;
+  min-width: 260px !important;
+}
+.faq-help-info h3 {
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  margin: 0 0 4px !important;
+}
+.faq-help-info p {
+  font-size: 13.5px !important;
+  color: #9d9dae !important;
+  margin: 0 !important;
+}
+.faq-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 12px 26px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #1EE7FC, #396DFA 50%, #7021FC) !important;
+  color: #ffffff !important;
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  box-shadow: 0 8px 24px rgba(30, 231, 252, 0.35) !important;
+  transition: all 0.25s ease !important;
+}
+.faq-cta-btn:hover {
+  transform: translateY(-2px) scale(1.04) !important;
+  box-shadow: 0 12px 32px rgba(30, 231, 252, 0.55), 0 0 24px rgba(112, 33, 252, 0.35) !important;
+}
+
+/* ========================================================
+   13. PREMIUM 3D FOOTER REDESIGN
+   ======================================================== */
+footer#footer {
+  position: relative !important;
+  background: linear-gradient(180deg, #090c13 0%, #040507 100%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  padding: 68px 0 32px !important;
+  overflow: hidden !important;
+}
+footer#footer::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 8% !important;
+  right: 8% !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent, #1EE7FC 30%, #7021FC 70%, transparent) !important;
+  box-shadow: 0 0 24px rgba(30, 231, 252, 0.6) !important;
+  pointer-events: none !important;
+}
+footer#footer::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -120px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 800px !important;
+  height: 220px !important;
+  background: radial-gradient(ellipse, rgba(30, 231, 252, 0.12), rgba(112, 33, 252, 0.08) 50%, transparent 72%) !important;
+  pointer-events: none !important;
+}
+
+/* Upper Brand Showcase in Footer */
+.footer-top-brand {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 32px !important;
+  padding-bottom: 42px !important;
+  margin-bottom: 38px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+  flex-wrap: wrap !important;
+}
+.footer-brand-info {
+  max-width: 540px !important;
+}
+.footer-brand {
+  margin-bottom: 14px !important;
+}
+.footer-brand img {
+  width: 38px !important;
+  height: 38px !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 0 12px rgba(30, 231, 252, 0.55)) !important;
+}
+.footer-brand span {
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  background: linear-gradient(135deg, #ffffff 40%, #1EE7FC) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.footer-tagline {
+  color: #9b9ba8 !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  margin: 0 0 16px !important;
+}
+.footer-status-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  padding: 6px 14px !important;
+  border-radius: 999px !important;
+  background: rgba(13, 23, 18, 0.85) !important;
+  border: 1px solid rgba(53, 219, 134, 0.35) !important;
+  color: #8ce9b7 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 14px rgba(53, 219, 134, 0.15) !important;
+}
+.footer-status-pill .live-dot {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: #35db86 !important;
+  box-shadow: 0 0 0 0 rgba(53, 219, 134, 0.5) !important;
+  animation: payoutPulse 1.8s infinite !important;
+}
+
+/* 3D Trust Chips */
+.footer-trust-chips {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  align-self: center !important;
+}
+.trust-chip {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 8px 16px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(145deg, rgba(20, 24, 34, 0.75), rgba(12, 14, 20, 0.85)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #e2e2ec !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+  transition: all 0.2s ease !important;
+}
+.trust-chip:hover {
+  border-color: rgba(30, 231, 252, 0.4) !important;
+  transform: translateX(4px) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 16px rgba(30, 231, 252, 0.12) !important;
+}
+.trust-chip .chip-icon {
+  color: #1EE7FC !important;
+  font-weight: 800 !important;
+}
+
+/* 4-Column Footer Navigation */
+footer#footer .footer-main {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 36px 28px !important;
+  padding-bottom: 42px !important;
+}
+footer#footer .footer-col h3 {
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  color: #1EE7FC !important;
+  text-transform: uppercase !important;
+  margin: 0 0 18px !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+footer#footer .footer-col h3::after {
+  content: '' !important;
+  flex: 1 !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, rgba(30, 231, 252, 0.35), transparent) !important;
+  max-width: 60px !important;
+}
+footer#footer .footer-col a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: #9d9db0 !important;
+  font-size: 13.5px !important;
+  text-decoration: none !important;
+  padding: 6px 0 !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+footer#footer .footer-col a:hover {
+  color: #1EE7FC !important;
+  transform: translateX(6px) !important;
+  text-shadow: 0 0 14px rgba(30, 231, 252, 0.5) !important;
+}
+.footer-report-btn {
+  margin-top: 10px !important;
+  padding: 8px 14px !important;
+  border-radius: 999px !important;
+  background: rgba(112, 33, 252, 0.12) !important;
+  border: 1px solid rgba(112, 33, 252, 0.4) !important;
+  color: #c4a1ff !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+}
+.footer-report-btn:hover {
+  background: linear-gradient(135deg, #7021FC, #396DFA) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 4px 18px rgba(112, 33, 252, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Footer Bottom Disclaimer and Copyright */
+.footer-bottom-tier {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding-top: 26px !important;
+}
+.footer-disclaimer {
+  padding: 16px 20px !important;
+  border-radius: 14px !important;
+  background: rgba(12, 14, 20, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  margin-bottom: 22px !important;
+}
+.footer-disclaimer p {
+  color: #7b7b8c !important;
+  font-size: 11.5px !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+.footer-disclaimer b {
+  color: #a8a8bb !important;
+}
+footer#footer .bottom {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+  border: none !important;
+  padding: 0 !important;
+  flex-wrap: wrap !important;
+}
+footer#footer .bottom-copy {
+  color: #767686 !important;
+  font-size: 12.5px !important;
+}
+.bottom-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+}
+.bottom-links a {
+  color: #8c8c9e !important;
+  font-size: 12px !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+.bottom-links a:hover {
+  color: #1EE7FC !important;
+}
+.dot-sep {
+  color: #4b4b5a !important;
+  font-weight: 800 !important;
+}
+
+@media (max-width: 900px) {
+  footer#footer .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 560px) {
+  footer#footer .footer-main {
+    grid-template-columns: 1fr !important;
+  }
+  .footer-top-brand {
+    flex-direction: column !important;
+  }
+  footer#footer .bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
