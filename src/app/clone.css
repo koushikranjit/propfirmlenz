@@ -6000,3 +6000,221 @@ footer#footer .bottom-copy {
     grid-column: 1 / -1 !important;
   }
 }
+
+/* ==========================================================================
+   FIRM LOGO FRAME ENHANCEMENT (Bigger, High-Contrast & Centered)
+   ========================================================================== */
+.rank-card .firm-cell,
+.firm-cell {
+  display: grid !important;
+  grid-template-columns: 66px minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
+
+.rank-card .logo-wrap,
+.firm-cell .logo-wrap,
+.firm-logo-frame {
+  width: 66px !important;
+  height: 66px !important;
+  min-width: 66px !important;
+  max-width: 66px !important;
+  flex: 0 0 66px !important;
+  border-radius: 16px !important;
+  background: linear-gradient(145deg, rgba(20, 26, 42, 0.95), rgba(9, 13, 22, 0.98)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.rank-card:hover .logo-wrap,
+.firm-cell:hover .logo-wrap {
+  border-color: rgba(30, 231, 252, 0.5) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55), 0 0 18px rgba(30, 231, 252, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  transform: scale(1.03) !important;
+}
+
+.rank-card .firm-logo,
+.firm-cell .firm-logo,
+.firm-logo-frame .firm-logo {
+  width: 52px !important;
+  height: 52px !important;
+  max-width: 52px !important;
+  max-height: 52px !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4)) !important;
+  padding: 0 !important;
+}
+
+/* ==========================================================================
+   OFFER CARDS SIZING & OVERFLOW FIX (No Out-of-Box Overlapping)
+   ========================================================================== */
+.offer-grid,
+#offerGrid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  align-items: stretch !important;
+}
+
+#offers .offer,
+.exclusive-offer-card,
+.offers-top-card {
+  display: grid !important;
+  grid-template-columns: 54px minmax(0, 1fr) 90px !important;
+  align-items: center !important;
+  gap: 12px !important;
+  min-height: 94px !important;
+  height: auto !important;
+  max-height: none !important;
+  padding: 12px 14px !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: linear-gradient(145deg, rgba(18, 24, 38, 0.88), rgba(10, 14, 24, 0.95)) !important;
+  backdrop-filter: blur(14px) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+#offers .offer .logo-wrap,
+.offers-top-card .logo-wrap {
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px !important;
+  max-width: 52px !important;
+  flex: 0 0 52px !important;
+  border-radius: 12px !important;
+  background: rgba(12, 16, 26, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+}
+
+#offers .offer .firm-logo,
+.offers-top-card .firm-logo {
+  width: 40px !important;
+  height: 40px !important;
+  max-width: 40px !important;
+  max-height: 40px !important;
+  object-fit: contain !important;
+}
+
+#offers .offer > div,
+.offers-top-card > div {
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  gap: 3px !important;
+  overflow: hidden !important;
+}
+
+#offers .offer strong,
+.offers-top-card strong {
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.015em !important;
+  color: #FFFFFF !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.25 !important;
+  display: block !important;
+}
+
+.trustpilot-line {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #00B67A !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+  line-height: 1.2 !important;
+  margin-top: 1px !important;
+}
+
+.trustpilot-line .tp-star {
+  color: #00B67A !important;
+  font-size: 11px !important;
+}
+
+#offers .promo,
+.offers-top-card .promo {
+  min-width: 88px !important;
+  width: 88px !important;
+  max-width: 88px !important;
+  flex: 0 0 88px !important;
+  border-radius: 9px !important;
+  border: 1px solid rgba(30, 231, 252, 0.35) !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#offers .promo .pct,
+.offers-top-card .promo .pct {
+  padding: 6px 4px !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.01em !important;
+  background: linear-gradient(135deg, #1EE7FC, #396DFA) !important;
+  color: #041116 !important;
+  text-align: center !important;
+  line-height: 1.15 !important;
+}
+
+#offers .promo .copy,
+.offers-top-card .promo .copy {
+  padding: 5px 4px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  background: #09090c !important;
+  color: #FFFFFF !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  text-align: center !important;
+  cursor: pointer !important;
+}
+
+/* ==========================================================================
+   HERO SECTION SPACING & CLEAN TRANSITION
+   ========================================================================== */
+.hero {
+  padding: 44px 0 28px !important;
+  position: relative !important;
+}
+
+.hero h1,
+#heroTitle {
+  margin: 0 auto 12px !important;
+  font-size: clamp(30px, 3.8vw, 50px) !important;
+  line-height: 1.15 !important;
+}
+
+.hero p,
+#heroSubtitle {
+  margin: 0 auto 20px !important;
+  font-size: clamp(14px, 1.2vw, 16px) !important;
+  line-height: 1.5 !important;
+}
+
+.hero .stats {
+  margin-top: 4px !important;
+}
+
+#offers.section {
+  padding-top: 14px !important;
+}
+
