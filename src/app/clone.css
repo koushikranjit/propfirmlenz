@@ -2972,14 +2972,16 @@ body[data-page="offers"] .hero .stat {
 
 /* Offers page top container */
 #offersPage .offers-page-shell {
-  width: min(1380px, calc(100% - 48px)) !important;
+  width: min(1344px, calc(100% - 48px)) !important;
+  max-width: 1344px !important;
   margin: 0 auto !important;
 }
 #offersPage .offers-top-layout {
   display: grid !important;
-  grid-template-columns: 1.75fr 0.95fr !important;
-  gap: 16px !important;
-  margin-top: 14px !important;
+  grid-template-columns: 1.68fr 0.92fr !important;
+  gap: 18px !important;
+  margin-top: 0 !important;
+  margin-bottom: 24px !important;
   align-items: stretch !important;
 }
 #offersPage .offers-top-panel {
@@ -3014,7 +3016,7 @@ body[data-page="offers"] .hero .stat {
   display: grid !important;
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   grid-template-rows: repeat(2, minmax(74px, 82px)) !important;
-  gap: 9px !important;
+  gap: 10px !important;
   flex: 1 !important;
 }
 #offersPage .offers-top-card {
@@ -3086,25 +3088,26 @@ body[data-page="offers"] .hero .stat {
   border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* Offers page right panel rows */
+/* Offers page right panel rows - fill full height like home page */
 #offersPage .offers-future-list {
   display: grid !important;
-  grid-template-rows: repeat(3, minmax(72px, 80px)) !important;
-  gap: 9px !important;
+  grid-template-rows: repeat(3, 1fr) !important;
+  gap: 12px !important;
   flex: 1 !important;
+  height: 100% !important;
 }
 #offersPage .offers-future-row {
   display: grid !important;
-  grid-template-columns: 24px 48px minmax(0, 1fr) 92px !important;
+  grid-template-columns: 28px 44px minmax(0, 1fr) 92px !important;
   align-items: center !important;
-  gap: 10px !important;
-  min-height: 72px !important;
-  max-height: 80px !important;
+  gap: 12px !important;
+  min-height: 68px !important;
+  max-height: none !important;
   height: 100% !important;
-  padding: 8px 12px !important;
-  border-radius: 12px !important;
+  padding: 10px 14px !important;
+  border-radius: 14px !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  background: linear-gradient(145deg, #15151b, #0f0f13) !important;
+  background: linear-gradient(145deg, rgba(22, 18, 32, 0.8), rgba(12, 10, 20, 0.88)) !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
   overflow: hidden !important;
   transition: all 0.2s ease !important;
@@ -7331,6 +7334,96 @@ main,
   color: #040D1A !important;
   box-shadow: 0 0 16px rgba(0, 240, 255, 0.6) !important;
   transform: scale(1.05) !important;
+}
+
+/* ==========================================================================
+   GLOBAL BOX CARD FORMAT & UNIFIED ALIGNMENT SUITE (NO BIG SPACES)
+   ========================================================================== */
+/* 1. Unify Shell Widths Across All Pages to Match Home Page (1344px) */
+.shell,
+.offers-page-shell,
+.reviews-shell,
+.favorites-shell,
+.compare-shell,
+.payout-shell,
+.payout-detail-shell,
+.spreads-shell,
+.firm-profile-shell {
+  width: min(1344px, calc(100% - 48px)) !important;
+  max-width: 1344px !important;
+  margin-inline: auto !important;
+}
+
+/* 2. Tighten Hero Bottom Spacing Across Pages */
+.hero {
+  padding-bottom: 20px !important;
+}
+
+.hero .stats,
+.hero .hero-stat-pills {
+  margin-top: 20px !important;
+  margin-bottom: 0 !important;
+}
+
+/* 3. Eliminate Big Empty Spaces Under Hero on All Pages */
+.offers-page,
+#offersPage {
+  padding-top: 8px !important;
+}
+
+.reviews-page,
+#reviewsPage {
+  padding-top: 10px !important;
+}
+
+.reviews-hero-3d {
+  padding: 12px 20px 20px !important;
+  margin-bottom: 14px !important;
+}
+
+.favorites-page,
+#favoritesPage {
+  padding-top: 8px !important;
+}
+
+.favorites-controls {
+  margin-top: 8px !important;
+  margin-bottom: 18px !important;
+}
+
+.compare-page,
+#comparePage {
+  padding-top: 8px !important;
+}
+
+.compare-shell .page-intro {
+  padding: 16px 0 10px !important;
+  margin-bottom: 8px !important;
+}
+
+.compare-shell .page-stats {
+  margin: 12px auto 0 !important;
+}
+
+.compare-shell .compare-picker {
+  margin: 16px 0 16px !important;
+}
+
+.payout-hub,
+#payouts {
+  padding-top: 8px !important;
+}
+
+.payout-primary-tabs {
+  margin: 8px auto 8px !important;
+}
+
+.payout-top-filter-bar {
+  margin: 8px auto 14px !important;
+}
+
+.payout-controls {
+  margin-bottom: 16px !important;
 }
 
 
