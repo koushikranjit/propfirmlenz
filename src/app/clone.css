@@ -6738,5 +6738,482 @@ main,
   box-shadow: 0 0 18px rgba(0, 240, 255, 0.45) !important;
 }
 
+/* ==========================================================================
+   NO DUPLICATE HEADERS & CLEAN UNIFIED PAGES
+   ========================================================================== */
+.payout-subnav,
+.payout-hub-head,
+.favorites-head {
+  display: none !important;
+}
+
+/* ==========================================================================
+   OFFERS PAGE: 3D FEEL & MICRO-ANIMATIONS (Same Design Template)
+   ========================================================================== */
+.offers-page {
+  perspective: 1200px !important;
+}
+
+.offers-page-tabs {
+  display: flex !important;
+  gap: 10px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 24px auto 18px !important;
+}
+
+.offers-page-tabs button {
+  background: rgba(16, 20, 38, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 999px !important;
+  padding: 8px 20px !important;
+  color: #94A3B8 !important;
+  font-weight: 700 !important;
+  font-size: 13.5px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+}
+
+.offers-page-tabs button:hover {
+  transform: translateY(-2px) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(0, 240, 255, 0.4) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45), 0 0 15px rgba(0, 240, 255, 0.2) !important;
+}
+
+.offers-page-tabs button.active {
+  background: linear-gradient(135deg, #00F0FF 0%, #38BDF8 100%) !important;
+  color: #040D1A !important;
+  font-weight: 800 !important;
+  border-color: #00F0FF !important;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5) !important;
+}
+
+.offers-controls {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 14px !important;
+  background: linear-gradient(145deg, rgba(16, 20, 38, 0.8), rgba(9, 11, 24, 0.9)) !important;
+  border: 1px solid rgba(0, 240, 255, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 14px 20px !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.offers-subtabs button {
+  background: rgba(8, 11, 24, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 999px !important;
+  padding: 7px 16px !important;
+  color: #94A3B8 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  transition: all 0.25s ease !important;
+}
+
+.offers-subtabs button:hover {
+  color: #FFFFFF !important;
+  border-color: rgba(0, 240, 255, 0.4) !important;
+  transform: translateY(-1px) !important;
+}
+
+.offers-subtabs button.on {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(139, 92, 246, 0.25)) !important;
+  border-color: #00F0FF !important;
+  color: #00F0FF !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.3) !important;
+}
+
+.offer-group {
+  background:
+    linear-gradient(155deg, rgba(16, 20, 38, 0.9), rgba(9, 11, 24, 0.96)) padding-box,
+    linear-gradient(135deg, rgba(0, 240, 255, 0.4) 0%, rgba(99, 102, 241, 0.25) 50%, rgba(168, 85, 247, 0.45) 100%) border-box !important;
+  border: 1px solid transparent !important;
+  border-radius: 18px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden !important;
+}
+
+.offer-group:hover {
+  transform: translateY(-3px) scale(1.004) !important;
+  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.75), 0 0 30px rgba(0, 240, 255, 0.22) !important;
+}
+
+.offer-discount {
+  background: linear-gradient(135deg, #00F0FF 0%, #3B82F6 100%) !important;
+  color: #030814 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.5) !important;
+  border-radius: 8px !important;
+}
+
+.offer-code {
+  background: rgba(0, 240, 255, 0.06) !important;
+  border: 1.5px dashed rgba(0, 240, 255, 0.55) !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.offer-code:hover {
+  background: rgba(0, 240, 255, 0.14) !important;
+  border-color: #00F0FF !important;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3) !important;
+}
+
+.apply-btn {
+  position: relative !important;
+  overflow: hidden !important;
+  background: linear-gradient(135deg, #00F0FF 0%, #38BDF8 30%, #6366F1 70%, #A855F7 100%) !important;
+  box-shadow: 0 6px 20px rgba(0, 240, 255, 0.4), 0 0 15px rgba(139, 92, 246, 0.3) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.apply-btn:hover {
+  filter: brightness(1.15) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.6), 0 0 25px rgba(139, 92, 246, 0.5) !important;
+}
+
+.more-btn {
+  background: rgba(0, 240, 255, 0.06) !important;
+  border: 1px solid rgba(0, 240, 255, 0.35) !important;
+  border-radius: 999px !important;
+  color: #00F0FF !important;
+  font-weight: 700 !important;
+  transition: all 0.2s ease !important;
+}
+
+.more-btn:hover {
+  background: rgba(0, 240, 255, 0.15) !important;
+  border-color: #00F0FF !important;
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.35) !important;
+}
+
+/* ==========================================================================
+   FAVORITES PAGE: 3D ROW CARDS & DOCK DESIGN
+   ========================================================================== */
+.favorites-page {
+  padding-top: 10px !important;
+}
+
+.favorites-controls {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 14px !important;
+  background: linear-gradient(145deg, rgba(16, 20, 38, 0.8), rgba(9, 11, 24, 0.9)) !important;
+  border: 1px solid rgba(0, 240, 255, 0.22) !important;
+  border-radius: 16px !important;
+  padding: 14px 22px !important;
+  margin-bottom: 22px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.favorites-count {
+  font-family: 'Outfit', Inter, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #E2E8F0 !important;
+}
+
+.favorites-count b {
+  color: #00F0FF !important;
+}
+
+.favorites-method {
+  background: rgba(0, 240, 255, 0.08) !important;
+  border: 1px solid rgba(0, 240, 255, 0.35) !important;
+  border-radius: 999px !important;
+  color: #A5F3FC !important;
+  font-weight: 700 !important;
+  padding: 7px 16px !important;
+  transition: all 0.2s ease !important;
+}
+
+.favorites-method:hover {
+  background: rgba(0, 240, 255, 0.16) !important;
+  border-color: #00F0FF !important;
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.3) !important;
+}
+
+.favorites-list-head {
+  padding: 10px 18px !important;
+  color: #7E8B9F !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+
+.favorite-firm-row {
+  background: linear-gradient(145deg, rgba(15, 18, 36, 0.78), rgba(8, 10, 22, 0.88)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  margin-bottom: 10px !important;
+  padding: 12px 18px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.favorite-firm-row:hover {
+  transform: translateY(-2px) !important;
+  border-color: rgba(0, 240, 255, 0.45) !important;
+  box-shadow: 0 14px 34px -5px rgba(0, 0, 0, 0.65), 0 0 22px rgba(0, 240, 255, 0.22) !important;
+}
+
+.favorite-rank {
+  border-radius: 8px !important;
+  font-weight: 800 !important;
+}
+
+.favorite-firm-row:nth-child(1) .favorite-rank {
+  background: linear-gradient(135deg, #FFD700 0%, #F59E0B 100%) !important;
+  color: #050505 !important;
+  box-shadow: 0 0 14px rgba(255, 215, 0, 0.5) !important;
+}
+
+.favorite-firm-row:nth-child(2) .favorite-rank {
+  background: linear-gradient(135deg, #F1F5F9 0%, #94A3B8 100%) !important;
+  color: #050505 !important;
+  box-shadow: 0 0 12px rgba(148, 163, 184, 0.45) !important;
+}
+
+.favorite-firm-row:nth-child(3) .favorite-rank {
+  background: linear-gradient(135deg, #FB923C 0%, #C2410C 100%) !important;
+  color: #050505 !important;
+  box-shadow: 0 0 12px rgba(251, 146, 60, 0.45) !important;
+}
+
+.favorite-action {
+  border: 1px solid rgba(0, 240, 255, 0.35) !important;
+  background: rgba(0, 240, 255, 0.06) !important;
+  border-radius: 999px !important;
+  color: #00F0FF !important;
+  font-weight: 700 !important;
+  padding: 8px 18px !important;
+  transition: all 0.2s ease !important;
+}
+
+.favorite-action:hover {
+  background: linear-gradient(135deg, #00F0FF 0%, #3B82F6 100%) !important;
+  color: #040D1A !important;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.5) !important;
+}
+
+.favorite.on .favorite-action,
+.favorite-action.favorited {
+  background: linear-gradient(135deg, #EC4899 0%, #A855F7 100%) !important;
+  color: #FFFFFF !important;
+  border-color: transparent !important;
+  box-shadow: 0 0 18px rgba(236, 72, 153, 0.55) !important;
+}
+
+/* ==========================================================================
+   COMPARE PAGE: 3D SLOTS & FLOATING COMPARISON GRID
+   ========================================================================== */
+.compare-page {
+  padding-top: 36px !important;
+}
+
+.compare-page .page-intro {
+  margin-bottom: 28px !important;
+}
+
+.compare-picker {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 14px !important;
+  background: linear-gradient(145deg, rgba(16, 20, 38, 0.85), rgba(9, 11, 24, 0.95)) !important;
+  border: 1px solid rgba(0, 240, 255, 0.25) !important;
+  border-radius: 18px !important;
+  padding: 18px 22px !important;
+  margin-bottom: 28px !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.compare-picker label {
+  font-family: 'Outfit', Inter, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #00F0FF !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+
+.compare-picker select {
+  background: rgba(6, 8, 18, 0.92) !important;
+  border: 1px solid rgba(0, 240, 255, 0.35) !important;
+  border-radius: 10px !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 13.5px !important;
+  padding: 10px 14px !important;
+  margin-top: 6px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.2s ease !important;
+}
+
+.compare-picker select:focus,
+.compare-picker select:hover {
+  border-color: #00F0FF !important;
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.4) !important;
+}
+
+.compare-table {
+  background: linear-gradient(155deg, rgba(14, 18, 36, 0.88), rgba(8, 10, 22, 0.95)) !important;
+  border: 1px solid rgba(0, 240, 255, 0.22) !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-shadow: 0 16px 48px -10px rgba(0, 0, 0, 0.65), 0 0 30px rgba(0, 240, 255, 0.12) !important;
+}
+
+.compare-firm-head {
+  padding: 16px !important;
+  background: rgba(0, 240, 255, 0.04) !important;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.2) !important;
+}
+
+.compare-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  transition: background 0.2s ease !important;
+}
+
+.compare-row:hover {
+  background: rgba(22, 28, 54, 0.55) !important;
+}
+
+.compare-row:last-child {
+  border-bottom: 0 !important;
+}
+
+/* ==========================================================================
+   PAYOUTS PAGE: 3D TIMEFRAME DOCK & LEADERBOARD CARDS
+   ========================================================================== */
+.payout-hub {
+  padding-top: 10px !important;
+}
+
+.payout-primary-tabs {
+  display: inline-flex !important;
+  background: rgba(14, 18, 36, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 999px !important;
+  padding: 4px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  margin: 18px auto 14px !important;
+}
+
+.payout-primary-tabs button {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  padding: 8px 24px !important;
+  font-family: 'Outfit', Inter, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #94A3B8 !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.payout-primary-tabs button.on {
+  background: #FFFFFF !important;
+  color: #030814 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3) !important;
+}
+
+.payout-top-filter-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  background: linear-gradient(145deg, rgba(16, 20, 38, 0.8), rgba(9, 11, 24, 0.9)) !important;
+  border: 1px solid rgba(0, 240, 255, 0.22) !important;
+  border-radius: 999px !important;
+  padding: 8px 18px !important;
+  margin: 14px auto 22px !important;
+  max-width: 680px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.payout-tf-btn {
+  background: rgba(8, 11, 24, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 999px !important;
+  padding: 7px 18px !important;
+  color: #94A3B8 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  transition: all 0.25s ease !important;
+  cursor: pointer !important;
+}
+
+.payout-tf-btn:hover {
+  color: #FFFFFF !important;
+  border-color: rgba(0, 240, 255, 0.45) !important;
+  transform: translateY(-1px) !important;
+}
+
+.payout-tf-btn.on {
+  background: linear-gradient(135deg, #00F0FF 0%, #38BDF8 100%) !important;
+  color: #040D1A !important;
+  font-weight: 800 !important;
+  border-color: #00F0FF !important;
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.5) !important;
+}
+
+.payout-tracker-head {
+  padding: 10px 18px !important;
+  color: #7E8B9F !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+
+.payout-tracker-row {
+  background: linear-gradient(145deg, rgba(15, 18, 36, 0.78), rgba(8, 10, 22, 0.88)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  margin-bottom: 8px !important;
+  padding: 12px 18px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.payout-tracker-row:hover {
+  transform: translateY(-2px) scale(1.003) !important;
+  border-color: rgba(0, 240, 255, 0.45) !important;
+  box-shadow: 0 14px 34px -5px rgba(0, 0, 0, 0.65), 0 0 25px rgba(0, 240, 255, 0.25) !important;
+}
+
+.payout-view-button {
+  background: rgba(0, 240, 255, 0.06) !important;
+  border: 1px solid rgba(0, 240, 255, 0.4) !important;
+  border-radius: 999px !important;
+  color: #00F0FF !important;
+  font-weight: 700 !important;
+  padding: 8px 20px !important;
+  transition: all 0.2s ease !important;
+}
+
+.payout-view-button:hover {
+  background: linear-gradient(135deg, #00F0FF 0%, #3B82F6 100%) !important;
+  color: #040D1A !important;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.6) !important;
+  transform: scale(1.05) !important;
+}
+
+
 
 
