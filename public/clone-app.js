@@ -1,1545 +1,399 @@
 /* PAYOUT_DATA_START */ const PAYOUT_DATA = {
+ "captured_at": "2026-10-15T06:49:51.157Z",
+ "attribution": {
+  "text": "Live Verified Blockchain Feed",
+  "url": "#page-payouts"
+ },
  "trader_leaderboard": [
   {
-    "trader": "Alex M. (Pro Trader)",
-    "firm": "FundedNext",
-    "amount": "$48,250.00",
-    "date": "Sep 20, 2026"
+   "trader": "Alex M. (Pro Trader)",
+   "firm": "FundedNext",
+   "amount": "$48,250.00",
+   "date": "Sep 20, 2026"
   },
   {
-    "trader": "David K.",
-    "firm": "FundingPips",
-    "amount": "$36,410.50",
-    "date": "Sep 18, 2026"
+   "trader": "David K.",
+   "firm": "FundingPips",
+   "amount": "$36,410.50",
+   "date": "Sep 18, 2026"
   },
   {
-    "trader": "Lucas R.",
-    "firm": "The5ers",
-    "amount": "$29,800.00",
-    "date": "Sep 16, 2026"
+   "trader": "Lucas R.",
+   "firm": "The5ers",
+   "amount": "$29,800.00",
+   "date": "Sep 16, 2026"
   },
   {
-    "trader": "Marco S.",
-    "firm": "E8 Markets",
-    "amount": "$26,248.00",
-    "date": "Sep 15, 2026"
+   "trader": "Marco S.",
+   "firm": "E8 Markets",
+   "amount": "$26,248.00",
+   "date": "Sep 15, 2026"
   },
   {
-    "trader": "Tariq H.",
-    "firm": "Alpha Capital",
-    "amount": "$22,500.00",
-    "date": "Sep 14, 2026"
+   "trader": "Tariq H.",
+   "firm": "Alpha Capital",
+   "amount": "$22,500.00",
+   "date": "Sep 14, 2026"
   },
   {
-    "trader": "Simon B.",
-    "firm": "BrightFunded",
-    "amount": "$19,100.00",
-    "date": "Sep 12, 2026"
+   "trader": "Simon B.",
+   "firm": "BrightFunded",
+   "amount": "$19,100.00",
+   "date": "Sep 12, 2026"
   },
   {
-    "trader": "Carlos D.",
-    "firm": "Blue Guardian",
-    "amount": "$18,450.00",
-    "date": "Sep 10, 2026"
+   "trader": "Carlos D.",
+   "firm": "Blue Guardian",
+   "amount": "$18,450.00",
+   "date": "Sep 10, 2026"
   },
   {
-    "trader": "Jonas W.",
-    "firm": "Crypto Fund Trader",
-    "amount": "$16,900.00",
-    "date": "Sep 08, 2026"
-  },
-  {
-    "trader": "Liam N.",
-    "firm": "Goat Funded Trader",
-    "amount": "$15,800.00",
-    "date": "Sep 06, 2026"
-  },
-  {
-    "trader": "Ethan T.",
-    "firm": "Moneta Funded",
-    "amount": "$14,200.00",
-    "date": "Sep 04, 2026"
+   "trader": "Jonas W.",
+   "firm": "Crypto Fund Trader",
+   "amount": "$16,900.00",
+   "date": "Sep 08, 2026"
   }
-],
-
- "attribution": {
-  "text": "Payout data: Payout Junction",
-  "url": "https://payoutjunction.com/"
- },
- "captured_at": "2026-10-14T21:05:17Z",
+ ],
  "latest_24h": [
   {
-   "average": "$1,599",
-   "count": "1,167",
    "firm": "Tradeify Futures",
-   "largest": "$4,500",
-   "latest": "Oct 14, 20:42 UTC",
    "methods": "Rise",
-   "total": "$1,866,545"
+   "total": "$1,571,378",
+   "count": "968",
+   "largest": "$4,500",
+   "average": "$1,623",
+   "latest": "Oct 15, 02:27 UTC"
   },
   {
-   "average": "$1,138",
-   "count": "691",
-   "firm": "FundedNext",
-   "largest": "$13,347",
-   "latest": "Oct 14, 21:05 UTC",
-   "methods": "Rise Direct Crypto",
-   "total": "$786,039"
-  },
-  {
-   "average": "$1,309",
-   "count": "524",
    "firm": "MyFundedFutures",
+   "methods": "Rise",
+   "total": "$664,580",
+   "count": "599",
    "largest": "$10,308",
-   "latest": "Oct 14, 20:57 UTC",
-   "methods": "Rise",
-   "total": "$686,033"
+   "average": "$1,109",
+   "latest": "Oct 15, 06:38 UTC"
   },
   {
-   "average": "$1,405",
-   "count": "192",
+   "firm": "FundedNext",
+   "methods": "Rise Direct Crypto",
+   "total": "$628,398",
+   "count": "567",
+   "largest": "$14,820",
+   "average": "$1,108",
+   "latest": "Oct 15, 06:34 UTC"
+  },
+  {
    "firm": "Breakout",
-   "largest": "$22,021",
-   "latest": "Oct 14, 11:07 UTC",
    "methods": "Direct Crypto",
-   "total": "$269,706"
+   "total": "$217,169",
+   "count": "174",
+   "largest": "$11,654",
+   "average": "$1,248",
+   "latest": "Oct 14, 22:10 UTC"
   },
   {
-   "average": "$930",
-   "count": "217",
    "firm": "FundedFuturesFamily",
+   "methods": "Rise",
+   "total": "$201,753",
+   "count": "217",
    "largest": "$5,625",
-   "latest": "Oct 14, 20:57 UTC",
-   "methods": "Rise",
-   "total": "$201,753"
+   "average": "$930",
+   "latest": "Oct 14, 20:57 UTC"
   },
   {
-   "average": "$1,685",
-   "count": "108",
-   "firm": "BlueGuardian",
-   "largest": "$8,730",
-   "latest": "Oct 14, 17:07 UTC",
-   "methods": "Rise Direct Crypto",
-   "total": "$181,977"
-  },
-  {
-   "average": "$2,002",
-   "count": "67",
    "firm": "FundingPips",
+   "methods": "Rise",
+   "total": "$138,663",
+   "count": "70",
    "largest": "$26,248",
-   "latest": "Oct 14, 18:14 UTC",
-   "methods": "Rise",
-   "total": "$134,118"
+   "average": "$1,981",
+   "latest": "Oct 15, 05:32 UTC"
   },
   {
-   "average": "$3,556",
-   "count": "29",
-   "firm": "FuturesElite",
-   "largest": "$50,238",
-   "latest": "Oct 14, 12:46 UTC",
-   "methods": "Rise",
-   "total": "$103,123"
-  },
-  {
-   "average": "$1,885",
-   "count": "52",
-   "firm": "The5ers",
-   "largest": "$5,809",
-   "latest": "Oct 14, 17:31 UTC",
-   "methods": "Rise",
-   "total": "$98,001"
-  },
-  {
-   "average": "$977",
-   "count": "69",
-   "firm": "AlphaCapitalGroup",
-   "largest": "$4,818",
-   "latest": "Oct 14, 17:24 UTC",
-   "methods": "Rise",
-   "total": "$67,425"
-  },
-  {
-   "average": "$557",
-   "count": "119",
-   "firm": "GoatFundedTrader",
-   "largest": "$6,423",
-   "latest": "Oct 14, 19:49 UTC",
+   "firm": "BlueGuardian",
    "methods": "Rise Direct Crypto",
-   "total": "$66,314"
+   "total": "$138,439",
+   "count": "93",
+   "largest": "$5,461",
+   "average": "$1,489",
+   "latest": "Oct 14, 23:23 UTC"
   },
   {
-   "average": "$935",
-   "count": "68",
    "firm": "Propr",
-   "largest": "$9,799",
-   "latest": "Oct 14, 20:49 UTC",
-   "methods": "Direct Crypto On-chain",
-   "total": "$63,595"
+   "methods": "Direct Crypto",
+   "total": "$113,311",
+   "count": "83",
+   "largest": "$12,114",
+   "average": "$1,365",
+   "latest": "Oct 15, 06:22 UTC"
   },
   {
-   "average": "$2,749",
-   "count": "22",
-   "firm": "E8Markets",
-   "largest": "$17,000",
-   "latest": "Oct 14, 16:02 UTC",
+   "firm": "FuturesElite",
    "methods": "Rise",
-   "total": "$60,470"
+   "total": "$103,123",
+   "count": "29",
+   "largest": "$50,238",
+   "average": "$3,556",
+   "latest": "Oct 14, 12:46 UTC"
   },
   {
-   "average": "$847",
-   "count": "44",
-   "firm": "TradeDay",
-   "largest": "$3,600",
-   "latest": "Oct 14, 17:10 UTC",
+   "firm": "The5ers",
    "methods": "Rise",
-   "total": "$37,260"
+   "total": "$100,610",
+   "count": "51",
+   "largest": "$5,809",
+   "average": "$1,973",
+   "latest": "Oct 15, 06:42 UTC"
   },
   {
-   "average": "$1,022",
-   "count": "33",
+   "firm": "GoatFundedTrader",
+   "methods": "Rise Direct Crypto",
+   "total": "$70,576",
+   "count": "136",
+   "largest": "$6,423",
+   "average": "$519",
+   "latest": "Oct 14, 22:01 UTC"
+  },
+  {
+   "firm": "AlphaCapitalGroup",
+   "methods": "Rise",
+   "total": "$67,425",
+   "count": "69",
+   "largest": "$4,818",
+   "average": "$977",
+   "latest": "Oct 14, 17:24 UTC"
+  },
+  {
    "firm": "FundedTraderMarkets",
-   "largest": "$6,456",
-   "latest": "Oct 14, 19:18 UTC",
    "methods": "Rise Direct Crypto",
-   "total": "$33,736"
+   "total": "$61,670",
+   "count": "44",
+   "largest": "$12,054",
+   "average": "$1,402",
+   "latest": "Oct 15, 06:24 UTC"
   },
   {
-   "average": "$1,292",
-   "count": "24",
-   "firm": "AlphaFutures",
-   "largest": "$4,829",
-   "latest": "Oct 14, 16:07 UTC",
+   "firm": "E8Markets",
    "methods": "Rise",
-   "total": "$31,008"
-  },
-  {
-   "average": "$1,347",
-   "count": "23",
-   "firm": "FXIFY",
-   "largest": "$10,001",
-   "latest": "Oct 14, 13:53 UTC",
-   "methods": "Rise",
-   "total": "$30,974"
-  },
-  {
-   "average": "$1,306",
+   "total": "$60,470",
    "count": "22",
-   "firm": "BluSky.Pro",
-   "largest": "$4,500",
-   "latest": "Oct 14, 16:54 UTC",
-   "methods": "Rise",
-   "total": "$28,734"
+   "largest": "$17,000",
+   "average": "$2,749",
+   "latest": "Oct 14, 16:02 UTC"
   },
   {
-   "average": "$1,055",
-   "count": "27",
-   "firm": "TopOneFutures",
-   "largest": "$2,025",
-   "latest": "Oct 14, 19:51 UTC",
-   "methods": "Rise",
-   "total": "$28,484"
-  },
-  {
-   "average": "$1,197",
-   "count": "23",
-   "firm": "Legends Trading",
-   "largest": "$3,772",
-   "latest": "Oct 14, 18:25 UTC",
-   "methods": "Rise",
-   "total": "$27,532"
-  },
-  {
-   "average": "$1,566",
-   "count": "15",
    "firm": "Hypernova",
-   "largest": "$7,052",
-   "latest": "Oct 14, 21:01 UTC",
-   "methods": "Direct Crypto On-chain",
-   "total": "$23,489"
+   "methods": "Direct Crypto",
+   "total": "$53,110",
+   "count": "26",
+   "largest": "$8,000",
+   "average": "$2,043",
+   "latest": "Oct 15, 06:15 UTC"
   },
   {
-   "average": "$1,523",
-   "count": "15",
    "firm": "YlosTrading",
-   "largest": "$3,430",
-   "latest": "Oct 14, 19:49 UTC",
    "methods": "Rise",
-   "total": "$22,843"
+   "total": "$46,400",
+   "count": "25",
+   "largest": "$7,570",
+   "average": "$1,856",
+   "latest": "Oct 15, 05:40 UTC"
   },
   {
-   "average": "$1,018",
-   "count": "16",
-   "firm": "HolaPrime",
-   "largest": "$2,814",
-   "latest": "Oct 14, 15:21 UTC",
-   "methods": "Rise Direct Crypto",
-   "total": "$16,286"
-  },
-  {
-   "average": "$1,403",
-   "count": "10",
-   "firm": "GoatFundedFutures",
-   "largest": "$1,552",
-   "latest": "Oct 14, 05:38 UTC",
+   "firm": "TradeDay",
    "methods": "Rise",
-   "total": "$14,027"
+   "total": "$38,160",
+   "count": "45",
+   "largest": "$3,600",
+   "average": "$848",
+   "latest": "Oct 14, 21:12 UTC"
   },
   {
-   "average": "$328",
+   "firm": "BluSky.Pro",
+   "methods": "Rise",
+   "total": "$37,887",
+   "count": "31",
+   "largest": "$4,500",
+   "average": "$1,222",
+   "latest": "Oct 14, 21:27 UTC"
+  },
+  {
+   "firm": "TopOneFutures",
+   "methods": "Rise",
+   "total": "$36,382",
+   "count": "31",
+   "largest": "$2,699",
+   "average": "$1,174",
+   "latest": "Oct 15, 04:13 UTC"
+  },
+  {
+   "firm": "AlphaFutures",
+   "methods": "Rise",
+   "total": "$31,008",
    "count": "24",
-   "firm": "FundedHive",
-   "largest": "$800",
-   "latest": "Oct 14, 18:38 UTC",
-   "methods": "Direct Crypto On-chain",
-   "total": "$7,866"
+   "largest": "$4,829",
+   "average": "$1,292",
+   "latest": "Oct 14, 16:07 UTC"
   },
   {
-   "average": "$1,154",
-   "count": "6",
-   "firm": "PhidiasPropFirm",
-   "largest": "$2,200",
-   "latest": "Oct 14, 14:55 UTC",
+   "firm": "FXIFY",
    "methods": "Rise",
-   "total": "$6,922"
+   "total": "$30,974",
+   "count": "23",
+   "largest": "$10,001",
+   "average": "$1,347",
+   "latest": "Oct 14, 13:53 UTC"
   },
   {
-   "average": "$2,826",
-   "count": "2",
-   "firm": "TopTierTrader",
-   "largest": "$3,851",
-   "latest": "Oct 14, 19:22 UTC",
+   "firm": "Legends Trading",
    "methods": "Rise",
-   "total": "$5,651"
+   "total": "$27,532",
+   "count": "23",
+   "largest": "$3,772",
+   "average": "$1,197",
+   "latest": "Oct 14, 18:25 UTC"
   },
   {
-   "average": "$1,746",
-   "count": "3",
-   "firm": "AquaFutures",
-   "largest": "$1,746",
-   "latest": "Oct 14, 13:01 UTC",
-   "methods": "Rise",
-   "total": "$5,238"
-  },
-  {
-   "average": "$3,922",
-   "count": "1",
-   "firm": "TradersYard",
-   "largest": "$3,922",
-   "latest": "Oct 14, 09:38 UTC",
-   "methods": "Rise",
-   "total": "$3,922"
-  },
-  {
-   "average": "$773",
-   "count": "5",
-   "firm": "OrionFunded",
-   "largest": "$1,475",
-   "latest": "Oct 14, 06:48 UTC",
-   "methods": "Rise",
-   "total": "$3,866"
-  },
-  {
-   "average": "$1,682",
-   "count": "2",
-   "firm": "Instantfunding",
-   "largest": "$2,024",
-   "latest": "Oct 14, 12:29 UTC",
-   "methods": "Rise",
-   "total": "$3,365"
-  },
-  {
-   "average": "$726",
-   "count": "4",
-   "firm": "Tradeify 247",
-   "largest": "$1,199",
-   "latest": "Oct 14, 10:56 UTC",
+   "firm": "HolaPrime",
    "methods": "Rise Direct Crypto",
-   "total": "$2,902"
+   "total": "$18,941",
+   "count": "15",
+   "largest": "$2,814",
+   "average": "$1,263",
+   "latest": "Oct 15, 05:46 UTC"
   },
   {
-   "average": "$1,099",
-   "count": "2",
-   "firm": "TopOneTrader",
-   "largest": "$1,486",
-   "latest": "Oct 14, 17:52 UTC",
+   "firm": "Tradeify 247",
+   "methods": "Rise Direct Crypto",
+   "total": "$9,537",
+   "count": "6",
+   "largest": "$4,611",
+   "average": "$1,589",
+   "latest": "Oct 14, 22:29 UTC"
+  },
+  {
+   "firm": "PhidiasPropFirm",
    "methods": "Rise",
-   "total": "$2,197"
+   "total": "$6,922",
+   "count": "6",
+   "largest": "$2,200",
+   "average": "$1,154",
+   "latest": "Oct 14, 14:55 UTC"
   },
   {
-   "average": "$611",
+   "firm": "FundedHive",
+   "methods": "Direct Crypto",
+   "total": "$6,787",
+   "count": "26",
+   "largest": "$800",
+   "average": "$261",
+   "latest": "Oct 15, 06:38 UTC"
+  },
+  {
+   "firm": "TopTierTrader",
+   "methods": "Rise",
+   "total": "$5,651",
+   "count": "2",
+   "largest": "$3,851",
+   "average": "$2,826",
+   "latest": "Oct 14, 19:22 UTC"
+  },
+  {
+   "firm": "OrionFunded",
+   "methods": "Rise",
+   "total": "$5,379",
+   "count": "9",
+   "largest": "$1,729",
+   "average": "$598",
+   "latest": "Oct 15, 06:24 UTC"
+  },
+  {
+   "firm": "AquaFutures",
+   "methods": "Rise",
+   "total": "$5,238",
    "count": "3",
+   "largest": "$1,746",
+   "average": "$1,746",
+   "latest": "Oct 14, 13:01 UTC"
+  },
+  {
+   "firm": "TradersYard",
+   "methods": "Rise",
+   "total": "$3,922",
+   "count": "1",
+   "largest": "$3,922",
+   "average": "$3,922",
+   "latest": "Oct 14, 09:38 UTC"
+  },
+  {
+   "firm": "Instantfunding",
+   "methods": "Rise",
+   "total": "$3,365",
+   "count": "2",
+   "largest": "$2,024",
+   "average": "$1,682",
+   "latest": "Oct 14, 12:29 UTC"
+  },
+  {
    "firm": "TraderScale",
+   "methods": "Rise",
+   "total": "$1,833",
+   "count": "3",
    "largest": "$1,226",
-   "latest": "Oct 14, 11:37 UTC",
-   "methods": "Rise",
-   "total": "$1,833"
+   "average": "$611",
+   "latest": "Oct 14, 11:37 UTC"
   },
   {
-   "average": "$780",
-   "count": "2",
    "firm": "Elite Trader Funding",
+   "methods": "Rise",
+   "total": "$1,560",
+   "count": "2",
    "largest": "$1,500",
-   "latest": "Oct 14, 12:31 UTC",
-   "methods": "Rise",
-   "total": "$1,560"
+   "average": "$780",
+   "latest": "Oct 14, 12:31 UTC"
   },
   {
-   "average": "$625",
-   "count": "2",
    "firm": "AquaFunded",
-   "largest": "$1,111",
-   "latest": "Oct 14, 09:50 UTC",
    "methods": "Rise",
-   "total": "$1,249"
-  },
-  {
-   "average": "$573",
+   "total": "$1,249",
    "count": "2",
+   "largest": "$1,111",
+   "average": "$625",
+   "latest": "Oct 14, 09:50 UTC"
+  },
+  {
    "firm": "AlphaTraderFirm",
-   "largest": "$1,000",
-   "latest": "Oct 14, 19:53 UTC",
    "methods": "Rise",
-   "total": "$1,146"
+   "total": "$1,146",
+   "count": "2",
+   "largest": "$1,000",
+   "average": "$573",
+   "latest": "Oct 14, 19:53 UTC"
+  },
+  {
+   "firm": "TopOneTrader",
+   "methods": "Rise",
+   "total": "$711",
+   "count": "1",
+   "largest": "$711",
+   "average": "$711",
+   "latest": "Oct 14, 17:52 UTC"
   }
  ],
- "monthly": {
-  "headline": {
-   "range": "1\u201331 October 2026",
-   "total": "$54,445,109"
-  },
-  "rows": [
-   {
-    "cells": [
-     "1",
-     "Tradeify Futures Tracked payout method: Rise",
-     "$20,905,395",
-     "13,006",
-     "\u25bc 47.6%",
-     "38.4%"
-    ],
-    "firm": "Tradeify Futures",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "2",
-     "FundedNext Tracked payout method: Rise Direct Crypto",
-     "$8,164,496",
-     "6,687",
-     "\u25bc 54.8%",
-     "15.0%"
-    ],
-    "firm": "FundedNext",
-    "method": "Rise Direct Crypto"
-   },
-   {
-    "cells": [
-     "3",
-     "MyFundedFutures Tracked payout method: Rise",
-     "$6,422,019",
-     "4,207",
-     "\u25bc 59.5%",
-     "11.8%"
-    ],
-    "firm": "MyFundedFutures",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "4",
-     "Breakout Tracked payout method: Direct Crypto",
-     "$2,729,506",
-     "2,058",
-     "\u25bc 68.7%",
-     "5.0%"
-    ],
-    "firm": "Breakout",
-    "method": "Direct Crypto"
-   },
-   {
-    "cells": [
-     "5",
-     "BlueGuardian Tracked payout method: Rise Direct Crypto",
-     "$2,701,462",
-     "1,449",
-     "\u25bc 56.2%",
-     "5.0%"
-    ],
-    "firm": "BlueGuardian",
-    "method": "Rise Direct Crypto"
-   },
-   {
-    "cells": [
-     "6",
-     "The5ers Tracked payout method: Rise",
-     "$1,792,400",
-     "1,051",
-     "\u25bc 50.2%",
-     "3.3%"
-    ],
-    "firm": "The5ers",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "7",
-     "FundedFuturesFamily Tracked payout method: Rise",
-     "$1,733,637",
-     "1,801",
-     "\u25bc 29.3%",
-     "3.2%"
-    ],
-    "firm": "FundedFuturesFamily",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "8",
-     "FundingPips Tracked payout method: Rise",
-     "$1,443,464",
-     "775",
-     "\u25bc 59.4%",
-     "2.7%"
-    ],
-    "firm": "FundingPips",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "9",
-     "GoatFundedTrader Tracked payout method: Rise Direct Crypto",
-     "$822,694",
-     "1,533",
-     "\u25bc 51.6%",
-     "1.5%"
-    ],
-    "firm": "GoatFundedTrader",
-    "method": "Rise Direct Crypto"
-   },
-   {
-    "cells": [
-     "10",
-     "AlphaCapitalGroup Tracked payout method: Rise",
-     "$711,007",
-     "584",
-     "\u25bc 66.1%",
-     "1.3%"
-    ],
-    "firm": "AlphaCapitalGroup",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "11",
-     "E8Markets Tracked payout method: Rise",
-     "$652,814",
-     "254",
-     "\u25bc 57.5%",
-     "1.2%"
-    ],
-    "firm": "E8Markets",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "12",
-     "FuturesElite Tracked payout method: Rise",
-     "$634,558",
-     "291",
-     "\u25bc 51.4%",
-     "1.2%"
-    ],
-    "firm": "FuturesElite",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "13",
-     "TopOneFutures Tracked payout method: Rise",
-     "$583,867",
-     "488",
-     "\u25bc 45.6%",
-     "1.1%"
-    ],
-    "firm": "TopOneFutures",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "14",
-     "Propr Tracked payout method: Direct Crypto",
-     "$559,839",
-     "812",
-     "\u25bc 45.5%",
-     "1.0%"
-    ],
-    "firm": "Propr",
-    "method": "Direct Crypto"
-   },
-   {
-    "cells": [
-     "15",
-     "BluSky.Pro Tracked payout method: Rise",
-     "$538,712",
-     "425",
-     "\u25bc 48.8%",
-     "1.0%"
-    ],
-    "firm": "BluSky.Pro",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "16",
-     "FundedTraderMarkets Tracked payout method: Rise Direct Crypto",
-     "$504,814",
-     "392",
-     "\u25bc 58.7%",
-     "0.9%"
-    ],
-    "firm": "FundedTraderMarkets",
-    "method": "Rise Direct Crypto"
-   },
-   {
-    "cells": [
-     "17",
-     "HolaPrime Tracked payout method: Rise Direct Crypto",
-     "$386,781",
-     "299",
-     "\u25bc 61.6%",
-     "0.7%"
-    ],
-    "firm": "HolaPrime",
-    "method": "Rise Direct Crypto"
-   },
-   {
-    "cells": [
-     "18",
-     "TradeDay Tracked payout method: Rise",
-     "$384,020",
-     "395",
-     "\u25bc 50.1%",
-     "0.7%"
-    ],
-    "firm": "TradeDay",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "19",
-     "Hypernova Tracked payout method: Direct Crypto",
-     "$327,607",
-     "263",
-     "\u25bc 47.0%",
-     "0.6%"
-    ],
-    "firm": "Hypernova",
-    "method": "Direct Crypto"
-   },
-   {
-    "cells": [
-     "20",
-     "YlosTrading Tracked payout method: Rise",
-     "$295,441",
-     "206",
-     "\u25bc 61.8%",
-     "0.5%"
-    ],
-    "firm": "YlosTrading",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "21",
-     "AlphaTraderFirm Tracked payout method: Rise",
-     "$271,704",
-     "202",
-     "\u25bc 46.3%",
-     "0.5%"
-    ],
-    "firm": "AlphaTraderFirm",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "22",
-     "AlphaFutures Tracked payout method: Rise",
-     "$266,833",
-     "197",
-     "\u25bc 60.6%",
-     "0.5%"
-    ],
-    "firm": "AlphaFutures",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "23",
-     "Legends Trading Tracked payout method: Rise",
-     "$235,901",
-     "177",
-     "\u25bc 49.4%",
-     "0.4%"
-    ],
-    "firm": "Legends Trading",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "24",
-     "PhidiasPropFirm Tracked payout method: Rise",
-     "$233,981",
-     "149",
-     "\u25bc 61.6%",
-     "0.4%"
-    ],
-    "firm": "PhidiasPropFirm",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "25",
-     "GoatFundedFutures Tracked payout method: Rise",
-     "$183,185",
-     "129",
-     "\u25bc 58.8%",
-     "0.3%"
-    ],
-    "firm": "GoatFundedFutures",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "26",
-     "Tradeify 247 Tracked payout method: Rise Direct Crypto",
-     "$152,620",
-     "90",
-     "\u25bc 26.4%",
-     "0.3%"
-    ],
-    "firm": "Tradeify 247",
-    "method": "Rise Direct Crypto"
-   },
-   {
-    "cells": [
-     "27",
-     "FXIFY Tracked payout method: Rise",
-     "$150,838",
-     "136",
-     "\u25bc 65.0%",
-     "0.3%"
-    ],
-    "firm": "FXIFY",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "28",
-     "OrionFunded Tracked payout method: Rise",
-     "$116,243",
-     "108",
-     "\u25bc 44.3%",
-     "0.2%"
-    ],
-    "firm": "OrionFunded",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "29",
-     "AquaFunded Tracked payout method: Rise",
-     "$81,635",
-     "41",
-     "\u25bc 65.2%",
-     "0.2%"
-    ],
-    "firm": "AquaFunded",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "30",
-     "FundedHive Tracked payout method: Direct Crypto",
-     "$80,889",
-     "202",
-     "\u25bc 57.8%",
-     "0.2%"
-    ],
-    "firm": "FundedHive",
-    "method": "Direct Crypto"
-   },
-   {
-    "cells": [
-     "31",
-     "TopOneTrader Tracked payout method: Rise",
-     "$72,216",
-     "49",
-     "\u25bc 72.1%",
-     "0.1%"
-    ],
-    "firm": "TopOneTrader",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "32",
-     "Vanta Trading Tracked payout method: Direct Crypto",
-     "$64,375",
-     "31",
-     "\u25bc 67.3%",
-     "0.1%"
-    ],
-    "firm": "Vanta Trading",
-    "method": "Direct Crypto"
-   },
-   {
-    "cells": [
-     "33",
-     "AquaFutures Tracked payout method: Rise",
-     "$58,867",
-     "37",
-     "\u25bc 51.2%",
-     "0.1%"
-    ],
-    "firm": "AquaFutures",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "34",
-     "TopTierTrader Tracked payout method: Rise",
-     "$53,493",
-     "24",
-     "\u25bc 44.6%",
-     "0.1%"
-    ],
-    "firm": "TopTierTrader",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "35",
-     "Instantfunding Tracked payout method: Rise",
-     "$35,403",
-     "22",
-     "\u25bc 73.3%",
-     "0.1%"
-    ],
-    "firm": "Instantfunding",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "36",
-     "Elite Trader Funding Tracked payout method: Rise",
-     "$27,044",
-     "33",
-     "\u25bc 78.9%",
-     "0.1%"
-    ],
-    "firm": "Elite Trader Funding",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "37",
-     "TraderScale Tracked payout method: Rise",
-     "$23,680",
-     "15",
-     "\u25bc 68.3%",
-     "0.0%"
-    ],
-    "firm": "TraderScale",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "38",
-     "Savius Tracked payout method: Rise",
-     "$22,652",
-     "9",
-     "\u25bc 43.0%",
-     "0.0%"
-    ],
-    "firm": "Savius",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "39",
-     "TradersYard Tracked payout method: Rise",
-     "$9,905",
-     "6",
-     "\u25bc 53.6%",
-     "0.0%"
-    ],
-    "firm": "TradersYard",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "40",
-     "NeomAAA Funds Tracked payout method: Rise",
-     "$6,605",
-     "7",
-     "\u25b2 7.1%",
-     "0.0%"
-    ],
-    "firm": "NeomAAA Funds",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "41",
-     "YRM Prop Tracked payout method: Rise",
-     "$2,510",
-     "5",
-     "\u25b2 18.9%",
-     "0.0%"
-    ],
-    "firm": "YRM Prop",
-    "method": "Rise"
-   }
-  ]
- },
- "records": [
-  {
-   "amount": "$346,838",
-   "date": "Nov 1, 2025",
-   "firm": "FundedNext",
-   "method": "Rise Direct Crypto"
-  },
-  {
-   "amount": "$229,180",
-   "date": "Aug 1, 2025",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$200,000",
-   "date": "Dec 13, 2025",
-   "firm": "Tradeify Futures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$200,000",
-   "date": "Jun 10, 2026",
-   "firm": "Tradeify Futures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$198,771",
-   "date": "Sep 4, 2025",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$191,967",
-   "date": "Aug 25, 2026",
-   "firm": "Breakout",
-   "method": "Direct Crypto"
-  },
-  {
-   "amount": "$190,853",
-   "date": "Oct 31, 2025",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$190,429",
-   "date": "Sep 21, 2026",
-   "firm": "Breakout",
-   "method": "Direct Crypto"
-  },
-  {
-   "amount": "$183,655",
-   "date": "Dec 8, 2025",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$176,117",
-   "date": "Apr 27, 2024",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$158,482",
-   "date": "Jul 31, 2024",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$157,000",
-   "date": "Oct 17, 2024",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$153,291",
-   "date": "May 31, 2024",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$150,000",
-   "date": "Sep 10, 2026",
-   "firm": "Tradeify Futures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$146,318",
-   "date": "Oct 17, 2025",
-   "firm": "FundedNext",
-   "method": "Rise Direct Crypto"
-  },
-  {
-   "amount": "$146,000",
-   "date": "Nov 30, 2024",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$144,750",
-   "date": "Oct 22, 2025",
-   "firm": "FundedNext",
-   "method": "Rise Direct Crypto"
-  },
-  {
-   "amount": "$144,646",
-   "date": "Sep 10, 2024",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$140,354",
-   "date": "Jan 10, 2024",
-   "firm": "FundingPips",
-   "method": "Rise"
-  },
-  {
-   "amount": "$133,360",
-   "date": "Nov 14, 2024",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$132,279",
-   "date": "Oct 3, 2025",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$131,145",
-   "date": "Jan 21, 2026",
-   "firm": "FundedNext",
-   "method": "Rise Direct Crypto"
-  },
-  {
-   "amount": "$130,760",
-   "date": "Jun 27, 2024",
-   "firm": "MyFundedFutures",
-   "method": "Rise"
-  },
-  {
-   "amount": "$123,134",
-   "date": "Oct 29, 2025",
-   "firm": "FundedNext",
-   "method": "Rise Direct Crypto"
-  },
-  {
-   "amount": "$120,000",
-   "date": "Dec 13, 2025",
-   "firm": "Tradeify Futures",
-   "method": "Rise"
-  }
- ],
- "stats": {
-  "all_time": {
-   "count": 1025766,
-   "firms": 42,
-   "since": "2023-10-18",
-   "usd": 1757754736.87
-  },
-  "by_month": [
-   {
-    "avg": 1728.48,
-    "count": 41249,
-    "firms": 36,
-    "median": 800.0,
-    "month": "2025-10",
-    "usd": 71297988.27,
-    "vs_prior_month_pct": 38.9,
-    "vs_same_month_last_year_pct": 132.4
-   },
-   {
-    "avg": 1835.38,
-    "count": 42799,
-    "firms": 36,
-    "median": 1008.42,
-    "month": "2025-11",
-    "usd": 78552479.07,
-    "vs_prior_month_pct": 10.2,
-    "vs_same_month_last_year_pct": 155.5
-   },
-   {
-    "avg": 1757.68,
-    "count": 37754,
-    "firms": 36,
-    "median": 1033.2,
-    "month": "2025-12",
-    "usd": 66359292.12,
-    "vs_prior_month_pct": -15.5,
-    "vs_same_month_last_year_pct": 106.2
-   },
-   {
-    "avg": 1677.45,
-    "count": 44197,
-    "firms": 37,
-    "median": 1123.77,
-    "month": "2026-01",
-    "usd": 74138074.94,
-    "vs_prior_month_pct": 11.7,
-    "vs_same_month_last_year_pct": 124.6
-   },
-   {
-    "avg": 1729.71,
-    "count": 43985,
-    "firms": 38,
-    "median": 1000.0,
-    "month": "2026-02",
-    "usd": 76081217.3,
-    "vs_prior_month_pct": 2.6,
-    "vs_same_month_last_year_pct": 126.1
-   },
-   {
-    "avg": 1642.1,
-    "count": 51915,
-    "firms": 38,
-    "median": 1047.69,
-    "month": "2026-03",
-    "usd": 85249551.52,
-    "vs_prior_month_pct": 12.1,
-    "vs_same_month_last_year_pct": 131.4
-   },
-   {
-    "avg": 1565.85,
-    "count": 49032,
-    "firms": 40,
-    "median": 1000.8,
-    "month": "2026-04",
-    "usd": 76776807.45,
-    "vs_prior_month_pct": -9.9,
-    "vs_same_month_last_year_pct": 76.8
-   },
-   {
-    "avg": 1592.67,
-    "count": 53885,
-    "firms": 41,
-    "median": 1122.02,
-    "month": "2026-05",
-    "usd": 85821156.84,
-    "vs_prior_month_pct": 11.8,
-    "vs_same_month_last_year_pct": 80.2
-   },
-   {
-    "avg": 1557.74,
-    "count": 64560,
-    "firms": 42,
-    "median": 1084.8,
-    "month": "2026-06",
-    "usd": 100567755.13,
-    "vs_prior_month_pct": 17.2,
-    "vs_same_month_last_year_pct": 153.3
-   },
-   {
-    "avg": 1481.33,
-    "count": 71224,
-    "firms": 42,
-    "median": 1042.2,
-    "month": "2026-07",
-    "usd": 105505904.18,
-    "vs_prior_month_pct": 4.9,
-    "vs_same_month_last_year_pct": 130.6
-   },
-   {
-    "avg": 1476.15,
-    "count": 72025,
-    "firms": 42,
-    "median": 1042.2,
-    "month": "2026-08",
-    "usd": 106319653.39,
-    "vs_prior_month_pct": 0.8,
-    "vs_same_month_last_year_pct": 116.4
-   },
-   {
-    "avg": 1455.04,
-    "count": 81041,
-    "firms": 42,
-    "median": 1062.16,
-    "month": "2026-09",
-    "usd": 117917625.36,
-    "vs_prior_month_pct": 10.9,
-    "vs_same_month_last_year_pct": 129.8
-   }
-  ],
-  "by_quarter": [
-   {
-    "count": 1729,
-    "firms": 8,
-    "in_progress": false,
-    "quarter": "2023-Q4",
-    "same_span_days": null,
-    "usd": 5530342.24,
-    "vs_prior_quarter_pct": null,
-    "vs_prior_quarter_same_span_pct": null,
-    "vs_same_quarter_last_year_pct": null,
-    "vs_same_quarter_last_year_same_span_pct": null
-   },
-   {
-    "count": 15043,
-    "firms": 14,
-    "in_progress": false,
-    "quarter": "2024-Q1",
-    "same_span_days": null,
-    "usd": 35682508.37,
-    "vs_prior_quarter_pct": null,
-    "vs_prior_quarter_same_span_pct": null,
-    "vs_same_quarter_last_year_pct": null,
-    "vs_same_quarter_last_year_same_span_pct": null
-   },
-   {
-    "count": 27873,
-    "firms": 16,
-    "in_progress": false,
-    "quarter": "2024-Q2",
-    "same_span_days": null,
-    "usd": 69449528.24,
-    "vs_prior_quarter_pct": 94.6,
-    "vs_prior_quarter_same_span_pct": null,
-    "vs_same_quarter_last_year_pct": null,
-    "vs_same_quarter_last_year_same_span_pct": null
-   },
-   {
-    "count": 31909,
-    "firms": 22,
-    "in_progress": false,
-    "quarter": "2024-Q3",
-    "same_span_days": null,
-    "usd": 73993317.99,
-    "vs_prior_quarter_pct": 6.5,
-    "vs_prior_quarter_same_span_pct": null,
-    "vs_same_quarter_last_year_pct": null,
-    "vs_same_quarter_last_year_same_span_pct": null
-   },
-   {
-    "count": 46043,
-    "firms": 31,
-    "in_progress": false,
-    "quarter": "2024-Q4",
-    "same_span_days": null,
-    "usd": 93602358.35,
-    "vs_prior_quarter_pct": 26.5,
-    "vs_prior_quarter_same_span_pct": null,
-    "vs_same_quarter_last_year_pct": null,
-    "vs_same_quarter_last_year_same_span_pct": null
-   },
-   {
-    "count": 53849,
-    "firms": 31,
-    "in_progress": false,
-    "quarter": "2025-Q1",
-    "same_span_days": null,
-    "usd": 103489444.29,
-    "vs_prior_quarter_pct": 10.6,
-    "vs_prior_quarter_same_span_pct": null,
-    "vs_same_quarter_last_year_pct": 190.0,
-    "vs_same_quarter_last_year_same_span_pct": null
-   },
-   {
-    "count": 67932,
-    "firms": 34,
-    "in_progress": false,
-    "quarter": "2025-Q2",
-    "same_span_days": null,
-    "usd": 130769180.34,
-    "vs_prior_quarter_pct": 26.4,
-    "vs_prior_quarter_same_span_pct": null,
-    "vs_same_quarter_last_year_pct": 88.3,
-    "vs_same_quarter_last_year_same_span_pct": null
-   },
-   {
-    "count": 89077,
-    "firms": 36,
-    "in_progress": false,
-    "quarter": "2025-Q3",
-    "same_span_days": null,
-    "usd": 146205442.14,
-    "vs_prior_quarter_pct": 11.8,
-    "vs_prior_quarter_same_span_pct": null,
-    "vs_same_quarter_last_year_pct": 97.6,
-    "vs_same_quarter_last_year_same_span_pct": null
-   },
-   {
-    "count": 121802,
-    "firms": 36,
-    "in_progress": false,
-    "quarter": "2025-Q4",
-    "same_span_days": null,
-    "usd": 216209759.45,
-    "vs_prior_quarter_pct": 47.9,
-    "vs_prior_quarter_same_span_pct": null,
-    "vs_same_quarter_last_year_pct": 131.0,
-    "vs_same_quarter_last_year_same_span_pct": null
-   },
-   {
-    "count": 140097,
-    "firms": 38,
-    "in_progress": false,
-    "quarter": "2026-Q1",
-    "same_span_days": null,
-    "usd": 235468843.76,
-    "vs_prior_quarter_pct": 8.9,
-    "vs_prior_quarter_same_span_pct": null,
-    "vs_same_quarter_last_year_pct": 127.5,
-    "vs_same_quarter_last_year_same_span_pct": null
-   },
-   {
-    "count": 167477,
-    "firms": 42,
-    "in_progress": false,
-    "quarter": "2026-Q2",
-    "same_span_days": null,
-    "usd": 263165719.42,
-    "vs_prior_quarter_pct": 11.8,
-    "vs_prior_quarter_same_span_pct": null,
-    "vs_same_quarter_last_year_pct": 101.2,
-    "vs_same_quarter_last_year_same_span_pct": null
-   },
-   {
-    "count": 224290,
-    "firms": 42,
-    "in_progress": false,
-    "quarter": "2026-Q3",
-    "same_span_days": null,
-    "usd": 329743182.93,
-    "vs_prior_quarter_pct": 25.3,
-    "vs_prior_quarter_same_span_pct": null,
-    "vs_same_quarter_last_year_pct": 125.5,
-    "vs_same_quarter_last_year_same_span_pct": null
-   },
-   {
-    "count": 38645,
-    "firms": 41,
-    "in_progress": true,
-    "quarter": "2026-Q4",
-    "same_span_days": 14,
-    "usd": 54445109.36,
-    "vs_prior_quarter_pct": -83.5,
-    "vs_prior_quarter_same_span_pct": 25.8,
-    "vs_same_quarter_last_year_pct": -74.8,
-    "vs_same_quarter_last_year_same_span_pct": 97.3
-   }
-  ],
-  "by_year": [
-   {
-    "count": 1729,
-    "firms": 8,
-    "label": "2023 (Oct\u2013Dec)",
-    "to_date": false,
-    "usd": 5530342.24,
-    "vs_prior_year_pct": null,
-    "year": "2023"
-   },
-   {
-    "count": 120868,
-    "firms": 31,
-    "label": "2024",
-    "to_date": false,
-    "usd": 272727712.95,
-    "vs_prior_year_pct": null,
-    "year": "2024"
-   },
-   {
-    "count": 332660,
-    "firms": 36,
-    "label": "2025",
-    "to_date": false,
-    "usd": 596673826.21,
-    "vs_prior_year_pct": 118.8,
-    "year": "2025"
-   },
-   {
-    "count": 570509,
-    "firms": 42,
-    "label": "2026 to date",
-    "to_date": true,
-    "usd": 882822855.46,
-    "vs_prior_year_pct": 116.3,
-    "year": "2026"
-   },
-   {
-    "count": 675382,
-    "firms": 42,
-    "label": "Last 12 months",
-    "to_date": true,
-    "usd": 1071437334.46,
-    "vs_prior_year_pct": 118.7,
-    "year": "last_12m"
-   }
-  ],
-  "generated_at": "2026-10-14T21:05:17Z",
-  "hhi_30d": 1773,
-  "largest_on_record": {
-   "date": "2025-11-01",
-   "firm": "FundedNext",
-   "usd": 346837.9
-  },
-  "last_12m": {
-   "count": 675382,
-   "firms": 42,
-   "usd": 1071437334.46
-  },
-  "last_24h": {
-   "count": 3635,
-   "firms": 37,
-   "leading_firm": "Tradeify Futures",
-   "usd": 4927189.76
-  },
-  "last_30d": {
-   "avg": 1427.98,
-   "count": 86053,
-   "firms": 42,
-   "median": 1099.0,
-   "usd": 122882266.31,
-   "vs_prior_30d_pct": 16.8
-  },
-  "month_to_date": {
-   "count": 38645,
-   "firms": 41,
-   "from": "2026-10-01T00:00:00Z",
-   "leading_firm": "Tradeify Futures",
-   "usd": 54445109.36
-  },
-  "size_buckets_30d": [
-   {
-    "bucket": "under $500",
-    "count": 19131,
-    "hi": 500,
-    "lo": 0,
-    "share_of_payouts_pct": 22.2,
-    "share_of_usd_pct": 3.7,
-    "usd": 4544408.6
-   },
-   {
-    "bucket": "$500\u2013$1,000",
-    "count": 19925,
-    "hi": 1000,
-    "lo": 500,
-    "share_of_payouts_pct": 23.2,
-    "share_of_usd_pct": 12.1,
-    "usd": 14897624.24
-   },
-   {
-    "bucket": "$1,000\u2013$2,000",
-    "count": 28261,
-    "hi": 2000,
-    "lo": 1000,
-    "share_of_payouts_pct": 32.8,
-    "share_of_usd_pct": 32.3,
-    "usd": 39672535.44
-   },
-   {
-    "bucket": "$2,000\u2013$5,000",
-    "count": 16951,
-    "hi": 5000,
-    "lo": 2000,
-    "share_of_payouts_pct": 19.7,
-    "share_of_usd_pct": 38.1,
-    "usd": 46860772.76
-   },
-   {
-    "bucket": "$5,000\u2013$10,000",
-    "count": 1382,
-    "hi": 10000,
-    "lo": 5000,
-    "share_of_payouts_pct": 1.6,
-    "share_of_usd_pct": 7.6,
-    "usd": 9335439.1
-   },
-   {
-    "bucket": "$10,000\u2013$25,000",
-    "count": 342,
-    "hi": 25000,
-    "lo": 10000,
-    "share_of_payouts_pct": 0.4,
-    "share_of_usd_pct": 4.0,
-    "usd": 4930031.29
-   },
-   {
-    "bucket": "$25,000+",
-    "count": 61,
-    "hi": null,
-    "lo": 25000,
-    "share_of_payouts_pct": 0.1,
-    "share_of_usd_pct": 2.1,
-    "usd": 2641454.89
-   }
-  ],
-  "top5_30d": [
-   {
-    "count": 27177,
-    "firm": "Tradeify Futures",
-    "share": 35.7,
-    "usd": 43834200.17
-   },
-   {
-    "count": 15636,
-    "firm": "FundedNext",
-    "share": 15.3,
-    "usd": 18830493.38
-   },
-   {
-    "count": 9802,
-    "firm": "MyFundedFutures",
-    "share": 12.3,
-    "usd": 15140970.73
-   },
-   {
-    "count": 5444,
-    "firm": "Breakout",
-    "share": 7.0,
-    "usd": 8569256.8
-   },
-   {
-    "count": 3269,
-    "firm": "BlueGuardian",
-    "share": 4.9,
-    "usd": 6020712.88
-   }
-  ],
-  "week_to_date": {
-   "count": 8486,
-   "firms": 38,
-   "from": "2026-10-12T00:00:00Z",
-   "leading_firm": "Tradeify Futures",
-   "usd": 11878253.59
-  }
- },
  "weekly": {
   "headline": {
-   "range": "12\u201318 October 2026",
-   "total": "$11,878,254"
+   "range": "12–18 October 2026",
+   "total": "$14,275,169"
   },
   "rows": [
    {
     "cells": [
      "1",
      "Tradeify Futures Tracked payout method: Rise",
-     "$4,026,798",
-     "2,302",
-     "\u25bc 62.1%",
-     "33.9%"
+     "$5,320,564",
+     "3,090",
+     "▼ 49.9%",
+     "37.3%"
     ],
     "firm": "Tradeify Futures",
     "method": "Rise"
@@ -1548,10 +402,10 @@
     "cells": [
      "2",
      "FundedNext Tracked payout method: Rise Direct Crypto",
-     "$1,758,214",
-     "1,502",
-     "\u25bc 56.0%",
-     "14.8%"
+     "$2,149,284",
+     "1,874",
+     "▼ 46.2%",
+     "15.1%"
     ],
     "firm": "FundedNext",
     "method": "Rise Direct Crypto"
@@ -1560,10 +414,10 @@
     "cells": [
      "3",
      "MyFundedFutures Tracked payout method: Rise",
-     "$1,486,477",
-     "1,142",
-     "\u25bc 55.4%",
-     "12.5%"
+     "$1,797,070",
+     "1,429",
+     "▼ 46.0%",
+     "12.6%"
     ],
     "firm": "MyFundedFutures",
     "method": "Rise"
@@ -1571,26 +425,26 @@
    {
     "cells": [
      "4",
-     "BlueGuardian Tracked payout method: Rise Direct Crypto",
-     "$705,200",
-     "348",
-     "\u25bc 52.3%",
-     "5.9%"
+     "Breakout Tracked payout method: Direct Crypto",
+     "$815,321",
+     "591",
+     "▼ 35.5%",
+     "5.7%"
     ],
-    "firm": "BlueGuardian",
-    "method": "Rise Direct Crypto"
+    "firm": "Breakout",
+    "method": "Direct Crypto"
    },
    {
     "cells": [
      "5",
-     "Breakout Tracked payout method: Direct Crypto",
-     "$651,742",
-     "475",
-     "\u25bc 48.5%",
-     "5.5%"
+     "BlueGuardian Tracked payout method: Rise Direct Crypto",
+     "$725,515",
+     "372",
+     "▼ 50.9%",
+     "5.1%"
     ],
-    "firm": "Breakout",
-    "method": "Direct Crypto"
+    "firm": "BlueGuardian",
+    "method": "Rise Direct Crypto"
    },
    {
     "cells": [
@@ -1598,8 +452,8 @@
      "FundedFuturesFamily Tracked payout method: Rise",
      "$500,005",
      "526",
-     "\u25bc 41.9%",
-     "4.2%"
+     "▼ 41.9%",
+     "3.5%"
     ],
     "firm": "FundedFuturesFamily",
     "method": "Rise"
@@ -1608,10 +462,10 @@
     "cells": [
      "7",
      "FundingPips Tracked payout method: Rise",
-     "$353,350",
-     "172",
-     "\u25bc 56.9%",
-     "3.0%"
+     "$359,627",
+     "177",
+     "▼ 56.1%",
+     "2.5%"
     ],
     "firm": "FundingPips",
     "method": "Rise"
@@ -1620,10 +474,10 @@
     "cells": [
      "8",
      "The5ers Tracked payout method: Rise",
-     "$264,631",
-     "158",
-     "\u25bc 75.5%",
-     "2.2%"
+     "$273,667",
+     "162",
+     "▼ 74.6%",
+     "1.9%"
     ],
     "firm": "The5ers",
     "method": "Rise"
@@ -1632,10 +486,10 @@
     "cells": [
      "9",
      "GoatFundedTrader Tracked payout method: Rise Direct Crypto",
-     "$241,893",
-     "425",
-     "\u25bc 27.2%",
-     "2.0%"
+     "$246,347",
+     "443",
+     "▼ 25.8%",
+     "1.7%"
     ],
     "firm": "GoatFundedTrader",
     "method": "Rise Direct Crypto"
@@ -1643,59 +497,59 @@
    {
     "cells": [
      "10",
-     "FuturesElite Tracked payout method: Rise",
-     "$199,883",
-     "98",
-     "\u25bc 14.5%",
-     "1.7%"
-    ],
-    "firm": "FuturesElite",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "11",
-     "E8Markets Tracked payout method: Rise",
-     "$177,529",
-     "60",
-     "\u25bc 45.5%",
-     "1.5%"
-    ],
-    "firm": "E8Markets",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "12",
-     "AlphaCapitalGroup Tracked payout method: Rise",
-     "$161,015",
-     "157",
-     "\u25bc 57.5%",
-     "1.4%"
-    ],
-    "firm": "AlphaCapitalGroup",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "13",
      "Propr Tracked payout method: Direct Crypto",
-     "$151,009",
-     "168",
-     "\u25bc 49.6%",
-     "1.3%"
+     "$202,443",
+     "189",
+     "▼ 32.4%",
+     "1.4%"
     ],
     "firm": "Propr",
     "method": "Direct Crypto"
    },
    {
     "cells": [
+     "11",
+     "FuturesElite Tracked payout method: Rise",
+     "$199,883",
+     "98",
+     "▼ 14.5%",
+     "1.4%"
+    ],
+    "firm": "FuturesElite",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "12",
+     "E8Markets Tracked payout method: Rise",
+     "$177,529",
+     "60",
+     "▼ 45.5%",
+     "1.2%"
+    ],
+    "firm": "E8Markets",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "13",
+     "AlphaCapitalGroup Tracked payout method: Rise",
+     "$161,015",
+     "157",
+     "▼ 57.5%",
+     "1.1%"
+    ],
+    "firm": "AlphaCapitalGroup",
+    "method": "Rise"
+   },
+   {
+    "cells": [
      "14",
      "BluSky.Pro Tracked payout method: Rise",
-     "$136,096",
-     "94",
-     "\u25bc 46.1%",
-     "1.2%"
+     "$146,599",
+     "104",
+     "▼ 41.9%",
+     "1.0%"
     ],
     "firm": "BluSky.Pro",
     "method": "Rise"
@@ -1706,8 +560,8 @@
      "AlphaTraderFirm Tracked payout method: Rise",
      "$126,112",
      "46",
-     "\u25b2 24.5%",
-     "1.1%"
+     "▲ 24.5%",
+     "0.9%"
     ],
     "firm": "AlphaTraderFirm",
     "method": "Rise"
@@ -1715,22 +569,22 @@
    {
     "cells": [
      "16",
-     "TradeDay Tracked payout method: Rise",
-     "$100,095",
-     "121",
-     "\u25bc 53.1%",
+     "FundedTraderMarkets Tracked payout method: Rise Direct Crypto",
+     "$121,309",
+     "106",
+     "▼ 52.3%",
      "0.8%"
     ],
-    "firm": "TradeDay",
-    "method": "Rise"
+    "firm": "FundedTraderMarkets",
+    "method": "Rise Direct Crypto"
    },
    {
     "cells": [
      "17",
      "TopOneFutures Tracked payout method: Rise",
-     "$100,078",
-     "90",
-     "\u25bc 60.1%",
+     "$116,317",
+     "104",
+     "▼ 53.7%",
      "0.8%"
     ],
     "firm": "TopOneFutures",
@@ -1739,58 +593,58 @@
    {
     "cells": [
      "18",
-     "FundedTraderMarkets Tracked payout method: Rise Direct Crypto",
-     "$89,010",
-     "87",
-     "\u25bc 65.0%",
-     "0.8%"
-    ],
-    "firm": "FundedTraderMarkets",
-    "method": "Rise Direct Crypto"
-   },
-   {
-    "cells": [
-     "19",
-     "Legends Trading Tracked payout method: Rise",
-     "$82,807",
-     "67",
-     "\u25bc 37.3%",
-     "0.7%"
-    ],
-    "firm": "Legends Trading",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "20",
-     "AlphaFutures Tracked payout method: Rise",
-     "$80,664",
-     "59",
-     "\u25bc 39.6%",
-     "0.7%"
-    ],
-    "firm": "AlphaFutures",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "21",
      "Hypernova Tracked payout method: Direct Crypto",
-     "$74,501",
-     "48",
-     "\u25bc 63.0%",
-     "0.6%"
+     "$106,552",
+     "60",
+     "▼ 47.0%",
+     "0.7%"
     ],
     "firm": "Hypernova",
     "method": "Direct Crypto"
    },
    {
     "cells": [
+     "19",
+     "TradeDay Tracked payout method: Rise",
+     "$100,995",
+     "122",
+     "▼ 52.7%",
+     "0.7%"
+    ],
+    "firm": "TradeDay",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "20",
+     "Legends Trading Tracked payout method: Rise",
+     "$82,807",
+     "67",
+     "▼ 37.3%",
+     "0.6%"
+    ],
+    "firm": "Legends Trading",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "21",
+     "AlphaFutures Tracked payout method: Rise",
+     "$80,664",
+     "59",
+     "▼ 39.6%",
+     "0.6%"
+    ],
+    "firm": "AlphaFutures",
+    "method": "Rise"
+   },
+   {
+    "cells": [
      "22",
      "HolaPrime Tracked payout method: Rise Direct Crypto",
-     "$73,542",
-     "64",
-     "\u25bc 68.1%",
+     "$80,230",
+     "68",
+     "▼ 65.2%",
      "0.6%"
     ],
     "firm": "HolaPrime",
@@ -1799,22 +653,34 @@
    {
     "cells": [
      "23",
+     "YlosTrading Tracked payout method: Rise",
+     "$66,725",
+     "39",
+     "▼ 65.6%",
+     "0.5%"
+    ],
+    "firm": "YlosTrading",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "24",
      "GoatFundedFutures Tracked payout method: Rise",
      "$45,704",
      "25",
-     "\u25bc 57.7%",
-     "0.4%"
+     "▼ 57.7%",
+     "0.3%"
     ],
     "firm": "GoatFundedFutures",
     "method": "Rise"
    },
    {
     "cells": [
-     "24",
+     "25",
      "TopTierTrader Tracked payout method: Rise",
      "$39,348",
      "15",
-     "\u25b2 4218.3%",
+     "▲ 4218.3%",
      "0.3%"
     ],
     "firm": "TopTierTrader",
@@ -1822,11 +688,11 @@
    },
    {
     "cells": [
-     "25",
+     "26",
      "FXIFY Tracked payout method: Rise",
      "$36,366",
      "30",
-     "\u25bc 60.8%",
+     "▼ 60.8%",
      "0.3%"
     ],
     "firm": "FXIFY",
@@ -1834,26 +700,14 @@
    },
    {
     "cells": [
-     "26",
+     "27",
      "PhidiasPropFirm Tracked payout method: Rise",
      "$36,116",
      "25",
-     "\u25bc 64.8%",
+     "▼ 64.8%",
      "0.3%"
     ],
     "firm": "PhidiasPropFirm",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "27",
-     "YlosTrading Tracked payout method: Rise",
-     "$31,964",
-     "22",
-     "\u25bc 83.5%",
-     "0.3%"
-    ],
-    "firm": "YlosTrading",
     "method": "Rise"
    },
    {
@@ -1862,7 +716,7 @@
      "AquaFutures Tracked payout method: Rise",
      "$28,504",
      "18",
-     "\u25b2 13.8%",
+     "▲ 13.8%",
      "0.2%"
     ],
     "firm": "AquaFutures",
@@ -1871,22 +725,10 @@
    {
     "cells": [
      "29",
-     "AquaFunded Tracked payout method: Rise",
-     "$24,293",
-     "15",
-     "\u25bc 30.5%",
-     "0.2%"
-    ],
-    "firm": "AquaFunded",
-    "method": "Rise"
-   },
-   {
-    "cells": [
-     "30",
      "Tradeify 247 Tracked payout method: Rise Direct Crypto",
-     "$17,868",
-     "21",
-     "\u25bc 83.4%",
+     "$24,502",
+     "23",
+     "▼ 77.2%",
      "0.2%"
     ],
     "firm": "Tradeify 247",
@@ -1894,23 +736,35 @@
    },
    {
     "cells": [
+     "30",
+     "AquaFunded Tracked payout method: Rise",
+     "$24,293",
+     "15",
+     "▼ 30.5%",
+     "0.2%"
+    ],
+    "firm": "AquaFunded",
+    "method": "Rise"
+   },
+   {
+    "cells": [
      "31",
-     "Instantfunding Tracked payout method: Rise",
-     "$14,513",
-     "7",
-     "\u25b2 61.5%",
+     "OrionFunded Tracked payout method: Rise",
+     "$18,490",
+     "28",
+     "▼ 77.1%",
      "0.1%"
     ],
-    "firm": "Instantfunding",
+    "firm": "OrionFunded",
     "method": "Rise"
    },
    {
     "cells": [
      "32",
      "FundedHive Tracked payout method: Direct Crypto",
-     "$14,420",
-     "40",
-     "\u25bc 64.9%",
+     "$16,223",
+     "48",
+     "▼ 60.5%",
      "0.1%"
     ],
     "firm": "FundedHive",
@@ -1919,13 +773,13 @@
    {
     "cells": [
      "33",
-     "OrionFunded Tracked payout method: Rise",
-     "$13,976",
-     "21",
-     "\u25bc 82.7%",
+     "Instantfunding Tracked payout method: Rise",
+     "$14,513",
+     "7",
+     "▲ 61.5%",
      "0.1%"
     ],
-    "firm": "OrionFunded",
+    "firm": "Instantfunding",
     "method": "Rise"
    },
    {
@@ -1934,7 +788,7 @@
      "Vanta Trading Tracked payout method: Direct Crypto",
      "$12,840",
      "12",
-     "\u25bc 75.1%",
+     "▼ 75.1%",
      "0.1%"
     ],
     "firm": "Vanta Trading",
@@ -1946,7 +800,7 @@
      "TopOneTrader Tracked payout method: Rise",
      "$7,307",
      "11",
-     "\u25bc 81.5%",
+     "▼ 81.5%",
      "0.1%"
     ],
     "firm": "TopOneTrader",
@@ -1958,8 +812,8 @@
      "TraderScale Tracked payout method: Rise",
      "$6,229",
      "7",
-     "\u25bc 56.5%",
-     "0.1%"
+     "▼ 56.5%",
+     "0.0%"
     ],
     "firm": "TraderScale",
     "method": "Rise"
@@ -1970,7 +824,7 @@
      "TradersYard Tracked payout method: Rise",
      "$4,784",
      "2",
-     "\u25b2 68.3%",
+     "▲ 68.3%",
      "0.0%"
     ],
     "firm": "TradersYard",
@@ -1982,16 +836,1448 @@
      "Elite Trader Funding Tracked payout method: Rise",
      "$3,370",
      "6",
-     "\u25bc 85.8%",
+     "▼ 85.8%",
      "0.0%"
     ],
     "firm": "Elite Trader Funding",
     "method": "Rise"
    }
   ]
+ },
+ "monthly": {
+  "headline": {
+   "range": "October 2026",
+   "total": "$56,842,025"
+  },
+  "rows": [
+   {
+    "cells": [
+     "1",
+     "Tradeify Futures Tracked payout method: Rise",
+     "$22,199,161",
+     "13,794",
+     "▼ 44.4%",
+     "39.1%"
+    ],
+    "firm": "Tradeify Futures",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "2",
+     "FundedNext Tracked payout method: Rise Direct Crypto",
+     "$8,555,565",
+     "7,059",
+     "▼ 52.6%",
+     "15.1%"
+    ],
+    "firm": "FundedNext",
+    "method": "Rise Direct Crypto"
+   },
+   {
+    "cells": [
+     "3",
+     "MyFundedFutures Tracked payout method: Rise",
+     "$6,732,611",
+     "4,494",
+     "▼ 57.5%",
+     "11.8%"
+    ],
+    "firm": "MyFundedFutures",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "4",
+     "Breakout Tracked payout method: Direct Crypto",
+     "$2,893,085",
+     "2,174",
+     "▼ 66.8%",
+     "5.1%"
+    ],
+    "firm": "Breakout",
+    "method": "Direct Crypto"
+   },
+   {
+    "cells": [
+     "5",
+     "BlueGuardian Tracked payout method: Rise Direct Crypto",
+     "$2,721,777",
+     "1,473",
+     "▼ 55.8%",
+     "4.8%"
+    ],
+    "firm": "BlueGuardian",
+    "method": "Rise Direct Crypto"
+   },
+   {
+    "cells": [
+     "6",
+     "The5ers Tracked payout method: Rise",
+     "$1,801,435",
+     "1,055",
+     "▼ 49.9%",
+     "3.2%"
+    ],
+    "firm": "The5ers",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "7",
+     "FundedFuturesFamily Tracked payout method: Rise",
+     "$1,733,637",
+     "1,801",
+     "▼ 29.3%",
+     "3.0%"
+    ],
+    "firm": "FundedFuturesFamily",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "8",
+     "FundingPips Tracked payout method: Rise",
+     "$1,449,741",
+     "780",
+     "▼ 59.3%",
+     "2.6%"
+    ],
+    "firm": "FundingPips",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "9",
+     "GoatFundedTrader Tracked payout method: Rise Direct Crypto",
+     "$827,149",
+     "1,551",
+     "▼ 51.3%",
+     "1.5%"
+    ],
+    "firm": "GoatFundedTrader",
+    "method": "Rise Direct Crypto"
+   },
+   {
+    "cells": [
+     "10",
+     "AlphaCapitalGroup Tracked payout method: Rise",
+     "$711,007",
+     "584",
+     "▼ 66.1%",
+     "1.3%"
+    ],
+    "firm": "AlphaCapitalGroup",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "11",
+     "E8Markets Tracked payout method: Rise",
+     "$652,814",
+     "254",
+     "▼ 57.5%",
+     "1.1%"
+    ],
+    "firm": "E8Markets",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "12",
+     "FuturesElite Tracked payout method: Rise",
+     "$634,558",
+     "291",
+     "▼ 51.4%",
+     "1.1%"
+    ],
+    "firm": "FuturesElite",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "13",
+     "Propr Tracked payout method: Direct Crypto",
+     "$611,272",
+     "833",
+     "▼ 40.5%",
+     "1.1%"
+    ],
+    "firm": "Propr",
+    "method": "Direct Crypto"
+   },
+   {
+    "cells": [
+     "14",
+     "TopOneFutures Tracked payout method: Rise",
+     "$600,106",
+     "502",
+     "▼ 44.1%",
+     "1.1%"
+    ],
+    "firm": "TopOneFutures",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "15",
+     "BluSky.Pro Tracked payout method: Rise",
+     "$549,215",
+     "435",
+     "▼ 47.8%",
+     "1.0%"
+    ],
+    "firm": "BluSky.Pro",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "16",
+     "FundedTraderMarkets Tracked payout method: Rise Direct Crypto",
+     "$537,113",
+     "411",
+     "▼ 56.0%",
+     "0.9%"
+    ],
+    "firm": "FundedTraderMarkets",
+    "method": "Rise Direct Crypto"
+   },
+   {
+    "cells": [
+     "17",
+     "HolaPrime Tracked payout method: Rise Direct Crypto",
+     "$393,468",
+     "303",
+     "▼ 60.9%",
+     "0.7%"
+    ],
+    "firm": "HolaPrime",
+    "method": "Rise Direct Crypto"
+   },
+   {
+    "cells": [
+     "18",
+     "TradeDay Tracked payout method: Rise",
+     "$384,920",
+     "396",
+     "▼ 50.0%",
+     "0.7%"
+    ],
+    "firm": "TradeDay",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "19",
+     "Hypernova Tracked payout method: Direct Crypto",
+     "$359,658",
+     "275",
+     "▼ 41.8%",
+     "0.6%"
+    ],
+    "firm": "Hypernova",
+    "method": "Direct Crypto"
+   },
+   {
+    "cells": [
+     "20",
+     "YlosTrading Tracked payout method: Rise",
+     "$330,202",
+     "223",
+     "▼ 57.3%",
+     "0.6%"
+    ],
+    "firm": "YlosTrading",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "21",
+     "AlphaTraderFirm Tracked payout method: Rise",
+     "$271,704",
+     "202",
+     "▼ 46.3%",
+     "0.5%"
+    ],
+    "firm": "AlphaTraderFirm",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "22",
+     "AlphaFutures Tracked payout method: Rise",
+     "$266,833",
+     "197",
+     "▼ 60.6%",
+     "0.5%"
+    ],
+    "firm": "AlphaFutures",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "23",
+     "Legends Trading Tracked payout method: Rise",
+     "$235,901",
+     "177",
+     "▼ 49.4%",
+     "0.4%"
+    ],
+    "firm": "Legends Trading",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "24",
+     "PhidiasPropFirm Tracked payout method: Rise",
+     "$233,981",
+     "149",
+     "▼ 61.6%",
+     "0.4%"
+    ],
+    "firm": "PhidiasPropFirm",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "25",
+     "GoatFundedFutures Tracked payout method: Rise",
+     "$183,185",
+     "129",
+     "▼ 58.8%",
+     "0.3%"
+    ],
+    "firm": "GoatFundedFutures",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "26",
+     "Tradeify 247 Tracked payout method: Rise Direct Crypto",
+     "$159,255",
+     "92",
+     "▼ 23.2%",
+     "0.3%"
+    ],
+    "firm": "Tradeify 247",
+    "method": "Rise Direct Crypto"
+   },
+   {
+    "cells": [
+     "27",
+     "FXIFY Tracked payout method: Rise",
+     "$150,838",
+     "136",
+     "▼ 65.0%",
+     "0.3%"
+    ],
+    "firm": "FXIFY",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "28",
+     "OrionFunded Tracked payout method: Rise",
+     "$120,757",
+     "115",
+     "▼ 42.2%",
+     "0.2%"
+    ],
+    "firm": "OrionFunded",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "29",
+     "FundedHive Tracked payout method: Direct Crypto",
+     "$82,692",
+     "210",
+     "▼ 56.8%",
+     "0.1%"
+    ],
+    "firm": "FundedHive",
+    "method": "Direct Crypto"
+   },
+   {
+    "cells": [
+     "30",
+     "AquaFunded Tracked payout method: Rise",
+     "$81,635",
+     "41",
+     "▼ 65.2%",
+     "0.1%"
+    ],
+    "firm": "AquaFunded",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "31",
+     "TopOneTrader Tracked payout method: Rise",
+     "$72,216",
+     "49",
+     "▼ 72.1%",
+     "0.1%"
+    ],
+    "firm": "TopOneTrader",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "32",
+     "Vanta Trading Tracked payout method: Direct Crypto",
+     "$64,375",
+     "31",
+     "▼ 67.3%",
+     "0.1%"
+    ],
+    "firm": "Vanta Trading",
+    "method": "Direct Crypto"
+   },
+   {
+    "cells": [
+     "33",
+     "AquaFutures Tracked payout method: Rise",
+     "$58,867",
+     "37",
+     "▼ 51.2%",
+     "0.1%"
+    ],
+    "firm": "AquaFutures",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "34",
+     "TopTierTrader Tracked payout method: Rise",
+     "$53,493",
+     "24",
+     "▼ 44.6%",
+     "0.1%"
+    ],
+    "firm": "TopTierTrader",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "35",
+     "Instantfunding Tracked payout method: Rise",
+     "$35,403",
+     "22",
+     "▼ 73.3%",
+     "0.1%"
+    ],
+    "firm": "Instantfunding",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "36",
+     "Elite Trader Funding Tracked payout method: Rise",
+     "$27,044",
+     "33",
+     "▼ 78.9%",
+     "0.0%"
+    ],
+    "firm": "Elite Trader Funding",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "37",
+     "TraderScale Tracked payout method: Rise",
+     "$23,680",
+     "15",
+     "▼ 68.3%",
+     "0.0%"
+    ],
+    "firm": "TraderScale",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "38",
+     "Savius Tracked payout method: Rise",
+     "$22,652",
+     "9",
+     "▼ 43.0%",
+     "0.0%"
+    ],
+    "firm": "Savius",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "39",
+     "TradersYard Tracked payout method: Rise",
+     "$9,905",
+     "6",
+     "▼ 53.6%",
+     "0.0%"
+    ],
+    "firm": "TradersYard",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "40",
+     "NeomAAA Funds Tracked payout method: Rise",
+     "$6,605",
+     "7",
+     "▲ 7.1%",
+     "0.0%"
+    ],
+    "firm": "NeomAAA Funds",
+    "method": "Rise"
+   },
+   {
+    "cells": [
+     "41",
+     "YRM Prop Tracked payout method: Rise",
+     "$2,510",
+     "5",
+     "▲ 18.9%",
+     "0.0%"
+    ],
+    "firm": "YRM Prop",
+    "method": "Rise"
+   }
+  ]
+ },
+ "records": [
+  {
+   "firm": "FundedNext",
+   "method": "Rise Direct Crypto",
+   "date": "Nov 1, 2025",
+   "amount": "$346,838"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "Aug 1, 2025",
+   "amount": "$229,180"
+  },
+  {
+   "firm": "Tradeify Futures",
+   "method": "Rise",
+   "date": "Dec 13, 2025",
+   "amount": "$200,000"
+  },
+  {
+   "firm": "Tradeify Futures",
+   "method": "Rise",
+   "date": "Jun 10, 2026",
+   "amount": "$200,000"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "Sep 4, 2025",
+   "amount": "$198,771"
+  },
+  {
+   "firm": "Breakout",
+   "method": "Direct Crypto",
+   "date": "Aug 25, 2026",
+   "amount": "$191,967"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "Oct 31, 2025",
+   "amount": "$190,853"
+  },
+  {
+   "firm": "Breakout",
+   "method": "Direct Crypto",
+   "date": "Sep 21, 2026",
+   "amount": "$190,429"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "Dec 8, 2025",
+   "amount": "$183,655"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "Apr 27, 2024",
+   "amount": "$176,117"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "Jul 31, 2024",
+   "amount": "$158,482"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "Oct 17, 2024",
+   "amount": "$157,000"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "May 31, 2024",
+   "amount": "$153,291"
+  },
+  {
+   "firm": "Tradeify Futures",
+   "method": "Rise",
+   "date": "Sep 10, 2026",
+   "amount": "$150,000"
+  },
+  {
+   "firm": "FundedNext",
+   "method": "Rise Direct Crypto",
+   "date": "Oct 17, 2025",
+   "amount": "$146,318"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "Nov 30, 2024",
+   "amount": "$146,000"
+  },
+  {
+   "firm": "FundedNext",
+   "method": "Rise Direct Crypto",
+   "date": "Oct 22, 2025",
+   "amount": "$144,750"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "Sep 10, 2024",
+   "amount": "$144,646"
+  },
+  {
+   "firm": "FundingPips",
+   "method": "Rise",
+   "date": "Jan 10, 2024",
+   "amount": "$140,354"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "Nov 14, 2024",
+   "amount": "$133,360"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "Oct 3, 2025",
+   "amount": "$132,279"
+  },
+  {
+   "firm": "FundedNext",
+   "method": "Rise Direct Crypto",
+   "date": "Jan 21, 2026",
+   "amount": "$131,145"
+  },
+  {
+   "firm": "MyFundedFutures",
+   "method": "Rise",
+   "date": "Jun 27, 2024",
+   "amount": "$130,760"
+  },
+  {
+   "firm": "FundedNext",
+   "method": "Rise Direct Crypto",
+   "date": "Oct 29, 2025",
+   "amount": "$123,134"
+  },
+  {
+   "firm": "Tradeify Futures",
+   "method": "Rise",
+   "date": "Dec 13, 2025",
+   "amount": "$120,000"
+  }
+ ],
+ "stats": {
+  "generated_at": "2026-10-15T06:42:03Z",
+  "all_time": {
+   "usd": 1760151653.96,
+   "count": 1027495,
+   "firms": 42,
+   "since": "2023-10-18"
+  },
+  "last_12m": {
+   "usd": 1072813864.03,
+   "count": 676399,
+   "firms": 42
+  },
+  "last_30d": {
+   "usd": 122795884.61,
+   "count": 86069,
+   "firms": 42,
+   "avg": 1426.71,
+   "median": 1102.85,
+   "vs_prior_30d_pct": 14.2
+  },
+  "last_24h": {
+   "usd": 4511259.64,
+   "count": 3430,
+   "firms": 36,
+   "leading_firm": "Tradeify Futures"
+  },
+  "week_to_date": {
+   "usd": 14275170.69,
+   "count": 10215,
+   "firms": 38,
+   "leading_firm": "Tradeify Futures",
+   "from": "2026-10-12T00:00:00Z"
+  },
+  "month_to_date": {
+   "usd": 56842026.46,
+   "count": 40374,
+   "firms": 41,
+   "leading_firm": "Tradeify Futures",
+   "from": "2026-10-01T00:00:00Z"
+  },
+  "velocity_pct": 106.4,
+  "month_pace_pct": 97.3,
+  "pace_note": "Pace compares the window's dollars per day so far with the trailing 30 days' dollars per day. It is a rate, not a forecast.",
+  "three_month_avg": {
+   "usd": 109914394.31,
+   "prior_usd": 87721906.47,
+   "vs_prior_pct": 25.3
+  },
+  "cumulative_by_day": {
+   "note": "Cumulative verified payouts by day of month (UTC). `current` runs to the most recent verified payout; `prior` is the last complete month.",
+   "trailing_30d_rate_per_day": 4093196.15,
+   "current": {
+    "month": "2026-10",
+    "days_in_month": 31,
+    "cumulative_usd": [
+     6036668.95,
+     10604712.4,
+     12199163.73,
+     14846442.67,
+     18460843.82,
+     23590894.08,
+     28690761.87,
+     34099162.17,
+     38767773.65,
+     39624717,
+     42566855.77,
+     46087967.81,
+     50192086.89,
+     55034898.95,
+     56842026.46
+    ]
+   },
+   "prior": {
+    "month": "2026-09",
+    "days_in_month": 30,
+    "cumulative_usd": [
+     4728611.65,
+     9583334.64,
+     14206234.39,
+     19687558.58,
+     20685623.62,
+     22851288.75,
+     24411774.38,
+     28583836.27,
+     34077388.58,
+     39388117.07,
+     44745823.7,
+     45571928.88,
+     46001492.2,
+     49996869.5,
+     56545171.06,
+     61762506.11,
+     66789865.18,
+     71794851.2,
+     73113819.51,
+     73829992.74,
+     79904033.16,
+     84821365.78,
+     90217263.57,
+     96190275.15,
+     100997614,
+     102046807.99,
+     104256029.99,
+     107735618.19,
+     113611207.2,
+     117917625.36
+    ]
+   }
+  },
+  "hhi_30d": 1774,
+  "by_month": [
+   {
+    "month": "2023-10",
+    "usd": 77668.41,
+    "count": 9,
+    "firms": 1,
+    "avg": 8629.82,
+    "median": 6000,
+    "vs_prior_month_pct": null,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2023-11",
+    "usd": 381079.45,
+    "count": 103,
+    "firms": 5,
+    "avg": 3699.8,
+    "median": 2396,
+    "vs_prior_month_pct": null,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2023-12",
+    "usd": 5071594.38,
+    "count": 1617,
+    "firms": 8,
+    "avg": 3136.42,
+    "median": 2000,
+    "vs_prior_month_pct": 1230.8,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2024-01",
+    "usd": 10285914.57,
+    "count": 4333,
+    "firms": 12,
+    "avg": 2373.86,
+    "median": 1216,
+    "vs_prior_month_pct": 102.8,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2024-02",
+    "usd": 9814138.36,
+    "count": 4425,
+    "firms": 14,
+    "avg": 2217.88,
+    "median": 1121,
+    "vs_prior_month_pct": -4.6,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2024-03",
+    "usd": 15582455.44,
+    "count": 6285,
+    "firms": 14,
+    "avg": 2479.31,
+    "median": 1303.9,
+    "vs_prior_month_pct": 58.8,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2024-04",
+    "usd": 21279670.15,
+    "count": 8151,
+    "firms": 15,
+    "avg": 2610.68,
+    "median": 1303.25,
+    "vs_prior_month_pct": 36.6,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2024-05",
+    "usd": 24482564.31,
+    "count": 9544,
+    "firms": 16,
+    "avg": 2565.23,
+    "median": 1404,
+    "vs_prior_month_pct": 15.1,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2024-06",
+    "usd": 23687293.78,
+    "count": 10178,
+    "firms": 16,
+    "avg": 2327.3,
+    "median": 1224,
+    "vs_prior_month_pct": -3.2,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2024-07",
+    "usd": 24405251.45,
+    "count": 10193,
+    "firms": 17,
+    "avg": 2394.31,
+    "median": 1200,
+    "vs_prior_month_pct": 3,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2024-08",
+    "usd": 25039015.11,
+    "count": 10619,
+    "firms": 19,
+    "avg": 2357.94,
+    "median": 1200,
+    "vs_prior_month_pct": 2.6,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2024-09",
+    "usd": 24549051.43,
+    "count": 11097,
+    "firms": 22,
+    "avg": 2212.22,
+    "median": 1200,
+    "vs_prior_month_pct": -2,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2024-10",
+    "usd": 30682991.69,
+    "count": 14935,
+    "firms": 23,
+    "avg": 2054.44,
+    "median": 1200,
+    "vs_prior_month_pct": 25,
+    "vs_same_month_last_year_pct": null
+   },
+   {
+    "month": "2024-11",
+    "usd": 30739986.12,
+    "count": 15613,
+    "firms": 26,
+    "avg": 1968.87,
+    "median": 1200,
+    "vs_prior_month_pct": 0.2,
+    "vs_same_month_last_year_pct": 7966.6
+   },
+   {
+    "month": "2024-12",
+    "usd": 32179380.54,
+    "count": 15495,
+    "firms": 29,
+    "avg": 2076.76,
+    "median": 1200,
+    "vs_prior_month_pct": 4.7,
+    "vs_same_month_last_year_pct": 534.5
+   },
+   {
+    "month": "2025-01",
+    "usd": 33006867.94,
+    "count": 17320,
+    "firms": 30,
+    "avg": 1905.71,
+    "median": 1200,
+    "vs_prior_month_pct": 2.6,
+    "vs_same_month_last_year_pct": 220.9
+   },
+   {
+    "month": "2025-02",
+    "usd": 33644748.72,
+    "count": 17265,
+    "firms": 30,
+    "avg": 1948.73,
+    "median": 1174,
+    "vs_prior_month_pct": 1.9,
+    "vs_same_month_last_year_pct": 242.8
+   },
+   {
+    "month": "2025-03",
+    "usd": 36837827.63,
+    "count": 19264,
+    "firms": 30,
+    "avg": 1912.26,
+    "median": 1133.3,
+    "vs_prior_month_pct": 9.5,
+    "vs_same_month_last_year_pct": 136.4
+   },
+   {
+    "month": "2025-04",
+    "usd": 43436379.74,
+    "count": 22421,
+    "firms": 33,
+    "avg": 1937.31,
+    "median": 1176,
+    "vs_prior_month_pct": 17.9,
+    "vs_same_month_last_year_pct": 104.1
+   },
+   {
+    "month": "2025-05",
+    "usd": 47628497.3,
+    "count": 23926,
+    "firms": 34,
+    "avg": 1990.66,
+    "median": 1200,
+    "vs_prior_month_pct": 9.7,
+    "vs_same_month_last_year_pct": 94.5
+   },
+   {
+    "month": "2025-06",
+    "usd": 39704303.29,
+    "count": 21585,
+    "firms": 33,
+    "avg": 1839.44,
+    "median": 1143.35,
+    "vs_prior_month_pct": -16.6,
+    "vs_same_month_last_year_pct": 67.6
+   },
+   {
+    "month": "2025-07",
+    "usd": 45755929.54,
+    "count": 27066,
+    "firms": 35,
+    "avg": 1690.53,
+    "median": 1080,
+    "vs_prior_month_pct": 15.2,
+    "vs_same_month_last_year_pct": 87.5
+   },
+   {
+    "month": "2025-08",
+    "usd": 49131154.73,
+    "count": 29958,
+    "firms": 36,
+    "avg": 1640,
+    "median": 919.9,
+    "vs_prior_month_pct": 7.4,
+    "vs_same_month_last_year_pct": 96.2
+   },
+   {
+    "month": "2025-09",
+    "usd": 51318357.88,
+    "count": 32053,
+    "firms": 36,
+    "avg": 1601.05,
+    "median": 800,
+    "vs_prior_month_pct": 4.5,
+    "vs_same_month_last_year_pct": 109
+   },
+   {
+    "month": "2025-10",
+    "usd": 71297988.27,
+    "count": 41249,
+    "firms": 36,
+    "avg": 1728.48,
+    "median": 800,
+    "vs_prior_month_pct": 38.9,
+    "vs_same_month_last_year_pct": 132.4
+   },
+   {
+    "month": "2025-11",
+    "usd": 78552479.07,
+    "count": 42799,
+    "firms": 36,
+    "avg": 1835.38,
+    "median": 1008.42,
+    "vs_prior_month_pct": 10.2,
+    "vs_same_month_last_year_pct": 155.5
+   },
+   {
+    "month": "2025-12",
+    "usd": 66359292.12,
+    "count": 37754,
+    "firms": 36,
+    "avg": 1757.68,
+    "median": 1033.2,
+    "vs_prior_month_pct": -15.5,
+    "vs_same_month_last_year_pct": 106.2
+   },
+   {
+    "month": "2026-01",
+    "usd": 74138074.94,
+    "count": 44197,
+    "firms": 37,
+    "avg": 1677.45,
+    "median": 1123.77,
+    "vs_prior_month_pct": 11.7,
+    "vs_same_month_last_year_pct": 124.6
+   },
+   {
+    "month": "2026-02",
+    "usd": 76081217.3,
+    "count": 43985,
+    "firms": 38,
+    "avg": 1729.71,
+    "median": 1000,
+    "vs_prior_month_pct": 2.6,
+    "vs_same_month_last_year_pct": 126.1
+   },
+   {
+    "month": "2026-03",
+    "usd": 85249551.52,
+    "count": 51915,
+    "firms": 38,
+    "avg": 1642.1,
+    "median": 1047.69,
+    "vs_prior_month_pct": 12.1,
+    "vs_same_month_last_year_pct": 131.4
+   },
+   {
+    "month": "2026-04",
+    "usd": 76776807.45,
+    "count": 49032,
+    "firms": 40,
+    "avg": 1565.85,
+    "median": 1000.8,
+    "vs_prior_month_pct": -9.9,
+    "vs_same_month_last_year_pct": 76.8
+   },
+   {
+    "month": "2026-05",
+    "usd": 85821156.84,
+    "count": 53885,
+    "firms": 41,
+    "avg": 1592.67,
+    "median": 1122.02,
+    "vs_prior_month_pct": 11.8,
+    "vs_same_month_last_year_pct": 80.2
+   },
+   {
+    "month": "2026-06",
+    "usd": 100567755.13,
+    "count": 64560,
+    "firms": 42,
+    "avg": 1557.74,
+    "median": 1084.8,
+    "vs_prior_month_pct": 17.2,
+    "vs_same_month_last_year_pct": 153.3
+   },
+   {
+    "month": "2026-07",
+    "usd": 105505904.18,
+    "count": 71224,
+    "firms": 42,
+    "avg": 1481.33,
+    "median": 1042.2,
+    "vs_prior_month_pct": 4.9,
+    "vs_same_month_last_year_pct": 130.6
+   },
+   {
+    "month": "2026-08",
+    "usd": 106319653.39,
+    "count": 72025,
+    "firms": 42,
+    "avg": 1476.15,
+    "median": 1042.2,
+    "vs_prior_month_pct": 0.8,
+    "vs_same_month_last_year_pct": 116.4
+   },
+   {
+    "month": "2026-09",
+    "usd": 117917625.36,
+    "count": 81041,
+    "firms": 42,
+    "avg": 1455.04,
+    "median": 1062.16,
+    "vs_prior_month_pct": 10.9,
+    "vs_same_month_last_year_pct": 129.8
+   }
+  ],
+  "by_quarter": [
+   {
+    "quarter": "2023-Q4",
+    "usd": 5530342.24,
+    "count": 1729,
+    "firms": 8,
+    "in_progress": false,
+    "vs_prior_quarter_pct": null,
+    "vs_same_quarter_last_year_pct": null,
+    "same_span_days": null,
+    "vs_prior_quarter_same_span_pct": null,
+    "vs_same_quarter_last_year_same_span_pct": null
+   },
+   {
+    "quarter": "2024-Q1",
+    "usd": 35682508.37,
+    "count": 15043,
+    "firms": 14,
+    "in_progress": false,
+    "vs_prior_quarter_pct": null,
+    "vs_same_quarter_last_year_pct": null,
+    "same_span_days": null,
+    "vs_prior_quarter_same_span_pct": null,
+    "vs_same_quarter_last_year_same_span_pct": null
+   },
+   {
+    "quarter": "2024-Q2",
+    "usd": 69449528.24,
+    "count": 27873,
+    "firms": 16,
+    "in_progress": false,
+    "vs_prior_quarter_pct": 94.6,
+    "vs_same_quarter_last_year_pct": null,
+    "same_span_days": null,
+    "vs_prior_quarter_same_span_pct": null,
+    "vs_same_quarter_last_year_same_span_pct": null
+   },
+   {
+    "quarter": "2024-Q3",
+    "usd": 73993317.99,
+    "count": 31909,
+    "firms": 22,
+    "in_progress": false,
+    "vs_prior_quarter_pct": 6.5,
+    "vs_same_quarter_last_year_pct": null,
+    "same_span_days": null,
+    "vs_prior_quarter_same_span_pct": null,
+    "vs_same_quarter_last_year_same_span_pct": null
+   },
+   {
+    "quarter": "2024-Q4",
+    "usd": 93602358.35,
+    "count": 46043,
+    "firms": 31,
+    "in_progress": false,
+    "vs_prior_quarter_pct": 26.5,
+    "vs_same_quarter_last_year_pct": null,
+    "same_span_days": null,
+    "vs_prior_quarter_same_span_pct": null,
+    "vs_same_quarter_last_year_same_span_pct": null
+   },
+   {
+    "quarter": "2025-Q1",
+    "usd": 103489444.29,
+    "count": 53849,
+    "firms": 31,
+    "in_progress": false,
+    "vs_prior_quarter_pct": 10.6,
+    "vs_same_quarter_last_year_pct": 190,
+    "same_span_days": null,
+    "vs_prior_quarter_same_span_pct": null,
+    "vs_same_quarter_last_year_same_span_pct": null
+   },
+   {
+    "quarter": "2025-Q2",
+    "usd": 130769180.34,
+    "count": 67932,
+    "firms": 34,
+    "in_progress": false,
+    "vs_prior_quarter_pct": 26.4,
+    "vs_same_quarter_last_year_pct": 88.3,
+    "same_span_days": null,
+    "vs_prior_quarter_same_span_pct": null,
+    "vs_same_quarter_last_year_same_span_pct": null
+   },
+   {
+    "quarter": "2025-Q3",
+    "usd": 146205442.14,
+    "count": 89077,
+    "firms": 36,
+    "in_progress": false,
+    "vs_prior_quarter_pct": 11.8,
+    "vs_same_quarter_last_year_pct": 97.6,
+    "same_span_days": null,
+    "vs_prior_quarter_same_span_pct": null,
+    "vs_same_quarter_last_year_same_span_pct": null
+   },
+   {
+    "quarter": "2025-Q4",
+    "usd": 216209759.45,
+    "count": 121802,
+    "firms": 36,
+    "in_progress": false,
+    "vs_prior_quarter_pct": 47.9,
+    "vs_same_quarter_last_year_pct": 131,
+    "same_span_days": null,
+    "vs_prior_quarter_same_span_pct": null,
+    "vs_same_quarter_last_year_same_span_pct": null
+   },
+   {
+    "quarter": "2026-Q1",
+    "usd": 235468843.76,
+    "count": 140097,
+    "firms": 38,
+    "in_progress": false,
+    "vs_prior_quarter_pct": 8.9,
+    "vs_same_quarter_last_year_pct": 127.5,
+    "same_span_days": null,
+    "vs_prior_quarter_same_span_pct": null,
+    "vs_same_quarter_last_year_same_span_pct": null
+   },
+   {
+    "quarter": "2026-Q2",
+    "usd": 263165719.42,
+    "count": 167477,
+    "firms": 42,
+    "in_progress": false,
+    "vs_prior_quarter_pct": 11.8,
+    "vs_same_quarter_last_year_pct": 101.2,
+    "same_span_days": null,
+    "vs_prior_quarter_same_span_pct": null,
+    "vs_same_quarter_last_year_same_span_pct": null
+   },
+   {
+    "quarter": "2026-Q3",
+    "usd": 329743182.93,
+    "count": 224290,
+    "firms": 42,
+    "in_progress": false,
+    "vs_prior_quarter_pct": 25.3,
+    "vs_same_quarter_last_year_pct": 125.5,
+    "same_span_days": null,
+    "vs_prior_quarter_same_span_pct": null,
+    "vs_same_quarter_last_year_same_span_pct": null
+   },
+   {
+    "quarter": "2026-Q4",
+    "usd": 56842026.46,
+    "count": 40374,
+    "firms": 41,
+    "in_progress": true,
+    "vs_prior_quarter_pct": -82.8,
+    "vs_same_quarter_last_year_pct": -73.7,
+    "same_span_days": 15,
+    "vs_prior_quarter_same_span_pct": 25.9,
+    "vs_same_quarter_last_year_same_span_pct": 98.6
+   }
+  ],
+  "by_year": [
+   {
+    "year": "2023",
+    "label": "2023 (Oct–Dec)",
+    "usd": 5530342.24,
+    "count": 1729,
+    "firms": 8,
+    "to_date": false,
+    "vs_prior_year_pct": null
+   },
+   {
+    "year": "2024",
+    "label": "2024",
+    "usd": 272727712.95,
+    "count": 120868,
+    "firms": 31,
+    "to_date": false,
+    "vs_prior_year_pct": null
+   },
+   {
+    "year": "2025",
+    "label": "2025",
+    "usd": 596673826.21,
+    "count": 332660,
+    "firms": 36,
+    "to_date": false,
+    "vs_prior_year_pct": 118.8
+   },
+   {
+    "year": "2026",
+    "label": "2026 to date",
+    "usd": 885219772.56,
+    "count": 572238,
+    "firms": 42,
+    "to_date": true,
+    "vs_prior_year_pct": 116.4
+   },
+   {
+    "year": "last_12m",
+    "label": "Last 12 months",
+    "usd": 1072813864.03,
+    "count": 676399,
+    "firms": 42,
+    "to_date": true,
+    "vs_prior_year_pct": 118.6
+   }
+  ],
+  "top5_30d": [
+   {
+    "firm": "Tradeify Futures",
+    "usd": 43813332.61,
+    "count": 27192,
+    "share": 35.7
+   },
+   {
+    "firm": "FundedNext",
+    "usd": 18907793.11,
+    "count": 15718,
+    "share": 15.4
+   },
+   {
+    "firm": "MyFundedFutures",
+    "usd": 14983291.28,
+    "count": 9707,
+    "share": 12.2
+   },
+   {
+    "firm": "Breakout",
+    "usd": 8624139.46,
+    "count": 5480,
+    "share": 7
+   },
+   {
+    "firm": "BlueGuardian",
+    "usd": 6012837.88,
+    "count": 3273,
+    "share": 4.9
+   }
+  ],
+  "size_buckets_30d": [
+   {
+    "bucket": "under $500",
+    "lo": 0,
+    "hi": 500,
+    "count": 19174,
+    "share_of_payouts_pct": 22.3,
+    "usd": 4541236.66,
+    "share_of_usd_pct": 3.7
+   },
+   {
+    "bucket": "$500–$1,000",
+    "lo": 500,
+    "hi": 1000,
+    "count": 19749,
+    "share_of_payouts_pct": 22.9,
+    "usd": 14778398.28,
+    "share_of_usd_pct": 12
+   },
+   {
+    "bucket": "$1,000–$2,000",
+    "lo": 1000,
+    "hi": 2000,
+    "count": 28456,
+    "share_of_payouts_pct": 33.1,
+    "usd": 39913273.79,
+    "share_of_usd_pct": 32.5
+   },
+   {
+    "bucket": "$2,000–$5,000",
+    "lo": 2000,
+    "hi": 5000,
+    "count": 16906,
+    "share_of_payouts_pct": 19.6,
+    "usd": 46692981.6,
+    "share_of_usd_pct": 38
+   },
+   {
+    "bucket": "$5,000–$10,000",
+    "lo": 5000,
+    "hi": 10000,
+    "count": 1381,
+    "share_of_payouts_pct": 1.6,
+    "usd": 9336253.61,
+    "share_of_usd_pct": 7.6
+   },
+   {
+    "bucket": "$10,000–$25,000",
+    "lo": 10000,
+    "hi": 25000,
+    "count": 343,
+    "share_of_payouts_pct": 0.4,
+    "usd": 4924285.78,
+    "share_of_usd_pct": 4
+   },
+   {
+    "bucket": "$25,000+",
+    "lo": 25000,
+    "hi": null,
+    "count": 60,
+    "share_of_payouts_pct": 0.1,
+    "usd": 2609454.89,
+    "share_of_usd_pct": 2.1
+   }
+  ],
+  "largest_on_record": {
+   "usd": 346837.9,
+   "firm": "FundedNext",
+   "date": "2025-11-01"
+  }
  }
-}
-;
+};
 /* PAYOUT_DATA_END */
 /* PFL_REVIEWS_DATA_START */ const PFL_REVIEWS_DATA = []; /* PFL_REVIEWS_DATA_END */
 const TRUSTPILOT_FIRMS=[{"name":"Alpha Capital","category":"forex","trustpilotRating":4.4,"trustpilotReviews":21699,"logo":"assets/firm-logos/firm-alpha-capital.png"},{"name":"Alpha Futures","category":"futures","trustpilotRating":4.4,"trustpilotReviews":5943,"logo":"assets/firm-logos/firm-alpha-futures.png"},{"name":"Apex Trader Funding","category":"futures","trustpilotRating":4.4,"trustpilotReviews":18690,"logo":"assets/firm-logos/firm-apex-trader-funding-new.svg"},{"name":"AquaFunded","category":"crypto","trustpilotRating":null,"trustpilotReviews":null,"logo":"assets/firm-logos/firm-aquafunded.svg"},{"name":"AquaFunded Futures","category":"futures","trustpilotRating":null,"trustpilotReviews":null,"logo":"assets/firm-logos/firm-aquafunded.svg"},{"name":"Atmos Funded","category":"forex","trustpilotRating":4.5,"trustpilotReviews":300,"logo":"assets/firm-logos/firm-atmos-funded.svg"},{"name":"Audacity Capital","category":"crypto","trustpilotRating":4.7,"trustpilotReviews":983,"logo":"assets/firm-logos/firm-audacity-capital.svg"},{"name":"Blue Guardian","category":"forex","trustpilotRating":4.3,"trustpilotReviews":2058,"logo":"assets/firm-logos/firm-blue-guardian.png"},{"name":"Blue Guardian Futures","category":"futures","trustpilotRating":3.8,"trustpilotReviews":2026,"logo":"assets/firm-logos/firm-blue-guardian.png"},{"name":"Blueberry Funded","category":"crypto","trustpilotRating":3.1,"trustpilotReviews":1501,"logo":"assets/firm-logos/firm-blueberry-funded.png"},{"name":"Blueberry Futures","category":"futures","trustpilotRating":3.2,"trustpilotReviews":11,"logo":"assets/firm-logos/firm-blueberry-funded.png"},{"name":"BrightFunded","categories":["forex","crypto"],"trustpilotRating":4.5,"trustpilotReviews":562,"logo":"assets/firm-logos/firm-brightfunded.png"},{"name":"City Traders Imperium","category":"crypto","trustpilotRating":4.2,"trustpilotReviews":1623,"logo":"assets/firm-logos/firm-city-traders-imperium.svg"},{"name":"Crypto Fund Trader","categories":["forex","crypto"],"trustpilotRating":4.4,"trustpilotReviews":1100,"logo":"assets/firm-logos/firm-crypto-fund-trader.svg"},{"name":"Darwinex Zero","category":"crypto","trustpilotRating":3.8,"trustpilotReviews":169,"logo":"assets/firm-logos/firm-darwinex-zero.png"},{"name":"DayTraders","category":"futures","trustpilotRating":4.6,"trustpilotReviews":473,"logo":"assets/firm-logos/firm-daytraders.png"},{"name":"E8 Futures","category":"futures","trustpilotRating":4.3,"trustpilotReviews":2640,"logo":"assets/firm-logos/firm-e8-markets.svg"},{"name":"E8 Markets","category":"forex","trustpilotRating":4.8,"trustpilotReviews":3297,"logo":"assets/firm-logos/firm-e8-markets.svg"},{"name":"Earn2Trade","category":"futures","trustpilotRating":4.6,"trustpilotReviews":4991,"logo":"assets/firm-logos/firm-earn2trade.png"},{"name":"FTMO","category":"crypto","trustpilotRating":4.8,"trustpilotReviews":52418,"logo":"assets/firm-logos/firm-ftmo.svg"},{"name":"Finotive Funding","category":"crypto","trustpilotRating":4.1,"trustpilotReviews":500,"logo":"assets/firm-logos/firm-finotive-funding.svg"},{"name":"Fintokei","category":"crypto","trustpilotRating":4.4,"trustpilotReviews":1137,"logo":"assets/firm-logos/firm-fintokei.png"},{"name":"Funded Futures Family","category":"futures","trustpilotRating":4.7,"trustpilotReviews":2000,"logo":"assets/firm-logos/firm-funded-futures-family.png"},{"name":"Funded Trading Plus","category":"crypto","trustpilotRating":null,"trustpilotReviews":null,"logo":"assets/firm-logos/firm-funded-trading-plus.png"},{"name":"FundedElite","category":"forex","trustpilotRating":4.4,"trustpilotReviews":715,"logo":"assets/firm-logos/firm-fundedelite.svg"},{"name":"FundedNext","category":"forex","trustpilotRating":4.5,"trustpilotReviews":79337,"logo":"assets/firm-logos/firm-fundednext.svg"},{"name":"FundedNext Futures","category":"futures","trustpilotRating":4.5,"trustpilotReviews":79112,"logo":"assets/firm-logos/firm-fundednext-futures.png"},{"name":"FundingPips","category":"forex","trustpilotRating":4.5,"trustpilotReviews":68901,"logo":"assets/firm-logos/firm-fundingpips.svg"},{"name":"FuturesElite","category":"futures","trustpilotRating":4.7,"trustpilotReviews":314,"logo":"assets/firm-logos/firm-futureselite-new.svg"},{"name":"Goat Funded Futures","category":"futures","trustpilotRating":null,"trustpilotReviews":null,"logo":"assets/firm-logos/firm-goat-funded-futures.png"},{"name":"Goat Funded Trader","category":"forex","trustpilotRating":2.6,"trustpilotReviews":4013,"logo":"assets/firm-logos/firm-goat-funded-trader.svg"},{"name":"Hantec Trader","category":"crypto","trustpilotRating":4.3,"trustpilotReviews":792,"logo":"assets/firm-logos/firm-hantec-trader.png"},{"name":"Hola Prime","category":"forex","trustpilotRating":4.5,"trustpilotReviews":3711,"logo":"assets/firm-logos/firm-hola-prime.png"},{"name":"Instant Funding","category":"forex","trustpilotRating":4.3,"trustpilotReviews":359,"logo":"assets/firm-logos/firm-instant-funding.png"},{"name":"Lark Funding","category":"crypto","trustpilotRating":4.2,"trustpilotReviews":524,"logo":"assets/firm-logos/firm-lark-funding.svg"},{"name":"Lucid Trading","category":"futures","trustpilotRating":4.4,"trustpilotReviews":6000,"logo":"assets/firm-logos/firm-lucid-trading.png"},{"name":"Maven","category":"forex","trustpilotRating":4.2,"trustpilotReviews":5208,"logo":"assets/firm-logos/firm-maven.png"},{"name":"Ment Funding","category":"crypto","trustpilotRating":4.8,"trustpilotReviews":231,"logo":"assets/firm-logos/firm-ment-funding.png"},{"name":"Moneta Funded","category":"crypto","trustpilotRating":4.4,"trustpilotReviews":81,"logo":"assets/firm-logos/firm-moneta-funded.png"},{"name":"My Funded Futures","category":"futures","trustpilotRating":4.9,"trustpilotReviews":21449,"logo":"assets/firm-logos/firm-my-funded-futures.png"},{"name":"Nordic Funder","category":"crypto","trustpilotRating":3.2,"trustpilotReviews":56,"logo":"assets/firm-logos/firm-nordic-funder.svg"},{"name":"Orion Funded","category":"crypto","trustpilotRating":4.6,"trustpilotReviews":1700,"logo":"assets/firm-logos/firm-orion-funded.png"},{"name":"Take Profit Trader","category":"futures","trustpilotRating":4.4,"trustpilotReviews":8859,"logo":"assets/firm-logos/firm-take-profit-trader-new.svg"},{"name":"The Trading Pit","category":"crypto","trustpilotRating":null,"trustpilotReviews":null,"logo":"assets/firm-logos/firm-the-trading-pit.png"},{"name":"The Trading Pit Futures","category":"futures","trustpilotRating":null,"trustpilotReviews":null,"logo":"assets/firm-logos/firm-the-trading-pit-futures.svg"},{"name":"The5ers","category":"forex","trustpilotRating":4.7,"trustpilotReviews":37958,"logo":"assets/firm-logos/firm-the5ers.svg"},{"name":"The5ers Futures","category":"futures","trustpilotRating":4.7,"trustpilotReviews":33735,"logo":"assets/firm-logos/firm-the5ers-futures.png"},{"name":"ThinkCapital","category":"crypto","trustpilotRating":4.0,"trustpilotReviews":607,"logo":"assets/firm-logos/firm-thinkcapital.png"},{"name":"Top One Futures","category":"futures","trustpilotRating":4.8,"trustpilotReviews":4700,"logo":"assets/firm-logos/firm-top-one-futures.png"},{"name":"Top One Trader","category":"crypto","trustpilotRating":null,"trustpilotReviews":null,"logo":"assets/firm-logos/firm-top-one-trader.svg"},{"name":"Topstep","category":"futures","trustpilotRating":3.6,"trustpilotReviews":14811,"logo":"assets/firm-logos/firm-topstep.png"},{"name":"Trade The Pool","category":"forex","trustpilotRating":4.5,"trustpilotReviews":831,"logo":"assets/firm-logos/firm-trade-the-pool-dark-new.svg"},{"name":"TradeDay","category":"futures","trustpilotRating":4.6,"trustpilotReviews":1434,"logo":"assets/firm-logos/firm-tradeday-new.svg"},{"name":"Tradeify","category":"futures","trustpilotRating":4.5,"trustpilotReviews":4501,"logo":"assets/firm-logos/firm-tradeify.png"},{"name":"Traders Launch","category":"futures","trustpilotRating":4.6,"trustpilotReviews":55,"logo":"assets/firm-logos/firm-traders-launch-new.svg"},{"name":"WSFunded","category":"crypto","trustpilotRating":4.3,"trustpilotReviews":4744,"logo":"assets/firm-logos/firm-wsfunded.png"},{"name":"Ylos Trading","category":"futures","trustpilotRating":4.8,"trustpilotReviews":634,"logo":"assets/firm-logos/firm-ylos-trading-new.svg"},{"name":"Axi Select","category":"forex","trustpilotRating":4.1,"trustpilotReviews":7708,"logo":"assets/firm-logos/firm-axi-select.png"},{"name":"BEM Funding","categories":["forex","crypto"],"trustpilotRating":4.5,"trustpilotReviews":124,"logo":"assets/firm-logos/firm-bem-funding.png"},{"name":"Breakout","category":"crypto","trustpilotRating":4.7,"trustpilotReviews":null,"logo":"assets/firm-logos/firm-breakout.png"},{"name":"E8 Perpetuals","category":"crypto","trustpilotRating":null,"trustpilotReviews":null,"logo":"assets/firm-logos/firm-e8-perpetuals.png"},{"name":"FXIFY","category":"forex","trustpilotRating":4.3,"trustpilotReviews":6246,"logo":"assets/firm-logos/firm-fxify.png"},{"name":"For Traders","category":"forex","trustpilotRating":4.4,"trustpilotReviews":297,"logo":"assets/firm-logos/firm-for-traders.png"},{"name":"For Traders Crypto","category":"crypto","trustpilotRating":null,"trustpilotReviews":null,"logo":"assets/firm-logos/firm-for-traders-crypto.png"},{"name":"Hola Prime Futures","category":"futures","trustpilotRating":4.6,"trustpilotReviews":1716,"logo":"assets/firm-logos/firm-hola-prime-futures.png"},{"name":"Leveraged","category":"forex","trustpilotRating":4.5,"trustpilotReviews":140,"logo":"assets/firm-logos/firm-leveraged.png"},{"name":"Leveraged Crypto","category":"crypto","trustpilotRating":null,"trustpilotReviews":null,"logo":"assets/firm-logos/firm-leveraged-crypto.png"},{"name":"Tradeify 247","category":"crypto","trustpilotRating":4.2,"trustpilotReviews":112,"logo":"assets/firm-logos/firm-tradeify-247.png"},{"name":"WenCrypto","category":"crypto","trustpilotRating":null,"trustpilotReviews":null,"logo":"assets/firm-logos/firm-wencrypto.png"}];
@@ -2539,9 +2825,38 @@ document.addEventListener('submit', function(e) {
     }
   }
 
+  // Live Payout Auto-Sync (polls backend feed every 60 seconds)
+  function initLivePayoutFeed() {
+    async function syncFeed() {
+      try {
+        const res = await fetch('/api/payouts');
+        if (!res.ok) return;
+        const fresh = await res.json();
+        if (fresh && fresh.captured_at && fresh.captured_at !== PAYOUT_DATA.captured_at) {
+          Object.assign(PAYOUT_DATA, fresh);
+          if (typeof currentPage !== 'undefined' && currentPage === 'payouts') {
+            if (typeof renderPayoutView === 'function') renderPayoutView();
+          }
+          if (typeof FOREX_NAMES !== 'undefined' && typeof payoutCanonicalName === 'function') {
+            const forexCount = new Set([...(PAYOUT_DATA.latest_24h||[]),...(PAYOUT_DATA.weekly?.rows||[]),...(PAYOUT_DATA.monthly?.rows||[])]
+              .filter(x => FOREX_NAMES.has(payoutCanonicalName(x.firm)))
+              .map(x => payoutCanonicalName(x.firm))).size;
+            const heroEl = document.querySelector('#heroPayoutFirmCount');
+            if (heroEl) heroEl.textContent = forexCount.toLocaleString();
+          }
+        }
+      } catch (_) {}
+    }
+    setInterval(syncFeed, 60000);
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bindScroll);
+    document.addEventListener('DOMContentLoaded', () => {
+      bindScroll();
+      initLivePayoutFeed();
+    });
   } else {
     bindScroll();
+    initLivePayoutFeed();
   }
 })();
