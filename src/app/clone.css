@@ -551,52 +551,58 @@ main{background:
   border: 1px solid rgba(56, 189, 248, 0.25);
 }
 
-/* Leaderboard Table 3D */
+/* Leaderboard Table / Home Page Card Format */
 .reviews-table-3d {
-  background: linear-gradient(145deg, rgba(13, 22, 38, 0.9), rgba(8, 14, 26, 0.95));
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 18px;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
-  overflow: hidden;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  padding: 0 !important;
 }
 
 .rev-table-head {
-  display: grid;
-  grid-template-columns: 2.2fr 1.5fr 1.6fr 1.6fr 1.4fr;
-  align-items: center;
-  gap: 16px;
-  padding: 16px 22px;
-  background: rgba(17, 28, 48, 0.6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 10px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #718096;
+  display: grid !important;
+  grid-template-columns: minmax(220px, 2.2fr) minmax(160px, 1.5fr) minmax(170px, 1.6fr) minmax(140px, 1.3fr) minmax(170px, 1.4fr) !important;
+  align-items: center !important;
+  gap: 16px !important;
+  padding: 0 18px 11px !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: none !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: #7E8B9F !important;
 }
 
 .rev-table-body {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
 }
 
 .rev-firm-card-3d {
-  display: grid;
-  grid-template-columns: 2.2fr 1.5fr 1.6fr 1.6fr 1.4fr;
-  align-items: center;
-  gap: 16px;
-  padding: 16px 22px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  background: transparent;
-  transition: all 0.2s ease;
+  display: grid !important;
+  grid-template-columns: minmax(220px, 2.2fr) minmax(160px, 1.5fr) minmax(170px, 1.6fr) minmax(140px, 1.3fr) minmax(170px, 1.4fr) !important;
+  gap: 16px !important;
+  align-items: center !important;
+  min-height: 104px !important;
+  padding: 16px 18px !important;
+  background: rgba(14, 17, 34, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  margin-bottom: 0 !important;
 }
 
 .rev-firm-card-3d:hover {
-  background: rgba(0, 240, 255, 0.03);
-}
-
-.rev-firm-card-3d:last-child {
-  border-bottom: none;
+  background: rgba(20, 25, 48, 0.88) !important;
+  border-color: rgba(0, 240, 255, 0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 22px rgba(0, 240, 255, 0.2) !important;
 }
 
 /* Firm Cell */
@@ -607,15 +613,42 @@ main{background:
 }
 
 .rev-rank-num {
-  font-family: 'Outfit', Inter, sans-serif;
-  font-size: 14px;
-  font-weight: 900;
-  color: #64748B;
-  min-width: 22px;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  display: grid !important;
+  place-items: center !important;
+  font-family: 'Outfit', Inter, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  background: #171822 !important;
+  color: #C0C6D8 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  flex-shrink: 0 !important;
 }
 
-.rev-rank-medal {
-  font-size: 18px;
+.rev-firm-card-3d:nth-child(1) .rev-rank-num,
+.rev-rank-num[data-rank="1"] {
+  background: linear-gradient(135deg, #FFD700 0%, #F59E0B 100%) !important;
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.5) !important;
+  color: #050505 !important;
+  border: none !important;
+}
+
+.rev-firm-card-3d:nth-child(2) .rev-rank-num,
+.rev-rank-num[data-rank="2"] {
+  background: linear-gradient(135deg, #F1F5F9 0%, #94A3B8 100%) !important;
+  box-shadow: 0 0 14px rgba(148, 163, 184, 0.45) !important;
+  color: #050505 !important;
+  border: none !important;
+}
+
+.rev-firm-card-3d:nth-child(3) .rev-rank-num,
+.rev-rank-num[data-rank="3"] {
+  background: linear-gradient(135deg, #FB923C 0%, #C2410C 100%) !important;
+  box-shadow: 0 0 14px rgba(251, 146, 60, 0.45) !important;
+  color: #050505 !important;
+  border: none !important;
 }
 
 .rev-firm-logo-wrap {
@@ -5858,35 +5891,38 @@ footer#footer .bottom-copy {
    ========================================================================== */
 .rev-table-head {
   display: grid !important;
-  grid-template-columns: 2.1fr 1.6fr 1.8fr 1.3fr 1.6fr !important;
+  grid-template-columns: minmax(220px, 2.2fr) minmax(160px, 1.5fr) minmax(170px, 1.6fr) minmax(140px, 1.3fr) minmax(170px, 1.4fr) !important;
   gap: 16px !important;
-  padding: 14px 20px !important;
+  padding: 0 18px 11px !important;
   font-size: 11px !important;
   font-weight: 800 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.6px !important;
-  color: #64748B !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  letter-spacing: 0.08em !important;
+  color: #7E8B9F !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: none !important;
 }
 
 .rev-firm-card-3d {
   display: grid !important;
-  grid-template-columns: 2.1fr 1.6fr 1.8fr 1.3fr 1.6fr !important;
+  grid-template-columns: minmax(220px, 2.2fr) minmax(160px, 1.5fr) minmax(170px, 1.6fr) minmax(140px, 1.3fr) minmax(170px, 1.4fr) !important;
   gap: 16px !important;
   align-items: center !important;
-  padding: 16px 20px !important;
-  background: rgba(10, 16, 28, 0.7) !important;
-  border: 1px solid rgba(255, 255, 255, 0.07) !important;
-  border-radius: 16px !important;
-  margin-bottom: 10px !important;
-  transition: all 0.22s ease !important;
+  min-height: 104px !important;
+  padding: 16px 18px !important;
+  background: rgba(14, 17, 34, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .rev-firm-card-3d:hover {
-  background: rgba(14, 22, 38, 0.85) !important;
-  border-color: rgba(0, 240, 255, 0.35) !important;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 240, 255, 0.12) !important;
-  transform: translateY(-1.5px) !important;
+  background: rgba(20, 25, 48, 0.88) !important;
+  border-color: rgba(0, 240, 255, 0.4) !important;
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 22px rgba(0, 240, 255, 0.2) !important;
+  transform: translateY(-2px) !important;
 }
 
 /* Category 1: Trustpilot Rating Cell */
