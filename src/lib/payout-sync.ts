@@ -360,3 +360,4 @@ ${updated}
     console.error('Error saving synced payouts:', err);
   }
 }
+

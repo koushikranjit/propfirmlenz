@@ -269,3 +269,4 @@ if (isOnce) {
   syncOnce();
   setInterval(syncOnce, INTERVAL_MS);
 }
+

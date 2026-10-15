@@ -19,3 +19,4 @@ export async function register() {
     }, 60 * 1000);
   }
 }
+

@@ -1,5 +1,5 @@
 /* PAYOUT_DATA_START */ const PAYOUT_DATA = {
- "captured_at": "2026-10-15T06:49:51.157Z",
+ "captured_at": "2026-10-15T07:05:51.371Z",
  "attribution": {
   "text": "Live Verified Blockchain Feed",
   "url": "#page-payouts"
@@ -67,20 +67,20 @@
   {
    "firm": "MyFundedFutures",
    "methods": "Rise",
-   "total": "$664,580",
-   "count": "599",
+   "total": "$664,695",
+   "count": "603",
    "largest": "$10,308",
-   "average": "$1,109",
-   "latest": "Oct 15, 06:38 UTC"
+   "average": "$1,102",
+   "latest": "Oct 15, 06:57 UTC"
   },
   {
    "firm": "FundedNext",
    "methods": "Rise Direct Crypto",
-   "total": "$628,398",
-   "count": "567",
+   "total": "$621,938",
+   "count": "574",
    "largest": "$14,820",
-   "average": "$1,108",
-   "latest": "Oct 15, 06:34 UTC"
+   "average": "$1,084",
+   "latest": "Oct 15, 06:57 UTC"
   },
   {
    "firm": "Breakout",
@@ -101,15 +101,6 @@
    "latest": "Oct 14, 20:57 UTC"
   },
   {
-   "firm": "FundingPips",
-   "methods": "Rise",
-   "total": "$138,663",
-   "count": "70",
-   "largest": "$26,248",
-   "average": "$1,981",
-   "latest": "Oct 15, 05:32 UTC"
-  },
-  {
    "firm": "BlueGuardian",
    "methods": "Rise Direct Crypto",
    "total": "$138,439",
@@ -117,6 +108,15 @@
    "largest": "$5,461",
    "average": "$1,489",
    "latest": "Oct 14, 23:23 UTC"
+  },
+  {
+   "firm": "FundingPips",
+   "methods": "Rise",
+   "total": "$126,963",
+   "count": "61",
+   "largest": "$26,248",
+   "average": "$2,081",
+   "latest": "Oct 15, 06:56 UTC"
   },
   {
    "firm": "Propr",
@@ -128,6 +128,15 @@
    "latest": "Oct 15, 06:22 UTC"
   },
   {
+   "firm": "The5ers",
+   "methods": "Rise",
+   "total": "$107,989",
+   "count": "56",
+   "largest": "$5,809",
+   "average": "$1,928",
+   "latest": "Oct 15, 06:56 UTC"
+  },
+  {
    "firm": "FuturesElite",
    "methods": "Rise",
    "total": "$103,123",
@@ -135,15 +144,6 @@
    "largest": "$50,238",
    "average": "$3,556",
    "latest": "Oct 14, 12:46 UTC"
-  },
-  {
-   "firm": "The5ers",
-   "methods": "Rise",
-   "total": "$100,610",
-   "count": "51",
-   "largest": "$5,809",
-   "average": "$1,973",
-   "latest": "Oct 15, 06:42 UTC"
   },
   {
    "firm": "GoatFundedTrader",
@@ -164,15 +164,6 @@
    "latest": "Oct 14, 17:24 UTC"
   },
   {
-   "firm": "FundedTraderMarkets",
-   "methods": "Rise Direct Crypto",
-   "total": "$61,670",
-   "count": "44",
-   "largest": "$12,054",
-   "average": "$1,402",
-   "latest": "Oct 15, 06:24 UTC"
-  },
-  {
    "firm": "E8Markets",
    "methods": "Rise",
    "total": "$60,470",
@@ -182,13 +173,22 @@
    "latest": "Oct 14, 16:02 UTC"
   },
   {
+   "firm": "FundedTraderMarkets",
+   "methods": "Rise Direct Crypto",
+   "total": "$60,067",
+   "count": "41",
+   "largest": "$12,054",
+   "average": "$1,465",
+   "latest": "Oct 15, 06:24 UTC"
+  },
+  {
    "firm": "Hypernova",
    "methods": "Direct Crypto",
-   "total": "$53,110",
-   "count": "26",
+   "total": "$53,513",
+   "count": "27",
    "largest": "$8,000",
-   "average": "$2,043",
-   "latest": "Oct 15, 06:15 UTC"
+   "average": "$1,982",
+   "latest": "Oct 15, 06:50 UTC"
   },
   {
    "firm": "YlosTrading",
@@ -256,11 +256,11 @@
   {
    "firm": "HolaPrime",
    "methods": "Rise Direct Crypto",
-   "total": "$18,941",
-   "count": "15",
-   "largest": "$2,814",
-   "average": "$1,263",
-   "latest": "Oct 15, 05:46 UTC"
+   "total": "$24,699",
+   "count": "16",
+   "largest": "$3,510",
+   "average": "$1,544",
+   "latest": "Oct 15, 06:57 UTC"
   },
   {
    "firm": "Tradeify 247",
@@ -272,6 +272,15 @@
    "latest": "Oct 14, 22:29 UTC"
   },
   {
+   "firm": "FundedHive",
+   "methods": "Direct Crypto",
+   "total": "$7,487",
+   "count": "27",
+   "largest": "$800",
+   "average": "$277",
+   "latest": "Oct 15, 06:46 UTC"
+  },
+  {
    "firm": "PhidiasPropFirm",
    "methods": "Rise",
    "total": "$6,922",
@@ -279,15 +288,6 @@
    "largest": "$2,200",
    "average": "$1,154",
    "latest": "Oct 14, 14:55 UTC"
-  },
-  {
-   "firm": "FundedHive",
-   "methods": "Direct Crypto",
-   "total": "$6,787",
-   "count": "26",
-   "largest": "$800",
-   "average": "$261",
-   "latest": "Oct 15, 06:38 UTC"
   },
   {
    "firm": "TopTierTrader",
@@ -299,15 +299,6 @@
    "latest": "Oct 14, 19:22 UTC"
   },
   {
-   "firm": "OrionFunded",
-   "methods": "Rise",
-   "total": "$5,379",
-   "count": "9",
-   "largest": "$1,729",
-   "average": "$598",
-   "latest": "Oct 15, 06:24 UTC"
-  },
-  {
    "firm": "AquaFutures",
    "methods": "Rise",
    "total": "$5,238",
@@ -315,6 +306,15 @@
    "largest": "$1,746",
    "average": "$1,746",
    "latest": "Oct 14, 13:01 UTC"
+  },
+  {
+   "firm": "OrionFunded",
+   "methods": "Rise",
+   "total": "$4,514",
+   "count": "7",
+   "largest": "$1,729",
+   "average": "$645",
+   "latest": "Oct 15, 06:24 UTC"
   },
   {
    "firm": "TradersYard",
@@ -383,7 +383,7 @@
  "weekly": {
   "headline": {
    "range": "12–18 October 2026",
-   "total": "$14,275,169"
+   "total": "$14,321,395"
   },
   "rows": [
    {
@@ -393,7 +393,7 @@
      "$5,320,564",
      "3,090",
      "▼ 49.9%",
-     "37.3%"
+     "37.2%"
     ],
     "firm": "Tradeify Futures",
     "method": "Rise"
@@ -402,10 +402,10 @@
     "cells": [
      "2",
      "FundedNext Tracked payout method: Rise Direct Crypto",
-     "$2,149,284",
-     "1,874",
-     "▼ 46.2%",
-     "15.1%"
+     "$2,176,400",
+     "1,894",
+     "▼ 45.5%",
+     "15.2%"
     ],
     "firm": "FundedNext",
     "method": "Rise Direct Crypto"
@@ -414,9 +414,9 @@
     "cells": [
      "3",
      "MyFundedFutures Tracked payout method: Rise",
-     "$1,797,070",
-     "1,429",
-     "▼ 46.0%",
+     "$1,800,118",
+     "1,434",
+     "▼ 45.9%",
      "12.6%"
     ],
     "firm": "MyFundedFutures",
@@ -462,9 +462,9 @@
     "cells": [
      "7",
      "FundingPips Tracked payout method: Rise",
-     "$359,627",
-     "177",
-     "▼ 56.1%",
+     "$360,187",
+     "178",
+     "▼ 56.0%",
      "2.5%"
     ],
     "firm": "FundingPips",
@@ -474,10 +474,10 @@
     "cells": [
      "8",
      "The5ers Tracked payout method: Rise",
-     "$273,667",
-     "162",
-     "▼ 74.6%",
-     "1.9%"
+     "$281,046",
+     "167",
+     "▼ 73.9%",
+     "2.0%"
     ],
     "firm": "The5ers",
     "method": "Rise"
@@ -594,9 +594,9 @@
     "cells": [
      "18",
      "Hypernova Tracked payout method: Direct Crypto",
-     "$106,552",
-     "60",
-     "▼ 47.0%",
+     "$106,955",
+     "61",
+     "▼ 46.8%",
      "0.7%"
     ],
     "firm": "Hypernova",
@@ -617,6 +617,18 @@
    {
     "cells": [
      "20",
+     "HolaPrime Tracked payout method: Rise Direct Crypto",
+     "$87,250",
+     "70",
+     "▼ 62.1%",
+     "0.6%"
+    ],
+    "firm": "HolaPrime",
+    "method": "Rise Direct Crypto"
+   },
+   {
+    "cells": [
+     "21",
      "Legends Trading Tracked payout method: Rise",
      "$82,807",
      "67",
@@ -628,7 +640,7 @@
    },
    {
     "cells": [
-     "21",
+     "22",
      "AlphaFutures Tracked payout method: Rise",
      "$80,664",
      "59",
@@ -637,18 +649,6 @@
     ],
     "firm": "AlphaFutures",
     "method": "Rise"
-   },
-   {
-    "cells": [
-     "22",
-     "HolaPrime Tracked payout method: Rise Direct Crypto",
-     "$80,230",
-     "68",
-     "▼ 65.2%",
-     "0.6%"
-    ],
-    "firm": "HolaPrime",
-    "method": "Rise Direct Crypto"
    },
    {
     "cells": [
@@ -762,9 +762,9 @@
     "cells": [
      "32",
      "FundedHive Tracked payout method: Direct Crypto",
-     "$16,223",
-     "48",
-     "▼ 60.5%",
+     "$16,923",
+     "49",
+     "▼ 58.8%",
      "0.1%"
     ],
     "firm": "FundedHive",
@@ -801,7 +801,7 @@
      "$7,307",
      "11",
      "▼ 81.5%",
-     "0.1%"
+     "0.0%"
     ],
     "firm": "TopOneTrader",
     "method": "Rise"
@@ -847,7 +847,7 @@
  "monthly": {
   "headline": {
    "range": "October 2026",
-   "total": "$56,842,025"
+   "total": "$56,888,252"
   },
   "rows": [
    {
@@ -857,7 +857,7 @@
      "$22,199,161",
      "13,794",
      "▼ 44.4%",
-     "39.1%"
+     "39.0%"
     ],
     "firm": "Tradeify Futures",
     "method": "Rise"
@@ -866,9 +866,9 @@
     "cells": [
      "2",
      "FundedNext Tracked payout method: Rise Direct Crypto",
-     "$8,555,565",
-     "7,059",
-     "▼ 52.6%",
+     "$8,582,681",
+     "7,079",
+     "▼ 52.4%",
      "15.1%"
     ],
     "firm": "FundedNext",
@@ -878,8 +878,8 @@
     "cells": [
      "3",
      "MyFundedFutures Tracked payout method: Rise",
-     "$6,732,611",
-     "4,494",
+     "$6,735,660",
+     "4,499",
      "▼ 57.5%",
      "11.8%"
     ],
@@ -914,9 +914,9 @@
     "cells": [
      "6",
      "The5ers Tracked payout method: Rise",
-     "$1,801,435",
-     "1,055",
-     "▼ 49.9%",
+     "$1,808,814",
+     "1,060",
+     "▼ 49.7%",
      "3.2%"
     ],
     "firm": "The5ers",
@@ -938,8 +938,8 @@
     "cells": [
      "8",
      "FundingPips Tracked payout method: Rise",
-     "$1,449,741",
-     "780",
+     "$1,450,301",
+     "781",
      "▼ 59.3%",
      "2.6%"
     ],
@@ -1046,9 +1046,9 @@
     "cells": [
      "17",
      "HolaPrime Tracked payout method: Rise Direct Crypto",
-     "$393,468",
-     "303",
-     "▼ 60.9%",
+     "$400,488",
+     "305",
+     "▼ 60.2%",
      "0.7%"
     ],
     "firm": "HolaPrime",
@@ -1070,9 +1070,9 @@
     "cells": [
      "19",
      "Hypernova Tracked payout method: Direct Crypto",
-     "$359,658",
-     "275",
-     "▼ 41.8%",
+     "$360,061",
+     "276",
+     "▼ 41.7%",
      "0.6%"
     ],
     "firm": "Hypernova",
@@ -1190,9 +1190,9 @@
     "cells": [
      "29",
      "FundedHive Tracked payout method: Direct Crypto",
-     "$82,692",
-     "210",
-     "▼ 56.8%",
+     "$83,392",
+     "211",
+     "▼ 56.5%",
      "0.1%"
     ],
     "firm": "FundedHive",
@@ -1277,7 +1277,7 @@
      "$27,044",
      "33",
      "▼ 78.9%",
-     "0.0%"
+     "0.1%"
     ],
     "firm": "Elite Trader Funding",
     "method": "Rise"
@@ -1497,42 +1497,42 @@
   }
  ],
  "stats": {
-  "generated_at": "2026-10-15T06:42:03Z",
+  "generated_at": "2026-10-15T06:57:20Z",
   "all_time": {
-   "usd": 1760151653.96,
-   "count": 1027495,
+   "usd": 1760197879.39,
+   "count": 1027530,
    "firms": 42,
    "since": "2023-10-18"
   },
   "last_12m": {
-   "usd": 1072813864.03,
-   "count": 676399,
+   "usd": 1072822739.2,
+   "count": 676409,
    "firms": 42
   },
   "last_30d": {
-   "usd": 122795884.61,
-   "count": 86069,
+   "usd": 122699328.59,
+   "count": 86021,
    "firms": 42,
-   "avg": 1426.71,
-   "median": 1102.85,
-   "vs_prior_30d_pct": 14.2
+   "avg": 1426.39,
+   "median": 1102.23,
+   "vs_prior_30d_pct": 13.9
   },
   "last_24h": {
-   "usd": 4511259.64,
-   "count": 3430,
+   "usd": 4504986.96,
+   "count": 3435,
    "firms": 36,
    "leading_firm": "Tradeify Futures"
   },
   "week_to_date": {
-   "usd": 14275170.69,
-   "count": 10215,
+   "usd": 14321396.12,
+   "count": 10250,
    "firms": 38,
    "leading_firm": "Tradeify Futures",
    "from": "2026-10-12T00:00:00Z"
   },
   "month_to_date": {
-   "usd": 56842026.46,
-   "count": 40374,
+   "usd": 56888251.89,
+   "count": 40409,
    "firms": 41,
    "leading_firm": "Tradeify Futures",
    "from": "2026-10-01T00:00:00Z"
@@ -1547,7 +1547,7 @@
   },
   "cumulative_by_day": {
    "note": "Cumulative verified payouts by day of month (UTC). `current` runs to the most recent verified payout; `prior` is the last complete month.",
-   "trailing_30d_rate_per_day": 4093196.15,
+   "trailing_30d_rate_per_day": 4089977.62,
    "current": {
     "month": "2026-10",
     "days_in_month": 31,
@@ -1566,7 +1566,7 @@
      46087967.81,
      50192086.89,
      55034898.95,
-     56842026.46
+     56888251.89
     ]
    },
    "prior": {
@@ -1606,7 +1606,7 @@
     ]
    }
   },
-  "hhi_30d": 1774,
+  "hhi_30d": 1775,
   "by_month": [
    {
     "month": "2023-10",
@@ -2116,15 +2116,15 @@
    },
    {
     "quarter": "2026-Q4",
-    "usd": 56842026.46,
-    "count": 40374,
+    "usd": 56888251.89,
+    "count": 40409,
     "firms": 41,
     "in_progress": true,
-    "vs_prior_quarter_pct": -82.8,
+    "vs_prior_quarter_pct": -82.7,
     "vs_same_quarter_last_year_pct": -73.7,
     "same_span_days": 15,
-    "vs_prior_quarter_same_span_pct": 25.9,
-    "vs_same_quarter_last_year_same_span_pct": 98.6
+    "vs_prior_quarter_same_span_pct": 26,
+    "vs_same_quarter_last_year_same_span_pct": 98.5
    }
   ],
   "by_year": [
@@ -2158,8 +2158,8 @@
    {
     "year": "2026",
     "label": "2026 to date",
-    "usd": 885219772.56,
-    "count": 572238,
+    "usd": 885265997.99,
+    "count": 572273,
     "firms": 42,
     "to_date": true,
     "vs_prior_year_pct": 116.4
@@ -2167,8 +2167,8 @@
    {
     "year": "last_12m",
     "label": "Last 12 months",
-    "usd": 1072813864.03,
-    "count": 676399,
+    "usd": 1072822739.2,
+    "count": 676409,
     "firms": 42,
     "to_date": true,
     "vs_prior_year_pct": 118.6
@@ -2183,14 +2183,14 @@
    },
    {
     "firm": "FundedNext",
-    "usd": 18907793.11,
-    "count": 15718,
+    "usd": 18843051.34,
+    "count": 15674,
     "share": 15.4
    },
    {
     "firm": "MyFundedFutures",
-    "usd": 14983291.28,
-    "count": 9707,
+    "usd": 14983054.4,
+    "count": 9709,
     "share": 12.2
    },
    {
@@ -2211,9 +2211,9 @@
     "bucket": "under $500",
     "lo": 0,
     "hi": 500,
-    "count": 19174,
+    "count": 19185,
     "share_of_payouts_pct": 22.3,
-    "usd": 4541236.66,
+    "usd": 4544327.72,
     "share_of_usd_pct": 3.7
    },
    {
@@ -2221,44 +2221,44 @@
     "lo": 500,
     "hi": 1000,
     "count": 19749,
-    "share_of_payouts_pct": 22.9,
-    "usd": 14778398.28,
+    "share_of_payouts_pct": 23,
+    "usd": 14778732.82,
     "share_of_usd_pct": 12
    },
    {
     "bucket": "$1,000–$2,000",
     "lo": 1000,
     "hi": 2000,
-    "count": 28456,
-    "share_of_payouts_pct": 33.1,
-    "usd": 39913273.79,
+    "count": 28410,
+    "share_of_payouts_pct": 33,
+    "usd": 39857560.31,
     "share_of_usd_pct": 32.5
    },
    {
     "bucket": "$2,000–$5,000",
     "lo": 2000,
     "hi": 5000,
-    "count": 16906,
+    "count": 16897,
     "share_of_payouts_pct": 19.6,
-    "usd": 46692981.6,
+    "usd": 46681267.53,
     "share_of_usd_pct": 38
    },
    {
     "bucket": "$5,000–$10,000",
     "lo": 5000,
     "hi": 10000,
-    "count": 1381,
+    "count": 1378,
     "share_of_payouts_pct": 1.6,
-    "usd": 9336253.61,
+    "usd": 9316496.03,
     "share_of_usd_pct": 7.6
    },
    {
     "bucket": "$10,000–$25,000",
     "lo": 10000,
     "hi": 25000,
-    "count": 343,
+    "count": 342,
     "share_of_payouts_pct": 0.4,
-    "usd": 4924285.78,
+    "usd": 4911489.3,
     "share_of_usd_pct": 4
    },
    {
