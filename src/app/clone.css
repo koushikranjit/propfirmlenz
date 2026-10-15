@@ -6583,6 +6583,8 @@ main,
 #spreadsPage,
 .partner-badges-page,
 #partnerBadgesPage,
+.firm-profile-page,
+#firmProfilePage,
 .section,
 #offers,
 #rankings,
@@ -6593,6 +6595,26 @@ main,
   box-shadow: none !important;
   border-top: none !important;
   border-bottom: none !important;
+}
+
+/* Prop Firm Interactive Links (Names & Logos) */
+.firm-name-profile-link {
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.firm-name-profile-link:hover,
+.firm-name-profile-link:focus-visible {
+  color: #00F0FF !important;
+  text-shadow: 0 0 14px rgba(0, 240, 255, 0.5) !important;
+}
+.firm-logo-profile-link {
+  cursor: pointer !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease !important;
+}
+.firm-logo-profile-link:hover,
+.firm-logo-profile-link:focus-visible {
+  transform: scale(1.1) !important;
+  filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.6)) !important;
 }
 
 /* 5. Featured Panels & Offer Grids (3D Radiant Gradient Borders) */
