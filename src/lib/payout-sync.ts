@@ -299,7 +299,10 @@ function parseFirmPage(html: string, slug: string): FirmDetailData {
     }
   }
 
-  const m12Block = html.match(/data-chart="m12"[\s\S]*?<\/svg>/i);
+  const m12Block = html.match(/<div[^>]*class="[^"]*fchart[^"]*"[^>]*data-chart="m12"[\s\S]*?<\/svg>/i) ||
+                   html.match(/<div[^>]*data-chart="m12"[^>]*class="[^"]*fchart[^"]*"[\s\S]*?<\/svg>/i) ||
+                   html.match(/class="fchart"[^>]*data-chart="m12"[\s\S]*?<\/svg>/i) ||
+                   html.match(/data-chart="m12"[\s\S]*?<\/svg>/i);
   const monthlyVolume: Array<{ month: string; amount: string; num: number }> = [];
   const seenMonths = new Set<string>();
   if (m12Block && m12Block[0]) {
@@ -318,7 +321,10 @@ function parseFirmPage(html: string, slug: string): FirmDetailData {
     }
   }
 
-  const d30Block = html.match(/data-chart="d30"[\s\S]*?<\/svg>/i);
+  const d30Block = html.match(/<div[^>]*class="[^"]*fchart[^"]*"[^>]*data-chart="d30"[\s\S]*?<\/svg>/i) ||
+                   html.match(/<div[^>]*data-chart="d30"[^>]*class="[^"]*fchart[^"]*"[\s\S]*?<\/svg>/i) ||
+                   html.match(/class="fchart"[^>]*data-chart="d30"[\s\S]*?<\/svg>/i) ||
+                   html.match(/data-chart="d30"[\s\S]*?<\/svg>/i);
   const dailyVolume: Array<{ date: string; amount: string; num: number }> = [];
   const seenDays = new Set<string>();
   if (d30Block && d30Block[0]) {

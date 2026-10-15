@@ -217,7 +217,10 @@ export function parseFirmPage(html, slug) {
 
   // 4. Monthly volume (Last 12 Months)
   // Get from desktop svg in m12
-  const m12Block = html.match(/data-chart="m12"[\s\S]*?<\/svg>/i);
+  const m12Block = html.match(/<div[^>]*class="[^"]*fchart[^"]*"[^>]*data-chart="m12"[\s\S]*?<\/svg>/i) ||
+                   html.match(/<div[^>]*data-chart="m12"[^>]*class="[^"]*fchart[^"]*"[\s\S]*?<\/svg>/i) ||
+                   html.match(/class="fchart"[^>]*data-chart="m12"[\s\S]*?<\/svg>/i) ||
+                   html.match(/data-chart="m12"[\s\S]*?<\/svg>/i);
   const monthlyVolume = [];
   const seenMonths = new Set();
   if (m12Block) {
@@ -236,7 +239,10 @@ export function parseFirmPage(html, slug) {
   }
 
   // 5. Daily volume (Last 30 Days)
-  const d30Block = html.match(/data-chart="d30"[\s\S]*?<\/svg>/i);
+  const d30Block = html.match(/<div[^>]*class="[^"]*fchart[^"]*"[^>]*data-chart="d30"[\s\S]*?<\/svg>/i) ||
+                   html.match(/<div[^>]*data-chart="d30"[^>]*class="[^"]*fchart[^"]*"[\s\S]*?<\/svg>/i) ||
+                   html.match(/class="fchart"[^>]*data-chart="d30"[\s\S]*?<\/svg>/i) ||
+                   html.match(/data-chart="d30"[\s\S]*?<\/svg>/i);
   const dailyVolume = [];
   const seenDays = new Set();
   if (d30Block) {
