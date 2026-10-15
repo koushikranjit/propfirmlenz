@@ -1258,20 +1258,28 @@ body::after {
   -webkit-text-fill-color: transparent !important;
 }
 
-/* 5. Hero Section Logo Full Fit */
+/* 5. Brand Lock & Header Logo: Match Footer Real Logo Exactly */
 .site-head .brand-mark {
-  display: block !important;
-  width: 42px !important;
-  height: 42px !important;
-  flex: 0 0 42px !important;
-  background: url('/assets/logo-mark.png') center/contain no-repeat !important;
-  filter: drop-shadow(0 0 10px rgba(30, 231, 252, 0.55)) !important;
+  display: none !important;
+}
+.brand-lock {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
 }
 .brand-lock img {
-  width: 42px !important;
-  height: 42px !important;
+  width: 38px !important;
+  height: 38px !important;
   object-fit: contain !important;
   padding: 0 !important;
+  display: block !important;
+  filter: drop-shadow(0 0 10px rgba(30, 231, 252, 0.45)) !important;
+  transition: transform 0.25s ease, filter 0.25s ease !important;
+}
+.brand-lock:hover img {
+  transform: scale(1.06) !important;
+  filter: drop-shadow(0 0 16px rgba(30, 231, 252, 0.75)) !important;
 }
 
 /* Master Logo Frame: strictly 1-cell grid stack so img and fallback never sit side-by-side */
