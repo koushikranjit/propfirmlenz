@@ -11224,28 +11224,28 @@ button.scroll-top:hover,
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
-/* 13. Draft Hero Background Video Animation (Full Screen & Clear View) */
+/* 13. Hero Background Video Animation (Strictly Contained to Hero Section) */
 .hero-video-bg-wrap {
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
   width: 100% !important;
-  height: 1020px !important;
+  height: 520px !important;
   pointer-events: none !important;
   z-index: 0 !important;
   overflow: hidden !important;
 }
 
-@media (max-width: 1100px) and (min-width: 621px) {
+@media (max-width: 1024px) and (min-width: 641px) {
   .hero-video-bg-wrap {
-    height: 1140px !important;
+    height: 560px !important;
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 640px) {
   .hero-video-bg-wrap {
-    height: 850px !important;
+    height: 590px !important;
   }
 }
 
@@ -11255,9 +11255,9 @@ button.scroll-top:hover,
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-  object-position: center 20% !important;
-  opacity: 0.9 !important;
-  filter: contrast(1.1) brightness(1.05) saturate(1.1) !important;
+  object-position: center 25% !important;
+  opacity: 0.85 !important;
+  filter: contrast(1.1) brightness(1.02) saturate(1.1) !important;
 }
 
 .hero-video-overlay {
@@ -11265,20 +11265,20 @@ button.scroll-top:hover,
   inset: 0 !important;
   background: 
     linear-gradient(180deg, 
-      rgba(6, 8, 18, 0.45) 0%, 
-      rgba(6, 8, 18, 0.1) 18%, 
-      rgba(6, 8, 18, 0.15) 55%, 
-      rgba(6, 8, 18, 0.65) 82%, 
-      #060812 100%) !important;
+      rgba(0, 0, 0, 0.45) 0%, 
+      rgba(0, 0, 0, 0.08) 20%, 
+      rgba(0, 0, 0, 0.25) 55%, 
+      rgba(0, 0, 0, 0.8) 85%, 
+      #000000 100%) !important;
   pointer-events: none !important;
 }
 
-/* Ensure Header is Frosted Glass and floats over video */
+/* Ensure Header is Frosted Glass over video */
 .site-head {
-  background: rgba(6, 8, 18, 0.5) !important;
+  background: rgba(0, 0, 0, 0.75) !important;
   backdrop-filter: blur(20px) saturate(160%) !important;
   -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15) !important;
 }
 
 /* Ensure Hero is transparent and floats over video */
@@ -11295,71 +11295,246 @@ button.scroll-top:hover,
 }
 
 .hero-badge-3d {
-  background: rgba(10, 15, 32, 0.6) !important;
+  background: rgba(8, 20, 38, 0.75) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(125, 211, 252, 0.2) !important;
+}
+.hero-badge-3d .badge-text {
+  color: #E0F2FE !important;
+}
+.hero-badge-3d .badge-icon {
+  color: #38BDF8 !important;
+}
+.hero-badge-3d .badge-tag {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  color: #020814 !important;
+  font-weight: 800 !important;
 }
 
-.hero-stat-pill {
-  background: rgba(10, 15, 32, 0.6) !important;
+/* Hero Stat Pills: Light Blue Card Styling */
+.hero-stat-pill,
+.hero .stat {
+  background: linear-gradient(165deg, rgba(8, 22, 42, 0.85) 0%, rgba(2, 8, 18, 0.95) 100%) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(56, 189, 248, 0.28) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(125, 211, 252, 0.18) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.hero-stat-pill:hover,
+.hero .stat:hover {
+  border-color: #38BDF8 !important;
+  box-shadow: 0 8px 25px -2px rgba(56, 189, 248, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+  transform: translateY(-2px) !important;
+}
+.hero-stat-pill strong,
+.hero .stat strong {
+  color: #FFFFFF !important;
+}
+.hero-stat-pill span,
+.hero .stat span {
+  color: #93C5FD !important;
+}
+.pfl-hero-stat-svg {
+  stroke: #38BDF8 !important;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.6)) !important;
 }
 
 .affiliate-disclosure-line {
   position: relative !important;
   z-index: 2 !important;
-  background: rgba(8, 12, 24, 0.35) !important;
+  background: rgba(4, 10, 20, 0.75) !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(56, 189, 248, 0.15) !important;
   border-radius: 8px !important;
+  color: #93C5FD !important;
 }
 
-/* Ensure Offers section and cards are frosted glass */
+/* ==========================================================================
+   PURE BLACK BACKGROUND FOR ENTIRE SITE & LIGHT BLUE CARDS
+   ========================================================================== */
+
+/* 1. Pure Pitch Black Page Background */
+html, body, main {
+  background: #000000 !important;
+  background-color: #000000 !important;
+}
+
+/* 2. Offers Section: Pure Black Background & Light Blue Cards */
 #offers.section {
   position: relative !important;
   z-index: 2 !important;
-  background: transparent !important;
-  box-shadow: none !important;
+  background: #000000 !important;
+  background-color: #000000 !important;
 }
 
 #offers .panel,
 .futures-panel {
-  background: rgba(9, 13, 26, 0.55) !important;
+  background: linear-gradient(175deg, rgba(8, 22, 42, 0.94) 0%, rgba(2, 6, 14, 0.98) 100%) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.09) !important;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(56, 189, 248, 0.28) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(125, 211, 252, 0.16) !important;
 }
 
 #offers .offer,
-#offers .future {
-  background: rgba(14, 20, 42, 0.55) !important;
+#offers .future,
+.exclusive-offer-card {
+  background: linear-gradient(170deg, rgba(10, 26, 50, 0.8) 0%, rgba(4, 11, 22, 0.94) 100%) !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(56, 189, 248, 0.22) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(125, 211, 252, 0.1) !important;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 #offers .offer:hover,
-#offers .future:hover {
-  background: rgba(20, 30, 60, 0.72) !important;
-  border-color: rgba(0, 240, 255, 0.35) !important;
+#offers .future:hover,
+.exclusive-offer-card:hover {
+  background: linear-gradient(170deg, rgba(14, 34, 66, 0.9) 0%, rgba(6, 16, 32, 0.98) 100%) !important;
+  border-color: #38BDF8 !important;
+  box-shadow: 0 10px 28px -2px rgba(56, 189, 248, 0.3), inset 0 1px 0 rgba(125, 211, 252, 0.3) !important;
   transform: translateY(-2px) !important;
 }
 
-/* Make sure the Rankings table starts cleanly with solid backdrop */
-.filter-row-sticky-wrap {
-  position: sticky !important;
-  z-index: 40 !important;
+#offers .promo .pct,
+.exclusive-offer-card .promo .pct {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  color: #020814 !important;
+  font-weight: 900 !important;
 }
+
+#offers .promo .copy,
+.exclusive-offer-card .promo .copy {
+  background: #040E1B !important;
+  color: #7DD3FC !important;
+  border: 1px solid rgba(56, 189, 248, 0.32) !important;
+}
+#offers .promo .copy:hover,
+.exclusive-offer-card .promo .copy:hover {
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: #FFFFFF !important;
+}
+
+/* 3. Rankings Section: Pure Black Background & Light Blue Cards */
 #rankings {
   position: relative !important;
   z-index: 10 !important;
-  background: #060812 !important;
+  background: #000000 !important;
+  background-color: #000000 !important;
+}
+.filter-row-sticky-wrap {
+  position: sticky !important;
+  z-index: 40 !important;
+  background: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(16px) !important;
+}
+
+.rank-card {
+  background: linear-gradient(170deg, rgba(8, 20, 38, 0.92) 0%, rgba(2, 6, 14, 0.98) 100%) !important;
+  border: 1px solid rgba(56, 189, 248, 0.22) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(125, 211, 252, 0.12) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.rank-card:hover {
+  border-color: #38BDF8 !important;
+  box-shadow: 0 12px 36px -4px rgba(56, 189, 248, 0.25), inset 0 1px 0 rgba(125, 211, 252, 0.28) !important;
+  transform: translateY(-2px) !important;
+}
+
+.firm-action,
+.rank-card .btn {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.16) 0%, rgba(2, 132, 199, 0.28) 100%) !important;
+  border: 1px solid rgba(56, 189, 248, 0.45) !important;
+  color: #E0F2FE !important;
+  font-weight: 700 !important;
+  border-radius: 9999px !important;
+  transition: all 0.2s ease !important;
+}
+.firm-action:hover,
+.rank-card .btn:hover {
+  background: #0284C7 !important;
+  border-color: #38BDF8 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35) !important;
+}
+
+/* 4. Tools & Resources: Light Blue Card Styling */
+#resources.section {
+  background: #000000 !important;
+  background-color: #000000 !important;
+}
+.resource-card-3d {
+  background: linear-gradient(165deg, rgba(8, 22, 42, 0.94) 0%, rgba(2, 7, 16, 0.98) 100%) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(125, 211, 252, 0.16) !important;
+}
+.resource-card-3d:hover {
+  border-color: #38BDF8 !important;
+  box-shadow: 0 24px 52px -10px rgba(0, 0, 0, 0.85), 0 0 32px rgba(56, 189, 248, 0.28), inset 0 1px 0 rgba(56, 189, 248, 0.4) !important;
+}
+.res-badge-3d {
+  background: rgba(56, 189, 248, 0.1) !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+}
+.res-badge-3d .label {
+  color: #38BDF8 !important;
+}
+.res-badge-3d .num {
+  background: linear-gradient(135deg, #7DD3FC, #FFFFFF) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.res-btn-3d {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  border: 0 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.35) !important;
+}
+
+/* 5. FAQ Section: Black Background & Light Blue Cards */
+#faq.section,
+.faq-wrap {
+  background: #000000 !important;
+}
+.faq-card {
+  background: linear-gradient(170deg, rgba(8, 18, 34, 0.85) 0%, rgba(2, 6, 14, 0.96) 100%) !important;
+  border: 1px solid rgba(56, 189, 248, 0.2) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(125, 211, 252, 0.08) !important;
+}
+.faq-card summary {
+  color: #FFFFFF !important;
+}
+.faq-indicator {
+  color: #38BDF8 !important;
+}
+
+/* 6. Active Filter Pills & Jump Tabs: Light Blue */
+.filter-btn.on {
+  background: rgba(56, 189, 248, 0.15) !important;
+  border-color: #38BDF8 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.25) !important;
+}
+.jump-tabs button.active {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  border-color: transparent !important;
+  color: #020814 !important;
+  font-weight: 800 !important;
+}
+
+/* 7. Footer: Pure Black */
+footer {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  border-top: 1px solid rgba(56, 189, 248, 0.15) !important;
 }
 
 /* ==========================================================================
@@ -11440,8 +11615,8 @@ html, body {
     white-space: normal !important;
   }
   .hero-video-bg-wrap {
-    height: 100vh !important;
-    min-height: 680px !important;
+    height: 590px !important;
+    min-height: 590px !important;
   }
 }
 
