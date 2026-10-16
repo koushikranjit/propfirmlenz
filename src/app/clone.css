@@ -8626,10 +8626,27 @@ main,
    CONTROLLED HOME PAGE POLISH DESIGN PASS
    ========================================================================== */
 
-/* Dark black solid page background (#000000) */
-html,
+/* Premium Dark Page Background with Signature Brand Color Gradient Mesh */
+html {
+  background: #060712 !important;
+}
+
 body,
-body[data-page],
+body[data-page] {
+  background-color: #060712 !important;
+  background-image:
+    radial-gradient(ellipse 1200px 600px at 50% -80px, rgba(107, 54, 248, 0.32) 0%, rgba(99, 102, 241, 0.18) 38%, rgba(0, 240, 255, 0.06) 62%, transparent 78%),
+    radial-gradient(circle 900px at -10% 25%, rgba(107, 54, 248, 0.16), transparent 60%),
+    radial-gradient(circle 850px at 110% 35%, rgba(0, 240, 255, 0.10), transparent 55%),
+    radial-gradient(ellipse 1300px 700px at 50% 55%, rgba(99, 102, 241, 0.12), rgba(124, 58, 237, 0.06) 45%, transparent 70%),
+    radial-gradient(circle 950px at 8% 85%, rgba(124, 58, 237, 0.13), transparent 60%),
+    radial-gradient(circle 800px at 95% 90%, rgba(30, 231, 252, 0.08), transparent 55%),
+    linear-gradient(180deg, #070714 0%, #060710 35%, #080816 70%, #05050C 100%) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  color: #EDEFF7 !important;
+}
+
 main,
 #home,
 #offers,
@@ -8644,17 +8661,23 @@ main,
 .payout-hub,
 .payout-detail-page,
 .partner-badges-page,
-.firm-profile-page,
-footer#footer {
-  background: #000000 !important;
+.firm-profile-page {
+  background: transparent !important;
   color: #EDEFF7 !important;
 }
 
-/* Purple-blue gradient glow behind the hero only, fading out completely before table */
+footer#footer {
+  background: linear-gradient(180deg, rgba(8, 8, 18, 0.92) 0%, rgba(5, 5, 10, 0.98) 100%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+  color: #EDEFF7 !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+/* Radiant brand glow behind the hero */
 .hero {
   position: relative !important;
-  background: radial-gradient(ellipse 960px 420px at 50% 0%, rgba(99, 102, 241, 0.28) 0%, rgba(124, 58, 237, 0.14) 48%, transparent 78%) !important;
-  background-color: #000000 !important;
+  background: radial-gradient(ellipse 1000px 520px at 50% 0%, rgba(107, 54, 248, 0.35) 0%, rgba(99, 102, 241, 0.20) 42%, rgba(0, 240, 255, 0.07) 68%, transparent 85%) !important;
   overflow: visible !important;
   box-shadow: none !important;
   border: none !important;
@@ -8678,7 +8701,7 @@ p, span, .text-muted, .section-title p,
   color: #9AA6BD !important;
 }
 
-/* Uniform card styling: #12121F background, #26263A border, 14px radius, consistent shadow */
+/* Uniform premium obsidian card styling with subtle glass depth and sheen */
 .panel,
 .offer,
 .future,
@@ -8691,22 +8714,24 @@ p, span, .text-muted, .section-title p,
 .payout-stat-card,
 .alt-card,
 .partner-guidelines-box {
-  background: #12121F !important;
-  border: 1px solid #26263A !important;
+  background: rgba(18, 18, 31, 0.88) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 14px !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
 }
 
-/* Hover or raised rows: #1A1927 */
+/* Hover or raised rows: elevated with subtle brand glow */
 .rank-card:hover,
 .offer:hover,
 .future:hover,
 .resource:hover,
 .video:hover,
 .stat:hover {
-  background: #1A1927 !important;
-  border-color: rgba(99, 102, 241, 0.45) !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+  background: rgba(26, 25, 39, 0.94) !important;
+  border-color: rgba(107, 54, 248, 0.45) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55), 0 0 24px rgba(107, 54, 248, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
 }
 
 /* Brand Accent Color: Electric Indigo (#6366F1) */
