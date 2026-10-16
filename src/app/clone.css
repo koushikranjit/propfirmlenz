@@ -2417,10 +2417,47 @@ main{background:radial-gradient(ellipse 70% 22% at 4% 16%,rgba(0,240,255,.12),tr
 main{background:radial-gradient(ellipse 88% 30% at 8% 0%,rgba(57,109,250,.34),transparent 72%),radial-gradient(ellipse 76% 32% at 98% 13%,rgba(30,231,252,.22),transparent 74%),linear-gradient(180deg,#071824 0%,#0a1633 10%,#071b26 24%,#05070b 42%,#050506 66%);box-shadow:inset 125px 0 170px -145px rgba(112,33,252,.58),inset -125px 0 170px -145px rgba(30,231,252,.48)}
 .hero,#offers.section{background:transparent}
 
-/* Category-aware accent palette, authentication notice, and video facades. */
-body{--theme:#6366F1;--theme-mid:#7C3AED;--theme-deep:#4F46E5;--theme-rgb:99 102 241;--theme-mid-rgb:124 58 237;--theme-deep-rgb:79 70 229;--accent:#6366F1;--purple:#6366F1;--green:#22C55E;--orange:#F59E0B;--grad:#6366F1}
-body[data-market-theme="futures"]{--theme:#6366F1;--theme-mid:#7C3AED;--theme-deep:#4F46E5;--theme-rgb:99 102 241;--theme-mid-rgb:124 58 237;--theme-deep-rgb:79 70 229}
-body[data-market-theme="crypto"]{--theme:#6366F1;--theme-mid:#7C3AED;--theme-deep:#4F46E5;--theme-rgb:99 102 241;--theme-mid-rgb:124 58 237;--theme-deep-rgb:79 70 229}
+/* Category-aware accent palette: Forex (Light Blue), Futures (Green), Crypto (Golden) */
+body,
+body[data-market-theme="forex"] {
+  --theme: #38BDF8;
+  --theme-mid: #0284C7;
+  --theme-deep: #0369A1;
+  --theme-rgb: 56 189 248;
+  --theme-mid-rgb: 2 132 199;
+  --theme-deep-rgb: 3 105 161;
+  --accent: #38BDF8;
+  --purple: #38BDF8;
+  --green: #22C55E;
+  --orange: #F59E0B;
+  --grad: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%);
+}
+body[data-market-theme="futures"] {
+  --theme: #22C55E;
+  --theme-mid: #16A34A;
+  --theme-deep: #059669;
+  --theme-rgb: 34 197 94;
+  --theme-mid-rgb: 22 163 74;
+  --theme-deep-rgb: 5 150 105;
+  --accent: #22C55E;
+  --purple: #22C55E;
+  --green: #22C55E;
+  --orange: #F59E0B;
+  --grad: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+}
+body[data-market-theme="crypto"] {
+  --theme: #F59E0B;
+  --theme-mid: #D97706;
+  --theme-deep: #B45309;
+  --theme-rgb: 245 158 11;
+  --theme-mid-rgb: 217 119 6;
+  --theme-deep-rgb: 180 83 9;
+  --accent: #F59E0B;
+  --purple: #F59E0B;
+  --green: #22C55E;
+  --orange: #F59E0B;
+  --grad: linear-gradient(135deg, #FBBF24 0%, #D97706 100%);
+}
 .navlinks a:hover,.navlinks a.active,.stars,.copy:hover,.resource-icon,.resource a,.faq summary:after,.footer-col a:hover,.biz-col a:hover,.bottom a:hover,.payout-attribution a,.payout-caption button,.payout-headline b,.payout-copy a,.payout-faq summary:after,.challenge-count b,.challenge-pop,.challenge-less,.reviews-title-row p,.trustpilot-line,.review-stars .on,.favorites-count b,.payout-category b,.payout-method-pill span,.payout-additional a,.payout-faq-list summary:after,.page-faq summary:after,.static-subscribe span,.spreads-count b,.spread-method-note strong,.review-total-number,.pfl-reviews-count,.pfl-published-review span,.pfl-notice-firm,.firm-name-link:hover,.firm-name-link:focus-visible,.verify-step b,.review-info-icon,.payout-share-mark,.offers-list-head h2 span,.offer-discount b span,.offer-code,.favorite.on,.fav-count,.rating-cell .review,.kicker{color:var(--theme)}
 .navlinks a.active:after,.market-switch button.on,.payout-subnav button.on,.jump-tabs button.active,.offers-page-tabs button.active,.challenge-tabs button.active,.reviews-tabs button.active,.review-source-toggle button.on{background:var(--theme);border-color:var(--theme)}
 .market-switch button.on,.payout-subnav button.on,.jump-tabs button.active,.offers-page-tabs button.active,.challenge-tabs button.active,.reviews-tabs button.active,.review-source-toggle button.on{color:#EDEFF7}
@@ -11770,7 +11807,32 @@ footer#footer .bottom-links a:hover,
   }
 }
 
-/* 3. Comprehensive Light Blue Accent System for All Blue Buttons & Elements */
+/* 3. Market Switch Scope Buttons (Forex: Light Blue, Futures: Green, Crypto: Golden) */
+.market-switch button[data-market="forex"].on,
+.head-main .market-switch button[data-market="forex"].on {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  color: #020814 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 3px 12px rgba(56, 189, 248, 0.45) !important;
+}
+
+.market-switch button[data-market="futures"].on,
+.head-main .market-switch button[data-market="futures"].on {
+  background: linear-gradient(135deg, #22C55E 0%, #059669 100%) !important;
+  color: #021a0a !important;
+  font-weight: 800 !important;
+  box-shadow: 0 3px 12px rgba(34, 197, 94, 0.45) !important;
+}
+
+.market-switch button[data-market="crypto"].on,
+.head-main .market-switch button[data-market="crypto"].on {
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%) !important;
+  color: #1a1002 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 3px 12px rgba(245, 158, 11, 0.45) !important;
+}
+
+/* 4. Default / Forex Theme (Light Blue) */
 .signup,
 .header-auth .signup,
 .mobile-signup,
@@ -11780,9 +11842,7 @@ footer#footer .bottom-links a:hover,
 .delay-modal-actions a,
 .post-review,
 .apply-btn,
-.challenge-buy,
-.market-switch button.on,
-.head-main .market-switch button.on {
+.challenge-buy {
   background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
   color: #020814 !important;
   font-weight: 800 !important;
@@ -11825,3 +11885,458 @@ footer#footer .bottom-links a:hover,
   color: #020814 !important;
   box-shadow: 0 8px 24px rgba(56, 189, 248, 0.4) !important;
 }
+
+.sort-chip.on {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  color: #020814 !important;
+  font-weight: 800 !important;
+  border-color: transparent !important;
+}
+.promo-badge-pct {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  color: #020814 !important;
+  font-weight: 800 !important;
+}
+.promo-badge-copy {
+  color: #7DD3FC !important;
+  border-color: rgba(56, 189, 248, 0.35) !important;
+}
+
+/* ==========================================================================
+   5. FUTURES MODE: VIBRANT GREEN THEME (When Futures is Clicked)
+   ========================================================================== */
+body[data-market-theme="futures"] .signup,
+body[data-market-theme="futures"] .header-auth .signup,
+body[data-market-theme="futures"] .mobile-signup,
+body[data-market-theme="futures"] .yt-subscribe-btn-3d,
+body[data-market-theme="futures"] .res-btn-3d,
+body[data-market-theme="futures"] .auth-options a,
+body[data-market-theme="futures"] .delay-modal-actions a,
+body[data-market-theme="futures"] .post-review,
+body[data-market-theme="futures"] .apply-btn,
+body[data-market-theme="futures"] .challenge-buy {
+  background: linear-gradient(135deg, #22C55E 0%, #059669 100%) !important;
+  color: #021a0a !important;
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.35) !important;
+}
+
+body[data-market-theme="futures"] .signup:hover,
+body[data-market-theme="futures"] .header-auth .signup:hover,
+body[data-market-theme="futures"] .mobile-signup:hover,
+body[data-market-theme="futures"] .yt-subscribe-btn-3d:hover,
+body[data-market-theme="futures"] .res-btn-3d:hover,
+body[data-market-theme="futures"] .auth-options a:hover,
+body[data-market-theme="futures"] .delay-modal-actions a:hover,
+body[data-market-theme="futures"] .post-review:hover,
+body[data-market-theme="futures"] .apply-btn:hover,
+body[data-market-theme="futures"] .challenge-buy:hover {
+  background: linear-gradient(135deg, #4ADE80 0%, #16A34A 100%) !important;
+  color: #021a0a !important;
+  box-shadow: 0 6px 22px rgba(34, 197, 94, 0.5) !important;
+}
+
+body[data-market-theme="futures"] .firm-action,
+body[data-market-theme="futures"] .rank-card .btn {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.18) 0%, rgba(5, 150, 105, 0.3) 100%) !important;
+  border: 1px solid rgba(34, 197, 94, 0.5) !important;
+  color: #DCFCE7 !important;
+}
+
+body[data-market-theme="futures"] .firm-action:hover,
+body[data-market-theme="futures"] .rank-card .btn:hover {
+  background: linear-gradient(135deg, #22C55E 0%, #059669 100%) !important;
+  border-color: #22C55E !important;
+  color: #021a0a !important;
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.45) !important;
+}
+
+body[data-market-theme="futures"] .jump-tabs button.active {
+  background: linear-gradient(135deg, #22C55E 0%, #059669 100%) !important;
+  border-color: transparent !important;
+  color: #021a0a !important;
+}
+
+body[data-market-theme="futures"] .filter-btn.on {
+  background: rgba(34, 197, 94, 0.16) !important;
+  border-color: #22C55E !important;
+  color: #4ADE80 !important;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.25) !important;
+}
+
+body[data-market-theme="futures"] .navlinks a.active::after {
+  background: #22C55E !important;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.6) !important;
+}
+
+body[data-market-theme="futures"] .navlinks a:hover,
+body[data-market-theme="futures"] .navlinks a.active {
+  color: #22C55E !important;
+}
+
+body[data-market-theme="futures"] .promo .pct,
+body[data-market-theme="futures"] #offers .promo .pct,
+body[data-market-theme="futures"] .rank-card .promo .pct,
+body[data-market-theme="futures"] .exclusive-offer-card .promo .pct {
+  background: linear-gradient(135deg, #22C55E 0%, #059669 100%) !important;
+  color: #021a0a !important;
+}
+
+body[data-market-theme="futures"] .promo .copy,
+body[data-market-theme="futures"] #offers .promo .copy,
+body[data-market-theme="futures"] .rank-card .promo .copy,
+body[data-market-theme="futures"] .exclusive-offer-card .promo .copy {
+  color: #4ADE80 !important;
+  border-color: rgba(34, 197, 94, 0.35) !important;
+}
+
+body[data-market-theme="futures"] .rank-head button.on,
+body[data-market-theme="futures"] button[data-sort].on {
+  color: #22C55E !important;
+}
+
+body[data-market-theme="futures"] .hero-badge-3d {
+  border-color: rgba(34, 197, 94, 0.4) !important;
+}
+body[data-market-theme="futures"] .hero-badge-3d .badge-pulse-dot {
+  background: #22C55E !important;
+  box-shadow: 0 0 10px #22C55E !important;
+}
+body[data-market-theme="futures"] .hero-badge-3d .badge-icon {
+  color: #4ADE80 !important;
+}
+body[data-market-theme="futures"] .hero-badge-3d .badge-tag {
+  background: linear-gradient(135deg, #22C55E 0%, #059669 100%) !important;
+  color: #021a0a !important;
+}
+body[data-market-theme="futures"] .pfl-hero-stat-svg {
+  filter: drop-shadow(0 0 6px rgba(34, 197, 94, 0.6)) !important;
+  stroke: #22C55E !important;
+}
+
+body[data-market-theme="futures"] .navlinks a.active {
+  background: rgba(34, 197, 94, 0.16) !important;
+  border-color: #22C55E !important;
+  color: #4ADE80 !important;
+}
+
+body[data-market-theme="futures"] .res-badge-3d {
+  background: rgba(34, 197, 94, 0.1) !important;
+  border-color: rgba(34, 197, 94, 0.35) !important;
+}
+
+body[data-market-theme="futures"] .res-badge-3d .label {
+  color: #4ADE80 !important;
+}
+
+body[data-market-theme="futures"] .res-badge-3d .num {
+  background: linear-gradient(135deg, #86EFAC, #FFFFFF) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+body[data-market-theme="futures"] .rank-card:hover,
+body[data-market-theme="futures"] .resource-card-3d:hover,
+body[data-market-theme="futures"] #offers .offer:hover,
+body[data-market-theme="futures"] #offers .future:hover {
+  border-color: #22C55E !important;
+  box-shadow: 0 12px 36px -4px rgba(34, 197, 94, 0.28), inset 0 1px 0 rgba(74, 222, 128, 0.3) !important;
+}
+
+body[data-market-theme="futures"] .faq-indicator,
+body[data-market-theme="futures"] .stars,
+body[data-market-theme="futures"] .star-on,
+body[data-market-theme="futures"] .rating-cell .stars {
+  color: #22C55E !important;
+}
+
+body[data-market-theme="futures"] #backToTopBtn {
+  background: linear-gradient(135deg, #22C55E 0%, #059669 100%) !important;
+  color: #021a0a !important;
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.4) !important;
+}
+
+body[data-market-theme="futures"] .footer-report-btn {
+  background: rgba(34, 197, 94, 0.12) !important;
+  border: 1px solid rgba(34, 197, 94, 0.45) !important;
+  color: #4ADE80 !important;
+}
+
+body[data-market-theme="futures"] .footer-report-btn:hover {
+  background: linear-gradient(135deg, #22C55E 0%, #059669 100%) !important;
+  border-color: transparent !important;
+  color: #021a0a !important;
+  box-shadow: 0 4px 18px rgba(34, 197, 94, 0.4) !important;
+}
+
+body[data-market-theme="futures"] footer#footer .footer-col h3 {
+  color: #22C55E !important;
+}
+
+body[data-market-theme="futures"] footer#footer .footer-col h3::after {
+  background: linear-gradient(90deg, rgba(34, 197, 94, 0.4), transparent) !important;
+}
+
+body[data-market-theme="futures"] footer#footer .footer-col a:hover {
+  color: #4ADE80 !important;
+}
+
+body[data-market-theme="futures"] .bottom-links a {
+  color: #4ADE80 !important;
+}
+
+body[data-market-theme="futures"] .footer-disclaimer b {
+  color: #86EFAC !important;
+}
+
+body[data-market-theme="futures"] .brand-lock .brand-lenz-text,
+body[data-market-theme="futures"] .brand-lock span .brand-lenz-text {
+  color: #22C55E !important;
+}
+
+body[data-market-theme="futures"] .sort-chip.on {
+  background: linear-gradient(135deg, #22C55E 0%, #059669 100%) !important;
+  color: #021a0a !important;
+  font-weight: 800 !important;
+  border-color: transparent !important;
+}
+body[data-market-theme="futures"] .promo-badge-pct {
+  background: linear-gradient(135deg, #22C55E 0%, #059669 100%) !important;
+  color: #021a0a !important;
+  font-weight: 800 !important;
+}
+body[data-market-theme="futures"] .promo-badge-copy {
+  color: #4ADE80 !important;
+  border-color: rgba(34, 197, 94, 0.35) !important;
+}
+body[data-market-theme="futures"] .rating-badge {
+  border-color: rgba(34, 197, 94, 0.5) !important;
+  color: #86EFAC !important;
+  background: rgba(34, 197, 94, 0.12) !important;
+}
+body[data-market-theme="futures"] .years-ring {
+  background: conic-gradient(#22C55E 0% 50%, #059669 100%) !important;
+  color: #86EFAC !important;
+}
+body[data-market-theme="futures"] .alloc-cell .bar i {
+  background: linear-gradient(90deg, #22C55E, #4ADE80) !important;
+}
+
+/* ==========================================================================
+   6. CRYPTO MODE: LUSTROUS GOLDEN THEME (When Crypto is Clicked)
+   ========================================================================== */
+body[data-market-theme="crypto"] .signup,
+body[data-market-theme="crypto"] .header-auth .signup,
+body[data-market-theme="crypto"] .mobile-signup,
+body[data-market-theme="crypto"] .yt-subscribe-btn-3d,
+body[data-market-theme="crypto"] .res-btn-3d,
+body[data-market-theme="crypto"] .auth-options a,
+body[data-market-theme="crypto"] .delay-modal-actions a,
+body[data-market-theme="crypto"] .post-review,
+body[data-market-theme="crypto"] .apply-btn,
+body[data-market-theme="crypto"] .challenge-buy {
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%) !important;
+  color: #1a1002 !important;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35) !important;
+}
+
+body[data-market-theme="crypto"] .signup:hover,
+body[data-market-theme="crypto"] .header-auth .signup:hover,
+body[data-market-theme="crypto"] .mobile-signup:hover,
+body[data-market-theme="crypto"] .yt-subscribe-btn-3d:hover,
+body[data-market-theme="crypto"] .res-btn-3d:hover,
+body[data-market-theme="crypto"] .auth-options a:hover,
+body[data-market-theme="crypto"] .delay-modal-actions a:hover,
+body[data-market-theme="crypto"] .post-review:hover,
+body[data-market-theme="crypto"] .apply-btn:hover,
+body[data-market-theme="crypto"] .challenge-buy:hover {
+  background: linear-gradient(135deg, #FDE047 0%, #B45309 100%) !important;
+  color: #1a1002 !important;
+  box-shadow: 0 6px 22px rgba(245, 158, 11, 0.5) !important;
+}
+
+body[data-market-theme="crypto"] .firm-action,
+body[data-market-theme="crypto"] .rank-card .btn {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(217, 119, 6, 0.3) 100%) !important;
+  border: 1px solid rgba(245, 158, 11, 0.5) !important;
+  color: #FEF3C7 !important;
+}
+
+body[data-market-theme="crypto"] .firm-action:hover,
+body[data-market-theme="crypto"] .rank-card .btn:hover {
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%) !important;
+  border-color: #FBBF24 !important;
+  color: #1a1002 !important;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.45) !important;
+}
+
+body[data-market-theme="crypto"] .jump-tabs button.active {
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%) !important;
+  border-color: transparent !important;
+  color: #1a1002 !important;
+}
+
+body[data-market-theme="crypto"] .filter-btn.on {
+  background: rgba(245, 158, 11, 0.16) !important;
+  border-color: #F59E0B !important;
+  color: #FBBF24 !important;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25) !important;
+}
+
+body[data-market-theme="crypto"] .navlinks a.active::after {
+  background: #F59E0B !important;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.6) !important;
+}
+
+body[data-market-theme="crypto"] .navlinks a:hover,
+body[data-market-theme="crypto"] .navlinks a.active {
+  color: #F59E0B !important;
+}
+
+body[data-market-theme="crypto"] .navlinks a.active {
+  background: rgba(245, 158, 11, 0.16) !important;
+  border-color: #F59E0B !important;
+  color: #FBBF24 !important;
+}
+
+body[data-market-theme="crypto"] .promo .pct,
+body[data-market-theme="crypto"] #offers .promo .pct,
+body[data-market-theme="crypto"] .rank-card .promo .pct,
+body[data-market-theme="crypto"] .exclusive-offer-card .promo .pct {
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%) !important;
+  color: #1a1002 !important;
+}
+
+body[data-market-theme="crypto"] .promo .copy,
+body[data-market-theme="crypto"] #offers .promo .copy,
+body[data-market-theme="crypto"] .rank-card .promo .copy,
+body[data-market-theme="crypto"] .exclusive-offer-card .promo .copy {
+  color: #FDE047 !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+body[data-market-theme="crypto"] .rank-head button.on,
+body[data-market-theme="crypto"] button[data-sort].on {
+  color: #F59E0B !important;
+}
+
+body[data-market-theme="crypto"] .hero-badge-3d {
+  border-color: rgba(245, 158, 11, 0.4) !important;
+}
+body[data-market-theme="crypto"] .hero-badge-3d .badge-pulse-dot {
+  background: #F59E0B !important;
+  box-shadow: 0 0 10px #F59E0B !important;
+}
+body[data-market-theme="crypto"] .hero-badge-3d .badge-icon {
+  color: #FDE047 !important;
+}
+body[data-market-theme="crypto"] .hero-badge-3d .badge-tag {
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%) !important;
+  color: #1a1002 !important;
+}
+body[data-market-theme="crypto"] .pfl-hero-stat-svg {
+  filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.6)) !important;
+  stroke: #F59E0B !important;
+}
+
+body[data-market-theme="crypto"] .res-badge-3d {
+  background: rgba(245, 158, 11, 0.1) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+body[data-market-theme="crypto"] .res-badge-3d .label {
+  color: #FBBF24 !important;
+}
+
+body[data-market-theme="crypto"] .res-badge-3d .num {
+  background: linear-gradient(135deg, #FEF08A, #FFFFFF) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+body[data-market-theme="crypto"] .rank-card:hover,
+body[data-market-theme="crypto"] .resource-card-3d:hover,
+body[data-market-theme="crypto"] #offers .offer:hover,
+body[data-market-theme="crypto"] #offers .future:hover {
+  border-color: #F59E0B !important;
+  box-shadow: 0 12px 36px -4px rgba(245, 158, 11, 0.28), inset 0 1px 0 rgba(251, 191, 36, 0.3) !important;
+}
+
+body[data-market-theme="crypto"] .faq-indicator,
+body[data-market-theme="crypto"] .stars,
+body[data-market-theme="crypto"] .star-on,
+body[data-market-theme="crypto"] .rating-cell .stars {
+  color: #F59E0B !important;
+}
+
+body[data-market-theme="crypto"] #backToTopBtn {
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%) !important;
+  color: #1a1002 !important;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4) !important;
+}
+
+body[data-market-theme="crypto"] .footer-report-btn {
+  background: rgba(245, 158, 11, 0.12) !important;
+  border: 1px solid rgba(245, 158, 11, 0.45) !important;
+  color: #FBBF24 !important;
+}
+
+body[data-market-theme="crypto"] .footer-report-btn:hover {
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%) !important;
+  border-color: transparent !important;
+  color: #1a1002 !important;
+  box-shadow: 0 4px 18px rgba(245, 158, 11, 0.4) !important;
+}
+
+body[data-market-theme="crypto"] footer#footer .footer-col h3 {
+  color: #F59E0B !important;
+}
+
+body[data-market-theme="crypto"] footer#footer .footer-col h3::after {
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.4), transparent) !important;
+}
+
+body[data-market-theme="crypto"] footer#footer .footer-col a:hover {
+  color: #FBBF24 !important;
+}
+
+body[data-market-theme="crypto"] .bottom-links a {
+  color: #FBBF24 !important;
+}
+
+body[data-market-theme="crypto"] .footer-disclaimer b {
+  color: #FEF3C7 !important;
+}
+
+body[data-market-theme="crypto"] .brand-lock .brand-lenz-text,
+body[data-market-theme="crypto"] .brand-lock span .brand-lenz-text {
+  color: #F59E0B !important;
+}
+
+body[data-market-theme="crypto"] .sort-chip.on {
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%) !important;
+  color: #1a1002 !important;
+  font-weight: 800 !important;
+  border-color: transparent !important;
+}
+body[data-market-theme="crypto"] .promo-badge-pct {
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%) !important;
+  color: #1a1002 !important;
+  font-weight: 800 !important;
+}
+body[data-market-theme="crypto"] .promo-badge-copy {
+  color: #FDE047 !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+body[data-market-theme="crypto"] .rating-badge {
+  border-color: rgba(245, 158, 11, 0.5) !important;
+  color: #FEF08A !important;
+  background: rgba(245, 158, 11, 0.12) !important;
+}
+body[data-market-theme="crypto"] .years-ring {
+  background: conic-gradient(#F59E0B 0% 50%, #D97706 100%) !important;
+  color: #FEF08A !important;
+}
+body[data-market-theme="crypto"] .alloc-cell .bar i {
+  background: linear-gradient(90deg, #F59E0B, #FDE047) !important;
+}
+
