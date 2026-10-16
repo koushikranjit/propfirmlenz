@@ -5757,18 +5757,18 @@ footer#footer .bottom-copy {
 }
 
 #offers .future:nth-child(1) .medal {
-  color: #FFD700 !important;
-  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.85)) !important;
+  color: #F59E0B !important;
+  filter: none !important;
 }
 
 #offers .future:nth-child(2) .medal {
-  color: #E2E8F0 !important;
-  filter: drop-shadow(0 0 12px rgba(226, 232, 240, 0.75)) !important;
+  color: #94A3B8 !important;
+  filter: none !important;
 }
 
 #offers .future:nth-child(3) .medal {
-  color: #ED8936 !important;
-  filter: drop-shadow(0 0 12px rgba(237, 137, 54, 0.8)) !important;
+  color: #D97706 !important;
+  filter: none !important;
 }
 
 /* Dots Indicator */
@@ -6557,8 +6557,9 @@ footer#footer .bottom-copy {
 }
 
 .brand-lock .brand-lenz-text {
-  color: #00F0FF !important;
-  text-shadow: 0 0 16px rgba(0, 240, 255, 0.55) !important;
+  color: #00C8FF !important;
+  text-shadow: none !important;
+  filter: none !important;
   margin-left: 5px !important;
 }
 
@@ -7829,23 +7830,63 @@ main,
   box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 22px rgba(0, 240, 255, 0.2) !important;
 }
 
-.medal[data-rank="1"],
-.medal:first-child {
-  background: linear-gradient(135deg, #FFD700 0%, #F59E0B 100%) !important;
-  box-shadow: 0 0 16px rgba(255, 215, 0, 0.5) !important;
-  color: #050505 !important;
+.medal {
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+  border-radius: 0 !important;
 }
 
+.future .medal,
+.offers-future-row .medal {
+  width: 28px !important;
+  height: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.future:nth-child(1) .medal,
+.offers-future-row:nth-child(1) .medal,
+.medal[data-rank="1"] {
+  color: #F59E0B !important;
+  background: rgba(245, 158, 11, 0.12) !important;
+  border: 1px solid rgba(245, 158, 11, 0.28) !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.future:nth-child(2) .medal,
+.offers-future-row:nth-child(2) .medal,
 .medal[data-rank="2"] {
-  background: linear-gradient(135deg, #F1F5F9 0%, #94A3B8 100%) !important;
-  box-shadow: 0 0 14px rgba(148, 163, 184, 0.45) !important;
-  color: #050505 !important;
+  color: #CBD5E1 !important;
+  background: rgba(148, 163, 184, 0.12) !important;
+  border: 1px solid rgba(148, 163, 184, 0.28) !important;
+  box-shadow: none !important;
+  filter: none !important;
 }
 
+.future:nth-child(3) .medal,
+.offers-future-row:nth-child(3) .medal,
 .medal[data-rank="3"] {
-  background: linear-gradient(135deg, #FB923C 0%, #C2410C 100%) !important;
-  box-shadow: 0 0 14px rgba(251, 146, 60, 0.45) !important;
-  color: #050505 !important;
+  color: #FB923C !important;
+  background: rgba(251, 146, 60, 0.12) !important;
+  border: 1px solid rgba(251, 146, 60, 0.28) !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.future .medal svg,
+.offers-future-row .medal svg,
+.medal svg {
+  width: 18px !important;
+  height: 18px !important;
+  fill: currentColor !important;
+  filter: none !important;
 }
 
 /* 10. Progress Bars & Glowing Tracks */
@@ -7958,21 +7999,24 @@ main,
 }
 
 .favorite-firm-row:nth-child(1) .favorite-rank {
-  background: linear-gradient(135deg, #FFD700 0%, #F59E0B 100%) !important;
-  color: #050505 !important;
-  box-shadow: 0 0 14px rgba(255, 215, 0, 0.5) !important;
+  background: rgba(245, 158, 11, 0.15) !important;
+  color: #F59E0B !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  box-shadow: none !important;
 }
 
 .favorite-firm-row:nth-child(2) .favorite-rank {
-  background: linear-gradient(135deg, #F1F5F9 0%, #94A3B8 100%) !important;
-  color: #050505 !important;
-  box-shadow: 0 0 12px rgba(148, 163, 184, 0.45) !important;
+  background: rgba(148, 163, 184, 0.15) !important;
+  color: #CBD5E1 !important;
+  border: 1px solid rgba(148, 163, 184, 0.3) !important;
+  box-shadow: none !important;
 }
 
 .favorite-firm-row:nth-child(3) .favorite-rank {
-  background: linear-gradient(135deg, #FB923C 0%, #C2410C 100%) !important;
-  color: #050505 !important;
-  box-shadow: 0 0 12px rgba(251, 146, 60, 0.45) !important;
+  background: rgba(251, 146, 60, 0.15) !important;
+  color: #FB923C !important;
+  border: 1px solid rgba(251, 146, 60, 0.3) !important;
+  box-shadow: none !important;
 }
 
 .favorite-action {
@@ -10633,7 +10677,7 @@ body {
   background-attachment: fixed !important;
 }
 
-/* 2. Logo Brand Typography & High-Gloss Lens Glow */
+/* 2. Logo Brand Typography (Flat, Clean, No Glow) */
 .brand-lock span {
   color: #FFFFFF !important;
   -webkit-text-fill-color: #FFFFFF !important;
@@ -10643,17 +10687,17 @@ body {
 
 .brand-lock .brand-lenz-text,
 .brand-lock span .brand-lenz-text {
-  background: linear-gradient(135deg, #00F0FF 0%, #00C8FF 45%, #38BDF8 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: #00F0FF !important;
-  filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.75)) !important;
-  font-weight: 900 !important;
+  color: #00C8FF !important;
+  background: none !important;
+  -webkit-text-fill-color: #00C8FF !important;
+  filter: none !important;
+  text-shadow: none !important;
+  font-weight: 800 !important;
   margin-left: 5px !important;
 }
 
 .brand-lock:hover img {
-  filter: drop-shadow(0 0 24px rgba(0, 240, 255, 0.85)) !important;
+  filter: none !important;
 }
 
 /* 3. Hero & Page Headings Typography */
@@ -10665,87 +10709,90 @@ body {
 .reviews-hub-head h1,
 .compare-head h1,
 .spreads-head h1 {
-  background: linear-gradient(135deg, #FFFFFF 15%, #E0F2FE 45%, #38BDF8 75%, #4D5DFB 100%) !important;
+  background: linear-gradient(135deg, #FFFFFF 30%, #E2E8F0 70%, #93C5FD 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
-  filter: drop-shadow(0 4px 30px rgba(0, 240, 255, 0.25)) !important;
-  letter-spacing: -0.035em !important;
+  filter: none !important;
+  text-shadow: none !important;
+  letter-spacing: -0.03em !important;
 }
 
-/* 4. Hero 3D Badge Pill */
+/* 4. Hero Badge Pill */
 .hero-badge-3d {
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.12) 0%, rgba(77, 93, 251, 0.16) 100%) !important;
-  border: 1px solid rgba(0, 240, 255, 0.45) !important;
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.25), 0 0 45px rgba(77, 93, 251, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+  background: rgba(10, 16, 32, 0.7) !important;
+  border: 1px solid rgba(0, 200, 255, 0.25) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
 }
 
 .hero-badge-3d .badge-tag {
-  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 60%, #4D5DFB 100%) !important;
-  color: #040D1A !important;
-  font-weight: 900 !important;
-  box-shadow: 0 0 16px rgba(0, 240, 255, 0.6) !important;
+  background: #0284C7 !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  box-shadow: none !important;
 }
 
 /* 5. Header Navigation & Market Switch */
 .market-switch {
-  background: rgba(10, 16, 32, 0.9) !important;
-  border: 1px solid rgba(0, 240, 255, 0.25) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  background: rgba(10, 16, 32, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
 }
 
 .market-switch button.on {
-  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 55%, #4D5DFB 100%) !important;
-  color: #040D1A !important;
-  font-weight: 900 !important;
+  background: #0284C7 !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
   border-radius: 999px !important;
-  box-shadow: 0 0 18px rgba(0, 240, 255, 0.5) !important;
+  box-shadow: none !important;
 }
 
 .navlinks a:hover,
 .navlinks a.active {
-  color: #00F0FF !important;
+  color: #38BDF8 !important;
 }
 
 .navlinks a.active:after {
-  background: linear-gradient(90deg, #00F0FF 0%, #4D5DFB 100%) !important;
-  box-shadow: 0 0 12px #00F0FF !important;
+  background: #0284C7 !important;
+  box-shadow: none !important;
 }
 
 .header-auth .signup,
 .signup {
-  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 50%, #4D5DFB 100%) !important;
-  color: #040D1A !important;
-  font-weight: 900 !important;
+  background: #0284C7 !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
   border: none !important;
-  box-shadow: 0 4px 18px rgba(0, 240, 255, 0.45) !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.2s ease !important;
 }
 
 .header-auth .signup:hover,
 .signup:hover {
-  filter: brightness(1.1) !important;
-  transform: translateY(-1px) scale(1.02) !important;
-  box-shadow: 0 6px 26px rgba(0, 240, 255, 0.65), 0 0 20px rgba(77, 93, 251, 0.35) !important;
+  background: #0369A1 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(-1px) !important;
+  filter: none !important;
 }
 
 .header-auth .login,
 .login {
-  background: rgba(0, 240, 255, 0.08) !important;
-  border: 1px solid rgba(0, 240, 255, 0.35) !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
   color: #E2E8F0 !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
   transition: all 0.2s ease !important;
 }
 
 .header-auth .login:hover,
 .login:hover {
-  background: rgba(0, 240, 255, 0.15) !important;
-  border-color: #00F0FF !important;
-  color: #00F0FF !important;
-  box-shadow: 0 0 14px rgba(0, 240, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #FFFFFF !important;
+  box-shadow: none !important;
 }
 
-/* 6. Universal High-Impact Action CTAs */
+/* 6. Universal Action CTAs */
 .btn-primary,
 .post-review,
 .apply-btn,
@@ -10761,12 +10808,12 @@ body {
 .profile-action-buy,
 .challenge-buy-btn,
 .btn-submit-review {
-  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 50%, #4D5DFB 100%) !important;
-  color: #040D1A !important;
-  font-weight: 800 !important;
+  background: #0284C7 !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
   border: none !important;
-  box-shadow: 0 4px 20px rgba(0, 240, 255, 0.4), 0 0 14px rgba(77, 93, 251, 0.25) !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.2s ease !important;
 }
 
 .btn-primary:hover,
@@ -10782,9 +10829,10 @@ body {
 .profile-action-buy:hover,
 .challenge-buy-btn:hover,
 .btn-submit-review:hover {
-  transform: translateY(-2px) scale(1.02) !important;
-  filter: brightness(1.1) !important;
-  box-shadow: 0 8px 30px rgba(0, 240, 255, 0.6), 0 0 24px rgba(77, 93, 251, 0.45) !important;
+  background: #0369A1 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  filter: none !important;
 }
 
 /* 7. Active Tabs, Filter Pills, and Jump Tabs */
@@ -10801,14 +10849,14 @@ body {
 [data-view].active,
 .sort-chip[data-sort].on,
 .filter-sort-pills [data-sort].on {
-  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 50%, #4D5DFB 100%) !important;
-  color: #040D1A !important;
-  font-weight: 800 !important;
+  background: #0284C7 !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
   border-color: transparent !important;
-  box-shadow: 0 2px 16px rgba(0, 240, 255, 0.45) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
 }
 
-/* Refined Table Header Column Sort Highlight (No clunky rectangular box) */
+/* Refined Table Header Column Sort Highlight */
 .rank-head button {
   appearance: none !important;
   border: none !important;
@@ -10837,22 +10885,22 @@ body {
 
 .rank-head button.on {
   background: transparent !important;
-  color: #00F0FF !important;
+  color: #38BDF8 !important;
   font-weight: 800 !important;
   box-shadow: none !important;
-  border-bottom: 2px solid #00F0FF !important;
-  text-shadow: 0 0 12px rgba(0, 240, 255, 0.45) !important;
+  border-bottom: 2px solid #0284C7 !important;
+  text-shadow: none !important;
 }
 
-/* 8. Table & Leaderboard Styling Overhaul */
+/* 8. Table & Leaderboard Styling */
 .rating-cell .score,
 .rating,
 .rating-badge {
-  border: 1px solid rgba(0, 240, 255, 0.45) !important;
-  background: rgba(0, 240, 255, 0.1) !important;
-  color: #00F0FF !important;
-  font-weight: 800 !important;
-  box-shadow: 0 0 12px rgba(0, 240, 255, 0.15) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  background: rgba(56, 189, 248, 0.08) !important;
+  color: #38BDF8 !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
 }
 
 /* Accurate High-Readability Star Color */
@@ -10867,14 +10915,14 @@ body {
 .reviews-num,
 .review-total-number,
 .pfl-reviews-count {
-  color: #00F0FF !important;
-  font-weight: 800 !important;
+  color: #38BDF8 !important;
+  font-weight: 700 !important;
 }
 
 /* Years Ring Matching Logo Arc */
 .years-ring {
-  background: conic-gradient(#00F0FF 0% 35%, #00A3FF 35% 65%, #4D5DFB 65% 100%) !important;
-  box-shadow: 0 0 12px rgba(0, 240, 255, 0.3) !important;
+  background: conic-gradient(#0284C7 0% 50%, #1E40AF 100%) !important;
+  box-shadow: none !important;
 }
 
 /* Allocation & Payout Progress Tracks */
@@ -10883,26 +10931,27 @@ body {
 .payout-total-track i,
 .favorite-progress i,
 .review-count .bar i {
-  background: linear-gradient(90deg, #00F0FF 0%, #00A3FF 50%, #4D5DFB 100%) !important;
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5) !important;
+  background: #0284C7 !important;
+  box-shadow: none !important;
 }
 
 /* Firm Action Button on Table Rows */
 .firm-action {
-  border: 1px solid rgba(0, 240, 255, 0.45) !important;
-  background: rgba(0, 240, 255, 0.08) !important;
-  color: #00F0FF !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  background: rgba(56, 189, 248, 0.08) !important;
+  color: #38BDF8 !important;
   font-weight: 700 !important;
+  box-shadow: none !important;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .firm-action:hover {
-  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 50%, #4D5DFB 100%) !important;
-  color: #040D1A !important;
-  font-weight: 800 !important;
+  background: #0284C7 !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
   border-color: transparent !important;
-  box-shadow: 0 0 18px rgba(0, 240, 255, 0.55) !important;
-  transform: scale(1.04) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  transform: none !important;
 }
 
 /* 9. Promo & Discount Codes */
@@ -10913,10 +10962,10 @@ body {
 .exclusive-offer-card .promo .pct,
 .offer-card-deal,
 .profile-offer-discount {
-  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 55%, #4D5DFB 100%) !important;
-  color: #040D1A !important;
-  font-weight: 900 !important;
-  box-shadow: 0 0 16px rgba(0, 240, 255, 0.5) !important;
+  background: #0284C7 !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  box-shadow: none !important;
 }
 
 /* 10. Scroll to Top Floating Button */
@@ -10925,11 +10974,11 @@ body {
 [data-scroll-top],
 button.scroll-top,
 .scroll-to-top {
-  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 50%, #4D5DFB 100%) !important;
-  color: #040D1A !important;
-  font-weight: 900 !important;
+  background: #0284C7 !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
   border: none !important;
-  box-shadow: 0 4px 22px rgba(0, 240, 255, 0.55) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
 }
 
 .scroll-top:hover,
@@ -10937,19 +10986,17 @@ button.scroll-top,
 [data-scroll-top]:hover,
 button.scroll-top:hover,
 .scroll-to-top:hover {
-  transform: translateY(-2px) scale(1.06) !important;
-  box-shadow: 0 6px 30px rgba(0, 240, 255, 0.75) !important;
+  background: #0369A1 !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* 11. Obsidian Glass Cards & Floating Frames */
+/* 11. Cards & Floating Frames */
 .panel,
 .offers-top-panel,
 .exclusive-offers-frame {
-  background:
-    linear-gradient(160deg, rgba(10, 16, 32, 0.94), rgba(6, 9, 20, 0.98)) padding-box,
-    linear-gradient(135deg, rgba(0, 240, 255, 0.55) 0%, rgba(0, 153, 255, 0.4) 45%, rgba(77, 93, 251, 0.5) 100%) border-box !important;
-  border: 1px solid transparent !important;
-  box-shadow: 0 24px 70px -15px rgba(0, 0, 0, 0.75), 0 0 40px -10px rgba(0, 240, 255, 0.22) !important;
+  background: rgba(10, 16, 32, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45) !important;
 }
 
 .rank-card,
@@ -10958,8 +11005,9 @@ button.scroll-top:hover,
 .reviews-card,
 .profile-reviews-card,
 .payout-card {
-  background: rgba(10, 16, 32, 0.82) !important;
-  border: 1px solid rgba(0, 240, 255, 0.16) !important;
+  background: rgba(10, 16, 32, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
   backdrop-filter: blur(14px) !important;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
@@ -10967,9 +11015,9 @@ button.scroll-top:hover,
 .rank-card:hover,
 .profile-card:hover,
 .profile-reviews-card:hover {
-  background: rgba(14, 22, 44, 0.92) !important;
-  border-color: rgba(0, 240, 255, 0.45) !important;
-  box-shadow: 0 14px 36px -5px rgba(0, 0, 0, 0.7), 0 0 24px rgba(0, 240, 255, 0.22) !important;
+  background: rgba(14, 22, 44, 0.88) !important;
+  border-color: rgba(56, 189, 248, 0.3) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* 12. Offers Page Buttons, Buy Links & Interactive Cards */
@@ -10981,12 +11029,12 @@ button.scroll-top:hover,
 .btn-compare-now,
 .res-btn-3d,
 .resource .res-btn-3d {
-  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 50%, #4D5DFB 100%) !important;
-  color: #040D1A !important;
-  font-weight: 800 !important;
+  background: #0284C7 !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
   border: none !important;
-  box-shadow: 0 4px 18px rgba(0, 240, 255, 0.45), 0 0 12px rgba(77, 93, 251, 0.25) !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.2s ease !important;
 }
 
 .buy-link-btn:hover,
@@ -10997,20 +11045,19 @@ button.scroll-top:hover,
 .btn-compare-now:hover,
 .res-btn-3d:hover,
 .resource .res-btn-3d:hover {
-  transform: translateY(-2px) scale(1.02) !important;
-  filter: brightness(1.1) !important;
-  box-shadow: 0 8px 28px rgba(0, 240, 255, 0.65), 0 0 20px rgba(77, 93, 251, 0.45) !important;
+  background: #0369A1 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
 }
 
 .how-we-rank-link {
-  color: #00F0FF !important;
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.4) !important;
+  color: #38BDF8 !important;
+  text-shadow: none !important;
 }
 
 .offers-trust-pill,
 .trustpilot-line,
 .verified-chip {
-  border-color: rgba(0, 240, 255, 0.35) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
 /* 13. Draft Hero Background Video Animation (Full Screen & Clear View) */
