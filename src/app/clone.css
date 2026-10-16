@@ -2512,12 +2512,12 @@ main{background:radial-gradient(ellipse 88% 30% at 8% 0%,rgb(var(--theme-mid-rgb
 .compare-firm-head .logo-wrap,.compare-firm-head .firm-logo,.compare-firm-head .firm-initial{width:74px;height:74px;flex-basis:74px}
 .market-directory-row .logo-wrap,.market-directory-row .firm-logo,.market-directory-row .firm-initial{width:70px;height:70px;flex-basis:70px}
 @media(max-width:760px){
-  .head-main{min-height:58px;padding:8px 0;display:flex;align-items:center;flex-wrap:nowrap;gap:6px}
+  .head-main{min-height:58px;padding:8px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:10px}
   .head-main>.searchbox,.head-main>.market-switch{display:none}
-  .brand-lock{flex:1 1 auto;min-width:0;overflow:hidden}.brand-lock span:last-child{overflow:hidden;text-overflow:ellipsis}
-  .desktop-auth{display:flex!important;flex:0 0 auto;gap:5px;margin-left:auto}
-  .header-auth .login,.header-auth .signup{height:34px;padding:0 10px;font-size:11px}
-  .menu{display:grid;flex:0 0 34px;width:34px;height:34px;margin-left:0}
+  .brand-lock{display:inline-flex;align-items:center;gap:8px;flex:0 0 auto;white-space:nowrap;font-size:16px}
+  .brand-lock span:last-child{display:inline-block!important}
+  .desktop-auth{display:none!important}
+  .menu{display:grid!important;flex:0 0 40px;width:40px;height:40px;margin-left:auto;border-radius:11px;place-items:center}
   .mobile-auth{display:none!important}
   .mobile-nav-tools{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:9px;width:100%;padding:9px 0 4px}
   .mobile-nav-tools .searchbox{display:block;order:0;width:100%;height:38px}
@@ -2531,7 +2531,7 @@ main{background:radial-gradient(ellipse 88% 30% at 8% 0%,rgb(var(--theme-mid-rgb
   #offers .offer .logo-wrap,#offers .offer .firm-logo,#offers .offer .firm-initial,.exclusive-offer-card .logo-wrap,.exclusive-offer-card .firm-logo,.exclusive-offer-card .firm-initial{width:64px;height:64px;flex-basis:64px}
 }
 @media(max-width:520px){.mobile-nav-tools{grid-template-columns:1fr}.mobile-nav-tools .market-switch{width:100%;justify-content:space-between}.mobile-nav-tools .market-switch button{flex:1}.logo-wrap,.firm-logo,.firm-initial{width:58px;height:58px;flex-basis:58px}}
-@media(max-width:390px){.brand-lock span:last-child{display:none}.brand-lock{flex-basis:38px}.header-auth .login,.header-auth .signup{padding:0 8px}.head-main{gap:5px}#offers .offer,.exclusive-offer-card{grid-template-columns:58px minmax(0,1fr)}#offers .offer .logo-wrap,#offers .offer .firm-logo,#offers .offer .firm-initial,.exclusive-offer-card .logo-wrap,.exclusive-offer-card .firm-logo,.exclusive-offer-card .firm-initial{width:58px;height:58px;flex-basis:58px}}
+@media(max-width:390px){.head-main{gap:8px}#offers .offer,.exclusive-offer-card{grid-template-columns:58px minmax(0,1fr)}#offers .offer .logo-wrap,#offers .offer .firm-logo,#offers .offer .firm-initial,.exclusive-offer-card .logo-wrap,.exclusive-offer-card .firm-logo,.exclusive-offer-card .firm-initial{width:58px;height:58px;flex-basis:58px}}
 
 /* One shared logo frame for Forex, Futures, and Crypto. Contexts still set the frame size; every mark fills it without cropping. */
 .firm-logo-frame{display:inline-grid;place-items:center;flex-shrink:0;min-width:0;overflow:hidden;background:#0d0d12;border-radius:13px}
@@ -2993,7 +2993,7 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
 .resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px!important;perspective:1200px}
 .resource-card-3d{position:relative;background:linear-gradient(165deg,rgba(18,18,25,.92) 0%,rgba(9,10,14,.98) 100%)!important;border:1px solid rgba(255,255,255,.08)!important;border-radius:22px!important;padding:26px 24px 22px!important;display:flex!important;flex-direction:column!important;box-shadow:0 16px 40px -12px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.09)!important;transition:transform .38s cubic-bezier(.16,1,.3,1),box-shadow .38s cubic-bezier(.16,1,.3,1),border-color .38s ease!important;overflow:hidden}
 .resource-card-3d:hover{transform:translateY(-8px) scale(1.018)!important;box-shadow:0 26px 52px -10px rgba(0,0,0,.85),0 0 35px -5px rgba(30,231,252,.26),inset 0 1px 0 rgba(30,231,252,.4)!important;border-color:rgba(30,231,252,.35)!important}
-.res-card-glow{position:absolute;top:-40%;right:-30%;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(30,231,252,.14),transparent 70%);filter:blur(30px);pointer-events:none;transition:transform .5s ease,opacity .5s ease}
+.res-card-glow{position:absolute;top:-10%;right:0;max-width:100%;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(30,231,252,.14),transparent 70%);filter:blur(30px);pointer-events:none;transition:transform .5s ease,opacity .5s ease}
 .resource-card-3d:nth-child(2) .res-card-glow{background:radial-gradient(circle,rgba(57,109,250,.18),transparent 70%)}
 .resource-card-3d:nth-child(3) .res-card-glow{background:radial-gradient(circle,rgba(112,33,252,.2),transparent 70%)}
 .resource-card-3d:hover .res-card-glow{transform:scale(1.35);opacity:.9}
@@ -3900,23 +3900,36 @@ img[hidden],
   filter: brightness(1.1) !important;
 }
 
-/* Hide redundant hamburger menu button on desktop, show search & market switch */
+/* Desktop Header: show search, market switch, desktop auth, and horizontal nav */
 @media (min-width: 769px) {
   .head-main .menu {
     display: none !important;
+  }
+  .desktop-auth {
+    display: flex !important;
+  }
+  .mobile-nav-tools,
+  .mobile-nav-auth {
+    display: none !important;
+  }
+  .navrow {
+    display: block !important;
   }
   .navlinks {
     min-height: 46px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 36px !important;
+    gap: 32px !important;
     padding: 0 !important;
   }
 }
 
-/* Mobile & Tablet Header adjustments */
+/* Mobile & Tablet Header adjustments: Native app drawer feel */
 @media (max-width: 768px) {
+  .desktop-auth {
+    display: none !important;
+  }
   .head-main > .searchbox,
   .head-main > .market-switch {
     display: none !important;
@@ -3924,12 +3937,132 @@ img[hidden],
   .head-main .menu {
     display: grid !important;
   }
-  .navlinks {
+  .navrow {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    background: rgba(9, 11, 20, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8) !important;
+  }
+  .navrow[hidden] {
+    display: none !important;
+  }
+  .navrow:not([hidden]) {
+    display: block !important;
+    max-height: calc(100dvh - 64px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .mobile-nav-tools {
     display: flex !important;
-    flex-wrap: wrap !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+    padding: 14px 0 8px !important;
+  }
+  .mobile-nav-tools .searchbox {
+    width: 100% !important;
+    height: 44px !important;
+    border-radius: 12px !important;
+    background: #12131F !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    font-size: 14px !important;
+    padding: 0 16px !important;
+    color: #fff !important;
+  }
+  .mobile-nav-tools .market-switch {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    background: #0A0B12 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    padding: 4px !important;
+    margin: 0 !important;
+  }
+  .mobile-nav-tools .market-switch button {
+    width: 100% !important;
+    min-height: 38px !important;
+    text-align: center !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+  }
+  .navlinks {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    padding: 6px 0 16px !important;
+    width: 100% !important;
+  }
+  .navlinks > a {
+    display: flex !important;
+    align-items: center !important;
     justify-content: center !important;
-    gap: 8px 16px !important;
-    padding: 6px 0 10px !important;
+    min-height: 44px !important;
+    padding: 10px 12px !important;
+    background: rgba(18, 20, 32, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #CBD5E1 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+  .navlinks > a:hover,
+  .navlinks > a.active {
+    background: rgba(30, 231, 252, 0.12) !important;
+    border-color: rgba(30, 231, 252, 0.4) !important;
+    color: #FFFFFF !important;
+  }
+  .navlinks > a:hover::after,
+  .navlinks > a.active::after {
+    display: none !important;
+  }
+  .navlinks > a[data-page="compare"] {
+    grid-column: 1 / -1 !important;
+  }
+  .mobile-nav-auth {
+    grid-column: 1 / -1 !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    padding-top: 12px !important;
+    margin-top: 4px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    width: 100% !important;
+  }
+  .mobile-login,
+  .mobile-signup {
+    min-height: 44px !important;
+    border-radius: 12px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+  }
+  .mobile-login {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #FFFFFF !important;
+  }
+  .mobile-login:active {
+    background: rgba(255, 255, 255, 0.12) !important;
+  }
+  .mobile-signup {
+    background: linear-gradient(135deg, #1EE7FC 0%, #396DFA 100%) !important;
+    border: 0 !important;
+    color: #0A0A10 !important;
+    font-weight: 800 !important;
+    box-shadow: 0 4px 14px rgba(30, 231, 252, 0.3) !important;
+  }
+  .mobile-signup:active {
+    filter: brightness(0.95) !important;
   }
 }
 
@@ -11227,6 +11360,113 @@ button.scroll-top:hover,
   position: relative !important;
   z-index: 10 !important;
   background: #060812 !important;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE PERFECTION & SMOOTH NATIVE TOUCH FEEL
+   ========================================================================== */
+
+/* 1. Global Viewport Overflow Guard */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* 2. Hero Stat Pills: Sleek 2x2 Grid on Mobile (< 640px) */
+@media (max-width: 640px) {
+  .hero {
+    padding: 32px 0 20px !important;
+  }
+  .hero h1 {
+    font-size: clamp(26px, 7.8vw, 36px) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 12px !important;
+  }
+  .hero p {
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 16px !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+  }
+  .hero .stats,
+  .hero .hero-stat-pills {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 14px auto 0 !important;
+    padding: 0 !important;
+  }
+  .hero .stat,
+  .hero .hero-stat-pill {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 10px 8px !important;
+    min-height: 66px !important;
+    border-radius: 14px !important;
+    background: rgba(14, 18, 30, 0.72) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    white-space: normal !important;
+    gap: 3px !important;
+  }
+  .hero .pfl-hero-stat-svg {
+    width: 18px !important;
+    height: 18px !important;
+    filter: drop-shadow(0 0 6px rgba(30, 231, 252, 0.6)) !important;
+  }
+  .hero .stat strong,
+  .hero .hero-stat-pill strong {
+    font-size: 16px !important;
+    line-height: 1.1 !important;
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+  }
+  .hero .stat span,
+  .hero .hero-stat-pill span {
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    color: #94A3B8 !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+  .hero-video-bg-wrap {
+    height: 100vh !important;
+    min-height: 680px !important;
+  }
+}
+
+/* 3. Contain Overflow from 3D Cards Glow */
+.resource-card-3d {
+  overflow: hidden !important;
+  contain: paint !important;
+}
+
+/* 4. Touch-Friendly Mobile Padding & Buttons */
+@media (max-width: 768px) {
+  .section {
+    padding: 36px 0 !important;
+  }
+  .filter-btn,
+  .panel-head button,
+  .carousel-dots button {
+    touch-action: manipulation !important;
+  }
+  #backToTopBtn {
+    width: 44px !important;
+    height: 44px !important;
+    bottom: 20px !important;
+    right: 16px !important;
+  }
 }
 
 
