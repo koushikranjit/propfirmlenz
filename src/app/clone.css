@@ -2357,60 +2357,61 @@ main{background:transparent!important;box-shadow:none!important}
 @media(max-width:430px){.pfl-firm-row{grid-template-columns:1fr}.pfl-review-total,.pfl-write-review,.pfl-published-reviews{grid-column:auto}.pfl-review-total,.pfl-published-reviews{padding-left:52px}.pfl-write-review{grid-row:auto;width:100%;justify-self:stretch}.pfl-published-reviews{padding-left:0}}
 
 
-/* Logo-matched cyan, blue, and violet brand palette. Colors only. */
+/* Logo-matched cyan, azure, royal blue, and indigo brand palette. */
 :root{
-  --accent:#1EE7FC;
-  --purple:#7021FC;
-  --grad:linear-gradient(115deg,#1EE7FC 0%,#396DFA 52%,#7021FC 100%);
+  --accent:#00F0FF;
+  --purple:#4D5DFB;
+  --grad:linear-gradient(135deg,#00F0FF 0%,#0099FF 45%,#4D5DFB 100%);
+  --grad-brand:linear-gradient(135deg,#00F0FF 0%,#0099FF 45%,#4D5DFB 100%);
 }
-.giveaway{background:linear-gradient(90deg,#1EE7FC,#396DFA 52%,#7021FC);color:#041116}
-.searchbox:focus,.offers-search:focus,.challenge-select:focus,.challenge-search:focus,.favorites-search-wrap:focus-within,.payout-search:focus,.payout-select:focus,.compare-picker select:focus,.spreads-search:focus{border-color:#1EE7FC;box-shadow:0 0 0 3px rgba(30,231,252,.14)}
-.head-pill{border-color:rgba(30,231,252,.52)}.head-pill.purple{border-color:rgba(112,33,252,.7)}
-.navlinks a:hover,.navlinks a.active{color:#1EE7FC}.navlinks a.active:after{background:#1EE7FC}
-.market-switch button.on{background:#1EE7FC;color:#041116}.market-switch button:focus-visible{outline-color:#1EE7FC}
-.hero{background:radial-gradient(ellipse 70% 150% at 12% 4%,rgba(57,109,250,.32),transparent 64%),radial-gradient(ellipse 64% 130% at 92% 20%,rgba(30,231,252,.18),transparent 66%),linear-gradient(180deg,#071824 0%,#080e1a 68%,#07090e 100%)}
-.hero:before{background:radial-gradient(ellipse,rgba(112,33,252,.42),rgba(57,109,250,.22) 44%,transparent 73%)}
-.hero:after{background:radial-gradient(ellipse 32% 88% at -4% 42%,rgba(57,109,250,.34),transparent 72%),radial-gradient(ellipse 32% 88% at 104% 46%,rgba(30,231,252,.22),transparent 72%)}
-.hero h1{text-shadow:0 0 42px rgba(57,109,250,.24)}
-main{background:radial-gradient(ellipse 70% 22% at 4% 16%,rgba(57,109,250,.15),transparent 72%),radial-gradient(ellipse 58% 18% at 98% 40%,rgba(30,231,252,.1),transparent 74%),var(--bg);box-shadow:inset 125px 0 170px -145px rgba(112,33,252,.58),inset -125px 0 170px -145px rgba(30,231,252,.48)}
-#offers.section{background:radial-gradient(ellipse 52% 125% at 14% 0%,rgba(57,109,250,.18),transparent 72%),radial-gradient(ellipse 45% 105% at 91% 7%,rgba(30,231,252,.11),transparent 70%),linear-gradient(180deg,#070b12 0%,#070708 100%)}
-#offers.section:after{background:linear-gradient(90deg,transparent,rgba(57,109,250,.38),rgba(30,231,252,.28),transparent)}
-.panel,.offers-top-panel{background:linear-gradient(150deg,rgba(13,20,29,.97),rgba(9,10,15,.98)) padding-box,linear-gradient(125deg,#1EE7FC,#396DFA 52%,#7021FC) border-box;box-shadow:0 22px 70px rgba(0,0,0,.42),0 0 42px rgba(57,109,250,.09)}
-.futures-panel,.offers-top-panel.futures{background:linear-gradient(150deg,rgba(19,18,22,.97),rgba(9,10,15,.98)) padding-box,linear-gradient(125deg,#f28a2e,#396DFA 52%,#7021FC) border-box}
-.bonus{border-color:rgba(30,231,252,.48);color:#7CF2FF}
-.stat{border-color:transparent;background:linear-gradient(105deg,rgba(8,29,42,.96),rgba(14,18,38,.96)) padding-box,linear-gradient(125deg,rgba(30,231,252,.7),rgba(57,109,250,.65),rgba(112,33,252,.62)) border-box;box-shadow:0 8px 24px rgba(57,109,250,.15),0 0 18px rgba(30,231,252,.09),inset 0 1px 0 rgba(255,255,255,.05)}
-.stat+.stat{border-left-color:transparent}.stat-icon,.stat .stat-icon{color:#9AF6FF;background:linear-gradient(135deg,rgba(30,231,252,.28),rgba(57,109,250,.38),rgba(112,33,252,.42));box-shadow:0 0 15px rgba(30,231,252,.25),inset 0 0 0 1px rgba(123,241,255,.18)}
-.stat-icon svg{filter:drop-shadow(0 0 4px rgba(30,231,252,.4))}
-.firm-logo,.firm-initial{border-color:rgba(30,231,252,.58);box-shadow:0 0 0 1px rgba(57,109,250,.18),0 0 10px rgba(30,231,252,.1)}
-.rating{background:#091d2a;color:#C9FAFF}.stars,.copy:hover,.resource-icon,.resource a,.faq summary:after,.footer-col a:hover,.biz-col a:hover,.bottom a:hover,.payout-attribution a,.payout-caption button,.payout-headline b,.payout-copy a,.payout-faq summary:after,.challenge-count b,.challenge-pop,.challenge-less,.reviews-title-row p,.trustpilot-line,.review-stars .on,.favorites-count b,.payout-category b,.payout-method-pill span,.payout-additional a,.payout-faq-list summary:after,.page-faq summary:after,.static-subscribe span,.spreads-count b,.spread-method-note strong,.review-total-number,.pfl-reviews-count,.pfl-published-review span,.pfl-notice-firm,.firm-name-link:hover,.firm-name-link:focus-visible{color:#1EE7FC}
-.future .ratepill,.rating-cell .score,.verify-pill,.contact-placeholder,.offer-rating,.challenge-rating,.review-view,.review-link,.pfl-write-review,.spread-visit,.favorite-action,.payout-view-button,.payout-help-btn{border-color:rgba(30,231,252,.5)}
-.future .ratepill,.verify-pill,.contact-placeholder,.offer-rating,.challenge-method,.review-method,.payout-method-pill,.compare-code{color:#B9F8FF}
-.filter-btn.on,.offer-code,.review-method,.challenge-method,.payout-method-pill{border-color:rgba(30,231,252,.62);background:#071b25}
-.favorite.on,.fav-count,.rating-cell .review{color:#1EE7FC}.years-ring{background:conic-gradient(#7021FC 0 72%,#26262e 72%)}
-.platform{border-color:rgba(57,109,250,.45);box-shadow:0 0 0 1px rgba(30,231,252,.12),0 3px 10px rgba(0,0,0,.28)}
-.view-all:hover{border-color:#1EE7FC}.resource-icon{background:linear-gradient(#15151b,#15151b) padding-box,var(--grad) border-box}
-.newsletter{border-color:rgba(57,109,250,.45)}.newsletter:before{background:#1EE7FC}.newsletter:after{background:#7021FC}.kicker{color:#1EE7FC}.form-note{color:#9AF6FF}
-.retired-program{border-color:rgba(57,109,250,.38);background:linear-gradient(90deg,#071b25,#101018 65%,#170d34)}.business-name span{color:#8D63FF}.contact-card{background:linear-gradient(125deg,#082434,#121124);border-color:rgba(30,231,252,.4)}.contact-card a{border-color:rgba(30,231,252,.58)}
+.giveaway{background:linear-gradient(90deg,#00F0FF,#0099FF 52%,#4D5DFB);color:#041116}
+.searchbox:focus,.offers-search:focus,.challenge-select:focus,.challenge-search:focus,.favorites-search-wrap:focus-within,.payout-search:focus,.payout-select:focus,.compare-picker select:focus,.spreads-search:focus{border-color:#00F0FF;box-shadow:0 0 0 3px rgba(0,240,255,.2)}
+.head-pill{border-color:rgba(0,240,255,.52)}.head-pill.purple{border-color:rgba(77,93,251,.7)}
+.navlinks a:hover,.navlinks a.active{color:#00F0FF}.navlinks a.active:after{background:#00F0FF}
+.market-switch button.on{background:linear-gradient(135deg,#00F0FF 0%,#0088FF 55%,#4D5DFB 100%);color:#041116}.market-switch button:focus-visible{outline-color:#00F0FF}
+.hero{background:radial-gradient(ellipse 70% 150% at 12% 4%,rgba(0,240,255,.16),transparent 64%),radial-gradient(ellipse 64% 130% at 92% 20%,rgba(77,93,251,.16),transparent 66%),linear-gradient(180deg,#060913 0%,#070b16 68%,#060812 100%)}
+.hero:before{background:radial-gradient(ellipse,rgba(77,93,251,.25),rgba(0,240,255,.12) 44%,transparent 73%)}
+.hero:after{background:radial-gradient(ellipse 32% 88% at -4% 42%,rgba(0,240,255,.18),transparent 72%),radial-gradient(ellipse 32% 88% at 104% 46%,rgba(77,93,251,.18),transparent 72%)}
+.hero h1{text-shadow:0 0 42px rgba(0,240,255,.24)}
+main{background:radial-gradient(ellipse 70% 22% at 4% 16%,rgba(0,240,255,.12),transparent 72%),radial-gradient(ellipse 58% 18% at 98% 40%,rgba(77,93,251,.12),transparent 74%),var(--bg);box-shadow:none}
+#offers.section{background:radial-gradient(ellipse 52% 125% at 14% 0%,rgba(0,240,255,.12),transparent 72%),radial-gradient(ellipse 45% 105% at 91% 7%,rgba(77,93,251,.12),transparent 70%),linear-gradient(180deg,#060812 0%,#060812 100%)}
+#offers.section:after{background:linear-gradient(90deg,transparent,rgba(0,240,255,.35),rgba(77,93,251,.28),transparent)}
+.panel,.offers-top-panel{background:linear-gradient(150deg,rgba(10,16,32,.97),rgba(6,9,18,.98)) padding-box,linear-gradient(125deg,#00F0FF,#0099FF 52%,#4D5DFB) border-box;box-shadow:0 22px 70px rgba(0,0,0,.5),0 0 42px rgba(0,240,255,.12)}
+.futures-panel,.offers-top-panel.futures{background:linear-gradient(150deg,rgba(14,18,34,.97),rgba(6,9,18,.98)) padding-box,linear-gradient(125deg,#00F0FF,#0099FF 52%,#4D5DFB) border-box}
+.bonus{border-color:rgba(0,240,255,.48);color:#A5F3FC}
+.stat{border-color:transparent;background:linear-gradient(105deg,rgba(8,16,34,.96),rgba(10,20,44,.96)) padding-box,linear-gradient(125deg,rgba(0,240,255,.5),rgba(0,153,255,.45),rgba(77,93,251,.45)) border-box;box-shadow:0 8px 24px rgba(0,0,0,.35),0 0 18px rgba(0,240,255,.1),inset 0 1px 0 rgba(255,255,255,.05)}
+.stat+.stat{border-left-color:transparent}.stat-icon,.stat .stat-icon{color:#00F0FF;background:linear-gradient(135deg,rgba(0,240,255,.2),rgba(0,153,255,.25),rgba(77,93,251,.3));box-shadow:0 0 15px rgba(0,240,255,.2),inset 0 0 0 1px rgba(0,240,255,.25)}
+.stat-icon svg{filter:drop-shadow(0 0 4px rgba(0,240,255,.5))}
+.firm-logo,.firm-initial{border-color:rgba(0,240,255,.35);box-shadow:0 0 0 1px rgba(0,240,255,.15),0 0 10px rgba(0,240,255,.1)}
+.rating{background:#091526;color:#C9FAFF}.stars,.copy:hover,.resource-icon,.resource a,.faq summary:after,.footer-col a:hover,.biz-col a:hover,.bottom a:hover,.payout-attribution a,.payout-caption button,.payout-headline b,.payout-copy a,.payout-faq summary:after,.challenge-count b,.challenge-pop,.challenge-less,.reviews-title-row p,.trustpilot-line,.review-stars .on,.favorites-count b,.payout-category b,.payout-method-pill span,.payout-additional a,.payout-faq-list summary:after,.page-faq summary:after,.static-subscribe span,.spreads-count b,.spread-method-note strong,.review-total-number,.pfl-reviews-count,.pfl-published-review span,.pfl-notice-firm,.firm-name-link:hover,.firm-name-link:focus-visible{color:#00F0FF}
+.future .ratepill,.rating-cell .score,.verify-pill,.contact-placeholder,.offer-rating,.challenge-rating,.review-view,.review-link,.pfl-write-review,.spread-visit,.favorite-action,.payout-view-button,.payout-help-btn{border-color:rgba(0,240,255,.45)}
+.future .ratepill,.verify-pill,.contact-placeholder,.offer-rating,.challenge-method,.review-method,.payout-method-pill,.compare-code{color:#BAE6FD}
+.filter-btn.on,.offer-code,.review-method,.challenge-method,.payout-method-pill{border-color:rgba(0,240,255,.55);background:#071426}
+.favorite.on,.fav-count,.rating-cell .review{color:#00F0FF}.years-ring{background:conic-gradient(#00F0FF 0% 35%,#00A3FF 35% 65%,#4D5DFB 65% 100%)}
+.platform{border-color:rgba(0,240,255,.35);box-shadow:0 0 0 1px rgba(0,240,255,.12),0 3px 10px rgba(0,0,0,.28)}
+.view-all:hover{border-color:#00F0FF}.resource-icon{background:linear-gradient(#0f172a,#0f172a) padding-box,var(--grad) border-box}
+.newsletter{border-color:rgba(0,240,255,.35)}.newsletter:before{background:#00F0FF}.newsletter:after{background:#4D5DFB}.kicker{color:#00F0FF}.form-note{color:#9AF6FF}
+.retired-program{border-color:rgba(0,240,255,.3);background:linear-gradient(90deg,#060f1c,#0a1020 65%,#0f1730)}.business-name span{color:#00F0FF}.contact-card{background:linear-gradient(125deg,#071526,#0b1329);border-color:rgba(0,240,255,.3)}.contact-card a{border-color:rgba(0,240,255,.5)}
 .carousel-dot.on,.bar i,.progress-track i,.month-col i,.review-count .bar i,.favorite-progress i,.payout-total-track i{background:var(--grad)}
-.live-badge,.snapshot,.review-summary{border-color:#2b6947}.payout-subnav button.on,.jump-tabs button.active,.offers-page-tabs button.active,.challenge-tabs button.active,.reviews-tabs button.active,.review-source-toggle button.on{background:#1EE7FC;color:#041116;border-color:#1EE7FC;box-shadow:none}
-.payout-headline{border-color:rgba(57,109,250,.4);background:linear-gradient(115deg,#071b26,#101015 70%)}
-.verify-step b,.review-info-icon,.payout-share-mark{color:#1EE7FC}.payout-share-mark{border-color:rgba(30,231,252,.48)}
-.offer:after,.future:after,.exclusive-offer-card:after{background:linear-gradient(90deg,transparent,rgba(30,231,252,.4),transparent)}
-.promo{border-color:rgba(30,231,252,.3)}
+.live-badge,.snapshot,.review-summary{border-color:#10B981}.payout-subnav button.on,.jump-tabs button.active,.offers-page-tabs button.active,.challenge-tabs button.active,.reviews-tabs button.active,.review-source-toggle button.on{background:linear-gradient(135deg,#00F0FF 0%,#0088FF 50%,#4D5DFB 100%);color:#041116;border-color:transparent;box-shadow:0 2px 14px rgba(0,240,255,.35)}
+.payout-headline{border-color:rgba(0,240,255,.35);background:linear-gradient(115deg,#071526,#0b1324 70%)}
+.verify-step b,.review-info-icon,.payout-share-mark{color:#00F0FF}.payout-share-mark{border-color:rgba(0,240,255,.45)}
+.offer:after,.future:after,.exclusive-offer-card:after{background:linear-gradient(90deg,transparent,rgba(0,240,255,.35),transparent)}
+.promo{border-color:rgba(0,240,255,.35)}
 .signup,.subscribe button,.auth-options a,.retired-program a,.post-review,.apply-btn,.challenge-buy,.favorite-offer,.delay-modal-actions a,.promo .pct,.firm-initial{background:var(--grad);color:#fff}
-.challenges-page,.reviews-page,.favorites-page,.payout-hub,.payout-detail-page,.compare-page,.spreads-page{background:radial-gradient(ellipse 46% 28% at -6% 4%,rgba(57,109,250,.16),transparent 72%),radial-gradient(ellipse 42% 25% at 106% 7%,rgba(30,231,252,.11),transparent 72%),#080809}
-.exclusive-offers-frame{background:linear-gradient(125deg,#1EE7FC,#396DFA 52%,#7021FC);box-shadow:0 24px 72px rgba(0,0,0,.4),0 0 42px rgba(57,109,250,.09)}
-.challenge-tabs .hot,.reviews-tabs .hot{background:linear-gradient(#17171E,#17171E) padding-box,linear-gradient(105deg,#ef7737,#396DFA,#7021FC) border-box}.challenge-tabs .trend,.reviews-tabs .trend{background:#7021FC}
+.challenges-page,.reviews-page,.favorites-page,.payout-hub,.payout-detail-page,.compare-page,.spreads-page{background:transparent}
+.exclusive-offers-frame{background:linear-gradient(125deg,#00F0FF,#0099FF 52%,#4D5DFB);box-shadow:0 24px 72px rgba(0,0,0,.5),0 0 42px rgba(0,240,255,.15)}
+.challenge-tabs .hot,.reviews-tabs .hot{background:linear-gradient(#0e1628,#0e1628) padding-box,linear-gradient(105deg,#00F0FF,#0099FF,#4D5DFB) border-box}.challenge-tabs .trend,.reviews-tabs .trend{background:#4D5DFB}
 .new-ribbon{background:var(--grad)}
-.challenge-table,.reviews-table,.favorites-list,.spreads-table,.pfl-directory{border-color:rgba(30,231,252,.22)}
-.review-count .bar i,.favorite-progress i{background:var(--grad)}.review-rank b,.review-rank-number{background:#101b33}.review-view:hover,.review-view:focus-visible,.review-link:hover,.review-link:focus-visible,.pfl-write-review:hover,.pfl-write-review:focus-visible,.favorite-action:hover,.favorite-action:focus-visible,.payout-view-button:hover{background:#071f2c}
-.additional-info{border-color:rgba(57,109,250,.34);background:linear-gradient(100deg,rgba(57,109,250,.2),rgba(17,17,20,.9) 28%)}.method-separation{border-color:rgba(57,109,250,.42);background:#101329}
-.favorite-firm-row:nth-child(-n+3) .favorite-rank{border-color:rgba(30,231,252,.55);background:#082331;color:#9AF6FF}
-.payout-subnav{border-color:rgba(57,109,250,.28)}.payout-data-note{color:#8F95A3}.payout-firm-sorts i{background:#26334b}.payout-trustpilot{border-color:rgba(30,231,252,.45);color:#C9FAFF}.payout-trustpilot .stars{color:#1EE7FC}.payout-speed.fast,.detail-speed{background:#20105a;color:#A98AFF!important}.payout-method-pill{background:#071923}.powered-lenz{background:linear-gradient(#111822,#111822) padding-box,var(--grad) border-box}.firm-name-link:hover,.firm-name-link:focus-visible{color:#1EE7FC}
-.page-stat{border-color:rgba(30,231,252,.42);background:#071923}.compare-code{border-color:rgba(30,231,252,.54);background:#071c27;color:#79F1FF!important}.static-subscribe{border-color:rgba(57,109,250,.36);background:radial-gradient(circle at 12% 50%,rgba(30,231,252,.18),transparent 31%),radial-gradient(circle at 88% 50%,rgba(112,33,252,.24),transparent 32%),#0f111a}.spread-visit{background:#0c1724}
-.market-empty-page{background:radial-gradient(ellipse 55% 45% at 50% 0%,rgba(57,109,250,.22),transparent 72%),var(--bg)}.market-empty-card{border-color:rgba(30,231,252,.4);background:linear-gradient(145deg,#071b27,#0d0c14)}
-.pfl-published-review{border-left-color:#396DFA}.payout-detail-timeframes button.on{background:#11214a;border-color:#396DFA}.payout-gauge:before{border-color:#596779}
-@media(max-width:760px){.hero{background:radial-gradient(ellipse 110% 90% at 10% 0%,rgba(57,109,250,.24),transparent 64%),radial-gradient(ellipse 100% 75% at 100% 36%,rgba(30,231,252,.13),transparent 68%),linear-gradient(180deg,#071621,#07090e)}#offers.section{background:linear-gradient(180deg,#070b12,#070708)}}
+.challenge-table,.reviews-table,.favorites-list,.spreads-table,.pfl-directory{border-color:rgba(0,240,255,.2)}
+.review-count .bar i,.favorite-progress i{background:var(--grad)}.review-rank b,.review-rank-number{background:#0a1224}.review-view:hover,.review-view:focus-visible,.review-link:hover,.review-link:focus-visible,.pfl-write-review:hover,.pfl-write-review:focus-visible,.favorite-action:hover,.favorite-action:focus-visible,.payout-view-button:hover{background:#091528}
+.additional-info{border-color:rgba(0,240,255,.3);background:linear-gradient(100deg,rgba(0,240,255,.12),rgba(10,16,32,.9) 28%)}.method-separation{border-color:rgba(0,240,255,.3);background:#0a1224}
+.favorite-firm-row:nth-child(-n+3) .favorite-rank{border-color:rgba(0,240,255,.5);background:#08182b;color:#BAE6FD}
+.payout-subnav{border-color:rgba(0,240,255,.25)}.payout-data-note{color:#8F95A3}.payout-firm-sorts i{background:#16233b}.payout-trustpilot{border-color:rgba(0,240,255,.45);color:#C9FAFF}.payout-trustpilot .stars{color:#00F0FF}.payout-speed.fast,.detail-speed{background:#0a1530;color:#00F0FF!important}.payout-method-pill{background:#071424}.powered-lenz{background:linear-gradient(#0b1426,#0b1426) padding-box,var(--grad) border-box}.firm-name-link:hover,.firm-name-link:focus-visible{color:#00F0FF}
+.page-stat{border-color:rgba(0,240,255,.35);background:#071424}.compare-code{border-color:rgba(0,240,255,.5);background:#071628;color:#BAE6FD!important}.static-subscribe{border-color:rgba(0,240,255,.35);background:radial-gradient(circle at 12% 50%,rgba(0,240,255,.15),transparent 31%),radial-gradient(circle at 88% 50%,rgba(77,93,251,.2),transparent 32%),#080f20}.spread-visit{background:#0a1424}
+.market-empty-page{background:radial-gradient(ellipse 55% 45% at 50% 0%,rgba(0,240,255,.18),transparent 72%),var(--bg)}.market-empty-card{border-color:rgba(0,240,255,.35);background:linear-gradient(145deg,#071426,#0a1122)}
+.pfl-published-review{border-left-color:#00F0FF}.payout-detail-timeframes button.on{background:#091b38;border-color:#00F0FF}.payout-gauge:before{border-color:#596779}
+@media(max-width:760px){.hero{background:radial-gradient(ellipse 110% 90% at 10% 0%,rgba(0,240,255,.18),transparent 64%),radial-gradient(ellipse 100% 75% at 100% 36%,rgba(77,93,251,.12),transparent 68%),linear-gradient(180deg,#060913,#060812)}#offers.section{background:linear-gradient(180deg,#060812,#060812)}}
 
 /* One uninterrupted brand gradient through the homepage hero and offers. */
 main{background:radial-gradient(ellipse 88% 30% at 8% 0%,rgba(57,109,250,.34),transparent 72%),radial-gradient(ellipse 76% 32% at 98% 13%,rgba(30,231,252,.22),transparent 74%),linear-gradient(180deg,#071824 0%,#0a1633 10%,#071b26 24%,#05070b 42%,#050506 66%);box-shadow:inset 125px 0 170px -145px rgba(112,33,252,.58),inset -125px 0 170px -145px rgba(30,231,252,.48)}
@@ -7607,17 +7608,17 @@ footer#footer .bottom-copy {
 :root {
   --theme: #00F0FF;
   --theme-mid: #38BDF8;
-  --theme-deep: #A855F7;
+  --theme-deep: #4D5DFB;
   --theme-rgb: 0 240 255;
   --theme-mid-rgb: 56 189 248;
-  --theme-deep-rgb: 168 85 247;
+  --theme-deep-rgb: 77 93 251;
   --accent: #00F0FF;
-  --purple: #A855F7;
-  --pink: #EC4899;
-  --grad: linear-gradient(135deg, #00F0FF 0%, #38BDF8 30%, #6366F1 70%, #A855F7 100%);
-  --grad-hot: linear-gradient(135deg, #FF2E93 0%, #EC4899 40%, #8B5CF6 100%);
-  --grad-amber: linear-gradient(135deg, #F59E0B 0%, #EC4899 50%, #8B5CF6 100%);
-  --grad-glow: linear-gradient(135deg, rgba(0, 240, 255, 0.45), rgba(168, 85, 247, 0.45));
+  --purple: #4D5DFB;
+  --pink: #38BDF8;
+  --grad: linear-gradient(135deg, #00F0FF 0%, #0099FF 45%, #4D5DFB 100%);
+  --grad-hot: linear-gradient(135deg, #00F0FF 0%, #0088FF 40%, #4D5DFB 100%);
+  --grad-amber: linear-gradient(135deg, #F59E0B 0%, #00A3FF 50%, #4D5DFB 100%);
+  --grad-glow: linear-gradient(135deg, rgba(0, 240, 255, 0.45), rgba(77, 93, 251, 0.45));
 }
 
 /* 2. Hero Section Typography with Crisp Specular Gradient */
@@ -10225,8 +10226,371 @@ span.firm-initial {
   border-radius: inherit !important;
   font-weight: 800 !important;
   font-size: 15px !important;
-  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%) !important;
+  background: linear-gradient(135deg, #0c162d 0%, #112044 100%) !important;
   color: #EDEFF7 !important;
   padding: 0 !important;
   margin: 0 !important;
 }
+
+/* ==========================================================================
+   PROPFIRMLENZ MASTER BRAND COLOR THEME (PERFECT LOGO HARMONY)
+   Electric Cyan (#00F0FF) -> Sky Azure (#00A3FF) -> Royal Cobalt (#4D5DFB)
+   Obsidian Glass Core & Specular White Lighting
+   ========================================================================== */
+
+/* 1. Global Cosmic Obsidian Aurora Background */
+html,
+body {
+  background-color: #060812 !important;
+  background-image:
+    radial-gradient(circle at 14% 10%, rgba(0, 240, 255, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 86% 16%, rgba(77, 93, 251, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(0, 163, 255, 0.08) 0%, transparent 55%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 2. Logo Brand Typography & High-Gloss Lens Glow */
+.brand-lock span {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+}
+
+.brand-lock .brand-lenz-text,
+.brand-lock span .brand-lenz-text {
+  background: linear-gradient(135deg, #00F0FF 0%, #00C8FF 45%, #38BDF8 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: #00F0FF !important;
+  filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.75)) !important;
+  font-weight: 900 !important;
+  margin-left: 5px !important;
+}
+
+.brand-lock:hover img {
+  filter: drop-shadow(0 0 24px rgba(0, 240, 255, 0.85)) !important;
+}
+
+/* 3. Hero & Page Headings Typography */
+#heroTitle,
+.hero h1,
+.page-intro h1,
+.payout-hub-head h1,
+.favorites-head h2,
+.reviews-hub-head h1,
+.compare-head h1,
+.spreads-head h1 {
+  background: linear-gradient(135deg, #FFFFFF 15%, #E0F2FE 45%, #38BDF8 75%, #4D5DFB 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 4px 30px rgba(0, 240, 255, 0.25)) !important;
+  letter-spacing: -0.035em !important;
+}
+
+/* 4. Hero 3D Badge Pill */
+.hero-badge-3d {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.12) 0%, rgba(77, 93, 251, 0.16) 100%) !important;
+  border: 1px solid rgba(0, 240, 255, 0.45) !important;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.25), 0 0 45px rgba(77, 93, 251, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.hero-badge-3d .badge-tag {
+  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 60%, #4D5DFB 100%) !important;
+  color: #040D1A !important;
+  font-weight: 900 !important;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.6) !important;
+}
+
+/* 5. Header Navigation & Market Switch */
+.market-switch {
+  background: rgba(10, 16, 32, 0.9) !important;
+  border: 1px solid rgba(0, 240, 255, 0.25) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.market-switch button.on {
+  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 55%, #4D5DFB 100%) !important;
+  color: #040D1A !important;
+  font-weight: 900 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.5) !important;
+}
+
+.navlinks a:hover,
+.navlinks a.active {
+  color: #00F0FF !important;
+}
+
+.navlinks a.active:after {
+  background: linear-gradient(90deg, #00F0FF 0%, #4D5DFB 100%) !important;
+  box-shadow: 0 0 12px #00F0FF !important;
+}
+
+.header-auth .signup,
+.signup {
+  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 50%, #4D5DFB 100%) !important;
+  color: #040D1A !important;
+  font-weight: 900 !important;
+  border: none !important;
+  box-shadow: 0 4px 18px rgba(0, 240, 255, 0.45) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.header-auth .signup:hover,
+.signup:hover {
+  filter: brightness(1.1) !important;
+  transform: translateY(-1px) scale(1.02) !important;
+  box-shadow: 0 6px 26px rgba(0, 240, 255, 0.65), 0 0 20px rgba(77, 93, 251, 0.35) !important;
+}
+
+.header-auth .login,
+.login {
+  background: rgba(0, 240, 255, 0.08) !important;
+  border: 1px solid rgba(0, 240, 255, 0.35) !important;
+  color: #E2E8F0 !important;
+  font-weight: 700 !important;
+  transition: all 0.2s ease !important;
+}
+
+.header-auth .login:hover,
+.login:hover {
+  background: rgba(0, 240, 255, 0.15) !important;
+  border-color: #00F0FF !important;
+  color: #00F0FF !important;
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.3) !important;
+}
+
+/* 6. Universal High-Impact Action CTAs */
+.btn-primary,
+.post-review,
+.apply-btn,
+.challenge-buy,
+.favorite-offer,
+.review-view-all-btn,
+.hero-cta-btn,
+.subscribe button,
+.delay-modal-actions a,
+.auth-options a,
+.buy-btn,
+[data-buy-link],
+.profile-action-buy,
+.challenge-buy-btn,
+.btn-submit-review {
+  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 50%, #4D5DFB 100%) !important;
+  color: #040D1A !important;
+  font-weight: 800 !important;
+  border: none !important;
+  box-shadow: 0 4px 20px rgba(0, 240, 255, 0.4), 0 0 14px rgba(77, 93, 251, 0.25) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-primary:hover,
+.post-review:hover,
+.apply-btn:hover,
+.challenge-buy:hover,
+.favorite-offer:hover,
+.review-view-all-btn:hover,
+.hero-cta-btn:hover,
+.subscribe button:hover,
+.buy-btn:hover,
+[data-buy-link]:hover,
+.profile-action-buy:hover,
+.challenge-buy-btn:hover,
+.btn-submit-review:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  filter: brightness(1.1) !important;
+  box-shadow: 0 8px 30px rgba(0, 240, 255, 0.6), 0 0 24px rgba(77, 93, 251, 0.45) !important;
+}
+
+/* 7. Active Tabs, Filter Pills, and Jump Tabs */
+.jump-tabs button.active,
+.jump-tabs button.on,
+.filter-btn.on,
+.offers-page-tabs button.active,
+.challenge-tabs button.active,
+.reviews-tabs button.active,
+.review-source-toggle button.on,
+.payout-subnav button.on,
+.payout-category.on,
+.payout-tf-btn.on,
+.table-filter-btn.active,
+[data-view].active,
+[data-sort].on {
+  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 50%, #4D5DFB 100%) !important;
+  color: #040D1A !important;
+  font-weight: 800 !important;
+  border-color: transparent !important;
+  box-shadow: 0 2px 16px rgba(0, 240, 255, 0.45) !important;
+}
+
+/* 8. Table & Leaderboard Styling Overhaul */
+.rating-cell .score,
+.rating,
+.rating-badge {
+  border: 1px solid rgba(0, 240, 255, 0.45) !important;
+  background: rgba(0, 240, 255, 0.1) !important;
+  color: #00F0FF !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.15) !important;
+}
+
+/* Accurate High-Readability Star Color */
+.stars-row,
+.review-stars .on,
+.rating-stars,
+.stars {
+  color: #FBBF24 !important;
+}
+
+/* Reviews Count Numbers */
+.reviews-num,
+.review-total-number,
+.pfl-reviews-count {
+  color: #00F0FF !important;
+  font-weight: 800 !important;
+}
+
+/* Years Ring Matching Logo Arc */
+.years-ring {
+  background: conic-gradient(#00F0FF 0% 35%, #00A3FF 35% 65%, #4D5DFB 65% 100%) !important;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.3) !important;
+}
+
+/* Allocation & Payout Progress Tracks */
+.bar i,
+.progress-track i,
+.payout-total-track i,
+.favorite-progress i,
+.review-count .bar i {
+  background: linear-gradient(90deg, #00F0FF 0%, #00A3FF 50%, #4D5DFB 100%) !important;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5) !important;
+}
+
+/* Firm Action Button on Table Rows */
+.firm-action {
+  border: 1px solid rgba(0, 240, 255, 0.45) !important;
+  background: rgba(0, 240, 255, 0.08) !important;
+  color: #00F0FF !important;
+  font-weight: 700 !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.firm-action:hover {
+  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 50%, #4D5DFB 100%) !important;
+  color: #040D1A !important;
+  font-weight: 800 !important;
+  border-color: transparent !important;
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.55) !important;
+  transform: scale(1.04) !important;
+}
+
+/* 9. Promo & Discount Codes */
+.promo .pct,
+.promo-badge-pct,
+.offer .promo .pct,
+.future .promo .pct,
+.exclusive-offer-card .promo .pct,
+.offer-card-deal,
+.profile-offer-discount {
+  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 55%, #4D5DFB 100%) !important;
+  color: #040D1A !important;
+  font-weight: 900 !important;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.5) !important;
+}
+
+/* 10. Scroll to Top Floating Button */
+.scroll-top,
+.back-to-top,
+[data-scroll-top],
+button.scroll-top,
+.scroll-to-top {
+  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 50%, #4D5DFB 100%) !important;
+  color: #040D1A !important;
+  font-weight: 900 !important;
+  border: none !important;
+  box-shadow: 0 4px 22px rgba(0, 240, 255, 0.55) !important;
+}
+
+.scroll-top:hover,
+.back-to-top:hover,
+[data-scroll-top]:hover,
+button.scroll-top:hover,
+.scroll-to-top:hover {
+  transform: translateY(-2px) scale(1.06) !important;
+  box-shadow: 0 6px 30px rgba(0, 240, 255, 0.75) !important;
+}
+
+/* 11. Obsidian Glass Cards & Floating Frames */
+.panel,
+.offers-top-panel,
+.exclusive-offers-frame {
+  background:
+    linear-gradient(160deg, rgba(10, 16, 32, 0.94), rgba(6, 9, 20, 0.98)) padding-box,
+    linear-gradient(135deg, rgba(0, 240, 255, 0.55) 0%, rgba(0, 153, 255, 0.4) 45%, rgba(77, 93, 251, 0.5) 100%) border-box !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 24px 70px -15px rgba(0, 0, 0, 0.75), 0 0 40px -10px rgba(0, 240, 255, 0.22) !important;
+}
+
+.rank-card,
+.offer-group,
+.profile-card,
+.reviews-card,
+.profile-reviews-card,
+.payout-card {
+  background: rgba(10, 16, 32, 0.82) !important;
+  border: 1px solid rgba(0, 240, 255, 0.16) !important;
+  backdrop-filter: blur(14px) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.rank-card:hover,
+.profile-card:hover,
+.profile-reviews-card:hover {
+  background: rgba(14, 22, 44, 0.92) !important;
+  border-color: rgba(0, 240, 255, 0.45) !important;
+  box-shadow: 0 14px 36px -5px rgba(0, 0, 0, 0.7), 0 0 24px rgba(0, 240, 255, 0.22) !important;
+}
+
+/* 12. Offers Page Buttons, Buy Links & Interactive Cards */
+.buy-link-btn,
+.top-offer-actions .buy-link-btn,
+.offers-top-card .buy-link-btn,
+.offer-row .buy-link-btn,
+.btn-view-offer,
+.btn-compare-now,
+.res-btn-3d,
+.resource .res-btn-3d {
+  background: linear-gradient(135deg, #00F0FF 0%, #0088FF 50%, #4D5DFB 100%) !important;
+  color: #040D1A !important;
+  font-weight: 800 !important;
+  border: none !important;
+  box-shadow: 0 4px 18px rgba(0, 240, 255, 0.45), 0 0 12px rgba(77, 93, 251, 0.25) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.buy-link-btn:hover,
+.top-offer-actions .buy-link-btn:hover,
+.offers-top-card .buy-link-btn:hover,
+.offer-row .buy-link-btn:hover,
+.btn-view-offer:hover,
+.btn-compare-now:hover,
+.res-btn-3d:hover,
+.resource .res-btn-3d:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  filter: brightness(1.1) !important;
+  box-shadow: 0 8px 28px rgba(0, 240, 255, 0.65), 0 0 20px rgba(77, 93, 251, 0.45) !important;
+}
+
+.how-we-rank-link {
+  color: #00F0FF !important;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.4) !important;
+}
+
+.offers-trust-pill,
+.trustpilot-line,
+.verified-chip {
+  border-color: rgba(0, 240, 255, 0.35) !important;
+}
+
+
