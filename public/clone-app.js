@@ -1,5 +1,5 @@
 /* PAYOUT_DATA_START */ const PAYOUT_DATA = {
- "captured_at": "2026-10-16T00:29:29.808Z",
+ "captured_at": "2026-10-16T00:50:13.629Z",
  "attribution": {
   "text": "Live Verified Blockchain Feed",
   "url": "#page-payouts"
@@ -59,31 +59,31 @@
    "firm": "Tradeify Futures",
    "slug": "tradeify-futures",
    "methods": "Rise",
-   "total": "$2,613,951",
-   "count": "1,404",
+   "total": "$3,142,656",
+   "count": "1,744",
    "largest": "$62,157",
-   "average": "$1,862",
-   "latest": "Oct 16, 00:21 UTC"
+   "average": "$1,802",
+   "latest": "Oct 16, 00:41 UTC"
   },
   {
    "firm": "MyFundedFutures",
    "slug": "myfundedfutures",
    "methods": "Rise",
-   "total": "$866,151",
-   "count": "813",
+   "total": "$862,497",
+   "count": "804",
    "largest": "$22,692",
-   "average": "$1,065",
-   "latest": "Oct 16, 00:15 UTC"
+   "average": "$1,073",
+   "latest": "Oct 16, 00:38 UTC"
   },
   {
    "firm": "FundedNext",
    "slug": "fundednext",
    "methods": "Rise Direct Crypto",
-   "total": "$819,760",
+   "total": "$821,562",
    "count": "681",
    "largest": "$14,820",
-   "average": "$1,204",
-   "latest": "Oct 16, 00:19 UTC"
+   "average": "$1,206",
+   "latest": "Oct 16, 00:39 UTC"
   },
   {
    "firm": "Breakout",
@@ -139,10 +139,10 @@
    "firm": "Propr",
    "slug": "propr",
    "methods": "Direct Crypto",
-   "total": "$92,670",
-   "count": "52",
+   "total": "$91,843",
+   "count": "51",
    "largest": "$12,114",
-   "average": "$1,782",
+   "average": "$1,801",
    "latest": "Oct 15, 22:12 UTC"
   },
   {
@@ -179,21 +179,21 @@
    "firm": "FundedTraderMarkets",
    "slug": "fundedtradermarkets",
    "methods": "Rise Direct Crypto",
-   "total": "$66,588",
-   "count": "43",
+   "total": "$67,013",
+   "count": "44",
    "largest": "$12,054",
-   "average": "$1,549",
-   "latest": "Oct 16, 00:10 UTC"
+   "average": "$1,523",
+   "latest": "Oct 16, 00:18 UTC"
   },
   {
    "firm": "YlosTrading",
    "slug": "ylostrading",
    "methods": "Rise",
-   "total": "$57,547",
-   "count": "27",
+   "total": "$59,591",
+   "count": "26",
    "largest": "$5,970",
-   "average": "$2,131",
-   "latest": "Oct 15, 23:53 UTC"
+   "average": "$2,292",
+   "latest": "Oct 16, 00:38 UTC"
   },
   {
    "firm": "FuturesElite",
@@ -249,8 +249,8 @@
    "firm": "TopOneFutures",
    "slug": "toponefutures",
    "methods": "Rise",
-   "total": "$32,511",
-   "count": "24",
+   "total": "$31,161",
+   "count": "23",
    "largest": "$3,201",
    "average": "$1,355",
    "latest": "Oct 16, 00:21 UTC"
@@ -339,10 +339,10 @@
    "firm": "FundedHive",
    "slug": "fundedhive",
    "methods": "Direct Crypto",
-   "total": "$7,679",
-   "count": "27",
+   "total": "$7,505",
+   "count": "26",
    "largest": "$800",
-   "average": "$284",
+   "average": "$289",
    "latest": "Oct 15, 20:53 UTC"
   },
   {
@@ -421,31 +421,31 @@
    "firm": "Tradeify Futures",
    "slug": "tradeify-futures",
    "methods": "Rise",
-   "total": "$10,607,597",
-   "count": "6,092",
+   "total": "$10,567,328",
+   "count": "6,073",
    "largest": "$62,157",
-   "average": "$1,741",
-   "latest": "Oct 16, 00:21 UTC"
+   "average": "$1,740",
+   "latest": "Oct 16, 00:41 UTC"
   },
   {
    "firm": "FundedNext",
    "slug": "fundednext",
    "methods": "Rise Direct Crypto",
-   "total": "$3,958,692",
+   "total": "$3,960,479",
    "count": "3,362",
    "largest": "$20,078",
-   "average": "$1,177",
-   "latest": "Oct 16, 00:19 UTC"
+   "average": "$1,178",
+   "latest": "Oct 16, 00:39 UTC"
   },
   {
    "firm": "MyFundedFutures",
    "slug": "myfundedfutures",
    "methods": "Rise",
-   "total": "$3,442,412",
-   "count": "2,749",
+   "total": "$3,441,654",
+   "count": "2,747",
    "largest": "$22,692",
-   "average": "$1,252",
-   "latest": "Oct 16, 00:15 UTC"
+   "average": "$1,253",
+   "latest": "Oct 16, 00:38 UTC"
   },
   {
    "firm": "Breakout",
@@ -491,10 +491,10 @@
    "firm": "FundingPips",
    "slug": "fundingpips",
    "methods": "Rise",
-   "total": "$546,082",
-   "count": "299",
+   "total": "$545,107",
+   "count": "298",
    "largest": "$26,248",
-   "average": "$1,826",
+   "average": "$1,829",
    "latest": "Oct 15, 19:06 UTC"
   },
   {
@@ -561,10 +561,10 @@
    "firm": "TopOneFutures",
    "slug": "toponefutures",
    "methods": "Rise",
-   "total": "$228,311",
-   "count": "203",
+   "total": "$222,461",
+   "count": "197",
    "largest": "$3,201",
-   "average": "$1,125",
+   "average": "$1,129",
    "latest": "Oct 16, 00:21 UTC"
   },
   {
@@ -581,31 +581,31 @@
    "firm": "FundedTraderMarkets",
    "slug": "fundedtradermarkets",
    "methods": "Rise Direct Crypto",
-   "total": "$217,062",
+   "total": "$215,752",
    "count": "171",
    "largest": "$12,054",
-   "average": "$1,269",
-   "latest": "Oct 16, 00:10 UTC"
+   "average": "$1,262",
+   "latest": "Oct 16, 00:18 UTC"
   },
   {
    "firm": "Hypernova",
    "slug": "hypernova",
    "methods": "Direct Crypto",
-   "total": "$206,541",
-   "count": "107",
+   "total": "$198,597",
+   "count": "105",
    "largest": "$8,000",
-   "average": "$1,930",
+   "average": "$1,891",
    "latest": "Oct 16, 00:17 UTC"
   },
   {
    "firm": "YlosTrading",
    "slug": "ylostrading",
    "methods": "Rise",
-   "total": "$178,208",
-   "count": "105",
+   "total": "$182,978",
+   "count": "106",
    "largest": "$7,570",
-   "average": "$1,697",
-   "latest": "Oct 15, 23:53 UTC"
+   "average": "$1,726",
+   "latest": "Oct 16, 00:38 UTC"
   },
   {
    "firm": "TradeDay",
@@ -811,43 +811,43 @@
  "weekly": {
   "headline": {
    "range": "Blockchain-Verified Prop Firm Payouts",
-   "total": "$19,147"
+   "total": "$19,118"
   },
   "rows": [
    {
     "cells": [
      "Tradeify Futures Rise",
-     "$10,607,597 Tracked payout method: Rise",
-     "6,092",
+     "$10,567,328 Tracked payout method: Rise",
+     "6,073",
      "$62,157",
-     "$1,741",
-     "Oct 16, 00:21 UTC"
+     "$1,740",
+     "Oct 16, 00:41 UTC"
     ],
-    "firm": "$10,607,597",
+    "firm": "$10,567,328",
     "method": "Rise"
    },
    {
     "cells": [
      "FundedNext Rise Direct Crypto",
-     "$3,958,692 Tracked payout method: Rise",
+     "$3,960,479 Tracked payout method: Rise",
      "3,362",
      "$20,078",
-     "$1,177",
-     "Oct 16, 00:19 UTC"
+     "$1,178",
+     "Oct 16, 00:39 UTC"
     ],
-    "firm": "$3,958,692",
+    "firm": "$3,960,479",
     "method": "Rise"
    },
    {
     "cells": [
      "MyFundedFutures Rise",
-     "$3,442,412 Tracked payout method: Rise",
-     "2,749",
+     "$3,441,654 Tracked payout method: Rise",
+     "2,747",
      "$22,692",
-     "$1,252",
-     "Oct 16, 00:15 UTC"
+     "$1,253",
+     "Oct 16, 00:38 UTC"
     ],
-    "firm": "$3,442,412",
+    "firm": "$3,441,654",
     "method": "Rise"
    },
    {
@@ -901,13 +901,13 @@
    {
     "cells": [
      "FundingPips Rise",
-     "$546,082 Tracked payout method: Rise",
-     "299",
+     "$545,107 Tracked payout method: Rise",
+     "298",
      "$26,248",
-     "$1,826",
+     "$1,829",
      "Oct 15, 19:06 UTC"
     ],
-    "firm": "$546,082",
+    "firm": "$545,107",
     "method": "Rise"
    },
    {
@@ -985,13 +985,13 @@
    {
     "cells": [
      "TopOneFutures Rise",
-     "$228,311 Tracked payout method: Rise",
-     "203",
+     "$222,461 Tracked payout method: Rise",
+     "197",
      "$3,201",
-     "$1,125",
+     "$1,129",
      "Oct 16, 00:21 UTC"
     ],
-    "firm": "$228,311",
+    "firm": "$222,461",
     "method": "Rise"
    },
    {
@@ -1009,37 +1009,37 @@
    {
     "cells": [
      "FundedTraderMarkets Rise Direct Crypto",
-     "$217,062 Tracked payout method: Rise",
+     "$215,752 Tracked payout method: Rise",
      "171",
      "$12,054",
-     "$1,269",
-     "Oct 16, 00:10 UTC"
+     "$1,262",
+     "Oct 16, 00:18 UTC"
     ],
-    "firm": "$217,062",
+    "firm": "$215,752",
     "method": "Rise"
    },
    {
     "cells": [
      "Hypernova Direct Crypto On-chain",
-     "$206,541 Tracked payout method: Rise",
-     "107",
+     "$198,597 Tracked payout method: Rise",
+     "105",
      "$8,000",
-     "$1,930",
+     "$1,891",
      "Oct 16, 00:17 UTC"
     ],
-    "firm": "$206,541",
+    "firm": "$198,597",
     "method": "Rise"
    },
    {
     "cells": [
      "YlosTrading Rise",
-     "$178,208 Tracked payout method: Rise",
-     "105",
+     "$182,978 Tracked payout method: Rise",
+     "106",
      "$7,570",
-     "$1,697",
-     "Oct 15, 23:53 UTC"
+     "$1,726",
+     "Oct 16, 00:38 UTC"
     ],
-    "firm": "$178,208",
+    "firm": "$182,978",
     "method": "Rise"
    },
    {
@@ -1287,17 +1287,17 @@
  "monthly": {
   "headline": {
    "range": "October 2026",
-   "total": "$61,374,444"
+   "total": "$61,926,910"
   },
   "rows": [
    {
     "cells": [
      "1",
      "Tradeify Futures Tracked payout method: Rise",
-     "$23,519,346",
-     "14,410",
-     "▼ 41.1%",
-     "38.3%"
+     "$24,048,051",
+     "14,750",
+     "▼ 39.7%",
+     "38.8%"
     ],
     "firm": "Tradeify Futures",
     "method": "Rise"
@@ -1306,10 +1306,10 @@
     "cells": [
      "2",
      "FundedNext Tracked payout method: Rise Direct Crypto",
-     "$9,183,852",
-     "7,576",
+     "$9,190,200",
+     "7,584",
      "▼ 49.1%",
-     "15.0%"
+     "14.8%"
     ],
     "firm": "FundedNext",
     "method": "Rise Direct Crypto"
@@ -1318,10 +1318,10 @@
     "cells": [
      "3",
      "MyFundedFutures Tracked payout method: Rise",
-     "$7,464,115",
-     "5,189",
-     "▼ 52.9%",
-     "12.2%"
+     "$7,476,333",
+     "5,197",
+     "▼ 52.8%",
+     "12.1%"
     ],
     "firm": "MyFundedFutures",
     "method": "Rise"
@@ -1369,7 +1369,7 @@
      "$1,878,360",
      "1,939",
      "▼ 23.4%",
-     "3.1%"
+     "3.0%"
     ],
     "firm": "FundedFuturesFamily",
     "method": "Rise"
@@ -1462,8 +1462,8 @@
     "cells": [
      "15",
      "FundedTraderMarkets Tracked payout method: Rise Direct Crypto",
-     "$571,402",
-     "435",
+     "$571,827",
+     "436",
      "▼ 53.2%",
      "0.9%"
     ],
@@ -1513,7 +1513,7 @@
      "$395,512",
      "295",
      "▼ 36.0%",
-     "0.7%"
+     "0.6%"
     ],
     "firm": "Hypernova",
     "method": "Direct Crypto"
@@ -1522,9 +1522,9 @@
     "cells": [
      "20",
      "YlosTrading Tracked payout method: Rise",
-     "$370,268",
-     "241",
-     "▼ 52.1%",
+     "$375,038",
+     "242",
+     "▼ 51.5%",
      "0.6%"
     ],
     "firm": "YlosTrading",
@@ -1789,31 +1789,31 @@
    "firm": "Tradeify Futures",
    "slug": "tradeify-futures",
    "methods": "Rise",
-   "total": "$44,133,217",
-   "count": "27,182",
+   "total": "$44,381,767",
+   "count": "27,352",
    "largest": "$62,157",
-   "average": "$1,624",
-   "latest": "Oct 16, 00:21 UTC"
+   "average": "$1,623",
+   "latest": "Oct 16, 00:41 UTC"
   },
   {
    "firm": "FundedNext",
    "slug": "fundednext",
    "methods": "Rise Direct Crypto",
-   "total": "$18,777,243",
-   "count": "15,639",
+   "total": "$18,778,846",
+   "count": "15,640",
    "largest": "$112,011",
    "average": "$1,201",
-   "latest": "Oct 16, 00:19 UTC"
+   "latest": "Oct 16, 00:39 UTC"
   },
   {
    "firm": "MyFundedFutures",
    "slug": "myfundedfutures",
    "methods": "Rise",
-   "total": "$14,921,009",
-   "count": "9,965",
+   "total": "$14,928,253",
+   "count": "9,967",
    "largest": "$77,600",
-   "average": "$1,497",
-   "latest": "Oct 16, 00:15 UTC"
+   "average": "$1,498",
+   "latest": "Oct 16, 00:38 UTC"
   },
   {
    "firm": "Breakout",
@@ -1829,10 +1829,10 @@
    "firm": "BlueGuardian",
    "slug": "blueguardian",
    "methods": "Rise Direct Crypto",
-   "total": "$5,990,712",
-   "count": "3,276",
+   "total": "$5,986,307",
+   "count": "3,274",
    "largest": "$39,669",
-   "average": "$1,829",
+   "average": "$1,828",
    "latest": "Oct 15, 23:01 UTC"
   },
   {
@@ -1849,8 +1849,8 @@
    "firm": "FundingPips",
    "slug": "fundingpips",
    "methods": "Rise",
-   "total": "$3,361,192",
-   "count": "1,844",
+   "total": "$3,359,977",
+   "count": "1,843",
    "largest": "$26,248",
    "average": "$1,823",
    "latest": "Oct 15, 19:06 UTC"
@@ -1939,11 +1939,11 @@
    "firm": "FundedTraderMarkets",
    "slug": "fundedtradermarkets",
    "methods": "Rise Direct Crypto",
-   "total": "$1,081,029",
-   "count": "843",
+   "total": "$1,081,454",
+   "count": "844",
    "largest": "$14,153",
-   "average": "$1,282",
-   "latest": "Oct 16, 00:10 UTC"
+   "average": "$1,281",
+   "latest": "Oct 16, 00:18 UTC"
   },
   {
    "firm": "TradeDay",
@@ -1959,11 +1959,11 @@
    "firm": "YlosTrading",
    "slug": "ylostrading",
    "methods": "Rise",
-   "total": "$826,729",
-   "count": "505",
+   "total": "$831,499",
+   "count": "506",
    "largest": "$25,600",
-   "average": "$1,637",
-   "latest": "Oct 15, 23:53 UTC"
+   "average": "$1,643",
+   "latest": "Oct 16, 00:38 UTC"
   },
   {
    "firm": "HolaPrime",
@@ -2211,31 +2211,31 @@
    "firm": "Tradeify Futures",
    "slug": "tradeify-futures",
    "methods": "Rise",
-   "total": "$402,032,138",
-   "count": "202,558",
+   "total": "$402,560,843",
+   "count": "202,898",
    "largest": "$200,000",
-   "average": "$1,985",
-   "latest": "Oct 16, 00:21 UTC"
+   "average": "$1,984",
+   "latest": "Oct 16, 00:41 UTC"
   },
   {
    "firm": "FundedNext",
    "slug": "fundednext",
    "methods": "Rise Direct Crypto",
-   "total": "$327,093,480",
-   "count": "228,635",
+   "total": "$327,099,827",
+   "count": "228,643",
    "largest": "$346,838",
    "average": "$1,431",
-   "latest": "Oct 16, 00:19 UTC"
+   "latest": "Oct 16, 00:39 UTC"
   },
   {
    "firm": "MyFundedFutures",
    "slug": "myfundedfutures",
    "methods": "Rise",
-   "total": "$247,518,531",
-   "count": "155,549",
+   "total": "$247,530,749",
+   "count": "155,557",
    "largest": "$229,180",
    "average": "$1,591",
-   "latest": "Oct 16, 00:15 UTC"
+   "latest": "Oct 16, 00:38 UTC"
   },
   {
    "firm": "FundingPips",
@@ -2391,11 +2391,11 @@
    "firm": "FundedTraderMarkets",
    "slug": "fundedtradermarkets",
    "methods": "Rise Direct Crypto",
-   "total": "$9,919,559",
-   "count": "5,944",
+   "total": "$9,919,984",
+   "count": "5,945",
    "largest": "$40,513",
    "average": "$1,669",
-   "latest": "Oct 16, 00:10 UTC"
+   "latest": "Oct 16, 00:18 UTC"
   },
   {
    "firm": "HolaPrime",
@@ -2471,11 +2471,11 @@
    "firm": "YlosTrading",
    "slug": "ylostrading",
    "methods": "Rise",
-   "total": "$6,071,195",
-   "count": "3,093",
+   "total": "$6,075,965",
+   "count": "3,094",
    "largest": "$55,000",
-   "average": "$1,963",
-   "latest": "Oct 15, 23:53 UTC"
+   "average": "$1,964",
+   "latest": "Oct 16, 00:38 UTC"
   },
   {
    "firm": "Legends Trading",
@@ -2781,48 +2781,48 @@
   }
  ],
  "stats": {
-  "generated_at": "2026-10-16T00:21:57Z",
+  "generated_at": "2026-10-16T00:41:47Z",
   "all_time": {
-   "usd": 1764684069.53,
-   "count": 1030592,
+   "usd": 1765236535.11,
+   "count": 1030950,
    "firms": 42,
    "since": "2023-10-18"
   },
   "last_12m": {
-   "usd": 1074340224.49,
-   "count": 677837,
+   "usd": 1074891890.07,
+   "count": 678194,
    "firms": 42
   },
   "last_30d": {
-   "usd": 122365138.04,
-   "count": 85920,
+   "usd": 122622109.63,
+   "count": 86092,
    "firms": 42,
-   "avg": 1424.18,
-   "median": 1094.02,
+   "avg": 1424.31,
+   "median": 1097.71,
    "vs_prior_30d_pct": 9.7
   },
   "last_24h": {
-   "usd": 6300611.29,
-   "count": 4240,
+   "usd": 6827582.49,
+   "count": 4568,
    "firms": 36,
    "leading_firm": "Tradeify Futures"
   },
   "week_to_date": {
-   "usd": 18807586.25,
-   "count": 13312,
+   "usd": 19360051.83,
+   "count": 13670,
    "firms": 39,
    "leading_firm": "Tradeify Futures",
    "from": "2026-10-12T00:00:00Z"
   },
   "month_to_date": {
-   "usd": 61374442.03,
-   "count": 43471,
+   "usd": 61926907.61,
+   "count": 43829,
    "firms": 41,
    "leading_firm": "Tradeify Futures",
    "from": "2026-10-01T00:00:00Z"
   },
-  "velocity_pct": 114.8,
-  "month_pace_pct": 100.2,
+  "velocity_pct": 117.6,
+  "month_pace_pct": 100.8,
   "pace_note": "Pace compares the window's dollars per day so far with the trailing 30 days' dollars per day. It is a rate, not a forecast.",
   "three_month_avg": {
    "usd": 109914394.31,
@@ -2831,7 +2831,7 @@
   },
   "cumulative_by_day": {
    "note": "Cumulative verified payouts by day of month (UTC). `current` runs to the most recent verified payout; `prior` is the last complete month.",
-   "trailing_30d_rate_per_day": 4078837.93,
+   "trailing_30d_rate_per_day": 4087403.65,
    "current": {
     "month": "2026-10",
     "days_in_month": 31,
@@ -2851,7 +2851,7 @@
      50192086.89,
      55045899.93,
      61161141.59,
-     61374442.03
+     61926907.61
     ]
    },
    "prior": {
@@ -2891,7 +2891,7 @@
     ]
    }
   },
-  "hhi_30d": 1799,
+  "hhi_30d": 1806,
   "by_month": [
    {
     "month": "2023-10",
@@ -3401,15 +3401,15 @@
    },
    {
     "quarter": "2026-Q4",
-    "usd": 61374442.03,
-    "count": 43471,
+    "usd": 61926907.61,
+    "count": 43829,
     "firms": 41,
     "in_progress": true,
-    "vs_prior_quarter_pct": -81.4,
-    "vs_same_quarter_last_year_pct": -71.6,
+    "vs_prior_quarter_pct": -81.2,
+    "vs_same_quarter_last_year_pct": -71.4,
     "same_span_days": 16,
-    "vs_prior_quarter_same_span_pct": 25.8,
-    "vs_same_quarter_last_year_same_span_pct": 94.1
+    "vs_prior_quarter_same_span_pct": 26.8,
+    "vs_same_quarter_last_year_same_span_pct": 95.8
    }
   ],
   "by_year": [
@@ -3443,39 +3443,39 @@
    {
     "year": "2026",
     "label": "2026 to date",
-    "usd": 889752188.13,
-    "count": 575335,
+    "usd": 890304653.71,
+    "count": 575693,
     "firms": 42,
     "to_date": true,
-    "vs_prior_year_pct": 115.9
+    "vs_prior_year_pct": 116
    },
    {
     "year": "last_12m",
     "label": "Last 12 months",
-    "usd": 1074340224.49,
-    "count": 677837,
+    "usd": 1074891890.07,
+    "count": 678194,
     "firms": 42,
     "to_date": true,
-    "vs_prior_year_pct": 118.5
+    "vs_prior_year_pct": 118.6
    }
   ],
   "top5_30d": [
    {
     "firm": "Tradeify Futures",
-    "usd": 44133216.58,
-    "count": 27182,
-    "share": 36.1
+    "usd": 44381767.02,
+    "count": 27352,
+    "share": 36.2
    },
    {
     "firm": "FundedNext",
-    "usd": 18777243.48,
-    "count": 15639,
+    "usd": 18778846.06,
+    "count": 15640,
     "share": 15.3
    },
    {
     "firm": "MyFundedFutures",
-    "usd": 14921009.33,
-    "count": 9965,
+    "usd": 14928252.96,
+    "count": 9967,
     "share": 12.2
    },
    {
@@ -3486,8 +3486,8 @@
    },
    {
     "firm": "BlueGuardian",
-    "usd": 5990711.96,
-    "count": 3276,
+    "usd": 5986306.96,
+    "count": 3274,
     "share": 4.9
    }
   ],
@@ -3496,45 +3496,45 @@
     "bucket": "under $500",
     "lo": 0,
     "hi": 500,
-    "count": 19380,
-    "share_of_payouts_pct": 22.6,
-    "usd": 4582904.41,
+    "count": 19381,
+    "share_of_payouts_pct": 22.5,
+    "usd": 4583762.52,
     "share_of_usd_pct": 3.7
    },
    {
     "bucket": "$500–$1,000",
     "lo": 500,
     "hi": 1000,
-    "count": 19636,
-    "share_of_payouts_pct": 22.9,
-    "usd": 14690609.59,
+    "count": 19646,
+    "share_of_payouts_pct": 22.8,
+    "usd": 14699563.51,
     "share_of_usd_pct": 12
    },
    {
     "bucket": "$1,000–$2,000",
     "lo": 1000,
     "hi": 2000,
-    "count": 28266,
-    "share_of_payouts_pct": 32.9,
-    "usd": 39603215.9,
+    "count": 28377,
+    "share_of_payouts_pct": 33,
+    "usd": 39753110.71,
     "share_of_usd_pct": 32.4
    },
    {
     "bucket": "$2,000–$5,000",
     "lo": 2000,
     "hi": 5000,
-    "count": 16854,
+    "count": 16903,
     "share_of_payouts_pct": 19.6,
-    "usd": 46521409.08,
+    "usd": 46610703.56,
     "share_of_usd_pct": 38
    },
    {
     "bucket": "$5,000–$10,000",
     "lo": 5000,
     "hi": 10000,
-    "count": 1371,
+    "count": 1372,
     "share_of_payouts_pct": 1.6,
-    "usd": 9258000.58,
+    "usd": 9265970.85,
     "share_of_usd_pct": 7.6
    },
    {
@@ -6329,6618 +6329,20 @@
     }
    ]
   },
-  "fundednext": {
-   "slug": "fundednext",
-   "firm": "FundedNext",
-   "website": "fundednext.com",
-   "websiteUrl": "https://fundednext.com",
-   "promo": "",
-   "total": "$327,093,480",
-   "rail": "Rise + Direct Crypto",
-   "count": "228,635",
-   "average": "$1,431",
-   "largest": "$346,838",
-   "largestDate": "Nov 1, 2025",
-   "latestTime": "Oct 16, 00:19 UTC",
-   "latestAmount": "$2,737",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$26,709,614",
-     "num": 26709614
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$19,225,679",
-     "num": 19225679
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$21,100,902",
-     "num": 21100902
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$15,201,628",
-     "num": 15201628
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$14,557,947",
-     "num": 14557947
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$11,229,307",
-     "num": 11229307
-    },
-    {
-     "month": "May 2026",
-     "amount": "$10,530,444",
-     "num": 10530444
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$11,650,344",
-     "num": 11650344
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$14,986,276",
-     "num": 14986276
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$15,346,332",
-     "num": 15346332
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$18,045,239",
-     "num": 18045239
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$9,183,852",
-     "num": 9183852
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$751,310",
-     "num": 751310
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$884,279",
-     "num": 884279
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$522,042",
-     "num": 522042
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$139,805",
-     "num": 139805
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$413,200",
-     "num": 413200
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$813,804",
-     "num": 813804
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$944,077",
-     "num": 944077
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$962,973",
-     "num": 962973
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$603,111",
-     "num": 603111
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$586,608",
-     "num": 586608
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$89,197",
-     "num": 89197
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$397,459",
-     "num": 397459
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$817,541",
-     "num": 817541
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$891,261",
-     "num": 891261
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$1,037,354",
-     "num": 1037354
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$655,777",
-     "num": 655777
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$627,653",
-     "num": 627653
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$92,963",
-     "num": 92963
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$407,605",
-     "num": 407605
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$706,856",
-     "num": 706856
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$916,716",
-     "num": 916716
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$771,294",
-     "num": 771294
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$553,724",
-     "num": 553724
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$519,781",
-     "num": 519781
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$116,557",
-     "num": 116557
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$363,824",
-     "num": 363824
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$823,085",
-     "num": 823085
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$759,105",
-     "num": 759105
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$819,893",
-     "num": 819893
-    },
-    {
-     "date": "Oct 16, 2026",
-     "amount": "$11,664",
-     "num": 11664
-    }
-   ],
-   "top10": [
-    {
-     "date": "Nov 1, 2025",
-     "amount": "$346,838",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 17, 2025",
-     "amount": "$146,318",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 22, 2025",
-     "amount": "$144,750",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 21, 2026",
-     "amount": "$131,145",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 29, 2025",
-     "amount": "$123,134",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 22, 2025",
-     "amount": "$117,673",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 15, 2025",
-     "amount": "$116,869",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 24, 2025",
-     "amount": "$115,597",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 5, 2025",
-     "amount": "$115,124",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$2,737",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:18 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 16, 00:16 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:09 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:09 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:07 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 16, 00:06 UTC",
-     "amount": "$917",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:00 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 16, 00:00 UTC",
-     "amount": "$93",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:57 UTC",
-     "amount": "$59",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:55 UTC",
-     "amount": "$70",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:53 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:49 UTC",
-     "amount": "$1,009",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:43 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:41 UTC",
-     "amount": "$86",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:36 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:32 UTC",
-     "amount": "$1,264",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:30 UTC",
-     "amount": "$765",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:25 UTC",
-     "amount": "$562",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:22 UTC",
-     "amount": "$923",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:20 UTC",
-     "amount": "$56",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:19 UTC",
-     "amount": "$1,253",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:16 UTC",
-     "amount": "$960",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:15 UTC",
-     "amount": "$22",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:11 UTC",
-     "amount": "$1,115",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$348",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:10 UTC",
-     "amount": "$1,368",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:10 UTC",
-     "amount": "$1,349",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:06 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:06 UTC",
-     "amount": "$68",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:05 UTC",
-     "amount": "$1,247",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:04 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:04 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:03 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:03 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:03 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:03 UTC",
-     "amount": "$163",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:02 UTC",
-     "amount": "$1,560",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:00 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:00 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:59 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:55 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:54 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:54 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:54 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:52 UTC",
-     "amount": "$383",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:51 UTC",
-     "amount": "$1,303",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:47 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:46 UTC",
-     "amount": "$72",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:46 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:45 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:45 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:44 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:44 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,348",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:38 UTC",
-     "amount": "$507",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:37 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$889",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:36 UTC",
-     "amount": "$60",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:36 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:36 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:36 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:36 UTC",
-     "amount": "$195",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:36 UTC",
-     "amount": "$600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:36 UTC",
-     "amount": "$599",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:35 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:35 UTC",
-     "amount": "$844",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:34 UTC",
-     "amount": "$76",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:34 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:34 UTC",
-     "amount": "$568",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:33 UTC",
-     "amount": "$626",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:33 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:33 UTC",
-     "amount": "$938",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:33 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:32 UTC",
-     "amount": "$718",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:30 UTC",
-     "amount": "$2,203",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:30 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:30 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:29 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:29 UTC",
-     "amount": "$773",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:29 UTC",
-     "amount": "$547",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:28 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:28 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:28 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:28 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:28 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:26 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:26 UTC",
-     "amount": "$142",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:26 UTC",
-     "amount": "$1,343",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:26 UTC",
-     "amount": "$1,065",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:26 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:26 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:25 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:24 UTC",
-     "amount": "$49",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:23 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:22 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:21 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:20 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:19 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:19 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:18 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:18 UTC",
-     "amount": "$427",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:17 UTC",
-     "amount": "$1,535",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:17 UTC",
-     "amount": "$1,032",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:16 UTC",
-     "amount": "$835",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:16 UTC",
-     "amount": "$834",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:16 UTC",
-     "amount": "$1,105",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:16 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:16 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:15 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:15 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:15 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:15 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:14 UTC",
-     "amount": "$795",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:14 UTC",
-     "amount": "$1,208",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:13 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:13 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:13 UTC",
-     "amount": "$1,074",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:13 UTC",
-     "amount": "$917",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:12 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:12 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:12 UTC",
-     "amount": "$690",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:12 UTC",
-     "amount": "$691",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:12 UTC",
-     "amount": "$823",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:12 UTC",
-     "amount": "$658",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:11 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:11 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:11 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:11 UTC",
-     "amount": "$1,096",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$862",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$854",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$832",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$823",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$766",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:09 UTC",
-     "amount": "$1,220",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:09 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:09 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:08 UTC",
-     "amount": "$1,278",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:08 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:08 UTC",
-     "amount": "$788",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:08 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:07 UTC",
-     "amount": "$1,218",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:06 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:06 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:05 UTC",
-     "amount": "$244",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:05 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:05 UTC",
-     "amount": "$1,013",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$447",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$902",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$662",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:04 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:03 UTC",
-     "amount": "$1,018",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:03 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:03 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:03 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:03 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:03 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:02 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:02 UTC",
-     "amount": "$771",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:02 UTC",
-     "amount": "$499",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:02 UTC",
-     "amount": "$919",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:02 UTC",
-     "amount": "$434",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:52 UTC",
-     "amount": "$46",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:48 UTC",
-     "amount": "$193",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:36 UTC",
-     "amount": "$1,471",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:35 UTC",
-     "amount": "$1,460",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:34 UTC",
-     "amount": "$159",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:33 UTC",
-     "amount": "$203",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:30 UTC",
-     "amount": "$857",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:26 UTC",
-     "amount": "$875",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:24 UTC",
-     "amount": "$353",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:23 UTC",
-     "amount": "$644",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:22 UTC",
-     "amount": "$38",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:21 UTC",
-     "amount": "$78",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:18 UTC",
-     "amount": "$1,661",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:17 UTC",
-     "amount": "$352",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:17 UTC",
-     "amount": "$107",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:14 UTC",
-     "amount": "$520",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:14 UTC",
-     "amount": "$2,503",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:13 UTC",
-     "amount": "$396",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:12 UTC",
-     "amount": "$391",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:11 UTC",
-     "amount": "$514",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:09 UTC",
-     "amount": "$1,400",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:08 UTC",
-     "amount": "$608",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:07 UTC",
-     "amount": "$40",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:06 UTC",
-     "amount": "$2,751",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:05 UTC",
-     "amount": "$153",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:05 UTC",
-     "amount": "$202",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:04 UTC",
-     "amount": "$1,332",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:03 UTC",
-     "amount": "$26",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:02 UTC",
-     "amount": "$1,919",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:01 UTC",
-     "amount": "$217",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:01 UTC",
-     "amount": "$234",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:01 UTC",
-     "amount": "$1,113",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 20:59 UTC",
-     "amount": "$469",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 20:59 UTC",
-     "amount": "$68",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:56 UTC",
-     "amount": "$2,497",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:53 UTC",
-     "amount": "$1,347",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:42 UTC",
-     "amount": "$320",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 19:27 UTC",
-     "amount": "$34",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:58 UTC",
-     "amount": "$955",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:52 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:45 UTC",
-     "amount": "$482",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:36 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:10 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:47 UTC",
-     "amount": "$775",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$775",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:40 UTC",
-     "amount": "$775",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 17:40 UTC",
-     "amount": "$626",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 17:03 UTC",
-     "amount": "$1,059",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:48 UTC",
-     "amount": "$1,704",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "FundedNext": {
-   "slug": "fundednext",
-   "firm": "FundedNext",
-   "website": "fundednext.com",
-   "websiteUrl": "https://fundednext.com",
-   "promo": "",
-   "total": "$327,093,480",
-   "rail": "Rise + Direct Crypto",
-   "count": "228,635",
-   "average": "$1,431",
-   "largest": "$346,838",
-   "largestDate": "Nov 1, 2025",
-   "latestTime": "Oct 16, 00:19 UTC",
-   "latestAmount": "$2,737",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$26,709,614",
-     "num": 26709614
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$19,225,679",
-     "num": 19225679
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$21,100,902",
-     "num": 21100902
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$15,201,628",
-     "num": 15201628
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$14,557,947",
-     "num": 14557947
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$11,229,307",
-     "num": 11229307
-    },
-    {
-     "month": "May 2026",
-     "amount": "$10,530,444",
-     "num": 10530444
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$11,650,344",
-     "num": 11650344
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$14,986,276",
-     "num": 14986276
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$15,346,332",
-     "num": 15346332
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$18,045,239",
-     "num": 18045239
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$9,183,852",
-     "num": 9183852
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$751,310",
-     "num": 751310
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$884,279",
-     "num": 884279
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$522,042",
-     "num": 522042
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$139,805",
-     "num": 139805
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$413,200",
-     "num": 413200
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$813,804",
-     "num": 813804
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$944,077",
-     "num": 944077
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$962,973",
-     "num": 962973
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$603,111",
-     "num": 603111
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$586,608",
-     "num": 586608
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$89,197",
-     "num": 89197
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$397,459",
-     "num": 397459
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$817,541",
-     "num": 817541
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$891,261",
-     "num": 891261
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$1,037,354",
-     "num": 1037354
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$655,777",
-     "num": 655777
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$627,653",
-     "num": 627653
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$92,963",
-     "num": 92963
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$407,605",
-     "num": 407605
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$706,856",
-     "num": 706856
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$916,716",
-     "num": 916716
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$771,294",
-     "num": 771294
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$553,724",
-     "num": 553724
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$519,781",
-     "num": 519781
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$116,557",
-     "num": 116557
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$363,824",
-     "num": 363824
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$823,085",
-     "num": 823085
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$759,105",
-     "num": 759105
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$819,893",
-     "num": 819893
-    },
-    {
-     "date": "Oct 16, 2026",
-     "amount": "$11,664",
-     "num": 11664
-    }
-   ],
-   "top10": [
-    {
-     "date": "Nov 1, 2025",
-     "amount": "$346,838",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 17, 2025",
-     "amount": "$146,318",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 22, 2025",
-     "amount": "$144,750",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 21, 2026",
-     "amount": "$131,145",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 29, 2025",
-     "amount": "$123,134",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 22, 2025",
-     "amount": "$117,673",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 15, 2025",
-     "amount": "$116,869",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 24, 2025",
-     "amount": "$115,597",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 5, 2025",
-     "amount": "$115,124",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$2,737",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:18 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 16, 00:16 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:09 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:09 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:07 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 16, 00:06 UTC",
-     "amount": "$917",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:00 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 16, 00:00 UTC",
-     "amount": "$93",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:57 UTC",
-     "amount": "$59",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:55 UTC",
-     "amount": "$70",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:53 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:49 UTC",
-     "amount": "$1,009",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:43 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:41 UTC",
-     "amount": "$86",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:36 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:32 UTC",
-     "amount": "$1,264",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:30 UTC",
-     "amount": "$765",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:25 UTC",
-     "amount": "$562",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:22 UTC",
-     "amount": "$923",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:20 UTC",
-     "amount": "$56",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:19 UTC",
-     "amount": "$1,253",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:16 UTC",
-     "amount": "$960",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:15 UTC",
-     "amount": "$22",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:11 UTC",
-     "amount": "$1,115",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$348",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:10 UTC",
-     "amount": "$1,368",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:10 UTC",
-     "amount": "$1,349",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:06 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:06 UTC",
-     "amount": "$68",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:05 UTC",
-     "amount": "$1,247",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:04 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:04 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:03 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:03 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:03 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:03 UTC",
-     "amount": "$163",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:02 UTC",
-     "amount": "$1,560",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:00 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 23:00 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:59 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:55 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:54 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:54 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:54 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:52 UTC",
-     "amount": "$383",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:51 UTC",
-     "amount": "$1,303",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:47 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:46 UTC",
-     "amount": "$72",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:46 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:45 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:45 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:44 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:44 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,348",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:38 UTC",
-     "amount": "$507",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:37 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$889",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:36 UTC",
-     "amount": "$60",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:36 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:36 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:36 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:36 UTC",
-     "amount": "$195",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:36 UTC",
-     "amount": "$600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:36 UTC",
-     "amount": "$599",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:35 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:35 UTC",
-     "amount": "$844",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:34 UTC",
-     "amount": "$76",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:34 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:34 UTC",
-     "amount": "$568",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:33 UTC",
-     "amount": "$626",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:33 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:33 UTC",
-     "amount": "$938",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:33 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:32 UTC",
-     "amount": "$718",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:30 UTC",
-     "amount": "$2,203",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:30 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:30 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:29 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:29 UTC",
-     "amount": "$773",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:29 UTC",
-     "amount": "$547",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:28 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:28 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:28 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:28 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:28 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:26 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:26 UTC",
-     "amount": "$142",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:26 UTC",
-     "amount": "$1,343",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:26 UTC",
-     "amount": "$1,065",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:26 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:26 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:25 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:24 UTC",
-     "amount": "$49",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:23 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:22 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:21 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:20 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:19 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:19 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:18 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:18 UTC",
-     "amount": "$427",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:17 UTC",
-     "amount": "$1,535",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:17 UTC",
-     "amount": "$1,032",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:16 UTC",
-     "amount": "$835",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:16 UTC",
-     "amount": "$834",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:16 UTC",
-     "amount": "$1,105",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:16 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:16 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:15 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:15 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:15 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:15 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:14 UTC",
-     "amount": "$795",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:14 UTC",
-     "amount": "$1,208",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:13 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:13 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:13 UTC",
-     "amount": "$1,074",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:13 UTC",
-     "amount": "$917",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:12 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:12 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:12 UTC",
-     "amount": "$690",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:12 UTC",
-     "amount": "$691",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:12 UTC",
-     "amount": "$823",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:12 UTC",
-     "amount": "$658",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:11 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:11 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:11 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:11 UTC",
-     "amount": "$1,096",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$862",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$854",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$832",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$823",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:10 UTC",
-     "amount": "$766",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:09 UTC",
-     "amount": "$1,220",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:09 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:09 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:08 UTC",
-     "amount": "$1,278",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:08 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:08 UTC",
-     "amount": "$788",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:08 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:07 UTC",
-     "amount": "$1,218",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:06 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:06 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:05 UTC",
-     "amount": "$244",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:05 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:05 UTC",
-     "amount": "$1,013",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$447",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$902",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$662",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:04 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:03 UTC",
-     "amount": "$1,018",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:03 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:03 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:03 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:03 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:03 UTC",
-     "amount": "$1,375",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:02 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:02 UTC",
-     "amount": "$771",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:02 UTC",
-     "amount": "$499",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:02 UTC",
-     "amount": "$919",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:02 UTC",
-     "amount": "$434",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:52 UTC",
-     "amount": "$46",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:48 UTC",
-     "amount": "$193",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:36 UTC",
-     "amount": "$1,471",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:35 UTC",
-     "amount": "$1,460",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:34 UTC",
-     "amount": "$159",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:33 UTC",
-     "amount": "$203",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:30 UTC",
-     "amount": "$857",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:26 UTC",
-     "amount": "$875",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:24 UTC",
-     "amount": "$353",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:23 UTC",
-     "amount": "$644",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:22 UTC",
-     "amount": "$38",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:21 UTC",
-     "amount": "$78",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:18 UTC",
-     "amount": "$1,661",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:17 UTC",
-     "amount": "$352",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:17 UTC",
-     "amount": "$107",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:14 UTC",
-     "amount": "$520",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:14 UTC",
-     "amount": "$2,503",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:13 UTC",
-     "amount": "$396",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:12 UTC",
-     "amount": "$391",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:11 UTC",
-     "amount": "$514",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:09 UTC",
-     "amount": "$1,400",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:08 UTC",
-     "amount": "$608",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:07 UTC",
-     "amount": "$40",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:06 UTC",
-     "amount": "$2,751",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:05 UTC",
-     "amount": "$153",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:05 UTC",
-     "amount": "$202",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:04 UTC",
-     "amount": "$1,332",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:03 UTC",
-     "amount": "$26",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:02 UTC",
-     "amount": "$1,919",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:01 UTC",
-     "amount": "$217",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:01 UTC",
-     "amount": "$234",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:01 UTC",
-     "amount": "$1,113",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 20:59 UTC",
-     "amount": "$469",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 20:59 UTC",
-     "amount": "$68",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:56 UTC",
-     "amount": "$2,497",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:53 UTC",
-     "amount": "$1,347",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:42 UTC",
-     "amount": "$320",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 19:27 UTC",
-     "amount": "$34",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:58 UTC",
-     "amount": "$955",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:52 UTC",
-     "amount": "$1,042",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:45 UTC",
-     "amount": "$482",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:36 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:10 UTC",
-     "amount": "$695",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:47 UTC",
-     "amount": "$775",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$775",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:40 UTC",
-     "amount": "$775",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 17:40 UTC",
-     "amount": "$626",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 17:03 UTC",
-     "amount": "$1,059",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:48 UTC",
-     "amount": "$1,704",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "fundedfuturesfamily": {
-   "slug": "fundedfuturesfamily",
-   "firm": "FundedFuturesFamily",
-   "website": "fundedfuturesfamily.com",
-   "websiteUrl": "https://fundedfuturesfamily.com",
-   "promo": "",
-   "total": "$30,272,129",
-   "rail": "Rise",
-   "count": "13,432",
-   "average": "$2,254",
-   "largest": "$50,928",
-   "largestDate": "Nov 26, 2024",
-   "latestTime": "Oct 15, 19:18 UTC",
-   "latestAmount": "$352",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$1,278,906",
-     "num": 1278906
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$824,001",
-     "num": 824001
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$796,634",
-     "num": 796634
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$980,566",
-     "num": 980566
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$1,270,766",
-     "num": 1270766
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$1,226,565",
-     "num": 1226565
-    },
-    {
-     "month": "May 2026",
-     "amount": "$1,458,464",
-     "num": 1458464
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$2,131,363",
-     "num": 2131363
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$2,701,063",
-     "num": 2701063
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$2,257,791",
-     "num": 2257791
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$2,451,997",
-     "num": 2451997
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$1,878,360",
-     "num": 1878360
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$83,348",
-     "num": 83348
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$71,564",
-     "num": 71564
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$102,010",
-     "num": 102010
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$163,364",
-     "num": 163364
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$130,417",
-     "num": 130417
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$171,876",
-     "num": 171876
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$164,717",
-     "num": 164717
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$168,696",
-     "num": 168696
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$107,390",
-     "num": 107390
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$167,357",
-     "num": 167357
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$161,257",
-     "num": 161257
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$211,084",
-     "num": 211084
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$150,593",
-     "num": 150593
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$148,974",
-     "num": 148974
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$36,642",
-     "num": 36642
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$142,071",
-     "num": 142071
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$383,012",
-     "num": 383012
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$25,700",
-     "num": 25700
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$272,551",
-     "num": 272551
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$201,753",
-     "num": 201753
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$144,723",
-     "num": 144723
-    }
-   ],
-   "top10": [
-    {
-     "date": "Nov 26, 2024",
-     "amount": "$50,928",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 19, 2025",
-     "amount": "$46,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 7, 2025",
-     "amount": "$46,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 5, 2025",
-     "amount": "$46,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 5, 2025",
-     "amount": "$46,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 21, 2025",
-     "amount": "$39,932",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 23, 2025",
-     "amount": "$36,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 4, 2025",
-     "amount": "$36,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 2, 2025",
-     "amount": "$36,000",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 19:18 UTC",
-     "amount": "$352",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:18 UTC",
-     "amount": "$1,526",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:17 UTC",
-     "amount": "$300",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:17 UTC",
-     "amount": "$275",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:16 UTC",
-     "amount": "$803",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:16 UTC",
-     "amount": "$840",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:15 UTC",
-     "amount": "$2,133",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:15 UTC",
-     "amount": "$1,454",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$3,252",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:49 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:49 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:49 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:49 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:49 UTC",
-     "amount": "$982",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,118",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$616",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$678",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$869",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$830",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$2,025",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$647",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$539",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$495",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$1,055",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$1,111",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$549",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$965",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$965",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$977",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$456",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$452",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$459",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$452",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$463",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$457",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$681",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$828",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$965",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$973",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$1,014",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$1,014",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$1,014",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$455",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$2,925",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$2,925",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$2,925",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$2,925",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$2,925",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$848",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$962",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$468",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$810",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$584",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$612",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$590",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$590",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$1,156",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$957",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$456",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:34 UTC",
-     "amount": "$1,795",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:34 UTC",
-     "amount": "$1,795",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:34 UTC",
-     "amount": "$1,795",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:34 UTC",
-     "amount": "$1,795",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:34 UTC",
-     "amount": "$1,795",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$3,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$3,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$3,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$3,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$3,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$630",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$720",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$568",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$818",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$798",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$1,048",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$463",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$593",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$609",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$602",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$459",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$596",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$596",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$605",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$675",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$497",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$522",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:40 UTC",
-     "amount": "$360",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:40 UTC",
-     "amount": "$1,138",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:40 UTC",
-     "amount": "$1,214",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:40 UTC",
-     "amount": "$2,897",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:38 UTC",
-     "amount": "$283",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:38 UTC",
-     "amount": "$3,840",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:37 UTC",
-     "amount": "$1,297",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:36 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:36 UTC",
-     "amount": "$1,179",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:36 UTC",
-     "amount": "$1,040",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:35 UTC",
-     "amount": "$818",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$479",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$507",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$546",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$546",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "FundedFuturesFamily": {
-   "slug": "fundedfuturesfamily",
-   "firm": "FundedFuturesFamily",
-   "website": "fundedfuturesfamily.com",
-   "websiteUrl": "https://fundedfuturesfamily.com",
-   "promo": "",
-   "total": "$30,272,129",
-   "rail": "Rise",
-   "count": "13,432",
-   "average": "$2,254",
-   "largest": "$50,928",
-   "largestDate": "Nov 26, 2024",
-   "latestTime": "Oct 15, 19:18 UTC",
-   "latestAmount": "$352",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$1,278,906",
-     "num": 1278906
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$824,001",
-     "num": 824001
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$796,634",
-     "num": 796634
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$980,566",
-     "num": 980566
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$1,270,766",
-     "num": 1270766
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$1,226,565",
-     "num": 1226565
-    },
-    {
-     "month": "May 2026",
-     "amount": "$1,458,464",
-     "num": 1458464
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$2,131,363",
-     "num": 2131363
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$2,701,063",
-     "num": 2701063
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$2,257,791",
-     "num": 2257791
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$2,451,997",
-     "num": 2451997
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$1,878,360",
-     "num": 1878360
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$83,348",
-     "num": 83348
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$71,564",
-     "num": 71564
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$102,010",
-     "num": 102010
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$163,364",
-     "num": 163364
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$130,417",
-     "num": 130417
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$171,876",
-     "num": 171876
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$164,717",
-     "num": 164717
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$168,696",
-     "num": 168696
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$107,390",
-     "num": 107390
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$167,357",
-     "num": 167357
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$161,257",
-     "num": 161257
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$211,084",
-     "num": 211084
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$150,593",
-     "num": 150593
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$148,974",
-     "num": 148974
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$36,642",
-     "num": 36642
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$142,071",
-     "num": 142071
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$383,012",
-     "num": 383012
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$25,700",
-     "num": 25700
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$272,551",
-     "num": 272551
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$201,753",
-     "num": 201753
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$144,723",
-     "num": 144723
-    }
-   ],
-   "top10": [
-    {
-     "date": "Nov 26, 2024",
-     "amount": "$50,928",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 19, 2025",
-     "amount": "$46,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 7, 2025",
-     "amount": "$46,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 5, 2025",
-     "amount": "$46,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 5, 2025",
-     "amount": "$46,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 21, 2025",
-     "amount": "$39,932",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 23, 2025",
-     "amount": "$36,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 4, 2025",
-     "amount": "$36,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 2, 2025",
-     "amount": "$36,000",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 19:18 UTC",
-     "amount": "$352",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:18 UTC",
-     "amount": "$1,526",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:17 UTC",
-     "amount": "$300",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:17 UTC",
-     "amount": "$275",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:16 UTC",
-     "amount": "$803",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:16 UTC",
-     "amount": "$840",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:15 UTC",
-     "amount": "$2,133",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:15 UTC",
-     "amount": "$1,454",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$3,252",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:49 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:49 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:49 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:49 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:49 UTC",
-     "amount": "$982",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,118",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$616",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:48 UTC",
-     "amount": "$678",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$869",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$830",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$2,025",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$647",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$539",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$495",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$1,055",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$1,111",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$549",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$965",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$965",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$977",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$456",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$452",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$459",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$452",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:43 UTC",
-     "amount": "$463",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$457",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$681",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$828",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$965",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$973",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$1,014",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$1,014",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$1,014",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$455",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$2,925",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$2,925",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$2,925",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$2,925",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:41 UTC",
-     "amount": "$2,925",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$848",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$962",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$468",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$810",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$584",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$612",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$590",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$590",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$1,156",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$957",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:37 UTC",
-     "amount": "$456",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:34 UTC",
-     "amount": "$1,795",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:34 UTC",
-     "amount": "$1,795",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:34 UTC",
-     "amount": "$1,795",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:34 UTC",
-     "amount": "$1,795",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:34 UTC",
-     "amount": "$1,795",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$3,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$3,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$3,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$3,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$3,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$630",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$720",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$568",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$818",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$798",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$1,048",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$463",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$593",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$609",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$602",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$459",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$596",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$596",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$605",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:32 UTC",
-     "amount": "$675",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$497",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 20:57 UTC",
-     "amount": "$522",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:40 UTC",
-     "amount": "$360",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:40 UTC",
-     "amount": "$1,138",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:40 UTC",
-     "amount": "$1,214",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:40 UTC",
-     "amount": "$2,897",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:38 UTC",
-     "amount": "$283",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:38 UTC",
-     "amount": "$3,840",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:37 UTC",
-     "amount": "$1,297",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:36 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:36 UTC",
-     "amount": "$1,179",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:36 UTC",
-     "amount": "$1,040",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:35 UTC",
-     "amount": "$818",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$479",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$507",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$546",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 19:18 UTC",
-     "amount": "$546",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "the5ers": {
-   "slug": "the5ers",
-   "firm": "The5ers",
-   "website": "the5ers.com",
-   "websiteUrl": "https://the5ers.com",
-   "promo": "",
-   "total": "$96,654,166",
-   "rail": "Rise",
-   "count": "45,502",
-   "average": "$2,124",
-   "largest": "$91,936",
-   "largestDate": "Dec 14, 2023",
-   "latestTime": "Oct 15, 13:54 UTC",
-   "latestAmount": "$1,544",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$5,106,523",
-     "num": 5106523
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$3,626,774",
-     "num": 3626774
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$4,037,759",
-     "num": 4037759
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$4,704,903",
-     "num": 4704903
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$5,694,198",
-     "num": 5694198
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$4,401,290",
-     "num": 4401290
-    },
-    {
-     "month": "May 2026",
-     "amount": "$3,683,635",
-     "num": 3683635
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$3,317,083",
-     "num": 3317083
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$3,624,670",
-     "num": 3624670
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$3,188,297",
-     "num": 3188297
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$3,597,500",
-     "num": 3597500
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$1,910,710",
-     "num": 1910710
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$371,202",
-     "num": 371202
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$142,694",
-     "num": 142694
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$54,008",
-     "num": 54008
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$52,970",
-     "num": 52970
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$255,463",
-     "num": 255463
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$360,785",
-     "num": 360785
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$7,392",
-     "num": 7392
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$206,197",
-     "num": 206197
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$171,443",
-     "num": 171443
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$49,577",
-     "num": 49577
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$185,840",
-     "num": 185840
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$179,450",
-     "num": 179450
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$29,735",
-     "num": 29735
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$239,815",
-     "num": 239815
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$371,255",
-     "num": 371255
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$116,966",
-     "num": 116966
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$106,475",
-     "num": 106475
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$201,923",
-     "num": 201923
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$28,468",
-     "num": 28468
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$253,680",
-     "num": 253680
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$147,208",
-     "num": 147208
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$19,422",
-     "num": 19422
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$98,001",
-     "num": 98001
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$118,311",
-     "num": 118311
-    }
-   ],
-   "top10": [
-    {
-     "date": "Dec 14, 2023",
-     "amount": "$91,936",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 7, 2026",
-     "amount": "$76,656",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 3, 2025",
-     "amount": "$56,322",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 5, 2026",
-     "amount": "$52,782",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 24, 2024",
-     "amount": "$43,979",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 23, 2024",
-     "amount": "$43,650",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 20, 2024",
-     "amount": "$43,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 16, 2024",
-     "amount": "$41,564",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 29, 2026",
-     "amount": "$41,253",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 13:54 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:49 UTC",
-     "amount": "$539",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:30 UTC",
-     "amount": "$1,251",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:27 UTC",
-     "amount": "$3,299",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:24 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:24 UTC",
-     "amount": "$1,317",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:20 UTC",
-     "amount": "$4,173",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:19 UTC",
-     "amount": "$7,493",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:18 UTC",
-     "amount": "$309",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:12 UTC",
-     "amount": "$17,549",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:10 UTC",
-     "amount": "$1,158",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:09 UTC",
-     "amount": "$1,158",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:08 UTC",
-     "amount": "$2,316",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:04 UTC",
-     "amount": "$2,316",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:02 UTC",
-     "amount": "$3,870",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:58 UTC",
-     "amount": "$168",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:42 UTC",
-     "amount": "$1,480",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:23 UTC",
-     "amount": "$1,540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:21 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:12 UTC",
-     "amount": "$1,276",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:11 UTC",
-     "amount": "$1,522",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:09 UTC",
-     "amount": "$1,170",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:08 UTC",
-     "amount": "$1,479",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:05 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 11:46 UTC",
-     "amount": "$1,223",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:32 UTC",
-     "amount": "$1,021",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:31 UTC",
-     "amount": "$1,448",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:31 UTC",
-     "amount": "$1,439",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:22 UTC",
-     "amount": "$1,410",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:19 UTC",
-     "amount": "$1,168",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:16 UTC",
-     "amount": "$569",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:13 UTC",
-     "amount": "$145",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:13 UTC",
-     "amount": "$145",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:09 UTC",
-     "amount": "$1,453",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:08 UTC",
-     "amount": "$1,448",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:01 UTC",
-     "amount": "$1,396",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:59 UTC",
-     "amount": "$1,484",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:58 UTC",
-     "amount": "$1,340",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:57 UTC",
-     "amount": "$1,386",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:56 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:56 UTC",
-     "amount": "$1,052",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:52 UTC",
-     "amount": "$154",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:35 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:33 UTC",
-     "amount": "$1,534",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:30 UTC",
-     "amount": "$915",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:29 UTC",
-     "amount": "$912",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:27 UTC",
-     "amount": "$1,052",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:25 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:23 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:18 UTC",
-     "amount": "$764",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:58 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:58 UTC",
-     "amount": "$532",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:54 UTC",
-     "amount": "$1,258",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:42 UTC",
-     "amount": "$808",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:29 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:24 UTC",
-     "amount": "$194",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:20 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:17 UTC",
-     "amount": "$569",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:14 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:12 UTC",
-     "amount": "$1,391",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:08 UTC",
-     "amount": "$579",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:57 UTC",
-     "amount": "$200",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:56 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:56 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:52 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:52 UTC",
-     "amount": "$1,203",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:43 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:42 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 05:02 UTC",
-     "amount": "$3,542",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 04:59 UTC",
-     "amount": "$2,200",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 04:58 UTC",
-     "amount": "$1,750",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:31 UTC",
-     "amount": "$2,316",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:27 UTC",
-     "amount": "$5,809",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:26 UTC",
-     "amount": "$3,373",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:25 UTC",
-     "amount": "$5,809",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:24 UTC",
-     "amount": "$1,640",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:23 UTC",
-     "amount": "$2,592",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:21 UTC",
-     "amount": "$3,744",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:20 UTC",
-     "amount": "$2,316",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:19 UTC",
-     "amount": "$2,316",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:18 UTC",
-     "amount": "$2,864",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:17 UTC",
-     "amount": "$3,963",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:15 UTC",
-     "amount": "$1,941",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:14 UTC",
-     "amount": "$2,879",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:14 UTC",
-     "amount": "$3,251",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:13 UTC",
-     "amount": "$1,951",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:12 UTC",
-     "amount": "$3,145",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:07 UTC",
-     "amount": "$1,669",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 15:22 UTC",
-     "amount": "$1,373",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 15:19 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 15:18 UTC",
-     "amount": "$1,531",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 15:10 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 14:58 UTC",
-     "amount": "$728",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "The5ers": {
-   "slug": "the5ers",
-   "firm": "The5ers",
-   "website": "the5ers.com",
-   "websiteUrl": "https://the5ers.com",
-   "promo": "",
-   "total": "$96,654,166",
-   "rail": "Rise",
-   "count": "45,502",
-   "average": "$2,124",
-   "largest": "$91,936",
-   "largestDate": "Dec 14, 2023",
-   "latestTime": "Oct 15, 13:54 UTC",
-   "latestAmount": "$1,544",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$5,106,523",
-     "num": 5106523
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$3,626,774",
-     "num": 3626774
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$4,037,759",
-     "num": 4037759
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$4,704,903",
-     "num": 4704903
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$5,694,198",
-     "num": 5694198
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$4,401,290",
-     "num": 4401290
-    },
-    {
-     "month": "May 2026",
-     "amount": "$3,683,635",
-     "num": 3683635
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$3,317,083",
-     "num": 3317083
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$3,624,670",
-     "num": 3624670
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$3,188,297",
-     "num": 3188297
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$3,597,500",
-     "num": 3597500
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$1,910,710",
-     "num": 1910710
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$371,202",
-     "num": 371202
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$142,694",
-     "num": 142694
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$54,008",
-     "num": 54008
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$52,970",
-     "num": 52970
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$255,463",
-     "num": 255463
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$360,785",
-     "num": 360785
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$7,392",
-     "num": 7392
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$206,197",
-     "num": 206197
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$171,443",
-     "num": 171443
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$49,577",
-     "num": 49577
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$185,840",
-     "num": 185840
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$179,450",
-     "num": 179450
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$29,735",
-     "num": 29735
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$239,815",
-     "num": 239815
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$371,255",
-     "num": 371255
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$116,966",
-     "num": 116966
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$106,475",
-     "num": 106475
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$201,923",
-     "num": 201923
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$28,468",
-     "num": 28468
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$253,680",
-     "num": 253680
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$147,208",
-     "num": 147208
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$19,422",
-     "num": 19422
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$98,001",
-     "num": 98001
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$118,311",
-     "num": 118311
-    }
-   ],
-   "top10": [
-    {
-     "date": "Dec 14, 2023",
-     "amount": "$91,936",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 7, 2026",
-     "amount": "$76,656",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 3, 2025",
-     "amount": "$56,322",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 5, 2026",
-     "amount": "$52,782",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 24, 2024",
-     "amount": "$43,979",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 23, 2024",
-     "amount": "$43,650",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 20, 2024",
-     "amount": "$43,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 16, 2024",
-     "amount": "$41,564",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 29, 2026",
-     "amount": "$41,253",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 13:54 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:49 UTC",
-     "amount": "$539",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:30 UTC",
-     "amount": "$1,251",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:27 UTC",
-     "amount": "$3,299",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:24 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:24 UTC",
-     "amount": "$1,317",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:20 UTC",
-     "amount": "$4,173",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:19 UTC",
-     "amount": "$7,493",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:18 UTC",
-     "amount": "$309",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:12 UTC",
-     "amount": "$17,549",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:10 UTC",
-     "amount": "$1,158",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:09 UTC",
-     "amount": "$1,158",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:08 UTC",
-     "amount": "$2,316",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:04 UTC",
-     "amount": "$2,316",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:02 UTC",
-     "amount": "$3,870",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:58 UTC",
-     "amount": "$168",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:42 UTC",
-     "amount": "$1,480",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:23 UTC",
-     "amount": "$1,540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:21 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:12 UTC",
-     "amount": "$1,276",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:11 UTC",
-     "amount": "$1,522",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:09 UTC",
-     "amount": "$1,170",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:08 UTC",
-     "amount": "$1,479",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:05 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 11:46 UTC",
-     "amount": "$1,223",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:32 UTC",
-     "amount": "$1,021",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:31 UTC",
-     "amount": "$1,448",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:31 UTC",
-     "amount": "$1,439",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:22 UTC",
-     "amount": "$1,410",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:19 UTC",
-     "amount": "$1,168",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:16 UTC",
-     "amount": "$569",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:13 UTC",
-     "amount": "$145",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:13 UTC",
-     "amount": "$145",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:09 UTC",
-     "amount": "$1,453",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:08 UTC",
-     "amount": "$1,448",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:01 UTC",
-     "amount": "$1,396",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:59 UTC",
-     "amount": "$1,484",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:58 UTC",
-     "amount": "$1,340",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:57 UTC",
-     "amount": "$1,386",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:56 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:56 UTC",
-     "amount": "$1,052",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:52 UTC",
-     "amount": "$154",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:35 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:33 UTC",
-     "amount": "$1,534",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:30 UTC",
-     "amount": "$915",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:29 UTC",
-     "amount": "$912",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:27 UTC",
-     "amount": "$1,052",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:25 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:23 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:18 UTC",
-     "amount": "$764",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:58 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:58 UTC",
-     "amount": "$532",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:54 UTC",
-     "amount": "$1,258",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:42 UTC",
-     "amount": "$808",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:29 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:24 UTC",
-     "amount": "$194",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:20 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:17 UTC",
-     "amount": "$569",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:14 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:12 UTC",
-     "amount": "$1,391",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 08:08 UTC",
-     "amount": "$579",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:57 UTC",
-     "amount": "$200",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:56 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:56 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:52 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:52 UTC",
-     "amount": "$1,203",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:43 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:42 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 05:02 UTC",
-     "amount": "$3,542",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 04:59 UTC",
-     "amount": "$2,200",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 04:58 UTC",
-     "amount": "$1,750",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:31 UTC",
-     "amount": "$2,316",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:27 UTC",
-     "amount": "$5,809",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:26 UTC",
-     "amount": "$3,373",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:25 UTC",
-     "amount": "$5,809",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:24 UTC",
-     "amount": "$1,640",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:23 UTC",
-     "amount": "$2,592",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:21 UTC",
-     "amount": "$3,744",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:20 UTC",
-     "amount": "$2,316",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:19 UTC",
-     "amount": "$2,316",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:18 UTC",
-     "amount": "$2,864",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:17 UTC",
-     "amount": "$3,963",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:15 UTC",
-     "amount": "$1,941",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:14 UTC",
-     "amount": "$2,879",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:14 UTC",
-     "amount": "$3,251",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:13 UTC",
-     "amount": "$1,951",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:12 UTC",
-     "amount": "$3,145",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 17:07 UTC",
-     "amount": "$1,669",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 15:22 UTC",
-     "amount": "$1,373",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 15:19 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 15:18 UTC",
-     "amount": "$1,531",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 15:10 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 14:58 UTC",
-     "amount": "$728",
-     "rail": "Rise"
-    }
-   ]
-  },
   "tradeify-futures": {
    "slug": "tradeify-futures",
    "firm": "Tradeify Futures",
    "website": "tradeify.co",
    "websiteUrl": "https://tradeify.co/?ref=JFIJROEL",
    "promo": "30% off all accounts · code PAY",
-   "total": "$402,032,138",
+   "total": "$402,560,843",
    "rail": "Rise",
-   "count": "202,558",
-   "average": "$1,985",
+   "count": "202,898",
+   "average": "$1,984",
    "largest": "$200,000",
    "largestDate": "Jun 10, 2026",
-   "latestTime": "Oct 16, 00:21 UTC",
-   "latestAmount": "$1,924",
+   "latestTime": "Oct 16, 00:41 UTC",
+   "latestAmount": "$675",
    "monthlyVolume": [
     {
      "month": "Nov 2025",
@@ -12999,8 +6401,8 @@
     },
     {
      "month": "Oct 2026",
-     "amount": "$23,519,346",
-     "num": 23519346
+     "amount": "$24,048,051",
+     "num": 24048051
     }
    ],
    "dailyVolume": [
@@ -13131,8 +6533,8 @@
     },
     {
      "date": "Oct 16, 2026",
-     "amount": "$178,866",
-     "num": 178866
+     "amount": "$707,571",
+     "num": 707571
     }
    ],
    "top10": [
@@ -13184,1247 +6586,1247 @@
    ],
    "latestPayouts": [
     {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,924",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,034",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$929",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$864",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,019",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,070",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,050",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,067",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$880",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,155",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,389",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,050",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,922",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,191",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,024",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,046",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,611",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$663",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,051",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,081",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,050",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,661",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,635",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,575",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$2,620",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,813",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,771",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,645",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$798",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$2,146",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,849",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,648",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,514",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,452",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,037",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,630",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,631",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:19 UTC",
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$675",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$675",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,415",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$675",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$675",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$413",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$4,496",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$636",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$585",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$3,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,563",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,790",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,590",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,688",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,297",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$900",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$2,116",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$720",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$1,834",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,512",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,975",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$453",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,769",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$2,203",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$367",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:19 UTC",
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$715",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$901",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$801",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$1,826",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,052",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$1,102",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,092",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,052",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,081",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,426",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,818",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$317",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$1,874",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:42 UTC",
-     "amount": "$938",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:32 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:43 UTC",
-     "amount": "$1,329",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:43 UTC",
-     "amount": "$5,306",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:43 UTC",
-     "amount": "$1,009",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:43 UTC",
-     "amount": "$62,157",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,336",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,577",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,606",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,198",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,677",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,285",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,184",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,011",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,002",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,030",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,130",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,764",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,632",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,791",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,145",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,012",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$3,252",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,421",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$4,023",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,253",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$7,404",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,115",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$3,948",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,106",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$5,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,725",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,224",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,062",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,371",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,979",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,123",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$6,104",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,565",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$3,846",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,713",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,712",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,005",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$3,929",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$10,733",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$13,397",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,629",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,196",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$2,161",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$9,852",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$6,786",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,852",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$11,247",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,390",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,203",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$11,703",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$2,049",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$6,576",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,593",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,200",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$2,161",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,111",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,821",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,031",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$3,988",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$4,915",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$2,147",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$3,527",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$3,244",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$1,122",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$1,949",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$10,035",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$1,072",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$2,822",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$3,466",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$2,481",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$1,198",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$1,161",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$1,548",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,890",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$44,863",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$4,315",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,006",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,131",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,561",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,319",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$2,296",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$3,395",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$2,472",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,182",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,724",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$2,133",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,472",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$5,670",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,435",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$2,410",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$13,232",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$5,723",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,718",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$26,506",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,076",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,574",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$2,499",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,341",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$12,755",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$2,621",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,398",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,177",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,453",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$3,319",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,001",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,077",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,949",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,755",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,066",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,057",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$10,114",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,330",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:14 UTC",
-     "amount": "$1,480",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:14 UTC",
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$455",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$900",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$2,117",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,109",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$939",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$2,250",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$301",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:13 UTC",
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$896",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$884",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$653",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$1,825",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,460",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$540",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$675",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$952",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$309",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$312",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,261",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$904",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$964",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$309",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$462",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,006",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,259",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,493",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,818",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,583",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,067",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,067",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$830",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$705",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$904",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$236",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$900",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,148",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$638",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$378",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,016",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,148",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,152",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$270",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,161",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,146",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$900",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$704",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$675",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,145",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$675",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$675",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$675",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$381",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$381",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,373",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,107",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,060",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,062",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$247",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,144",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,064",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,034",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$475",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,361",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,138",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,361",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,821",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$789",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,382",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$984",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$997",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$2,149",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$309",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,403",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$306",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$417",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$381",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$381",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,118",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,118",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,118",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$675",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$935",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$696",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,700",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,118",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$688",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,118",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$779",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$452",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$4,050",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,057",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$704",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$704",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,863",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$642",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$702",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,067",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$442",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,046",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,999",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,323",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,535",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$936",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,621",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,894",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,700",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,398",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$845",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,580",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,700",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,022",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,058",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$818",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$587",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,441",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
      "amount": "$2,250",
      "rail": "Rise"
     }
@@ -14436,14 +7838,14 @@
    "website": "tradeify.co",
    "websiteUrl": "https://tradeify.co/?ref=JFIJROEL",
    "promo": "30% off all accounts · code PAY",
-   "total": "$402,032,138",
+   "total": "$402,560,843",
    "rail": "Rise",
-   "count": "202,558",
-   "average": "$1,985",
+   "count": "202,898",
+   "average": "$1,984",
    "largest": "$200,000",
    "largestDate": "Jun 10, 2026",
-   "latestTime": "Oct 16, 00:21 UTC",
-   "latestAmount": "$1,924",
+   "latestTime": "Oct 16, 00:41 UTC",
+   "latestAmount": "$675",
    "monthlyVolume": [
     {
      "month": "Nov 2025",
@@ -14502,8 +7904,8 @@
     },
     {
      "month": "Oct 2026",
-     "amount": "$23,519,346",
-     "num": 23519346
+     "amount": "$24,048,051",
+     "num": 24048051
     }
    ],
    "dailyVolume": [
@@ -14634,8 +8036,8 @@
     },
     {
      "date": "Oct 16, 2026",
-     "amount": "$178,866",
-     "num": 178866
+     "amount": "$707,571",
+     "num": 707571
     }
    ],
    "top10": [
@@ -14687,4294 +8089,1248 @@
    ],
    "latestPayouts": [
     {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,924",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,034",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$929",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$864",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,019",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,070",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,050",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,067",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$880",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,155",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,389",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$4,050",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,922",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,191",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,024",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,046",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,611",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$663",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,051",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,081",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,050",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,661",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,635",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$1,575",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$2,620",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,813",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,771",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,645",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$2,700",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$798",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$2,146",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,849",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,648",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,514",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,452",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,037",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,630",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,125",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:20 UTC",
-     "amount": "$1,631",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:19 UTC",
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$675",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$675",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,415",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$675",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$675",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$413",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$4,496",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$636",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$585",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$3,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,563",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,790",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,590",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,688",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,297",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$900",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$2,116",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$720",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$1,834",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,512",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,975",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$453",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,769",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$2,203",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$367",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:19 UTC",
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$715",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$901",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$801",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$1,826",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,052",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$1,102",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,092",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,052",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,081",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,426",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,818",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$317",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 16, 00:19 UTC",
-     "amount": "$1,874",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:42 UTC",
-     "amount": "$938",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:32 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:43 UTC",
-     "amount": "$1,329",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:43 UTC",
-     "amount": "$5,306",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:43 UTC",
-     "amount": "$1,009",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:43 UTC",
-     "amount": "$62,157",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,336",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,577",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,606",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,198",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,677",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,285",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,184",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,011",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,002",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,030",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,130",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,764",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,632",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,791",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,145",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,012",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$3,252",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,421",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$4,023",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,253",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$7,404",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,115",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$3,948",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,106",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$5,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,725",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,224",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,062",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$2,371",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,979",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,123",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$6,104",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,565",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$3,846",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,713",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,712",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$1,005",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$3,929",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$10,733",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:42 UTC",
-     "amount": "$13,397",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,629",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,196",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$2,161",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$9,852",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$6,786",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,852",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$11,247",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,390",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,203",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$11,703",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$2,049",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$6,576",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,593",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,200",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$2,161",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,111",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,821",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,031",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$3,988",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$4,915",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$2,147",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$3,527",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$3,244",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$1,122",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$1,949",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$10,035",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$1,072",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$2,822",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$3,466",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$2,481",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$1,198",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$1,161",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:40 UTC",
-     "amount": "$1,548",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,890",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$44,863",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$4,315",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,006",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,131",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,561",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,319",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$2,296",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$3,395",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$2,472",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,182",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,724",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$2,133",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,472",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$5,670",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,435",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$2,410",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$13,232",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$5,723",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:39 UTC",
-     "amount": "$1,718",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$26,506",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,076",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,574",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$2,499",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,341",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$12,755",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$2,621",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,398",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,177",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,453",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$3,319",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,001",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,077",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,949",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,755",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,066",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,057",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$10,114",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$1,330",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:14 UTC",
-     "amount": "$1,480",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:14 UTC",
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$455",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$900",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$2,117",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,109",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$939",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$2,250",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$301",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:13 UTC",
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$896",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$884",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$653",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$1,825",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,460",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$540",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$675",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$952",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$309",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:13 UTC",
-     "amount": "$2,250",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$312",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$830",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,148",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$378",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,148",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,152",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$270",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,161",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,146",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:00 UTC",
+     "time": "Oct 16, 00:41 UTC",
      "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
-     "amount": "$2,145",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$810",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,261",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$904",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$964",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$309",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:41 UTC",
+     "amount": "$462",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,006",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,259",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,493",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,818",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,583",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:00 UTC",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,067",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,067",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$705",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$904",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$236",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$638",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,016",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$2,250",
      "rail": "Rise"
-    }
-   ]
-  },
-  "myfundedfutures": {
-   "slug": "myfundedfutures",
-   "firm": "MyFundedFutures",
-   "website": "myfundedfutures.com",
-   "websiteUrl": "https://myfundedfutures.com",
-   "promo": "",
-   "total": "$247,518,531",
-   "rail": "Rise",
-   "count": "155,549",
-   "average": "$1,591",
-   "largest": "$229,180",
-   "largestDate": "Aug 1, 2025",
-   "latestTime": "Oct 16, 00:15 UTC",
-   "latestAmount": "$440",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$10,812,118",
-     "num": 10812118
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$9,049,311",
-     "num": 9049311
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$11,134,801",
-     "num": 11134801
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$12,541,493",
-     "num": 12541493
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$14,857,617",
-     "num": 14857617
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$13,391,159",
-     "num": 13391159
-    },
-    {
-     "month": "May 2026",
-     "amount": "$14,211,193",
-     "num": 14211193
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$13,175,198",
-     "num": 13175198
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$13,425,008",
-     "num": 13425008
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$14,165,504",
-     "num": 14165504
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$15,843,830",
-     "num": 15843830
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$7,464,115",
-     "num": 7464115
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$692,610",
-     "num": 692610
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$621,536",
-     "num": 621536
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$174,676",
-     "num": 174676
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$161,647",
-     "num": 161647
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$523,621",
-     "num": 523621
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$547,510",
-     "num": 547510
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$684,495",
-     "num": 684495
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$629,084",
-     "num": 629084
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$721,125",
-     "num": 721125
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$246,247",
-     "num": 246247
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$86,312",
-     "num": 86312
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$641,960",
-     "num": 641960
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$590,603",
-     "num": 590603
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$643,311",
-     "num": 643311
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$585,566",
-     "num": 585566
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$777,454",
-     "num": 777454
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$171,311",
-     "num": 171311
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$71,122",
-     "num": 71122
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$616,448",
-     "num": 616448
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$499,907",
-     "num": 499907
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$568,646",
-     "num": 568646
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$711,793",
-     "num": 711793
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$641,685",
-     "num": 641685
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$157,164",
-     "num": 157164
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$134,446",
-     "num": 134446
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$464,141",
-     "num": 464141
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$519,144",
-     "num": 519144
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$668,548",
-     "num": 668548
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$863,390",
-     "num": 863390
-    },
-    {
-     "date": "Oct 16, 2026",
-     "amount": "$13,350",
-     "num": 13350
-    }
-   ],
-   "top10": [
-    {
-     "date": "Aug 1, 2025",
-     "amount": "$229,180",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 4, 2025",
-     "amount": "$198,771",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 31, 2025",
-     "amount": "$190,853",
-     "rail": "Rise"
-    },
-    {
-     "date": "Dec 8, 2025",
-     "amount": "$183,655",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 27, 2024",
-     "amount": "$176,117",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 31, 2024",
-     "amount": "$158,482",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 17, 2024",
-     "amount": "$157,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 31, 2024",
-     "amount": "$153,291",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 30, 2024",
-     "amount": "$146,000",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 16, 00:15 UTC",
-     "amount": "$440",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:14 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:14 UTC",
-     "amount": "$136",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:12 UTC",
-     "amount": "$665",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:12 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:12 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:11 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:07 UTC",
-     "amount": "$188",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:06 UTC",
-     "amount": "$1,366",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:06 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:02 UTC",
-     "amount": "$523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:02 UTC",
-     "amount": "$523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:02 UTC",
-     "amount": "$523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:01 UTC",
-     "amount": "$523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:01 UTC",
-     "amount": "$141",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:01 UTC",
-     "amount": "$523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:59 UTC",
-     "amount": "$1,016",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:59 UTC",
-     "amount": "$892",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:59 UTC",
-     "amount": "$892",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:59 UTC",
-     "amount": "$892",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:58 UTC",
-     "amount": "$892",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:58 UTC",
-     "amount": "$892",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:58 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:57 UTC",
-     "amount": "$468",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:57 UTC",
-     "amount": "$466",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:57 UTC",
-     "amount": "$468",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:57 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:57 UTC",
-     "amount": "$98",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:52 UTC",
-     "amount": "$3,026",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:51 UTC",
-     "amount": "$1,728",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:50 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:50 UTC",
-     "amount": "$595",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:49 UTC",
-     "amount": "$1,830",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:40 UTC",
-     "amount": "$811",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:39 UTC",
-     "amount": "$4,514",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:38 UTC",
-     "amount": "$400",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:36 UTC",
-     "amount": "$238",
-     "rail": "Rise"
     },
     {
-     "time": "Oct 15, 23:35 UTC",
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$900",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 23:33 UTC",
-     "amount": "$775",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$704",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 23:33 UTC",
-     "amount": "$787",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$675",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 23:33 UTC",
-     "amount": "$787",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:32 UTC",
-     "amount": "$787",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:31 UTC",
-     "amount": "$787",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:29 UTC",
-     "amount": "$727",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:29 UTC",
-     "amount": "$1,599",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:29 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:29 UTC",
-     "amount": "$405",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:28 UTC",
-     "amount": "$489",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:27 UTC",
-     "amount": "$83",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:27 UTC",
-     "amount": "$3,121",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:27 UTC",
-     "amount": "$214",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:23 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:23 UTC",
-     "amount": "$564",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:16 UTC",
-     "amount": "$2,148",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:13 UTC",
-     "amount": "$1,784",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$484",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$879",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:10 UTC",
-     "amount": "$1,004",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:10 UTC",
-     "amount": "$803",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:10 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:09 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:09 UTC",
-     "amount": "$143",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:09 UTC",
-     "amount": "$1,811",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:08 UTC",
-     "amount": "$5,067",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:08 UTC",
-     "amount": "$2,268",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:08 UTC",
-     "amount": "$467",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:06 UTC",
-     "amount": "$484",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:05 UTC",
-     "amount": "$673",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:01 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:01 UTC",
-     "amount": "$490",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:59 UTC",
-     "amount": "$235",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:57 UTC",
-     "amount": "$878",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:57 UTC",
-     "amount": "$720",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:57 UTC",
-     "amount": "$310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:52 UTC",
-     "amount": "$221",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:45 UTC",
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$900",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,890",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$549",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$675",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:34 UTC",
-     "amount": "$1,600",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$675",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:33 UTC",
-     "amount": "$269",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$675",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:29 UTC",
-     "amount": "$245",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$381",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$1,600",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$381",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$4,712",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,373",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$2,593",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$1,495",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,107",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:25 UTC",
-     "amount": "$2,096",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$900",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:24 UTC",
-     "amount": "$800",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$900",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:24 UTC",
-     "amount": "$1,170",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:16 UTC",
-     "amount": "$893",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,060",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:15 UTC",
-     "amount": "$3,100",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:14 UTC",
-     "amount": "$3,101",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,062",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:14 UTC",
-     "amount": "$3,100",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:14 UTC",
-     "amount": "$3,101",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:13 UTC",
-     "amount": "$3,101",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:12 UTC",
-     "amount": "$310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:12 UTC",
-     "amount": "$661",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:12 UTC",
-     "amount": "$652",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:11 UTC",
-     "amount": "$530",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:08 UTC",
-     "amount": "$461",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$108",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$3,501",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:03 UTC",
-     "amount": "$854",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:02 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:02 UTC",
-     "amount": "$812",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:01 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:58 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:58 UTC",
-     "amount": "$525",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:58 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:58 UTC",
-     "amount": "$1,243",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:58 UTC",
-     "amount": "$2,044",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:58 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:57 UTC",
-     "amount": "$248",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:57 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:57 UTC",
-     "amount": "$3,007",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:57 UTC",
-     "amount": "$2,989",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:57 UTC",
-     "amount": "$2,660",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:57 UTC",
-     "amount": "$2,880",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:55 UTC",
-     "amount": "$1,480",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:53 UTC",
-     "amount": "$1,310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:50 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:48 UTC",
-     "amount": "$857",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:48 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:46 UTC",
-     "amount": "$682",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:45 UTC",
-     "amount": "$844",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:44 UTC",
-     "amount": "$953",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:44 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:43 UTC",
-     "amount": "$810",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:41 UTC",
-     "amount": "$1,067",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:41 UTC",
-     "amount": "$1,056",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:41 UTC",
-     "amount": "$1,691",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:39 UTC",
-     "amount": "$630",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:39 UTC",
-     "amount": "$3,150",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:38 UTC",
-     "amount": "$1,058",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:38 UTC",
-     "amount": "$1,793",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:38 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:37 UTC",
-     "amount": "$7,203",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:36 UTC",
-     "amount": "$6,985",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:35 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:34 UTC",
-     "amount": "$901",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:34 UTC",
-     "amount": "$1,266",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:33 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:32 UTC",
-     "amount": "$592",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:31 UTC",
-     "amount": "$630",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:30 UTC",
-     "amount": "$770",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:30 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:30 UTC",
-     "amount": "$801",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:30 UTC",
-     "amount": "$552",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:29 UTC",
-     "amount": "$553",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:29 UTC",
-     "amount": "$552",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:29 UTC",
-     "amount": "$552",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:29 UTC",
-     "amount": "$553",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:29 UTC",
-     "amount": "$810",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:28 UTC",
-     "amount": "$1,133",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:28 UTC",
-     "amount": "$2,374",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:27 UTC",
-     "amount": "$643",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:27 UTC",
-     "amount": "$554",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:26 UTC",
-     "amount": "$8,890",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:26 UTC",
-     "amount": "$855",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:26 UTC",
-     "amount": "$5,938",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:26 UTC",
-     "amount": "$2,201",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:26 UTC",
-     "amount": "$5,120",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:24 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$3,561",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$1,082",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$486",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$1,260",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$460",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$4,850",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$4,850",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$4,850",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$4,850",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$4,850",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:21 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:21 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:21 UTC",
-     "amount": "$766",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:21 UTC",
-     "amount": "$482",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:15 UTC",
-     "amount": "$453",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:57 UTC",
-     "amount": "$304",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:57 UTC",
-     "amount": "$1,544",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:57 UTC",
-     "amount": "$1,078",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:50 UTC",
-     "amount": "$1,606",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:33 UTC",
-     "amount": "$2,218",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:33 UTC",
-     "amount": "$2,230",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:31 UTC",
-     "amount": "$671",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:28 UTC",
-     "amount": "$1,995",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:27 UTC",
-     "amount": "$160",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:25 UTC",
-     "amount": "$240",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:17 UTC",
-     "amount": "$208",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:16 UTC",
-     "amount": "$384",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:16 UTC",
-     "amount": "$4,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:15 UTC",
-     "amount": "$1,282",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:14 UTC",
-     "amount": "$214",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:14 UTC",
-     "amount": "$202",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:11 UTC",
-     "amount": "$258",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:10 UTC",
-     "amount": "$80",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:09 UTC",
-     "amount": "$80",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:08 UTC",
-     "amount": "$80",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:07 UTC",
-     "amount": "$228",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:02 UTC",
-     "amount": "$162",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:01 UTC",
-     "amount": "$1,336",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:59 UTC",
-     "amount": "$334",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:57 UTC",
-     "amount": "$560",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:57 UTC",
-     "amount": "$480",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:56 UTC",
-     "amount": "$280",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:53 UTC",
-     "amount": "$182",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:52 UTC",
-     "amount": "$350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:44 UTC",
-     "amount": "$122",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:40 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:38 UTC",
-     "amount": "$1,523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:36 UTC",
-     "amount": "$455",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:30 UTC",
-     "amount": "$160",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:29 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:27 UTC",
-     "amount": "$444",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:27 UTC",
-     "amount": "$348",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:27 UTC",
-     "amount": "$192",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:26 UTC",
-     "amount": "$671",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:22 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:20 UTC",
-     "amount": "$86",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:20 UTC",
-     "amount": "$81",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:18 UTC",
-     "amount": "$111",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:15 UTC",
-     "amount": "$327",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$1,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$240",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:11 UTC",
-     "amount": "$204",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:11 UTC",
-     "amount": "$208",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:09 UTC",
-     "amount": "$201",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:09 UTC",
-     "amount": "$480",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:09 UTC",
-     "amount": "$2,680",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:08 UTC",
-     "amount": "$286",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:05 UTC",
-     "amount": "$211",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:03 UTC",
-     "amount": "$527",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:02 UTC",
-     "amount": "$260",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:01 UTC",
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$247",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:57 UTC",
-     "amount": "$6,043",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$2,144",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:57 UTC",
-     "amount": "$6,035",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,064",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:57 UTC",
-     "amount": "$6,043",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,034",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:57 UTC",
-     "amount": "$6,035",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:57 UTC",
-     "amount": "$6,035",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$475",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 18:56 UTC",
-     "amount": "$104",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:56 UTC",
-     "amount": "$201",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:56 UTC",
-     "amount": "$209",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:51 UTC",
-     "amount": "$382",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:42 UTC",
-     "amount": "$210",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:41 UTC",
-     "amount": "$360",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "MyFundedFutures": {
-   "slug": "myfundedfutures",
-   "firm": "MyFundedFutures",
-   "website": "myfundedfutures.com",
-   "websiteUrl": "https://myfundedfutures.com",
-   "promo": "",
-   "total": "$247,518,531",
-   "rail": "Rise",
-   "count": "155,549",
-   "average": "$1,591",
-   "largest": "$229,180",
-   "largestDate": "Aug 1, 2025",
-   "latestTime": "Oct 16, 00:15 UTC",
-   "latestAmount": "$440",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$10,812,118",
-     "num": 10812118
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$9,049,311",
-     "num": 9049311
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$11,134,801",
-     "num": 11134801
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$12,541,493",
-     "num": 12541493
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$14,857,617",
-     "num": 14857617
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$13,391,159",
-     "num": 13391159
-    },
-    {
-     "month": "May 2026",
-     "amount": "$14,211,193",
-     "num": 14211193
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$13,175,198",
-     "num": 13175198
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$13,425,008",
-     "num": 13425008
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$14,165,504",
-     "num": 14165504
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$15,843,830",
-     "num": 15843830
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$7,464,115",
-     "num": 7464115
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$692,610",
-     "num": 692610
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$621,536",
-     "num": 621536
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$174,676",
-     "num": 174676
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$161,647",
-     "num": 161647
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$523,621",
-     "num": 523621
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$547,510",
-     "num": 547510
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$684,495",
-     "num": 684495
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$629,084",
-     "num": 629084
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$721,125",
-     "num": 721125
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$246,247",
-     "num": 246247
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$86,312",
-     "num": 86312
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$641,960",
-     "num": 641960
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$590,603",
-     "num": 590603
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$643,311",
-     "num": 643311
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$585,566",
-     "num": 585566
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$777,454",
-     "num": 777454
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$171,311",
-     "num": 171311
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$71,122",
-     "num": 71122
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$616,448",
-     "num": 616448
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$499,907",
-     "num": 499907
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$568,646",
-     "num": 568646
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$711,793",
-     "num": 711793
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$641,685",
-     "num": 641685
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$157,164",
-     "num": 157164
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$134,446",
-     "num": 134446
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$464,141",
-     "num": 464141
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$519,144",
-     "num": 519144
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$668,548",
-     "num": 668548
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$863,390",
-     "num": 863390
-    },
-    {
-     "date": "Oct 16, 2026",
-     "amount": "$13,350",
-     "num": 13350
-    }
-   ],
-   "top10": [
-    {
-     "date": "Aug 1, 2025",
-     "amount": "$229,180",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 4, 2025",
-     "amount": "$198,771",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 31, 2025",
-     "amount": "$190,853",
-     "rail": "Rise"
-    },
-    {
-     "date": "Dec 8, 2025",
-     "amount": "$183,655",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 27, 2024",
-     "amount": "$176,117",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 31, 2024",
-     "amount": "$158,482",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 17, 2024",
-     "amount": "$157,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 31, 2024",
-     "amount": "$153,291",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 30, 2024",
-     "amount": "$146,000",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 16, 00:15 UTC",
-     "amount": "$440",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:14 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:14 UTC",
-     "amount": "$136",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:12 UTC",
-     "amount": "$665",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:12 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:12 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:11 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:07 UTC",
-     "amount": "$188",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:06 UTC",
-     "amount": "$1,366",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:06 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:02 UTC",
-     "amount": "$523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:02 UTC",
-     "amount": "$523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:02 UTC",
-     "amount": "$523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:01 UTC",
-     "amount": "$523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:01 UTC",
-     "amount": "$141",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:01 UTC",
-     "amount": "$523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:59 UTC",
-     "amount": "$1,016",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:59 UTC",
-     "amount": "$892",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:59 UTC",
-     "amount": "$892",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:59 UTC",
-     "amount": "$892",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:58 UTC",
-     "amount": "$892",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:58 UTC",
-     "amount": "$892",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:58 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:57 UTC",
-     "amount": "$468",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:57 UTC",
-     "amount": "$466",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:57 UTC",
-     "amount": "$468",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:57 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:57 UTC",
-     "amount": "$98",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:52 UTC",
-     "amount": "$3,026",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:51 UTC",
-     "amount": "$1,728",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:50 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:50 UTC",
-     "amount": "$595",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:49 UTC",
-     "amount": "$1,830",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:40 UTC",
-     "amount": "$811",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:39 UTC",
-     "amount": "$4,514",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:38 UTC",
-     "amount": "$400",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:36 UTC",
-     "amount": "$238",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:35 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:33 UTC",
-     "amount": "$775",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:33 UTC",
-     "amount": "$787",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:33 UTC",
-     "amount": "$787",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:32 UTC",
-     "amount": "$787",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:31 UTC",
-     "amount": "$787",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:29 UTC",
-     "amount": "$727",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:29 UTC",
-     "amount": "$1,599",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:29 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:29 UTC",
-     "amount": "$405",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:28 UTC",
-     "amount": "$489",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:27 UTC",
-     "amount": "$83",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:27 UTC",
-     "amount": "$3,121",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:27 UTC",
-     "amount": "$214",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:23 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:23 UTC",
-     "amount": "$564",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:16 UTC",
-     "amount": "$2,148",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:13 UTC",
-     "amount": "$1,784",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$540",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$484",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:11 UTC",
-     "amount": "$879",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:10 UTC",
-     "amount": "$1,004",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:10 UTC",
-     "amount": "$803",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:10 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:09 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:09 UTC",
-     "amount": "$143",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:09 UTC",
-     "amount": "$1,811",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:08 UTC",
-     "amount": "$5,067",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:08 UTC",
-     "amount": "$2,268",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:08 UTC",
-     "amount": "$467",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:06 UTC",
-     "amount": "$484",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:05 UTC",
-     "amount": "$673",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:01 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:01 UTC",
-     "amount": "$490",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:59 UTC",
-     "amount": "$235",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:57 UTC",
-     "amount": "$878",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:57 UTC",
-     "amount": "$720",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:57 UTC",
-     "amount": "$310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:52 UTC",
-     "amount": "$221",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:45 UTC",
+     "time": "Oct 16, 00:31 UTC",
      "amount": "$900",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:41 UTC",
-     "amount": "$1,890",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,361",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:37 UTC",
-     "amount": "$549",
+     "time": "Oct 16, 00:31 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:34 UTC",
-     "amount": "$1,600",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:33 UTC",
-     "amount": "$269",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:29 UTC",
-     "amount": "$245",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$1,600",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,138",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$4,712",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,361",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$2,593",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$1,495",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:25 UTC",
-     "amount": "$2,096",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:24 UTC",
-     "amount": "$800",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,821",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:24 UTC",
-     "amount": "$1,170",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:16 UTC",
-     "amount": "$893",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:15 UTC",
-     "amount": "$3,100",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:14 UTC",
-     "amount": "$3,101",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:14 UTC",
-     "amount": "$3,100",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:14 UTC",
-     "amount": "$3,101",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:13 UTC",
-     "amount": "$3,101",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$789",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:12 UTC",
-     "amount": "$310",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,382",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:12 UTC",
-     "amount": "$661",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:12 UTC",
-     "amount": "$652",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:11 UTC",
-     "amount": "$530",
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:08 UTC",
-     "amount": "$461",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$108",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:05 UTC",
-     "amount": "$3,501",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:04 UTC",
-     "amount": "$540",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$984",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:03 UTC",
-     "amount": "$854",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:02 UTC",
-     "amount": "$800",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:02 UTC",
-     "amount": "$812",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 22:01 UTC",
-     "amount": "$450",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:58 UTC",
-     "amount": "$800",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:58 UTC",
-     "amount": "$525",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:58 UTC",
-     "amount": "$1,600",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:58 UTC",
-     "amount": "$1,243",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$997",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:58 UTC",
-     "amount": "$2,044",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$2,149",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:58 UTC",
-     "amount": "$1,600",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:57 UTC",
-     "amount": "$248",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:57 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:57 UTC",
-     "amount": "$3,007",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:57 UTC",
-     "amount": "$2,989",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:57 UTC",
-     "amount": "$2,660",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:57 UTC",
-     "amount": "$2,880",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:55 UTC",
-     "amount": "$1,480",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:53 UTC",
-     "amount": "$1,310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:50 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:48 UTC",
-     "amount": "$857",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:48 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:46 UTC",
-     "amount": "$682",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:45 UTC",
-     "amount": "$844",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:44 UTC",
-     "amount": "$953",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:44 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:43 UTC",
-     "amount": "$810",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:41 UTC",
-     "amount": "$1,067",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:41 UTC",
-     "amount": "$1,056",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:41 UTC",
-     "amount": "$1,691",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:39 UTC",
-     "amount": "$630",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:39 UTC",
+     "time": "Oct 16, 00:28 UTC",
      "amount": "$3,150",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:38 UTC",
-     "amount": "$1,058",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$3,150",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:38 UTC",
-     "amount": "$1,793",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$309",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:38 UTC",
-     "amount": "$800",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$3,150",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:37 UTC",
-     "amount": "$7,203",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$1,403",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:36 UTC",
-     "amount": "$6,985",
+     "time": "Oct 16, 00:28 UTC",
+     "amount": "$306",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:35 UTC",
-     "amount": "$1,600",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:34 UTC",
-     "amount": "$901",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$417",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:34 UTC",
-     "amount": "$1,266",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$381",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:33 UTC",
-     "amount": "$1,600",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$381",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:32 UTC",
-     "amount": "$592",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,118",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:31 UTC",
-     "amount": "$630",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,118",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:30 UTC",
-     "amount": "$770",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,118",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:30 UTC",
-     "amount": "$1,600",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$675",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:30 UTC",
-     "amount": "$801",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$935",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:30 UTC",
-     "amount": "$552",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$696",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:29 UTC",
-     "amount": "$553",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,700",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:29 UTC",
-     "amount": "$552",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,118",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:29 UTC",
-     "amount": "$552",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$688",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:29 UTC",
-     "amount": "$553",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,118",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:29 UTC",
-     "amount": "$810",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:28 UTC",
-     "amount": "$1,133",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:28 UTC",
-     "amount": "$2,374",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:27 UTC",
-     "amount": "$643",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:27 UTC",
-     "amount": "$554",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$900",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:26 UTC",
-     "amount": "$8,890",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$779",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:26 UTC",
-     "amount": "$855",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$452",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:26 UTC",
-     "amount": "$5,938",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:26 UTC",
-     "amount": "$2,201",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:26 UTC",
-     "amount": "$5,120",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$4,050",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:24 UTC",
-     "amount": "$1,600",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,057",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$3,561",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$1,082",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$486",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$704",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$1,260",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$704",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$460",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,863",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$4,850",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$642",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$4,850",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$702",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$4,850",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,067",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$4,850",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$4,850",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:22 UTC",
-     "amount": "$800",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$442",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:21 UTC",
-     "amount": "$800",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:21 UTC",
-     "amount": "$800",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,046",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:21 UTC",
-     "amount": "$766",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,999",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:21 UTC",
-     "amount": "$482",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 21:15 UTC",
-     "amount": "$453",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,323",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:57 UTC",
-     "amount": "$304",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,535",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:57 UTC",
-     "amount": "$1,544",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:57 UTC",
-     "amount": "$1,078",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:50 UTC",
-     "amount": "$1,606",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:33 UTC",
-     "amount": "$2,218",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:33 UTC",
-     "amount": "$2,230",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$936",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:31 UTC",
-     "amount": "$671",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:28 UTC",
-     "amount": "$1,995",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,621",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:27 UTC",
-     "amount": "$160",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,894",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:25 UTC",
-     "amount": "$240",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,700",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:17 UTC",
-     "amount": "$208",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,800",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:16 UTC",
-     "amount": "$384",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:16 UTC",
-     "amount": "$4,000",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,398",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:15 UTC",
-     "amount": "$1,282",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:14 UTC",
-     "amount": "$214",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$845",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:14 UTC",
-     "amount": "$202",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:11 UTC",
-     "amount": "$258",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:10 UTC",
-     "amount": "$80",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,580",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:09 UTC",
-     "amount": "$80",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:08 UTC",
-     "amount": "$80",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:07 UTC",
-     "amount": "$228",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,700",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:02 UTC",
-     "amount": "$162",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,022",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:01 UTC",
-     "amount": "$1,336",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,058",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 19:59 UTC",
-     "amount": "$334",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$818",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 19:57 UTC",
-     "amount": "$560",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$587",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 19:57 UTC",
-     "amount": "$480",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,125",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 19:56 UTC",
-     "amount": "$280",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,441",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 19:53 UTC",
-     "amount": "$182",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:52 UTC",
-     "amount": "$350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:44 UTC",
-     "amount": "$122",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:40 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:38 UTC",
-     "amount": "$1,523",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:36 UTC",
-     "amount": "$455",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:30 UTC",
-     "amount": "$160",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:29 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:27 UTC",
-     "amount": "$444",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:27 UTC",
-     "amount": "$348",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:27 UTC",
-     "amount": "$192",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:26 UTC",
-     "amount": "$671",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:22 UTC",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:20 UTC",
-     "amount": "$86",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:20 UTC",
-     "amount": "$81",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:18 UTC",
-     "amount": "$111",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:15 UTC",
-     "amount": "$327",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$1,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$240",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$600",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:11 UTC",
-     "amount": "$204",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:11 UTC",
-     "amount": "$208",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:09 UTC",
-     "amount": "$201",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:09 UTC",
-     "amount": "$480",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:09 UTC",
-     "amount": "$2,680",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:08 UTC",
-     "amount": "$286",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:05 UTC",
-     "amount": "$211",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:03 UTC",
-     "amount": "$527",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:02 UTC",
-     "amount": "$260",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:01 UTC",
-     "amount": "$247",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:57 UTC",
-     "amount": "$6,043",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:57 UTC",
-     "amount": "$6,035",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:57 UTC",
-     "amount": "$6,043",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:57 UTC",
-     "amount": "$6,035",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:57 UTC",
-     "amount": "$6,035",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:56 UTC",
-     "amount": "$104",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:56 UTC",
-     "amount": "$201",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:56 UTC",
-     "amount": "$209",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:51 UTC",
-     "amount": "$382",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:42 UTC",
-     "amount": "$210",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:41 UTC",
-     "amount": "$360",
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     }
    ]
@@ -21155,6 +11511,9650 @@
     }
    ]
   },
+  "fundedfuturesfamily": {
+   "slug": "fundedfuturesfamily",
+   "firm": "FundedFuturesFamily",
+   "website": "fundedfuturesfamily.com",
+   "websiteUrl": "https://fundedfuturesfamily.com",
+   "promo": "",
+   "total": "$30,272,129",
+   "rail": "Rise",
+   "count": "13,432",
+   "average": "$2,254",
+   "largest": "$50,928",
+   "largestDate": "Nov 26, 2024",
+   "latestTime": "Oct 15, 19:18 UTC",
+   "latestAmount": "$352",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$1,278,906",
+     "num": 1278906
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$824,001",
+     "num": 824001
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$796,634",
+     "num": 796634
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$980,566",
+     "num": 980566
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$1,270,766",
+     "num": 1270766
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$1,226,565",
+     "num": 1226565
+    },
+    {
+     "month": "May 2026",
+     "amount": "$1,458,464",
+     "num": 1458464
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$2,131,363",
+     "num": 2131363
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$2,701,063",
+     "num": 2701063
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$2,257,791",
+     "num": 2257791
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$2,451,997",
+     "num": 2451997
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$1,878,360",
+     "num": 1878360
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$83,348",
+     "num": 83348
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$71,564",
+     "num": 71564
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$102,010",
+     "num": 102010
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$163,364",
+     "num": 163364
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$130,417",
+     "num": 130417
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$171,876",
+     "num": 171876
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$164,717",
+     "num": 164717
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$168,696",
+     "num": 168696
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$107,390",
+     "num": 107390
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$167,357",
+     "num": 167357
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$161,257",
+     "num": 161257
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$211,084",
+     "num": 211084
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$150,593",
+     "num": 150593
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$148,974",
+     "num": 148974
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$36,642",
+     "num": 36642
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$142,071",
+     "num": 142071
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$383,012",
+     "num": 383012
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$25,700",
+     "num": 25700
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$272,551",
+     "num": 272551
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$201,753",
+     "num": 201753
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$144,723",
+     "num": 144723
+    }
+   ],
+   "top10": [
+    {
+     "date": "Nov 26, 2024",
+     "amount": "$50,928",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 19, 2025",
+     "amount": "$46,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 7, 2025",
+     "amount": "$46,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 5, 2025",
+     "amount": "$46,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 5, 2025",
+     "amount": "$46,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 21, 2025",
+     "amount": "$39,932",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 23, 2025",
+     "amount": "$36,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 4, 2025",
+     "amount": "$36,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 2, 2025",
+     "amount": "$36,000",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 19:18 UTC",
+     "amount": "$352",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:18 UTC",
+     "amount": "$1,526",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:17 UTC",
+     "amount": "$300",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:17 UTC",
+     "amount": "$275",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:16 UTC",
+     "amount": "$803",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:16 UTC",
+     "amount": "$840",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:15 UTC",
+     "amount": "$2,133",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:15 UTC",
+     "amount": "$1,454",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$3,252",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:49 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:49 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:49 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:49 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:49 UTC",
+     "amount": "$982",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,118",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$616",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$678",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$869",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$830",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$2,025",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$647",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$539",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$495",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$1,055",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$1,111",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$549",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$965",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$965",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$977",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$456",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$452",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$459",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$452",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$463",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$457",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$681",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$828",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$965",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$973",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$1,014",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$1,014",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$1,014",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$455",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$2,925",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$2,925",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$2,925",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$2,925",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$2,925",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$848",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$962",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$468",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$584",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$612",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$590",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$590",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$1,156",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$957",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$456",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:34 UTC",
+     "amount": "$1,795",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:34 UTC",
+     "amount": "$1,795",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:34 UTC",
+     "amount": "$1,795",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:34 UTC",
+     "amount": "$1,795",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:34 UTC",
+     "amount": "$1,795",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$630",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$720",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$568",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$818",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$798",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$1,048",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$463",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$593",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$609",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$602",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$459",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$596",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$596",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$605",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$675",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$497",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$522",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:40 UTC",
+     "amount": "$360",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:40 UTC",
+     "amount": "$1,138",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:40 UTC",
+     "amount": "$1,214",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:40 UTC",
+     "amount": "$2,897",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:38 UTC",
+     "amount": "$283",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:38 UTC",
+     "amount": "$3,840",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:37 UTC",
+     "amount": "$1,297",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:36 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:36 UTC",
+     "amount": "$1,179",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:36 UTC",
+     "amount": "$1,040",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:35 UTC",
+     "amount": "$818",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$479",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$507",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$546",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$546",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "FundedFuturesFamily": {
+   "slug": "fundedfuturesfamily",
+   "firm": "FundedFuturesFamily",
+   "website": "fundedfuturesfamily.com",
+   "websiteUrl": "https://fundedfuturesfamily.com",
+   "promo": "",
+   "total": "$30,272,129",
+   "rail": "Rise",
+   "count": "13,432",
+   "average": "$2,254",
+   "largest": "$50,928",
+   "largestDate": "Nov 26, 2024",
+   "latestTime": "Oct 15, 19:18 UTC",
+   "latestAmount": "$352",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$1,278,906",
+     "num": 1278906
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$824,001",
+     "num": 824001
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$796,634",
+     "num": 796634
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$980,566",
+     "num": 980566
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$1,270,766",
+     "num": 1270766
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$1,226,565",
+     "num": 1226565
+    },
+    {
+     "month": "May 2026",
+     "amount": "$1,458,464",
+     "num": 1458464
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$2,131,363",
+     "num": 2131363
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$2,701,063",
+     "num": 2701063
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$2,257,791",
+     "num": 2257791
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$2,451,997",
+     "num": 2451997
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$1,878,360",
+     "num": 1878360
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$83,348",
+     "num": 83348
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$71,564",
+     "num": 71564
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$102,010",
+     "num": 102010
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$163,364",
+     "num": 163364
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$130,417",
+     "num": 130417
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$171,876",
+     "num": 171876
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$164,717",
+     "num": 164717
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$168,696",
+     "num": 168696
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$107,390",
+     "num": 107390
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$167,357",
+     "num": 167357
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$161,257",
+     "num": 161257
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$211,084",
+     "num": 211084
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$150,593",
+     "num": 150593
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$148,974",
+     "num": 148974
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$36,642",
+     "num": 36642
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$142,071",
+     "num": 142071
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$383,012",
+     "num": 383012
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$25,700",
+     "num": 25700
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$272,551",
+     "num": 272551
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$201,753",
+     "num": 201753
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$144,723",
+     "num": 144723
+    }
+   ],
+   "top10": [
+    {
+     "date": "Nov 26, 2024",
+     "amount": "$50,928",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 19, 2025",
+     "amount": "$46,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 7, 2025",
+     "amount": "$46,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 5, 2025",
+     "amount": "$46,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 5, 2025",
+     "amount": "$46,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 21, 2025",
+     "amount": "$39,932",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 23, 2025",
+     "amount": "$36,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 4, 2025",
+     "amount": "$36,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 2, 2025",
+     "amount": "$36,000",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 19:18 UTC",
+     "amount": "$352",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:18 UTC",
+     "amount": "$1,526",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:17 UTC",
+     "amount": "$300",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:17 UTC",
+     "amount": "$275",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:16 UTC",
+     "amount": "$803",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:16 UTC",
+     "amount": "$840",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:15 UTC",
+     "amount": "$2,133",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:15 UTC",
+     "amount": "$1,454",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$3,252",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:49 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:49 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:49 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:49 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:49 UTC",
+     "amount": "$982",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,118",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$616",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:48 UTC",
+     "amount": "$678",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$869",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$830",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$2,025",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$647",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$539",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$495",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$1,055",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$1,111",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$549",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$965",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$965",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$977",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$456",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$452",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$459",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$452",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:43 UTC",
+     "amount": "$463",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$457",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$681",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$828",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$965",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$973",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$1,014",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$1,014",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$1,014",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$455",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$2,925",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$2,925",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$2,925",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$2,925",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:41 UTC",
+     "amount": "$2,925",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$848",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$962",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$468",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$584",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$612",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$590",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$590",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$1,156",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$957",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:37 UTC",
+     "amount": "$456",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:34 UTC",
+     "amount": "$1,795",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:34 UTC",
+     "amount": "$1,795",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:34 UTC",
+     "amount": "$1,795",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:34 UTC",
+     "amount": "$1,795",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:34 UTC",
+     "amount": "$1,795",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$630",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$720",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$568",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$818",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$798",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$1,048",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$463",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$593",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$609",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$602",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$459",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$596",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$596",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$605",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:32 UTC",
+     "amount": "$675",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$497",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 20:57 UTC",
+     "amount": "$522",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:40 UTC",
+     "amount": "$360",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:40 UTC",
+     "amount": "$1,138",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:40 UTC",
+     "amount": "$1,214",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:40 UTC",
+     "amount": "$2,897",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:38 UTC",
+     "amount": "$283",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:38 UTC",
+     "amount": "$3,840",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:37 UTC",
+     "amount": "$1,297",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:36 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:36 UTC",
+     "amount": "$1,179",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:36 UTC",
+     "amount": "$1,040",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:35 UTC",
+     "amount": "$818",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$479",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$1,125",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$507",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$546",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 19:18 UTC",
+     "amount": "$546",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "myfundedfutures": {
+   "slug": "myfundedfutures",
+   "firm": "MyFundedFutures",
+   "website": "myfundedfutures.com",
+   "websiteUrl": "https://myfundedfutures.com",
+   "promo": "",
+   "total": "$247,530,749",
+   "rail": "Rise",
+   "count": "155,557",
+   "average": "$1,591",
+   "largest": "$229,180",
+   "largestDate": "Aug 1, 2025",
+   "latestTime": "Oct 16, 00:38 UTC",
+   "latestAmount": "$1,197",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$10,812,118",
+     "num": 10812118
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$9,049,311",
+     "num": 9049311
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$11,134,801",
+     "num": 11134801
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$12,541,493",
+     "num": 12541493
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$14,857,617",
+     "num": 14857617
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$13,391,159",
+     "num": 13391159
+    },
+    {
+     "month": "May 2026",
+     "amount": "$14,211,193",
+     "num": 14211193
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$13,175,198",
+     "num": 13175198
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$13,425,008",
+     "num": 13425008
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$14,165,504",
+     "num": 14165504
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$15,843,830",
+     "num": 15843830
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$7,476,333",
+     "num": 7476333
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$692,610",
+     "num": 692610
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$621,536",
+     "num": 621536
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$174,676",
+     "num": 174676
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$161,647",
+     "num": 161647
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$523,621",
+     "num": 523621
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$547,510",
+     "num": 547510
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$684,495",
+     "num": 684495
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$629,084",
+     "num": 629084
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$721,125",
+     "num": 721125
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$246,247",
+     "num": 246247
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$86,312",
+     "num": 86312
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$641,960",
+     "num": 641960
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$590,603",
+     "num": 590603
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$643,311",
+     "num": 643311
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$585,566",
+     "num": 585566
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$777,454",
+     "num": 777454
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$171,311",
+     "num": 171311
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$71,122",
+     "num": 71122
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$616,448",
+     "num": 616448
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$499,907",
+     "num": 499907
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$568,646",
+     "num": 568646
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$711,793",
+     "num": 711793
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$641,685",
+     "num": 641685
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$157,164",
+     "num": 157164
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$134,446",
+     "num": 134446
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$464,141",
+     "num": 464141
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$519,144",
+     "num": 519144
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$668,548",
+     "num": 668548
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$863,390",
+     "num": 863390
+    },
+    {
+     "date": "Oct 16, 2026",
+     "amount": "$25,568",
+     "num": 25568
+    }
+   ],
+   "top10": [
+    {
+     "date": "Aug 1, 2025",
+     "amount": "$229,180",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 4, 2025",
+     "amount": "$198,771",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 31, 2025",
+     "amount": "$190,853",
+     "rail": "Rise"
+    },
+    {
+     "date": "Dec 8, 2025",
+     "amount": "$183,655",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 27, 2024",
+     "amount": "$176,117",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 31, 2024",
+     "amount": "$158,482",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 17, 2024",
+     "amount": "$157,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 31, 2024",
+     "amount": "$153,291",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 30, 2024",
+     "amount": "$146,000",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 16, 00:38 UTC",
+     "amount": "$1,197",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:37 UTC",
+     "amount": "$1,864",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:34 UTC",
+     "amount": "$4,320",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:29 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$866",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:25 UTC",
+     "amount": "$796",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:25 UTC",
+     "amount": "$495",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:15 UTC",
+     "amount": "$440",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:14 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:14 UTC",
+     "amount": "$136",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:12 UTC",
+     "amount": "$665",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:12 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:12 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:11 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:07 UTC",
+     "amount": "$188",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:06 UTC",
+     "amount": "$1,366",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:06 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:02 UTC",
+     "amount": "$523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:02 UTC",
+     "amount": "$523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:02 UTC",
+     "amount": "$523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:01 UTC",
+     "amount": "$523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:01 UTC",
+     "amount": "$141",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:01 UTC",
+     "amount": "$523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:59 UTC",
+     "amount": "$1,016",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:59 UTC",
+     "amount": "$892",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:59 UTC",
+     "amount": "$892",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:59 UTC",
+     "amount": "$892",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:58 UTC",
+     "amount": "$892",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:58 UTC",
+     "amount": "$892",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:58 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:57 UTC",
+     "amount": "$468",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:57 UTC",
+     "amount": "$466",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:57 UTC",
+     "amount": "$468",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:57 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:57 UTC",
+     "amount": "$98",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:52 UTC",
+     "amount": "$3,026",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:51 UTC",
+     "amount": "$1,728",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:50 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:50 UTC",
+     "amount": "$595",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:49 UTC",
+     "amount": "$1,830",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:40 UTC",
+     "amount": "$811",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:39 UTC",
+     "amount": "$4,514",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:38 UTC",
+     "amount": "$400",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:36 UTC",
+     "amount": "$238",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:35 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:33 UTC",
+     "amount": "$775",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:33 UTC",
+     "amount": "$787",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:33 UTC",
+     "amount": "$787",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:32 UTC",
+     "amount": "$787",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:31 UTC",
+     "amount": "$787",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:29 UTC",
+     "amount": "$727",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:29 UTC",
+     "amount": "$1,599",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:29 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:29 UTC",
+     "amount": "$405",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:28 UTC",
+     "amount": "$489",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:27 UTC",
+     "amount": "$83",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:27 UTC",
+     "amount": "$3,121",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:27 UTC",
+     "amount": "$214",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:23 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:23 UTC",
+     "amount": "$564",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:16 UTC",
+     "amount": "$2,148",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:13 UTC",
+     "amount": "$1,784",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$484",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$879",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:10 UTC",
+     "amount": "$1,004",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:10 UTC",
+     "amount": "$803",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:10 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:09 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:09 UTC",
+     "amount": "$143",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:09 UTC",
+     "amount": "$1,811",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:08 UTC",
+     "amount": "$5,067",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:08 UTC",
+     "amount": "$2,268",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:08 UTC",
+     "amount": "$467",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:06 UTC",
+     "amount": "$484",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:05 UTC",
+     "amount": "$673",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:01 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:01 UTC",
+     "amount": "$490",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:59 UTC",
+     "amount": "$235",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:57 UTC",
+     "amount": "$878",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:57 UTC",
+     "amount": "$720",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:57 UTC",
+     "amount": "$310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:52 UTC",
+     "amount": "$221",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:45 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:41 UTC",
+     "amount": "$1,890",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:37 UTC",
+     "amount": "$549",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:34 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:33 UTC",
+     "amount": "$269",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:29 UTC",
+     "amount": "$245",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$4,712",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$2,593",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$1,495",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:25 UTC",
+     "amount": "$2,096",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:24 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:24 UTC",
+     "amount": "$1,170",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:16 UTC",
+     "amount": "$893",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:15 UTC",
+     "amount": "$3,100",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:14 UTC",
+     "amount": "$3,101",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:14 UTC",
+     "amount": "$3,100",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:14 UTC",
+     "amount": "$3,101",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:13 UTC",
+     "amount": "$3,101",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:12 UTC",
+     "amount": "$310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:12 UTC",
+     "amount": "$661",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:12 UTC",
+     "amount": "$652",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:11 UTC",
+     "amount": "$530",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:08 UTC",
+     "amount": "$461",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$108",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$3,501",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:03 UTC",
+     "amount": "$854",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:02 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:02 UTC",
+     "amount": "$812",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:01 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:58 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:58 UTC",
+     "amount": "$525",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:58 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:58 UTC",
+     "amount": "$1,243",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:58 UTC",
+     "amount": "$2,044",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:58 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:57 UTC",
+     "amount": "$248",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:57 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:57 UTC",
+     "amount": "$3,007",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:57 UTC",
+     "amount": "$2,989",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:57 UTC",
+     "amount": "$2,660",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:57 UTC",
+     "amount": "$2,880",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:55 UTC",
+     "amount": "$1,480",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:53 UTC",
+     "amount": "$1,310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:50 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:48 UTC",
+     "amount": "$857",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:48 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:46 UTC",
+     "amount": "$682",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:45 UTC",
+     "amount": "$844",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:44 UTC",
+     "amount": "$953",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:44 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:43 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:41 UTC",
+     "amount": "$1,067",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:41 UTC",
+     "amount": "$1,056",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:41 UTC",
+     "amount": "$1,691",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:39 UTC",
+     "amount": "$630",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:39 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:38 UTC",
+     "amount": "$1,058",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:38 UTC",
+     "amount": "$1,793",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:38 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:37 UTC",
+     "amount": "$7,203",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:36 UTC",
+     "amount": "$6,985",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:35 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:34 UTC",
+     "amount": "$901",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:34 UTC",
+     "amount": "$1,266",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:33 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:32 UTC",
+     "amount": "$592",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:31 UTC",
+     "amount": "$630",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:30 UTC",
+     "amount": "$770",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:30 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:30 UTC",
+     "amount": "$801",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:30 UTC",
+     "amount": "$552",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:29 UTC",
+     "amount": "$553",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:29 UTC",
+     "amount": "$552",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:29 UTC",
+     "amount": "$552",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:29 UTC",
+     "amount": "$553",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:29 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:28 UTC",
+     "amount": "$1,133",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:28 UTC",
+     "amount": "$2,374",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:27 UTC",
+     "amount": "$643",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:27 UTC",
+     "amount": "$554",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:26 UTC",
+     "amount": "$8,890",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:26 UTC",
+     "amount": "$855",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:26 UTC",
+     "amount": "$5,938",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:26 UTC",
+     "amount": "$2,201",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:26 UTC",
+     "amount": "$5,120",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:24 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$3,561",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$1,082",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$486",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$1,260",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$460",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$4,850",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$4,850",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$4,850",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$4,850",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$4,850",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:21 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:21 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:21 UTC",
+     "amount": "$766",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:21 UTC",
+     "amount": "$482",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:15 UTC",
+     "amount": "$453",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:57 UTC",
+     "amount": "$304",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:57 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:57 UTC",
+     "amount": "$1,078",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:50 UTC",
+     "amount": "$1,606",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:33 UTC",
+     "amount": "$2,218",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:33 UTC",
+     "amount": "$2,230",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:31 UTC",
+     "amount": "$671",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:28 UTC",
+     "amount": "$1,995",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:27 UTC",
+     "amount": "$160",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:25 UTC",
+     "amount": "$240",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:17 UTC",
+     "amount": "$208",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:16 UTC",
+     "amount": "$384",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:16 UTC",
+     "amount": "$4,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:15 UTC",
+     "amount": "$1,282",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:14 UTC",
+     "amount": "$214",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:14 UTC",
+     "amount": "$202",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:11 UTC",
+     "amount": "$258",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:10 UTC",
+     "amount": "$80",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:09 UTC",
+     "amount": "$80",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:08 UTC",
+     "amount": "$80",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:07 UTC",
+     "amount": "$228",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:02 UTC",
+     "amount": "$162",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:01 UTC",
+     "amount": "$1,336",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:59 UTC",
+     "amount": "$334",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:57 UTC",
+     "amount": "$560",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:57 UTC",
+     "amount": "$480",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:56 UTC",
+     "amount": "$280",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:53 UTC",
+     "amount": "$182",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:52 UTC",
+     "amount": "$350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:44 UTC",
+     "amount": "$122",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:40 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:38 UTC",
+     "amount": "$1,523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:36 UTC",
+     "amount": "$455",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:30 UTC",
+     "amount": "$160",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:29 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:27 UTC",
+     "amount": "$444",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:27 UTC",
+     "amount": "$348",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:27 UTC",
+     "amount": "$192",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:26 UTC",
+     "amount": "$671",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:22 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:20 UTC",
+     "amount": "$86",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:20 UTC",
+     "amount": "$81",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:18 UTC",
+     "amount": "$111",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:15 UTC",
+     "amount": "$327",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$1,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$240",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:11 UTC",
+     "amount": "$204",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:11 UTC",
+     "amount": "$208",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:09 UTC",
+     "amount": "$201",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:09 UTC",
+     "amount": "$480",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:09 UTC",
+     "amount": "$2,680",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:08 UTC",
+     "amount": "$286",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:05 UTC",
+     "amount": "$211",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:03 UTC",
+     "amount": "$527",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:02 UTC",
+     "amount": "$260",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:01 UTC",
+     "amount": "$247",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:57 UTC",
+     "amount": "$6,043",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:57 UTC",
+     "amount": "$6,035",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:57 UTC",
+     "amount": "$6,043",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "MyFundedFutures": {
+   "slug": "myfundedfutures",
+   "firm": "MyFundedFutures",
+   "website": "myfundedfutures.com",
+   "websiteUrl": "https://myfundedfutures.com",
+   "promo": "",
+   "total": "$247,530,749",
+   "rail": "Rise",
+   "count": "155,557",
+   "average": "$1,591",
+   "largest": "$229,180",
+   "largestDate": "Aug 1, 2025",
+   "latestTime": "Oct 16, 00:38 UTC",
+   "latestAmount": "$1,197",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$10,812,118",
+     "num": 10812118
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$9,049,311",
+     "num": 9049311
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$11,134,801",
+     "num": 11134801
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$12,541,493",
+     "num": 12541493
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$14,857,617",
+     "num": 14857617
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$13,391,159",
+     "num": 13391159
+    },
+    {
+     "month": "May 2026",
+     "amount": "$14,211,193",
+     "num": 14211193
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$13,175,198",
+     "num": 13175198
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$13,425,008",
+     "num": 13425008
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$14,165,504",
+     "num": 14165504
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$15,843,830",
+     "num": 15843830
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$7,476,333",
+     "num": 7476333
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$692,610",
+     "num": 692610
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$621,536",
+     "num": 621536
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$174,676",
+     "num": 174676
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$161,647",
+     "num": 161647
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$523,621",
+     "num": 523621
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$547,510",
+     "num": 547510
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$684,495",
+     "num": 684495
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$629,084",
+     "num": 629084
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$721,125",
+     "num": 721125
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$246,247",
+     "num": 246247
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$86,312",
+     "num": 86312
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$641,960",
+     "num": 641960
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$590,603",
+     "num": 590603
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$643,311",
+     "num": 643311
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$585,566",
+     "num": 585566
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$777,454",
+     "num": 777454
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$171,311",
+     "num": 171311
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$71,122",
+     "num": 71122
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$616,448",
+     "num": 616448
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$499,907",
+     "num": 499907
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$568,646",
+     "num": 568646
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$711,793",
+     "num": 711793
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$641,685",
+     "num": 641685
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$157,164",
+     "num": 157164
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$134,446",
+     "num": 134446
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$464,141",
+     "num": 464141
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$519,144",
+     "num": 519144
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$668,548",
+     "num": 668548
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$863,390",
+     "num": 863390
+    },
+    {
+     "date": "Oct 16, 2026",
+     "amount": "$25,568",
+     "num": 25568
+    }
+   ],
+   "top10": [
+    {
+     "date": "Aug 1, 2025",
+     "amount": "$229,180",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 4, 2025",
+     "amount": "$198,771",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 31, 2025",
+     "amount": "$190,853",
+     "rail": "Rise"
+    },
+    {
+     "date": "Dec 8, 2025",
+     "amount": "$183,655",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 27, 2024",
+     "amount": "$176,117",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 31, 2024",
+     "amount": "$158,482",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 17, 2024",
+     "amount": "$157,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 31, 2024",
+     "amount": "$153,291",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 30, 2024",
+     "amount": "$146,000",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 16, 00:38 UTC",
+     "amount": "$1,197",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:37 UTC",
+     "amount": "$1,864",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:34 UTC",
+     "amount": "$4,320",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:29 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$866",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:27 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:25 UTC",
+     "amount": "$796",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:25 UTC",
+     "amount": "$495",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:15 UTC",
+     "amount": "$440",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:14 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:14 UTC",
+     "amount": "$136",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:12 UTC",
+     "amount": "$665",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:12 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:12 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:11 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:07 UTC",
+     "amount": "$188",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:06 UTC",
+     "amount": "$1,366",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:06 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:02 UTC",
+     "amount": "$523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:02 UTC",
+     "amount": "$523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:02 UTC",
+     "amount": "$523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:01 UTC",
+     "amount": "$523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:01 UTC",
+     "amount": "$141",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:01 UTC",
+     "amount": "$523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:59 UTC",
+     "amount": "$1,016",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:59 UTC",
+     "amount": "$892",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:59 UTC",
+     "amount": "$892",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:59 UTC",
+     "amount": "$892",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:58 UTC",
+     "amount": "$892",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:58 UTC",
+     "amount": "$892",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:58 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:57 UTC",
+     "amount": "$468",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:57 UTC",
+     "amount": "$466",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:57 UTC",
+     "amount": "$468",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:57 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:57 UTC",
+     "amount": "$98",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:52 UTC",
+     "amount": "$3,026",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:51 UTC",
+     "amount": "$1,728",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:50 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:50 UTC",
+     "amount": "$595",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:49 UTC",
+     "amount": "$1,830",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:40 UTC",
+     "amount": "$811",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:39 UTC",
+     "amount": "$4,514",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:38 UTC",
+     "amount": "$400",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:36 UTC",
+     "amount": "$238",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:35 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:33 UTC",
+     "amount": "$775",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:33 UTC",
+     "amount": "$787",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:33 UTC",
+     "amount": "$787",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:32 UTC",
+     "amount": "$787",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:31 UTC",
+     "amount": "$787",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:29 UTC",
+     "amount": "$727",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:29 UTC",
+     "amount": "$1,599",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:29 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:29 UTC",
+     "amount": "$405",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:28 UTC",
+     "amount": "$489",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:27 UTC",
+     "amount": "$83",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:27 UTC",
+     "amount": "$3,121",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:27 UTC",
+     "amount": "$214",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:23 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:23 UTC",
+     "amount": "$564",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:16 UTC",
+     "amount": "$2,148",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:13 UTC",
+     "amount": "$1,784",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$484",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$879",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:10 UTC",
+     "amount": "$1,004",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:10 UTC",
+     "amount": "$803",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:10 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:09 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:09 UTC",
+     "amount": "$143",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:09 UTC",
+     "amount": "$1,811",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:08 UTC",
+     "amount": "$5,067",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:08 UTC",
+     "amount": "$2,268",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:08 UTC",
+     "amount": "$467",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:06 UTC",
+     "amount": "$484",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:05 UTC",
+     "amount": "$673",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:01 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:01 UTC",
+     "amount": "$490",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:59 UTC",
+     "amount": "$235",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:57 UTC",
+     "amount": "$878",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:57 UTC",
+     "amount": "$720",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:57 UTC",
+     "amount": "$310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:52 UTC",
+     "amount": "$221",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:45 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:41 UTC",
+     "amount": "$1,890",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:37 UTC",
+     "amount": "$549",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:34 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:33 UTC",
+     "amount": "$269",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:29 UTC",
+     "amount": "$245",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$4,712",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$2,593",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$1,495",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:25 UTC",
+     "amount": "$2,096",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:24 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:24 UTC",
+     "amount": "$1,170",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:16 UTC",
+     "amount": "$893",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:15 UTC",
+     "amount": "$3,100",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:14 UTC",
+     "amount": "$3,101",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:14 UTC",
+     "amount": "$3,100",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:14 UTC",
+     "amount": "$3,101",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:13 UTC",
+     "amount": "$3,101",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:12 UTC",
+     "amount": "$310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:12 UTC",
+     "amount": "$661",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:12 UTC",
+     "amount": "$652",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:11 UTC",
+     "amount": "$530",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:08 UTC",
+     "amount": "$461",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$108",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$3,501",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:03 UTC",
+     "amount": "$854",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:02 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:02 UTC",
+     "amount": "$812",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:01 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:58 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:58 UTC",
+     "amount": "$525",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:58 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:58 UTC",
+     "amount": "$1,243",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:58 UTC",
+     "amount": "$2,044",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:58 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:57 UTC",
+     "amount": "$248",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:57 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:57 UTC",
+     "amount": "$3,007",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:57 UTC",
+     "amount": "$2,989",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:57 UTC",
+     "amount": "$2,660",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:57 UTC",
+     "amount": "$2,880",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:55 UTC",
+     "amount": "$1,480",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:53 UTC",
+     "amount": "$1,310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:50 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:48 UTC",
+     "amount": "$857",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:48 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:46 UTC",
+     "amount": "$682",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:45 UTC",
+     "amount": "$844",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:44 UTC",
+     "amount": "$953",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:44 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:43 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:41 UTC",
+     "amount": "$1,067",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:41 UTC",
+     "amount": "$1,056",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:41 UTC",
+     "amount": "$1,691",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:39 UTC",
+     "amount": "$630",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:39 UTC",
+     "amount": "$3,150",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:38 UTC",
+     "amount": "$1,058",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:38 UTC",
+     "amount": "$1,793",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:38 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:37 UTC",
+     "amount": "$7,203",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:36 UTC",
+     "amount": "$6,985",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:35 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:34 UTC",
+     "amount": "$901",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:34 UTC",
+     "amount": "$1,266",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:33 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:32 UTC",
+     "amount": "$592",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:31 UTC",
+     "amount": "$630",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:30 UTC",
+     "amount": "$770",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:30 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:30 UTC",
+     "amount": "$801",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:30 UTC",
+     "amount": "$552",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:29 UTC",
+     "amount": "$553",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:29 UTC",
+     "amount": "$552",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:29 UTC",
+     "amount": "$552",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:29 UTC",
+     "amount": "$553",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:29 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:28 UTC",
+     "amount": "$1,133",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:28 UTC",
+     "amount": "$2,374",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:27 UTC",
+     "amount": "$643",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:27 UTC",
+     "amount": "$554",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:26 UTC",
+     "amount": "$8,890",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:26 UTC",
+     "amount": "$855",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:26 UTC",
+     "amount": "$5,938",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:26 UTC",
+     "amount": "$2,201",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:26 UTC",
+     "amount": "$5,120",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:24 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$3,561",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$1,082",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$486",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$1,260",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$460",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$4,850",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$4,850",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$4,850",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$4,850",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$4,850",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:22 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:21 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:21 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:21 UTC",
+     "amount": "$766",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:21 UTC",
+     "amount": "$482",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:15 UTC",
+     "amount": "$453",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:57 UTC",
+     "amount": "$304",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:57 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:57 UTC",
+     "amount": "$1,078",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:50 UTC",
+     "amount": "$1,606",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:33 UTC",
+     "amount": "$2,218",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:33 UTC",
+     "amount": "$2,230",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:31 UTC",
+     "amount": "$671",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:28 UTC",
+     "amount": "$1,995",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:27 UTC",
+     "amount": "$160",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:25 UTC",
+     "amount": "$240",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:17 UTC",
+     "amount": "$208",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:16 UTC",
+     "amount": "$384",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:16 UTC",
+     "amount": "$4,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:15 UTC",
+     "amount": "$1,282",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:14 UTC",
+     "amount": "$214",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:14 UTC",
+     "amount": "$202",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:11 UTC",
+     "amount": "$258",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:10 UTC",
+     "amount": "$80",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:09 UTC",
+     "amount": "$80",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:08 UTC",
+     "amount": "$80",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:07 UTC",
+     "amount": "$228",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:02 UTC",
+     "amount": "$162",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:01 UTC",
+     "amount": "$1,336",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:59 UTC",
+     "amount": "$334",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:57 UTC",
+     "amount": "$560",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:57 UTC",
+     "amount": "$480",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:56 UTC",
+     "amount": "$280",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:53 UTC",
+     "amount": "$182",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:52 UTC",
+     "amount": "$350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:44 UTC",
+     "amount": "$122",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:40 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:38 UTC",
+     "amount": "$1,523",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:36 UTC",
+     "amount": "$455",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:30 UTC",
+     "amount": "$160",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:29 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:27 UTC",
+     "amount": "$444",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:27 UTC",
+     "amount": "$348",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:27 UTC",
+     "amount": "$192",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:26 UTC",
+     "amount": "$671",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:22 UTC",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:20 UTC",
+     "amount": "$86",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:20 UTC",
+     "amount": "$81",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:18 UTC",
+     "amount": "$111",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:15 UTC",
+     "amount": "$327",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$1,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$240",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:11 UTC",
+     "amount": "$204",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:11 UTC",
+     "amount": "$208",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:09 UTC",
+     "amount": "$201",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:09 UTC",
+     "amount": "$480",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:09 UTC",
+     "amount": "$2,680",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:08 UTC",
+     "amount": "$286",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:05 UTC",
+     "amount": "$211",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:03 UTC",
+     "amount": "$527",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:02 UTC",
+     "amount": "$260",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:01 UTC",
+     "amount": "$247",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:57 UTC",
+     "amount": "$6,043",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:57 UTC",
+     "amount": "$6,035",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:57 UTC",
+     "amount": "$6,043",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "fundednext": {
+   "slug": "fundednext",
+   "firm": "FundedNext",
+   "website": "fundednext.com",
+   "websiteUrl": "https://fundednext.com",
+   "promo": "",
+   "total": "$327,099,827",
+   "rail": "Rise + Direct Crypto",
+   "count": "228,643",
+   "average": "$1,431",
+   "largest": "$346,838",
+   "largestDate": "Nov 1, 2025",
+   "latestTime": "Oct 16, 00:39 UTC",
+   "latestAmount": "$1,375",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$26,709,614",
+     "num": 26709614
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$19,225,679",
+     "num": 19225679
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$21,100,902",
+     "num": 21100902
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$15,201,628",
+     "num": 15201628
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$14,557,947",
+     "num": 14557947
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$11,229,307",
+     "num": 11229307
+    },
+    {
+     "month": "May 2026",
+     "amount": "$10,530,444",
+     "num": 10530444
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$11,650,344",
+     "num": 11650344
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$14,986,276",
+     "num": 14986276
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$15,346,332",
+     "num": 15346332
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$18,045,239",
+     "num": 18045239
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$9,190,200",
+     "num": 9190200
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$751,310",
+     "num": 751310
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$884,279",
+     "num": 884279
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$522,042",
+     "num": 522042
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$139,805",
+     "num": 139805
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$413,200",
+     "num": 413200
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$813,804",
+     "num": 813804
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$944,077",
+     "num": 944077
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$962,973",
+     "num": 962973
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$603,111",
+     "num": 603111
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$586,608",
+     "num": 586608
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$89,197",
+     "num": 89197
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$397,459",
+     "num": 397459
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$817,541",
+     "num": 817541
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$891,261",
+     "num": 891261
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$1,037,354",
+     "num": 1037354
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$655,777",
+     "num": 655777
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$627,653",
+     "num": 627653
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$92,963",
+     "num": 92963
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$407,605",
+     "num": 407605
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$706,856",
+     "num": 706856
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$916,716",
+     "num": 916716
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$771,294",
+     "num": 771294
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$553,724",
+     "num": 553724
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$519,781",
+     "num": 519781
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$116,557",
+     "num": 116557
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$363,824",
+     "num": 363824
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$823,085",
+     "num": 823085
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$759,105",
+     "num": 759105
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$819,893",
+     "num": 819893
+    },
+    {
+     "date": "Oct 16, 2026",
+     "amount": "$18,012",
+     "num": 18012
+    }
+   ],
+   "top10": [
+    {
+     "date": "Nov 1, 2025",
+     "amount": "$346,838",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 17, 2025",
+     "amount": "$146,318",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 22, 2025",
+     "amount": "$144,750",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 21, 2026",
+     "amount": "$131,145",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 29, 2025",
+     "amount": "$123,134",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 22, 2025",
+     "amount": "$117,673",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 15, 2025",
+     "amount": "$116,869",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 24, 2025",
+     "amount": "$115,597",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 5, 2025",
+     "amount": "$115,124",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 16, 00:39 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 16, 00:39 UTC",
+     "amount": "$516",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:36 UTC",
+     "amount": "$463",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 16, 00:33 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,303",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:29 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 16, 00:27 UTC",
+     "amount": "$73",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:26 UTC",
+     "amount": "$547",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:19 UTC",
+     "amount": "$2,737",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:18 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 16, 00:16 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:09 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:09 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:07 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 16, 00:06 UTC",
+     "amount": "$917",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:00 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 16, 00:00 UTC",
+     "amount": "$93",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:57 UTC",
+     "amount": "$59",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:55 UTC",
+     "amount": "$70",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:53 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:49 UTC",
+     "amount": "$1,009",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:43 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:41 UTC",
+     "amount": "$86",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:36 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:32 UTC",
+     "amount": "$1,264",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:30 UTC",
+     "amount": "$765",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:25 UTC",
+     "amount": "$562",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:22 UTC",
+     "amount": "$923",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:20 UTC",
+     "amount": "$56",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:19 UTC",
+     "amount": "$1,253",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:16 UTC",
+     "amount": "$960",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:15 UTC",
+     "amount": "$22",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:11 UTC",
+     "amount": "$1,115",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$348",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:10 UTC",
+     "amount": "$1,368",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:10 UTC",
+     "amount": "$1,349",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:06 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:06 UTC",
+     "amount": "$68",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:05 UTC",
+     "amount": "$1,247",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:04 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:04 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:03 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:03 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:03 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:03 UTC",
+     "amount": "$163",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:02 UTC",
+     "amount": "$1,560",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:00 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:00 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:59 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:55 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:54 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:54 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:54 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:52 UTC",
+     "amount": "$383",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:51 UTC",
+     "amount": "$1,303",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:47 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:46 UTC",
+     "amount": "$72",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:46 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:45 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:45 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:44 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:44 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:41 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:41 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:41 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:41 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:39 UTC",
+     "amount": "$1,348",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:39 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:38 UTC",
+     "amount": "$507",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:37 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:37 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:37 UTC",
+     "amount": "$889",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:37 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:37 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:36 UTC",
+     "amount": "$60",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:36 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:36 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:36 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:36 UTC",
+     "amount": "$195",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:36 UTC",
+     "amount": "$600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:36 UTC",
+     "amount": "$599",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:35 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:35 UTC",
+     "amount": "$844",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:34 UTC",
+     "amount": "$76",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:34 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:34 UTC",
+     "amount": "$568",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:33 UTC",
+     "amount": "$626",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:33 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:33 UTC",
+     "amount": "$938",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:33 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:32 UTC",
+     "amount": "$718",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:30 UTC",
+     "amount": "$2,203",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:30 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:30 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:29 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:29 UTC",
+     "amount": "$773",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:29 UTC",
+     "amount": "$547",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:28 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:28 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:28 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:28 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:28 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:26 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:26 UTC",
+     "amount": "$142",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:26 UTC",
+     "amount": "$1,343",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:26 UTC",
+     "amount": "$1,065",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:26 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:26 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:25 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:24 UTC",
+     "amount": "$49",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:23 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:22 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:21 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:20 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:19 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:19 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:18 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:18 UTC",
+     "amount": "$427",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:17 UTC",
+     "amount": "$1,535",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:17 UTC",
+     "amount": "$1,032",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:16 UTC",
+     "amount": "$835",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:16 UTC",
+     "amount": "$834",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:16 UTC",
+     "amount": "$1,105",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:16 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:16 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:15 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:15 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:15 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:15 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:14 UTC",
+     "amount": "$795",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:14 UTC",
+     "amount": "$1,208",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:13 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:13 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:13 UTC",
+     "amount": "$1,074",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:13 UTC",
+     "amount": "$917",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:12 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:12 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:12 UTC",
+     "amount": "$690",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:12 UTC",
+     "amount": "$691",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:12 UTC",
+     "amount": "$823",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:12 UTC",
+     "amount": "$658",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:11 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:11 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:11 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:11 UTC",
+     "amount": "$1,096",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$862",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$854",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$832",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$823",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$766",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:09 UTC",
+     "amount": "$1,220",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:09 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:09 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:08 UTC",
+     "amount": "$1,278",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:08 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:08 UTC",
+     "amount": "$788",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:08 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:07 UTC",
+     "amount": "$1,218",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:06 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:06 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:05 UTC",
+     "amount": "$244",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:05 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:05 UTC",
+     "amount": "$1,013",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$447",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$902",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$662",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:04 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:03 UTC",
+     "amount": "$1,018",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:03 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:03 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:03 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:03 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:03 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:02 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:02 UTC",
+     "amount": "$771",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:02 UTC",
+     "amount": "$499",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:02 UTC",
+     "amount": "$919",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:02 UTC",
+     "amount": "$434",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:52 UTC",
+     "amount": "$46",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:48 UTC",
+     "amount": "$193",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:36 UTC",
+     "amount": "$1,471",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:35 UTC",
+     "amount": "$1,460",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:34 UTC",
+     "amount": "$159",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:33 UTC",
+     "amount": "$203",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:30 UTC",
+     "amount": "$857",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:26 UTC",
+     "amount": "$875",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:24 UTC",
+     "amount": "$353",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:23 UTC",
+     "amount": "$644",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:22 UTC",
+     "amount": "$38",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:21 UTC",
+     "amount": "$78",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:18 UTC",
+     "amount": "$1,661",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:17 UTC",
+     "amount": "$352",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:17 UTC",
+     "amount": "$107",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:14 UTC",
+     "amount": "$520",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:14 UTC",
+     "amount": "$2,503",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:13 UTC",
+     "amount": "$396",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:12 UTC",
+     "amount": "$391",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:11 UTC",
+     "amount": "$514",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:09 UTC",
+     "amount": "$1,400",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:08 UTC",
+     "amount": "$608",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:07 UTC",
+     "amount": "$40",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:06 UTC",
+     "amount": "$2,751",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:05 UTC",
+     "amount": "$153",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:05 UTC",
+     "amount": "$202",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:04 UTC",
+     "amount": "$1,332",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:03 UTC",
+     "amount": "$26",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:02 UTC",
+     "amount": "$1,919",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:01 UTC",
+     "amount": "$217",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:01 UTC",
+     "amount": "$234",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:01 UTC",
+     "amount": "$1,113",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 20:59 UTC",
+     "amount": "$469",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 20:59 UTC",
+     "amount": "$68",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:56 UTC",
+     "amount": "$2,497",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:53 UTC",
+     "amount": "$1,347",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:42 UTC",
+     "amount": "$320",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 19:27 UTC",
+     "amount": "$34",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:58 UTC",
+     "amount": "$955",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:52 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:45 UTC",
+     "amount": "$482",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "FundedNext": {
+   "slug": "fundednext",
+   "firm": "FundedNext",
+   "website": "fundednext.com",
+   "websiteUrl": "https://fundednext.com",
+   "promo": "",
+   "total": "$327,099,827",
+   "rail": "Rise + Direct Crypto",
+   "count": "228,643",
+   "average": "$1,431",
+   "largest": "$346,838",
+   "largestDate": "Nov 1, 2025",
+   "latestTime": "Oct 16, 00:39 UTC",
+   "latestAmount": "$1,375",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$26,709,614",
+     "num": 26709614
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$19,225,679",
+     "num": 19225679
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$21,100,902",
+     "num": 21100902
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$15,201,628",
+     "num": 15201628
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$14,557,947",
+     "num": 14557947
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$11,229,307",
+     "num": 11229307
+    },
+    {
+     "month": "May 2026",
+     "amount": "$10,530,444",
+     "num": 10530444
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$11,650,344",
+     "num": 11650344
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$14,986,276",
+     "num": 14986276
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$15,346,332",
+     "num": 15346332
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$18,045,239",
+     "num": 18045239
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$9,190,200",
+     "num": 9190200
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$751,310",
+     "num": 751310
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$884,279",
+     "num": 884279
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$522,042",
+     "num": 522042
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$139,805",
+     "num": 139805
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$413,200",
+     "num": 413200
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$813,804",
+     "num": 813804
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$944,077",
+     "num": 944077
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$962,973",
+     "num": 962973
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$603,111",
+     "num": 603111
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$586,608",
+     "num": 586608
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$89,197",
+     "num": 89197
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$397,459",
+     "num": 397459
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$817,541",
+     "num": 817541
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$891,261",
+     "num": 891261
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$1,037,354",
+     "num": 1037354
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$655,777",
+     "num": 655777
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$627,653",
+     "num": 627653
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$92,963",
+     "num": 92963
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$407,605",
+     "num": 407605
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$706,856",
+     "num": 706856
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$916,716",
+     "num": 916716
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$771,294",
+     "num": 771294
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$553,724",
+     "num": 553724
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$519,781",
+     "num": 519781
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$116,557",
+     "num": 116557
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$363,824",
+     "num": 363824
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$823,085",
+     "num": 823085
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$759,105",
+     "num": 759105
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$819,893",
+     "num": 819893
+    },
+    {
+     "date": "Oct 16, 2026",
+     "amount": "$18,012",
+     "num": 18012
+    }
+   ],
+   "top10": [
+    {
+     "date": "Nov 1, 2025",
+     "amount": "$346,838",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 17, 2025",
+     "amount": "$146,318",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 22, 2025",
+     "amount": "$144,750",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 21, 2026",
+     "amount": "$131,145",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 29, 2025",
+     "amount": "$123,134",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 22, 2025",
+     "amount": "$117,673",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 15, 2025",
+     "amount": "$116,869",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 24, 2025",
+     "amount": "$115,597",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 5, 2025",
+     "amount": "$115,124",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 16, 00:39 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 16, 00:39 UTC",
+     "amount": "$516",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:36 UTC",
+     "amount": "$463",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 16, 00:33 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:30 UTC",
+     "amount": "$1,303",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:29 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 16, 00:27 UTC",
+     "amount": "$73",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:26 UTC",
+     "amount": "$547",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:19 UTC",
+     "amount": "$2,737",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:18 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 16, 00:16 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:09 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:09 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:07 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 16, 00:06 UTC",
+     "amount": "$917",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:00 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 16, 00:00 UTC",
+     "amount": "$93",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:57 UTC",
+     "amount": "$59",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:55 UTC",
+     "amount": "$70",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:53 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:49 UTC",
+     "amount": "$1,009",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:43 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:41 UTC",
+     "amount": "$86",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:36 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:32 UTC",
+     "amount": "$1,264",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:30 UTC",
+     "amount": "$765",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:25 UTC",
+     "amount": "$562",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:22 UTC",
+     "amount": "$923",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:20 UTC",
+     "amount": "$56",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:19 UTC",
+     "amount": "$1,253",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:16 UTC",
+     "amount": "$960",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:15 UTC",
+     "amount": "$22",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:11 UTC",
+     "amount": "$1,115",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$348",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:11 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:10 UTC",
+     "amount": "$1,368",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:10 UTC",
+     "amount": "$1,349",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:06 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:06 UTC",
+     "amount": "$68",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:05 UTC",
+     "amount": "$1,247",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:04 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:04 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:03 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:03 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:03 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:03 UTC",
+     "amount": "$163",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:02 UTC",
+     "amount": "$1,560",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:00 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 23:00 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:59 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:55 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:54 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:54 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:54 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:52 UTC",
+     "amount": "$383",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:51 UTC",
+     "amount": "$1,303",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:47 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:46 UTC",
+     "amount": "$72",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:46 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:45 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:45 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:44 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:44 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:41 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:41 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:41 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:41 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:39 UTC",
+     "amount": "$1,348",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:39 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:38 UTC",
+     "amount": "$507",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:37 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:37 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:37 UTC",
+     "amount": "$889",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:37 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:37 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:36 UTC",
+     "amount": "$60",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:36 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:36 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:36 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:36 UTC",
+     "amount": "$195",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:36 UTC",
+     "amount": "$600",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:36 UTC",
+     "amount": "$599",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:35 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:35 UTC",
+     "amount": "$844",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:34 UTC",
+     "amount": "$76",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:34 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:34 UTC",
+     "amount": "$568",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:33 UTC",
+     "amount": "$626",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:33 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:33 UTC",
+     "amount": "$938",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:33 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:32 UTC",
+     "amount": "$718",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:30 UTC",
+     "amount": "$2,203",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:30 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:30 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:29 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:29 UTC",
+     "amount": "$773",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:29 UTC",
+     "amount": "$547",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:28 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:28 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:28 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:28 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:28 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:26 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:26 UTC",
+     "amount": "$142",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:26 UTC",
+     "amount": "$1,343",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:26 UTC",
+     "amount": "$1,065",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:26 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:26 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:25 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:24 UTC",
+     "amount": "$49",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:23 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:22 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:21 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:20 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:19 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:19 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:18 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:18 UTC",
+     "amount": "$427",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:17 UTC",
+     "amount": "$1,535",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:17 UTC",
+     "amount": "$1,032",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:16 UTC",
+     "amount": "$835",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:16 UTC",
+     "amount": "$834",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:16 UTC",
+     "amount": "$1,105",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:16 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:16 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:15 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:15 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:15 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:15 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:14 UTC",
+     "amount": "$795",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:14 UTC",
+     "amount": "$1,208",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:13 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:13 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:13 UTC",
+     "amount": "$1,074",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:13 UTC",
+     "amount": "$917",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:12 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:12 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:12 UTC",
+     "amount": "$690",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:12 UTC",
+     "amount": "$691",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:12 UTC",
+     "amount": "$823",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:12 UTC",
+     "amount": "$658",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:11 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:11 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:11 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:11 UTC",
+     "amount": "$1,096",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$862",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$854",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$832",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$823",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:10 UTC",
+     "amount": "$766",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:09 UTC",
+     "amount": "$1,220",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:09 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:09 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:08 UTC",
+     "amount": "$1,278",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:08 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:08 UTC",
+     "amount": "$788",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:08 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:07 UTC",
+     "amount": "$1,218",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:06 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:06 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:05 UTC",
+     "amount": "$244",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:05 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:05 UTC",
+     "amount": "$1,013",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:05 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$447",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$902",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$662",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:04 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:04 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:03 UTC",
+     "amount": "$1,018",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:03 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:03 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:03 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:03 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:03 UTC",
+     "amount": "$1,375",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:02 UTC",
+     "amount": "$695",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:02 UTC",
+     "amount": "$771",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:02 UTC",
+     "amount": "$499",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:02 UTC",
+     "amount": "$919",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:02 UTC",
+     "amount": "$434",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:52 UTC",
+     "amount": "$46",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:48 UTC",
+     "amount": "$193",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:36 UTC",
+     "amount": "$1,471",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:35 UTC",
+     "amount": "$1,460",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:34 UTC",
+     "amount": "$159",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:33 UTC",
+     "amount": "$203",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:30 UTC",
+     "amount": "$857",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:26 UTC",
+     "amount": "$875",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:24 UTC",
+     "amount": "$353",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:23 UTC",
+     "amount": "$644",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:22 UTC",
+     "amount": "$38",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:21 UTC",
+     "amount": "$78",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:18 UTC",
+     "amount": "$1,661",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:17 UTC",
+     "amount": "$352",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:17 UTC",
+     "amount": "$107",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:14 UTC",
+     "amount": "$520",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:14 UTC",
+     "amount": "$2,503",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:13 UTC",
+     "amount": "$396",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:12 UTC",
+     "amount": "$391",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:11 UTC",
+     "amount": "$514",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:09 UTC",
+     "amount": "$1,400",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:08 UTC",
+     "amount": "$608",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:07 UTC",
+     "amount": "$40",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:06 UTC",
+     "amount": "$2,751",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:05 UTC",
+     "amount": "$153",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:05 UTC",
+     "amount": "$202",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:04 UTC",
+     "amount": "$1,332",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:03 UTC",
+     "amount": "$26",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:02 UTC",
+     "amount": "$1,919",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:01 UTC",
+     "amount": "$217",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:01 UTC",
+     "amount": "$234",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:01 UTC",
+     "amount": "$1,113",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 20:59 UTC",
+     "amount": "$469",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 20:59 UTC",
+     "amount": "$68",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:56 UTC",
+     "amount": "$2,497",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:53 UTC",
+     "amount": "$1,347",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:42 UTC",
+     "amount": "$320",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 19:27 UTC",
+     "amount": "$34",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:58 UTC",
+     "amount": "$955",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:52 UTC",
+     "amount": "$1,042",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:45 UTC",
+     "amount": "$482",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "the5ers": {
+   "slug": "the5ers",
+   "firm": "The5ers",
+   "website": "the5ers.com",
+   "websiteUrl": "https://the5ers.com",
+   "promo": "",
+   "total": "$96,654,166",
+   "rail": "Rise",
+   "count": "45,502",
+   "average": "$2,124",
+   "largest": "$91,936",
+   "largestDate": "Dec 14, 2023",
+   "latestTime": "Oct 15, 13:54 UTC",
+   "latestAmount": "$1,544",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$5,106,523",
+     "num": 5106523
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$3,626,774",
+     "num": 3626774
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$4,037,759",
+     "num": 4037759
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$4,704,903",
+     "num": 4704903
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$5,694,198",
+     "num": 5694198
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$4,401,290",
+     "num": 4401290
+    },
+    {
+     "month": "May 2026",
+     "amount": "$3,683,635",
+     "num": 3683635
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$3,317,083",
+     "num": 3317083
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$3,624,670",
+     "num": 3624670
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$3,188,297",
+     "num": 3188297
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$3,597,500",
+     "num": 3597500
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$1,910,710",
+     "num": 1910710
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$371,202",
+     "num": 371202
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$142,694",
+     "num": 142694
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$54,008",
+     "num": 54008
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$52,970",
+     "num": 52970
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$255,463",
+     "num": 255463
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$360,785",
+     "num": 360785
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$7,392",
+     "num": 7392
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$206,197",
+     "num": 206197
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$171,443",
+     "num": 171443
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$49,577",
+     "num": 49577
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$185,840",
+     "num": 185840
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$179,450",
+     "num": 179450
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$29,735",
+     "num": 29735
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$239,815",
+     "num": 239815
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$371,255",
+     "num": 371255
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$116,966",
+     "num": 116966
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$106,475",
+     "num": 106475
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$201,923",
+     "num": 201923
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$28,468",
+     "num": 28468
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$253,680",
+     "num": 253680
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$147,208",
+     "num": 147208
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$19,422",
+     "num": 19422
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$98,001",
+     "num": 98001
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$118,311",
+     "num": 118311
+    }
+   ],
+   "top10": [
+    {
+     "date": "Dec 14, 2023",
+     "amount": "$91,936",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 7, 2026",
+     "amount": "$76,656",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 3, 2025",
+     "amount": "$56,322",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 5, 2026",
+     "amount": "$52,782",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 24, 2024",
+     "amount": "$43,979",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 23, 2024",
+     "amount": "$43,650",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 20, 2024",
+     "amount": "$43,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 16, 2024",
+     "amount": "$41,564",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 29, 2026",
+     "amount": "$41,253",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 13:54 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:49 UTC",
+     "amount": "$539",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:30 UTC",
+     "amount": "$1,251",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:27 UTC",
+     "amount": "$3,299",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:24 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:24 UTC",
+     "amount": "$1,317",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:20 UTC",
+     "amount": "$4,173",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:19 UTC",
+     "amount": "$7,493",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:18 UTC",
+     "amount": "$309",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:12 UTC",
+     "amount": "$17,549",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:10 UTC",
+     "amount": "$1,158",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:09 UTC",
+     "amount": "$1,158",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:08 UTC",
+     "amount": "$2,316",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:04 UTC",
+     "amount": "$2,316",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:02 UTC",
+     "amount": "$3,870",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:58 UTC",
+     "amount": "$168",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:42 UTC",
+     "amount": "$1,480",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:23 UTC",
+     "amount": "$1,540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:21 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:12 UTC",
+     "amount": "$1,276",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:11 UTC",
+     "amount": "$1,522",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:09 UTC",
+     "amount": "$1,170",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:08 UTC",
+     "amount": "$1,479",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:05 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 11:46 UTC",
+     "amount": "$1,223",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:32 UTC",
+     "amount": "$1,021",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:31 UTC",
+     "amount": "$1,448",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:31 UTC",
+     "amount": "$1,439",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:22 UTC",
+     "amount": "$1,410",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:19 UTC",
+     "amount": "$1,168",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:16 UTC",
+     "amount": "$569",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:13 UTC",
+     "amount": "$145",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:13 UTC",
+     "amount": "$145",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:09 UTC",
+     "amount": "$1,453",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:08 UTC",
+     "amount": "$1,448",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:01 UTC",
+     "amount": "$1,396",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:59 UTC",
+     "amount": "$1,484",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:58 UTC",
+     "amount": "$1,340",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:57 UTC",
+     "amount": "$1,386",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:56 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:56 UTC",
+     "amount": "$1,052",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:52 UTC",
+     "amount": "$154",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:35 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:33 UTC",
+     "amount": "$1,534",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:30 UTC",
+     "amount": "$915",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:29 UTC",
+     "amount": "$912",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:27 UTC",
+     "amount": "$1,052",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:25 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:23 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:18 UTC",
+     "amount": "$764",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:58 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:58 UTC",
+     "amount": "$532",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:54 UTC",
+     "amount": "$1,258",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:42 UTC",
+     "amount": "$808",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:29 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:24 UTC",
+     "amount": "$194",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:20 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:17 UTC",
+     "amount": "$569",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:14 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:12 UTC",
+     "amount": "$1,391",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:08 UTC",
+     "amount": "$579",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:57 UTC",
+     "amount": "$200",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:56 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:56 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:52 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:52 UTC",
+     "amount": "$1,203",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:43 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:42 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 05:02 UTC",
+     "amount": "$3,542",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 04:59 UTC",
+     "amount": "$2,200",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 04:58 UTC",
+     "amount": "$1,750",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:31 UTC",
+     "amount": "$2,316",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:27 UTC",
+     "amount": "$5,809",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:26 UTC",
+     "amount": "$3,373",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:25 UTC",
+     "amount": "$5,809",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:24 UTC",
+     "amount": "$1,640",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:23 UTC",
+     "amount": "$2,592",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:21 UTC",
+     "amount": "$3,744",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:20 UTC",
+     "amount": "$2,316",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:19 UTC",
+     "amount": "$2,316",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:18 UTC",
+     "amount": "$2,864",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:17 UTC",
+     "amount": "$3,963",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:15 UTC",
+     "amount": "$1,941",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:14 UTC",
+     "amount": "$2,879",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:14 UTC",
+     "amount": "$3,251",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:13 UTC",
+     "amount": "$1,951",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:12 UTC",
+     "amount": "$3,145",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:07 UTC",
+     "amount": "$1,669",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 15:22 UTC",
+     "amount": "$1,373",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 15:19 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 15:18 UTC",
+     "amount": "$1,531",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 15:10 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 14:58 UTC",
+     "amount": "$728",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "The5ers": {
+   "slug": "the5ers",
+   "firm": "The5ers",
+   "website": "the5ers.com",
+   "websiteUrl": "https://the5ers.com",
+   "promo": "",
+   "total": "$96,654,166",
+   "rail": "Rise",
+   "count": "45,502",
+   "average": "$2,124",
+   "largest": "$91,936",
+   "largestDate": "Dec 14, 2023",
+   "latestTime": "Oct 15, 13:54 UTC",
+   "latestAmount": "$1,544",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$5,106,523",
+     "num": 5106523
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$3,626,774",
+     "num": 3626774
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$4,037,759",
+     "num": 4037759
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$4,704,903",
+     "num": 4704903
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$5,694,198",
+     "num": 5694198
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$4,401,290",
+     "num": 4401290
+    },
+    {
+     "month": "May 2026",
+     "amount": "$3,683,635",
+     "num": 3683635
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$3,317,083",
+     "num": 3317083
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$3,624,670",
+     "num": 3624670
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$3,188,297",
+     "num": 3188297
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$3,597,500",
+     "num": 3597500
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$1,910,710",
+     "num": 1910710
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$371,202",
+     "num": 371202
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$142,694",
+     "num": 142694
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$54,008",
+     "num": 54008
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$52,970",
+     "num": 52970
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$255,463",
+     "num": 255463
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$360,785",
+     "num": 360785
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$7,392",
+     "num": 7392
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$206,197",
+     "num": 206197
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$171,443",
+     "num": 171443
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$49,577",
+     "num": 49577
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$185,840",
+     "num": 185840
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$179,450",
+     "num": 179450
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$29,735",
+     "num": 29735
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$239,815",
+     "num": 239815
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$371,255",
+     "num": 371255
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$116,966",
+     "num": 116966
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$106,475",
+     "num": 106475
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$201,923",
+     "num": 201923
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$28,468",
+     "num": 28468
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$253,680",
+     "num": 253680
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$147,208",
+     "num": 147208
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$19,422",
+     "num": 19422
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$98,001",
+     "num": 98001
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$118,311",
+     "num": 118311
+    }
+   ],
+   "top10": [
+    {
+     "date": "Dec 14, 2023",
+     "amount": "$91,936",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 7, 2026",
+     "amount": "$76,656",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 3, 2025",
+     "amount": "$56,322",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 5, 2026",
+     "amount": "$52,782",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 24, 2024",
+     "amount": "$43,979",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 23, 2024",
+     "amount": "$43,650",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 20, 2024",
+     "amount": "$43,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 16, 2024",
+     "amount": "$41,564",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 29, 2026",
+     "amount": "$41,253",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 13:54 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:49 UTC",
+     "amount": "$539",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:30 UTC",
+     "amount": "$1,251",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:27 UTC",
+     "amount": "$3,299",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:24 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:24 UTC",
+     "amount": "$1,317",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:20 UTC",
+     "amount": "$4,173",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:19 UTC",
+     "amount": "$7,493",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:18 UTC",
+     "amount": "$309",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:12 UTC",
+     "amount": "$17,549",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:10 UTC",
+     "amount": "$1,158",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:09 UTC",
+     "amount": "$1,158",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:08 UTC",
+     "amount": "$2,316",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:04 UTC",
+     "amount": "$2,316",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:02 UTC",
+     "amount": "$3,870",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:58 UTC",
+     "amount": "$168",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:42 UTC",
+     "amount": "$1,480",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:23 UTC",
+     "amount": "$1,540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:21 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:12 UTC",
+     "amount": "$1,276",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:11 UTC",
+     "amount": "$1,522",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:09 UTC",
+     "amount": "$1,170",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:08 UTC",
+     "amount": "$1,479",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:05 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 11:46 UTC",
+     "amount": "$1,223",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:32 UTC",
+     "amount": "$1,021",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:31 UTC",
+     "amount": "$1,448",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:31 UTC",
+     "amount": "$1,439",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:22 UTC",
+     "amount": "$1,410",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:19 UTC",
+     "amount": "$1,168",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:16 UTC",
+     "amount": "$569",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:13 UTC",
+     "amount": "$145",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:13 UTC",
+     "amount": "$145",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:09 UTC",
+     "amount": "$1,453",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:08 UTC",
+     "amount": "$1,448",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:01 UTC",
+     "amount": "$1,396",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:59 UTC",
+     "amount": "$1,484",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:58 UTC",
+     "amount": "$1,340",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:57 UTC",
+     "amount": "$1,386",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:56 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:56 UTC",
+     "amount": "$1,052",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:52 UTC",
+     "amount": "$154",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:35 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:33 UTC",
+     "amount": "$1,534",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:30 UTC",
+     "amount": "$915",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:29 UTC",
+     "amount": "$912",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:27 UTC",
+     "amount": "$1,052",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:25 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:23 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:18 UTC",
+     "amount": "$764",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:58 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:58 UTC",
+     "amount": "$532",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:54 UTC",
+     "amount": "$1,258",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:42 UTC",
+     "amount": "$808",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:29 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:24 UTC",
+     "amount": "$194",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:20 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:17 UTC",
+     "amount": "$569",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:14 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:12 UTC",
+     "amount": "$1,391",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 08:08 UTC",
+     "amount": "$579",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:57 UTC",
+     "amount": "$200",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:56 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:56 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:52 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:52 UTC",
+     "amount": "$1,203",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:43 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:42 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 05:02 UTC",
+     "amount": "$3,542",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 04:59 UTC",
+     "amount": "$2,200",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 04:58 UTC",
+     "amount": "$1,750",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:31 UTC",
+     "amount": "$2,316",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:27 UTC",
+     "amount": "$5,809",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:26 UTC",
+     "amount": "$3,373",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:25 UTC",
+     "amount": "$5,809",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:24 UTC",
+     "amount": "$1,640",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:23 UTC",
+     "amount": "$2,592",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:21 UTC",
+     "amount": "$3,744",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:20 UTC",
+     "amount": "$2,316",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:19 UTC",
+     "amount": "$2,316",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:18 UTC",
+     "amount": "$2,864",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:17 UTC",
+     "amount": "$3,963",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:15 UTC",
+     "amount": "$1,941",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:14 UTC",
+     "amount": "$2,879",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:14 UTC",
+     "amount": "$3,251",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:13 UTC",
+     "amount": "$1,951",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:12 UTC",
+     "amount": "$3,145",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 17:07 UTC",
+     "amount": "$1,669",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 15:22 UTC",
+     "amount": "$1,373",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 15:19 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 15:18 UTC",
+     "amount": "$1,531",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 15:10 UTC",
+     "amount": "$1,544",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 14:58 UTC",
+     "amount": "$728",
+     "rail": "Rise"
+    }
+   ]
+  },
   "fundingpips": {
    "slug": "fundingpips",
    "firm": "FundingPips",
@@ -23137,6 +23137,1808 @@
     }
    ]
   },
+  "ylostrading": {
+   "slug": "ylostrading",
+   "firm": "YlosTrading",
+   "website": "ylostrading.com",
+   "websiteUrl": "https://ylostrading.com",
+   "promo": "",
+   "total": "$6,075,965",
+   "rail": "Rise",
+   "count": "3,094",
+   "average": "$1,964",
+   "largest": "$55,000",
+   "largestDate": "Mar 5, 2026",
+   "latestTime": "Oct 16, 00:38 UTC",
+   "latestAmount": "$4,770",
+   "monthlyVolume": [
+    {
+     "month": "Jan 2026",
+     "amount": "$5",
+     "num": 5
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$466,741",
+     "num": 466741
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$895,935",
+     "num": 895935
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$774,484",
+     "num": 774484
+    },
+    {
+     "month": "May 2026",
+     "amount": "$769,435",
+     "num": 769435
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$814,897",
+     "num": 814897
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$710,065",
+     "num": 710065
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$495,599",
+     "num": 495599
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$773,766",
+     "num": 773766
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$375,038",
+     "num": 375038
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$43,110",
+     "num": 43110
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$40,328",
+     "num": 40328
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$13,723",
+     "num": 13723
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$6,370",
+     "num": 6370
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$18,352",
+     "num": 18352
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$40,867",
+     "num": 40867
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$33,562",
+     "num": 33562
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$27,958",
+     "num": 27958
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$26,948",
+     "num": 26948
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$12,006",
+     "num": 12006
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$1,970",
+     "num": 1970
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$27,502",
+     "num": 27502
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$61,253",
+     "num": 61253
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$60,052",
+     "num": 60052
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$25,442",
+     "num": 25442
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$34,112",
+     "num": 34112
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$8,978",
+     "num": 8978
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$984",
+     "num": 984
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$44,894",
+     "num": 44894
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$29,282",
+     "num": 29282
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$32,231",
+     "num": 32231
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$16,136",
+     "num": 16136
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$46,047",
+     "num": 46047
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$25,370",
+     "num": 25370
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$3,648",
+     "num": 3648
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$9,819",
+     "num": 9819
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$32,772",
+     "num": 32772
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$60,551",
+     "num": 60551
+    },
+    {
+     "date": "Oct 16, 2026",
+     "amount": "$4,770",
+     "num": 4770
+    }
+   ],
+   "top10": [
+    {
+     "date": "Mar 5, 2026",
+     "amount": "$55,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$25,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 11, 2026",
+     "amount": "$25,070",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 19, 2026",
+     "amount": "$23,870",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 1, 2026",
+     "amount": "$17,970",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 23, 2026",
+     "amount": "$17,970",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 5, 2026",
+     "amount": "$16,314",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 27, 2026",
+     "amount": "$16,270",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 12, 2026",
+     "amount": "$16,000",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 16, 00:38 UTC",
+     "amount": "$4,770",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:53 UTC",
+     "amount": "$770",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:46 UTC",
+     "amount": "$1,816",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:24 UTC",
+     "amount": "$1,970",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:21 UTC",
+     "amount": "$1,470",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:35 UTC",
+     "amount": "$545",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:18 UTC",
+     "amount": "$966",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$2,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$1,500",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$3,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$5,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$3,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$2,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$2,500",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:37 UTC",
+     "amount": "$584",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:59 UTC",
+     "amount": "$1,970",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:22 UTC",
+     "amount": "$5,970",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:12 UTC",
+     "amount": "$2,875",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:20 UTC",
+     "amount": "$2,130",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 05:40 UTC",
+     "amount": "$1,970",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 05:09 UTC",
+     "amount": "$1,740",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 04:01 UTC",
+     "amount": "$1,451",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 01:30 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 01:22 UTC",
+     "amount": "$1,857",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 01:01 UTC",
+     "amount": "$2,840",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "YlosTrading": {
+   "slug": "ylostrading",
+   "firm": "YlosTrading",
+   "website": "ylostrading.com",
+   "websiteUrl": "https://ylostrading.com",
+   "promo": "",
+   "total": "$6,075,965",
+   "rail": "Rise",
+   "count": "3,094",
+   "average": "$1,964",
+   "largest": "$55,000",
+   "largestDate": "Mar 5, 2026",
+   "latestTime": "Oct 16, 00:38 UTC",
+   "latestAmount": "$4,770",
+   "monthlyVolume": [
+    {
+     "month": "Jan 2026",
+     "amount": "$5",
+     "num": 5
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$466,741",
+     "num": 466741
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$895,935",
+     "num": 895935
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$774,484",
+     "num": 774484
+    },
+    {
+     "month": "May 2026",
+     "amount": "$769,435",
+     "num": 769435
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$814,897",
+     "num": 814897
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$710,065",
+     "num": 710065
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$495,599",
+     "num": 495599
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$773,766",
+     "num": 773766
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$375,038",
+     "num": 375038
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$43,110",
+     "num": 43110
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$40,328",
+     "num": 40328
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$13,723",
+     "num": 13723
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$6,370",
+     "num": 6370
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$18,352",
+     "num": 18352
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$40,867",
+     "num": 40867
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$33,562",
+     "num": 33562
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$27,958",
+     "num": 27958
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$26,948",
+     "num": 26948
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$12,006",
+     "num": 12006
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$1,970",
+     "num": 1970
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$27,502",
+     "num": 27502
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$61,253",
+     "num": 61253
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$60,052",
+     "num": 60052
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$25,442",
+     "num": 25442
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$34,112",
+     "num": 34112
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$8,978",
+     "num": 8978
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$984",
+     "num": 984
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$44,894",
+     "num": 44894
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$29,282",
+     "num": 29282
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$32,231",
+     "num": 32231
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$16,136",
+     "num": 16136
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$46,047",
+     "num": 46047
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$25,370",
+     "num": 25370
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$3,648",
+     "num": 3648
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$9,819",
+     "num": 9819
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$32,772",
+     "num": 32772
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$60,551",
+     "num": 60551
+    },
+    {
+     "date": "Oct 16, 2026",
+     "amount": "$4,770",
+     "num": 4770
+    }
+   ],
+   "top10": [
+    {
+     "date": "Mar 5, 2026",
+     "amount": "$55,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$25,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 11, 2026",
+     "amount": "$25,070",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 19, 2026",
+     "amount": "$23,870",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 1, 2026",
+     "amount": "$17,970",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 23, 2026",
+     "amount": "$17,970",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 5, 2026",
+     "amount": "$16,314",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 27, 2026",
+     "amount": "$16,270",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 12, 2026",
+     "amount": "$16,000",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 16, 00:38 UTC",
+     "amount": "$4,770",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:53 UTC",
+     "amount": "$770",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:46 UTC",
+     "amount": "$1,816",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:24 UTC",
+     "amount": "$1,970",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:21 UTC",
+     "amount": "$1,470",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:35 UTC",
+     "amount": "$545",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:18 UTC",
+     "amount": "$966",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$2,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$1,500",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$3,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$5,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$3,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$2,000",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:14 UTC",
+     "amount": "$2,500",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:37 UTC",
+     "amount": "$584",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:59 UTC",
+     "amount": "$1,970",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:22 UTC",
+     "amount": "$5,970",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:12 UTC",
+     "amount": "$2,875",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:20 UTC",
+     "amount": "$2,130",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 05:40 UTC",
+     "amount": "$1,970",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 05:09 UTC",
+     "amount": "$1,740",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 04:01 UTC",
+     "amount": "$1,451",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 01:30 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 01:22 UTC",
+     "amount": "$1,857",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 01:01 UTC",
+     "amount": "$2,840",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "propr": {
+   "slug": "propr",
+   "firm": "Propr",
+   "website": "propr.xyz",
+   "websiteUrl": "https://propr.xyz",
+   "promo": "",
+   "total": "$2,940,110",
+   "rail": "Direct Crypto",
+   "count": "5,545",
+   "average": "$530",
+   "largest": "15.9%",
+   "largestDate": "Evaluations, all-time",
+   "latestTime": "Oct 15, 22:12 UTC",
+   "latestAmount": "$856",
+   "monthlyVolume": [
+    {
+     "month": "Apr 2026",
+     "amount": "$6,561",
+     "num": 6561
+    },
+    {
+     "month": "May 2026",
+     "amount": "$43,588",
+     "num": 43588
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$133,241",
+     "num": 133241
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$189,972",
+     "num": 189972
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$886,320",
+     "num": 886320
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$1,027,651",
+     "num": 1027651
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$652,776",
+     "num": 652776
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$41,275",
+     "num": 41275
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$44,819",
+     "num": 44819
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$14,075",
+     "num": 14075
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$28,117",
+     "num": 28117
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$83,651",
+     "num": 83651
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$55,392",
+     "num": 55392
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$40,295",
+     "num": 40295
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$62,600",
+     "num": 62600
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$28,864",
+     "num": 28864
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$19,924",
+     "num": 19924
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$13,367",
+     "num": 13367
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$39,858",
+     "num": 39858
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$40,574",
+     "num": 40574
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$71,237",
+     "num": 71237
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$21,447",
+     "num": 21447
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$63,405",
+     "num": 63405
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$19,421",
+     "num": 19421
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$5,072",
+     "num": 5072
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$63,657",
+     "num": 63657
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$22,350",
+     "num": 22350
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$75,309",
+     "num": 75309
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$62,890",
+     "num": 62890
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$16,405",
+     "num": 16405
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$22,177",
+     "num": 22177
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$36,695",
+     "num": 36695
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$49,301",
+     "num": 49301
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$39,219",
+     "num": 39219
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$62,757",
+     "num": 62757
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$92,670",
+     "num": 92670
+    }
+   ],
+   "top10": [
+    {
+     "date": "&#8383; Aug 19, 2026",
+     "amount": "$30,351",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Aug 19, 2026",
+     "amount": "$19,079",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Aug 21, 2026",
+     "amount": "$15,705",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Aug 22, 2026",
+     "amount": "$15,445",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Aug 22, 2026",
+     "amount": "$13,390",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Oct 15, 2026",
+     "amount": "$12,114",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Aug 19, 2026",
+     "amount": "$11,990",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Sep 22, 2026",
+     "amount": "$11,747",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Sep 22, 2026",
+     "amount": "$11,700",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "&#8383; Oct 15, 22:12 UTC",
+     "amount": "$856",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:12 UTC",
+     "amount": "$599",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:01 UTC",
+     "amount": "$1,748",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:57 UTC",
+     "amount": "$709",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 17:45 UTC",
+     "amount": "$90",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 17:32 UTC",
+     "amount": "$493",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 17:31 UTC",
+     "amount": "$126",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 16:34 UTC",
+     "amount": "$17",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 16:29 UTC",
+     "amount": "$1,268",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 15:53 UTC",
+     "amount": "$847",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 15:52 UTC",
+     "amount": "$402",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 15:52 UTC",
+     "amount": "$6,151",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 15:33 UTC",
+     "amount": "$200",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:59 UTC",
+     "amount": "$51",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:34 UTC",
+     "amount": "$2,526",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:33 UTC",
+     "amount": "$2,319",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:33 UTC",
+     "amount": "$2,521",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:32 UTC",
+     "amount": "$827",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:26 UTC",
+     "amount": "$3,289",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:12 UTC",
+     "amount": "$1,254",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:12 UTC",
+     "amount": "$17",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:11 UTC",
+     "amount": "$6,799",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:59 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:59 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:58 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:58 UTC",
+     "amount": "$25",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:57 UTC",
+     "amount": "$833",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:57 UTC",
+     "amount": "$1,100",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:04 UTC",
+     "amount": "$287",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:42 UTC",
+     "amount": "$1,185",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:32 UTC",
+     "amount": "$88",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 07:29 UTC",
+     "amount": "$2,405",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 07:18 UTC",
+     "amount": "$42",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:22 UTC",
+     "amount": "$3,245",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:22 UTC",
+     "amount": "$1,037",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:18 UTC",
+     "amount": "$5,886",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:17 UTC",
+     "amount": "$2,506",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:12 UTC",
+     "amount": "$170",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:09 UTC",
+     "amount": "$228",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 03:21 UTC",
+     "amount": "$111",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:58 UTC",
+     "amount": "$4,733",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:45 UTC",
+     "amount": "$1,973",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:45 UTC",
+     "amount": "$1,973",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:45 UTC",
+     "amount": "$1,973",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:44 UTC",
+     "amount": "$5,266",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:44 UTC",
+     "amount": "$12,114",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:43 UTC",
+     "amount": "$7,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:34 UTC",
+     "amount": "$171",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:31 UTC",
+     "amount": "$58",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 01:08 UTC",
+     "amount": "$1,092",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 00:44 UTC",
+     "amount": "$56",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 00:39 UTC",
+     "amount": "$827",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 14, 22:52 UTC",
+     "amount": "$197",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "Propr": {
+   "slug": "propr",
+   "firm": "Propr",
+   "website": "propr.xyz",
+   "websiteUrl": "https://propr.xyz",
+   "promo": "",
+   "total": "$2,940,110",
+   "rail": "Direct Crypto",
+   "count": "5,545",
+   "average": "$530",
+   "largest": "15.9%",
+   "largestDate": "Evaluations, all-time",
+   "latestTime": "Oct 15, 22:12 UTC",
+   "latestAmount": "$856",
+   "monthlyVolume": [
+    {
+     "month": "Apr 2026",
+     "amount": "$6,561",
+     "num": 6561
+    },
+    {
+     "month": "May 2026",
+     "amount": "$43,588",
+     "num": 43588
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$133,241",
+     "num": 133241
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$189,972",
+     "num": 189972
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$886,320",
+     "num": 886320
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$1,027,651",
+     "num": 1027651
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$652,776",
+     "num": 652776
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$41,275",
+     "num": 41275
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$44,819",
+     "num": 44819
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$14,075",
+     "num": 14075
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$28,117",
+     "num": 28117
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$83,651",
+     "num": 83651
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$55,392",
+     "num": 55392
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$40,295",
+     "num": 40295
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$62,600",
+     "num": 62600
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$28,864",
+     "num": 28864
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$19,924",
+     "num": 19924
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$13,367",
+     "num": 13367
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$39,858",
+     "num": 39858
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$40,574",
+     "num": 40574
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$71,237",
+     "num": 71237
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$21,447",
+     "num": 21447
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$63,405",
+     "num": 63405
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$19,421",
+     "num": 19421
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$5,072",
+     "num": 5072
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$63,657",
+     "num": 63657
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$22,350",
+     "num": 22350
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$75,309",
+     "num": 75309
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$62,890",
+     "num": 62890
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$16,405",
+     "num": 16405
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$22,177",
+     "num": 22177
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$36,695",
+     "num": 36695
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$49,301",
+     "num": 49301
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$39,219",
+     "num": 39219
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$62,757",
+     "num": 62757
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$92,670",
+     "num": 92670
+    }
+   ],
+   "top10": [
+    {
+     "date": "&#8383; Aug 19, 2026",
+     "amount": "$30,351",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Aug 19, 2026",
+     "amount": "$19,079",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Aug 21, 2026",
+     "amount": "$15,705",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Aug 22, 2026",
+     "amount": "$15,445",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Aug 22, 2026",
+     "amount": "$13,390",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Oct 15, 2026",
+     "amount": "$12,114",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Aug 19, 2026",
+     "amount": "$11,990",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Sep 22, 2026",
+     "amount": "$11,747",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Sep 22, 2026",
+     "amount": "$11,700",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "&#8383; Oct 15, 22:12 UTC",
+     "amount": "$856",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:12 UTC",
+     "amount": "$599",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 22:01 UTC",
+     "amount": "$1,748",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 21:57 UTC",
+     "amount": "$709",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 17:45 UTC",
+     "amount": "$90",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 17:32 UTC",
+     "amount": "$493",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 17:31 UTC",
+     "amount": "$126",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 16:34 UTC",
+     "amount": "$17",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 16:29 UTC",
+     "amount": "$1,268",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 15:53 UTC",
+     "amount": "$847",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 15:52 UTC",
+     "amount": "$402",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 15:52 UTC",
+     "amount": "$6,151",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 15:33 UTC",
+     "amount": "$200",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:59 UTC",
+     "amount": "$51",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:34 UTC",
+     "amount": "$2,526",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:33 UTC",
+     "amount": "$2,319",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:33 UTC",
+     "amount": "$2,521",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:32 UTC",
+     "amount": "$827",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:26 UTC",
+     "amount": "$3,289",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:12 UTC",
+     "amount": "$1,254",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:12 UTC",
+     "amount": "$17",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:11 UTC",
+     "amount": "$6,799",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:59 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:59 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:58 UTC",
+     "amount": "$810",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:58 UTC",
+     "amount": "$25",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:57 UTC",
+     "amount": "$833",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:57 UTC",
+     "amount": "$1,100",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:04 UTC",
+     "amount": "$287",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:42 UTC",
+     "amount": "$1,185",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:32 UTC",
+     "amount": "$88",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 07:29 UTC",
+     "amount": "$2,405",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 07:18 UTC",
+     "amount": "$42",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:22 UTC",
+     "amount": "$3,245",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:22 UTC",
+     "amount": "$1,037",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:18 UTC",
+     "amount": "$5,886",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:17 UTC",
+     "amount": "$2,506",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:12 UTC",
+     "amount": "$170",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:09 UTC",
+     "amount": "$228",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 03:21 UTC",
+     "amount": "$111",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:58 UTC",
+     "amount": "$4,733",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:45 UTC",
+     "amount": "$1,973",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:45 UTC",
+     "amount": "$1,973",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:45 UTC",
+     "amount": "$1,973",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:44 UTC",
+     "amount": "$5,266",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:44 UTC",
+     "amount": "$12,114",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:43 UTC",
+     "amount": "$7,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:34 UTC",
+     "amount": "$171",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:31 UTC",
+     "amount": "$58",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 01:08 UTC",
+     "amount": "$1,092",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 00:44 UTC",
+     "amount": "$56",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 00:39 UTC",
+     "amount": "$827",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 14, 22:52 UTC",
+     "amount": "$197",
+     "rail": "Rise"
+    }
+   ]
+  },
   "hypernova": {
    "slug": "hypernova",
    "firm": "Hypernova",
@@ -23919,802 +25721,6 @@
     {
      "time": "&#8383; Oct 15, 01:41 UTC",
      "amount": "$23",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "ylostrading": {
-   "slug": "ylostrading",
-   "firm": "YlosTrading",
-   "website": "ylostrading.com",
-   "websiteUrl": "https://ylostrading.com",
-   "promo": "",
-   "total": "$6,071,195",
-   "rail": "Rise",
-   "count": "3,093",
-   "average": "$1,963",
-   "largest": "$55,000",
-   "largestDate": "Mar 5, 2026",
-   "latestTime": "Oct 15, 23:53 UTC",
-   "latestAmount": "$770",
-   "monthlyVolume": [
-    {
-     "month": "Jan 2026",
-     "amount": "$5",
-     "num": 5
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$466,741",
-     "num": 466741
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$895,935",
-     "num": 895935
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$774,484",
-     "num": 774484
-    },
-    {
-     "month": "May 2026",
-     "amount": "$769,435",
-     "num": 769435
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$814,897",
-     "num": 814897
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$710,065",
-     "num": 710065
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$495,599",
-     "num": 495599
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$773,766",
-     "num": 773766
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$370,268",
-     "num": 370268
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$43,110",
-     "num": 43110
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$40,328",
-     "num": 40328
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$13,723",
-     "num": 13723
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$6,370",
-     "num": 6370
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$18,352",
-     "num": 18352
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$40,867",
-     "num": 40867
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$33,562",
-     "num": 33562
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$27,958",
-     "num": 27958
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$26,948",
-     "num": 26948
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$12,006",
-     "num": 12006
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$1,970",
-     "num": 1970
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$27,502",
-     "num": 27502
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$61,253",
-     "num": 61253
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$60,052",
-     "num": 60052
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$25,442",
-     "num": 25442
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$34,112",
-     "num": 34112
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$8,978",
-     "num": 8978
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$984",
-     "num": 984
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$44,894",
-     "num": 44894
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$29,282",
-     "num": 29282
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$32,231",
-     "num": 32231
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$16,136",
-     "num": 16136
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$46,047",
-     "num": 46047
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$25,370",
-     "num": 25370
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$3,648",
-     "num": 3648
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$9,819",
-     "num": 9819
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$32,772",
-     "num": 32772
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$60,551",
-     "num": 60551
-    }
-   ],
-   "top10": [
-    {
-     "date": "Mar 5, 2026",
-     "amount": "$55,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$25,600",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 11, 2026",
-     "amount": "$25,070",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 19, 2026",
-     "amount": "$23,870",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 1, 2026",
-     "amount": "$17,970",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 23, 2026",
-     "amount": "$17,970",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 5, 2026",
-     "amount": "$16,314",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 27, 2026",
-     "amount": "$16,270",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 12, 2026",
-     "amount": "$16,000",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 23:53 UTC",
-     "amount": "$770",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:46 UTC",
-     "amount": "$1,816",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:24 UTC",
-     "amount": "$1,970",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:21 UTC",
-     "amount": "$1,470",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:35 UTC",
-     "amount": "$545",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:18 UTC",
-     "amount": "$966",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$2,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$1,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$3,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$5,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$3,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$2,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$2,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:37 UTC",
-     "amount": "$584",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:59 UTC",
-     "amount": "$1,970",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:22 UTC",
-     "amount": "$5,970",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:12 UTC",
-     "amount": "$2,875",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:20 UTC",
-     "amount": "$2,130",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 05:40 UTC",
-     "amount": "$1,970",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 05:09 UTC",
-     "amount": "$1,740",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 04:01 UTC",
-     "amount": "$1,451",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 01:30 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 01:22 UTC",
-     "amount": "$1,857",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 01:01 UTC",
-     "amount": "$2,840",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 00:53 UTC",
-     "amount": "$2,648",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 00:34 UTC",
-     "amount": "$1,546",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 00:33 UTC",
-     "amount": "$1,180",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 00:12 UTC",
-     "amount": "$1,032",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "YlosTrading": {
-   "slug": "ylostrading",
-   "firm": "YlosTrading",
-   "website": "ylostrading.com",
-   "websiteUrl": "https://ylostrading.com",
-   "promo": "",
-   "total": "$6,071,195",
-   "rail": "Rise",
-   "count": "3,093",
-   "average": "$1,963",
-   "largest": "$55,000",
-   "largestDate": "Mar 5, 2026",
-   "latestTime": "Oct 15, 23:53 UTC",
-   "latestAmount": "$770",
-   "monthlyVolume": [
-    {
-     "month": "Jan 2026",
-     "amount": "$5",
-     "num": 5
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$466,741",
-     "num": 466741
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$895,935",
-     "num": 895935
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$774,484",
-     "num": 774484
-    },
-    {
-     "month": "May 2026",
-     "amount": "$769,435",
-     "num": 769435
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$814,897",
-     "num": 814897
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$710,065",
-     "num": 710065
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$495,599",
-     "num": 495599
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$773,766",
-     "num": 773766
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$370,268",
-     "num": 370268
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$43,110",
-     "num": 43110
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$40,328",
-     "num": 40328
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$13,723",
-     "num": 13723
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$6,370",
-     "num": 6370
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$18,352",
-     "num": 18352
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$40,867",
-     "num": 40867
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$33,562",
-     "num": 33562
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$27,958",
-     "num": 27958
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$26,948",
-     "num": 26948
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$12,006",
-     "num": 12006
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$1,970",
-     "num": 1970
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$27,502",
-     "num": 27502
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$61,253",
-     "num": 61253
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$60,052",
-     "num": 60052
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$25,442",
-     "num": 25442
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$34,112",
-     "num": 34112
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$8,978",
-     "num": 8978
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$984",
-     "num": 984
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$44,894",
-     "num": 44894
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$29,282",
-     "num": 29282
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$32,231",
-     "num": 32231
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$16,136",
-     "num": 16136
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$46,047",
-     "num": 46047
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$25,370",
-     "num": 25370
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$3,648",
-     "num": 3648
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$9,819",
-     "num": 9819
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$32,772",
-     "num": 32772
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$60,551",
-     "num": 60551
-    }
-   ],
-   "top10": [
-    {
-     "date": "Mar 5, 2026",
-     "amount": "$55,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$25,600",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 11, 2026",
-     "amount": "$25,070",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 19, 2026",
-     "amount": "$23,870",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 1, 2026",
-     "amount": "$17,970",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 23, 2026",
-     "amount": "$17,970",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 5, 2026",
-     "amount": "$16,314",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 27, 2026",
-     "amount": "$16,270",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 12, 2026",
-     "amount": "$16,000",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 23:53 UTC",
-     "amount": "$770",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:46 UTC",
-     "amount": "$1,816",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:24 UTC",
-     "amount": "$1,970",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:21 UTC",
-     "amount": "$1,470",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:35 UTC",
-     "amount": "$545",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:18 UTC",
-     "amount": "$966",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$2,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$1,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$3,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$5,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$3,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$2,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:14 UTC",
-     "amount": "$2,500",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:37 UTC",
-     "amount": "$584",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:59 UTC",
-     "amount": "$1,970",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:22 UTC",
-     "amount": "$5,970",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:12 UTC",
-     "amount": "$2,875",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:20 UTC",
-     "amount": "$2,130",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 05:40 UTC",
-     "amount": "$1,970",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 05:09 UTC",
-     "amount": "$1,740",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 04:01 UTC",
-     "amount": "$1,451",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 01:30 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 01:22 UTC",
-     "amount": "$1,857",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 01:01 UTC",
-     "amount": "$2,840",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 00:53 UTC",
-     "amount": "$2,648",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 00:34 UTC",
-     "amount": "$1,546",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 00:33 UTC",
-     "amount": "$1,180",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 00:12 UTC",
-     "amount": "$1,032",
      "rail": "Rise"
     }
    ]
@@ -25895,6 +26901,732 @@
     }
    ]
   },
+  "futureselite": {
+   "slug": "futureselite",
+   "firm": "FuturesElite",
+   "website": "futureselite.com",
+   "websiteUrl": "https://futureselite.com",
+   "promo": "",
+   "total": "$8,776,717",
+   "rail": "Rise",
+   "count": "5,001",
+   "average": "$1,755",
+   "largest": "$59,438",
+   "largestDate": "Aug 21, 2026",
+   "latestTime": "Oct 15, 18:38 UTC",
+   "latestAmount": "$1,365",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$147,235",
+     "num": 147235
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$183,212",
+     "num": 183212
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$132,655",
+     "num": 132655
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$198,012",
+     "num": 198012
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$201,742",
+     "num": 201742
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$156,822",
+     "num": 156822
+    },
+    {
+     "month": "May 2026",
+     "amount": "$154,926",
+     "num": 154926
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$810,073",
+     "num": 810073
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$1,878,326",
+     "num": 1878326
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$1,487,810",
+     "num": 1487810
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$1,306,253",
+     "num": 1306253
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$685,067",
+     "num": 685067
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$56,755",
+     "num": 56755
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$36,868",
+     "num": 36868
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$2,340",
+     "num": 2340
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$85,530",
+     "num": 85530
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$36,081",
+     "num": 36081
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$49,301",
+     "num": 49301
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$74,687",
+     "num": 74687
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$65,975",
+     "num": 65975
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$45,596",
+     "num": 45596
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$22,852",
+     "num": 22852
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$70,935",
+     "num": 70935
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$48,746",
+     "num": 48746
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$152,215",
+     "num": 152215
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$36,931",
+     "num": 36931
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$30,965",
+     "num": 30965
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$40,895",
+     "num": 40895
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$49,434",
+     "num": 49434
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$75,490",
+     "num": 75490
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$96,760",
+     "num": 96760
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$103,123",
+     "num": 103123
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$50,509",
+     "num": 50509
+    }
+   ],
+   "top10": [
+    {
+     "date": "Aug 21, 2026",
+     "amount": "$59,438",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$50,832",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$50,238",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 7, 2026",
+     "amount": "$37,765",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 14, 2026",
+     "amount": "$37,100",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 14, 2026",
+     "amount": "$36,900",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 14, 2026",
+     "amount": "$35,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 14, 2026",
+     "amount": "$33,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 3, 2026",
+     "amount": "$33,400",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 18:38 UTC",
+     "amount": "$1,365",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,175",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$618",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$663",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$585",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,334",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$6,594",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,301",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$904",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,956",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,889",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,056",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$2,328",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,264",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,329",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$340",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$4,313",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,178",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,274",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$578",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "FuturesElite": {
+   "slug": "futureselite",
+   "firm": "FuturesElite",
+   "website": "futureselite.com",
+   "websiteUrl": "https://futureselite.com",
+   "promo": "",
+   "total": "$8,776,717",
+   "rail": "Rise",
+   "count": "5,001",
+   "average": "$1,755",
+   "largest": "$59,438",
+   "largestDate": "Aug 21, 2026",
+   "latestTime": "Oct 15, 18:38 UTC",
+   "latestAmount": "$1,365",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$147,235",
+     "num": 147235
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$183,212",
+     "num": 183212
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$132,655",
+     "num": 132655
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$198,012",
+     "num": 198012
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$201,742",
+     "num": 201742
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$156,822",
+     "num": 156822
+    },
+    {
+     "month": "May 2026",
+     "amount": "$154,926",
+     "num": 154926
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$810,073",
+     "num": 810073
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$1,878,326",
+     "num": 1878326
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$1,487,810",
+     "num": 1487810
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$1,306,253",
+     "num": 1306253
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$685,067",
+     "num": 685067
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$56,755",
+     "num": 56755
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$36,868",
+     "num": 36868
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$2,340",
+     "num": 2340
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$85,530",
+     "num": 85530
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$36,081",
+     "num": 36081
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$49,301",
+     "num": 49301
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$74,687",
+     "num": 74687
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$65,975",
+     "num": 65975
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$45,596",
+     "num": 45596
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$22,852",
+     "num": 22852
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$70,935",
+     "num": 70935
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$48,746",
+     "num": 48746
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$152,215",
+     "num": 152215
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$36,931",
+     "num": 36931
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$30,965",
+     "num": 30965
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$40,895",
+     "num": 40895
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$49,434",
+     "num": 49434
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$75,490",
+     "num": 75490
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$96,760",
+     "num": 96760
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$103,123",
+     "num": 103123
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$50,509",
+     "num": 50509
+    }
+   ],
+   "top10": [
+    {
+     "date": "Aug 21, 2026",
+     "amount": "$59,438",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$50,832",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$50,238",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 7, 2026",
+     "amount": "$37,765",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 14, 2026",
+     "amount": "$37,100",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 14, 2026",
+     "amount": "$36,900",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 14, 2026",
+     "amount": "$35,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 14, 2026",
+     "amount": "$33,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 3, 2026",
+     "amount": "$33,400",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 18:38 UTC",
+     "amount": "$1,365",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,175",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$618",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$663",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$585",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,334",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$6,594",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,301",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$904",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,956",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,889",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,056",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$2,328",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,264",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,329",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$340",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$4,313",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,178",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$1,274",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:34 UTC",
+     "amount": "$578",
+     "rail": "Rise"
+    }
+   ]
+  },
   "e8markets": {
    "slug": "e8markets",
    "firm": "E8Markets",
@@ -26721,1046 +28453,20 @@
     }
    ]
   },
-  "propr": {
-   "slug": "propr",
-   "firm": "Propr",
-   "website": "propr.xyz",
-   "websiteUrl": "https://propr.xyz",
-   "promo": "",
-   "total": "$2,940,110",
-   "rail": "Direct Crypto",
-   "count": "5,545",
-   "average": "$530",
-   "largest": "15.9%",
-   "largestDate": "Evaluations, all-time",
-   "latestTime": "Oct 15, 22:12 UTC",
-   "latestAmount": "$856",
-   "monthlyVolume": [
-    {
-     "month": "Apr 2026",
-     "amount": "$6,561",
-     "num": 6561
-    },
-    {
-     "month": "May 2026",
-     "amount": "$43,588",
-     "num": 43588
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$133,241",
-     "num": 133241
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$189,972",
-     "num": 189972
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$886,320",
-     "num": 886320
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$1,027,651",
-     "num": 1027651
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$652,776",
-     "num": 652776
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$41,275",
-     "num": 41275
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$44,819",
-     "num": 44819
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$14,075",
-     "num": 14075
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$28,117",
-     "num": 28117
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$83,651",
-     "num": 83651
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$55,392",
-     "num": 55392
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$40,295",
-     "num": 40295
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$62,600",
-     "num": 62600
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$28,864",
-     "num": 28864
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$19,924",
-     "num": 19924
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$13,367",
-     "num": 13367
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$39,858",
-     "num": 39858
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$40,574",
-     "num": 40574
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$71,237",
-     "num": 71237
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$21,447",
-     "num": 21447
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$63,405",
-     "num": 63405
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$19,421",
-     "num": 19421
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$5,072",
-     "num": 5072
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$63,657",
-     "num": 63657
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$22,350",
-     "num": 22350
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$75,309",
-     "num": 75309
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$62,890",
-     "num": 62890
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$16,405",
-     "num": 16405
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$22,177",
-     "num": 22177
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$36,695",
-     "num": 36695
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$49,301",
-     "num": 49301
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$39,219",
-     "num": 39219
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$62,757",
-     "num": 62757
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$92,670",
-     "num": 92670
-    }
-   ],
-   "top10": [
-    {
-     "date": "&#8383; Aug 19, 2026",
-     "amount": "$30,351",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Aug 19, 2026",
-     "amount": "$19,079",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Aug 21, 2026",
-     "amount": "$15,705",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Aug 22, 2026",
-     "amount": "$15,445",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Aug 22, 2026",
-     "amount": "$13,390",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Oct 15, 2026",
-     "amount": "$12,114",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Aug 19, 2026",
-     "amount": "$11,990",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Sep 22, 2026",
-     "amount": "$11,747",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Sep 22, 2026",
-     "amount": "$11,700",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "&#8383; Oct 15, 22:12 UTC",
-     "amount": "$856",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:12 UTC",
-     "amount": "$599",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:01 UTC",
-     "amount": "$1,748",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:57 UTC",
-     "amount": "$709",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 17:45 UTC",
-     "amount": "$90",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 17:32 UTC",
-     "amount": "$493",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 17:31 UTC",
-     "amount": "$126",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 16:34 UTC",
-     "amount": "$17",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 16:29 UTC",
-     "amount": "$1,268",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 15:53 UTC",
-     "amount": "$847",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 15:52 UTC",
-     "amount": "$402",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 15:52 UTC",
-     "amount": "$6,151",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 15:33 UTC",
-     "amount": "$200",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:59 UTC",
-     "amount": "$51",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:34 UTC",
-     "amount": "$2,526",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:33 UTC",
-     "amount": "$2,319",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:33 UTC",
-     "amount": "$2,521",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:32 UTC",
-     "amount": "$827",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:26 UTC",
-     "amount": "$3,289",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:12 UTC",
-     "amount": "$1,254",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:12 UTC",
-     "amount": "$17",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:11 UTC",
-     "amount": "$6,799",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:59 UTC",
-     "amount": "$810",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:59 UTC",
-     "amount": "$810",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:58 UTC",
-     "amount": "$810",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:58 UTC",
-     "amount": "$25",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:57 UTC",
-     "amount": "$833",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:57 UTC",
-     "amount": "$1,100",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:04 UTC",
-     "amount": "$287",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:42 UTC",
-     "amount": "$1,185",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:32 UTC",
-     "amount": "$88",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 07:29 UTC",
-     "amount": "$2,405",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 07:18 UTC",
-     "amount": "$42",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:22 UTC",
-     "amount": "$3,245",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:22 UTC",
-     "amount": "$1,037",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:18 UTC",
-     "amount": "$5,886",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:17 UTC",
-     "amount": "$2,506",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:12 UTC",
-     "amount": "$170",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:09 UTC",
-     "amount": "$228",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 03:21 UTC",
-     "amount": "$111",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:58 UTC",
-     "amount": "$4,733",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:45 UTC",
-     "amount": "$1,973",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:45 UTC",
-     "amount": "$1,973",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:45 UTC",
-     "amount": "$1,973",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:44 UTC",
-     "amount": "$5,266",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:44 UTC",
-     "amount": "$12,114",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:43 UTC",
-     "amount": "$7,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:34 UTC",
-     "amount": "$171",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:31 UTC",
-     "amount": "$58",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 01:08 UTC",
-     "amount": "$1,092",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 00:44 UTC",
-     "amount": "$56",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 00:39 UTC",
-     "amount": "$827",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 14, 22:52 UTC",
-     "amount": "$197",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "Propr": {
-   "slug": "propr",
-   "firm": "Propr",
-   "website": "propr.xyz",
-   "websiteUrl": "https://propr.xyz",
-   "promo": "",
-   "total": "$2,940,110",
-   "rail": "Direct Crypto",
-   "count": "5,545",
-   "average": "$530",
-   "largest": "15.9%",
-   "largestDate": "Evaluations, all-time",
-   "latestTime": "Oct 15, 22:12 UTC",
-   "latestAmount": "$856",
-   "monthlyVolume": [
-    {
-     "month": "Apr 2026",
-     "amount": "$6,561",
-     "num": 6561
-    },
-    {
-     "month": "May 2026",
-     "amount": "$43,588",
-     "num": 43588
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$133,241",
-     "num": 133241
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$189,972",
-     "num": 189972
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$886,320",
-     "num": 886320
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$1,027,651",
-     "num": 1027651
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$652,776",
-     "num": 652776
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$41,275",
-     "num": 41275
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$44,819",
-     "num": 44819
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$14,075",
-     "num": 14075
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$28,117",
-     "num": 28117
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$83,651",
-     "num": 83651
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$55,392",
-     "num": 55392
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$40,295",
-     "num": 40295
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$62,600",
-     "num": 62600
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$28,864",
-     "num": 28864
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$19,924",
-     "num": 19924
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$13,367",
-     "num": 13367
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$39,858",
-     "num": 39858
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$40,574",
-     "num": 40574
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$71,237",
-     "num": 71237
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$21,447",
-     "num": 21447
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$63,405",
-     "num": 63405
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$19,421",
-     "num": 19421
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$5,072",
-     "num": 5072
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$63,657",
-     "num": 63657
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$22,350",
-     "num": 22350
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$75,309",
-     "num": 75309
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$62,890",
-     "num": 62890
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$16,405",
-     "num": 16405
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$22,177",
-     "num": 22177
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$36,695",
-     "num": 36695
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$49,301",
-     "num": 49301
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$39,219",
-     "num": 39219
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$62,757",
-     "num": 62757
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$92,670",
-     "num": 92670
-    }
-   ],
-   "top10": [
-    {
-     "date": "&#8383; Aug 19, 2026",
-     "amount": "$30,351",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Aug 19, 2026",
-     "amount": "$19,079",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Aug 21, 2026",
-     "amount": "$15,705",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Aug 22, 2026",
-     "amount": "$15,445",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Aug 22, 2026",
-     "amount": "$13,390",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Oct 15, 2026",
-     "amount": "$12,114",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Aug 19, 2026",
-     "amount": "$11,990",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Sep 22, 2026",
-     "amount": "$11,747",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Sep 22, 2026",
-     "amount": "$11,700",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "&#8383; Oct 15, 22:12 UTC",
-     "amount": "$856",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:12 UTC",
-     "amount": "$599",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 22:01 UTC",
-     "amount": "$1,748",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 21:57 UTC",
-     "amount": "$709",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 17:45 UTC",
-     "amount": "$90",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 17:32 UTC",
-     "amount": "$493",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 17:31 UTC",
-     "amount": "$126",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 16:34 UTC",
-     "amount": "$17",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 16:29 UTC",
-     "amount": "$1,268",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 15:53 UTC",
-     "amount": "$847",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 15:52 UTC",
-     "amount": "$402",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 15:52 UTC",
-     "amount": "$6,151",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 15:33 UTC",
-     "amount": "$200",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:59 UTC",
-     "amount": "$51",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:34 UTC",
-     "amount": "$2,526",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:33 UTC",
-     "amount": "$2,319",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:33 UTC",
-     "amount": "$2,521",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:32 UTC",
-     "amount": "$827",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:26 UTC",
-     "amount": "$3,289",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:12 UTC",
-     "amount": "$1,254",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:12 UTC",
-     "amount": "$17",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:11 UTC",
-     "amount": "$6,799",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:59 UTC",
-     "amount": "$810",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:59 UTC",
-     "amount": "$810",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:58 UTC",
-     "amount": "$810",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:58 UTC",
-     "amount": "$25",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:57 UTC",
-     "amount": "$833",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:57 UTC",
-     "amount": "$1,100",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:04 UTC",
-     "amount": "$287",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:42 UTC",
-     "amount": "$1,185",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:32 UTC",
-     "amount": "$88",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 07:29 UTC",
-     "amount": "$2,405",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 07:18 UTC",
-     "amount": "$42",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:22 UTC",
-     "amount": "$3,245",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:22 UTC",
-     "amount": "$1,037",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:18 UTC",
-     "amount": "$5,886",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:17 UTC",
-     "amount": "$2,506",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:12 UTC",
-     "amount": "$170",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:09 UTC",
-     "amount": "$228",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 03:21 UTC",
-     "amount": "$111",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:58 UTC",
-     "amount": "$4,733",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:45 UTC",
-     "amount": "$1,973",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:45 UTC",
-     "amount": "$1,973",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:45 UTC",
-     "amount": "$1,973",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:44 UTC",
-     "amount": "$5,266",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:44 UTC",
-     "amount": "$12,114",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:43 UTC",
-     "amount": "$7,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:34 UTC",
-     "amount": "$171",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:31 UTC",
-     "amount": "$58",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 01:08 UTC",
-     "amount": "$1,092",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 00:44 UTC",
-     "amount": "$56",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 00:39 UTC",
-     "amount": "$827",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 14, 22:52 UTC",
-     "amount": "$197",
-     "rail": "Rise"
-    }
-   ]
-  },
   "fundedtradermarkets": {
    "slug": "fundedtradermarkets",
    "firm": "FundedTraderMarkets",
    "website": "fundedtradermarkets.com",
    "websiteUrl": "https://fundedtradermarkets.com",
    "promo": "",
-   "total": "$9,919,559",
+   "total": "$9,919,984",
    "rail": "Rise + Direct Crypto",
-   "count": "5,944",
+   "count": "5,945",
    "average": "$1,669",
    "largest": "$40,513",
    "largestDate": "Feb 3, 2026",
-   "latestTime": "Oct 16, 00:10 UTC",
-   "latestAmount": "$810",
+   "latestTime": "Oct 16, 00:18 UTC",
+   "latestAmount": "$425",
    "monthlyVolume": [
     {
      "month": "Nov 2025",
@@ -27819,8 +28525,8 @@
     },
     {
      "month": "Oct 2026",
-     "amount": "$571,402",
-     "num": 571402
+     "amount": "$571,827",
+     "num": 571827
     }
    ],
    "dailyVolume": [
@@ -27971,8 +28677,8 @@
     },
     {
      "date": "Oct 16, 2026",
-     "amount": "$810",
-     "num": 810
+     "amount": "$1,235",
+     "num": 1235
     }
    ],
    "top10": [
@@ -28023,6 +28729,11 @@
     }
    ],
    "latestPayouts": [
+    {
+     "time": "&#8383; Oct 16, 00:18 UTC",
+     "amount": "$425",
+     "rail": "Rise"
+    },
     {
      "time": "Oct 16, 00:10 UTC",
      "amount": "$810",
@@ -28241,14 +28952,14 @@
    "website": "fundedtradermarkets.com",
    "websiteUrl": "https://fundedtradermarkets.com",
    "promo": "",
-   "total": "$9,919,559",
+   "total": "$9,919,984",
    "rail": "Rise + Direct Crypto",
-   "count": "5,944",
+   "count": "5,945",
    "average": "$1,669",
    "largest": "$40,513",
    "largestDate": "Feb 3, 2026",
-   "latestTime": "Oct 16, 00:10 UTC",
-   "latestAmount": "$810",
+   "latestTime": "Oct 16, 00:18 UTC",
+   "latestAmount": "$425",
    "monthlyVolume": [
     {
      "month": "Nov 2025",
@@ -28307,8 +29018,8 @@
     },
     {
      "month": "Oct 2026",
-     "amount": "$571,402",
-     "num": 571402
+     "amount": "$571,827",
+     "num": 571827
     }
    ],
    "dailyVolume": [
@@ -28459,8 +29170,8 @@
     },
     {
      "date": "Oct 16, 2026",
-     "amount": "$810",
-     "num": 810
+     "amount": "$1,235",
+     "num": 1235
     }
    ],
    "top10": [
@@ -28511,6 +29222,11 @@
     }
    ],
    "latestPayouts": [
+    {
+     "time": "&#8383; Oct 16, 00:18 UTC",
+     "amount": "$425",
+     "rail": "Rise"
+    },
     {
      "time": "Oct 16, 00:10 UTC",
      "amount": "$810",
@@ -28723,1284 +29439,658 @@
     }
    ]
   },
-  "futureselite": {
-   "slug": "futureselite",
-   "firm": "FuturesElite",
-   "website": "futureselite.com",
-   "websiteUrl": "https://futureselite.com",
+  "alphafutures": {
+   "slug": "alphafutures",
+   "firm": "AlphaFutures",
+   "website": "alpha-futures.com",
+   "websiteUrl": "https://alpha-futures.com",
    "promo": "",
-   "total": "$8,776,717",
+   "total": "$32,428,915",
    "rail": "Rise",
-   "count": "5,001",
-   "average": "$1,755",
-   "largest": "$59,438",
-   "largestDate": "Aug 21, 2026",
-   "latestTime": "Oct 15, 18:38 UTC",
-   "latestAmount": "$1,365",
+   "count": "15,529",
+   "average": "$2,088",
+   "largest": "$61,280",
+   "largestDate": "Dec 11, 2025",
+   "latestTime": "Oct 15, 16:45 UTC",
+   "latestAmount": "$432",
    "monthlyVolume": [
     {
      "month": "Nov 2025",
-     "amount": "$147,235",
-     "num": 147235
+     "amount": "$1,277,100",
+     "num": 1277100
     },
     {
      "month": "Dec 2025",
-     "amount": "$183,212",
-     "num": 183212
+     "amount": "$1,685,368",
+     "num": 1685368
     },
     {
      "month": "Jan 2026",
-     "amount": "$132,655",
-     "num": 132655
+     "amount": "$2,466,134",
+     "num": 2466134
     },
     {
      "month": "Feb 2026",
-     "amount": "$198,012",
-     "num": 198012
+     "amount": "$2,006,067",
+     "num": 2006067
     },
     {
      "month": "Mar 2026",
-     "amount": "$201,742",
-     "num": 201742
+     "amount": "$2,571,553",
+     "num": 2571553
     },
     {
      "month": "Apr 2026",
-     "amount": "$156,822",
-     "num": 156822
+     "amount": "$2,309,085",
+     "num": 2309085
     },
     {
      "month": "May 2026",
-     "amount": "$154,926",
-     "num": 154926
+     "amount": "$4,717,276",
+     "num": 4717276
     },
     {
      "month": "Jun 2026",
-     "amount": "$810,073",
-     "num": 810073
+     "amount": "$7,139,564",
+     "num": 7139564
     },
     {
      "month": "Jul 2026",
-     "amount": "$1,878,326",
-     "num": 1878326
+     "amount": "$2,562,772",
+     "num": 2562772
     },
     {
      "month": "Aug 2026",
-     "amount": "$1,487,810",
-     "num": 1487810
+     "amount": "$744,872",
+     "num": 744872
     },
     {
      "month": "Sep 2026",
-     "amount": "$1,306,253",
-     "num": 1306253
+     "amount": "$677,272",
+     "num": 677272
     },
     {
      "month": "Oct 2026",
-     "amount": "$685,067",
-     "num": 685067
+     "amount": "$310,792",
+     "num": 310792
     }
    ],
    "dailyVolume": [
     {
      "date": "Sep 17, 2026",
-     "amount": "$56,755",
-     "num": 56755
+     "amount": "$20,462",
+     "num": 20462
     },
     {
      "date": "Sep 18, 2026",
-     "amount": "$36,868",
-     "num": 36868
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$2,340",
-     "num": 2340
+     "amount": "$26,617",
+     "num": 26617
     },
     {
      "date": "Sep 21, 2026",
-     "amount": "$85,530",
-     "num": 85530
+     "amount": "$48,995",
+     "num": 48995
     },
     {
      "date": "Sep 22, 2026",
-     "amount": "$36,081",
-     "num": 36081
+     "amount": "$64,288",
+     "num": 64288
     },
     {
      "date": "Sep 23, 2026",
-     "amount": "$49,301",
-     "num": 49301
+     "amount": "$34,932",
+     "num": 34932
     },
     {
      "date": "Sep 24, 2026",
-     "amount": "$74,687",
-     "num": 74687
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$65,975",
-     "num": 65975
+     "amount": "$11,909",
+     "num": 11909
     },
     {
      "date": "Sep 28, 2026",
-     "amount": "$45,596",
-     "num": 45596
+     "amount": "$9,781",
+     "num": 9781
     },
     {
      "date": "Sep 29, 2026",
-     "amount": "$22,852",
-     "num": 22852
+     "amount": "$26,375",
+     "num": 26375
     },
     {
      "date": "Sep 30, 2026",
-     "amount": "$70,935",
-     "num": 70935
+     "amount": "$27,394",
+     "num": 27394
     },
     {
      "date": "Oct 1, 2026",
-     "amount": "$48,746",
-     "num": 48746
+     "amount": "$28,427",
+     "num": 28427
     },
     {
      "date": "Oct 2, 2026",
-     "amount": "$152,215",
-     "num": 152215
+     "amount": "$24,299",
+     "num": 24299
     },
     {
      "date": "Oct 5, 2026",
-     "amount": "$36,931",
-     "num": 36931
+     "amount": "$29,467",
+     "num": 29467
     },
     {
      "date": "Oct 6, 2026",
-     "amount": "$30,965",
-     "num": 30965
+     "amount": "$31,570",
+     "num": 31570
     },
     {
      "date": "Oct 7, 2026",
-     "amount": "$40,895",
-     "num": 40895
+     "amount": "$25,607",
+     "num": 25607
     },
     {
      "date": "Oct 8, 2026",
-     "amount": "$49,434",
-     "num": 49434
+     "amount": "$16,522",
+     "num": 16522
     },
     {
      "date": "Oct 9, 2026",
-     "amount": "$75,490",
-     "num": 75490
+     "amount": "$30,277",
+     "num": 30277
     },
     {
      "date": "Oct 13, 2026",
-     "amount": "$96,760",
-     "num": 96760
+     "amount": "$49,656",
+     "num": 49656
     },
     {
      "date": "Oct 14, 2026",
-     "amount": "$103,123",
-     "num": 103123
+     "amount": "$31,008",
+     "num": 31008
     },
     {
      "date": "Oct 15, 2026",
-     "amount": "$50,509",
-     "num": 50509
+     "amount": "$43,959",
+     "num": 43959
     }
    ],
    "top10": [
     {
-     "date": "Aug 21, 2026",
-     "amount": "$59,438",
+     "date": "Dec 11, 2025",
+     "amount": "$61,280",
      "rail": "Rise"
     },
     {
-     "date": "Sep 21, 2026",
-     "amount": "$50,832",
+     "date": "Mar 16, 2026",
+     "amount": "$57,560",
      "rail": "Rise"
     },
     {
-     "date": "Oct 14, 2026",
-     "amount": "$50,238",
+     "date": "Feb 6, 2026",
+     "amount": "$55,854",
      "rail": "Rise"
     },
     {
-     "date": "Aug 7, 2026",
-     "amount": "$37,765",
+     "date": "Nov 3, 2025",
+     "amount": "$41,416",
      "rail": "Rise"
     },
     {
-     "date": "Sep 14, 2026",
-     "amount": "$37,100",
+     "date": "Jul 7, 2026",
+     "amount": "$40,500",
      "rail": "Rise"
     },
     {
-     "date": "Sep 14, 2026",
-     "amount": "$36,900",
+     "date": "Apr 2, 2026",
+     "amount": "$40,500",
      "rail": "Rise"
     },
     {
-     "date": "Sep 14, 2026",
-     "amount": "$35,500",
+     "date": "Mar 23, 2026",
+     "amount": "$40,500",
      "rail": "Rise"
     },
     {
-     "date": "Sep 14, 2026",
-     "amount": "$33,500",
+     "date": "Feb 20, 2026",
+     "amount": "$40,223",
      "rail": "Rise"
     },
     {
-     "date": "Mar 3, 2026",
-     "amount": "$33,400",
+     "date": "Mar 25, 2026",
+     "amount": "$39,453",
      "rail": "Rise"
     }
    ],
    "latestPayouts": [
     {
-     "time": "Oct 15, 18:38 UTC",
-     "amount": "$1,365",
+     "time": "Oct 15, 16:45 UTC",
+     "amount": "$432",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:43 UTC",
+     "amount": "$105",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:14 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:48 UTC",
+     "amount": "$990",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:46 UTC",
+     "amount": "$8,100",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:45 UTC",
+     "amount": "$429",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:45 UTC",
+     "amount": "$774",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:44 UTC",
+     "amount": "$448",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:43 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:40 UTC",
+     "amount": "$1,260",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:40 UTC",
+     "amount": "$1,260",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:39 UTC",
+     "amount": "$1,260",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:38 UTC",
+     "amount": "$1,260",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:37 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:37 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:36 UTC",
+     "amount": "$2,354",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:35 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
      "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,175",
+     "amount": "$594",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$618",
+     "time": "Oct 15, 13:33 UTC",
+     "amount": "$767",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$663",
+     "time": "Oct 15, 13:33 UTC",
+     "amount": "$876",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$585",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,334",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$6,594",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,301",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$904",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,956",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,889",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,056",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$2,328",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,264",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,329",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$340",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$4,313",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,178",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,274",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$578",
+     "time": "Oct 15, 10:54 UTC",
+     "amount": "$1,000",
      "rail": "Rise"
     }
    ]
   },
-  "FuturesElite": {
-   "slug": "futureselite",
-   "firm": "FuturesElite",
-   "website": "futureselite.com",
-   "websiteUrl": "https://futureselite.com",
+  "AlphaFutures": {
+   "slug": "alphafutures",
+   "firm": "AlphaFutures",
+   "website": "alpha-futures.com",
+   "websiteUrl": "https://alpha-futures.com",
    "promo": "",
-   "total": "$8,776,717",
+   "total": "$32,428,915",
    "rail": "Rise",
-   "count": "5,001",
-   "average": "$1,755",
-   "largest": "$59,438",
-   "largestDate": "Aug 21, 2026",
-   "latestTime": "Oct 15, 18:38 UTC",
-   "latestAmount": "$1,365",
+   "count": "15,529",
+   "average": "$2,088",
+   "largest": "$61,280",
+   "largestDate": "Dec 11, 2025",
+   "latestTime": "Oct 15, 16:45 UTC",
+   "latestAmount": "$432",
    "monthlyVolume": [
     {
      "month": "Nov 2025",
-     "amount": "$147,235",
-     "num": 147235
+     "amount": "$1,277,100",
+     "num": 1277100
     },
     {
      "month": "Dec 2025",
-     "amount": "$183,212",
-     "num": 183212
+     "amount": "$1,685,368",
+     "num": 1685368
     },
     {
      "month": "Jan 2026",
-     "amount": "$132,655",
-     "num": 132655
+     "amount": "$2,466,134",
+     "num": 2466134
     },
     {
      "month": "Feb 2026",
-     "amount": "$198,012",
-     "num": 198012
+     "amount": "$2,006,067",
+     "num": 2006067
     },
     {
      "month": "Mar 2026",
-     "amount": "$201,742",
-     "num": 201742
+     "amount": "$2,571,553",
+     "num": 2571553
     },
     {
      "month": "Apr 2026",
-     "amount": "$156,822",
-     "num": 156822
+     "amount": "$2,309,085",
+     "num": 2309085
     },
     {
      "month": "May 2026",
-     "amount": "$154,926",
-     "num": 154926
+     "amount": "$4,717,276",
+     "num": 4717276
     },
     {
      "month": "Jun 2026",
-     "amount": "$810,073",
-     "num": 810073
+     "amount": "$7,139,564",
+     "num": 7139564
     },
     {
      "month": "Jul 2026",
-     "amount": "$1,878,326",
-     "num": 1878326
+     "amount": "$2,562,772",
+     "num": 2562772
     },
     {
      "month": "Aug 2026",
-     "amount": "$1,487,810",
-     "num": 1487810
+     "amount": "$744,872",
+     "num": 744872
     },
     {
      "month": "Sep 2026",
-     "amount": "$1,306,253",
-     "num": 1306253
+     "amount": "$677,272",
+     "num": 677272
     },
     {
      "month": "Oct 2026",
-     "amount": "$685,067",
-     "num": 685067
+     "amount": "$310,792",
+     "num": 310792
     }
    ],
    "dailyVolume": [
     {
      "date": "Sep 17, 2026",
-     "amount": "$56,755",
-     "num": 56755
+     "amount": "$20,462",
+     "num": 20462
     },
     {
      "date": "Sep 18, 2026",
-     "amount": "$36,868",
-     "num": 36868
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$2,340",
-     "num": 2340
+     "amount": "$26,617",
+     "num": 26617
     },
     {
      "date": "Sep 21, 2026",
-     "amount": "$85,530",
-     "num": 85530
+     "amount": "$48,995",
+     "num": 48995
     },
     {
      "date": "Sep 22, 2026",
-     "amount": "$36,081",
-     "num": 36081
+     "amount": "$64,288",
+     "num": 64288
     },
     {
      "date": "Sep 23, 2026",
-     "amount": "$49,301",
-     "num": 49301
+     "amount": "$34,932",
+     "num": 34932
     },
     {
      "date": "Sep 24, 2026",
-     "amount": "$74,687",
-     "num": 74687
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$65,975",
-     "num": 65975
+     "amount": "$11,909",
+     "num": 11909
     },
     {
      "date": "Sep 28, 2026",
-     "amount": "$45,596",
-     "num": 45596
+     "amount": "$9,781",
+     "num": 9781
     },
     {
      "date": "Sep 29, 2026",
-     "amount": "$22,852",
-     "num": 22852
+     "amount": "$26,375",
+     "num": 26375
     },
     {
      "date": "Sep 30, 2026",
-     "amount": "$70,935",
-     "num": 70935
+     "amount": "$27,394",
+     "num": 27394
     },
     {
      "date": "Oct 1, 2026",
-     "amount": "$48,746",
-     "num": 48746
+     "amount": "$28,427",
+     "num": 28427
     },
     {
      "date": "Oct 2, 2026",
-     "amount": "$152,215",
-     "num": 152215
+     "amount": "$24,299",
+     "num": 24299
     },
     {
      "date": "Oct 5, 2026",
-     "amount": "$36,931",
-     "num": 36931
+     "amount": "$29,467",
+     "num": 29467
     },
     {
      "date": "Oct 6, 2026",
-     "amount": "$30,965",
-     "num": 30965
+     "amount": "$31,570",
+     "num": 31570
     },
     {
      "date": "Oct 7, 2026",
-     "amount": "$40,895",
-     "num": 40895
+     "amount": "$25,607",
+     "num": 25607
     },
     {
      "date": "Oct 8, 2026",
-     "amount": "$49,434",
-     "num": 49434
+     "amount": "$16,522",
+     "num": 16522
     },
     {
      "date": "Oct 9, 2026",
-     "amount": "$75,490",
-     "num": 75490
+     "amount": "$30,277",
+     "num": 30277
     },
     {
      "date": "Oct 13, 2026",
-     "amount": "$96,760",
-     "num": 96760
+     "amount": "$49,656",
+     "num": 49656
     },
     {
      "date": "Oct 14, 2026",
-     "amount": "$103,123",
-     "num": 103123
+     "amount": "$31,008",
+     "num": 31008
     },
     {
      "date": "Oct 15, 2026",
-     "amount": "$50,509",
-     "num": 50509
+     "amount": "$43,959",
+     "num": 43959
     }
    ],
    "top10": [
     {
-     "date": "Aug 21, 2026",
-     "amount": "$59,438",
+     "date": "Dec 11, 2025",
+     "amount": "$61,280",
      "rail": "Rise"
     },
     {
-     "date": "Sep 21, 2026",
-     "amount": "$50,832",
+     "date": "Mar 16, 2026",
+     "amount": "$57,560",
      "rail": "Rise"
     },
     {
-     "date": "Oct 14, 2026",
-     "amount": "$50,238",
+     "date": "Feb 6, 2026",
+     "amount": "$55,854",
      "rail": "Rise"
     },
     {
-     "date": "Aug 7, 2026",
-     "amount": "$37,765",
+     "date": "Nov 3, 2025",
+     "amount": "$41,416",
      "rail": "Rise"
     },
     {
-     "date": "Sep 14, 2026",
-     "amount": "$37,100",
+     "date": "Jul 7, 2026",
+     "amount": "$40,500",
      "rail": "Rise"
     },
     {
-     "date": "Sep 14, 2026",
-     "amount": "$36,900",
+     "date": "Apr 2, 2026",
+     "amount": "$40,500",
      "rail": "Rise"
     },
     {
-     "date": "Sep 14, 2026",
-     "amount": "$35,500",
+     "date": "Mar 23, 2026",
+     "amount": "$40,500",
      "rail": "Rise"
     },
     {
-     "date": "Sep 14, 2026",
-     "amount": "$33,500",
+     "date": "Feb 20, 2026",
+     "amount": "$40,223",
      "rail": "Rise"
     },
     {
-     "date": "Mar 3, 2026",
-     "amount": "$33,400",
+     "date": "Mar 25, 2026",
+     "amount": "$39,453",
      "rail": "Rise"
     }
    ],
    "latestPayouts": [
     {
-     "time": "Oct 15, 18:38 UTC",
-     "amount": "$1,365",
+     "time": "Oct 15, 16:45 UTC",
+     "amount": "$432",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:43 UTC",
+     "amount": "$105",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:14 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:48 UTC",
+     "amount": "$990",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:46 UTC",
+     "amount": "$8,100",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:45 UTC",
+     "amount": "$429",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:45 UTC",
+     "amount": "$774",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:44 UTC",
+     "amount": "$448",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:43 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:40 UTC",
+     "amount": "$1,260",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:40 UTC",
+     "amount": "$1,260",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:39 UTC",
+     "amount": "$1,260",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:38 UTC",
+     "amount": "$1,260",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:37 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:37 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:36 UTC",
+     "amount": "$2,354",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:35 UTC",
+     "amount": "$2,250",
      "rail": "Rise"
     },
     {
      "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,175",
+     "amount": "$594",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$618",
+     "time": "Oct 15, 13:33 UTC",
+     "amount": "$767",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$663",
+     "time": "Oct 15, 13:33 UTC",
+     "amount": "$876",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$585",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,334",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$6,594",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,301",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$904",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,956",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,889",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,056",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$2,328",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,264",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,329",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$340",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$4,313",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,178",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$1,274",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$578",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "aquafunded": {
-   "slug": "aquafunded",
-   "firm": "AquaFunded",
-   "website": "aquafunded.com",
-   "websiteUrl": "https://aquafunded.com",
-   "promo": "",
-   "total": "$7,312,246",
-   "rail": "Rise",
-   "count": "2,799",
-   "average": "$2,612",
-   "largest": "$61,371",
-   "largestDate": "Feb 7, 2024",
-   "latestTime": "Oct 15, 17:03 UTC",
-   "latestAmount": "$3,434",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$293,118",
-     "num": 293118
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$351,492",
-     "num": 351492
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$350,664",
-     "num": 350664
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$231,011",
-     "num": 231011
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$280,284",
-     "num": 280284
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$342,709",
-     "num": 342709
-    },
-    {
-     "month": "May 2026",
-     "amount": "$289,941",
-     "num": 289941
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$247,750",
-     "num": 247750
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$280,022",
-     "num": 280022
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$226,918",
-     "num": 226918
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$234,680",
-     "num": 234680
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$101,965",
-     "num": 101965
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$2,964",
-     "num": 2964
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$1,750",
-     "num": 1750
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$3,007",
-     "num": 3007
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$5,854",
-     "num": 5854
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$492",
-     "num": 492
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$28,635",
-     "num": 28635
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$1,880",
-     "num": 1880
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$15,066",
-     "num": 15066
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$26,724",
-     "num": 26724
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$31,483",
-     "num": 31483
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$19,794",
-     "num": 19794
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$1,657",
-     "num": 1657
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$922",
-     "num": 922
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$5,749",
-     "num": 5749
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$8,468",
-     "num": 8468
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$11,983",
-     "num": 11983
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$8,770",
-     "num": 8770
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$14,120",
-     "num": 14120
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$8,923",
-     "num": 8923
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$1,249",
-     "num": 1249
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$20,330",
-     "num": 20330
-    }
-   ],
-   "top10": [
-    {
-     "date": "Feb 7, 2024",
-     "amount": "$61,371",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 30, 2024",
-     "amount": "$59,219",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 1, 2025",
-     "amount": "$41,990",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 22, 2024",
-     "amount": "$29,533",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 23, 2025",
-     "amount": "$27,616",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 10, 2024",
-     "amount": "$22,237",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 4, 2024",
-     "amount": "$21,632",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 5, 2025",
-     "amount": "$20,176",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 5, 2024",
-     "amount": "$20,092",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 17:03 UTC",
-     "amount": "$3,434",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:03 UTC",
-     "amount": "$5,293",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:03 UTC",
-     "amount": "$4,613",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:03 UTC",
-     "amount": "$635",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:06 UTC",
-     "amount": "$3,706",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:52 UTC",
-     "amount": "$1,300",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:52 UTC",
-     "amount": "$1,348",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 09:50 UTC",
-     "amount": "$1,111",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 09:50 UTC",
-     "amount": "$138",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "AquaFunded": {
-   "slug": "aquafunded",
-   "firm": "AquaFunded",
-   "website": "aquafunded.com",
-   "websiteUrl": "https://aquafunded.com",
-   "promo": "",
-   "total": "$7,312,246",
-   "rail": "Rise",
-   "count": "2,799",
-   "average": "$2,612",
-   "largest": "$61,371",
-   "largestDate": "Feb 7, 2024",
-   "latestTime": "Oct 15, 17:03 UTC",
-   "latestAmount": "$3,434",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$293,118",
-     "num": 293118
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$351,492",
-     "num": 351492
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$350,664",
-     "num": 350664
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$231,011",
-     "num": 231011
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$280,284",
-     "num": 280284
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$342,709",
-     "num": 342709
-    },
-    {
-     "month": "May 2026",
-     "amount": "$289,941",
-     "num": 289941
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$247,750",
-     "num": 247750
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$280,022",
-     "num": 280022
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$226,918",
-     "num": 226918
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$234,680",
-     "num": 234680
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$101,965",
-     "num": 101965
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$2,964",
-     "num": 2964
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$1,750",
-     "num": 1750
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$3,007",
-     "num": 3007
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$5,854",
-     "num": 5854
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$492",
-     "num": 492
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$28,635",
-     "num": 28635
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$1,880",
-     "num": 1880
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$15,066",
-     "num": 15066
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$26,724",
-     "num": 26724
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$31,483",
-     "num": 31483
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$19,794",
-     "num": 19794
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$1,657",
-     "num": 1657
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$922",
-     "num": 922
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$5,749",
-     "num": 5749
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$8,468",
-     "num": 8468
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$11,983",
-     "num": 11983
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$8,770",
-     "num": 8770
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$14,120",
-     "num": 14120
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$8,923",
-     "num": 8923
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$1,249",
-     "num": 1249
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$20,330",
-     "num": 20330
-    }
-   ],
-   "top10": [
-    {
-     "date": "Feb 7, 2024",
-     "amount": "$61,371",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 30, 2024",
-     "amount": "$59,219",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 1, 2025",
-     "amount": "$41,990",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 22, 2024",
-     "amount": "$29,533",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 23, 2025",
-     "amount": "$27,616",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 10, 2024",
-     "amount": "$22,237",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 4, 2024",
-     "amount": "$21,632",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 5, 2025",
-     "amount": "$20,176",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 5, 2024",
-     "amount": "$20,092",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 17:03 UTC",
-     "amount": "$3,434",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:03 UTC",
-     "amount": "$5,293",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:03 UTC",
-     "amount": "$4,613",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:03 UTC",
-     "amount": "$635",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:06 UTC",
-     "amount": "$3,706",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:52 UTC",
-     "amount": "$1,300",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:52 UTC",
-     "amount": "$1,348",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 09:50 UTC",
-     "amount": "$1,111",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 09:50 UTC",
-     "amount": "$138",
+     "time": "Oct 15, 10:54 UTC",
+     "amount": "$1,000",
      "rail": "Rise"
     }
    ]
@@ -30907,6 +30997,2940 @@
     {
      "time": "Oct 14, 17:04 UTC",
      "amount": "$250",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "holaprime": {
+   "slug": "holaprime",
+   "firm": "HolaPrime",
+   "website": "holaprime.com",
+   "websiteUrl": "https://holaprime.com",
+   "promo": "",
+   "total": "$9,861,599",
+   "rail": "Rise + Direct Crypto",
+   "count": "5,712",
+   "average": "$1,726",
+   "largest": "$41,976",
+   "largestDate": "Aug 17, 2026",
+   "latestTime": "Oct 15, 22:33 UTC",
+   "latestAmount": "$875",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$133,488",
+     "num": 133488
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$156,848",
+     "num": 156848
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$123,163",
+     "num": 123163
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$218,828",
+     "num": 218828
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$386,042",
+     "num": 386042
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$788,734",
+     "num": 788734
+    },
+    {
+     "month": "May 2026",
+     "amount": "$1,069,475",
+     "num": 1069475
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$1,834,432",
+     "num": 1834432
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$1,663,021",
+     "num": 1663021
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$1,141,198",
+     "num": 1141198
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$1,007,168",
+     "num": 1007168
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$432,093",
+     "num": 432093
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$49,136",
+     "num": 49136
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$19,507",
+     "num": 19507
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$21,509",
+     "num": 21509
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$21,495",
+     "num": 21495
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$34,773",
+     "num": 34773
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$34,031",
+     "num": 34031
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$31,517",
+     "num": 31517
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$2,040",
+     "num": 2040
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$38,210",
+     "num": 38210
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$43,597",
+     "num": 43597
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$45,778",
+     "num": 45778
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$40,541",
+     "num": 40541
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$34,771",
+     "num": 34771
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$2,738",
+     "num": 2738
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$4,762",
+     "num": 4762
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$64,286",
+     "num": 64286
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$33,328",
+     "num": 33328
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$38,643",
+     "num": 38643
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$41,001",
+     "num": 41001
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$52,885",
+     "num": 52885
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$284",
+     "num": 284
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$24,961",
+     "num": 24961
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$33,037",
+     "num": 33037
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$30,101",
+     "num": 30101
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$30,756",
+     "num": 30756
+    }
+   ],
+   "top10": [
+    {
+     "date": "Aug 17, 2026",
+     "amount": "$41,976",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 5, 2026",
+     "amount": "$35,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 6, 2025",
+     "amount": "$29,248",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 4, 2025",
+     "amount": "$17,975",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$17,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 7, 2026",
+     "amount": "$14,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 11, 2026",
+     "amount": "$13,205",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 28, 2026",
+     "amount": "$12,713",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; May 5, 2026",
+     "amount": "$12,166",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 22:33 UTC",
+     "amount": "$875",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:29 UTC",
+     "amount": "$875",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$875",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:25 UTC",
+     "amount": "$875",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:19 UTC",
+     "amount": "$1,543",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:45 UTC",
+     "amount": "$815",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:10 UTC",
+     "amount": "$709",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:46 UTC",
+     "amount": "$1,253",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:08 UTC",
+     "amount": "$1,015",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 14:55 UTC",
+     "amount": "$2,334",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 14:53 UTC",
+     "amount": "$3,634",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:23 UTC",
+     "amount": "$912",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 11:38 UTC",
+     "amount": "$62",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 11:03 UTC",
+     "amount": "$513",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:21 UTC",
+     "amount": "$951",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:51 UTC",
+     "amount": "$566",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 09:48 UTC",
+     "amount": "$90",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:57 UTC",
+     "amount": "$3,510",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:55 UTC",
+     "amount": "$3,510",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 05:46 UTC",
+     "amount": "$1,792",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:51 UTC",
+     "amount": "$2,508",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:45 UTC",
+     "amount": "$79",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:32 UTC",
+     "amount": "$118",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 00:43 UTC",
+     "amount": "$1,341",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 23:45 UTC",
+     "amount": "$2,387",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 14, 23:13 UTC",
+     "amount": "$150",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 14, 23:02 UTC",
+     "amount": "$109",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "HolaPrime": {
+   "slug": "holaprime",
+   "firm": "HolaPrime",
+   "website": "holaprime.com",
+   "websiteUrl": "https://holaprime.com",
+   "promo": "",
+   "total": "$9,861,599",
+   "rail": "Rise + Direct Crypto",
+   "count": "5,712",
+   "average": "$1,726",
+   "largest": "$41,976",
+   "largestDate": "Aug 17, 2026",
+   "latestTime": "Oct 15, 22:33 UTC",
+   "latestAmount": "$875",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$133,488",
+     "num": 133488
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$156,848",
+     "num": 156848
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$123,163",
+     "num": 123163
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$218,828",
+     "num": 218828
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$386,042",
+     "num": 386042
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$788,734",
+     "num": 788734
+    },
+    {
+     "month": "May 2026",
+     "amount": "$1,069,475",
+     "num": 1069475
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$1,834,432",
+     "num": 1834432
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$1,663,021",
+     "num": 1663021
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$1,141,198",
+     "num": 1141198
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$1,007,168",
+     "num": 1007168
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$432,093",
+     "num": 432093
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$49,136",
+     "num": 49136
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$19,507",
+     "num": 19507
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$21,509",
+     "num": 21509
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$21,495",
+     "num": 21495
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$34,773",
+     "num": 34773
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$34,031",
+     "num": 34031
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$31,517",
+     "num": 31517
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$2,040",
+     "num": 2040
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$38,210",
+     "num": 38210
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$43,597",
+     "num": 43597
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$45,778",
+     "num": 45778
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$40,541",
+     "num": 40541
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$34,771",
+     "num": 34771
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$2,738",
+     "num": 2738
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$4,762",
+     "num": 4762
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$64,286",
+     "num": 64286
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$33,328",
+     "num": 33328
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$38,643",
+     "num": 38643
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$41,001",
+     "num": 41001
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$52,885",
+     "num": 52885
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$284",
+     "num": 284
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$24,961",
+     "num": 24961
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$33,037",
+     "num": 33037
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$30,101",
+     "num": 30101
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$30,756",
+     "num": 30756
+    }
+   ],
+   "top10": [
+    {
+     "date": "Aug 17, 2026",
+     "amount": "$41,976",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 5, 2026",
+     "amount": "$35,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 6, 2025",
+     "amount": "$29,248",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 4, 2025",
+     "amount": "$17,975",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$17,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 7, 2026",
+     "amount": "$14,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 11, 2026",
+     "amount": "$13,205",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 28, 2026",
+     "amount": "$12,713",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; May 5, 2026",
+     "amount": "$12,166",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 22:33 UTC",
+     "amount": "$875",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:29 UTC",
+     "amount": "$875",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$875",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:25 UTC",
+     "amount": "$875",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:19 UTC",
+     "amount": "$1,543",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 21:45 UTC",
+     "amount": "$815",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:10 UTC",
+     "amount": "$709",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:46 UTC",
+     "amount": "$1,253",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:08 UTC",
+     "amount": "$1,015",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 14:55 UTC",
+     "amount": "$2,334",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 14:53 UTC",
+     "amount": "$3,634",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:23 UTC",
+     "amount": "$912",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 11:38 UTC",
+     "amount": "$62",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 11:03 UTC",
+     "amount": "$513",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 10:21 UTC",
+     "amount": "$951",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:51 UTC",
+     "amount": "$566",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 09:48 UTC",
+     "amount": "$90",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:57 UTC",
+     "amount": "$3,510",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:55 UTC",
+     "amount": "$3,510",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 05:46 UTC",
+     "amount": "$1,792",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:51 UTC",
+     "amount": "$2,508",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:45 UTC",
+     "amount": "$79",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:32 UTC",
+     "amount": "$118",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 00:43 UTC",
+     "amount": "$1,341",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 23:45 UTC",
+     "amount": "$2,387",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 14, 23:13 UTC",
+     "amount": "$150",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 14, 23:02 UTC",
+     "amount": "$109",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "legends-trading": {
+   "slug": "legends-trading",
+   "firm": "Legends Trading",
+   "website": "thelegendstrading.com",
+   "websiteUrl": "https://thelegendstrading.com",
+   "promo": "",
+   "total": "$5,543,349",
+   "rail": "Rise",
+   "count": "2,496",
+   "average": "$2,221",
+   "largest": "$45,265",
+   "largestDate": "Oct 31, 2025",
+   "latestTime": "Oct 15, 19:21 UTC",
+   "latestAmount": "$1,080",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$448,452",
+     "num": 448452
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$683,523",
+     "num": 683523
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$561,264",
+     "num": 561264
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$430,288",
+     "num": 430288
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$350,662",
+     "num": 350662
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$322,096",
+     "num": 322096
+    },
+    {
+     "month": "May 2026",
+     "amount": "$283,789",
+     "num": 283789
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$229,725",
+     "num": 229725
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$410,269",
+     "num": 410269
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$565,274",
+     "num": 565274
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$466,286",
+     "num": 466286
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$279,407",
+     "num": 279407
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$10,363",
+     "num": 10363
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$12,776",
+     "num": 12776
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$19,998",
+     "num": 19998
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$31,653",
+     "num": 31653
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$24,828",
+     "num": 24828
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$7,200",
+     "num": 7200
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$16,623",
+     "num": 16623
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$14,490",
+     "num": 14490
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$20,808",
+     "num": 20808
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$74,913",
+     "num": 74913
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$8,970",
+     "num": 8970
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$12,102",
+     "num": 12102
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$44,002",
+     "num": 44002
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$18,636",
+     "num": 18636
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$13,893",
+     "num": 13893
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$11,881",
+     "num": 11881
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$43,612",
+     "num": 43612
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$30,345",
+     "num": 30345
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$24,930",
+     "num": 24930
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$27,532",
+     "num": 27532
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$43,506",
+     "num": 43506
+    }
+   ],
+   "top10": [
+    {
+     "date": "Oct 31, 2025",
+     "amount": "$45,265",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 28, 2025",
+     "amount": "$40,617",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 30, 2026",
+     "amount": "$27,909",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 18, 2026",
+     "amount": "$25,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 9, 2026",
+     "amount": "$25,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 12, 2026",
+     "amount": "$25,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Dec 30, 2025",
+     "amount": "$20,269",
+     "rail": "Rise"
+    },
+    {
+     "date": "Dec 24, 2024",
+     "amount": "$20,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 31, 2026",
+     "amount": "$18,647",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 19:21 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:59 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$5,400",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:00 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:59 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:59 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:59 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:59 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:59 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,071",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "Legends Trading": {
+   "slug": "legends-trading",
+   "firm": "Legends Trading",
+   "website": "thelegendstrading.com",
+   "websiteUrl": "https://thelegendstrading.com",
+   "promo": "",
+   "total": "$5,543,349",
+   "rail": "Rise",
+   "count": "2,496",
+   "average": "$2,221",
+   "largest": "$45,265",
+   "largestDate": "Oct 31, 2025",
+   "latestTime": "Oct 15, 19:21 UTC",
+   "latestAmount": "$1,080",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$448,452",
+     "num": 448452
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$683,523",
+     "num": 683523
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$561,264",
+     "num": 561264
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$430,288",
+     "num": 430288
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$350,662",
+     "num": 350662
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$322,096",
+     "num": 322096
+    },
+    {
+     "month": "May 2026",
+     "amount": "$283,789",
+     "num": 283789
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$229,725",
+     "num": 229725
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$410,269",
+     "num": 410269
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$565,274",
+     "num": 565274
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$466,286",
+     "num": 466286
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$279,407",
+     "num": 279407
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$10,363",
+     "num": 10363
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$12,776",
+     "num": 12776
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$19,998",
+     "num": 19998
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$31,653",
+     "num": 31653
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$24,828",
+     "num": 24828
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$7,200",
+     "num": 7200
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$16,623",
+     "num": 16623
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$14,490",
+     "num": 14490
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$20,808",
+     "num": 20808
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$74,913",
+     "num": 74913
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$8,970",
+     "num": 8970
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$12,102",
+     "num": 12102
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$44,002",
+     "num": 44002
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$18,636",
+     "num": 18636
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$13,893",
+     "num": 13893
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$11,881",
+     "num": 11881
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$43,612",
+     "num": 43612
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$30,345",
+     "num": 30345
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$24,930",
+     "num": 24930
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$27,532",
+     "num": 27532
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$43,506",
+     "num": 43506
+    }
+   ],
+   "top10": [
+    {
+     "date": "Oct 31, 2025",
+     "amount": "$45,265",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 28, 2025",
+     "amount": "$40,617",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 30, 2026",
+     "amount": "$27,909",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 18, 2026",
+     "amount": "$25,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 9, 2026",
+     "amount": "$25,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 12, 2026",
+     "amount": "$25,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Dec 30, 2025",
+     "amount": "$20,269",
+     "rail": "Rise"
+    },
+    {
+     "date": "Dec 24, 2024",
+     "amount": "$20,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 31, 2026",
+     "amount": "$18,647",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 19:21 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:59 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:45 UTC",
+     "amount": "$5,400",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:05 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:00 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:59 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:59 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:59 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:59 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:59 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,071",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 15:28 UTC",
+     "amount": "$1,080",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "toponefutures": {
+   "slug": "toponefutures",
+   "firm": "TopOneFutures",
+   "website": "toponefutures.com",
+   "websiteUrl": "https://toponefutures.com",
+   "promo": "",
+   "total": "$27,522,688",
+   "rail": "Rise",
+   "count": "11,107",
+   "average": "$2,478",
+   "largest": "$47,250",
+   "largestDate": "Feb 23, 2026",
+   "latestTime": "Oct 16, 00:21 UTC",
+   "latestAmount": "$2,250",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$1,509,970",
+     "num": 1509970
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$990,757",
+     "num": 990757
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$719,408",
+     "num": 719408
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$619,580",
+     "num": 619580
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$993,065",
+     "num": 993065
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$897,940",
+     "num": 897940
+    },
+    {
+     "month": "May 2026",
+     "amount": "$810,918",
+     "num": 810918
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$1,040,832",
+     "num": 1040832
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$1,083,707",
+     "num": 1083707
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$978,981",
+     "num": 978981
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$1,073,565",
+     "num": 1073565
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$630,367",
+     "num": 630367
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$58,493",
+     "num": 58493
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$26,781",
+     "num": 26781
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$7,860",
+     "num": 7860
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$1,800",
+     "num": 1800
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$36,990",
+     "num": 36990
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$53,011",
+     "num": 53011
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$53,726",
+     "num": 53726
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$9,867",
+     "num": 9867
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$54,917",
+     "num": 54917
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$51,268",
+     "num": 51268
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$10,350",
+     "num": 10350
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$14,376",
+     "num": 14376
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$104,275",
+     "num": 104275
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$51,985",
+     "num": 51985
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$108,227",
+     "num": 108227
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$47,878",
+     "num": 47878
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$69,465",
+     "num": 69465
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$7,109",
+     "num": 7109
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$49,168",
+     "num": 49168
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$21,253",
+     "num": 21253
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$58,113",
+     "num": 58113
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$40,843",
+     "num": 40843
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$65,982",
+     "num": 65982
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$11,675",
+     "num": 11675
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$4,077",
+     "num": 4077
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$30,216",
+     "num": 30216
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$42,414",
+     "num": 42414
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$39,047",
+     "num": 39047
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$28,151",
+     "num": 28151
+    },
+    {
+     "date": "Oct 16, 2026",
+     "amount": "$6,750",
+     "num": 6750
+    }
+   ],
+   "top10": [
+    {
+     "date": "Feb 23, 2026",
+     "amount": "$47,250",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 17, 2025",
+     "amount": "$37,819",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 15, 2025",
+     "amount": "$32,091",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 13, 2026",
+     "amount": "$31,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 23, 2026",
+     "amount": "$31,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 24, 2025",
+     "amount": "$28,350",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 15, 2025",
+     "amount": "$26,522",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 20, 2026",
+     "amount": "$25,200",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 23, 2025",
+     "amount": "$24,300",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 16, 00:21 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:21 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:21 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:51 UTC",
+     "amount": "$712",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:24 UTC",
+     "amount": "$3,201",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:56 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:28 UTC",
+     "amount": "$792",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:42 UTC",
+     "amount": "$236",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:41 UTC",
+     "amount": "$207",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:40 UTC",
+     "amount": "$244",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:39 UTC",
+     "amount": "$259",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:38 UTC",
+     "amount": "$250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:50 UTC",
+     "amount": "$551",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:40 UTC",
+     "amount": "$2,699",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:40 UTC",
+     "amount": "$2,699",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:39 UTC",
+     "amount": "$2,699",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:16 UTC",
+     "amount": "$862",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:27 UTC",
+     "amount": "$2,699",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:30 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:30 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 07:11 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 04:13 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "TopOneFutures": {
+   "slug": "toponefutures",
+   "firm": "TopOneFutures",
+   "website": "toponefutures.com",
+   "websiteUrl": "https://toponefutures.com",
+   "promo": "",
+   "total": "$27,522,688",
+   "rail": "Rise",
+   "count": "11,107",
+   "average": "$2,478",
+   "largest": "$47,250",
+   "largestDate": "Feb 23, 2026",
+   "latestTime": "Oct 16, 00:21 UTC",
+   "latestAmount": "$2,250",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$1,509,970",
+     "num": 1509970
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$990,757",
+     "num": 990757
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$719,408",
+     "num": 719408
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$619,580",
+     "num": 619580
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$993,065",
+     "num": 993065
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$897,940",
+     "num": 897940
+    },
+    {
+     "month": "May 2026",
+     "amount": "$810,918",
+     "num": 810918
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$1,040,832",
+     "num": 1040832
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$1,083,707",
+     "num": 1083707
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$978,981",
+     "num": 978981
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$1,073,565",
+     "num": 1073565
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$630,367",
+     "num": 630367
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$58,493",
+     "num": 58493
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$26,781",
+     "num": 26781
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$7,860",
+     "num": 7860
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$1,800",
+     "num": 1800
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$36,990",
+     "num": 36990
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$53,011",
+     "num": 53011
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$53,726",
+     "num": 53726
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$9,867",
+     "num": 9867
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$54,917",
+     "num": 54917
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$51,268",
+     "num": 51268
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$10,350",
+     "num": 10350
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$14,376",
+     "num": 14376
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$104,275",
+     "num": 104275
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$51,985",
+     "num": 51985
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$108,227",
+     "num": 108227
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$47,878",
+     "num": 47878
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$69,465",
+     "num": 69465
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$7,109",
+     "num": 7109
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$49,168",
+     "num": 49168
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$21,253",
+     "num": 21253
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$58,113",
+     "num": 58113
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$40,843",
+     "num": 40843
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$65,982",
+     "num": 65982
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$11,675",
+     "num": 11675
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$4,077",
+     "num": 4077
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$30,216",
+     "num": 30216
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$42,414",
+     "num": 42414
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$39,047",
+     "num": 39047
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$28,151",
+     "num": 28151
+    },
+    {
+     "date": "Oct 16, 2026",
+     "amount": "$6,750",
+     "num": 6750
+    }
+   ],
+   "top10": [
+    {
+     "date": "Feb 23, 2026",
+     "amount": "$47,250",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 17, 2025",
+     "amount": "$37,819",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 15, 2025",
+     "amount": "$32,091",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 13, 2026",
+     "amount": "$31,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 23, 2026",
+     "amount": "$31,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 24, 2025",
+     "amount": "$28,350",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 15, 2025",
+     "amount": "$26,522",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 20, 2026",
+     "amount": "$25,200",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 23, 2025",
+     "amount": "$24,300",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 16, 00:21 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:21 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 16, 00:21 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:51 UTC",
+     "amount": "$712",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 23:24 UTC",
+     "amount": "$3,201",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:56 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:28 UTC",
+     "amount": "$792",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 22:27 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:42 UTC",
+     "amount": "$236",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:41 UTC",
+     "amount": "$207",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:40 UTC",
+     "amount": "$244",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:39 UTC",
+     "amount": "$259",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:38 UTC",
+     "amount": "$250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:50 UTC",
+     "amount": "$551",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:40 UTC",
+     "amount": "$2,699",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:40 UTC",
+     "amount": "$2,699",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 18:39 UTC",
+     "amount": "$2,699",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:16 UTC",
+     "amount": "$862",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:27 UTC",
+     "amount": "$2,699",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:30 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 12:30 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 07:11 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 04:13 UTC",
+     "amount": "$900",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "aquafunded": {
+   "slug": "aquafunded",
+   "firm": "AquaFunded",
+   "website": "aquafunded.com",
+   "websiteUrl": "https://aquafunded.com",
+   "promo": "",
+   "total": "$7,312,246",
+   "rail": "Rise",
+   "count": "2,799",
+   "average": "$2,612",
+   "largest": "$61,371",
+   "largestDate": "Feb 7, 2024",
+   "latestTime": "Oct 15, 17:03 UTC",
+   "latestAmount": "$3,434",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$293,118",
+     "num": 293118
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$351,492",
+     "num": 351492
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$350,664",
+     "num": 350664
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$231,011",
+     "num": 231011
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$280,284",
+     "num": 280284
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$342,709",
+     "num": 342709
+    },
+    {
+     "month": "May 2026",
+     "amount": "$289,941",
+     "num": 289941
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$247,750",
+     "num": 247750
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$280,022",
+     "num": 280022
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$226,918",
+     "num": 226918
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$234,680",
+     "num": 234680
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$101,965",
+     "num": 101965
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$2,964",
+     "num": 2964
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$1,750",
+     "num": 1750
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$3,007",
+     "num": 3007
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$5,854",
+     "num": 5854
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$492",
+     "num": 492
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$28,635",
+     "num": 28635
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$1,880",
+     "num": 1880
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$15,066",
+     "num": 15066
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$26,724",
+     "num": 26724
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$31,483",
+     "num": 31483
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$19,794",
+     "num": 19794
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$1,657",
+     "num": 1657
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$922",
+     "num": 922
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$5,749",
+     "num": 5749
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$8,468",
+     "num": 8468
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$11,983",
+     "num": 11983
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$8,770",
+     "num": 8770
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$14,120",
+     "num": 14120
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$8,923",
+     "num": 8923
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$1,249",
+     "num": 1249
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$20,330",
+     "num": 20330
+    }
+   ],
+   "top10": [
+    {
+     "date": "Feb 7, 2024",
+     "amount": "$61,371",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 30, 2024",
+     "amount": "$59,219",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 1, 2025",
+     "amount": "$41,990",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 22, 2024",
+     "amount": "$29,533",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 23, 2025",
+     "amount": "$27,616",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 10, 2024",
+     "amount": "$22,237",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 4, 2024",
+     "amount": "$21,632",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 5, 2025",
+     "amount": "$20,176",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 5, 2024",
+     "amount": "$20,092",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 17:03 UTC",
+     "amount": "$3,434",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:03 UTC",
+     "amount": "$5,293",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:03 UTC",
+     "amount": "$4,613",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:03 UTC",
+     "amount": "$635",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:06 UTC",
+     "amount": "$3,706",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:52 UTC",
+     "amount": "$1,300",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:52 UTC",
+     "amount": "$1,348",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 09:50 UTC",
+     "amount": "$1,111",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 09:50 UTC",
+     "amount": "$138",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "AquaFunded": {
+   "slug": "aquafunded",
+   "firm": "AquaFunded",
+   "website": "aquafunded.com",
+   "websiteUrl": "https://aquafunded.com",
+   "promo": "",
+   "total": "$7,312,246",
+   "rail": "Rise",
+   "count": "2,799",
+   "average": "$2,612",
+   "largest": "$61,371",
+   "largestDate": "Feb 7, 2024",
+   "latestTime": "Oct 15, 17:03 UTC",
+   "latestAmount": "$3,434",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$293,118",
+     "num": 293118
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$351,492",
+     "num": 351492
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$350,664",
+     "num": 350664
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$231,011",
+     "num": 231011
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$280,284",
+     "num": 280284
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$342,709",
+     "num": 342709
+    },
+    {
+     "month": "May 2026",
+     "amount": "$289,941",
+     "num": 289941
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$247,750",
+     "num": 247750
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$280,022",
+     "num": 280022
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$226,918",
+     "num": 226918
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$234,680",
+     "num": 234680
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$101,965",
+     "num": 101965
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$2,964",
+     "num": 2964
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$1,750",
+     "num": 1750
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$3,007",
+     "num": 3007
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$5,854",
+     "num": 5854
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$492",
+     "num": 492
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$28,635",
+     "num": 28635
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$1,880",
+     "num": 1880
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$15,066",
+     "num": 15066
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$26,724",
+     "num": 26724
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$31,483",
+     "num": 31483
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$19,794",
+     "num": 19794
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$1,657",
+     "num": 1657
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$922",
+     "num": 922
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$5,749",
+     "num": 5749
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$8,468",
+     "num": 8468
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$11,983",
+     "num": 11983
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$8,770",
+     "num": 8770
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$14,120",
+     "num": 14120
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$8,923",
+     "num": 8923
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$1,249",
+     "num": 1249
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$20,330",
+     "num": 20330
+    }
+   ],
+   "top10": [
+    {
+     "date": "Feb 7, 2024",
+     "amount": "$61,371",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 30, 2024",
+     "amount": "$59,219",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 1, 2025",
+     "amount": "$41,990",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 22, 2024",
+     "amount": "$29,533",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 23, 2025",
+     "amount": "$27,616",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 10, 2024",
+     "amount": "$22,237",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 4, 2024",
+     "amount": "$21,632",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 5, 2025",
+     "amount": "$20,176",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 5, 2024",
+     "amount": "$20,092",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 17:03 UTC",
+     "amount": "$3,434",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:03 UTC",
+     "amount": "$5,293",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:03 UTC",
+     "amount": "$4,613",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 17:03 UTC",
+     "amount": "$635",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 13:06 UTC",
+     "amount": "$3,706",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:52 UTC",
+     "amount": "$1,300",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:52 UTC",
+     "amount": "$1,348",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 09:50 UTC",
+     "amount": "$1,111",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 09:50 UTC",
+     "amount": "$138",
      "rail": "Rise"
     }
    ]
@@ -32757,782 +35781,6 @@
     }
    ]
   },
-  "holaprime": {
-   "slug": "holaprime",
-   "firm": "HolaPrime",
-   "website": "holaprime.com",
-   "websiteUrl": "https://holaprime.com",
-   "promo": "",
-   "total": "$9,861,599",
-   "rail": "Rise + Direct Crypto",
-   "count": "5,712",
-   "average": "$1,726",
-   "largest": "$41,976",
-   "largestDate": "Aug 17, 2026",
-   "latestTime": "Oct 15, 22:33 UTC",
-   "latestAmount": "$875",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$133,488",
-     "num": 133488
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$156,848",
-     "num": 156848
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$123,163",
-     "num": 123163
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$218,828",
-     "num": 218828
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$386,042",
-     "num": 386042
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$788,734",
-     "num": 788734
-    },
-    {
-     "month": "May 2026",
-     "amount": "$1,069,475",
-     "num": 1069475
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$1,834,432",
-     "num": 1834432
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$1,663,021",
-     "num": 1663021
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$1,141,198",
-     "num": 1141198
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$1,007,168",
-     "num": 1007168
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$432,093",
-     "num": 432093
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$49,136",
-     "num": 49136
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$19,507",
-     "num": 19507
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$21,509",
-     "num": 21509
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$21,495",
-     "num": 21495
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$34,773",
-     "num": 34773
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$34,031",
-     "num": 34031
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$31,517",
-     "num": 31517
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$2,040",
-     "num": 2040
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$38,210",
-     "num": 38210
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$43,597",
-     "num": 43597
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$45,778",
-     "num": 45778
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$40,541",
-     "num": 40541
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$34,771",
-     "num": 34771
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$2,738",
-     "num": 2738
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$4,762",
-     "num": 4762
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$64,286",
-     "num": 64286
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$33,328",
-     "num": 33328
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$38,643",
-     "num": 38643
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$41,001",
-     "num": 41001
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$52,885",
-     "num": 52885
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$284",
-     "num": 284
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$24,961",
-     "num": 24961
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$33,037",
-     "num": 33037
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$30,101",
-     "num": 30101
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$30,756",
-     "num": 30756
-    }
-   ],
-   "top10": [
-    {
-     "date": "Aug 17, 2026",
-     "amount": "$41,976",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 5, 2026",
-     "amount": "$35,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 6, 2025",
-     "amount": "$29,248",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 4, 2025",
-     "amount": "$17,975",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$17,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 7, 2026",
-     "amount": "$14,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 11, 2026",
-     "amount": "$13,205",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 28, 2026",
-     "amount": "$12,713",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; May 5, 2026",
-     "amount": "$12,166",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 22:33 UTC",
-     "amount": "$875",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:29 UTC",
-     "amount": "$875",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$875",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:25 UTC",
-     "amount": "$875",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:19 UTC",
-     "amount": "$1,543",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:45 UTC",
-     "amount": "$815",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:10 UTC",
-     "amount": "$709",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:46 UTC",
-     "amount": "$1,253",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:08 UTC",
-     "amount": "$1,015",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 14:55 UTC",
-     "amount": "$2,334",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 14:53 UTC",
-     "amount": "$3,634",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:23 UTC",
-     "amount": "$912",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 11:38 UTC",
-     "amount": "$62",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 11:03 UTC",
-     "amount": "$513",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:21 UTC",
-     "amount": "$951",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:51 UTC",
-     "amount": "$566",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 09:48 UTC",
-     "amount": "$90",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:57 UTC",
-     "amount": "$3,510",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:55 UTC",
-     "amount": "$3,510",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 05:46 UTC",
-     "amount": "$1,792",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:51 UTC",
-     "amount": "$2,508",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:45 UTC",
-     "amount": "$79",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:32 UTC",
-     "amount": "$118",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 00:43 UTC",
-     "amount": "$1,341",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 23:45 UTC",
-     "amount": "$2,387",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 14, 23:13 UTC",
-     "amount": "$150",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 14, 23:02 UTC",
-     "amount": "$109",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "HolaPrime": {
-   "slug": "holaprime",
-   "firm": "HolaPrime",
-   "website": "holaprime.com",
-   "websiteUrl": "https://holaprime.com",
-   "promo": "",
-   "total": "$9,861,599",
-   "rail": "Rise + Direct Crypto",
-   "count": "5,712",
-   "average": "$1,726",
-   "largest": "$41,976",
-   "largestDate": "Aug 17, 2026",
-   "latestTime": "Oct 15, 22:33 UTC",
-   "latestAmount": "$875",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$133,488",
-     "num": 133488
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$156,848",
-     "num": 156848
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$123,163",
-     "num": 123163
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$218,828",
-     "num": 218828
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$386,042",
-     "num": 386042
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$788,734",
-     "num": 788734
-    },
-    {
-     "month": "May 2026",
-     "amount": "$1,069,475",
-     "num": 1069475
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$1,834,432",
-     "num": 1834432
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$1,663,021",
-     "num": 1663021
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$1,141,198",
-     "num": 1141198
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$1,007,168",
-     "num": 1007168
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$432,093",
-     "num": 432093
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$49,136",
-     "num": 49136
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$19,507",
-     "num": 19507
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$21,509",
-     "num": 21509
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$21,495",
-     "num": 21495
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$34,773",
-     "num": 34773
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$34,031",
-     "num": 34031
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$31,517",
-     "num": 31517
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$2,040",
-     "num": 2040
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$38,210",
-     "num": 38210
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$43,597",
-     "num": 43597
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$45,778",
-     "num": 45778
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$40,541",
-     "num": 40541
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$34,771",
-     "num": 34771
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$2,738",
-     "num": 2738
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$4,762",
-     "num": 4762
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$64,286",
-     "num": 64286
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$33,328",
-     "num": 33328
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$38,643",
-     "num": 38643
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$41,001",
-     "num": 41001
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$52,885",
-     "num": 52885
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$284",
-     "num": 284
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$24,961",
-     "num": 24961
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$33,037",
-     "num": 33037
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$30,101",
-     "num": 30101
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$30,756",
-     "num": 30756
-    }
-   ],
-   "top10": [
-    {
-     "date": "Aug 17, 2026",
-     "amount": "$41,976",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 5, 2026",
-     "amount": "$35,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 6, 2025",
-     "amount": "$29,248",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 4, 2025",
-     "amount": "$17,975",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$17,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 7, 2026",
-     "amount": "$14,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 11, 2026",
-     "amount": "$13,205",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 28, 2026",
-     "amount": "$12,713",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; May 5, 2026",
-     "amount": "$12,166",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 22:33 UTC",
-     "amount": "$875",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:29 UTC",
-     "amount": "$875",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$875",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:25 UTC",
-     "amount": "$875",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:19 UTC",
-     "amount": "$1,543",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 21:45 UTC",
-     "amount": "$815",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:10 UTC",
-     "amount": "$709",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:46 UTC",
-     "amount": "$1,253",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:08 UTC",
-     "amount": "$1,015",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 14:55 UTC",
-     "amount": "$2,334",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 14:53 UTC",
-     "amount": "$3,634",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:23 UTC",
-     "amount": "$912",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 11:38 UTC",
-     "amount": "$62",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 11:03 UTC",
-     "amount": "$513",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:21 UTC",
-     "amount": "$951",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:51 UTC",
-     "amount": "$566",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 09:48 UTC",
-     "amount": "$90",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:57 UTC",
-     "amount": "$3,510",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:55 UTC",
-     "amount": "$3,510",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 05:46 UTC",
-     "amount": "$1,792",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:51 UTC",
-     "amount": "$2,508",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:45 UTC",
-     "amount": "$79",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:32 UTC",
-     "amount": "$118",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 00:43 UTC",
-     "amount": "$1,341",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 23:45 UTC",
-     "amount": "$2,387",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 14, 23:13 UTC",
-     "amount": "$150",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 14, 23:02 UTC",
-     "amount": "$109",
-     "rail": "Rise"
-    }
-   ]
-  },
   "phidiaspropfirm": {
    "slug": "phidiaspropfirm",
    "firm": "PhidiasPropFirm",
@@ -34109,2264 +36357,6 @@
     }
    ]
   },
-  "toponefutures": {
-   "slug": "toponefutures",
-   "firm": "TopOneFutures",
-   "website": "toponefutures.com",
-   "websiteUrl": "https://toponefutures.com",
-   "promo": "",
-   "total": "$27,522,688",
-   "rail": "Rise",
-   "count": "11,107",
-   "average": "$2,478",
-   "largest": "$47,250",
-   "largestDate": "Feb 23, 2026",
-   "latestTime": "Oct 16, 00:21 UTC",
-   "latestAmount": "$2,250",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$1,509,970",
-     "num": 1509970
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$990,757",
-     "num": 990757
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$719,408",
-     "num": 719408
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$619,580",
-     "num": 619580
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$993,065",
-     "num": 993065
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$897,940",
-     "num": 897940
-    },
-    {
-     "month": "May 2026",
-     "amount": "$810,918",
-     "num": 810918
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$1,040,832",
-     "num": 1040832
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$1,083,707",
-     "num": 1083707
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$978,981",
-     "num": 978981
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$1,073,565",
-     "num": 1073565
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$630,367",
-     "num": 630367
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$58,493",
-     "num": 58493
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$26,781",
-     "num": 26781
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$7,860",
-     "num": 7860
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$1,800",
-     "num": 1800
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$36,990",
-     "num": 36990
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$53,011",
-     "num": 53011
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$53,726",
-     "num": 53726
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$9,867",
-     "num": 9867
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$54,917",
-     "num": 54917
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$51,268",
-     "num": 51268
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$10,350",
-     "num": 10350
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$14,376",
-     "num": 14376
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$104,275",
-     "num": 104275
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$51,985",
-     "num": 51985
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$108,227",
-     "num": 108227
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$47,878",
-     "num": 47878
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$69,465",
-     "num": 69465
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$7,109",
-     "num": 7109
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$49,168",
-     "num": 49168
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$21,253",
-     "num": 21253
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$58,113",
-     "num": 58113
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$40,843",
-     "num": 40843
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$65,982",
-     "num": 65982
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$11,675",
-     "num": 11675
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$4,077",
-     "num": 4077
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$30,216",
-     "num": 30216
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$42,414",
-     "num": 42414
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$39,047",
-     "num": 39047
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$28,151",
-     "num": 28151
-    },
-    {
-     "date": "Oct 16, 2026",
-     "amount": "$6,750",
-     "num": 6750
-    }
-   ],
-   "top10": [
-    {
-     "date": "Feb 23, 2026",
-     "amount": "$47,250",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 17, 2025",
-     "amount": "$37,819",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 15, 2025",
-     "amount": "$32,091",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 13, 2026",
-     "amount": "$31,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 23, 2026",
-     "amount": "$31,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 24, 2025",
-     "amount": "$28,350",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 15, 2025",
-     "amount": "$26,522",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 20, 2026",
-     "amount": "$25,200",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 23, 2025",
-     "amount": "$24,300",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:51 UTC",
-     "amount": "$712",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:24 UTC",
-     "amount": "$3,201",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:56 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:28 UTC",
-     "amount": "$792",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:42 UTC",
-     "amount": "$236",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:41 UTC",
-     "amount": "$207",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:40 UTC",
-     "amount": "$244",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:39 UTC",
-     "amount": "$259",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:38 UTC",
-     "amount": "$250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:50 UTC",
-     "amount": "$551",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:40 UTC",
-     "amount": "$2,699",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:40 UTC",
-     "amount": "$2,699",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:39 UTC",
-     "amount": "$2,699",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:16 UTC",
-     "amount": "$862",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:27 UTC",
-     "amount": "$2,699",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:30 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:30 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 07:11 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 04:13 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "TopOneFutures": {
-   "slug": "toponefutures",
-   "firm": "TopOneFutures",
-   "website": "toponefutures.com",
-   "websiteUrl": "https://toponefutures.com",
-   "promo": "",
-   "total": "$27,522,688",
-   "rail": "Rise",
-   "count": "11,107",
-   "average": "$2,478",
-   "largest": "$47,250",
-   "largestDate": "Feb 23, 2026",
-   "latestTime": "Oct 16, 00:21 UTC",
-   "latestAmount": "$2,250",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$1,509,970",
-     "num": 1509970
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$990,757",
-     "num": 990757
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$719,408",
-     "num": 719408
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$619,580",
-     "num": 619580
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$993,065",
-     "num": 993065
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$897,940",
-     "num": 897940
-    },
-    {
-     "month": "May 2026",
-     "amount": "$810,918",
-     "num": 810918
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$1,040,832",
-     "num": 1040832
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$1,083,707",
-     "num": 1083707
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$978,981",
-     "num": 978981
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$1,073,565",
-     "num": 1073565
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$630,367",
-     "num": 630367
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$58,493",
-     "num": 58493
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$26,781",
-     "num": 26781
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$7,860",
-     "num": 7860
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$1,800",
-     "num": 1800
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$36,990",
-     "num": 36990
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$53,011",
-     "num": 53011
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$53,726",
-     "num": 53726
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$9,867",
-     "num": 9867
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$54,917",
-     "num": 54917
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$51,268",
-     "num": 51268
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$10,350",
-     "num": 10350
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$14,376",
-     "num": 14376
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$104,275",
-     "num": 104275
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$51,985",
-     "num": 51985
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$108,227",
-     "num": 108227
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$47,878",
-     "num": 47878
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$69,465",
-     "num": 69465
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$7,109",
-     "num": 7109
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$49,168",
-     "num": 49168
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$21,253",
-     "num": 21253
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$58,113",
-     "num": 58113
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$40,843",
-     "num": 40843
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$65,982",
-     "num": 65982
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$11,675",
-     "num": 11675
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$4,077",
-     "num": 4077
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$30,216",
-     "num": 30216
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$42,414",
-     "num": 42414
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$39,047",
-     "num": 39047
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$28,151",
-     "num": 28151
-    },
-    {
-     "date": "Oct 16, 2026",
-     "amount": "$6,750",
-     "num": 6750
-    }
-   ],
-   "top10": [
-    {
-     "date": "Feb 23, 2026",
-     "amount": "$47,250",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 17, 2025",
-     "amount": "$37,819",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 15, 2025",
-     "amount": "$32,091",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 13, 2026",
-     "amount": "$31,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 23, 2026",
-     "amount": "$31,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 24, 2025",
-     "amount": "$28,350",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 15, 2025",
-     "amount": "$26,522",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 20, 2026",
-     "amount": "$25,200",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 23, 2025",
-     "amount": "$24,300",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 16, 00:21 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:51 UTC",
-     "amount": "$712",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 23:24 UTC",
-     "amount": "$3,201",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:56 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:28 UTC",
-     "amount": "$792",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 22:27 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:42 UTC",
-     "amount": "$236",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:41 UTC",
-     "amount": "$207",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:40 UTC",
-     "amount": "$244",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:39 UTC",
-     "amount": "$259",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:38 UTC",
-     "amount": "$250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:50 UTC",
-     "amount": "$551",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:40 UTC",
-     "amount": "$2,699",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:40 UTC",
-     "amount": "$2,699",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:39 UTC",
-     "amount": "$2,699",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:16 UTC",
-     "amount": "$862",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:27 UTC",
-     "amount": "$2,699",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:30 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 12:30 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 07:11 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 04:13 UTC",
-     "amount": "$900",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "alphafutures": {
-   "slug": "alphafutures",
-   "firm": "AlphaFutures",
-   "website": "alpha-futures.com",
-   "websiteUrl": "https://alpha-futures.com",
-   "promo": "",
-   "total": "$32,428,915",
-   "rail": "Rise",
-   "count": "15,529",
-   "average": "$2,088",
-   "largest": "$61,280",
-   "largestDate": "Dec 11, 2025",
-   "latestTime": "Oct 15, 16:45 UTC",
-   "latestAmount": "$432",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$1,277,100",
-     "num": 1277100
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$1,685,368",
-     "num": 1685368
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$2,466,134",
-     "num": 2466134
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$2,006,067",
-     "num": 2006067
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$2,571,553",
-     "num": 2571553
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$2,309,085",
-     "num": 2309085
-    },
-    {
-     "month": "May 2026",
-     "amount": "$4,717,276",
-     "num": 4717276
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$7,139,564",
-     "num": 7139564
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$2,562,772",
-     "num": 2562772
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$744,872",
-     "num": 744872
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$677,272",
-     "num": 677272
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$310,792",
-     "num": 310792
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$20,462",
-     "num": 20462
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$26,617",
-     "num": 26617
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$48,995",
-     "num": 48995
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$64,288",
-     "num": 64288
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$34,932",
-     "num": 34932
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$11,909",
-     "num": 11909
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$9,781",
-     "num": 9781
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$26,375",
-     "num": 26375
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$27,394",
-     "num": 27394
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$28,427",
-     "num": 28427
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$24,299",
-     "num": 24299
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$29,467",
-     "num": 29467
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$31,570",
-     "num": 31570
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$25,607",
-     "num": 25607
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$16,522",
-     "num": 16522
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$30,277",
-     "num": 30277
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$49,656",
-     "num": 49656
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$31,008",
-     "num": 31008
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$43,959",
-     "num": 43959
-    }
-   ],
-   "top10": [
-    {
-     "date": "Dec 11, 2025",
-     "amount": "$61,280",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 16, 2026",
-     "amount": "$57,560",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 6, 2026",
-     "amount": "$55,854",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 3, 2025",
-     "amount": "$41,416",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 7, 2026",
-     "amount": "$40,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 2, 2026",
-     "amount": "$40,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 23, 2026",
-     "amount": "$40,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 20, 2026",
-     "amount": "$40,223",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 25, 2026",
-     "amount": "$39,453",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 16:45 UTC",
-     "amount": "$432",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:43 UTC",
-     "amount": "$105",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:14 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:48 UTC",
-     "amount": "$990",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:46 UTC",
-     "amount": "$8,100",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:45 UTC",
-     "amount": "$429",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:45 UTC",
-     "amount": "$774",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:44 UTC",
-     "amount": "$448",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:43 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:40 UTC",
-     "amount": "$1,260",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:40 UTC",
-     "amount": "$1,260",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:39 UTC",
-     "amount": "$1,260",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:38 UTC",
-     "amount": "$1,260",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:37 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:37 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:36 UTC",
-     "amount": "$2,354",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:35 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$594",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:33 UTC",
-     "amount": "$767",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:33 UTC",
-     "amount": "$876",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:54 UTC",
-     "amount": "$1,000",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "AlphaFutures": {
-   "slug": "alphafutures",
-   "firm": "AlphaFutures",
-   "website": "alpha-futures.com",
-   "websiteUrl": "https://alpha-futures.com",
-   "promo": "",
-   "total": "$32,428,915",
-   "rail": "Rise",
-   "count": "15,529",
-   "average": "$2,088",
-   "largest": "$61,280",
-   "largestDate": "Dec 11, 2025",
-   "latestTime": "Oct 15, 16:45 UTC",
-   "latestAmount": "$432",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$1,277,100",
-     "num": 1277100
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$1,685,368",
-     "num": 1685368
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$2,466,134",
-     "num": 2466134
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$2,006,067",
-     "num": 2006067
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$2,571,553",
-     "num": 2571553
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$2,309,085",
-     "num": 2309085
-    },
-    {
-     "month": "May 2026",
-     "amount": "$4,717,276",
-     "num": 4717276
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$7,139,564",
-     "num": 7139564
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$2,562,772",
-     "num": 2562772
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$744,872",
-     "num": 744872
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$677,272",
-     "num": 677272
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$310,792",
-     "num": 310792
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$20,462",
-     "num": 20462
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$26,617",
-     "num": 26617
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$48,995",
-     "num": 48995
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$64,288",
-     "num": 64288
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$34,932",
-     "num": 34932
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$11,909",
-     "num": 11909
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$9,781",
-     "num": 9781
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$26,375",
-     "num": 26375
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$27,394",
-     "num": 27394
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$28,427",
-     "num": 28427
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$24,299",
-     "num": 24299
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$29,467",
-     "num": 29467
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$31,570",
-     "num": 31570
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$25,607",
-     "num": 25607
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$16,522",
-     "num": 16522
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$30,277",
-     "num": 30277
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$49,656",
-     "num": 49656
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$31,008",
-     "num": 31008
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$43,959",
-     "num": 43959
-    }
-   ],
-   "top10": [
-    {
-     "date": "Dec 11, 2025",
-     "amount": "$61,280",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 16, 2026",
-     "amount": "$57,560",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 6, 2026",
-     "amount": "$55,854",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 3, 2025",
-     "amount": "$41,416",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 7, 2026",
-     "amount": "$40,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 2, 2026",
-     "amount": "$40,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 23, 2026",
-     "amount": "$40,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 20, 2026",
-     "amount": "$40,223",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 25, 2026",
-     "amount": "$39,453",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 16:45 UTC",
-     "amount": "$432",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:43 UTC",
-     "amount": "$105",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:14 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:48 UTC",
-     "amount": "$990",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:46 UTC",
-     "amount": "$8,100",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:45 UTC",
-     "amount": "$429",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:45 UTC",
-     "amount": "$774",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:44 UTC",
-     "amount": "$448",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:43 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:40 UTC",
-     "amount": "$1,260",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:40 UTC",
-     "amount": "$1,260",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:39 UTC",
-     "amount": "$1,260",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:38 UTC",
-     "amount": "$1,260",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:37 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:37 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:36 UTC",
-     "amount": "$2,354",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:35 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:34 UTC",
-     "amount": "$594",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:33 UTC",
-     "amount": "$767",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 13:33 UTC",
-     "amount": "$876",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 10:54 UTC",
-     "amount": "$1,000",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "legends-trading": {
-   "slug": "legends-trading",
-   "firm": "Legends Trading",
-   "website": "thelegendstrading.com",
-   "websiteUrl": "https://thelegendstrading.com",
-   "promo": "",
-   "total": "$5,543,349",
-   "rail": "Rise",
-   "count": "2,496",
-   "average": "$2,221",
-   "largest": "$45,265",
-   "largestDate": "Oct 31, 2025",
-   "latestTime": "Oct 15, 19:21 UTC",
-   "latestAmount": "$1,080",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$448,452",
-     "num": 448452
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$683,523",
-     "num": 683523
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$561,264",
-     "num": 561264
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$430,288",
-     "num": 430288
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$350,662",
-     "num": 350662
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$322,096",
-     "num": 322096
-    },
-    {
-     "month": "May 2026",
-     "amount": "$283,789",
-     "num": 283789
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$229,725",
-     "num": 229725
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$410,269",
-     "num": 410269
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$565,274",
-     "num": 565274
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$466,286",
-     "num": 466286
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$279,407",
-     "num": 279407
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$10,363",
-     "num": 10363
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$12,776",
-     "num": 12776
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$19,998",
-     "num": 19998
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$31,653",
-     "num": 31653
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$24,828",
-     "num": 24828
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$7,200",
-     "num": 7200
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$16,623",
-     "num": 16623
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$14,490",
-     "num": 14490
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$20,808",
-     "num": 20808
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$74,913",
-     "num": 74913
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$8,970",
-     "num": 8970
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$12,102",
-     "num": 12102
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$44,002",
-     "num": 44002
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$18,636",
-     "num": 18636
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$13,893",
-     "num": 13893
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$11,881",
-     "num": 11881
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$43,612",
-     "num": 43612
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$30,345",
-     "num": 30345
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$24,930",
-     "num": 24930
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$27,532",
-     "num": 27532
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$43,506",
-     "num": 43506
-    }
-   ],
-   "top10": [
-    {
-     "date": "Oct 31, 2025",
-     "amount": "$45,265",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 28, 2025",
-     "amount": "$40,617",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 30, 2026",
-     "amount": "$27,909",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 18, 2026",
-     "amount": "$25,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 9, 2026",
-     "amount": "$25,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 12, 2026",
-     "amount": "$25,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Dec 30, 2025",
-     "amount": "$20,269",
-     "rail": "Rise"
-    },
-    {
-     "date": "Dec 24, 2024",
-     "amount": "$20,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 31, 2026",
-     "amount": "$18,647",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 19:21 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:59 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$5,400",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:00 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:59 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:59 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:59 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:59 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:59 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,071",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "Legends Trading": {
-   "slug": "legends-trading",
-   "firm": "Legends Trading",
-   "website": "thelegendstrading.com",
-   "websiteUrl": "https://thelegendstrading.com",
-   "promo": "",
-   "total": "$5,543,349",
-   "rail": "Rise",
-   "count": "2,496",
-   "average": "$2,221",
-   "largest": "$45,265",
-   "largestDate": "Oct 31, 2025",
-   "latestTime": "Oct 15, 19:21 UTC",
-   "latestAmount": "$1,080",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$448,452",
-     "num": 448452
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$683,523",
-     "num": 683523
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$561,264",
-     "num": 561264
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$430,288",
-     "num": 430288
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$350,662",
-     "num": 350662
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$322,096",
-     "num": 322096
-    },
-    {
-     "month": "May 2026",
-     "amount": "$283,789",
-     "num": 283789
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$229,725",
-     "num": 229725
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$410,269",
-     "num": 410269
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$565,274",
-     "num": 565274
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$466,286",
-     "num": 466286
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$279,407",
-     "num": 279407
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$10,363",
-     "num": 10363
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$12,776",
-     "num": 12776
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$19,998",
-     "num": 19998
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$31,653",
-     "num": 31653
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$24,828",
-     "num": 24828
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$7,200",
-     "num": 7200
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$16,623",
-     "num": 16623
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$14,490",
-     "num": 14490
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$20,808",
-     "num": 20808
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$74,913",
-     "num": 74913
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$8,970",
-     "num": 8970
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$12,102",
-     "num": 12102
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$44,002",
-     "num": 44002
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$18,636",
-     "num": 18636
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$13,893",
-     "num": 13893
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$11,881",
-     "num": 11881
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$43,612",
-     "num": 43612
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$30,345",
-     "num": 30345
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$24,930",
-     "num": 24930
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$27,532",
-     "num": 27532
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$43,506",
-     "num": 43506
-    }
-   ],
-   "top10": [
-    {
-     "date": "Oct 31, 2025",
-     "amount": "$45,265",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 28, 2025",
-     "amount": "$40,617",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 30, 2026",
-     "amount": "$27,909",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 18, 2026",
-     "amount": "$25,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 9, 2026",
-     "amount": "$25,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 12, 2026",
-     "amount": "$25,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Dec 30, 2025",
-     "amount": "$20,269",
-     "rail": "Rise"
-    },
-    {
-     "date": "Dec 24, 2024",
-     "amount": "$20,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 31, 2026",
-     "amount": "$18,647",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 19:21 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 18:59 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:45 UTC",
-     "amount": "$5,400",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:05 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 17:00 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:59 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:59 UTC",
-     "amount": "$1,800",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:59 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:59 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:59 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,071",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 15:28 UTC",
-     "amount": "$1,080",
-     "rail": "Rise"
-    }
-   ]
-  },
   "goatfundedfutures": {
    "slug": "goatfundedfutures",
    "firm": "GoatFundedFutures",
@@ -36929,6 +36919,3226 @@
     {
      "time": "Oct 14, 04:38 UTC",
      "amount": "$1,552",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "orionfunded": {
+   "slug": "orionfunded",
+   "firm": "OrionFunded",
+   "website": "orionfunded.com",
+   "websiteUrl": "https://orionfunded.com",
+   "promo": "",
+   "total": "$4,290,669",
+   "rail": "Rise",
+   "count": "3,191",
+   "average": "$1,345",
+   "largest": "$20,012",
+   "largestDate": "Jul 30, 2025",
+   "latestTime": "Oct 15, 06:24 UTC",
+   "latestAmount": "$566",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$172,686",
+     "num": 172686
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$250,271",
+     "num": 250271
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$436,224",
+     "num": 436224
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$364,168",
+     "num": 364168
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$499,856",
+     "num": 499856
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$597,328",
+     "num": 597328
+    },
+    {
+     "month": "May 2026",
+     "amount": "$441,667",
+     "num": 441667
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$253,608",
+     "num": 253608
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$236,350",
+     "num": 236350
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$195,802",
+     "num": 195802
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$208,752",
+     "num": 208752
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$120,757",
+     "num": 120757
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$3,567",
+     "num": 3567
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$23,896",
+     "num": 23896
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$3,629",
+     "num": 3629
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$8,039",
+     "num": 8039
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$12,888",
+     "num": 12888
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$3,657",
+     "num": 3657
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$5,545",
+     "num": 5545
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$4,441",
+     "num": 4441
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$9,724",
+     "num": 9724
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$8,304",
+     "num": 8304
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$2,681",
+     "num": 2681
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$8,424",
+     "num": 8424
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$10,591",
+     "num": 10591
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$32,263",
+     "num": 32263
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$6,947",
+     "num": 6947
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$10,031",
+     "num": 10031
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$20,562",
+     "num": 20562
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$10,768",
+     "num": 10768
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$1,749",
+     "num": 1749
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$8,360",
+     "num": 8360
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$3,866",
+     "num": 3866
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$4,514",
+     "num": 4514
+    }
+   ],
+   "top10": [
+    {
+     "date": "Jul 30, 2025",
+     "amount": "$20,012",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 12, 2025",
+     "amount": "$19,124",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 6, 2026",
+     "amount": "$16,450",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 16, 2026",
+     "amount": "$16,319",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 28, 2026",
+     "amount": "$15,691",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 11, 2026",
+     "amount": "$14,984",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 30, 2026",
+     "amount": "$13,738",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 6, 2026",
+     "amount": "$12,987",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 15, 2025",
+     "amount": "$12,700",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 06:24 UTC",
+     "amount": "$566",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:21 UTC",
+     "amount": "$142",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:21 UTC",
+     "amount": "$57",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:21 UTC",
+     "amount": "$330",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:20 UTC",
+     "amount": "$88",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:20 UTC",
+     "amount": "$1,729",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:20 UTC",
+     "amount": "$1,602",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 06:48 UTC",
+     "amount": "$173",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 06:48 UTC",
+     "amount": "$691",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 06:30 UTC",
+     "amount": "$1,064",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 06:26 UTC",
+     "amount": "$463",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "OrionFunded": {
+   "slug": "orionfunded",
+   "firm": "OrionFunded",
+   "website": "orionfunded.com",
+   "websiteUrl": "https://orionfunded.com",
+   "promo": "",
+   "total": "$4,290,669",
+   "rail": "Rise",
+   "count": "3,191",
+   "average": "$1,345",
+   "largest": "$20,012",
+   "largestDate": "Jul 30, 2025",
+   "latestTime": "Oct 15, 06:24 UTC",
+   "latestAmount": "$566",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$172,686",
+     "num": 172686
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$250,271",
+     "num": 250271
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$436,224",
+     "num": 436224
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$364,168",
+     "num": 364168
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$499,856",
+     "num": 499856
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$597,328",
+     "num": 597328
+    },
+    {
+     "month": "May 2026",
+     "amount": "$441,667",
+     "num": 441667
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$253,608",
+     "num": 253608
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$236,350",
+     "num": 236350
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$195,802",
+     "num": 195802
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$208,752",
+     "num": 208752
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$120,757",
+     "num": 120757
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$3,567",
+     "num": 3567
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$23,896",
+     "num": 23896
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$3,629",
+     "num": 3629
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$8,039",
+     "num": 8039
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$12,888",
+     "num": 12888
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$3,657",
+     "num": 3657
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$5,545",
+     "num": 5545
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$4,441",
+     "num": 4441
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$9,724",
+     "num": 9724
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$8,304",
+     "num": 8304
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$2,681",
+     "num": 2681
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$8,424",
+     "num": 8424
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$10,591",
+     "num": 10591
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$32,263",
+     "num": 32263
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$6,947",
+     "num": 6947
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$10,031",
+     "num": 10031
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$20,562",
+     "num": 20562
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$10,768",
+     "num": 10768
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$1,749",
+     "num": 1749
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$8,360",
+     "num": 8360
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$3,866",
+     "num": 3866
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$4,514",
+     "num": 4514
+    }
+   ],
+   "top10": [
+    {
+     "date": "Jul 30, 2025",
+     "amount": "$20,012",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 12, 2025",
+     "amount": "$19,124",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 6, 2026",
+     "amount": "$16,450",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 16, 2026",
+     "amount": "$16,319",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 28, 2026",
+     "amount": "$15,691",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 11, 2026",
+     "amount": "$14,984",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 30, 2026",
+     "amount": "$13,738",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 6, 2026",
+     "amount": "$12,987",
+     "rail": "Rise"
+    },
+    {
+     "date": "Apr 15, 2025",
+     "amount": "$12,700",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 06:24 UTC",
+     "amount": "$566",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:21 UTC",
+     "amount": "$142",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:21 UTC",
+     "amount": "$57",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:21 UTC",
+     "amount": "$330",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:20 UTC",
+     "amount": "$88",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:20 UTC",
+     "amount": "$1,729",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 06:20 UTC",
+     "amount": "$1,602",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 06:48 UTC",
+     "amount": "$173",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 06:48 UTC",
+     "amount": "$691",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 06:30 UTC",
+     "amount": "$1,064",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 06:26 UTC",
+     "amount": "$463",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "fundedhive": {
+   "slug": "fundedhive",
+   "firm": "FundedHive",
+   "website": "fundedhive.com",
+   "websiteUrl": "https://fundedhive.com",
+   "promo": "",
+   "total": "$2,373,037",
+   "rail": "Direct Crypto",
+   "count": "5,539",
+   "average": "$428",
+   "largest": "16.0%",
+   "largestDate": "On-chain",
+   "latestTime": "Oct 15, 20:53 UTC",
+   "latestAmount": "$177",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$48,031",
+     "num": 48031
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$76,227",
+     "num": 76227
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$198,926",
+     "num": 198926
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$165,946",
+     "num": 165946
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$236,134",
+     "num": 236134
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$207,333",
+     "num": 207333
+    },
+    {
+     "month": "May 2026",
+     "amount": "$240,102",
+     "num": 240102
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$253,452",
+     "num": 253452
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$402,172",
+     "num": 402172
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$237,868",
+     "num": 237868
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$191,585",
+     "num": 191585
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$88,568",
+     "num": 88568
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$10,986",
+     "num": 10986
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$6,003",
+     "num": 6003
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$1,400",
+     "num": 1400
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$1,400",
+     "num": 1400
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$6,090",
+     "num": 6090
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$7,861",
+     "num": 7861
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$3,390",
+     "num": 3390
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$5,310",
+     "num": 5310
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$3,845",
+     "num": 3845
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$119",
+     "num": 119
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$6,407",
+     "num": 6407
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$4,509",
+     "num": 4509
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$6,381",
+     "num": 6381
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$7,825",
+     "num": 7825
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$12,366",
+     "num": 12366
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$1,938",
+     "num": 1938
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$3,297",
+     "num": 3297
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$7,474",
+     "num": 7474
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$9,846",
+     "num": 9846
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$7,217",
+     "num": 7217
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$6,648",
+     "num": 6648
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$4,258",
+     "num": 4258
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$3,300",
+     "num": 3300
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$2,300",
+     "num": 2300
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$4,020",
+     "num": 4020
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$3,333",
+     "num": 3333
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$7,066",
+     "num": 7066
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$7,679",
+     "num": 7679
+    }
+   ],
+   "top10": [
+    {
+     "date": "&#8383; Aug 26, 2026",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Jul 13, 2026",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Jul 2, 2026",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Mar 6, 2026",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Feb 13, 2026",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Feb 18, 2026",
+     "amount": "$990",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Feb 12, 2026",
+     "amount": "$990",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Feb 9, 2026",
+     "amount": "$990",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Feb 8, 2026",
+     "amount": "$990",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "&#8383; Oct 15, 20:53 UTC",
+     "amount": "$177",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 20:15 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 20:06 UTC",
+     "amount": "$480",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 17:44 UTC",
+     "amount": "$279",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 16:28 UTC",
+     "amount": "$197",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 15:27 UTC",
+     "amount": "$140",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:12 UTC",
+     "amount": "$328",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:10 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:06 UTC",
+     "amount": "$51",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:04 UTC",
+     "amount": "$99",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:54 UTC",
+     "amount": "$659",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:39 UTC",
+     "amount": "$190",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:36 UTC",
+     "amount": "$56",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:36 UTC",
+     "amount": "$99",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:35 UTC",
+     "amount": "$110",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:34 UTC",
+     "amount": "$284",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:32 UTC",
+     "amount": "$349",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:31 UTC",
+     "amount": "$78",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:46 UTC",
+     "amount": "$700",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:38 UTC",
+     "amount": "$66",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:17 UTC",
+     "amount": "$570",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 05:23 UTC",
+     "amount": "$67",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 03:58 UTC",
+     "amount": "$240",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 03:33 UTC",
+     "amount": "$560",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 03:09 UTC",
+     "amount": "$84",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:23 UTC",
+     "amount": "$43",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "FundedHive": {
+   "slug": "fundedhive",
+   "firm": "FundedHive",
+   "website": "fundedhive.com",
+   "websiteUrl": "https://fundedhive.com",
+   "promo": "",
+   "total": "$2,373,037",
+   "rail": "Direct Crypto",
+   "count": "5,539",
+   "average": "$428",
+   "largest": "16.0%",
+   "largestDate": "On-chain",
+   "latestTime": "Oct 15, 20:53 UTC",
+   "latestAmount": "$177",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$48,031",
+     "num": 48031
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$76,227",
+     "num": 76227
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$198,926",
+     "num": 198926
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$165,946",
+     "num": 165946
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$236,134",
+     "num": 236134
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$207,333",
+     "num": 207333
+    },
+    {
+     "month": "May 2026",
+     "amount": "$240,102",
+     "num": 240102
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$253,452",
+     "num": 253452
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$402,172",
+     "num": 402172
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$237,868",
+     "num": 237868
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$191,585",
+     "num": 191585
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$88,568",
+     "num": 88568
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$10,986",
+     "num": 10986
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$6,003",
+     "num": 6003
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$1,400",
+     "num": 1400
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$1,400",
+     "num": 1400
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$6,090",
+     "num": 6090
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$7,861",
+     "num": 7861
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$3,390",
+     "num": 3390
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$5,310",
+     "num": 5310
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$3,845",
+     "num": 3845
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$119",
+     "num": 119
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$6,407",
+     "num": 6407
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$4,509",
+     "num": 4509
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$6,381",
+     "num": 6381
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$7,825",
+     "num": 7825
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$12,366",
+     "num": 12366
+    },
+    {
+     "date": "Oct 3, 2026",
+     "amount": "$1,938",
+     "num": 1938
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$3,297",
+     "num": 3297
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$7,474",
+     "num": 7474
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$9,846",
+     "num": 9846
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$7,217",
+     "num": 7217
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$6,648",
+     "num": 6648
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$4,258",
+     "num": 4258
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$3,300",
+     "num": 3300
+    },
+    {
+     "date": "Oct 11, 2026",
+     "amount": "$2,300",
+     "num": 2300
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$4,020",
+     "num": 4020
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$3,333",
+     "num": 3333
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$7,066",
+     "num": 7066
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$7,679",
+     "num": 7679
+    }
+   ],
+   "top10": [
+    {
+     "date": "&#8383; Aug 26, 2026",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Jul 13, 2026",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Jul 2, 2026",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Mar 6, 2026",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Feb 13, 2026",
+     "amount": "$1,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Feb 18, 2026",
+     "amount": "$990",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Feb 12, 2026",
+     "amount": "$990",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Feb 9, 2026",
+     "amount": "$990",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Feb 8, 2026",
+     "amount": "$990",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "&#8383; Oct 15, 20:53 UTC",
+     "amount": "$177",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 20:15 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 20:06 UTC",
+     "amount": "$480",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 17:44 UTC",
+     "amount": "$279",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 16:28 UTC",
+     "amount": "$197",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 15:27 UTC",
+     "amount": "$140",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:12 UTC",
+     "amount": "$328",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 14:10 UTC",
+     "amount": "$800",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:06 UTC",
+     "amount": "$51",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 13:04 UTC",
+     "amount": "$99",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:54 UTC",
+     "amount": "$659",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:39 UTC",
+     "amount": "$190",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:36 UTC",
+     "amount": "$56",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:36 UTC",
+     "amount": "$99",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:35 UTC",
+     "amount": "$110",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:34 UTC",
+     "amount": "$284",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:32 UTC",
+     "amount": "$349",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 12:31 UTC",
+     "amount": "$78",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:46 UTC",
+     "amount": "$700",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:38 UTC",
+     "amount": "$66",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 06:17 UTC",
+     "amount": "$570",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 05:23 UTC",
+     "amount": "$67",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 03:58 UTC",
+     "amount": "$240",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 03:33 UTC",
+     "amount": "$560",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 03:09 UTC",
+     "amount": "$84",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 02:23 UTC",
+     "amount": "$43",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "blusky-pro": {
+   "slug": "blusky-pro",
+   "firm": "BluSky.Pro",
+   "website": "blusky.pro",
+   "websiteUrl": "https://blusky.pro",
+   "promo": "",
+   "total": "$11,002,345",
+   "rail": "Rise",
+   "count": "10,550",
+   "average": "$1,043",
+   "largest": "$31,500",
+   "largestDate": "Sep 3, 2026",
+   "latestTime": "Oct 15, 20:05 UTC",
+   "latestAmount": "$225",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$413,655",
+     "num": 413655
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$469,904",
+     "num": 469904
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$439,744",
+     "num": 439744
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$465,454",
+     "num": 465454
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$511,897",
+     "num": 511897
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$341,700",
+     "num": 341700
+    },
+    {
+     "month": "May 2026",
+     "amount": "$475,859",
+     "num": 475859
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$476,256",
+     "num": 476256
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$797,201",
+     "num": 797201
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$836,313",
+     "num": 836313
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$1,051,904",
+     "num": 1051904
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$567,257",
+     "num": 567257
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$39,322",
+     "num": 39322
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$69,333",
+     "num": 69333
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$17,392",
+     "num": 17392
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$59,830",
+     "num": 59830
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$35,994",
+     "num": 35994
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$38,431",
+     "num": 38431
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$72,705",
+     "num": 72705
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$52,445",
+     "num": 52445
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$53,492",
+     "num": 53492
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$30,150",
+     "num": 30150
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$81,459",
+     "num": 81459
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$68,710",
+     "num": 68710
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$34,004",
+     "num": 34004
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$51,544",
+     "num": 51544
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$63,003",
+     "num": 63003
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$50,505",
+     "num": 50505
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$53,390",
+     "num": 53390
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$25,578",
+     "num": 25578
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$83,134",
+     "num": 83134
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$37,887",
+     "num": 37887
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$18,041",
+     "num": 18041
+    }
+   ],
+   "top10": [
+    {
+     "date": "Sep 3, 2026",
+     "amount": "$31,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 18, 2026",
+     "amount": "$18,135",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 2, 2025",
+     "amount": "$18,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 14, 2025",
+     "amount": "$16,015",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 22, 2025",
+     "amount": "$13,239",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 14, 2025",
+     "amount": "$11,925",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 2, 2025",
+     "amount": "$11,632",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 29, 2025",
+     "amount": "$11,597",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 13, 2025",
+     "amount": "$11,374",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$225",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$577",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$1,170",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$923",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$884",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$585",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$1,674",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$765",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$504",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$465",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$1,187",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$1,763",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$629",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:58 UTC",
+     "amount": "$1,200",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$225",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$1,572",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$1,139",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$475",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$531",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$2,511",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "BluSky.Pro": {
+   "slug": "blusky-pro",
+   "firm": "BluSky.Pro",
+   "website": "blusky.pro",
+   "websiteUrl": "https://blusky.pro",
+   "promo": "",
+   "total": "$11,002,345",
+   "rail": "Rise",
+   "count": "10,550",
+   "average": "$1,043",
+   "largest": "$31,500",
+   "largestDate": "Sep 3, 2026",
+   "latestTime": "Oct 15, 20:05 UTC",
+   "latestAmount": "$225",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$413,655",
+     "num": 413655
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$469,904",
+     "num": 469904
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$439,744",
+     "num": 439744
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$465,454",
+     "num": 465454
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$511,897",
+     "num": 511897
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$341,700",
+     "num": 341700
+    },
+    {
+     "month": "May 2026",
+     "amount": "$475,859",
+     "num": 475859
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$476,256",
+     "num": 476256
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$797,201",
+     "num": 797201
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$836,313",
+     "num": 836313
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$1,051,904",
+     "num": 1051904
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$567,257",
+     "num": 567257
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$39,322",
+     "num": 39322
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$69,333",
+     "num": 69333
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$17,392",
+     "num": 17392
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$59,830",
+     "num": 59830
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$35,994",
+     "num": 35994
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$38,431",
+     "num": 38431
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$72,705",
+     "num": 72705
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$52,445",
+     "num": 52445
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$53,492",
+     "num": 53492
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$30,150",
+     "num": 30150
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$81,459",
+     "num": 81459
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$68,710",
+     "num": 68710
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$34,004",
+     "num": 34004
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$51,544",
+     "num": 51544
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$63,003",
+     "num": 63003
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$50,505",
+     "num": 50505
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$53,390",
+     "num": 53390
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$25,578",
+     "num": 25578
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$83,134",
+     "num": 83134
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$37,887",
+     "num": 37887
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$18,041",
+     "num": 18041
+    }
+   ],
+   "top10": [
+    {
+     "date": "Sep 3, 2026",
+     "amount": "$31,500",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 18, 2026",
+     "amount": "$18,135",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 2, 2025",
+     "amount": "$18,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 14, 2025",
+     "amount": "$16,015",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 22, 2025",
+     "amount": "$13,239",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 14, 2025",
+     "amount": "$11,925",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 2, 2025",
+     "amount": "$11,632",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 29, 2025",
+     "amount": "$11,597",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 13, 2025",
+     "amount": "$11,374",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$225",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$577",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$1,170",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$923",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$1,800",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$884",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$540",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$585",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$1,674",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$765",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$504",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$465",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$1,187",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$1,763",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 20:05 UTC",
+     "amount": "$629",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 16:58 UTC",
+     "amount": "$1,200",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$225",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$1,572",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$1,139",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$2,250",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$475",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$531",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$450",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 21:27 UTC",
+     "amount": "$2,511",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "tradeify-247": {
+   "slug": "tradeify-247",
+   "firm": "Tradeify 247",
+   "website": "tradeify247.co",
+   "websiteUrl": "https://tracking.tradeify247.co/click?o=3&amp;a=157",
+   "promo": "40% off all accounts · code PAY",
+   "total": "$1,451,407",
+   "rail": "Rise + Direct Crypto",
+   "count": "536",
+   "average": "$2,708",
+   "largest": "$38,000",
+   "largestDate": "Jun 18, 2026",
+   "latestTime": "Oct 15, 10:57 UTC",
+   "latestAmount": "$2,035",
+   "monthlyVolume": [
+    {
+     "month": "Feb 2026",
+     "amount": "$16,279",
+     "num": 16279
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$139,681",
+     "num": 139681
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$131,322",
+     "num": 131322
+    },
+    {
+     "month": "May 2026",
+     "amount": "$115,942",
+     "num": 115942
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$234,438",
+     "num": 234438
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$259,720",
+     "num": 259720
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$179,062",
+     "num": 179062
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$207,326",
+     "num": 207326
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$167,637",
+     "num": 167637
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$1,998",
+     "num": 1998
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$1,532",
+     "num": 1532
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$6,448",
+     "num": 6448
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$1,129",
+     "num": 1129
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$27,114",
+     "num": 27114
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$16,544",
+     "num": 16544
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$17,159",
+     "num": 17159
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$38,073",
+     "num": 38073
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$9,197",
+     "num": 9197
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$10,759",
+     "num": 10759
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$3,768",
+     "num": 3768
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$11,492",
+     "num": 11492
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$21,854",
+     "num": 21854
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$4,327",
+     "num": 4327
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$1,025",
+     "num": 1025
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$20,159",
+     "num": 20159
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$24,770",
+     "num": 24770
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$9,395",
+     "num": 9395
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$2,968",
+     "num": 2968
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$48,654",
+     "num": 48654
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$1,600",
+     "num": 1600
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$6,285",
+     "num": 6285
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$8,680",
+     "num": 8680
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$9,537",
+     "num": 9537
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$8,382",
+     "num": 8382
+    }
+   ],
+   "top10": [
+    {
+     "date": "Jun 18, 2026",
+     "amount": "$38,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$33,726",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 16, 2026",
+     "amount": "$24,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Oct 9, 2026",
+     "amount": "$23,252",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 7, 2026",
+     "amount": "$19,922",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 21, 2026",
+     "amount": "$19,021",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 30, 2026",
+     "amount": "$17,647",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 11, 2026",
+     "amount": "$17,295",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$16,482",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "&#8383; Oct 15, 10:57 UTC",
+     "amount": "$2,035",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:56 UTC",
+     "amount": "$2,417",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:55 UTC",
+     "amount": "$500",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:51 UTC",
+     "amount": "$84",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:47 UTC",
+     "amount": "$911",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:46 UTC",
+     "amount": "$865",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:45 UTC",
+     "amount": "$591",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:44 UTC",
+     "amount": "$716",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:41 UTC",
+     "amount": "$264",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 14, 22:29 UTC",
+     "amount": "$2,023",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "Tradeify 247": {
+   "slug": "tradeify-247",
+   "firm": "Tradeify 247",
+   "website": "tradeify247.co",
+   "websiteUrl": "https://tracking.tradeify247.co/click?o=3&amp;a=157",
+   "promo": "40% off all accounts · code PAY",
+   "total": "$1,451,407",
+   "rail": "Rise + Direct Crypto",
+   "count": "536",
+   "average": "$2,708",
+   "largest": "$38,000",
+   "largestDate": "Jun 18, 2026",
+   "latestTime": "Oct 15, 10:57 UTC",
+   "latestAmount": "$2,035",
+   "monthlyVolume": [
+    {
+     "month": "Feb 2026",
+     "amount": "$16,279",
+     "num": 16279
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$139,681",
+     "num": 139681
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$131,322",
+     "num": 131322
+    },
+    {
+     "month": "May 2026",
+     "amount": "$115,942",
+     "num": 115942
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$234,438",
+     "num": 234438
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$259,720",
+     "num": 259720
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$179,062",
+     "num": 179062
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$207,326",
+     "num": 207326
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$167,637",
+     "num": 167637
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$1,998",
+     "num": 1998
+    },
+    {
+     "date": "Sep 19, 2026",
+     "amount": "$1,532",
+     "num": 1532
+    },
+    {
+     "date": "Sep 20, 2026",
+     "amount": "$6,448",
+     "num": 6448
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$1,129",
+     "num": 1129
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$27,114",
+     "num": 27114
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$16,544",
+     "num": 16544
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$17,159",
+     "num": 17159
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$38,073",
+     "num": 38073
+    },
+    {
+     "date": "Sep 26, 2026",
+     "amount": "$9,197",
+     "num": 9197
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$10,759",
+     "num": 10759
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$3,768",
+     "num": 3768
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$11,492",
+     "num": 11492
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$21,854",
+     "num": 21854
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$4,327",
+     "num": 4327
+    },
+    {
+     "date": "Oct 4, 2026",
+     "amount": "$1,025",
+     "num": 1025
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$20,159",
+     "num": 20159
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$24,770",
+     "num": 24770
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$9,395",
+     "num": 9395
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$2,968",
+     "num": 2968
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$48,654",
+     "num": 48654
+    },
+    {
+     "date": "Oct 10, 2026",
+     "amount": "$1,600",
+     "num": 1600
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$6,285",
+     "num": 6285
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$8,680",
+     "num": 8680
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$9,537",
+     "num": 9537
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$8,382",
+     "num": 8382
+    }
+   ],
+   "top10": [
+    {
+     "date": "Jun 18, 2026",
+     "amount": "$38,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$33,726",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 16, 2026",
+     "amount": "$24,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "&#8383; Oct 9, 2026",
+     "amount": "$23,252",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 7, 2026",
+     "amount": "$19,922",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 21, 2026",
+     "amount": "$19,021",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 30, 2026",
+     "amount": "$17,647",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 11, 2026",
+     "amount": "$17,295",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$16,482",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "&#8383; Oct 15, 10:57 UTC",
+     "amount": "$2,035",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:56 UTC",
+     "amount": "$2,417",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:55 UTC",
+     "amount": "$500",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:51 UTC",
+     "amount": "$84",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:47 UTC",
+     "amount": "$911",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:46 UTC",
+     "amount": "$865",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:45 UTC",
+     "amount": "$591",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:44 UTC",
+     "amount": "$716",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 15, 10:41 UTC",
+     "amount": "$264",
+     "rail": "Rise"
+    },
+    {
+     "time": "&#8383; Oct 14, 22:29 UTC",
+     "amount": "$2,023",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "aquafutures": {
+   "slug": "aquafutures",
+   "firm": "AquaFutures",
+   "website": "aquafutures.io",
+   "websiteUrl": "https://aquafutures.io",
+   "promo": "",
+   "total": "$1,536,781",
+   "rail": "Rise",
+   "count": "1,230",
+   "average": "$1,249",
+   "largest": "$12,000",
+   "largestDate": "Nov 4, 2025",
+   "latestTime": "Oct 15, 19:55 UTC",
+   "latestAmount": "$1,310",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$124,915",
+     "num": 124915
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$91,106",
+     "num": 91106
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$112,978",
+     "num": 112978
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$124,821",
+     "num": 124821
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$146,328",
+     "num": 146328
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$50,582",
+     "num": 50582
+    },
+    {
+     "month": "May 2026",
+     "amount": "$35,842",
+     "num": 35842
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$57,865",
+     "num": 57865
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$79,077",
+     "num": 79077
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$80,114",
+     "num": 80114
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$120,633",
+     "num": 120633
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$69,721",
+     "num": 69721
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$15,429",
+     "num": 15429
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$5,384",
+     "num": 5384
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$1,310",
+     "num": 1310
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$4,074",
+     "num": 4074
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$1,310",
+     "num": 1310
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$10,476",
+     "num": 10476
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$12,753",
+     "num": 12753
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$7,384",
+     "num": 7384
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$5,325",
+     "num": 5325
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$9,458",
+     "num": 9458
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$13,144",
+     "num": 13144
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$2,436",
+     "num": 2436
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$20,356",
+     "num": 20356
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$2,910",
+     "num": 2910
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$5,238",
+     "num": 5238
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$10,854",
+     "num": 10854
+    }
+   ],
+   "top10": [
+    {
+     "date": "Nov 4, 2025",
+     "amount": "$12,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 20, 2025",
+     "amount": "$11,965",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 22, 2025",
+     "amount": "$11,965",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 12, 2025",
+     "amount": "$11,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 21, 2026",
+     "amount": "$9,726",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 5, 2026",
+     "amount": "$8,965",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 14, 2026",
+     "amount": "$8,930",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 27, 2026",
+     "amount": "$8,065",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 28, 2025",
+     "amount": "$8,000",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$960",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,164",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 13:01 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "AquaFutures": {
+   "slug": "aquafutures",
+   "firm": "AquaFutures",
+   "website": "aquafutures.io",
+   "websiteUrl": "https://aquafutures.io",
+   "promo": "",
+   "total": "$1,536,781",
+   "rail": "Rise",
+   "count": "1,230",
+   "average": "$1,249",
+   "largest": "$12,000",
+   "largestDate": "Nov 4, 2025",
+   "latestTime": "Oct 15, 19:55 UTC",
+   "latestAmount": "$1,310",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$124,915",
+     "num": 124915
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$91,106",
+     "num": 91106
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$112,978",
+     "num": 112978
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$124,821",
+     "num": 124821
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$146,328",
+     "num": 146328
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$50,582",
+     "num": 50582
+    },
+    {
+     "month": "May 2026",
+     "amount": "$35,842",
+     "num": 35842
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$57,865",
+     "num": 57865
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$79,077",
+     "num": 79077
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$80,114",
+     "num": 80114
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$120,633",
+     "num": 120633
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$69,721",
+     "num": 69721
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$15,429",
+     "num": 15429
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$5,384",
+     "num": 5384
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$1,310",
+     "num": 1310
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$4,074",
+     "num": 4074
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$1,310",
+     "num": 1310
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$10,476",
+     "num": 10476
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$12,753",
+     "num": 12753
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$7,384",
+     "num": 7384
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$5,325",
+     "num": 5325
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$9,458",
+     "num": 9458
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$13,144",
+     "num": 13144
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$2,436",
+     "num": 2436
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$20,356",
+     "num": 20356
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$2,910",
+     "num": 2910
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$5,238",
+     "num": 5238
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$10,854",
+     "num": 10854
+    }
+   ],
+   "top10": [
+    {
+     "date": "Nov 4, 2025",
+     "amount": "$12,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 20, 2025",
+     "amount": "$11,965",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 22, 2025",
+     "amount": "$11,965",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 12, 2025",
+     "amount": "$11,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 21, 2026",
+     "amount": "$9,726",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 5, 2026",
+     "amount": "$8,965",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 14, 2026",
+     "amount": "$8,930",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 27, 2026",
+     "amount": "$8,065",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 28, 2025",
+     "amount": "$8,000",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$960",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,746",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,310",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 19:55 UTC",
+     "amount": "$1,164",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 13:01 UTC",
+     "amount": "$1,746",
      "rail": "Rise"
     }
    ]
@@ -37735,3222 +40945,518 @@
     }
    ]
   },
-  "fundedhive": {
-   "slug": "fundedhive",
-   "firm": "FundedHive",
-   "website": "fundedhive.com",
-   "websiteUrl": "https://fundedhive.com",
+  "instantfunding": {
+   "slug": "instantfunding",
+   "firm": "Instantfunding",
+   "website": "instantfunding.io",
+   "websiteUrl": "https://instantfunding.io",
    "promo": "",
-   "total": "$2,373,037",
-   "rail": "Direct Crypto",
-   "count": "5,539",
-   "average": "$428",
-   "largest": "16.0%",
-   "largestDate": "On-chain",
-   "latestTime": "Oct 15, 20:53 UTC",
-   "latestAmount": "$177",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$48,031",
-     "num": 48031
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$76,227",
-     "num": 76227
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$198,926",
-     "num": 198926
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$165,946",
-     "num": 165946
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$236,134",
-     "num": 236134
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$207,333",
-     "num": 207333
-    },
-    {
-     "month": "May 2026",
-     "amount": "$240,102",
-     "num": 240102
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$253,452",
-     "num": 253452
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$402,172",
-     "num": 402172
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$237,868",
-     "num": 237868
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$191,585",
-     "num": 191585
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$88,568",
-     "num": 88568
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$10,986",
-     "num": 10986
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$6,003",
-     "num": 6003
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$1,400",
-     "num": 1400
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$1,400",
-     "num": 1400
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$6,090",
-     "num": 6090
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$7,861",
-     "num": 7861
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$3,390",
-     "num": 3390
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$5,310",
-     "num": 5310
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$3,845",
-     "num": 3845
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$119",
-     "num": 119
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$6,407",
-     "num": 6407
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$4,509",
-     "num": 4509
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$6,381",
-     "num": 6381
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$7,825",
-     "num": 7825
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$12,366",
-     "num": 12366
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$1,938",
-     "num": 1938
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$3,297",
-     "num": 3297
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$7,474",
-     "num": 7474
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$9,846",
-     "num": 9846
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$7,217",
-     "num": 7217
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$6,648",
-     "num": 6648
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$4,258",
-     "num": 4258
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$3,300",
-     "num": 3300
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$2,300",
-     "num": 2300
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$4,020",
-     "num": 4020
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$3,333",
-     "num": 3333
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$7,066",
-     "num": 7066
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$7,679",
-     "num": 7679
-    }
-   ],
-   "top10": [
-    {
-     "date": "&#8383; Aug 26, 2026",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Jul 13, 2026",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Jul 2, 2026",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Mar 6, 2026",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Feb 13, 2026",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Feb 18, 2026",
-     "amount": "$990",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Feb 12, 2026",
-     "amount": "$990",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Feb 9, 2026",
-     "amount": "$990",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Feb 8, 2026",
-     "amount": "$990",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "&#8383; Oct 15, 20:53 UTC",
-     "amount": "$177",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 20:15 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 20:06 UTC",
-     "amount": "$480",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 17:44 UTC",
-     "amount": "$279",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 16:28 UTC",
-     "amount": "$197",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 15:27 UTC",
-     "amount": "$140",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:12 UTC",
-     "amount": "$328",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:10 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:06 UTC",
-     "amount": "$51",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:04 UTC",
-     "amount": "$99",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:54 UTC",
-     "amount": "$659",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:39 UTC",
-     "amount": "$190",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:36 UTC",
-     "amount": "$56",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:36 UTC",
-     "amount": "$99",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:35 UTC",
-     "amount": "$110",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:34 UTC",
-     "amount": "$284",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:32 UTC",
-     "amount": "$349",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:31 UTC",
-     "amount": "$78",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:46 UTC",
-     "amount": "$700",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:38 UTC",
-     "amount": "$66",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:17 UTC",
-     "amount": "$570",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 05:23 UTC",
-     "amount": "$67",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 03:58 UTC",
-     "amount": "$240",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 03:33 UTC",
-     "amount": "$560",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 03:09 UTC",
-     "amount": "$84",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:23 UTC",
-     "amount": "$43",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "FundedHive": {
-   "slug": "fundedhive",
-   "firm": "FundedHive",
-   "website": "fundedhive.com",
-   "websiteUrl": "https://fundedhive.com",
-   "promo": "",
-   "total": "$2,373,037",
-   "rail": "Direct Crypto",
-   "count": "5,539",
-   "average": "$428",
-   "largest": "16.0%",
-   "largestDate": "On-chain",
-   "latestTime": "Oct 15, 20:53 UTC",
-   "latestAmount": "$177",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$48,031",
-     "num": 48031
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$76,227",
-     "num": 76227
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$198,926",
-     "num": 198926
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$165,946",
-     "num": 165946
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$236,134",
-     "num": 236134
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$207,333",
-     "num": 207333
-    },
-    {
-     "month": "May 2026",
-     "amount": "$240,102",
-     "num": 240102
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$253,452",
-     "num": 253452
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$402,172",
-     "num": 402172
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$237,868",
-     "num": 237868
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$191,585",
-     "num": 191585
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$88,568",
-     "num": 88568
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$10,986",
-     "num": 10986
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$6,003",
-     "num": 6003
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$1,400",
-     "num": 1400
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$1,400",
-     "num": 1400
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$6,090",
-     "num": 6090
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$7,861",
-     "num": 7861
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$3,390",
-     "num": 3390
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$5,310",
-     "num": 5310
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$3,845",
-     "num": 3845
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$119",
-     "num": 119
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$6,407",
-     "num": 6407
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$4,509",
-     "num": 4509
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$6,381",
-     "num": 6381
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$7,825",
-     "num": 7825
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$12,366",
-     "num": 12366
-    },
-    {
-     "date": "Oct 3, 2026",
-     "amount": "$1,938",
-     "num": 1938
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$3,297",
-     "num": 3297
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$7,474",
-     "num": 7474
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$9,846",
-     "num": 9846
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$7,217",
-     "num": 7217
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$6,648",
-     "num": 6648
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$4,258",
-     "num": 4258
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$3,300",
-     "num": 3300
-    },
-    {
-     "date": "Oct 11, 2026",
-     "amount": "$2,300",
-     "num": 2300
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$4,020",
-     "num": 4020
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$3,333",
-     "num": 3333
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$7,066",
-     "num": 7066
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$7,679",
-     "num": 7679
-    }
-   ],
-   "top10": [
-    {
-     "date": "&#8383; Aug 26, 2026",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Jul 13, 2026",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Jul 2, 2026",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Mar 6, 2026",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Feb 13, 2026",
-     "amount": "$1,600",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Feb 18, 2026",
-     "amount": "$990",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Feb 12, 2026",
-     "amount": "$990",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Feb 9, 2026",
-     "amount": "$990",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Feb 8, 2026",
-     "amount": "$990",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "&#8383; Oct 15, 20:53 UTC",
-     "amount": "$177",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 20:15 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 20:06 UTC",
-     "amount": "$480",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 17:44 UTC",
-     "amount": "$279",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 16:28 UTC",
-     "amount": "$197",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 15:27 UTC",
-     "amount": "$140",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:12 UTC",
-     "amount": "$328",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 14:10 UTC",
-     "amount": "$800",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:06 UTC",
-     "amount": "$51",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 13:04 UTC",
-     "amount": "$99",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:54 UTC",
-     "amount": "$659",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:39 UTC",
-     "amount": "$190",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:36 UTC",
-     "amount": "$56",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:36 UTC",
-     "amount": "$99",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:35 UTC",
-     "amount": "$110",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:34 UTC",
-     "amount": "$284",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:32 UTC",
-     "amount": "$349",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 12:31 UTC",
-     "amount": "$78",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:46 UTC",
-     "amount": "$700",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:38 UTC",
-     "amount": "$66",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 06:17 UTC",
-     "amount": "$570",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 05:23 UTC",
-     "amount": "$67",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 03:58 UTC",
-     "amount": "$240",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 03:33 UTC",
-     "amount": "$560",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 03:09 UTC",
-     "amount": "$84",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 02:23 UTC",
-     "amount": "$43",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "orionfunded": {
-   "slug": "orionfunded",
-   "firm": "OrionFunded",
-   "website": "orionfunded.com",
-   "websiteUrl": "https://orionfunded.com",
-   "promo": "",
-   "total": "$4,290,669",
+   "total": "$9,566,455",
    "rail": "Rise",
-   "count": "3,191",
-   "average": "$1,345",
-   "largest": "$20,012",
-   "largestDate": "Jul 30, 2025",
-   "latestTime": "Oct 15, 06:24 UTC",
-   "latestAmount": "$566",
+   "count": "10,584",
+   "average": "$904",
+   "largest": "$55,326",
+   "largestDate": "Jun 13, 2025",
+   "latestTime": "Oct 15, 15:14 UTC",
+   "latestAmount": "$27",
    "monthlyVolume": [
     {
      "month": "Nov 2025",
-     "amount": "$172,686",
-     "num": 172686
+     "amount": "$291,729",
+     "num": 291729
     },
     {
      "month": "Dec 2025",
-     "amount": "$250,271",
-     "num": 250271
+     "amount": "$206,762",
+     "num": 206762
     },
     {
      "month": "Jan 2026",
-     "amount": "$436,224",
-     "num": 436224
+     "amount": "$275,261",
+     "num": 275261
     },
     {
      "month": "Feb 2026",
-     "amount": "$364,168",
-     "num": 364168
+     "amount": "$341,174",
+     "num": 341174
     },
     {
      "month": "Mar 2026",
-     "amount": "$499,856",
-     "num": 499856
+     "amount": "$361,463",
+     "num": 361463
     },
     {
      "month": "Apr 2026",
-     "amount": "$597,328",
-     "num": 597328
+     "amount": "$223,760",
+     "num": 223760
     },
     {
      "month": "May 2026",
-     "amount": "$441,667",
-     "num": 441667
+     "amount": "$194,397",
+     "num": 194397
     },
     {
      "month": "Jun 2026",
-     "amount": "$253,608",
-     "num": 253608
+     "amount": "$342,607",
+     "num": 342607
     },
     {
      "month": "Jul 2026",
-     "amount": "$236,350",
-     "num": 236350
+     "amount": "$274,940",
+     "num": 274940
     },
     {
      "month": "Aug 2026",
-     "amount": "$195,802",
-     "num": 195802
+     "amount": "$194,248",
+     "num": 194248
     },
     {
      "month": "Sep 2026",
-     "amount": "$208,752",
-     "num": 208752
+     "amount": "$132,658",
+     "num": 132658
     },
     {
      "month": "Oct 2026",
-     "amount": "$120,757",
-     "num": 120757
+     "amount": "$38,402",
+     "num": 38402
     }
    ],
    "dailyVolume": [
     {
      "date": "Sep 17, 2026",
-     "amount": "$3,567",
-     "num": 3567
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$23,896",
-     "num": 23896
+     "amount": "$3,035",
+     "num": 3035
     },
     {
      "date": "Sep 21, 2026",
-     "amount": "$3,629",
-     "num": 3629
+     "amount": "$8,675",
+     "num": 8675
     },
     {
      "date": "Sep 22, 2026",
-     "amount": "$8,039",
-     "num": 8039
+     "amount": "$4,014",
+     "num": 4014
     },
     {
      "date": "Sep 23, 2026",
-     "amount": "$12,888",
-     "num": 12888
+     "amount": "$6,355",
+     "num": 6355
     },
     {
      "date": "Sep 24, 2026",
-     "amount": "$3,657",
-     "num": 3657
+     "amount": "$6,951",
+     "num": 6951
     },
     {
      "date": "Sep 25, 2026",
-     "amount": "$5,545",
-     "num": 5545
+     "amount": "$1,872",
+     "num": 1872
     },
     {
      "date": "Sep 28, 2026",
-     "amount": "$4,441",
-     "num": 4441
+     "amount": "$7,643",
+     "num": 7643
     },
     {
      "date": "Sep 29, 2026",
-     "amount": "$9,724",
-     "num": 9724
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$8,304",
-     "num": 8304
+     "amount": "$11,478",
+     "num": 11478
     },
     {
      "date": "Oct 1, 2026",
-     "amount": "$2,681",
-     "num": 2681
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$8,424",
-     "num": 8424
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$10,591",
-     "num": 10591
+     "amount": "$11,903",
+     "num": 11903
     },
     {
      "date": "Oct 5, 2026",
-     "amount": "$32,263",
-     "num": 32263
+     "amount": "$3,084",
+     "num": 3084
     },
     {
      "date": "Oct 6, 2026",
-     "amount": "$6,947",
-     "num": 6947
+     "amount": "$2,207",
+     "num": 2207
     },
     {
      "date": "Oct 7, 2026",
-     "amount": "$10,031",
-     "num": 10031
+     "amount": "$481",
+     "num": 481
     },
     {
      "date": "Oct 8, 2026",
-     "amount": "$20,562",
-     "num": 20562
+     "amount": "$1,506",
+     "num": 1506
     },
     {
      "date": "Oct 9, 2026",
-     "amount": "$10,768",
-     "num": 10768
+     "amount": "$1,709",
+     "num": 1709
     },
     {
      "date": "Oct 12, 2026",
-     "amount": "$1,749",
-     "num": 1749
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$8,360",
-     "num": 8360
+     "amount": "$11,148",
+     "num": 11148
     },
     {
      "date": "Oct 14, 2026",
-     "amount": "$3,866",
-     "num": 3866
+     "amount": "$3,365",
+     "num": 3365
     },
     {
      "date": "Oct 15, 2026",
-     "amount": "$4,514",
-     "num": 4514
+     "amount": "$2,998",
+     "num": 2998
     }
    ],
    "top10": [
-    {
-     "date": "Jul 30, 2025",
-     "amount": "$20,012",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 12, 2025",
-     "amount": "$19,124",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 6, 2026",
-     "amount": "$16,450",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 16, 2026",
-     "amount": "$16,319",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 28, 2026",
-     "amount": "$15,691",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 11, 2026",
-     "amount": "$14,984",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 30, 2026",
-     "amount": "$13,738",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 6, 2026",
-     "amount": "$12,987",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 15, 2025",
-     "amount": "$12,700",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 06:24 UTC",
-     "amount": "$566",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:21 UTC",
-     "amount": "$142",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:21 UTC",
-     "amount": "$57",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:21 UTC",
-     "amount": "$330",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:20 UTC",
-     "amount": "$88",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:20 UTC",
-     "amount": "$1,729",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:20 UTC",
-     "amount": "$1,602",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 06:48 UTC",
-     "amount": "$173",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 06:48 UTC",
-     "amount": "$691",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 06:30 UTC",
-     "amount": "$1,064",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 06:26 UTC",
-     "amount": "$463",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "OrionFunded": {
-   "slug": "orionfunded",
-   "firm": "OrionFunded",
-   "website": "orionfunded.com",
-   "websiteUrl": "https://orionfunded.com",
-   "promo": "",
-   "total": "$4,290,669",
-   "rail": "Rise",
-   "count": "3,191",
-   "average": "$1,345",
-   "largest": "$20,012",
-   "largestDate": "Jul 30, 2025",
-   "latestTime": "Oct 15, 06:24 UTC",
-   "latestAmount": "$566",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$172,686",
-     "num": 172686
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$250,271",
-     "num": 250271
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$436,224",
-     "num": 436224
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$364,168",
-     "num": 364168
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$499,856",
-     "num": 499856
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$597,328",
-     "num": 597328
-    },
-    {
-     "month": "May 2026",
-     "amount": "$441,667",
-     "num": 441667
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$253,608",
-     "num": 253608
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$236,350",
-     "num": 236350
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$195,802",
-     "num": 195802
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$208,752",
-     "num": 208752
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$120,757",
-     "num": 120757
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$3,567",
-     "num": 3567
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$23,896",
-     "num": 23896
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$3,629",
-     "num": 3629
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$8,039",
-     "num": 8039
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$12,888",
-     "num": 12888
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$3,657",
-     "num": 3657
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$5,545",
-     "num": 5545
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$4,441",
-     "num": 4441
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$9,724",
-     "num": 9724
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$8,304",
-     "num": 8304
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$2,681",
-     "num": 2681
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$8,424",
-     "num": 8424
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$10,591",
-     "num": 10591
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$32,263",
-     "num": 32263
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$6,947",
-     "num": 6947
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$10,031",
-     "num": 10031
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$20,562",
-     "num": 20562
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$10,768",
-     "num": 10768
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$1,749",
-     "num": 1749
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$8,360",
-     "num": 8360
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$3,866",
-     "num": 3866
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$4,514",
-     "num": 4514
-    }
-   ],
-   "top10": [
-    {
-     "date": "Jul 30, 2025",
-     "amount": "$20,012",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 12, 2025",
-     "amount": "$19,124",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 6, 2026",
-     "amount": "$16,450",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 16, 2026",
-     "amount": "$16,319",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 28, 2026",
-     "amount": "$15,691",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 11, 2026",
-     "amount": "$14,984",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 30, 2026",
-     "amount": "$13,738",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 6, 2026",
-     "amount": "$12,987",
-     "rail": "Rise"
-    },
-    {
-     "date": "Apr 15, 2025",
-     "amount": "$12,700",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 06:24 UTC",
-     "amount": "$566",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:21 UTC",
-     "amount": "$142",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:21 UTC",
-     "amount": "$57",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:21 UTC",
-     "amount": "$330",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:20 UTC",
-     "amount": "$88",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:20 UTC",
-     "amount": "$1,729",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 06:20 UTC",
-     "amount": "$1,602",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 06:48 UTC",
-     "amount": "$173",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 06:48 UTC",
-     "amount": "$691",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 06:30 UTC",
-     "amount": "$1,064",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 06:26 UTC",
-     "amount": "$463",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "aquafutures": {
-   "slug": "aquafutures",
-   "firm": "AquaFutures",
-   "website": "aquafutures.io",
-   "websiteUrl": "https://aquafutures.io",
-   "promo": "",
-   "total": "$1,536,781",
-   "rail": "Rise",
-   "count": "1,230",
-   "average": "$1,249",
-   "largest": "$12,000",
-   "largestDate": "Nov 4, 2025",
-   "latestTime": "Oct 15, 19:55 UTC",
-   "latestAmount": "$1,310",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$124,915",
-     "num": 124915
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$91,106",
-     "num": 91106
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$112,978",
-     "num": 112978
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$124,821",
-     "num": 124821
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$146,328",
-     "num": 146328
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$50,582",
-     "num": 50582
-    },
-    {
-     "month": "May 2026",
-     "amount": "$35,842",
-     "num": 35842
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$57,865",
-     "num": 57865
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$79,077",
-     "num": 79077
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$80,114",
-     "num": 80114
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$120,633",
-     "num": 120633
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$69,721",
-     "num": 69721
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$15,429",
-     "num": 15429
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$5,384",
-     "num": 5384
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$1,310",
-     "num": 1310
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$4,074",
-     "num": 4074
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$1,310",
-     "num": 1310
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$10,476",
-     "num": 10476
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$12,753",
-     "num": 12753
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$7,384",
-     "num": 7384
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$5,325",
-     "num": 5325
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$9,458",
-     "num": 9458
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$13,144",
-     "num": 13144
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$2,436",
-     "num": 2436
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$20,356",
-     "num": 20356
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$2,910",
-     "num": 2910
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$5,238",
-     "num": 5238
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$10,854",
-     "num": 10854
-    }
-   ],
-   "top10": [
-    {
-     "date": "Nov 4, 2025",
-     "amount": "$12,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 20, 2025",
-     "amount": "$11,965",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 22, 2025",
-     "amount": "$11,965",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 12, 2025",
-     "amount": "$11,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 21, 2026",
-     "amount": "$9,726",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 5, 2026",
-     "amount": "$8,965",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 14, 2026",
-     "amount": "$8,930",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 27, 2026",
-     "amount": "$8,065",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 28, 2025",
-     "amount": "$8,000",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$960",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,164",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 13:01 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "AquaFutures": {
-   "slug": "aquafutures",
-   "firm": "AquaFutures",
-   "website": "aquafutures.io",
-   "websiteUrl": "https://aquafutures.io",
-   "promo": "",
-   "total": "$1,536,781",
-   "rail": "Rise",
-   "count": "1,230",
-   "average": "$1,249",
-   "largest": "$12,000",
-   "largestDate": "Nov 4, 2025",
-   "latestTime": "Oct 15, 19:55 UTC",
-   "latestAmount": "$1,310",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$124,915",
-     "num": 124915
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$91,106",
-     "num": 91106
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$112,978",
-     "num": 112978
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$124,821",
-     "num": 124821
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$146,328",
-     "num": 146328
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$50,582",
-     "num": 50582
-    },
-    {
-     "month": "May 2026",
-     "amount": "$35,842",
-     "num": 35842
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$57,865",
-     "num": 57865
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$79,077",
-     "num": 79077
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$80,114",
-     "num": 80114
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$120,633",
-     "num": 120633
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$69,721",
-     "num": 69721
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$15,429",
-     "num": 15429
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$5,384",
-     "num": 5384
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$1,310",
-     "num": 1310
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$4,074",
-     "num": 4074
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$1,310",
-     "num": 1310
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$10,476",
-     "num": 10476
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$12,753",
-     "num": 12753
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$7,384",
-     "num": 7384
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$5,325",
-     "num": 5325
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$9,458",
-     "num": 9458
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$13,144",
-     "num": 13144
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$2,436",
-     "num": 2436
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$20,356",
-     "num": 20356
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$2,910",
-     "num": 2910
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$5,238",
-     "num": 5238
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$10,854",
-     "num": 10854
-    }
-   ],
-   "top10": [
-    {
-     "date": "Nov 4, 2025",
-     "amount": "$12,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 20, 2025",
-     "amount": "$11,965",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 22, 2025",
-     "amount": "$11,965",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 12, 2025",
-     "amount": "$11,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 21, 2026",
-     "amount": "$9,726",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 5, 2026",
-     "amount": "$8,965",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 14, 2026",
-     "amount": "$8,930",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 27, 2026",
-     "amount": "$8,065",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 28, 2025",
-     "amount": "$8,000",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$960",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,310",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 19:55 UTC",
-     "amount": "$1,164",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 13:01 UTC",
-     "amount": "$1,746",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "tradeify-247": {
-   "slug": "tradeify-247",
-   "firm": "Tradeify 247",
-   "website": "tradeify247.co",
-   "websiteUrl": "https://tracking.tradeify247.co/click?o=3&amp;a=157",
-   "promo": "40% off all accounts · code PAY",
-   "total": "$1,451,407",
-   "rail": "Rise + Direct Crypto",
-   "count": "536",
-   "average": "$2,708",
-   "largest": "$38,000",
-   "largestDate": "Jun 18, 2026",
-   "latestTime": "Oct 15, 10:57 UTC",
-   "latestAmount": "$2,035",
-   "monthlyVolume": [
-    {
-     "month": "Feb 2026",
-     "amount": "$16,279",
-     "num": 16279
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$139,681",
-     "num": 139681
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$131,322",
-     "num": 131322
-    },
-    {
-     "month": "May 2026",
-     "amount": "$115,942",
-     "num": 115942
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$234,438",
-     "num": 234438
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$259,720",
-     "num": 259720
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$179,062",
-     "num": 179062
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$207,326",
-     "num": 207326
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$167,637",
-     "num": 167637
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$1,998",
-     "num": 1998
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$1,532",
-     "num": 1532
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$6,448",
-     "num": 6448
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$1,129",
-     "num": 1129
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$27,114",
-     "num": 27114
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$16,544",
-     "num": 16544
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$17,159",
-     "num": 17159
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$38,073",
-     "num": 38073
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$9,197",
-     "num": 9197
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$10,759",
-     "num": 10759
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$3,768",
-     "num": 3768
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$11,492",
-     "num": 11492
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$21,854",
-     "num": 21854
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$4,327",
-     "num": 4327
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$1,025",
-     "num": 1025
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$20,159",
-     "num": 20159
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$24,770",
-     "num": 24770
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$9,395",
-     "num": 9395
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$2,968",
-     "num": 2968
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$48,654",
-     "num": 48654
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$1,600",
-     "num": 1600
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$6,285",
-     "num": 6285
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$8,680",
-     "num": 8680
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$9,537",
-     "num": 9537
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$8,382",
-     "num": 8382
-    }
-   ],
-   "top10": [
-    {
-     "date": "Jun 18, 2026",
-     "amount": "$38,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$33,726",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 16, 2026",
-     "amount": "$24,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Oct 9, 2026",
-     "amount": "$23,252",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 7, 2026",
-     "amount": "$19,922",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 21, 2026",
-     "amount": "$19,021",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 30, 2026",
-     "amount": "$17,647",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 11, 2026",
-     "amount": "$17,295",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$16,482",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "&#8383; Oct 15, 10:57 UTC",
-     "amount": "$2,035",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:56 UTC",
-     "amount": "$2,417",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:55 UTC",
-     "amount": "$500",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:51 UTC",
-     "amount": "$84",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:47 UTC",
-     "amount": "$911",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:46 UTC",
-     "amount": "$865",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:45 UTC",
-     "amount": "$591",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:44 UTC",
-     "amount": "$716",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:41 UTC",
-     "amount": "$264",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 14, 22:29 UTC",
-     "amount": "$2,023",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "Tradeify 247": {
-   "slug": "tradeify-247",
-   "firm": "Tradeify 247",
-   "website": "tradeify247.co",
-   "websiteUrl": "https://tracking.tradeify247.co/click?o=3&amp;a=157",
-   "promo": "40% off all accounts · code PAY",
-   "total": "$1,451,407",
-   "rail": "Rise + Direct Crypto",
-   "count": "536",
-   "average": "$2,708",
-   "largest": "$38,000",
-   "largestDate": "Jun 18, 2026",
-   "latestTime": "Oct 15, 10:57 UTC",
-   "latestAmount": "$2,035",
-   "monthlyVolume": [
-    {
-     "month": "Feb 2026",
-     "amount": "$16,279",
-     "num": 16279
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$139,681",
-     "num": 139681
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$131,322",
-     "num": 131322
-    },
-    {
-     "month": "May 2026",
-     "amount": "$115,942",
-     "num": 115942
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$234,438",
-     "num": 234438
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$259,720",
-     "num": 259720
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$179,062",
-     "num": 179062
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$207,326",
-     "num": 207326
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$167,637",
-     "num": 167637
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$1,998",
-     "num": 1998
-    },
-    {
-     "date": "Sep 19, 2026",
-     "amount": "$1,532",
-     "num": 1532
-    },
-    {
-     "date": "Sep 20, 2026",
-     "amount": "$6,448",
-     "num": 6448
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$1,129",
-     "num": 1129
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$27,114",
-     "num": 27114
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$16,544",
-     "num": 16544
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$17,159",
-     "num": 17159
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$38,073",
-     "num": 38073
-    },
-    {
-     "date": "Sep 26, 2026",
-     "amount": "$9,197",
-     "num": 9197
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$10,759",
-     "num": 10759
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$3,768",
-     "num": 3768
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$11,492",
-     "num": 11492
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$21,854",
-     "num": 21854
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$4,327",
-     "num": 4327
-    },
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$1,025",
-     "num": 1025
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$20,159",
-     "num": 20159
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$24,770",
-     "num": 24770
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$9,395",
-     "num": 9395
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$2,968",
-     "num": 2968
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$48,654",
-     "num": 48654
-    },
-    {
-     "date": "Oct 10, 2026",
-     "amount": "$1,600",
-     "num": 1600
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$6,285",
-     "num": 6285
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$8,680",
-     "num": 8680
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$9,537",
-     "num": 9537
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$8,382",
-     "num": 8382
-    }
-   ],
-   "top10": [
-    {
-     "date": "Jun 18, 2026",
-     "amount": "$38,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$33,726",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 16, 2026",
-     "amount": "$24,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "&#8383; Oct 9, 2026",
-     "amount": "$23,252",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 7, 2026",
-     "amount": "$19,922",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 21, 2026",
-     "amount": "$19,021",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 30, 2026",
-     "amount": "$17,647",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 11, 2026",
-     "amount": "$17,295",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$16,482",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "&#8383; Oct 15, 10:57 UTC",
-     "amount": "$2,035",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:56 UTC",
-     "amount": "$2,417",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:55 UTC",
-     "amount": "$500",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:51 UTC",
-     "amount": "$84",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:47 UTC",
-     "amount": "$911",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:46 UTC",
-     "amount": "$865",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:45 UTC",
-     "amount": "$591",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:44 UTC",
-     "amount": "$716",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 15, 10:41 UTC",
-     "amount": "$264",
-     "rail": "Rise"
-    },
-    {
-     "time": "&#8383; Oct 14, 22:29 UTC",
-     "amount": "$2,023",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "blusky-pro": {
-   "slug": "blusky-pro",
-   "firm": "BluSky.Pro",
-   "website": "blusky.pro",
-   "websiteUrl": "https://blusky.pro",
-   "promo": "",
-   "total": "$11,002,345",
-   "rail": "Rise",
-   "count": "10,550",
-   "average": "$1,043",
-   "largest": "$31,500",
-   "largestDate": "Sep 3, 2026",
-   "latestTime": "Oct 15, 20:05 UTC",
-   "latestAmount": "$225",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$413,655",
-     "num": 413655
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$469,904",
-     "num": 469904
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$439,744",
-     "num": 439744
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$465,454",
-     "num": 465454
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$511,897",
-     "num": 511897
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$341,700",
-     "num": 341700
-    },
-    {
-     "month": "May 2026",
-     "amount": "$475,859",
-     "num": 475859
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$476,256",
-     "num": 476256
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$797,201",
-     "num": 797201
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$836,313",
-     "num": 836313
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$1,051,904",
-     "num": 1051904
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$567,257",
-     "num": 567257
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$39,322",
-     "num": 39322
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$69,333",
-     "num": 69333
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$17,392",
-     "num": 17392
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$59,830",
-     "num": 59830
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$35,994",
-     "num": 35994
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$38,431",
-     "num": 38431
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$72,705",
-     "num": 72705
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$52,445",
-     "num": 52445
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$53,492",
-     "num": 53492
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$30,150",
-     "num": 30150
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$81,459",
-     "num": 81459
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$68,710",
-     "num": 68710
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$34,004",
-     "num": 34004
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$51,544",
-     "num": 51544
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$63,003",
-     "num": 63003
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$50,505",
-     "num": 50505
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$53,390",
-     "num": 53390
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$25,578",
-     "num": 25578
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$83,134",
-     "num": 83134
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$37,887",
-     "num": 37887
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$18,041",
-     "num": 18041
-    }
-   ],
-   "top10": [
-    {
-     "date": "Sep 3, 2026",
-     "amount": "$31,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 18, 2026",
-     "amount": "$18,135",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 2, 2025",
-     "amount": "$18,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 14, 2025",
-     "amount": "$16,015",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 22, 2025",
-     "amount": "$13,239",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 14, 2025",
-     "amount": "$11,925",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 2, 2025",
-     "amount": "$11,632",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 29, 2025",
-     "amount": "$11,597",
-     "rail": "Rise"
-    },
     {
      "date": "Jun 13, 2025",
-     "amount": "$11,374",
+     "amount": "$55,326",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 29, 2026",
+     "amount": "$29,739",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 25, 2026",
+     "amount": "$25,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 17, 2026",
+     "amount": "$24,800",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 27, 2025",
+     "amount": "$23,983",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 20, 2026",
+     "amount": "$23,405",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 27, 2026",
+     "amount": "$22,276",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 16, 2024",
+     "amount": "$22,106",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 9, 2025",
+     "amount": "$19,685",
      "rail": "Rise"
     }
    ],
    "latestPayouts": [
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$225",
+     "time": "Oct 15, 15:14 UTC",
+     "amount": "$27",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$577",
+     "time": "Oct 15, 11:36 UTC",
+     "amount": "$68",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$450",
+     "time": "Oct 15, 11:36 UTC",
+     "amount": "$2,903",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$1,170",
+     "time": "Oct 14, 12:29 UTC",
+     "amount": "$2,024",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$923",
+     "time": "Oct 14, 12:29 UTC",
+     "amount": "$1,341",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$1,800",
+     "time": "Oct 12, 09:15 UTC",
+     "amount": "$1,798",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$450",
+     "time": "Oct 12, 09:15 UTC",
+     "amount": "$2,710",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$1,800",
+     "time": "Oct 12, 09:15 UTC",
+     "amount": "$1,095",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$884",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$585",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$1,674",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$765",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$504",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$465",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$1,187",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$1,763",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$629",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:58 UTC",
-     "amount": "$1,200",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$225",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$1,572",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$1,139",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$475",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$531",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$2,511",
+     "time": "Oct 12, 09:15 UTC",
+     "amount": "$5,400",
      "rail": "Rise"
     }
    ]
   },
-  "BluSky.Pro": {
-   "slug": "blusky-pro",
-   "firm": "BluSky.Pro",
-   "website": "blusky.pro",
-   "websiteUrl": "https://blusky.pro",
+  "Instantfunding": {
+   "slug": "instantfunding",
+   "firm": "Instantfunding",
+   "website": "instantfunding.io",
+   "websiteUrl": "https://instantfunding.io",
    "promo": "",
-   "total": "$11,002,345",
+   "total": "$9,566,455",
    "rail": "Rise",
-   "count": "10,550",
-   "average": "$1,043",
-   "largest": "$31,500",
-   "largestDate": "Sep 3, 2026",
-   "latestTime": "Oct 15, 20:05 UTC",
-   "latestAmount": "$225",
+   "count": "10,584",
+   "average": "$904",
+   "largest": "$55,326",
+   "largestDate": "Jun 13, 2025",
+   "latestTime": "Oct 15, 15:14 UTC",
+   "latestAmount": "$27",
    "monthlyVolume": [
     {
      "month": "Nov 2025",
-     "amount": "$413,655",
-     "num": 413655
+     "amount": "$291,729",
+     "num": 291729
     },
     {
      "month": "Dec 2025",
-     "amount": "$469,904",
-     "num": 469904
+     "amount": "$206,762",
+     "num": 206762
     },
     {
      "month": "Jan 2026",
-     "amount": "$439,744",
-     "num": 439744
+     "amount": "$275,261",
+     "num": 275261
     },
     {
      "month": "Feb 2026",
-     "amount": "$465,454",
-     "num": 465454
+     "amount": "$341,174",
+     "num": 341174
     },
     {
      "month": "Mar 2026",
-     "amount": "$511,897",
-     "num": 511897
+     "amount": "$361,463",
+     "num": 361463
     },
     {
      "month": "Apr 2026",
-     "amount": "$341,700",
-     "num": 341700
+     "amount": "$223,760",
+     "num": 223760
     },
     {
      "month": "May 2026",
-     "amount": "$475,859",
-     "num": 475859
+     "amount": "$194,397",
+     "num": 194397
     },
     {
      "month": "Jun 2026",
-     "amount": "$476,256",
-     "num": 476256
+     "amount": "$342,607",
+     "num": 342607
     },
     {
      "month": "Jul 2026",
-     "amount": "$797,201",
-     "num": 797201
+     "amount": "$274,940",
+     "num": 274940
     },
     {
      "month": "Aug 2026",
-     "amount": "$836,313",
-     "num": 836313
+     "amount": "$194,248",
+     "num": 194248
     },
     {
      "month": "Sep 2026",
-     "amount": "$1,051,904",
-     "num": 1051904
+     "amount": "$132,658",
+     "num": 132658
     },
     {
      "month": "Oct 2026",
-     "amount": "$567,257",
-     "num": 567257
+     "amount": "$38,402",
+     "num": 38402
     }
    ],
    "dailyVolume": [
     {
      "date": "Sep 17, 2026",
-     "amount": "$39,322",
-     "num": 39322
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$69,333",
-     "num": 69333
+     "amount": "$3,035",
+     "num": 3035
     },
     {
      "date": "Sep 21, 2026",
-     "amount": "$17,392",
-     "num": 17392
+     "amount": "$8,675",
+     "num": 8675
     },
     {
      "date": "Sep 22, 2026",
-     "amount": "$59,830",
-     "num": 59830
+     "amount": "$4,014",
+     "num": 4014
     },
     {
      "date": "Sep 23, 2026",
-     "amount": "$35,994",
-     "num": 35994
+     "amount": "$6,355",
+     "num": 6355
     },
     {
      "date": "Sep 24, 2026",
-     "amount": "$38,431",
-     "num": 38431
+     "amount": "$6,951",
+     "num": 6951
     },
     {
      "date": "Sep 25, 2026",
-     "amount": "$72,705",
-     "num": 72705
+     "amount": "$1,872",
+     "num": 1872
     },
     {
      "date": "Sep 28, 2026",
-     "amount": "$52,445",
-     "num": 52445
+     "amount": "$7,643",
+     "num": 7643
     },
     {
      "date": "Sep 29, 2026",
-     "amount": "$53,492",
-     "num": 53492
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$30,150",
-     "num": 30150
+     "amount": "$11,478",
+     "num": 11478
     },
     {
      "date": "Oct 1, 2026",
-     "amount": "$81,459",
-     "num": 81459
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$68,710",
-     "num": 68710
+     "amount": "$11,903",
+     "num": 11903
     },
     {
      "date": "Oct 5, 2026",
-     "amount": "$34,004",
-     "num": 34004
+     "amount": "$3,084",
+     "num": 3084
     },
     {
      "date": "Oct 6, 2026",
-     "amount": "$51,544",
-     "num": 51544
+     "amount": "$2,207",
+     "num": 2207
     },
     {
      "date": "Oct 7, 2026",
-     "amount": "$63,003",
-     "num": 63003
+     "amount": "$481",
+     "num": 481
     },
     {
      "date": "Oct 8, 2026",
-     "amount": "$50,505",
-     "num": 50505
+     "amount": "$1,506",
+     "num": 1506
     },
     {
      "date": "Oct 9, 2026",
-     "amount": "$53,390",
-     "num": 53390
+     "amount": "$1,709",
+     "num": 1709
     },
     {
      "date": "Oct 12, 2026",
-     "amount": "$25,578",
-     "num": 25578
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$83,134",
-     "num": 83134
+     "amount": "$11,148",
+     "num": 11148
     },
     {
      "date": "Oct 14, 2026",
-     "amount": "$37,887",
-     "num": 37887
+     "amount": "$3,365",
+     "num": 3365
     },
     {
      "date": "Oct 15, 2026",
-     "amount": "$18,041",
-     "num": 18041
+     "amount": "$2,998",
+     "num": 2998
     }
    ],
    "top10": [
     {
-     "date": "Sep 3, 2026",
-     "amount": "$31,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 18, 2026",
-     "amount": "$18,135",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 2, 2025",
-     "amount": "$18,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 14, 2025",
-     "amount": "$16,015",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 22, 2025",
-     "amount": "$13,239",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 14, 2025",
-     "amount": "$11,925",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jun 2, 2025",
-     "amount": "$11,632",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 29, 2025",
-     "amount": "$11,597",
-     "rail": "Rise"
-    },
-    {
      "date": "Jun 13, 2025",
-     "amount": "$11,374",
+     "amount": "$55,326",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 29, 2026",
+     "amount": "$29,739",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 25, 2026",
+     "amount": "$25,600",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jun 17, 2026",
+     "amount": "$24,800",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 27, 2025",
+     "amount": "$23,983",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 20, 2026",
+     "amount": "$23,405",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 27, 2026",
+     "amount": "$22,276",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 16, 2024",
+     "amount": "$22,106",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 9, 2025",
+     "amount": "$19,685",
      "rail": "Rise"
     }
    ],
    "latestPayouts": [
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$225",
+     "time": "Oct 15, 15:14 UTC",
+     "amount": "$27",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$577",
+     "time": "Oct 15, 11:36 UTC",
+     "amount": "$68",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$450",
+     "time": "Oct 15, 11:36 UTC",
+     "amount": "$2,903",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$1,170",
+     "time": "Oct 14, 12:29 UTC",
+     "amount": "$2,024",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$923",
+     "time": "Oct 14, 12:29 UTC",
+     "amount": "$1,341",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$1,800",
+     "time": "Oct 12, 09:15 UTC",
+     "amount": "$1,798",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$450",
+     "time": "Oct 12, 09:15 UTC",
+     "amount": "$2,710",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$1,800",
+     "time": "Oct 12, 09:15 UTC",
+     "amount": "$1,095",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$884",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$540",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$585",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$1,674",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$765",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$504",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$465",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$1,187",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$1,763",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 20:05 UTC",
-     "amount": "$629",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 16:58 UTC",
-     "amount": "$1,200",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$225",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$1,572",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$1,139",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$2,250",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$475",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$531",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$450",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 21:27 UTC",
-     "amount": "$2,511",
+     "time": "Oct 12, 09:15 UTC",
+     "amount": "$5,400",
      "rail": "Rise"
     }
    ]
@@ -41371,1034 +41877,448 @@
     }
    ]
   },
-  "traderscale": {
-   "slug": "traderscale",
-   "firm": "TraderScale",
-   "website": "traderscale.com",
-   "websiteUrl": "https://traderscale.com",
+  "tradersyard": {
+   "slug": "tradersyard",
+   "firm": "TradersYard",
+   "website": "tradersyard.com",
+   "websiteUrl": "https://tradersyard.com",
    "promo": "",
-   "total": "$2,946,742",
+   "total": "$498,736",
    "rail": "Rise",
-   "count": "1,046",
-   "average": "$2,817",
-   "largest": "$69,223",
-   "largestDate": "Sep 22, 2025",
-   "latestTime": "Oct 14, 11:37 UTC",
-   "latestAmount": "$200",
+   "count": "410",
+   "average": "$1,216",
+   "largest": "$10,031",
+   "largestDate": "Jan 29, 2026",
+   "latestTime": "Oct 15, 11:21 UTC",
+   "latestAmount": "$58",
    "monthlyVolume": [
     {
      "month": "Nov 2025",
-     "amount": "$113,435",
-     "num": 113435
+     "amount": "$29,576",
+     "num": 29576
     },
     {
      "month": "Dec 2025",
-     "amount": "$101,398",
-     "num": 101398
+     "amount": "$57,128",
+     "num": 57128
     },
     {
      "month": "Jan 2026",
-     "amount": "$111,791",
-     "num": 111791
+     "amount": "$59,596",
+     "num": 59596
     },
     {
      "month": "Feb 2026",
-     "amount": "$63,437",
-     "num": 63437
+     "amount": "$37,163",
+     "num": 37163
     },
     {
      "month": "Mar 2026",
-     "amount": "$44,163",
-     "num": 44163
+     "amount": "$35,573",
+     "num": 35573
     },
     {
      "month": "Apr 2026",
-     "amount": "$46,719",
-     "num": 46719
+     "amount": "$45,502",
+     "num": 45502
     },
     {
      "month": "May 2026",
-     "amount": "$49,120",
-     "num": 49120
+     "amount": "$23,879",
+     "num": 23879
     },
     {
      "month": "Jun 2026",
-     "amount": "$52,301",
-     "num": 52301
+     "amount": "$25,812",
+     "num": 25812
     },
     {
      "month": "Jul 2026",
-     "amount": "$38,177",
-     "num": 38177
+     "amount": "$21,072",
+     "num": 21072
     },
     {
      "month": "Aug 2026",
-     "amount": "$46,500",
-     "num": 46500
+     "amount": "$39,384",
+     "num": 39384
     },
     {
      "month": "Sep 2026",
-     "amount": "$74,588",
-     "num": 74588
+     "amount": "$21,366",
+     "num": 21366
     },
     {
      "month": "Oct 2026",
-     "amount": "$23,680",
-     "num": 23680
+     "amount": "$9,963",
+     "num": 9963
     }
    ],
    "dailyVolume": [
     {
      "date": "Sep 17, 2026",
-     "amount": "$30,948",
-     "num": 30948
+     "amount": "$149",
+     "num": 149
     },
     {
-     "date": "Sep 23, 2026",
-     "amount": "$3,571",
-     "num": 3571
+     "date": "Sep 27, 2026",
+     "amount": "$270",
+     "num": 270
     },
     {
-     "date": "Sep 25, 2026",
-     "amount": "$4,369",
-     "num": 4369
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$649",
-     "num": 649
+     "date": "Sep 28, 2026",
+     "amount": "$1,939",
+     "num": 1939
     },
     {
      "date": "Sep 30, 2026",
-     "amount": "$1,894",
-     "num": 1894
+     "amount": "$66",
+     "num": 66
     },
     {
      "date": "Oct 1, 2026",
-     "amount": "$294",
-     "num": 294
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$2,842",
-     "num": 2842
+     "amount": "$2,278",
+     "num": 2278
     },
     {
      "date": "Oct 5, 2026",
-     "amount": "$1,630",
-     "num": 1630
+     "amount": "$192",
+     "num": 192
     },
     {
-     "date": "Oct 8, 2026",
-     "amount": "$10,516",
-     "num": 10516
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$2,170",
-     "num": 2170
+     "date": "Oct 7, 2026",
+     "amount": "$2,651",
+     "num": 2651
     },
     {
      "date": "Oct 12, 2026",
-     "amount": "$739",
-     "num": 739
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$3,657",
-     "num": 3657
+     "amount": "$862",
+     "num": 862
     },
     {
      "date": "Oct 14, 2026",
-     "amount": "$1,833",
-     "num": 1833
+     "amount": "$3,922",
+     "num": 3922
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$58",
+     "num": 58
     }
    ],
    "top10": [
     {
-     "date": "Sep 22, 2025",
-     "amount": "$69,223",
+     "date": "Jan 29, 2026",
+     "amount": "$10,031",
      "rail": "Rise"
     },
     {
-     "date": "Jan 8, 2025",
-     "amount": "$31,161",
+     "date": "Oct 23, 2025",
+     "amount": "$9,657",
      "rail": "Rise"
     },
     {
-     "date": "Oct 7, 2024",
-     "amount": "$23,645",
+     "date": "Aug 28, 2025",
+     "amount": "$8,959",
      "rail": "Rise"
     },
     {
-     "date": "Dec 15, 2025",
-     "amount": "$23,058",
+     "date": "Sep 3, 2026",
+     "amount": "$8,250",
      "rail": "Rise"
     },
     {
-     "date": "Nov 19, 2025",
-     "amount": "$22,133",
+     "date": "Aug 6, 2026",
+     "amount": "$7,950",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 26, 2025",
+     "amount": "$7,500",
      "rail": "Rise"
     },
     {
      "date": "May 18, 2026",
-     "amount": "$17,548",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 5, 2025",
-     "amount": "$16,988",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 16, 2026",
-     "amount": "$15,460",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 18, 2025",
-     "amount": "$15,211",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 14, 11:37 UTC",
-     "amount": "$200",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 11:37 UTC",
-     "amount": "$407",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 11:37 UTC",
-     "amount": "$1,226",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 13, 09:44 UTC",
-     "amount": "$694",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 13, 09:44 UTC",
-     "amount": "$551",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 13, 09:44 UTC",
-     "amount": "$2,411",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 12, 17:19 UTC",
-     "amount": "$739",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 9, 07:00 UTC",
-     "amount": "$820",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 9, 07:00 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "TraderScale": {
-   "slug": "traderscale",
-   "firm": "TraderScale",
-   "website": "traderscale.com",
-   "websiteUrl": "https://traderscale.com",
-   "promo": "",
-   "total": "$2,946,742",
-   "rail": "Rise",
-   "count": "1,046",
-   "average": "$2,817",
-   "largest": "$69,223",
-   "largestDate": "Sep 22, 2025",
-   "latestTime": "Oct 14, 11:37 UTC",
-   "latestAmount": "$200",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$113,435",
-     "num": 113435
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$101,398",
-     "num": 101398
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$111,791",
-     "num": 111791
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$63,437",
-     "num": 63437
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$44,163",
-     "num": 44163
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$46,719",
-     "num": 46719
-    },
-    {
-     "month": "May 2026",
-     "amount": "$49,120",
-     "num": 49120
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$52,301",
-     "num": 52301
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$38,177",
-     "num": 38177
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$46,500",
-     "num": 46500
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$74,588",
-     "num": 74588
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$23,680",
-     "num": 23680
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$30,948",
-     "num": 30948
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$3,571",
-     "num": 3571
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$4,369",
-     "num": 4369
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$649",
-     "num": 649
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$1,894",
-     "num": 1894
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$294",
-     "num": 294
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$2,842",
-     "num": 2842
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$1,630",
-     "num": 1630
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$10,516",
-     "num": 10516
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$2,170",
-     "num": 2170
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$739",
-     "num": 739
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$3,657",
-     "num": 3657
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$1,833",
-     "num": 1833
-    }
-   ],
-   "top10": [
-    {
-     "date": "Sep 22, 2025",
-     "amount": "$69,223",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jan 8, 2025",
-     "amount": "$31,161",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 7, 2024",
-     "amount": "$23,645",
+     "amount": "$7,170",
      "rail": "Rise"
     },
     {
      "date": "Dec 15, 2025",
-     "amount": "$23,058",
+     "amount": "$6,690",
      "rail": "Rise"
     },
     {
-     "date": "Nov 19, 2025",
-     "amount": "$22,133",
+     "date": "Dec 5, 2025",
+     "amount": "$6,180",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 11:21 UTC",
+     "amount": "$58",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 09:38 UTC",
+     "amount": "$3,922",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 12, 05:36 UTC",
+     "amount": "$862",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 7, 12:11 UTC",
+     "amount": "$2,351",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 7, 06:33 UTC",
+     "amount": "$300",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 5, 18:08 UTC",
+     "amount": "$192",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 1, 05:33 UTC",
+     "amount": "$2,278",
+     "rail": "Rise"
+    },
+    {
+     "time": "Sep 30, 12:41 UTC",
+     "amount": "$66",
+     "rail": "Rise"
+    },
+    {
+     "time": "Sep 28, 12:54 UTC",
+     "amount": "$763",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "TradersYard": {
+   "slug": "tradersyard",
+   "firm": "TradersYard",
+   "website": "tradersyard.com",
+   "websiteUrl": "https://tradersyard.com",
+   "promo": "",
+   "total": "$498,736",
+   "rail": "Rise",
+   "count": "410",
+   "average": "$1,216",
+   "largest": "$10,031",
+   "largestDate": "Jan 29, 2026",
+   "latestTime": "Oct 15, 11:21 UTC",
+   "latestAmount": "$58",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$29,576",
+     "num": 29576
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$57,128",
+     "num": 57128
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$59,596",
+     "num": 59596
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$37,163",
+     "num": 37163
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$35,573",
+     "num": 35573
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$45,502",
+     "num": 45502
+    },
+    {
+     "month": "May 2026",
+     "amount": "$23,879",
+     "num": 23879
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$25,812",
+     "num": 25812
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$21,072",
+     "num": 21072
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$39,384",
+     "num": 39384
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$21,366",
+     "num": 21366
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$9,963",
+     "num": 9963
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$149",
+     "num": 149
+    },
+    {
+     "date": "Sep 27, 2026",
+     "amount": "$270",
+     "num": 270
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$1,939",
+     "num": 1939
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$66",
+     "num": 66
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$2,278",
+     "num": 2278
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$192",
+     "num": 192
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$2,651",
+     "num": 2651
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$862",
+     "num": 862
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$3,922",
+     "num": 3922
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$58",
+     "num": 58
+    }
+   ],
+   "top10": [
+    {
+     "date": "Jan 29, 2026",
+     "amount": "$10,031",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 23, 2025",
+     "amount": "$9,657",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 28, 2025",
+     "amount": "$8,959",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 3, 2026",
+     "amount": "$8,250",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 6, 2026",
+     "amount": "$7,950",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 26, 2025",
+     "amount": "$7,500",
      "rail": "Rise"
     },
     {
      "date": "May 18, 2026",
-     "amount": "$17,548",
+     "amount": "$7,170",
      "rail": "Rise"
     },
     {
-     "date": "Mar 5, 2025",
-     "amount": "$16,988",
+     "date": "Dec 15, 2025",
+     "amount": "$6,690",
      "rail": "Rise"
     },
     {
-     "date": "Jan 16, 2026",
-     "amount": "$15,460",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 18, 2025",
-     "amount": "$15,211",
+     "date": "Dec 5, 2025",
+     "amount": "$6,180",
      "rail": "Rise"
     }
    ],
    "latestPayouts": [
     {
-     "time": "Oct 14, 11:37 UTC",
-     "amount": "$200",
+     "time": "Oct 15, 11:21 UTC",
+     "amount": "$58",
      "rail": "Rise"
     },
     {
-     "time": "Oct 14, 11:37 UTC",
-     "amount": "$407",
+     "time": "Oct 14, 09:38 UTC",
+     "amount": "$3,922",
      "rail": "Rise"
     },
     {
-     "time": "Oct 14, 11:37 UTC",
-     "amount": "$1,226",
+     "time": "Oct 12, 05:36 UTC",
+     "amount": "$862",
      "rail": "Rise"
     },
     {
-     "time": "Oct 13, 09:44 UTC",
-     "amount": "$694",
+     "time": "Oct 7, 12:11 UTC",
+     "amount": "$2,351",
      "rail": "Rise"
     },
     {
-     "time": "Oct 13, 09:44 UTC",
-     "amount": "$551",
+     "time": "Oct 7, 06:33 UTC",
+     "amount": "$300",
      "rail": "Rise"
     },
     {
-     "time": "Oct 13, 09:44 UTC",
-     "amount": "$2,411",
+     "time": "Oct 5, 18:08 UTC",
+     "amount": "$192",
      "rail": "Rise"
     },
     {
-     "time": "Oct 12, 17:19 UTC",
-     "amount": "$739",
+     "time": "Oct 1, 05:33 UTC",
+     "amount": "$2,278",
      "rail": "Rise"
     },
     {
-     "time": "Oct 9, 07:00 UTC",
-     "amount": "$820",
+     "time": "Sep 30, 12:41 UTC",
+     "amount": "$66",
      "rail": "Rise"
     },
     {
-     "time": "Oct 9, 07:00 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "fxify": {
-   "slug": "fxify",
-   "firm": "FXIFY",
-   "website": "trader.fxify.com",
-   "websiteUrl": "https://trader.fxify.com",
-   "promo": "",
-   "total": "$35,654,714",
-   "rail": "Rise",
-   "count": "14,630",
-   "average": "$2,437",
-   "largest": "$119,699",
-   "largestDate": "Apr 17, 2024",
-   "latestTime": "Oct 15, 14:43 UTC",
-   "latestAmount": "$116",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$345,600",
-     "num": 345600
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$359,070",
-     "num": 359070
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$404,543",
-     "num": 404543
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$594,855",
-     "num": 594855
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$439,214",
-     "num": 439214
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$516,712",
-     "num": 516712
-    },
-    {
-     "month": "May 2026",
-     "amount": "$339,981",
-     "num": 339981
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$328,663",
-     "num": 328663
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$426,063",
-     "num": 426063
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$271,646",
-     "num": 271646
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$431,413",
-     "num": 431413
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$152,726",
-     "num": 152726
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$8,719",
-     "num": 8719
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$6,921",
-     "num": 6921
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$18,036",
-     "num": 18036
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$11,662",
-     "num": 11662
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$30,160",
-     "num": 30160
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$4,224",
-     "num": 4224
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$548",
-     "num": 548
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$52,585",
-     "num": 52585
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$34,481",
-     "num": 34481
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$1,868",
-     "num": 1868
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$19,878",
-     "num": 19878
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$5,172",
-     "num": 5172
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$20,893",
-     "num": 20893
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$256",
-     "num": 256
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$57,861",
-     "num": 57861
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$8,544",
-     "num": 8544
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$5,308",
-     "num": 5308
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$84",
-     "num": 84
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$30,974",
-     "num": 30974
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$1,888",
-     "num": 1888
-    }
-   ],
-   "top10": [
-    {
-     "date": "Apr 17, 2024",
-     "amount": "$119,699",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 15, 2024",
-     "amount": "$109,063",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 25, 2025",
-     "amount": "$81,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 6, 2024",
-     "amount": "$67,202",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 7, 2024",
-     "amount": "$62,625",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 27, 2024",
-     "amount": "$62,419",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 26, 2024",
-     "amount": "$55,554",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 26, 2024",
-     "amount": "$51,439",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 7, 2024",
-     "amount": "$50,472",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 14:43 UTC",
-     "amount": "$116",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:59 UTC",
-     "amount": "$40",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$160",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$96",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$47",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$28",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$98",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$26",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$447",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$741",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "FXIFY": {
-   "slug": "fxify",
-   "firm": "FXIFY",
-   "website": "trader.fxify.com",
-   "websiteUrl": "https://trader.fxify.com",
-   "promo": "",
-   "total": "$35,654,714",
-   "rail": "Rise",
-   "count": "14,630",
-   "average": "$2,437",
-   "largest": "$119,699",
-   "largestDate": "Apr 17, 2024",
-   "latestTime": "Oct 15, 14:43 UTC",
-   "latestAmount": "$116",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$345,600",
-     "num": 345600
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$359,070",
-     "num": 359070
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$404,543",
-     "num": 404543
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$594,855",
-     "num": 594855
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$439,214",
-     "num": 439214
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$516,712",
-     "num": 516712
-    },
-    {
-     "month": "May 2026",
-     "amount": "$339,981",
-     "num": 339981
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$328,663",
-     "num": 328663
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$426,063",
-     "num": 426063
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$271,646",
-     "num": 271646
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$431,413",
-     "num": 431413
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$152,726",
-     "num": 152726
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$8,719",
-     "num": 8719
-    },
-    {
-     "date": "Sep 18, 2026",
-     "amount": "$6,921",
-     "num": 6921
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$18,036",
-     "num": 18036
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$11,662",
-     "num": 11662
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$30,160",
-     "num": 30160
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$4,224",
-     "num": 4224
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$548",
-     "num": 548
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$52,585",
-     "num": 52585
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$34,481",
-     "num": 34481
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$1,868",
-     "num": 1868
-    },
-    {
-     "date": "Oct 2, 2026",
-     "amount": "$19,878",
-     "num": 19878
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$5,172",
-     "num": 5172
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$20,893",
-     "num": 20893
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$256",
-     "num": 256
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$57,861",
-     "num": 57861
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$8,544",
-     "num": 8544
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$5,308",
-     "num": 5308
-    },
-    {
-     "date": "Oct 13, 2026",
-     "amount": "$84",
-     "num": 84
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$30,974",
-     "num": 30974
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$1,888",
-     "num": 1888
-    }
-   ],
-   "top10": [
-    {
-     "date": "Apr 17, 2024",
-     "amount": "$119,699",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 15, 2024",
-     "amount": "$109,063",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 25, 2025",
-     "amount": "$81,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 6, 2024",
-     "amount": "$67,202",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 7, 2024",
-     "amount": "$62,625",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 27, 2024",
-     "amount": "$62,419",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 26, 2024",
-     "amount": "$55,554",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 26, 2024",
-     "amount": "$51,439",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 7, 2024",
-     "amount": "$50,472",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 14:43 UTC",
-     "amount": "$116",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:59 UTC",
-     "amount": "$40",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$160",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$96",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$47",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$28",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$98",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$26",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$447",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 15, 09:49 UTC",
-     "amount": "$741",
+     "time": "Sep 28, 12:54 UTC",
+     "amount": "$763",
      "rail": "Rise"
     }
    ]
@@ -43305,6 +43225,1038 @@
     }
    ]
   },
+  "fxify": {
+   "slug": "fxify",
+   "firm": "FXIFY",
+   "website": "trader.fxify.com",
+   "websiteUrl": "https://trader.fxify.com",
+   "promo": "",
+   "total": "$35,654,714",
+   "rail": "Rise",
+   "count": "14,630",
+   "average": "$2,437",
+   "largest": "$119,699",
+   "largestDate": "Apr 17, 2024",
+   "latestTime": "Oct 15, 14:43 UTC",
+   "latestAmount": "$116",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$345,600",
+     "num": 345600
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$359,070",
+     "num": 359070
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$404,543",
+     "num": 404543
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$594,855",
+     "num": 594855
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$439,214",
+     "num": 439214
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$516,712",
+     "num": 516712
+    },
+    {
+     "month": "May 2026",
+     "amount": "$339,981",
+     "num": 339981
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$328,663",
+     "num": 328663
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$426,063",
+     "num": 426063
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$271,646",
+     "num": 271646
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$431,413",
+     "num": 431413
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$152,726",
+     "num": 152726
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$8,719",
+     "num": 8719
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$6,921",
+     "num": 6921
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$18,036",
+     "num": 18036
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$11,662",
+     "num": 11662
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$30,160",
+     "num": 30160
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$4,224",
+     "num": 4224
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$548",
+     "num": 548
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$52,585",
+     "num": 52585
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$34,481",
+     "num": 34481
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$1,868",
+     "num": 1868
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$19,878",
+     "num": 19878
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$5,172",
+     "num": 5172
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$20,893",
+     "num": 20893
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$256",
+     "num": 256
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$57,861",
+     "num": 57861
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$8,544",
+     "num": 8544
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$5,308",
+     "num": 5308
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$84",
+     "num": 84
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$30,974",
+     "num": 30974
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$1,888",
+     "num": 1888
+    }
+   ],
+   "top10": [
+    {
+     "date": "Apr 17, 2024",
+     "amount": "$119,699",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 15, 2024",
+     "amount": "$109,063",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 25, 2025",
+     "amount": "$81,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 6, 2024",
+     "amount": "$67,202",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 7, 2024",
+     "amount": "$62,625",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 27, 2024",
+     "amount": "$62,419",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 26, 2024",
+     "amount": "$55,554",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 26, 2024",
+     "amount": "$51,439",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 7, 2024",
+     "amount": "$50,472",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 14:43 UTC",
+     "amount": "$116",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:59 UTC",
+     "amount": "$40",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$160",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$96",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$47",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$28",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$98",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$26",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$447",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$741",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "FXIFY": {
+   "slug": "fxify",
+   "firm": "FXIFY",
+   "website": "trader.fxify.com",
+   "websiteUrl": "https://trader.fxify.com",
+   "promo": "",
+   "total": "$35,654,714",
+   "rail": "Rise",
+   "count": "14,630",
+   "average": "$2,437",
+   "largest": "$119,699",
+   "largestDate": "Apr 17, 2024",
+   "latestTime": "Oct 15, 14:43 UTC",
+   "latestAmount": "$116",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$345,600",
+     "num": 345600
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$359,070",
+     "num": 359070
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$404,543",
+     "num": 404543
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$594,855",
+     "num": 594855
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$439,214",
+     "num": 439214
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$516,712",
+     "num": 516712
+    },
+    {
+     "month": "May 2026",
+     "amount": "$339,981",
+     "num": 339981
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$328,663",
+     "num": 328663
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$426,063",
+     "num": 426063
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$271,646",
+     "num": 271646
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$431,413",
+     "num": 431413
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$152,726",
+     "num": 152726
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$8,719",
+     "num": 8719
+    },
+    {
+     "date": "Sep 18, 2026",
+     "amount": "$6,921",
+     "num": 6921
+    },
+    {
+     "date": "Sep 21, 2026",
+     "amount": "$18,036",
+     "num": 18036
+    },
+    {
+     "date": "Sep 22, 2026",
+     "amount": "$11,662",
+     "num": 11662
+    },
+    {
+     "date": "Sep 24, 2026",
+     "amount": "$30,160",
+     "num": 30160
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$4,224",
+     "num": 4224
+    },
+    {
+     "date": "Sep 28, 2026",
+     "amount": "$548",
+     "num": 548
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$52,585",
+     "num": 52585
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$34,481",
+     "num": 34481
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$1,868",
+     "num": 1868
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$19,878",
+     "num": 19878
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$5,172",
+     "num": 5172
+    },
+    {
+     "date": "Oct 6, 2026",
+     "amount": "$20,893",
+     "num": 20893
+    },
+    {
+     "date": "Oct 7, 2026",
+     "amount": "$256",
+     "num": 256
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$57,861",
+     "num": 57861
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$8,544",
+     "num": 8544
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$5,308",
+     "num": 5308
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$84",
+     "num": 84
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$30,974",
+     "num": 30974
+    },
+    {
+     "date": "Oct 15, 2026",
+     "amount": "$1,888",
+     "num": 1888
+    }
+   ],
+   "top10": [
+    {
+     "date": "Apr 17, 2024",
+     "amount": "$119,699",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 15, 2024",
+     "amount": "$109,063",
+     "rail": "Rise"
+    },
+    {
+     "date": "Feb 25, 2025",
+     "amount": "$81,000",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 6, 2024",
+     "amount": "$67,202",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 7, 2024",
+     "amount": "$62,625",
+     "rail": "Rise"
+    },
+    {
+     "date": "Aug 27, 2024",
+     "amount": "$62,419",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 26, 2024",
+     "amount": "$55,554",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jul 26, 2024",
+     "amount": "$51,439",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 7, 2024",
+     "amount": "$50,472",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 15, 14:43 UTC",
+     "amount": "$116",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:59 UTC",
+     "amount": "$40",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$160",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$96",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$47",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$28",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$98",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$26",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$447",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 15, 09:49 UTC",
+     "amount": "$741",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "traderscale": {
+   "slug": "traderscale",
+   "firm": "TraderScale",
+   "website": "traderscale.com",
+   "websiteUrl": "https://traderscale.com",
+   "promo": "",
+   "total": "$2,946,742",
+   "rail": "Rise",
+   "count": "1,046",
+   "average": "$2,817",
+   "largest": "$69,223",
+   "largestDate": "Sep 22, 2025",
+   "latestTime": "Oct 14, 11:37 UTC",
+   "latestAmount": "$200",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$113,435",
+     "num": 113435
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$101,398",
+     "num": 101398
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$111,791",
+     "num": 111791
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$63,437",
+     "num": 63437
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$44,163",
+     "num": 44163
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$46,719",
+     "num": 46719
+    },
+    {
+     "month": "May 2026",
+     "amount": "$49,120",
+     "num": 49120
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$52,301",
+     "num": 52301
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$38,177",
+     "num": 38177
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$46,500",
+     "num": 46500
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$74,588",
+     "num": 74588
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$23,680",
+     "num": 23680
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$30,948",
+     "num": 30948
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$3,571",
+     "num": 3571
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$4,369",
+     "num": 4369
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$649",
+     "num": 649
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$1,894",
+     "num": 1894
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$294",
+     "num": 294
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$2,842",
+     "num": 2842
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$1,630",
+     "num": 1630
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$10,516",
+     "num": 10516
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$2,170",
+     "num": 2170
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$739",
+     "num": 739
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$3,657",
+     "num": 3657
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$1,833",
+     "num": 1833
+    }
+   ],
+   "top10": [
+    {
+     "date": "Sep 22, 2025",
+     "amount": "$69,223",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 8, 2025",
+     "amount": "$31,161",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 7, 2024",
+     "amount": "$23,645",
+     "rail": "Rise"
+    },
+    {
+     "date": "Dec 15, 2025",
+     "amount": "$23,058",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 19, 2025",
+     "amount": "$22,133",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 18, 2026",
+     "amount": "$17,548",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 5, 2025",
+     "amount": "$16,988",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 16, 2026",
+     "amount": "$15,460",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 18, 2025",
+     "amount": "$15,211",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 14, 11:37 UTC",
+     "amount": "$200",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 11:37 UTC",
+     "amount": "$407",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 11:37 UTC",
+     "amount": "$1,226",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 13, 09:44 UTC",
+     "amount": "$694",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 13, 09:44 UTC",
+     "amount": "$551",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 13, 09:44 UTC",
+     "amount": "$2,411",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 12, 17:19 UTC",
+     "amount": "$739",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 9, 07:00 UTC",
+     "amount": "$820",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 9, 07:00 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    }
+   ]
+  },
+  "TraderScale": {
+   "slug": "traderscale",
+   "firm": "TraderScale",
+   "website": "traderscale.com",
+   "websiteUrl": "https://traderscale.com",
+   "promo": "",
+   "total": "$2,946,742",
+   "rail": "Rise",
+   "count": "1,046",
+   "average": "$2,817",
+   "largest": "$69,223",
+   "largestDate": "Sep 22, 2025",
+   "latestTime": "Oct 14, 11:37 UTC",
+   "latestAmount": "$200",
+   "monthlyVolume": [
+    {
+     "month": "Nov 2025",
+     "amount": "$113,435",
+     "num": 113435
+    },
+    {
+     "month": "Dec 2025",
+     "amount": "$101,398",
+     "num": 101398
+    },
+    {
+     "month": "Jan 2026",
+     "amount": "$111,791",
+     "num": 111791
+    },
+    {
+     "month": "Feb 2026",
+     "amount": "$63,437",
+     "num": 63437
+    },
+    {
+     "month": "Mar 2026",
+     "amount": "$44,163",
+     "num": 44163
+    },
+    {
+     "month": "Apr 2026",
+     "amount": "$46,719",
+     "num": 46719
+    },
+    {
+     "month": "May 2026",
+     "amount": "$49,120",
+     "num": 49120
+    },
+    {
+     "month": "Jun 2026",
+     "amount": "$52,301",
+     "num": 52301
+    },
+    {
+     "month": "Jul 2026",
+     "amount": "$38,177",
+     "num": 38177
+    },
+    {
+     "month": "Aug 2026",
+     "amount": "$46,500",
+     "num": 46500
+    },
+    {
+     "month": "Sep 2026",
+     "amount": "$74,588",
+     "num": 74588
+    },
+    {
+     "month": "Oct 2026",
+     "amount": "$23,680",
+     "num": 23680
+    }
+   ],
+   "dailyVolume": [
+    {
+     "date": "Sep 17, 2026",
+     "amount": "$30,948",
+     "num": 30948
+    },
+    {
+     "date": "Sep 23, 2026",
+     "amount": "$3,571",
+     "num": 3571
+    },
+    {
+     "date": "Sep 25, 2026",
+     "amount": "$4,369",
+     "num": 4369
+    },
+    {
+     "date": "Sep 29, 2026",
+     "amount": "$649",
+     "num": 649
+    },
+    {
+     "date": "Sep 30, 2026",
+     "amount": "$1,894",
+     "num": 1894
+    },
+    {
+     "date": "Oct 1, 2026",
+     "amount": "$294",
+     "num": 294
+    },
+    {
+     "date": "Oct 2, 2026",
+     "amount": "$2,842",
+     "num": 2842
+    },
+    {
+     "date": "Oct 5, 2026",
+     "amount": "$1,630",
+     "num": 1630
+    },
+    {
+     "date": "Oct 8, 2026",
+     "amount": "$10,516",
+     "num": 10516
+    },
+    {
+     "date": "Oct 9, 2026",
+     "amount": "$2,170",
+     "num": 2170
+    },
+    {
+     "date": "Oct 12, 2026",
+     "amount": "$739",
+     "num": 739
+    },
+    {
+     "date": "Oct 13, 2026",
+     "amount": "$3,657",
+     "num": 3657
+    },
+    {
+     "date": "Oct 14, 2026",
+     "amount": "$1,833",
+     "num": 1833
+    }
+   ],
+   "top10": [
+    {
+     "date": "Sep 22, 2025",
+     "amount": "$69,223",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 8, 2025",
+     "amount": "$31,161",
+     "rail": "Rise"
+    },
+    {
+     "date": "Oct 7, 2024",
+     "amount": "$23,645",
+     "rail": "Rise"
+    },
+    {
+     "date": "Dec 15, 2025",
+     "amount": "$23,058",
+     "rail": "Rise"
+    },
+    {
+     "date": "Nov 19, 2025",
+     "amount": "$22,133",
+     "rail": "Rise"
+    },
+    {
+     "date": "May 18, 2026",
+     "amount": "$17,548",
+     "rail": "Rise"
+    },
+    {
+     "date": "Mar 5, 2025",
+     "amount": "$16,988",
+     "rail": "Rise"
+    },
+    {
+     "date": "Jan 16, 2026",
+     "amount": "$15,460",
+     "rail": "Rise"
+    },
+    {
+     "date": "Sep 18, 2025",
+     "amount": "$15,211",
+     "rail": "Rise"
+    }
+   ],
+   "latestPayouts": [
+    {
+     "time": "Oct 14, 11:37 UTC",
+     "amount": "$200",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 11:37 UTC",
+     "amount": "$407",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 14, 11:37 UTC",
+     "amount": "$1,226",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 13, 09:44 UTC",
+     "amount": "$694",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 13, 09:44 UTC",
+     "amount": "$551",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 13, 09:44 UTC",
+     "amount": "$2,411",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 12, 17:19 UTC",
+     "amount": "$739",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 9, 07:00 UTC",
+     "amount": "$820",
+     "rail": "Rise"
+    },
+    {
+     "time": "Oct 9, 07:00 UTC",
+     "amount": "$1,350",
+     "rail": "Rise"
+    }
+   ]
+  },
   "toponetrader": {
    "slug": "toponetrader",
    "firm": "TopOneTrader",
@@ -43911,964 +44863,358 @@
     }
    ]
   },
-  "instantfunding": {
-   "slug": "instantfunding",
-   "firm": "Instantfunding",
-   "website": "instantfunding.io",
-   "websiteUrl": "https://instantfunding.io",
+  "neomaaa-funds": {
+   "slug": "neomaaa-funds",
+   "firm": "NeomAAA Funds",
+   "website": "neomaaa.com",
+   "websiteUrl": "https://neomaaa.com",
    "promo": "",
-   "total": "$9,566,455",
+   "total": "$882,597",
    "rail": "Rise",
-   "count": "10,584",
-   "average": "$904",
-   "largest": "$55,326",
-   "largestDate": "Jun 13, 2025",
-   "latestTime": "Oct 15, 15:14 UTC",
-   "latestAmount": "$27",
+   "count": "548",
+   "average": "$1,611",
+   "largest": "$22,653",
+   "largestDate": "Jan 14, 2026",
+   "latestTime": "Oct 4, 21:27 UTC",
+   "latestAmount": "$480",
    "monthlyVolume": [
     {
      "month": "Nov 2025",
-     "amount": "$291,729",
-     "num": 291729
+     "amount": "$147,540",
+     "num": 147540
     },
     {
      "month": "Dec 2025",
-     "amount": "$206,762",
-     "num": 206762
+     "amount": "$77,881",
+     "num": 77881
     },
     {
      "month": "Jan 2026",
-     "amount": "$275,261",
-     "num": 275261
+     "amount": "$55,682",
+     "num": 55682
     },
     {
      "month": "Feb 2026",
-     "amount": "$341,174",
-     "num": 341174
+     "amount": "$29,942",
+     "num": 29942
     },
     {
      "month": "Mar 2026",
-     "amount": "$361,463",
-     "num": 361463
+     "amount": "$43,518",
+     "num": 43518
     },
     {
      "month": "Apr 2026",
-     "amount": "$223,760",
-     "num": 223760
+     "amount": "$45,006",
+     "num": 45006
     },
     {
      "month": "May 2026",
-     "amount": "$194,397",
-     "num": 194397
+     "amount": "$33,885",
+     "num": 33885
     },
     {
      "month": "Jun 2026",
-     "amount": "$342,607",
-     "num": 342607
+     "amount": "$17,386",
+     "num": 17386
     },
     {
      "month": "Jul 2026",
-     "amount": "$274,940",
-     "num": 274940
+     "amount": "$6,860",
+     "num": 6860
     },
     {
      "month": "Aug 2026",
-     "amount": "$194,248",
-     "num": 194248
+     "amount": "$9,133",
+     "num": 9133
     },
     {
      "month": "Sep 2026",
-     "amount": "$132,658",
-     "num": 132658
+     "amount": "$6,165",
+     "num": 6165
     },
     {
      "month": "Oct 2026",
-     "amount": "$38,402",
-     "num": 38402
+     "amount": "$6,605",
+     "num": 6605
     }
    ],
    "dailyVolume": [
     {
-     "date": "Sep 17, 2026",
-     "amount": "$3,035",
-     "num": 3035
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$8,675",
-     "num": 8675
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$4,014",
-     "num": 4014
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$6,355",
-     "num": 6355
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$6,951",
-     "num": 6951
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$1,872",
-     "num": 1872
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$7,643",
-     "num": 7643
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$11,478",
-     "num": 11478
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$11,903",
-     "num": 11903
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$3,084",
-     "num": 3084
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$2,207",
-     "num": 2207
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$481",
-     "num": 481
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$1,506",
-     "num": 1506
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$1,709",
-     "num": 1709
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$11,148",
-     "num": 11148
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$3,365",
-     "num": 3365
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$2,998",
-     "num": 2998
+     "date": "Oct 4, 2026",
+     "amount": "$6,605",
+     "num": 6605
     }
    ],
    "top10": [
     {
-     "date": "Jun 13, 2025",
-     "amount": "$55,326",
+     "date": "Jan 14, 2026",
+     "amount": "$22,653",
      "rail": "Rise"
     },
     {
-     "date": "May 29, 2026",
-     "amount": "$29,739",
+     "date": "Sep 23, 2025",
+     "amount": "$17,976",
      "rail": "Rise"
     },
     {
-     "date": "Jun 25, 2026",
-     "amount": "$25,600",
+     "date": "Jul 30, 2025",
+     "amount": "$15,000",
      "rail": "Rise"
     },
     {
-     "date": "Jun 17, 2026",
-     "amount": "$24,800",
+     "date": "Aug 1, 2025",
+     "amount": "$11,529",
      "rail": "Rise"
     },
     {
-     "date": "Aug 27, 2025",
-     "amount": "$23,983",
+     "date": "Aug 19, 2025",
+     "amount": "$10,000",
      "rail": "Rise"
     },
     {
-     "date": "Jan 20, 2026",
-     "amount": "$23,405",
+     "date": "Sep 30, 2025",
+     "amount": "$9,204",
      "rail": "Rise"
     },
     {
-     "date": "Feb 27, 2026",
-     "amount": "$22,276",
+     "date": "Mar 3, 2026",
+     "amount": "$8,656",
      "rail": "Rise"
     },
     {
-     "date": "Sep 16, 2024",
-     "amount": "$22,106",
+     "date": "Feb 2, 2026",
+     "amount": "$7,571",
      "rail": "Rise"
     },
     {
-     "date": "Jan 9, 2025",
-     "amount": "$19,685",
+     "date": "Dec 23, 2025",
+     "amount": "$7,530",
      "rail": "Rise"
     }
    ],
    "latestPayouts": [
     {
-     "time": "Oct 15, 15:14 UTC",
-     "amount": "$27",
+     "time": "Oct 4, 21:27 UTC",
+     "amount": "$480",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 11:36 UTC",
-     "amount": "$68",
+     "time": "Oct 4, 21:26 UTC",
+     "amount": "$820",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 11:36 UTC",
-     "amount": "$2,903",
+     "time": "Oct 4, 21:24 UTC",
+     "amount": "$820",
      "rail": "Rise"
     },
     {
-     "time": "Oct 14, 12:29 UTC",
-     "amount": "$2,024",
+     "time": "Oct 4, 21:23 UTC",
+     "amount": "$1,015",
      "rail": "Rise"
     },
     {
-     "time": "Oct 14, 12:29 UTC",
-     "amount": "$1,341",
+     "time": "Oct 4, 21:21 UTC",
+     "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 12, 09:15 UTC",
-     "amount": "$1,798",
+     "time": "Oct 4, 21:20 UTC",
+     "amount": "$1,120",
      "rail": "Rise"
     },
     {
-     "time": "Oct 12, 09:15 UTC",
-     "amount": "$2,710",
+     "time": "Oct 4, 21:18 UTC",
+     "amount": "$1,000",
      "rail": "Rise"
     },
     {
-     "time": "Oct 12, 09:15 UTC",
-     "amount": "$1,095",
+     "time": "Sep 8, 18:11 UTC",
+     "amount": "$820",
      "rail": "Rise"
     },
     {
-     "time": "Oct 12, 09:15 UTC",
-     "amount": "$5,400",
+     "time": "Sep 8, 17:10 UTC",
+     "amount": "$820",
      "rail": "Rise"
     }
    ]
   },
-  "Instantfunding": {
-   "slug": "instantfunding",
-   "firm": "Instantfunding",
-   "website": "instantfunding.io",
-   "websiteUrl": "https://instantfunding.io",
+  "NeomAAA Funds": {
+   "slug": "neomaaa-funds",
+   "firm": "NeomAAA Funds",
+   "website": "neomaaa.com",
+   "websiteUrl": "https://neomaaa.com",
    "promo": "",
-   "total": "$9,566,455",
+   "total": "$882,597",
    "rail": "Rise",
-   "count": "10,584",
-   "average": "$904",
-   "largest": "$55,326",
-   "largestDate": "Jun 13, 2025",
-   "latestTime": "Oct 15, 15:14 UTC",
-   "latestAmount": "$27",
+   "count": "548",
+   "average": "$1,611",
+   "largest": "$22,653",
+   "largestDate": "Jan 14, 2026",
+   "latestTime": "Oct 4, 21:27 UTC",
+   "latestAmount": "$480",
    "monthlyVolume": [
     {
      "month": "Nov 2025",
-     "amount": "$291,729",
-     "num": 291729
+     "amount": "$147,540",
+     "num": 147540
     },
     {
      "month": "Dec 2025",
-     "amount": "$206,762",
-     "num": 206762
+     "amount": "$77,881",
+     "num": 77881
     },
     {
      "month": "Jan 2026",
-     "amount": "$275,261",
-     "num": 275261
+     "amount": "$55,682",
+     "num": 55682
     },
     {
      "month": "Feb 2026",
-     "amount": "$341,174",
-     "num": 341174
+     "amount": "$29,942",
+     "num": 29942
     },
     {
      "month": "Mar 2026",
-     "amount": "$361,463",
-     "num": 361463
+     "amount": "$43,518",
+     "num": 43518
     },
     {
      "month": "Apr 2026",
-     "amount": "$223,760",
-     "num": 223760
+     "amount": "$45,006",
+     "num": 45006
     },
     {
      "month": "May 2026",
-     "amount": "$194,397",
-     "num": 194397
+     "amount": "$33,885",
+     "num": 33885
     },
     {
      "month": "Jun 2026",
-     "amount": "$342,607",
-     "num": 342607
+     "amount": "$17,386",
+     "num": 17386
     },
     {
      "month": "Jul 2026",
-     "amount": "$274,940",
-     "num": 274940
+     "amount": "$6,860",
+     "num": 6860
     },
     {
      "month": "Aug 2026",
-     "amount": "$194,248",
-     "num": 194248
+     "amount": "$9,133",
+     "num": 9133
     },
     {
      "month": "Sep 2026",
-     "amount": "$132,658",
-     "num": 132658
+     "amount": "$6,165",
+     "num": 6165
     },
     {
      "month": "Oct 2026",
-     "amount": "$38,402",
-     "num": 38402
+     "amount": "$6,605",
+     "num": 6605
     }
    ],
    "dailyVolume": [
     {
-     "date": "Sep 17, 2026",
-     "amount": "$3,035",
-     "num": 3035
-    },
-    {
-     "date": "Sep 21, 2026",
-     "amount": "$8,675",
-     "num": 8675
-    },
-    {
-     "date": "Sep 22, 2026",
-     "amount": "$4,014",
-     "num": 4014
-    },
-    {
-     "date": "Sep 23, 2026",
-     "amount": "$6,355",
-     "num": 6355
-    },
-    {
-     "date": "Sep 24, 2026",
-     "amount": "$6,951",
-     "num": 6951
-    },
-    {
-     "date": "Sep 25, 2026",
-     "amount": "$1,872",
-     "num": 1872
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$7,643",
-     "num": 7643
-    },
-    {
-     "date": "Sep 29, 2026",
-     "amount": "$11,478",
-     "num": 11478
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$11,903",
-     "num": 11903
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$3,084",
-     "num": 3084
-    },
-    {
-     "date": "Oct 6, 2026",
-     "amount": "$2,207",
-     "num": 2207
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$481",
-     "num": 481
-    },
-    {
-     "date": "Oct 8, 2026",
-     "amount": "$1,506",
-     "num": 1506
-    },
-    {
-     "date": "Oct 9, 2026",
-     "amount": "$1,709",
-     "num": 1709
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$11,148",
-     "num": 11148
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$3,365",
-     "num": 3365
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$2,998",
-     "num": 2998
+     "date": "Oct 4, 2026",
+     "amount": "$6,605",
+     "num": 6605
     }
    ],
    "top10": [
     {
-     "date": "Jun 13, 2025",
-     "amount": "$55,326",
+     "date": "Jan 14, 2026",
+     "amount": "$22,653",
      "rail": "Rise"
     },
     {
-     "date": "May 29, 2026",
-     "amount": "$29,739",
+     "date": "Sep 23, 2025",
+     "amount": "$17,976",
      "rail": "Rise"
     },
     {
-     "date": "Jun 25, 2026",
-     "amount": "$25,600",
+     "date": "Jul 30, 2025",
+     "amount": "$15,000",
      "rail": "Rise"
     },
     {
-     "date": "Jun 17, 2026",
-     "amount": "$24,800",
+     "date": "Aug 1, 2025",
+     "amount": "$11,529",
      "rail": "Rise"
     },
     {
-     "date": "Aug 27, 2025",
-     "amount": "$23,983",
+     "date": "Aug 19, 2025",
+     "amount": "$10,000",
      "rail": "Rise"
     },
     {
-     "date": "Jan 20, 2026",
-     "amount": "$23,405",
+     "date": "Sep 30, 2025",
+     "amount": "$9,204",
      "rail": "Rise"
     },
     {
-     "date": "Feb 27, 2026",
-     "amount": "$22,276",
+     "date": "Mar 3, 2026",
+     "amount": "$8,656",
      "rail": "Rise"
     },
     {
-     "date": "Sep 16, 2024",
-     "amount": "$22,106",
+     "date": "Feb 2, 2026",
+     "amount": "$7,571",
      "rail": "Rise"
     },
     {
-     "date": "Jan 9, 2025",
-     "amount": "$19,685",
+     "date": "Dec 23, 2025",
+     "amount": "$7,530",
      "rail": "Rise"
     }
    ],
    "latestPayouts": [
     {
-     "time": "Oct 15, 15:14 UTC",
-     "amount": "$27",
+     "time": "Oct 4, 21:27 UTC",
+     "amount": "$480",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 11:36 UTC",
-     "amount": "$68",
+     "time": "Oct 4, 21:26 UTC",
+     "amount": "$820",
      "rail": "Rise"
     },
     {
-     "time": "Oct 15, 11:36 UTC",
-     "amount": "$2,903",
+     "time": "Oct 4, 21:24 UTC",
+     "amount": "$820",
      "rail": "Rise"
     },
     {
-     "time": "Oct 14, 12:29 UTC",
-     "amount": "$2,024",
+     "time": "Oct 4, 21:23 UTC",
+     "amount": "$1,015",
      "rail": "Rise"
     },
     {
-     "time": "Oct 14, 12:29 UTC",
-     "amount": "$1,341",
+     "time": "Oct 4, 21:21 UTC",
+     "amount": "$1,350",
      "rail": "Rise"
     },
     {
-     "time": "Oct 12, 09:15 UTC",
-     "amount": "$1,798",
+     "time": "Oct 4, 21:20 UTC",
+     "amount": "$1,120",
      "rail": "Rise"
     },
     {
-     "time": "Oct 12, 09:15 UTC",
-     "amount": "$2,710",
+     "time": "Oct 4, 21:18 UTC",
+     "amount": "$1,000",
      "rail": "Rise"
     },
     {
-     "time": "Oct 12, 09:15 UTC",
-     "amount": "$1,095",
+     "time": "Sep 8, 18:11 UTC",
+     "amount": "$820",
      "rail": "Rise"
     },
     {
-     "time": "Oct 12, 09:15 UTC",
-     "amount": "$5,400",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "tradersyard": {
-   "slug": "tradersyard",
-   "firm": "TradersYard",
-   "website": "tradersyard.com",
-   "websiteUrl": "https://tradersyard.com",
-   "promo": "",
-   "total": "$498,736",
-   "rail": "Rise",
-   "count": "410",
-   "average": "$1,216",
-   "largest": "$10,031",
-   "largestDate": "Jan 29, 2026",
-   "latestTime": "Oct 15, 11:21 UTC",
-   "latestAmount": "$58",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$29,576",
-     "num": 29576
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$57,128",
-     "num": 57128
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$59,596",
-     "num": 59596
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$37,163",
-     "num": 37163
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$35,573",
-     "num": 35573
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$45,502",
-     "num": 45502
-    },
-    {
-     "month": "May 2026",
-     "amount": "$23,879",
-     "num": 23879
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$25,812",
-     "num": 25812
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$21,072",
-     "num": 21072
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$39,384",
-     "num": 39384
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$21,366",
-     "num": 21366
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$9,963",
-     "num": 9963
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$149",
-     "num": 149
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$270",
-     "num": 270
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$1,939",
-     "num": 1939
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$66",
-     "num": 66
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$2,278",
-     "num": 2278
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$192",
-     "num": 192
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$2,651",
-     "num": 2651
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$862",
-     "num": 862
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$3,922",
-     "num": 3922
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$58",
-     "num": 58
-    }
-   ],
-   "top10": [
-    {
-     "date": "Jan 29, 2026",
-     "amount": "$10,031",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 23, 2025",
-     "amount": "$9,657",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 28, 2025",
-     "amount": "$8,959",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 3, 2026",
-     "amount": "$8,250",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 6, 2026",
-     "amount": "$7,950",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 26, 2025",
-     "amount": "$7,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 18, 2026",
-     "amount": "$7,170",
-     "rail": "Rise"
-    },
-    {
-     "date": "Dec 15, 2025",
-     "amount": "$6,690",
-     "rail": "Rise"
-    },
-    {
-     "date": "Dec 5, 2025",
-     "amount": "$6,180",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 11:21 UTC",
-     "amount": "$58",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 09:38 UTC",
-     "amount": "$3,922",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 12, 05:36 UTC",
-     "amount": "$862",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 7, 12:11 UTC",
-     "amount": "$2,351",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 7, 06:33 UTC",
-     "amount": "$300",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 5, 18:08 UTC",
-     "amount": "$192",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 1, 05:33 UTC",
-     "amount": "$2,278",
-     "rail": "Rise"
-    },
-    {
-     "time": "Sep 30, 12:41 UTC",
-     "amount": "$66",
-     "rail": "Rise"
-    },
-    {
-     "time": "Sep 28, 12:54 UTC",
-     "amount": "$763",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "TradersYard": {
-   "slug": "tradersyard",
-   "firm": "TradersYard",
-   "website": "tradersyard.com",
-   "websiteUrl": "https://tradersyard.com",
-   "promo": "",
-   "total": "$498,736",
-   "rail": "Rise",
-   "count": "410",
-   "average": "$1,216",
-   "largest": "$10,031",
-   "largestDate": "Jan 29, 2026",
-   "latestTime": "Oct 15, 11:21 UTC",
-   "latestAmount": "$58",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$29,576",
-     "num": 29576
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$57,128",
-     "num": 57128
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$59,596",
-     "num": 59596
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$37,163",
-     "num": 37163
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$35,573",
-     "num": 35573
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$45,502",
-     "num": 45502
-    },
-    {
-     "month": "May 2026",
-     "amount": "$23,879",
-     "num": 23879
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$25,812",
-     "num": 25812
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$21,072",
-     "num": 21072
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$39,384",
-     "num": 39384
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$21,366",
-     "num": 21366
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$9,963",
-     "num": 9963
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Sep 17, 2026",
-     "amount": "$149",
-     "num": 149
-    },
-    {
-     "date": "Sep 27, 2026",
-     "amount": "$270",
-     "num": 270
-    },
-    {
-     "date": "Sep 28, 2026",
-     "amount": "$1,939",
-     "num": 1939
-    },
-    {
-     "date": "Sep 30, 2026",
-     "amount": "$66",
-     "num": 66
-    },
-    {
-     "date": "Oct 1, 2026",
-     "amount": "$2,278",
-     "num": 2278
-    },
-    {
-     "date": "Oct 5, 2026",
-     "amount": "$192",
-     "num": 192
-    },
-    {
-     "date": "Oct 7, 2026",
-     "amount": "$2,651",
-     "num": 2651
-    },
-    {
-     "date": "Oct 12, 2026",
-     "amount": "$862",
-     "num": 862
-    },
-    {
-     "date": "Oct 14, 2026",
-     "amount": "$3,922",
-     "num": 3922
-    },
-    {
-     "date": "Oct 15, 2026",
-     "amount": "$58",
-     "num": 58
-    }
-   ],
-   "top10": [
-    {
-     "date": "Jan 29, 2026",
-     "amount": "$10,031",
-     "rail": "Rise"
-    },
-    {
-     "date": "Oct 23, 2025",
-     "amount": "$9,657",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 28, 2025",
-     "amount": "$8,959",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 3, 2026",
-     "amount": "$8,250",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 6, 2026",
-     "amount": "$7,950",
-     "rail": "Rise"
-    },
-    {
-     "date": "Nov 26, 2025",
-     "amount": "$7,500",
-     "rail": "Rise"
-    },
-    {
-     "date": "May 18, 2026",
-     "amount": "$7,170",
-     "rail": "Rise"
-    },
-    {
-     "date": "Dec 15, 2025",
-     "amount": "$6,690",
-     "rail": "Rise"
-    },
-    {
-     "date": "Dec 5, 2025",
-     "amount": "$6,180",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 15, 11:21 UTC",
-     "amount": "$58",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 14, 09:38 UTC",
-     "amount": "$3,922",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 12, 05:36 UTC",
-     "amount": "$862",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 7, 12:11 UTC",
-     "amount": "$2,351",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 7, 06:33 UTC",
-     "amount": "$300",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 5, 18:08 UTC",
-     "amount": "$192",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 1, 05:33 UTC",
-     "amount": "$2,278",
-     "rail": "Rise"
-    },
-    {
-     "time": "Sep 30, 12:41 UTC",
-     "amount": "$66",
-     "rail": "Rise"
-    },
-    {
-     "time": "Sep 28, 12:54 UTC",
-     "amount": "$763",
+     "time": "Sep 8, 17:10 UTC",
+     "amount": "$820",
      "rail": "Rise"
     }
    ]
@@ -45255,362 +45601,6 @@
     {
      "time": "Aug 26, 16:00 UTC",
      "amount": "$413",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "neomaaa-funds": {
-   "slug": "neomaaa-funds",
-   "firm": "NeomAAA Funds",
-   "website": "neomaaa.com",
-   "websiteUrl": "https://neomaaa.com",
-   "promo": "",
-   "total": "$882,597",
-   "rail": "Rise",
-   "count": "548",
-   "average": "$1,611",
-   "largest": "$22,653",
-   "largestDate": "Jan 14, 2026",
-   "latestTime": "Oct 4, 21:27 UTC",
-   "latestAmount": "$480",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$147,540",
-     "num": 147540
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$77,881",
-     "num": 77881
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$55,682",
-     "num": 55682
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$29,942",
-     "num": 29942
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$43,518",
-     "num": 43518
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$45,006",
-     "num": 45006
-    },
-    {
-     "month": "May 2026",
-     "amount": "$33,885",
-     "num": 33885
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$17,386",
-     "num": 17386
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$6,860",
-     "num": 6860
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$9,133",
-     "num": 9133
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$6,165",
-     "num": 6165
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$6,605",
-     "num": 6605
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$6,605",
-     "num": 6605
-    }
-   ],
-   "top10": [
-    {
-     "date": "Jan 14, 2026",
-     "amount": "$22,653",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 23, 2025",
-     "amount": "$17,976",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 30, 2025",
-     "amount": "$15,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 1, 2025",
-     "amount": "$11,529",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 19, 2025",
-     "amount": "$10,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 30, 2025",
-     "amount": "$9,204",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 3, 2026",
-     "amount": "$8,656",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 2, 2026",
-     "amount": "$7,571",
-     "rail": "Rise"
-    },
-    {
-     "date": "Dec 23, 2025",
-     "amount": "$7,530",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 4, 21:27 UTC",
-     "amount": "$480",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 4, 21:26 UTC",
-     "amount": "$820",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 4, 21:24 UTC",
-     "amount": "$820",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 4, 21:23 UTC",
-     "amount": "$1,015",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 4, 21:21 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 4, 21:20 UTC",
-     "amount": "$1,120",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 4, 21:18 UTC",
-     "amount": "$1,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Sep 8, 18:11 UTC",
-     "amount": "$820",
-     "rail": "Rise"
-    },
-    {
-     "time": "Sep 8, 17:10 UTC",
-     "amount": "$820",
-     "rail": "Rise"
-    }
-   ]
-  },
-  "NeomAAA Funds": {
-   "slug": "neomaaa-funds",
-   "firm": "NeomAAA Funds",
-   "website": "neomaaa.com",
-   "websiteUrl": "https://neomaaa.com",
-   "promo": "",
-   "total": "$882,597",
-   "rail": "Rise",
-   "count": "548",
-   "average": "$1,611",
-   "largest": "$22,653",
-   "largestDate": "Jan 14, 2026",
-   "latestTime": "Oct 4, 21:27 UTC",
-   "latestAmount": "$480",
-   "monthlyVolume": [
-    {
-     "month": "Nov 2025",
-     "amount": "$147,540",
-     "num": 147540
-    },
-    {
-     "month": "Dec 2025",
-     "amount": "$77,881",
-     "num": 77881
-    },
-    {
-     "month": "Jan 2026",
-     "amount": "$55,682",
-     "num": 55682
-    },
-    {
-     "month": "Feb 2026",
-     "amount": "$29,942",
-     "num": 29942
-    },
-    {
-     "month": "Mar 2026",
-     "amount": "$43,518",
-     "num": 43518
-    },
-    {
-     "month": "Apr 2026",
-     "amount": "$45,006",
-     "num": 45006
-    },
-    {
-     "month": "May 2026",
-     "amount": "$33,885",
-     "num": 33885
-    },
-    {
-     "month": "Jun 2026",
-     "amount": "$17,386",
-     "num": 17386
-    },
-    {
-     "month": "Jul 2026",
-     "amount": "$6,860",
-     "num": 6860
-    },
-    {
-     "month": "Aug 2026",
-     "amount": "$9,133",
-     "num": 9133
-    },
-    {
-     "month": "Sep 2026",
-     "amount": "$6,165",
-     "num": 6165
-    },
-    {
-     "month": "Oct 2026",
-     "amount": "$6,605",
-     "num": 6605
-    }
-   ],
-   "dailyVolume": [
-    {
-     "date": "Oct 4, 2026",
-     "amount": "$6,605",
-     "num": 6605
-    }
-   ],
-   "top10": [
-    {
-     "date": "Jan 14, 2026",
-     "amount": "$22,653",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 23, 2025",
-     "amount": "$17,976",
-     "rail": "Rise"
-    },
-    {
-     "date": "Jul 30, 2025",
-     "amount": "$15,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 1, 2025",
-     "amount": "$11,529",
-     "rail": "Rise"
-    },
-    {
-     "date": "Aug 19, 2025",
-     "amount": "$10,000",
-     "rail": "Rise"
-    },
-    {
-     "date": "Sep 30, 2025",
-     "amount": "$9,204",
-     "rail": "Rise"
-    },
-    {
-     "date": "Mar 3, 2026",
-     "amount": "$8,656",
-     "rail": "Rise"
-    },
-    {
-     "date": "Feb 2, 2026",
-     "amount": "$7,571",
-     "rail": "Rise"
-    },
-    {
-     "date": "Dec 23, 2025",
-     "amount": "$7,530",
-     "rail": "Rise"
-    }
-   ],
-   "latestPayouts": [
-    {
-     "time": "Oct 4, 21:27 UTC",
-     "amount": "$480",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 4, 21:26 UTC",
-     "amount": "$820",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 4, 21:24 UTC",
-     "amount": "$820",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 4, 21:23 UTC",
-     "amount": "$1,015",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 4, 21:21 UTC",
-     "amount": "$1,350",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 4, 21:20 UTC",
-     "amount": "$1,120",
-     "rail": "Rise"
-    },
-    {
-     "time": "Oct 4, 21:18 UTC",
-     "amount": "$1,000",
-     "rail": "Rise"
-    },
-    {
-     "time": "Sep 8, 18:11 UTC",
-     "amount": "$820",
-     "rail": "Rise"
-    },
-    {
-     "time": "Sep 8, 17:10 UTC",
-     "amount": "$820",
      "rail": "Rise"
     }
    ]
@@ -46379,9 +46369,7 @@ function rankCard(f){
   return `<article class="rank-card" data-firm="${safe(f.name)}">
     <div class="popularity-cell">
       <span class="rank-trophy">${trophyOrRank}</span>
-      <div class="firm-logo-frame">
-        ${logo(f.name)}
-      </div>
+      ${logo(f.name)}
       <div class="firm-title-wrap">
         <div class="firm-name-line">
           <button class="firm-name-link" type="button" data-profile-firm="${safe(f.name)}">${safe(f.name)}</button>

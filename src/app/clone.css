@@ -9028,27 +9028,42 @@ p, span, .text-muted, .section-title p,
   font-weight: 800 !important;
   color: #9AA6BD !important;
 }
-.rank-card .firm-logo-frame {
-  width: 44px !important;
-  height: 44px !important;
+.rank-card .firm-logo-frame,
+.rank-card .logo-wrap {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+  aspect-ratio: 1 / 1 !important;
   border-radius: 10px !important;
-  background: #0B0B14 !important;
-  border: 1px solid #26263A !important;
+  background: #080811 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   flex-shrink: 0 !important;
   overflow: hidden !important;
-  padding: 4px !important;
+  padding: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
 }
-.rank-card:first-child .firm-logo-frame {
+.rank-card:first-child .firm-logo-frame,
+.rank-card:first-child .logo-wrap {
   border-color: #F59E0B !important;
   box-shadow: 0 0 10px rgba(245, 158, 11, 0.25) !important;
 }
-.rank-card .firm-logo {
-  max-width: 34px !important;
-  max-height: 34px !important;
-  object-fit: contain !important;
+.rank-card .firm-logo,
+.rank-card .logo-wrap img,
+.rank-card .firm-logo-frame img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: inherit !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 .firm-title-wrap {
   display: flex !important;
@@ -9801,7 +9816,7 @@ p, span, .text-muted, .section-title p,
 
 #offers .future {
   display: grid !important;
-  grid-template-columns: 26px 44px minmax(0, 1fr) 88px !important;
+  grid-template-columns: 26px 46px minmax(0, 1fr) 88px !important;
   align-items: center !important;
   gap: 10px !important;
   height: 100% !important;
@@ -9835,4 +9850,142 @@ p, span, .text-muted, .section-title p,
   #offers .future {
     height: auto !important;
   }
+}
+
+/* ==========================================================================
+   UNIVERSAL PROP FIRM LOGO STYLING: EXACT SQUARE TILES & 100% FULL FIT
+   ========================================================================== */
+
+/* 1. All Logo Containers: strictly square (1:1), 0 padding, no extra space */
+.logo-wrap,
+.firm-logo-frame,
+.rank-card .logo-wrap,
+.rank-card .firm-logo-frame,
+.firm-cell .logo-wrap,
+#offers .offer .logo-wrap,
+#offers .future .logo-wrap,
+.offers-top-card .logo-wrap,
+.offers-future-row .logo-wrap,
+.offer-row .logo-wrap,
+.offer-card .logo-wrap,
+.top-offer-card .logo-wrap,
+.rev-firm-logo-wrap,
+.review-firm .logo-wrap,
+.rev-card-head .logo-wrap,
+.compare-firm-head .logo-wrap,
+.favorite-firm-cell .logo-wrap,
+.payout-tracker-row .logo-wrap,
+.payout-row .logo-wrap,
+.mobile-card-firm .logo-wrap,
+.mobile-card-firm .firm-logo-frame,
+.spread-firm .logo-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #0B0B14 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35) !important;
+  flex-shrink: 0 !important;
+}
+
+/* 2. Specific sizes for different views while strictly maintaining square aspect ratio */
+.rank-card .logo-wrap,
+.rank-card .firm-logo-frame,
+.firm-cell .logo-wrap {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+}
+
+#offers .offer .logo-wrap,
+#offers .future .logo-wrap,
+.offers-top-card .logo-wrap,
+.offers-future-row .logo-wrap {
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  max-width: 46px !important;
+}
+
+#offersPage .logo-wrap,
+.offer-row .logo-wrap,
+.offer-card .logo-wrap,
+.top-offer-card .logo-wrap {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+}
+
+.mobile-card-firm .logo-wrap,
+.mobile-card-firm .firm-logo-frame {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+}
+
+.profile-identity .logo-wrap,
+.profile-title-logo .logo-wrap,
+.profile-offer-identity .logo-wrap {
+  border-radius: 14px !important;
+  aspect-ratio: 1 / 1 !important;
+  padding: 0 !important;
+}
+
+/* 3. All Logo Images: 100% Full Fit Edge-to-Edge */
+.firm-logo,
+img.firm-logo,
+.logo-wrap img,
+.firm-logo-frame img,
+.rev-firm-logo-wrap img,
+.rank-card .firm-logo,
+.firm-cell .firm-logo,
+#offers .offer .firm-logo,
+#offers .future .firm-logo,
+.offers-top-card .firm-logo,
+.offers-future-row .firm-logo,
+.offer-row .firm-logo,
+.offer-card .firm-logo,
+.top-offer-card .firm-logo,
+.review-firm .firm-logo,
+.compare-firm-head .firm-logo,
+.payout-tracker-row .firm-logo,
+.payout-row .firm-logo,
+.mobile-card-firm .firm-logo {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  border-radius: inherit !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.firm-initial,
+span.firm-initial {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: inherit !important;
+  font-weight: 800 !important;
+  font-size: 15px !important;
+  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%) !important;
+  color: #EDEFF7 !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
