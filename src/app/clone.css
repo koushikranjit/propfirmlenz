@@ -8924,7 +8924,7 @@ p, span, .text-muted, .section-title p,
 .rank-head,
 .rank-card {
   display: grid !important;
-  grid-template-columns: 36px minmax(170px, 1.25fr) minmax(150px, 1fr) 90px 85px 90px 105px 90px minmax(155px, 1.1fr) !important;
+  grid-template-columns: minmax(195px, 1.4fr) minmax(125px, 0.9fr) minmax(110px, 0.8fr) 75px minmax(140px, 1.05fr) 115px 105px 100px 75px !important;
   gap: 12px !important;
   align-items: center !important;
 }
@@ -8932,76 +8932,106 @@ p, span, .text-muted, .section-title p,
   background: #12121F !important;
   border: 1px solid #26263A !important;
   border-radius: 14px !important;
-  padding: 14px 16px !important;
+  padding: 14px 18px !important;
   margin-bottom: 8px !important;
-  min-height: 80px !important;
+  min-height: 84px !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.rank-card:hover {
+  background: #161626 !important;
+  border-color: #3B3B54 !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45) !important;
 }
 
-/* Ensure no readable text is smaller than 12px across the page */
-.badge,
-.badge-text,
-.badge-tag,
-.trustpilot-line,
-.tp-star,
-.copy,
-.code-chip,
-.ratepill,
-.asset-tag,
-.platform,
-.disclaimer,
-.snapshot,
-.rank-col-head,
-.rank-head button,
-.rank-head span,
-.filter-btn,
-.sort-chip,
-.mobile-filter-status,
-.how-we-rank-link,
-.res-chip,
-.checked-date,
-.data-cell-val {
-  font-size: 12px !important;
-}
-
-/* Table Cells */
-.col-head-compare,
-.compare-cell {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-.col-head-compare {
-  font-size: 12px !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
+/* Table Header */
+.rank-head {
+  padding: 12px 18px !important;
   color: #9AA6BD !important;
-  letter-spacing: 0.05em !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  border-bottom: 1px solid #26263A !important;
+  margin-bottom: 8px !important;
 }
-.compare-checkbox {
-  width: 18px !important;
-  height: 18px !important;
+.rank-head button {
+  appearance: none !important;
+  border: none !important;
+  background: none !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  color: #9AA6BD !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  padding: 4px 0 !important;
   cursor: pointer !important;
-  accent-color: #6366F1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  text-align: left !important;
 }
-.rank-num {
+.rank-head button:hover,
+.rank-head button.on {
+  color: #EDEFF7 !important;
+}
+.rank-head span {
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  color: #9AA6BD !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+/* Column 1: Popularity / Firm */
+.popularity-cell {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  min-width: 0 !important;
+}
+.rank-trophy {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  min-width: 26px !important;
+  flex-shrink: 0 !important;
+}
+.rank-badge {
   font-size: 13px !important;
   font-weight: 800 !important;
   color: #9AA6BD !important;
-  text-align: center !important;
 }
-.firm-cell {
+.rank-card .firm-logo-frame {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  background: #0B0B14 !important;
+  border: 1px solid #26263A !important;
   display: flex !important;
   align-items: center !important;
-  gap: 10px !important;
-  min-width: 0 !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  overflow: hidden !important;
+  padding: 4px !important;
 }
-.firm-info-col {
+.rank-card:first-child .firm-logo-frame {
+  border-color: #F59E0B !important;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.25) !important;
+}
+.rank-card .firm-logo {
+  max-width: 34px !important;
+  max-height: 34px !important;
+  object-fit: contain !important;
+}
+.firm-title-wrap {
   display: flex !important;
   flex-direction: column !important;
   gap: 3px !important;
   min-width: 0 !important;
 }
-.firm-name-row {
+.firm-name-line {
   display: flex !important;
   align-items: center !important;
   gap: 6px !important;
@@ -9020,97 +9050,256 @@ p, span, .text-muted, .section-title p,
   text-overflow: ellipsis !important;
 }
 .firm-name-link:hover {
-  color: #6366F1 !important;
+  color: #8B5CF6 !important;
 }
-.checked-date {
+.favorite {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-size: 15px !important;
+  color: #64748B !important;
+  padding: 0 2px !important;
+  line-height: 1 !important;
+}
+.favorite.on {
+  color: #F43F5E !important;
+}
+.fav-count {
   font-size: 11px !important;
-  color: #9AA6BD !important;
-}
-.rating-cell .score {
-  font-size: 13px !important;
   font-weight: 700 !important;
-  color: #EDEFF7 !important;
-  display: block !important;
-}
-.rating-cell .review {
-  font-size: 11px !important;
-  color: #9AA6BD !important;
-  display: block !important;
-  margin-top: 2px !important;
-}
-.data-cell-val {
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  color: #EDEFF7 !important;
-}
-.data-cell-val.not-disclosed {
-  color: #9AA6BD !important;
-  font-weight: 500 !important;
-  font-size: 12px !important;
-}
-
-/* Action Cell: Discount tag + LENZ chip + Single clear "View offer" button */
-.offer-action-cell {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 6px !important;
-  align-items: flex-start !important;
-}
-.offer-badges {
-  display: flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-}
-.discount-tag {
-  display: inline-flex !important;
-  align-items: center !important;
-  padding: 2px 7px !important;
-  border-radius: 6px !important;
-  background: rgba(34, 197, 94, 0.14) !important;
-  color: #22C55E !important;
-  border: 1px solid rgba(34, 197, 94, 0.3) !important;
-  font-size: 11px !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.02em !important;
-}
-.code-chip {
+  color: #F43F5E !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 3px !important;
-  padding: 2px 7px !important;
-  border-radius: 6px !important;
-  background: #1A1927 !important;
-  color: #EDEFF7 !important;
-  border: 1px solid #26263A !important;
-  font-size: 11px !important;
-  font-weight: 700 !important;
-  cursor: pointer !important;
-  transition: all 0.15s ease !important;
 }
-.code-chip:hover {
-  border-color: #6366F1 !important;
-  color: #6366F1 !important;
+
+/* Column 2: Rank / Reviews */
+.rating-cell {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 3px !important;
 }
-.btn-view-offer {
+.rating-badge {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 6px !important;
-  padding: 8px 16px !important;
-  border-radius: 8px !important;
-  background: #6366F1 !important;
+  padding: 2px 10px !important;
+  border-radius: 999px !important;
+  border: 1px solid #7C3AED !important;
+  background: rgba(124, 58, 237, 0.14) !important;
+  color: #FFFFFF !important;
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+}
+.stars-row {
+  display: flex !important;
+  gap: 1.5px !important;
+  font-size: 11px !important;
+  color: #A855F7 !important;
+  line-height: 1 !important;
+}
+.stars-row .star-off {
+  color: #334155 !important;
+}
+.reviews-count-line {
+  font-size: 11px !important;
+  color: #9AA6BD !important;
+}
+.reviews-num {
+  font-weight: 800 !important;
+  color: #EC4899 !important;
+}
+
+/* Column 3: Country */
+.country-cell {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #EDEFF7 !important;
+}
+.country-cell img {
+  width: 22px !important;
+  height: 15px !important;
+  object-fit: cover !important;
+  border-radius: 2px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Column 4: Years in Operation */
+.years-cell {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.years-ring {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  display: grid !important;
+  place-items: center !important;
+  background: conic-gradient(#8B5CF6 0% 75%, #26263A 75% 100%) !important;
+  position: relative !important;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.25) !important;
+}
+.years-ring::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 4px !important;
+  background: #12121F !important;
+  border-radius: 50% !important;
+}
+.years-ring b {
+  position: relative !important;
+  z-index: 2 !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  color: #EDEFF7 !important;
+}
+
+/* Column 5: Assets */
+.taglist {
+  display: flex !important;
+  gap: 4px !important;
+  flex-wrap: wrap !important;
+  max-width: 175px !important;
+}
+.asset-tag {
+  display: inline-block !important;
+  padding: 3px 8px !important;
+  border-radius: 999px !important;
+  background: #1A1927 !important;
+  border: 1px solid #26263A !important;
+  color: #9AA6BD !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+}
+
+/* Column 6: Platforms */
+.platforms {
+  display: flex !important;
+  gap: 5px !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+.platform {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  background: #1A1927 !important;
+  border: 1px solid #26263A !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 3px !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3) !important;
+}
+.platform img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Column 7: Max Allocations */
+.alloc-cell {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  min-width: 80px !important;
+}
+.alloc-val {
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: #EDEFF7 !important;
+}
+.bar {
+  display: block !important;
+  height: 4px !important;
+  background: #26263A !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+.bar i {
+  display: block !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, #6366F1, #A855F7) !important;
+  border-radius: 999px !important;
+}
+
+/* Column 8: Promo */
+.promo-cell {
+  display: flex !important;
+  justify-content: center !important;
+}
+.promo-badge-box {
+  display: flex !important;
+  flex-direction: column !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(168, 85, 247, 0.4) !important;
+  min-width: 90px !important;
+  text-align: center !important;
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.15) !important;
+}
+.promo-badge-pct {
+  background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%) !important;
   color: #FFFFFF !important;
   font-size: 12px !important;
+  font-weight: 800 !important;
+  padding: 4px 6px !important;
+  letter-spacing: 0.02em !important;
+}
+.promo-badge-copy {
+  background: #0A0A12 !important;
+  color: #EDEFF7 !important;
+  font-size: 11px !important;
   font-weight: 700 !important;
-  text-decoration: none !important;
+  padding: 4px 6px !important;
   border: none !important;
   cursor: pointer !important;
-  transition: background 0.18s ease !important;
-  white-space: nowrap !important;
-  min-height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 3px !important;
+  transition: all 0.15s ease !important;
 }
-.btn-view-offer:hover {
-  background: #4F46E5 !important;
+.promo-badge-copy:hover {
+  background: #1A1927 !important;
+  color: #A855F7 !important;
+}
+
+/* Column 9: Action */
+.action-cell {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.firm-action {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 7px 18px !important;
+  border-radius: 999px !important;
+  border: 1px solid #7C3AED !important;
+  background: transparent !important;
+  color: #EDEFF7 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  min-width: 65px !important;
+  height: 36px !important;
+}
+.firm-action:hover {
+  background: rgba(124, 58, 237, 0.18) !important;
+  border-color: #A855F7 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 12px rgba(124, 58, 237, 0.35) !important;
 }
 
 /* Sticky Compare Bar (Appears when 1-3 firms are checked) */
@@ -9294,16 +9483,15 @@ p, span, .text-muted, .section-title p,
   }
 
   /* Hide desktop table cells on mobile */
-  .rank-card > .compare-cell,
-  .rank-card > .rank-num,
-  .rank-card > .firm-cell,
+  .rank-card > .popularity-cell,
   .rank-card > .rating-cell,
-  .rank-card > .price-cell,
-  .rank-card > .split-cell,
-  .rank-card > .dd-cell,
-  .rank-card > .speed-cell,
+  .rank-card > .country-cell,
+  .rank-card > .years-cell,
+  .rank-card > .taglist,
+  .rank-card > .platforms,
   .rank-card > .alloc-cell,
-  .rank-card > .offer-action-cell {
+  .rank-card > .promo-cell,
+  .rank-card > .action-cell {
     display: none !important;
   }
 
@@ -9319,7 +9507,7 @@ p, span, .text-muted, .section-title p,
     margin-bottom: 12px !important;
   }
 
-  /* Top row of card: compare checkbox, rank, logo, name & favorite */
+  /* Top row of card: rank, logo, name & favorite, promo */
   .mobile-card-header {
     display: flex !important;
     align-items: center !important;
@@ -9334,8 +9522,11 @@ p, span, .text-muted, .section-title p,
     flex: 1 !important;
     min-width: 0 !important;
   }
+  .mobile-promo {
+    flex-shrink: 0 !important;
+  }
 
-  /* Compact grid for Rating, Price, Profit Split, Payout Speed */
+  /* Compact grid for Rating, Country, Years in Operation, Max Alloc */
   .mobile-card-grid {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
@@ -9351,7 +9542,7 @@ p, span, .text-muted, .section-title p,
     gap: 2px !important;
   }
   .mobile-metric-label {
-    font-size: 12px !important;
+    font-size: 11px !important;
     color: #9AA6BD !important;
   }
   .mobile-metric-value {
@@ -9360,17 +9551,16 @@ p, span, .text-muted, .section-title p,
     color: #EDEFF7 !important;
   }
 
-  /* Bottom actions row: One full-width "View offer" button + discount */
+  /* Bottom actions row: Full-width "Firm Details" button */
   .mobile-card-actions {
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
     width: 100% !important;
     gap: 10px !important;
     margin-top: 4px !important;
   }
-  .mobile-card-actions .btn-view-offer {
-    flex: 1 !important;
+  .mobile-full-btn {
+    width: 100% !important;
     height: 44px !important;
     font-size: 13px !important;
     justify-content: center !important;
