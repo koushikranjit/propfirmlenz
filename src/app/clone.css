@@ -9365,7 +9365,7 @@ h1, h2, h3, h4, strong, b,
   color: #EDEFF7 !important;
   -webkit-text-fill-color: #EDEFF7 !important;
 }
-p, span, .text-muted, .section-title p,
+p, .text-muted, .section-title p,
 .hero p, .bottom, .stat span, .ratepill,
 .footer-tagline, .country-cell span {
   color: #9AA6BD !important;
@@ -11031,10 +11031,32 @@ button.scroll-top:hover,
 .resource .res-btn-3d {
   background: #0284C7 !important;
   color: #FFFFFF !important;
-  font-weight: 700 !important;
-  border: none !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-weight: 800 !important;
+  font-size: 14.5px !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45) !important;
   transition: all 0.2s ease !important;
+}
+
+.buy-link-btn *,
+.buy-link-btn span,
+.top-offer-actions .buy-link-btn span,
+.offers-top-card .buy-link-btn span,
+.offer-row .buy-link-btn span,
+.btn-view-offer span,
+.btn-compare-now span,
+.res-btn-3d *,
+.res-btn-3d span,
+.res-btn-3d .arrow,
+.resource .res-btn-3d *,
+.resource .res-btn-3d span,
+.resource .res-btn-3d .arrow {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-weight: 800 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45) !important;
 }
 
 .buy-link-btn:hover,
@@ -11046,7 +11068,16 @@ button.scroll-top:hover,
 .res-btn-3d:hover,
 .resource .res-btn-3d:hover {
   background: #0369A1 !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45) !important;
+}
+
+.buy-link-btn:hover *,
+.res-btn-3d:hover *,
+.resource .res-btn-3d:hover * {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
 }
 
 .how-we-rank-link {
