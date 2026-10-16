@@ -9281,26 +9281,36 @@ p, span, .text-muted, .section-title p,
   flex-direction: column !important;
   border-radius: 10px !important;
   overflow: hidden !important;
-  border: 1px solid rgba(168, 85, 247, 0.4) !important;
+  border: 1px solid rgba(0, 240, 255, 0.45) !important;
   min-width: 90px !important;
   text-align: center !important;
-  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.15) !important;
+  box-shadow: 0 4px 14px rgba(0, 240, 255, 0.15) !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+.promo-badge-box:hover {
+  border-color: #00F0FF !important;
+  box-shadow: 0 6px 20px rgba(0, 240, 255, 0.35) !important;
+  transform: translateY(-1px) !important;
 }
 .promo-badge-pct {
-  background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%) !important;
-  color: #FFFFFF !important;
+  background: linear-gradient(135deg, #00F0FF 0%, #3B82F6 100%) !important;
+  color: #030814 !important;
   font-size: 12px !important;
-  font-weight: 800 !important;
+  font-weight: 900 !important;
   padding: 4px 6px !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: 0.01em !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) !important;
 }
 .promo-badge-copy {
-  background: #0A0A12 !important;
+  background: #0A0E18 !important;
   color: #EDEFF7 !important;
   font-size: 11px !important;
   font-weight: 700 !important;
   padding: 4px 6px !important;
   border: none !important;
+  border-top: 1px dashed rgba(0, 240, 255, 0.35) !important;
   cursor: pointer !important;
   display: flex !important;
   align-items: center !important;
@@ -9309,8 +9319,68 @@ p, span, .text-muted, .section-title p,
   transition: all 0.15s ease !important;
 }
 .promo-badge-copy:hover {
-  background: #1A1927 !important;
-  color: #A855F7 !important;
+  background: #0E1A2D !important;
+  color: #00F0FF !important;
+}
+
+/* Universal Promo & Code Section Theme: Electric Cyan to Royal Blue Gradient */
+#offers .promo,
+#offers .offer .promo,
+#offers .future .promo,
+.offer .promo,
+.future .promo,
+.offers-top-card .promo,
+.offers-future-row .promo {
+  border: 1px solid rgba(0, 240, 255, 0.45) !important;
+  box-shadow: 0 4px 14px rgba(0, 240, 255, 0.15) !important;
+  transition: all 0.2s ease !important;
+}
+
+#offers .promo:hover,
+#offers .offer .promo:hover,
+#offers .future .promo:hover,
+.offer .promo:hover,
+.future .promo:hover {
+  border-color: #00F0FF !important;
+  box-shadow: 0 6px 20px rgba(0, 240, 255, 0.35) !important;
+  transform: translateY(-1px) !important;
+}
+
+#offers .promo .pct,
+#offers .offer .promo .pct,
+#offers .future .promo .pct,
+.offer .promo .pct,
+.future .promo .pct,
+.offers-top-card .promo .pct,
+.offers-future-row .promo .pct {
+  background: linear-gradient(135deg, #00F0FF 0%, #3B82F6 100%) !important;
+  color: #030814 !important;
+  font-weight: 900 !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+#offers .promo .copy,
+#offers .offer .promo .copy,
+#offers .future .promo .copy,
+.offer .promo .copy,
+.future .promo .copy,
+.offers-top-card .promo .copy,
+.offers-future-row .promo .copy {
+  background: #0A0E18 !important;
+  color: #EDEFF7 !important;
+  border-top: 1px dashed rgba(0, 240, 255, 0.35) !important;
+  transition: all 0.15s ease !important;
+}
+
+#offers .promo .copy:hover,
+#offers .offer .promo .copy:hover,
+#offers .future .promo .copy:hover,
+.offer .promo .copy:hover,
+.future .promo .copy:hover,
+.offers-top-card .promo .copy:hover,
+.offers-future-row .promo .copy:hover {
+  background: #0E1A2D !important;
+  color: #00F0FF !important;
 }
 
 /* Column 9: Action */
