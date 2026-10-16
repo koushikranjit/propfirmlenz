@@ -3512,12 +3512,14 @@ body::after {
   object-fit: contain !important;
   padding: 0 !important;
   display: block !important;
-  filter: drop-shadow(0 0 12px rgba(30, 231, 252, 0.55)) !important;
-  transition: transform 0.25s ease, filter 0.25s ease !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  transition: transform 0.25s ease !important;
 }
 .brand-lock:hover img {
-  transform: scale(1.08) !important;
-  filter: drop-shadow(0 0 18px rgba(30, 231, 252, 0.85)) !important;
+  transform: scale(1.05) !important;
+  filter: none !important;
+  -webkit-filter: none !important;
 }
 
 /* Master Logo Frame: strictly 1-cell grid stack so img and fallback never sit side-by-side */
@@ -3847,10 +3849,10 @@ img[hidden],
   color: #ffffff !important;
 }
 .head-main .market-switch button.on {
-  background: linear-gradient(135deg, #1EE7FC, #396DFA 60%, #7021FC) !important;
-  color: #ffffff !important;
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  color: #020814 !important;
   font-weight: 800 !important;
-  box-shadow: 0 3px 12px rgba(30, 231, 252, 0.38) !important;
+  box-shadow: 0 3px 12px rgba(56, 189, 248, 0.4) !important;
 }
 
 /* Auth Buttons: Log In & Sign Up */
@@ -4148,16 +4150,16 @@ img[hidden],
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1EE7FC, #396DFA, #7021FC);
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
   border: none;
-  color: #fff;
+  color: #020814 !important;
   font-size: 18px;
   font-weight: 800;
   display: grid;
   place-items: center;
   cursor: pointer;
   z-index: 90;
-  box-shadow: 0 8px 24px rgba(30, 231, 252, 0.35);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.4) !important;
   opacity: 0;
   transform: translateY(16px);
   pointer-events: none;
@@ -4669,8 +4671,9 @@ body[data-page="offers"] .hero .stat {
    ======================================================== */
 footer#footer {
   position: relative !important;
-  background: linear-gradient(180deg, transparent 0%, rgba(7, 9, 19, 0.6) 20%, rgba(5, 7, 15, 0.95) 100%) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  background: #000000 !important;
+  background-color: #000000 !important;
+  border-top: 1px solid rgba(56, 189, 248, 0.15) !important;
   padding: 68px 0 32px !important;
   overflow: hidden !important;
 }
@@ -4681,20 +4684,12 @@ footer#footer::before {
   left: 8% !important;
   right: 8% !important;
   height: 1px !important;
-  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.25) 30%, rgba(139, 92, 246, 0.2) 70%, transparent) !important;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.35) 50%, transparent) !important;
   box-shadow: none !important;
   pointer-events: none !important;
 }
 footer#footer::after {
-  content: '' !important;
-  position: absolute !important;
-  top: -120px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 800px !important;
-  height: 220px !important;
-  background: radial-gradient(ellipse, rgba(30, 231, 252, 0.12), rgba(112, 33, 252, 0.08) 50%, transparent 72%) !important;
-  pointer-events: none !important;
+  display: none !important;
 }
 
 /* Upper Brand Showcase in Footer */
@@ -4718,13 +4713,14 @@ footer#footer::after {
   width: 48px !important;
   height: 48px !important;
   object-fit: contain !important;
-  filter: drop-shadow(0 0 16px rgba(30, 231, 252, 0.7)) !important;
+  filter: none !important;
+  -webkit-filter: none !important;
 }
 .footer-brand span {
   font-size: 21px !important;
   font-weight: 800 !important;
   letter-spacing: -0.025em !important;
-  background: linear-gradient(135deg, #ffffff 40%, #1EE7FC) !important;
+  background: linear-gradient(135deg, #ffffff 40%, #38BDF8) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
@@ -4798,7 +4794,7 @@ footer#footer .footer-col h3 {
   font-size: 11.5px !important;
   font-weight: 800 !important;
   letter-spacing: 0.12em !important;
-  color: #1EE7FC !important;
+  color: #38BDF8 !important;
   text-transform: uppercase !important;
   margin: 0 0 18px !important;
   position: relative !important;
@@ -4810,7 +4806,7 @@ footer#footer .footer-col h3::after {
   content: '' !important;
   flex: 1 !important;
   height: 1px !important;
-  background: linear-gradient(90deg, rgba(30, 231, 252, 0.35), transparent) !important;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.4), transparent) !important;
   max-width: 60px !important;
 }
 footer#footer .footer-col a {
@@ -4824,27 +4820,27 @@ footer#footer .footer-col a {
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 footer#footer .footer-col a:hover {
-  color: #1EE7FC !important;
+  color: #38BDF8 !important;
   transform: translateX(6px) !important;
-  text-shadow: 0 0 14px rgba(30, 231, 252, 0.5) !important;
+  text-shadow: none !important;
 }
 .footer-report-btn {
   margin-top: 10px !important;
   padding: 8px 14px !important;
   border-radius: 999px !important;
-  background: rgba(112, 33, 252, 0.12) !important;
-  border: 1px solid rgba(112, 33, 252, 0.4) !important;
-  color: #c4a1ff !important;
+  background: rgba(56, 189, 248, 0.12) !important;
+  border: 1px solid rgba(56, 189, 248, 0.45) !important;
+  color: #7DD3FC !important;
   font-size: 12px !important;
   font-weight: 700 !important;
   cursor: pointer !important;
   transition: all 0.25s ease !important;
 }
 .footer-report-btn:hover {
-  background: linear-gradient(135deg, #7021FC, #396DFA) !important;
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
   border-color: transparent !important;
-  color: #fff !important;
-  box-shadow: 0 4px 18px rgba(112, 33, 252, 0.4) !important;
+  color: #020814 !important;
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.4) !important;
   transform: translateY(-2px) !important;
 }
 
@@ -4852,22 +4848,23 @@ footer#footer .footer-col a:hover {
 .footer-bottom-tier {
   border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
   padding-top: 26px !important;
+  background: transparent !important;
 }
 .footer-disclaimer {
   padding: 16px 20px !important;
   border-radius: 14px !important;
-  background: rgba(12, 14, 20, 0.6) !important;
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
   margin-bottom: 22px !important;
 }
 .footer-disclaimer p {
-  color: #7b7b8c !important;
+  color: #8c8c9e !important;
   font-size: 11.5px !important;
   line-height: 1.6 !important;
   margin: 0 !important;
 }
 .footer-disclaimer b {
-  color: #a8a8bb !important;
+  color: #BAE6FD !important;
 }
 footer#footer .bottom {
   display: flex !important;
@@ -4875,11 +4872,15 @@ footer#footer .bottom {
   justify-content: space-between !important;
   gap: 20px !important;
   border: none !important;
+  border-top: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
   padding: 0 !important;
   flex-wrap: wrap !important;
 }
 footer#footer .bottom-copy {
-  color: #767686 !important;
+  color: #8c8c9e !important;
   font-size: 12.5px !important;
 }
 .bottom-links {
@@ -4889,16 +4890,17 @@ footer#footer .bottom-copy {
   flex-wrap: wrap !important;
 }
 .bottom-links a {
-  color: #8c8c9e !important;
-  font-size: 12px !important;
+  color: #7DD3FC !important;
+  font-size: 12.5px !important;
   text-decoration: none !important;
   transition: color 0.2s ease !important;
 }
 .bottom-links a:hover {
-  color: #1EE7FC !important;
+  color: #FFFFFF !important;
+  text-decoration: underline !important;
 }
 .dot-sep {
-  color: #4b4b5a !important;
+  color: rgba(255, 255, 255, 0.25) !important;
   font-weight: 800 !important;
 }
 
@@ -4916,7 +4918,18 @@ footer#footer .bottom-copy {
   }
   footer#footer .bottom {
     flex-direction: column !important;
-    align-items: flex-start !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+    background: transparent !important;
+  }
+  .bottom-links {
+    justify-content: center !important;
+    gap: 8px 12px !important;
+  }
+  footer#footer .bottom-copy {
+    text-align: center !important;
+    width: 100% !important;
   }
 }
 
@@ -5328,9 +5341,9 @@ footer#footer .bottom-copy {
   gap: 8px !important;
   padding: 11px 22px !important;
   border-radius: 999px !important;
-  background: linear-gradient(135deg, #1EE7FC 0%, #396DFA 50%, #7021FC 100%) !important;
-  box-shadow: 0 6px 20px rgba(30, 231, 252, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
-  color: #fff !important;
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  color: #020814 !important;
   font-size: 13px !important;
   font-weight: 800 !important;
   text-decoration: none !important;
@@ -6667,13 +6680,15 @@ footer#footer .bottom-copy {
   flex: 0 0 44px !important;
   object-fit: contain !important;
   border-radius: 10px !important;
-  filter: drop-shadow(0 0 14px rgba(0, 240, 255, 0.4)) !important;
-  transition: transform 0.25s ease, filter 0.25s ease !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  transition: transform 0.25s ease !important;
 }
 
 .brand-lock:hover img {
-  transform: scale(1.06) rotate(-2deg) !important;
-  filter: drop-shadow(0 0 22px rgba(0, 240, 255, 0.65)) !important;
+  transform: scale(1.04) !important;
+  filter: none !important;
+  -webkit-filter: none !important;
 }
 
 .brand-lock span {
@@ -9650,13 +9665,21 @@ p, .text-muted, .section-title p,
 /* Risk disclaimer contrast & size */
 .bottom {
   font-size: 12px !important;
-  color: #9AA6BD !important;
+  color: #8c8c9e !important;
   line-height: 1.6 !important;
-  border-top: 1px solid #26263A !important;
-  background: #000000 !important;
+  border: none !important;
+  border-top: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
 .bottom a {
-  color: #EDEFF7 !important;
+  color: #7DD3FC !important;
+  text-decoration: none !important;
+}
+.bottom a:hover {
+  color: #FFFFFF !important;
+  text-decoration: underline !important;
 }
 
 /* Affiliate Disclosure Line */
@@ -11644,6 +11667,161 @@ html, body {
   }
 }
 
+/* ==========================================================================
+   PERFECT NO-GLOW LOGO, UNIFIED SEAMLESS FOOTER, & LIGHT BLUE SYSTEM
+   ========================================================================== */
 
+/* 1. Brand Logo: Strictly ZERO Glow on Phone & Desktop (Sharp, Clean, Crisp) */
+.brand-lock img,
+.brand-lock:hover img,
+.brand-lock:focus img,
+.footer-brand img,
+.footer-brand:hover img,
+.site-head .brand-lock img,
+.brand-lock-mobile img {
+  filter: none !important;
+  -webkit-filter: none !important;
+  box-shadow: none !important;
+  drop-shadow: none !important;
+}
 
+/* 2. Unified Pure Black Footer & Seamless Bottom Tier */
+footer,
+footer#footer,
+.footer-main,
+.footer-top-brand,
+.footer-bottom-tier {
+  background: #000000 !important;
+  background-color: #000000 !important;
+}
 
+footer#footer::after {
+  display: none !important;
+}
+
+.footer-bottom-tier {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding-top: 24px !important;
+}
+
+.bottom,
+footer#footer .bottom {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-top: none !important;
+  box-shadow: none !important;
+  padding: 12px 0 0 !important;
+}
+
+.bottom-copy,
+footer#footer .bottom-copy {
+  color: #8c8c9e !important;
+  font-size: 12.5px !important;
+}
+
+.bottom-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+}
+
+.bottom-links a,
+footer#footer .bottom-links a,
+.bottom a {
+  color: #7DD3FC !important;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease, text-decoration 0.2s ease !important;
+}
+
+.bottom-links a:hover,
+footer#footer .bottom-links a:hover,
+.bottom a:hover {
+  color: #FFFFFF !important;
+  text-decoration: underline !important;
+}
+
+.dot-sep {
+  color: rgba(255, 255, 255, 0.25) !important;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 640px) {
+  footer#footer {
+    padding: 44px 0 28px !important;
+  }
+  footer#footer .bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+    padding-top: 8px !important;
+  }
+  .bottom-links {
+    justify-content: center !important;
+    gap: 8px 14px !important;
+  }
+  footer#footer .bottom-copy {
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
+
+/* 3. Comprehensive Light Blue Accent System for All Blue Buttons & Elements */
+.signup,
+.header-auth .signup,
+.mobile-signup,
+.yt-subscribe-btn-3d,
+.res-btn-3d,
+.auth-options a,
+.delay-modal-actions a,
+.post-review,
+.apply-btn,
+.challenge-buy,
+.market-switch button.on,
+.head-main .market-switch button.on {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  color: #020814 !important;
+  font-weight: 800 !important;
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.35) !important;
+  transition: all 0.2s ease !important;
+}
+
+.signup:hover,
+.header-auth .signup:hover,
+.mobile-signup:hover,
+.yt-subscribe-btn-3d:hover,
+.res-btn-3d:hover,
+.auth-options a:hover,
+.delay-modal-actions a:hover,
+.post-review:hover,
+.apply-btn:hover,
+.challenge-buy:hover {
+  background: linear-gradient(135deg, #7DD3FC 0%, #0369A1 100%) !important;
+  color: #020814 !important;
+  box-shadow: 0 6px 22px rgba(56, 189, 248, 0.5) !important;
+  transform: translateY(-2px) !important;
+}
+
+.footer-report-btn {
+  background: rgba(56, 189, 248, 0.12) !important;
+  border: 1px solid rgba(56, 189, 248, 0.45) !important;
+  color: #7DD3FC !important;
+}
+
+.footer-report-btn:hover {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  border-color: transparent !important;
+  color: #020814 !important;
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.4) !important;
+}
+
+#backToTopBtn {
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  color: #020814 !important;
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.4) !important;
+}
