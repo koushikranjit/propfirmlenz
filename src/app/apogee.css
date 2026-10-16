@@ -1,0 +1,247 @@
+@import "tailwindcss";
+@source "../../src/**/*.{ts,tsx}";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Suisse Intl', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animations from §3 */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-down {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-left {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fade-right {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fade-scale {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bar-grow {
+  from { transform: scaleY(0); opacity: 0; }
+  to   { transform: scaleY(1); opacity: 1; }
+}
+
+.animate-fade-up    { animation: fade-up    0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards !important; }
+.animate-fade-down  { animation: fade-down  0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards !important; }
+.animate-fade-left  { animation: fade-left  0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards !important; }
+.animate-fade-right { animation: fade-right 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards !important; }
+.animate-fade-scale { animation: fade-scale 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards !important; }
+
+.animate-bar-grow {
+  animation: bar-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  opacity: 0;
+}
+
+/* Section 5 Spacing & Exact Box Model Guarantees */
+.apogee-nav,
+.apogee-content-row {
+  width: 100%;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 640px) {
+  .apogee-nav,
+  .apogee-content-row {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .apogee-nav,
+  .apogee-content-row {
+    padding-left: 82px;
+    padding-right: 82px;
+  }
+}
+
+.apogee-nav {
+  padding-top: 20px;
+}
+@media (min-width: 640px) {
+  .apogee-nav {
+    padding-top: 30px;
+  }
+}
+
+/* §5.3 Center nav pill */
+.apogee-center-nav {
+  height: 52px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: rgba(10, 7, 7, 0.35);
+  border-radius: 11px;
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+}
+
+/* §5.4 Right auth pill */
+.apogee-auth-pill {
+  height: 52px;
+  padding: 3px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 13px;
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.apogee-auth-login {
+  height: 46px;
+  padding: 0 24px;
+  border-radius: 11px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+}
+.apogee-auth-login:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.apogee-auth-demo {
+  height: 46px;
+  padding: 0 24px;
+  background: #E9E9E9;
+  border-radius: 11px;
+  color: #0A0707;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+}
+.apogee-auth-demo:hover {
+  background: #FFFFFF;
+}
+
+/* §5.5 Mobile hamburger button */
+.apogee-hamburger-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: rgba(10, 7, 7, 0.35);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.apogee-hamburger-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* §5.6 & 5.7 Hero CTA buttons */
+.apogee-cta-demo {
+  height: 46px;
+  padding: 0 20px;
+  background-color: #E9E9E9;
+  border-radius: 12px;
+  color: #0A0707;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 15.5px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.apogee-cta-team {
+  height: 46px;
+  padding: 0 20px;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 15.5px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .apogee-cta-demo {
+    height: 51px;
+    padding: 0 27px;
+    font-size: 15.5px;
+  }
+  .apogee-cta-team {
+    height: 51px;
+    padding: 0 27px;
+    font-size: 15.5px;
+  }
+}
+
+.apogee-cta-demo:hover {
+  opacity: 0.9;
+}
+.apogee-cta-team:hover {
+  opacity: 0.8;
+}
+
+/* §5.8 & 5.9 Revenue card */
+.apogee-revenue-card {
+  width: 100%;
+  border-radius: 24px;
+  background: rgba(17, 16, 15, 0.35);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 20px;
+  padding-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+@media (min-width: 640px) {
+  .apogee-revenue-card {
+    border-radius: 33px;
+    padding: 32px;
+    padding-bottom: 24px;
+  }
+}

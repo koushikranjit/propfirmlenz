@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "../styles/tokens.css";
 
 /* Map design tokens onto Tailwind utilities so components never use raw hex. */
 @theme inline {
