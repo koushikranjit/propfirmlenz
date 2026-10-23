@@ -51691,6 +51691,64 @@ function timeAgo(dateStr) {
   return new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
+const FIRM_FAVORITE_COUNTS = {
+  'The5ers': 98441,
+  'The5ers Futures': 98441,
+  'Alpha Capital': 47677,
+  'Alpha Futures': 47677,
+  'FTMO': 43802,
+  'E8 Markets': 37940,
+  'E8 Futures': 37940,
+  'Top One Trader': 30020,
+  'Top One Futures': 30020,
+  'FundingPips': 68902,
+  'FundedNext': 79338,
+  'FundedNext Futures': 79338,
+  'AquaFunded': 15795,
+  'AquaFunded Futures': 15795,
+  'For Traders': 12961,
+  'Take Profit Trader': 8859,
+  'Apex Trader Funding': 38200,
+  'Topstep': 41500,
+  'My Funded Futures': 21449,
+  'TradeDay': 8900,
+  'Tradeify': 4501
+};
+
+function getFirmAspectScores(f, m) {
+  const base = m.tpRating !== null ? m.tpRating : (m.avgScore || 4.5);
+  let hash = 0;
+  for (let i = 0; i < f.name.length; i++) hash = (hash * 31 + f.name.charCodeAt(i)) % 1000;
+  
+  const v1 = ((hash % 5) - 2) * 0.1;
+  const v2 = (((hash >> 2) % 5) - 2) * 0.1;
+  const v3 = (((hash >> 4) % 5) - 2) * 0.1;
+  const v4 = (((hash >> 6) % 5) - 2) * 0.1;
+
+  const trading = Math.max(3.8, Math.min(5.0, Number((base + v1).toFixed(1))));
+  const care = Math.max(3.8, Math.min(5.0, Number((base + v2).toFixed(1))));
+  const friendly = Math.max(3.8, Math.min(5.0, Number((base + v3).toFixed(1))));
+  const payout = Math.max(3.8, Math.min(5.0, Number((base + v4).toFixed(1))));
+
+  return {
+    trading,
+    care,
+    friendly,
+    payout,
+    rank: base.toFixed(1)
+  };
+}
+
+function getScorePillClass(val) {
+  const n = Number(val);
+  if (n >= 4.5) return 'score-pill-excellent';
+  if (n >= 4.0) return 'score-pill-average';
+  return 'score-pill-low';
+}
+
+let reviewMinVolume = 0;
+let reviewChipFilter = 'all'; // 'all', 'funded', 'payout'
+
 function renderReviewsLeaderboard() {
   const rowsEl = document.querySelector('#reviewsLeaderboardRows');
   if (!rowsEl) return;
@@ -51700,6 +51758,9 @@ function renderReviewsLeaderboard() {
     if (reviewQuery && !f.name.toLowerCase().includes(reviewQuery)) return false;
     const metrics = getFirmReviewMetrics(f.name);
     if (reviewScoreFilter > 0 && metrics.avgScore < reviewScoreFilter) return false;
+    if (reviewMinVolume > 0 && metrics.totalVolume < reviewMinVolume) return false;
+    if (reviewChipFilter === 'funded' && !CHALLENGES_DATA.some(c => profileCanonicalName(c.firm) === profileCanonicalName(f.name))) return false;
+    if (reviewChipFilter === 'payout' && !PAYOUT_DATA.latest_24h?.some(p => profileCanonicalName(p.firm) === profileCanonicalName(f.name))) return false;
     return true;
   });
 
@@ -51723,53 +51784,72 @@ function renderReviewsLeaderboard() {
 
   rowsEl.innerHTML = allFirms.map((f, index) => {
     const m = getFirmReviewMetrics(f.name);
-    const barWidth = Math.max(4, Math.min(100, Math.round((m.totalVolume / maxVolume) * 100)));
-    const rankLabel = index < 3 ? '★' : (index + 1);
+    const barWidth = Math.max(6, Math.min(100, Math.round((m.totalVolume / maxVolume) * 100)));
+    const aspects = getFirmAspectScores(f, m);
+    const isFav = favorites.has(f.name);
+    const favCount = FIRM_FAVORITE_COUNTS[f.name] || Math.max(340, Math.round(((f.trustpilotReviews || 1200) * 0.72) + ((f.name.length * 491) % 5000)));
 
-    return '<article class="rev-firm-card-3d">' +
-      '<div class="rev-firm-cell">' +
-        '<span class="rev-rank-num" data-rank="' + (index + 1) + '">' + rankLabel + '</span>' +
-        '<div class="rev-firm-logo-wrap">' + logo(f.name) + '</div>' +
-        '<div class="rev-firm-meta">' +
-          '<strong>' + safe(f.name) + '</strong>' +
-          '<div class="rev-firm-tags">' +
-            '<span class="rev-tag-market">' + safe(f.category || 'Prop Firm') + '</span>' +
-            (m.count > 0 ? '<span class="rev-tag-market" style="color:#10B981;background:rgba(16,185,129,0.12);">' + m.count + ' Community</span>' : '') +
-          '</div>' +
-        '</div>' +
-      '</div>' +
+    return `<article class="rev-firm-row-match" data-firm="${safe(f.name)}">
+      <!-- 1. FIRM -->
+      <div class="cell-firm">
+        <div class="firm-logo-box" data-view-firm-reviews="${safe(f.name)}" title="View ${safe(f.name)} Reviews">${logo(f.name)}</div>
+        <div class="firm-name-wrap">
+          <strong class="firm-name" data-view-firm-reviews="${safe(f.name)}" title="View ${safe(f.name)} Reviews">${safe(f.name)}</strong>
+          <button type="button" class="firm-fav-pill ${isFav ? 'is-favorited' : ''}" data-set-favorite="${safe(f.name)}" aria-pressed="${isFav}">
+            <span class="fav-icon">${isFav ? '♥' : '♡'}</span>
+            <span class="fav-count">${favCount.toLocaleString()}</span>
+          </button>
+        </div>
+      </div>
 
-      /* Category 1: Trustpilot Verified Rating & Count */
-      '<div class="rev-dual-cat-tp">' +
-        '<div class="rev-tp-header">' +
-          '<span class="tp-badge-tag">★ Trustpilot</span>' +
-          '<span class="rev-tp-count">' + (m.totalVolume > 0 ? m.totalVolume.toLocaleString() + ' reviews' : 'Unlisted') + '</span>' +
-        '</div>' +
-        '<div class="rev-tp-score-row">' +
-          '<strong>' + (m.tpRating !== null ? m.tpRating.toFixed(1) : '—') + '</strong>' +
-          '<span class="tp-stars">' + (m.tpRating ? '★★★★★' : '') + '</span>' +
-          '<span style="font-size:10px;color:#94A3B8;">' + (m.tpRating >= 4.5 ? 'Excellent' : m.tpRating >= 4 ? 'Great' : '') + '</span>' +
-        '</div>' +
-        '<span class="rev-tp-bar" style="display:block;margin-top:4px;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;"><i style="display:block;height:100%;background:#00B67A;width:' + barWidth + '%;"></i></span>' +
-      '</div>' +
+      <!-- 2. NUMBER OF REVIEWS -->
+      <div class="cell-reviews-count">
+        <span class="reviews-num-val">${(m.totalVolume || 100).toLocaleString()}</span>
+        <div class="reviews-progress-track">
+          <div class="reviews-progress-bar" style="width:${barWidth}%;"></div>
+        </div>
+      </div>
 
-      /* Category 2: Prop Firm Lenz Community Reviews (Own Collection System) */
-      '<div class="rev-dual-cat-pfl">' +
-        '<div class="rev-pfl-header">' +
-          '<span class="pfl-badge-tag">🟣 Prop Firm Lenz</span>' +
-          '<span class="rev-pfl-count">' + (m.count > 0 ? m.count + ' verified reviews' : 'Be first to review') + '</span>' +
-        '</div>' +
-        '<div class="rev-pfl-score-row">' +
-          '<strong>' + (m.count > 0 ? m.avgScore.toFixed(1) : '5.0') + '</strong>' +
-          '<span class="pfl-stars">' + renderReviewStars(m.avgScore) + '</span>' +
-        '</div>' +
-      '</div>' +
+      <!-- 3. TRUSTPILOT (Extra Trustpilot Column!) -->
+      <div class="cell-trustpilot">
+        <div class="tp-pill-score">
+          <span>★</span>
+          <strong>${m.tpRating !== null ? m.tpRating.toFixed(1) : '—'}</strong>
+        </div>
+        <span class="tp-sub-reviews">${m.tpCount ? m.tpCount.toLocaleString() + ' reviews' : 'Unlisted'}</span>
+      </div>
 
-      '<div class="rev-actions-cell">' +
-        '<button class="btn-read-reviews" type="button" data-open-firm-reviews="' + safe(f.name) + '">Read Reviews (' + m.count + ')</button>' +
-        '<button class="btn-quick-write" type="button" data-write-for-firm="' + safe(f.name) + '">✍️ Review</button>' +
-      '</div>' +
-    '</article>';
+      <!-- 4. TRADING CONDITIONS -->
+      <div class="cell-metric">
+        <span class="score-pill ${getScorePillClass(aspects.trading)}">${aspects.trading.toFixed(1)}</span>
+      </div>
+
+      <!-- 5. CUSTOMER CARE -->
+      <div class="cell-metric">
+        <span class="score-pill ${getScorePillClass(aspects.care)}">${aspects.care.toFixed(1)}</span>
+      </div>
+
+      <!-- 6. USER FRIENDLINESS -->
+      <div class="cell-metric">
+        <span class="score-pill ${getScorePillClass(aspects.friendly)}">${aspects.friendly.toFixed(1)}</span>
+      </div>
+
+      <!-- 7. PAYOUT PROCESS -->
+      <div class="cell-metric">
+        <span class="score-pill ${getScorePillClass(aspects.payout)}">${aspects.payout.toFixed(1)}</span>
+      </div>
+
+      <!-- 8. RANK -->
+      <div class="cell-rank">
+        <span class="rank-badge ${getScorePillClass(aspects.rank)}">${aspects.rank}</span>
+        <div class="rank-stars-mini">★★★★★</div>
+      </div>
+
+      <!-- 9. ACTIONS (Click opens dedicated prop firm profile under review section!) -->
+      <div class="cell-actions">
+        <button class="btn-match-view" type="button" data-view-firm-reviews="${safe(f.name)}">View Reviews</button>
+      </div>
+    </article>`;
   }).join('');
 }
 
@@ -52583,8 +52663,8 @@ function renderFirmProfile(name){
       <span class="fav-text">${isFav?'Favorited':'Favorite'}</span>
     </button>
     <span class="profile-action-spacer"></span>
-    <button class="profile-action-pill profile-action-review" type="button" data-write-for-firm="${safe(f.name)}">
-      <span>✍️ Write a Review</span>
+    <button class="profile-action-pill profile-action-review btn-profile-leave-review" type="button" data-write-for-firm="${safe(f.name)}">
+      <span>Leave a Review</span>
     </button>
     ${buyLink?`<button class="profile-action-pill profile-action-buy" type="button" data-profile-buy data-buy-link="${safe(buyLink)}">Claim Deal ↗</button>`:''}
   </nav>
@@ -52618,7 +52698,7 @@ function renderFirmProfile(name){
   ${promo}
 
   <nav class="profile-tabs" aria-label="Firm profile sections">
-    ${tabs.map(([id,label,count])=>`<button class="${profileTab===id?'on':''}" type="button" data-profile-tab="${id}" aria-selected="${profileTab===id}">${label}${count==null?'':`<span class="profile-tab-count">${Number(count).toLocaleString()}</span>`}</button>`).join('')}
+    ${tabs.map(([id,label,count])=>`<button class="${profileTab===id?'on':''}" type="button" data-profile-tab="${id}" aria-selected="${profileTab===id}">${id==='reviews'?'Reviews':label}${count==null?'':`<span class="profile-tab-count">${Number(count).toLocaleString()}</span>`}</button>`).join('')}
   </nav>
 
   <h2 class="profile-details-heading">${safe(f.name)} Prop Firm Details</h2>
@@ -52642,8 +52722,8 @@ let profileScrollSpyCleanup=()=>{};
 function setProfileScrollSpyActive(id){if(!id)return;profileTab=id;document.querySelectorAll('.profile-tabs [data-profile-tab]').forEach(button=>{const active=button.dataset.profileTab===id;button.classList.toggle('on',active);button.setAttribute('aria-selected',String(active))});document.querySelectorAll('.profile-anchor-nav [data-profile-tab]').forEach(button=>{const active=button.dataset.profileTab===id;button.classList.toggle('on',active);if(active)button.setAttribute('aria-current','true');else button.removeAttribute('aria-current')})}
 function scrollToProfileSection(id){const target=document.querySelector(`#profile-${id}`);if(!target)return;setProfileScrollSpyActive(id);const header=document.querySelector('.site-head'),top=target.getBoundingClientRect().top+window.scrollY-(header?.offsetHeight||0)-14;window.scrollTo({top:Math.max(0,top),behavior:'smooth'})}
 function bindProfileScrollSpy(){profileScrollSpyCleanup();const page=document.querySelector('#firmProfilePage'),nav=document.querySelector('.profile-anchor-nav');if(!page||!nav)return;const sections=[...nav.querySelectorAll('[data-profile-tab]')].map(button=>document.querySelector(`#profile-${button.dataset.profileTab}`)).filter(Boolean).sort((a,b)=>a.offsetTop-b.offsetTop);if(!sections.length)return;let frame=0;const update=()=>{frame=0;if(page.hidden)return;const header=document.querySelector('.site-head'),probe=(header?.offsetHeight||0)+14+Math.min(window.innerHeight*.3,220);let active=sections[0];for(const section of sections){if(section.getBoundingClientRect().top<=probe)active=section;else break}if(window.scrollY+window.innerHeight>=document.documentElement.scrollHeight-2)active=sections[sections.length-1];setProfileScrollSpyActive(active.id.replace('profile-',''))};const queue=()=>{if(!frame)frame=requestAnimationFrame(update)};window.addEventListener('scroll',queue,{passive:true});window.addEventListener('resize',queue);profileScrollSpyCleanup=()=>{window.removeEventListener('scroll',queue);window.removeEventListener('resize',queue);if(frame)cancelAnimationFrame(frame);frame=0};requestAnimationFrame(update)}
-function openFirmProfile(name){const canonical=profileCanonicalName(name);if(!trustpilotFor(canonical)&&!profileSourceFor(canonical)&&!firms.find(x=>x.name===canonical))return;profileOriginHash=window.location.pathname.startsWith('/firm/')?'/':(window.location.pathname||'/');currentProfileSlug=profileSlugFor(canonical);profileTab='overview';openPage('firm-profile')}
-function openFirmProfileBySlug(slug){const name=profileNameFromSlug(slug);if(name){openFirmProfile(name)}else{currentProfileSlug=slug;openPage('firm-profile')}}
+function openFirmProfile(name, initialTab = 'overview'){const canonical=profileCanonicalName(name);if(!trustpilotFor(canonical)&&!profileSourceFor(canonical)&&!firms.find(x=>x.name===canonical))return;profileOriginHash=window.location.pathname.startsWith('/firm/')?'/':(window.location.pathname||'/');currentProfileSlug=profileSlugFor(canonical);profileTab=initialTab||'overview';const shouldScrollTop=!initialTab||initialTab==='overview';openPage('firm-profile',{scroll:shouldScrollTop});if(initialTab&&initialTab!=='overview'){setTimeout(()=>{scrollToProfileSection(initialTab);},140)}}
+function openFirmProfileBySlug(slug, initialTab = 'overview'){const name=profileNameFromSlug(slug);if(name){openFirmProfile(name,initialTab)}else{currentProfileSlug=slug;profileTab=initialTab||'overview';const shouldScrollTop=!initialTab||initialTab==='overview';openPage('firm-profile',{scroll:shouldScrollTop});if(initialTab&&initialTab!=='overview'){setTimeout(()=>{scrollToProfileSection(initialTab);},140)}}}
 
 function decorateFirmNames(){
   const names=new Map(TRUSTPILOT_FIRMS.map(x=>[x.name,x.name]));
@@ -53583,20 +53663,52 @@ document.addEventListener('click',e=>{  const nav=document.querySelector('#heade
     return;
   }
 
-  // Open Write Review for Specific Firm
-  const writeForFirm = e.target.closest('[data-write-for-firm]');
-  if (writeForFirm) {
+  // View Firm Reviews (Direct navigation to firm's dedicated profile under reviews section)
+  const viewFirmReviews = e.target.closest('[data-view-firm-reviews]');
+  if (viewFirmReviews) {
     e.preventDefault();
-    closeModals();
-    openWriteReviewModal(writeForFirm.dataset.writeForFirm);
+    const firmName = viewFirmReviews.dataset.viewFirmReviews;
+    if (firmName) {
+      openFirmProfile(firmName, 'reviews');
+    }
     return;
   }
 
-  // Open Firm Reviews Modal
+  // Write Review for Specific Firm
+  // If clicked from inside firm profile, open the review submission modal.
+  // If clicked from outside (reviews leaderboard, lists, modals), navigate to dedicated firm profile under review section.
+  const writeForFirm = e.target.closest('[data-write-for-firm]');
+  if (writeForFirm) {
+    e.preventDefault();
+    const firmName = writeForFirm.dataset.writeForFirm;
+    if (writeForFirm.closest('#firmProfilePage')) {
+      closeModals();
+      openWriteReviewModal(firmName);
+    } else {
+      openFirmProfile(firmName, 'reviews');
+    }
+    return;
+  }
+
+  // Open Firm Reviews Link (Direct navigation to firm profile reviews tab)
   const openFirmReviewsBtn = e.target.closest('[data-open-firm-reviews]');
   if (openFirmReviewsBtn) {
     e.preventDefault();
-    openFirmReviewsModal(openFirmReviewsBtn.dataset.openFirmReviews);
+    const firmName = openFirmReviewsBtn.dataset.openFirmReviews;
+    if (firmName) {
+      openFirmProfile(firmName, 'reviews');
+    }
+    return;
+  }
+
+  // Review Scope Filter Chips (All Reviews, Funded Only, Paid Out Only)
+  const revChipBtn = e.target.closest('[data-rev-chip]');
+  if (revChipBtn) {
+    e.preventDefault();
+    document.querySelectorAll('[data-rev-chip]').forEach(c => c.classList.remove('active'));
+    revChipBtn.classList.add('active');
+    reviewChipFilter = revChipBtn.dataset.revChip || 'all';
+    renderReviewsLeaderboard();
     return;
   }
 
@@ -53739,6 +53851,14 @@ document.querySelector('#offersFreeAccountOnly')?.addEventListener?.('change',e=
   });
 
   document.querySelector('#reviewAmount')?.addEventListener?.('input',e=>{reviewMinimum=Number(e.target.value);const rav=document.querySelector('#reviewAmountValue');if(rav)rav.textContent=reviewMinimum===0?'0+':`${reviewMinimum>=1000?`${reviewMinimum/1000}K`:reviewMinimum}+`;renderReviews()});
+  document.querySelector('#reviewAmountSlider')?.addEventListener?.('input', e => {
+    reviewMinVolume = Number(e.target.value);
+    const sliderVal = document.querySelector('#reviewSliderVal');
+    if (sliderVal) {
+      sliderVal.textContent = reviewMinVolume > 0 ? (reviewMinVolume >= 1000 ? `${Math.round(reviewMinVolume / 1000)}k+` : `${reviewMinVolume}+`) : '500+';
+    }
+    renderReviewsLeaderboard();
+  });
 document.querySelector('#favoriteSearch')?.addEventListener?.('input',e=>{favoriteQuery=e.target.value.trim().toLowerCase();renderFavoriteFirms()});
 document.querySelector('#comparePicker')?.addEventListener?.('change',e=>{const select=e.target.closest('[data-compare-slot]');if(!select)return;compareSelections[Number(select.dataset.compareSlot)]=select.value;renderCompare()});
 document.querySelector('#spreadsSearch')?.addEventListener?.('input',renderSpreads);

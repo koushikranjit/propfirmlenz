@@ -715,57 +715,63 @@
 
 
 
-    <!-- Filter Toolbar -->
-    <div class="reviews-toolbar-3d">
-      <div class="toolbar-filters">
-        <div class="review-search-wrap">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="reviewSearchInput" class="review-search-input" placeholder="Search prop firm (e.g. FundingPips, E8)...">
-          <button type="button" id="reviewSearchClear" class="review-search-clear" style="display:none;">✕</button>
+    <!-- Filter Toolbar Matching Reference Design -->
+    <div class="reviews-filter-bar-match">
+      <div class="reviews-filter-controls-left">
+        <div class="rev-search-box-match">
+          <span>🔍</span>
+          <input type="text" id="reviewSearchInput" placeholder="Search prop firm (e.g. FundingPips, E8)...">
         </div>
-        <div class="filter-group">
-          <label for="reviewMarketSelect">Market:</label>
-          <select id="reviewMarketSelect" class="review-select-3d">
-            <option value="all">All Markets</option>
-            <option value="forex" selected>Forex</option>
-            <option value="futures">Futures</option>
-            <option value="crypto">Crypto</option>
-          </select>
+        <div class="rev-amount-slider-wrap">
+          <span>Amount of Reviews:</span>
+          <span id="reviewSliderMin">0</span>
+          <input type="range" id="reviewAmountSlider" min="0" max="50000" step="250" value="0">
+          <span id="reviewSliderVal">500+</span>
         </div>
-        <div class="filter-group">
-          <label for="reviewScoreSelect">Min Rating:</label>
-          <select id="reviewScoreSelect" class="review-select-3d">
-            <option value="0">All Ratings</option>
-            <option value="4.5">4.5+ ★ Exceptional</option>
-            <option value="4.0">4.0+ ★ Very Good</option>
-            <option value="3.5">3.5+ ★ Good</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label for="reviewSortSelect">Sort By:</label>
-          <select id="reviewSortSelect" class="review-select-3d">
-            <option value="rating">Highest Rated</option>
-            <option value="reviews">Most Reviews</option>
-            <option value="trustpilot">TrustScore</option>
-            <option value="name">Alphabetical (A-Z)</option>
-          </select>
+        <div class="rev-filter-chips-match" role="group" aria-label="Review filter scope">
+          <button type="button" class="rev-chip-btn active" data-rev-chip="all">All Reviews</button>
+          <button type="button" class="rev-chip-btn" data-rev-chip="funded">Funded Only</button>
+          <button type="button" class="rev-chip-btn" data-rev-chip="payout">Paid Out Only</button>
         </div>
       </div>
-      <div class="toolbar-actions">
-        <span class="active-count-badge" id="reviewActiveCountBadge">69 firms found</span>
+      <div class="reviews-filter-controls-right">
+        <button type="button" class="btn-post-review-match" data-open-write-review>
+          ✍️ Post a Review
+        </button>
       </div>
     </div>
 
-    <!-- View 1: Firm Leaderboard Table / 3D Grid -->
+    <!-- Subheader Stats, Methodology Link & Legend -->
+    <div class="reviews-subheader-bar">
+      <div class="reviews-count-badge">
+        <strong>Prop Firm Reviews</strong>
+        <span class="count-pill" id="reviewActiveCountBadge">9,749+</span>
+      </div>
+      <button type="button" class="reviews-methodology-btn" data-account-notice>
+        <span>🛡️</span> How We Verify and Rank Firms
+      </button>
+      <div class="reviews-legend-match">
+        <span><span class="legend-dot dot-excellent"></span> Excellent</span>
+        <span><span class="legend-dot dot-average"></span> Average</span>
+        <span><span class="legend-dot dot-low"></span> Low</span>
+      </div>
+    </div>
+
+    <!-- View 1: Firm Leaderboard Table Matching Reference Design + Extra Trustpilot -->
     <div id="reviewsLeaderboardView" class="reviews-view-panel">
-      <div class="reviews-table-3d">
-        <div class="rev-table-head">
-          <span>Rank · Firm</span>
-          <span>🟢 Trustpilot Rating &amp; Count</span>
-          <span>🟣 PFL Community Rating &amp; Reviews</span>
-          <span>Actions</span>
+      <div class="reviews-table-wrapper-match">
+        <div class="rev-table-head-match">
+          <span class="col-firm">FIRM ↕</span>
+          <span class="col-reviews">NUMBER OF REVIEWS ↕</span>
+          <span class="col-trustpilot">★ TRUSTPILOT ↕</span>
+          <span class="col-condition">TRADING CONDITIONS ↕</span>
+          <span class="col-care">CUSTOMER CARE ↕</span>
+          <span class="col-friendly">USER FRIENDLINESS ↕</span>
+          <span class="col-payout">PAYOUT PROCESS ↕</span>
+          <span class="col-rank">RANK ↕</span>
+          <span class="col-actions">ACTIONS</span>
         </div>
-        <div id="reviewsLeaderboardRows" class="rev-table-body"></div>
+        <div id="reviewsLeaderboardRows" class="rev-table-body-match"></div>
       </div>
     </div>
 
