@@ -61,6 +61,18 @@ const nextConfig: NextConfig = {
           destination: "/clone.html",
         },
         {
+          source: "/rules",
+          destination: "/clone.html",
+        },
+        {
+          source: "/tutorials",
+          destination: "/clone.html",
+        },
+        {
+          source: "/disclaimer",
+          destination: "/clone.html",
+        },
+        {
           source: "/firm/:slug*",
           destination: "/clone.html",
         },
