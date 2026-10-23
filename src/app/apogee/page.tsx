@@ -21,7 +21,7 @@ export default function ApogeePage() {
           -moz-osx-font-smoothing: grayscale;
           margin: 0;
           padding: 0;
-          background: #080A19;
+          background: var(--bg, #010117);
         }
 
         @keyframes fade-up {

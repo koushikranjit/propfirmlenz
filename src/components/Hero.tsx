@@ -270,7 +270,7 @@ function Nav() {
         }`}
       >
         <div
-          className={`absolute inset-0 bg-[#080A19]/90 backdrop-blur-[24px] transition-opacity duration-500 ${
+          className={`absolute inset-0 bg-[#010117]/90 backdrop-blur-[24px] transition-opacity duration-500 ${
             isOpen ? 'opacity-100' : 'opacity-0'
           }`}
           onClick={() => setIsOpen(false)}
@@ -307,7 +307,7 @@ function Nav() {
             className="flex flex-col gap-3 transition-all duration-300"
             style={{ transitionDelay: isOpen ? '350ms' : '0ms' }}
           >
-            <button className="w-full h-[50px] bg-[#E9E9E9] rounded-[12px] text-[#0A0707] text-[15px] font-[450] transition-colors hover:bg-white">
+            <button className="w-full h-[50px] bg-[var(--brand,#8F58FF)] rounded-[12px] text-white text-[15px] font-semibold transition-colors hover:bg-[var(--brand-hover,#7936FF)]">
               Book a demo
             </button>
             <button className="w-full h-[50px] rounded-[12px] border border-white/30 text-white text-[15px] font-[450] transition-colors hover:bg-white/5">

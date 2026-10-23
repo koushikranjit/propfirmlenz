@@ -1,44 +1,109 @@
 @import "tailwindcss";
 
-/* Map design tokens onto Tailwind utilities so components never use raw hex. */
+:root {
+  /* Intellix Complete Colour Palette */
+  --bg: #010117;                        /* BG: 100% */
+  --surface: #0D0D1C;                   /* Black 2: 100% (Dark surfaces, cards, rows) */
+  --surface-raised: #0F101C;            /* Black 3: 100% (Raised surfaces, hover state) */
+  
+  --primary: #8F58FF;                   /* Primary: 100% (Primary buttons & highlights) */
+  --primary-2: #7936FF;                 /* Primary 2: 100% (Secondary purple accents) */
+  --brand: #8F58FF;                     /* Primary button */
+  --brand-hover: #7936FF;               /* Primary 2 hover */
+  --brand-pressed: #6824EB;
+  --brand-text: #8F58FF;                /* Purple text accents & links */
+  --brand-tint: rgba(143, 88, 255, 0.16);
+  --brand-tint-border: rgba(143, 88, 255, 0.35);
+
+  --text: #FFFFFF;                      /* White: 100% (Primary text) */
+  --text-secondary: #D9D9D9;            /* Grey: 100% (Secondary text) */
+  --text-muted: #B6B6BA;                /* Dark grey: 100% (Muted text) */
+
+  /* White Shade Tokens (Base #FFFFFF with opacities) */
+  --white-100: #FFFFFF;
+  --white-55: rgba(255, 255, 255, 0.55);
+  --white-38: rgba(252, 250, 255, 0.38); /* White 2 (#FCFAFF 38%) */
+  --white-35: rgba(255, 255, 255, 0.35);
+  --white-15: rgba(255, 255, 255, 0.15);
+  --white-10: rgba(255, 255, 255, 0.10);
+  --white-5: rgba(255, 255, 255, 0.05);
+
+  /* Surface Borders */
+  --border: rgba(255, 255, 255, 0.10);        /* White 10 */
+  --border-strong: rgba(255, 255, 255, 0.15); /* White 15 */
+  --border-subtle: rgba(255, 255, 255, 0.05); /* White 5 */
+
+  --accent: #8F58FF;
+  --accent-secondary: #7936FF;
+  --on-brand: #FFFFFF;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+
+  /* Universal legacy mapping */
+  --bg-base: var(--bg);
+  --bg-near-black: var(--bg);
+  --bg-card: var(--surface);
+  --bg-elevated: var(--surface-raised);
+  --bg-purple-deep: var(--primary-2);
+  --bg-violet-deep: var(--primary);
+  --border-subtle: var(--border-subtle);
+  --border-default: var(--border);
+  --border-strong: var(--border-strong);
+  --text-primary: var(--text);
+  --text-metadata: var(--text-muted);
+  --brand-cyan: var(--brand);
+  --brand-blue: var(--brand-hover);
+  --brand-indigo: var(--brand);
+  --brand-violet: var(--brand-hover);
+  --info: var(--brand-text);
+  --unknown: var(--text-muted);
+
+  --card: var(--surface);
+  --card2: var(--surface-raised);
+  --line: var(--border);
+  --ink: var(--text);
+  --muted: var(--text-muted);
+  --theme: var(--brand);
+  --theme-mid: var(--brand-hover);
+  --theme-deep: #0D0D1C;
+  --grad: var(--brand);
+  --purple: var(--brand);
+  --green: var(--success);
+  --orange: var(--warning);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.55);
+}
+
+/* Map design tokens onto Tailwind utilities */
 @theme inline {
-  --color-bg-base: var(--bg-base);
-  --color-bg-near-black: var(--bg-near-black);
-  --color-bg-card: var(--bg-card);
-  --color-bg-elevated: var(--bg-elevated);
-  --color-bg-purple-deep: var(--bg-purple-deep);
-  --color-bg-violet-deep: var(--bg-violet-deep);
-
-  --color-border-subtle: var(--border-subtle);
-  --color-border-default: var(--border-default);
-  --color-border-strong: var(--border-strong);
-
-  --color-text-primary: var(--text-primary);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-pressed: var(--brand-pressed);
+  --color-brand-text: var(--brand-text);
+  --color-brand-tint: var(--brand-tint);
+  --color-brand-tint-border: var(--brand-tint-border);
+  --color-accent: var(--accent);
+  --color-text: var(--text);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
-  --color-text-metadata: var(--text-metadata);
-
-  --color-brand-cyan: var(--brand-cyan);
-  --color-brand-blue: var(--brand-blue);
-  --color-brand-indigo: var(--brand-indigo);
-  --color-brand-violet: var(--brand-violet);
-
   --color-success: var(--success);
   --color-warning: var(--warning);
   --color-danger: var(--danger);
-  --color-info: var(--info);
-  --color-unknown: var(--unknown);
+  --color-on-brand: var(--on-brand);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  background: var(--bg-base);
-  color: var(--text-primary);
+  background: var(--bg);
+  color: var(--text);
   font-family: var(--font-sans);
 }
 
-/* docs/DESIGN.md §9 — motion is never required to understand content. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

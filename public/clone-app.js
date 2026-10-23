@@ -52954,8 +52954,8 @@ function renderPayoutOverviewVolumeGraph() {
       '<svg viewBox="0 0 ' + svgW + ' ' + svgH + '" style="width:100%;height:auto;min-width:600px;display:block;" preserveAspectRatio="none">' +
         '<defs>' +
           '<linearGradient id="payoutOverviewGrad" x1="0%" y1="0%" x2="0%" y2="100%">' +
-            '<stop offset="0%" stop-color="#00F0FF" stop-opacity="1" />' +
-            '<stop offset="100%" stop-color="#396DFA" stop-opacity="0.3" />' +
+            '<stop offset="0%" stop-color="#8F58FF" stop-opacity="1" />' +
+            '<stop offset="100%" stop-color="#7936FF" stop-opacity="0.35" />' +
           '</linearGradient>' +
         '</defs>' +
         '<line x1="0" y1="' + padTop + '" x2="' + svgW + '" y2="' + padTop + '" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3,3" />' +
@@ -53108,8 +53108,8 @@ function renderPayoutSvgChart(dataPoints, rangeType) {
     '<svg viewBox="0 0 ' + svgW + ' ' + svgH + '" style="width:100%;height:auto;min-width:540px;display:block;" preserveAspectRatio="none">' +
       '<defs>' +
         '<linearGradient id="payoutBarGrad" x1="0%" y1="0%" x2="0%" y2="100%">' +
-          '<stop offset="0%" stop-color="#00F0FF" stop-opacity="1" />' +
-          '<stop offset="100%" stop-color="#4D5DFB" stop-opacity="0.35" />' +
+          '<stop offset="0%" stop-color="#8F58FF" stop-opacity="1" />' +
+          '<stop offset="100%" stop-color="#7936FF" stop-opacity="0.35" />' +
         '</linearGradient>' +
       '</defs>' +
       '<line x1="0" y1="' + padTop + '" x2="' + svgW + '" y2="' + padTop + '" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3,3" />' +

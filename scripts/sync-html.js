@@ -12,7 +12,7 @@ const htmlContent = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="artifact-revision" content="firm-profile-reference-layout-2026-10-08b">
-<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#010117">
 <title>Prop Firm Lenz — Compare Prop Trading Firms</title>
 <link rel="icon" type="image/png" sizes="32x32" href="brand/icon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="brand/icon-192.png">

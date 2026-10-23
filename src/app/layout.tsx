@@ -17,7 +17,7 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
-        <meta name="theme-color" content="#0f172a" />
+        <meta name="theme-color" content="#010117" />
         <link rel="canonical" href="https://propfirmlenz.com" />
         <link rel="icon" type="image/png" sizes="32x32" href="/brand/icon-32.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/brand/icon-192.png" />
