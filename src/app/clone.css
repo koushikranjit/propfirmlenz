@@ -1,6 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
   color-scheme: dark;
+  /* Intellix Typography Design Tokens */
+  --font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* H1 L: 86px / 88px | Bold, Italic (Weight 420-700) */
+  --font-size-h1-l: 86px;
+  --line-height-h1-l: 88px;
+  
+  /* H1: 64px / 69px */
+  --font-size-h1: 64px;
+  --line-height-h1: 69px;
+  
+  /* H2 L: 72px / 70px */
+  --font-size-h2-l: 72px;
+  --line-height-h2-l: 70px;
+  
+  /* H2: 48px / 52px */
+  --font-size-h2: 48px;
+  --line-height-h2: 52px;
+  
+  /* H2 Blog: 36px / 46px */
+  --font-size-h2-blog: 36px;
+  --line-height-h2-blog: 46px;
+  
+  /* H3 L: 30px / 1.2 */
+  --font-size-h3-l: 30px;
+  --line-height-h3-l: 1.2;
+  
+  /* H3: 25px / 1.3 */
+  --font-size-h3: 25px;
+  --line-height-h3: 1.3;
+  
+  /* H4: 21px / 1.2 */
+  --font-size-h4: 21px;
+  --line-height-h4: 1.2;
+  
+  /* H5: 19px / 1.3 */
+  --font-size-h5: 19px;
+  --line-height-h5: 1.3;
+  
+  /* P 18: 18px / 1.4 */
+  --font-size-p-18: 18px;
+  --line-height-p-18: 1.4;
+  
+  /* P 17: 17px / 1.45 (145% in Figma ~ 24.65px) */
+  --font-size-p-17: 17px;
+  --line-height-p-17: 1.45;
+  
+  /* P 16: 16px / 1.2 */
+  --font-size-p-16: 16px;
+  --line-height-p-16: 1.2;
+  
+  /* P 16R: 16px / 1.4 (140% in Figma ~ 22.4px) */
+  --font-size-p-16r: 16px;
+  --line-height-p-16r: 1.4;
+  
+  /* P 15: 15px / 1.4 */
+  --font-size-p-15: 15px;
+  --line-height-p-15: 1.4;
+  
+  /* P 14R: 14px / 1.4 (140% in Figma ~ 19.6px) */
+  --font-size-p-14r: 14px;
+  --line-height-p-14r: 1.4;
+  
+  /* P 14: 14px / 1.3 */
+  --font-size-p-14: 14px;
+  --line-height-p-14: 1.3;
+  
+  /* P 12: 12px / 1.2 */
+  --font-size-p-12: 12px;
+  --line-height-p-12: 1.2;
+
   /* Intellix Complete Colour Palette */
   --bg: #010117;                        /* BG: 100% */
   --surface: #0D0D1C;                   /* Black 2: 100% (Dark surfaces, cards, rows) */
@@ -130,7 +202,7 @@ main{background:transparent!important;box-shadow:none!important}
 @media(max-width:420px){.stats{grid-template-columns:1fr}.stat{border-radius:999px}.hero h1{font-size:33px}}
 
 /* Reference typography */
-.hero h1{font-family:Georgia,Cambria,"Times New Roman",Times,serif;font-size:25px;font-weight:600;line-height:1.22;letter-spacing:-.025em;max-width:900px;margin-bottom:8px}
+.hero h1{font-family:'Inter', system-ui, sans-serif;font-size:25px;font-weight:600;line-height:1.22;letter-spacing:-.025em;max-width:900px;margin-bottom:8px}
 .hero p{max-width:672px;font-size:13px;color:var(--muted)}
 .stats{margin-top:16px;gap:8px}
 .stat{min-height:0;padding:4px 12px;gap:8px;border-radius:999px}
@@ -173,7 +245,7 @@ main{background:transparent!important;box-shadow:none!important}
 .offers-page:before,.offers-page:after{display:none!important}
 .offers-page-shell{position:relative;z-index:1;width:min(1280px,calc(100% - 32px));margin:auto}
 .offers-page-head{text-align:center;margin:0 auto 24px;padding:0 12px}
-.offers-page-head h1{font-family:Georgia,Cambria,"Times New Roman",Times,serif;font-size:25px;font-weight:600;line-height:1.22;letter-spacing:-.025em;margin:0 0 5px}
+.offers-page-head h1{font-family:'Inter', system-ui, sans-serif;font-size:25px;font-weight:600;line-height:1.22;letter-spacing:-.025em;margin:0 0 5px}
 .offers-page-head p{max-width:672px;margin:0 auto;color:var(--muted);font-size:13px}
 .exclusive-offers-frame{padding:1px;border-radius:18px;background:linear-gradient(125deg,#1EE7FC,#7021FC 58%,#17171E);box-shadow:0 24px 72px rgba(0,0,0,.4),0 0 42px rgba(112,33,252,.08)}
 .exclusive-offers-inner{padding:16px;border-radius:17px;background:rgba(10,10,14,.96)}
@@ -198,7 +270,7 @@ main{background:transparent!important;box-shadow:none!important}
 @media(max-width:620px){.offers-page{padding:26px 0 52px}.offers-page-shell{width:min(100% - 22px,1280px)}.offers-page-head{margin-bottom:20px}.exclusive-offers-inner{padding:11px}.exclusive-offers-grid{grid-template-columns:1fr;gap:9px}.exclusive-offer-card{grid-template-columns:50px minmax(0,1fr) 100px;min-height:98px;padding:12px;gap:10px}.exclusive-offer-card .logo-wrap,.exclusive-offer-card .firm-logo,.exclusive-offer-card .firm-initial{width:50px;height:50px;flex-basis:50px}.exclusive-offer-copy h2{font-size:14px}.exclusive-offer-card .promo{min-width:100px}}
 @media(max-width:390px){.exclusive-offer-card{grid-template-columns:44px minmax(0,1fr);align-items:start}.exclusive-offer-card .logo-wrap,.exclusive-offer-card .firm-logo,.exclusive-offer-card .firm-initial{width:44px;height:44px;flex-basis:44px}.exclusive-offer-card .promo{grid-column:1/-1;width:100%;grid-template-columns:1fr 1fr}.exclusive-offer-card .promo .pct,.exclusive-offer-card .copy{display:grid;place-items:center}.exclusive-offer-card .copy{border-top:0;border-left:1px solid #17171E}}
 /* Keep the Home hero typography identical to the Offers page heading. */
-.hero h1,.offers-page-head h1{font-family:Georgia,Cambria,"Times New Roman",Times,serif;font-size:25px;font-weight:600;line-height:1.22;letter-spacing:-.025em}
+.hero h1,.offers-page-head h1{font-family:'Inter', system-ui, sans-serif;font-size:25px;font-weight:600;line-height:1.22;letter-spacing:-.025em}
 .hero p,.offers-page-head p{max-width:672px;font-family:Inter,system-ui,sans-serif;font-size:13px;line-height:1.45}
 @media(min-width:768px){.hero h1,.offers-page-head h1{font-size:37px}.hero p,.offers-page-head p{font-size:17px}}
 
@@ -1217,7 +1289,7 @@ main{background:transparent!important;box-shadow:none!important}
 }
 
 .reviews-hero-title {
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: clamp(32px, 3.8vw, 52px) !important;
   font-weight: 900 !important;
   line-height: 1.15 !important;
@@ -1283,7 +1355,7 @@ main{background:transparent!important;box-shadow:none!important}
 }
 
 .rev-stat-info strong {
-  font-family: 'Outfit', Inter, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 16px;
   font-weight: 900;
   color: #FFFFFF;
@@ -1549,7 +1621,7 @@ main{background:transparent!important;box-shadow:none!important}
   border-radius: 50% !important;
   display: grid !important;
   place-items: center !important;
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 13px !important;
   font-weight: 800 !important;
   background: #171822 !important;
@@ -1968,7 +2040,7 @@ main{background:transparent!important;box-shadow:none!important}
 }
 
 .modal-header-3d h2 {
-  font-family: 'Outfit', Inter, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 24px;
   font-weight: 900;
   color: #FFFFFF;
@@ -2211,7 +2283,7 @@ main{background:transparent!important;box-shadow:none!important}
 }
 
 .score-large-number {
-  font-family: 'Outfit', Inter, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 42px;
   font-weight: 900;
   color: #FFFFFF;
@@ -2353,7 +2425,7 @@ main{background:transparent!important;box-shadow:none!important}
 
 /* Favorite Firms — one visitor-scoped pick, ranked by Trustpilot snapshot. */
 .favorites-page{position:relative;padding:18px 0 76px;background:radial-gradient(ellipse 44% 26% at -7% 4%,rgba(112,33,252,.17),transparent 72%),radial-gradient(ellipse 42% 24% at 107% 5%,rgba(30,231,252,.13),transparent 72%),#080809}
-.favorites-shell{width:min(1540px,calc(100% - 72px));margin:auto}.favorites-head{text-align:center;margin:0 auto 30px}.favorites-head h2{margin:0 0 7px;font-family:Georgia,Cambria,"Times New Roman",Times,serif;font-size:37px;line-height:1.15;letter-spacing:-.03em}.favorites-head p{max-width:720px;margin:auto;color:#aaa5af;font-size:13px;line-height:1.6}
+.favorites-shell{width:min(1540px,calc(100% - 72px));margin:auto}.favorites-head{text-align:center;margin:0 auto 30px}.favorites-head h2{margin:0 0 7px;font-family:'Inter', system-ui, sans-serif;font-size:37px;line-height:1.15;letter-spacing:-.03em}.favorites-head p{max-width:720px;margin:auto;color:#aaa5af;font-size:13px;line-height:1.6}
 .favorites-controls{display:grid;grid-template-columns:1fr auto minmax(220px,320px);align-items:center;gap:14px;margin-bottom:14px}.favorites-count{font-size:12px;color:#d6d1da}.favorites-count b{color:#1EE7FC}.favorites-method{justify-self:center}.favorites-search-wrap{height:38px;display:flex;align-items:center;gap:8px;border:1px solid #322f38;border-radius:99px;background:#17171b;color:#918c98;padding:0 13px}.favorites-search{width:100%;min-width:0;border:0;background:transparent;color:#fff;outline:0;font-size:11px}.favorites-search-wrap:focus-within{border-color:#1EE7FC;box-shadow:0 0 0 3px rgba(30,231,252,.1)}
 .favorites-list{border-top:1px solid #17171E}.favorites-list-head,.favorite-firm-row{display:grid;grid-template-columns:54px minmax(230px,1.35fr) minmax(200px,1fr) 165px 142px;gap:16px;align-items:center}.favorites-list-head{padding:10px 14px 9px;color:#78727e;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}.favorite-firm-row{min-height:82px;padding:11px 14px;border-top:1px solid #252329;background:rgba(12,12,14,.82)}.favorite-firm-row:nth-child(odd){background:rgba(15,14,17,.88)}.favorite-firm-row:hover{background:#17171E}.favorite-rank{width:30px;height:30px;display:grid;place-items:center;border:1px solid #071B25;border-radius:50%;background:#17171E;color:#f0eaf2;font-size:10px;font-weight:800}.favorite-firm-row:nth-child(-n+3) .favorite-rank{border-color:#396DFA;background:#071B25;color:#1EE7FC}
 .favorite-firm-cell{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:center;gap:11px;min-width:0}.favorite-firm-cell .logo-wrap,.favorite-firm-cell .firm-logo,.favorite-firm-cell .firm-initial{width:44px;height:44px;flex-basis:44px}.favorite-firm-cell strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px}.favorite-trustpilot{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:4px;color:#aaa5af;font-size:9px}.favorite-trustpilot .review-stars{font-size:8px}.favorite-trustpilot.empty{color:#77727e}
@@ -2388,7 +2460,7 @@ main{background:transparent!important;box-shadow:none!important}
 @media(max-width:430px){.detail-stat-grid{grid-template-columns:1fr}.payout-detail-timeframes{display:grid;grid-template-columns:1fr 1fr;width:100%}.recent-payout-row{grid-template-columns:1fr}.recent-payout-row>:last-child{grid-column:auto}.detail-table-card,.detail-region-card,.detail-chart-card{padding:14px}}
 
 /* Forex compare and spread research pages. */
-.compare-page,.spreads-page{position:relative;padding:48px 0 76px;background:radial-gradient(ellipse 46% 26% at -6% 4%,rgba(112,33,252,.18),transparent 72%),radial-gradient(ellipse 42% 24% at 106% 6%,rgba(30,231,252,.13),transparent 72%),#080809}.compare-shell,.spreads-shell{width:min(1460px,calc(100% - 48px));margin:auto}.page-intro{text-align:center;max-width:820px;margin:0 auto 28px}.page-intro h1{font-family:Georgia,Cambria,"Times New Roman",Times,serif;font-size:clamp(31px,4vw,48px);line-height:1.12;letter-spacing:-.035em;margin:0 0 10px}.page-intro p{margin:0;color:#aaa5af;font-size:14px;line-height:1.65}.page-stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0 0}.page-stat{min-width:150px;padding:10px 16px;border:1px solid #396DFA;border-radius:999px;background:#17171E}.page-stat b{font-size:14px}.page-stat span{margin-left:5px;color:#aaa5af;font-size:10px}.compare-picker{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:28px 0 18px}.compare-picker label{display:grid;gap:6px;color:#918b96;font-size:9px;text-transform:uppercase;letter-spacing:.07em}.compare-picker select{width:100%;height:44px;border:1px solid #39323e;border-radius:11px;background:#141318;color:#fff;padding:0 12px;outline:0}.compare-picker select:focus{border-color:#1EE7FC;box-shadow:0 0 0 3px rgba(30,231,252,.11)}.compare-limit{margin:0 0 18px;color:#8e8993;text-align:center;font-size:10px}.compare-table{border:1px solid #2d2931;border-radius:16px;overflow:hidden;background:#0d0d10}.compare-row{display:grid;grid-template-columns:190px repeat(var(--compare-cols,3),minmax(180px,1fr));border-top:1px solid #29252d}.compare-row:first-child{border-top:0}.compare-row>div{min-width:0;padding:14px;border-left:1px solid #29252d}.compare-row>div:first-child{border-left:0}.compare-label{display:flex;align-items:center;color:#8e8993;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;background:#111015}.compare-firm-head{min-height:84px;display:flex;align-items:center;gap:10px;background:linear-gradient(145deg,#17171E,#101013)}.compare-firm-head .logo-wrap,.compare-firm-head .firm-logo,.compare-firm-head .firm-initial{width:48px;height:48px;flex-basis:48px}.compare-firm-head strong{display:block;font-size:13px}.compare-value b{display:block;font-size:12px;line-height:1.45}.compare-value span{display:block;margin-top:4px;color:#aaa5af;font-size:10px;line-height:1.5}.compare-code{display:inline-flex!important;width:max-content;padding:5px 9px;border:1px solid #396DFA;border-radius:999px;background:#071B25;color:#1EE7FC!important;font-weight:800}.compare-empty{padding:50px 20px;text-align:center;color:#aaa5af}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:46px}.info-panel{padding:24px;border:1px solid #2e2a32;border-radius:15px;background:#111114}.info-panel h2{font-size:17px;margin:0 0 10px}.info-panel p,.info-panel li{color:#aaa5af;font-size:11px;line-height:1.7}.info-panel ul{margin:0;padding-left:18px}.page-faq{max-width:960px;margin:52px auto 0}.page-faq h2{text-align:center;font-size:21px;margin:0 0 18px}.page-faq details{border-bottom:1px solid #29262d}.page-faq summary{position:relative;list-style:none;cursor:pointer;padding:15px 32px 15px 0;font-size:12px;font-weight:800}.page-faq summary:after{content:'+';position:absolute;right:4px;color:#1EE7FC}.page-faq details[open] summary:after{content:'−'}.page-faq p{margin:0;padding:0 32px 15px 0;color:#aaa5af;font-size:11px;line-height:1.65}.static-subscribe{margin-top:52px;padding:40px 22px;border:1px solid #17171E;border-radius:18px;background:radial-gradient(circle at 12% 50%,rgba(30,231,252,.25),transparent 31%),radial-gradient(circle at 88% 50%,rgba(115,66,221,.28),transparent 32%),#111014;text-align:center}.static-subscribe span{color:#1EE7FC;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.static-subscribe h2{max-width:620px;margin:9px auto 8px;font-size:25px}.static-subscribe p{margin:0 auto;color:#aaa5af;font-size:11px}.static-subscribe .subscribe-state{display:inline-flex;margin-top:17px;padding:9px 14px;border:1px solid #4a414d;border-radius:999px;color:#b9b3bd;font-size:10px}
+.compare-page,.spreads-page{position:relative;padding:48px 0 76px;background:radial-gradient(ellipse 46% 26% at -6% 4%,rgba(112,33,252,.18),transparent 72%),radial-gradient(ellipse 42% 24% at 106% 6%,rgba(30,231,252,.13),transparent 72%),#080809}.compare-shell,.spreads-shell{width:min(1460px,calc(100% - 48px));margin:auto}.page-intro{text-align:center;max-width:820px;margin:0 auto 28px}.page-intro h1{font-family:'Inter', system-ui, sans-serif;font-size:clamp(31px,4vw,48px);line-height:1.12;letter-spacing:-.035em;margin:0 0 10px}.page-intro p{margin:0;color:#aaa5af;font-size:14px;line-height:1.65}.page-stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0 0}.page-stat{min-width:150px;padding:10px 16px;border:1px solid #396DFA;border-radius:999px;background:#17171E}.page-stat b{font-size:14px}.page-stat span{margin-left:5px;color:#aaa5af;font-size:10px}.compare-picker{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:28px 0 18px}.compare-picker label{display:grid;gap:6px;color:#918b96;font-size:9px;text-transform:uppercase;letter-spacing:.07em}.compare-picker select{width:100%;height:44px;border:1px solid #39323e;border-radius:11px;background:#141318;color:#fff;padding:0 12px;outline:0}.compare-picker select:focus{border-color:#1EE7FC;box-shadow:0 0 0 3px rgba(30,231,252,.11)}.compare-limit{margin:0 0 18px;color:#8e8993;text-align:center;font-size:10px}.compare-table{border:1px solid #2d2931;border-radius:16px;overflow:hidden;background:#0d0d10}.compare-row{display:grid;grid-template-columns:190px repeat(var(--compare-cols,3),minmax(180px,1fr));border-top:1px solid #29252d}.compare-row:first-child{border-top:0}.compare-row>div{min-width:0;padding:14px;border-left:1px solid #29252d}.compare-row>div:first-child{border-left:0}.compare-label{display:flex;align-items:center;color:#8e8993;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;background:#111015}.compare-firm-head{min-height:84px;display:flex;align-items:center;gap:10px;background:linear-gradient(145deg,#17171E,#101013)}.compare-firm-head .logo-wrap,.compare-firm-head .firm-logo,.compare-firm-head .firm-initial{width:48px;height:48px;flex-basis:48px}.compare-firm-head strong{display:block;font-size:13px}.compare-value b{display:block;font-size:12px;line-height:1.45}.compare-value span{display:block;margin-top:4px;color:#aaa5af;font-size:10px;line-height:1.5}.compare-code{display:inline-flex!important;width:max-content;padding:5px 9px;border:1px solid #396DFA;border-radius:999px;background:#071B25;color:#1EE7FC!important;font-weight:800}.compare-empty{padding:50px 20px;text-align:center;color:#aaa5af}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:46px}.info-panel{padding:24px;border:1px solid #2e2a32;border-radius:15px;background:#111114}.info-panel h2{font-size:17px;margin:0 0 10px}.info-panel p,.info-panel li{color:#aaa5af;font-size:11px;line-height:1.7}.info-panel ul{margin:0;padding-left:18px}.page-faq{max-width:960px;margin:52px auto 0}.page-faq h2{text-align:center;font-size:21px;margin:0 0 18px}.page-faq details{border-bottom:1px solid #29262d}.page-faq summary{position:relative;list-style:none;cursor:pointer;padding:15px 32px 15px 0;font-size:12px;font-weight:800}.page-faq summary:after{content:'+';position:absolute;right:4px;color:#1EE7FC}.page-faq details[open] summary:after{content:'−'}.page-faq p{margin:0;padding:0 32px 15px 0;color:#aaa5af;font-size:11px;line-height:1.65}.static-subscribe{margin-top:52px;padding:40px 22px;border:1px solid #17171E;border-radius:18px;background:radial-gradient(circle at 12% 50%,rgba(30,231,252,.25),transparent 31%),radial-gradient(circle at 88% 50%,rgba(115,66,221,.28),transparent 32%),#111014;text-align:center}.static-subscribe span{color:#1EE7FC;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.static-subscribe h2{max-width:620px;margin:9px auto 8px;font-size:25px}.static-subscribe p{margin:0 auto;color:#aaa5af;font-size:11px}.static-subscribe .subscribe-state{display:inline-flex;margin-top:17px;padding:9px 14px;border:1px solid #4a414d;border-radius:999px;color:#b9b3bd;font-size:10px}
 .spreads-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:28px 0 14px}.spreads-filters{display:flex;align-items:center;gap:7px}.spread-filter{padding:8px 13px;border:1px solid #37323a;border-radius:999px;background:#1b1a1d;color:#aaa5af;font-size:10px;font-weight:800}.spread-filter.on{background:#fff;color:#080809;border-color:#fff}.spreads-search{width:min(280px,100%);height:38px;border:1px solid #302d34;border-radius:999px;background:#151519;color:#fff;padding:0 14px;outline:0}.spreads-search:focus{border-color:#1EE7FC;box-shadow:0 0 0 3px rgba(30,231,252,.1)}.spreads-count{margin:0 0 12px;font-size:12px}.spreads-count b{color:#1EE7FC}.spreads-table{border-top:1px solid #17171E}.spreads-head,.spread-row{display:grid;grid-template-columns:48px minmax(170px,1.45fr) minmax(120px,.9fr) repeat(6,minmax(72px,.66fr)) minmax(118px,.8fr) 98px 72px;gap:0;align-items:center}.spreads-head{min-height:46px;color:#77727e;font-size:7px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}.spreads-head>*{padding:0 9px;border-left:1px solid #302c33}.spreads-head>*:first-child{border-left:0}.spread-row{min-height:82px;border-top:1px solid #252329;background:rgba(12,12,14,.84);font-size:10px}.spread-row:nth-child(odd){background:rgba(15,14,17,.88)}.spread-row>*{min-width:0;padding:0 9px}.spread-rank{color:#aaa5af;font-weight:800;text-align:center}.spread-firm{display:grid;grid-template-columns:42px minmax(0,1fr);align-items:center;gap:9px}.spread-firm .logo-wrap,.spread-firm .firm-logo,.spread-firm .firm-initial{width:42px;height:42px;flex-basis:42px}.spread-firm strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px}.spread-missing{display:inline-flex;justify-content:center;color:#716c75;font-weight:800}.spread-platforms{display:flex;gap:4px;flex-wrap:wrap}.spread-trust{font-size:10px}.spread-trust .stars{display:block;font-size:8px;margin-top:3px}.spread-visit{display:inline-flex;justify-content:center;padding:7px 10px;border:1px solid #396DFA;border-radius:999px;color:#fff;background:#17171E;text-decoration:none;font-size:9px;font-weight:800}.spread-visit.disabled{border-color:#333039;color:#6f6a73}.spreads-empty{padding:44px;text-align:center;color:#aaa5af}.spread-method-note{margin-top:14px;color:#8f8994;font-size:10px}.spread-method-note strong{color:#1EE7FC}
 @media(max-width:1180px){.spreads-head{display:none}.spreads-table{border-top:0}.spread-row{grid-template-columns:54px minmax(190px,1.5fr) repeat(3,minmax(110px,1fr));gap:12px;margin-bottom:10px;padding:15px;border:1px solid #29262e;border-radius:13px}.spread-row>*{padding:0}.spread-row>[data-label]:before{content:attr(data-label);display:block;margin-bottom:4px;color:#77727e;font-size:7px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}.spread-firm{grid-column:span 2}.spread-platforms{grid-column:span 2}}
 @media(max-width:760px){.compare-shell,.spreads-shell{width:min(100% - 22px,720px)}.compare-picker{grid-template-columns:1fr 1fr}.compare-table{border:0;background:transparent;overflow:visible}.compare-row{grid-template-columns:1fr;border:1px solid #2d2931;border-radius:12px;margin-bottom:10px;overflow:hidden}.compare-row>div{border-left:0;border-top:1px solid #29252d}.compare-row>div:first-child{border-top:0}.compare-label{padding:10px 14px}.compare-firm-head{min-height:68px}.info-grid{grid-template-columns:1fr}.spreads-toolbar{align-items:stretch;flex-direction:column}.spreads-search{width:100%}.spread-row{grid-template-columns:42px 1fr 1fr;gap:12px}.spread-firm{grid-column:span 2}.spread-platforms{grid-column:1/-1}}
@@ -2402,7 +2474,7 @@ main{background:transparent!important;box-shadow:none!important}
 @media(max-width:430px){.review-row{grid-template-columns:1fr}.review-firm{grid-column:auto}}
 
 /* Market selector and honest non-Forex state. */
-.site-head .brand-mark{display:block;flex:0 0 38px;width:38px;height:38px;background:url('/assets/logo-mark.png') center/contain no-repeat}.market-switch{margin-left:0}.market-switch button:focus-visible{outline:2px solid #1EE7FC;outline-offset:2px}.market-empty-page{min-height:calc(100vh - 110px);display:grid;place-items:center;padding:72px 20px;background:radial-gradient(ellipse 55% 45% at 50% 0%,rgba(112,33,252,.2),transparent 72%),var(--bg)}.market-empty-card{width:min(680px,100%);padding:44px 32px;border:1px solid #071B25;border-radius:18px;background:linear-gradient(145deg,#17171E,#0d0c10);text-align:center;box-shadow:var(--shadow)}.market-empty-card h1{margin:0 0 12px;font-family:Georgia,Cambria,"Times New Roman",Times,serif;font-size:clamp(30px,5vw,46px);line-height:1.12}.market-empty-card p{margin:0;color:#c7c1cb;font-size:15px;line-height:1.6}.market-directory{display:grid;gap:8px;margin-top:24px;text-align:left}.market-directory-row{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:10px;padding:10px 12px;border:1px solid #17171E;border-radius:12px;background:#111116}.market-directory-row .firm-logo,.market-directory-row .firm-initial{width:42px;height:42px}.market-directory-row strong{display:block;font-size:13px}.market-directory-row .trustpilot-line{margin-top:3px}.market-directory-row .apply-btn{min-width:74px}
+.site-head .brand-mark{display:block;flex:0 0 38px;width:38px;height:38px;background:url('/assets/logo-mark.png') center/contain no-repeat}.market-switch{margin-left:0}.market-switch button:focus-visible{outline:2px solid #1EE7FC;outline-offset:2px}.market-empty-page{min-height:calc(100vh - 110px);display:grid;place-items:center;padding:72px 20px;background:radial-gradient(ellipse 55% 45% at 50% 0%,rgba(112,33,252,.2),transparent 72%),var(--bg)}.market-empty-card{width:min(680px,100%);padding:44px 32px;border:1px solid #071B25;border-radius:18px;background:linear-gradient(145deg,#17171E,#0d0c10);text-align:center;box-shadow:var(--shadow)}.market-empty-card h1{margin:0 0 12px;font-family:'Inter', system-ui, sans-serif;font-size:clamp(30px,5vw,46px);line-height:1.12}.market-empty-card p{margin:0;color:#c7c1cb;font-size:15px;line-height:1.6}.market-directory{display:grid;gap:8px;margin-top:24px;text-align:left}.market-directory-row{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:10px;padding:10px 12px;border:1px solid #17171E;border-radius:12px;background:#111116}.market-directory-row .firm-logo,.market-directory-row .firm-initial{width:42px;height:42px}.market-directory-row strong{display:block;font-size:13px}.market-directory-row .trustpilot-line{margin-top:3px}.market-directory-row .apply-btn{min-width:74px}
 @media(max-width:1100px){.market-switch{margin-left:auto}}
 @media(max-width:760px){.market-switch{margin-left:0}.market-empty-page{min-height:58vh;padding:42px 12px}.market-empty-card{padding:34px 20px}.site-head .brand-mark{flex-basis:31px;width:31px;height:31px}.market-directory-row{grid-template-columns:38px minmax(0,1fr) auto;padding:9px}.market-directory-row .firm-logo,.market-directory-row .firm-initial{width:38px;height:38px}.market-directory-row .apply-btn{min-width:58px;padding:8px 9px}}
 
@@ -2673,7 +2745,7 @@ body[data-market-theme="futures"] #rankings .rank-card .firm-logo-frame>.firm-lo
 .profile-pill-verified{background:rgba(16,185,129,.14);border:1px solid rgba(16,185,129,.35);color:#34D399}
 .profile-pill-country{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#94A3B8}
 .profile-pill-years{background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.3);color:#60A5FA}
-.profile-title-copy h1{font-family:Outfit,Inter,system-ui,sans-serif;font-size:clamp(32px,3.5vw,48px);font-weight:800;letter-spacing:-.04em;line-height:1.1;margin:0 0 8px;color:#fff}
+.profile-title-copy h1{font-family:'Inter', system-ui, sans-serif;font-size:clamp(32px,3.5vw,48px);font-weight:800;letter-spacing:-.04em;line-height:1.1;margin:0 0 8px;color:#fff}
 .profile-rating-line{display:flex;align-items:center;gap:8px;font-size:13px;color:#94A3B8;margin-bottom:14px;flex-wrap:wrap}
 .profile-rating-line .stars{color:#F59E0B;font-size:14px}
 .profile-rating-line b{color:#fff;font-weight:800}
@@ -5595,7 +5667,7 @@ footer#footer .bottom-copy {
 /* Hero Headline - Clean, Crisp, High-Contrast 3D White */
 .hero h1,
 #heroTitle {
-  font-family: 'Outfit', Inter, system-ui, -apple-system, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: clamp(34px, 4vw, 56px) !important;
   font-weight: 900 !important;
   line-height: 1.15 !important;
@@ -5756,7 +5828,7 @@ footer#footer .bottom-copy {
 }
 
 .hero .stat b {
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 16px !important;
   font-weight: 900 !important;
   color: #FFFFFF !important;
@@ -6091,7 +6163,7 @@ footer#footer .bottom-copy {
 }
 
 .payout-detail-identity-wrap h1 {
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 28px !important;
   font-weight: 800 !important;
   color: #fff !important;
@@ -6572,7 +6644,7 @@ footer#footer .bottom-copy {
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   background: rgba(255, 255, 255, 0.03) !important;
   color: #94A3B8 !important;
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 13px !important;
   font-weight: 700 !important;
   cursor: pointer !important;
@@ -6640,7 +6712,7 @@ footer#footer .bottom-copy {
 }
 
 .payout-overview-title h3 {
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 20px !important;
   font-weight: 800 !important;
   color: #FFFFFF !important;
@@ -6689,7 +6761,7 @@ footer#footer .bottom-copy {
 }
 
 .payout-stat-pill-3d .stat-v {
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 20px !important;
   font-weight: 900 !important;
   color: #FFFFFF !important;
@@ -6784,7 +6856,7 @@ footer#footer .bottom-copy {
 }
 
 .brand-lock span {
-  font-family: 'Outfit', 'Inter', system-ui, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 22px !important;
   font-weight: 800 !important;
   letter-spacing: -0.035em !important;
@@ -6925,7 +6997,7 @@ footer#footer .bottom-copy {
 }
 
 .hero h1 {
-  font-family: 'Outfit', 'Inter', system-ui, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: clamp(32px, 4.2vw, 54px) !important;
   line-height: 1.08 !important;
   font-weight: 900 !important;
@@ -6987,7 +7059,7 @@ footer#footer .bottom-copy {
 }
 
 .stat strong, .stat b, .hero-stat-pill strong {
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 15px !important;
   font-weight: 800 !important;
   color: #FFFFFF !important;
@@ -7150,7 +7222,7 @@ footer#footer .bottom-copy {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 13px;
   font-weight: 800;
   color: #FFFFFF;
@@ -7259,7 +7331,7 @@ footer#footer .bottom-copy {
 }
 
 .rev-tp-score-row strong {
-  font-family: 'Outfit', sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 16px !important;
   font-weight: 800 !important;
   color: #FFFFFF !important;
@@ -7308,7 +7380,7 @@ footer#footer .bottom-copy {
 }
 
 .rev-pfl-score-row strong {
-  font-family: 'Outfit', sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 16px !important;
   font-weight: 800 !important;
   color: #00F0FF !important;
@@ -7633,7 +7705,7 @@ footer#footer .bottom-copy {
 }
 
 .pfl-embed-status {
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 14px !important;
   font-weight: 800 !important;
   color: #FFFFFF !important;
@@ -7664,7 +7736,7 @@ footer#footer .bottom-copy {
   align-items: center !important;
   gap: 8px !important;
   margin-left: 3px !important;
-  font-family: 'Outfit', sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 14px !important;
   font-weight: 800 !important;
   color: #FFFFFF !important;
@@ -7894,7 +7966,7 @@ footer#footer .bottom-copy {
 
 .rating-label-preview {
   margin-left: 14px !important;
-  font-family: 'Outfit', sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 15px !important;
   font-weight: 800 !important;
   color: #00F0FF !important;
@@ -7912,7 +7984,7 @@ footer#footer .bottom-copy {
   border-radius: 999px !important;
   padding: 6px 15px !important;
   color: #94A3B8 !important;
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 12.5px !important;
   font-weight: 600 !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 240, 255, 0.1) !important;
@@ -8281,7 +8353,7 @@ main,
 }
 
 .favorites-count {
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 15px !important;
   font-weight: 700 !important;
   color: #E2E8F0 !important;
@@ -8406,7 +8478,7 @@ main,
 }
 
 .compare-picker label {
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 12px !important;
   font-weight: 700 !important;
   color: #00F0FF !important;
@@ -8489,7 +8561,7 @@ main,
   border: 0 !important;
   border-radius: 999px !important;
   padding: 8px 24px !important;
-  font-family: 'Outfit', Inter, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: 14px !important;
   font-weight: 700 !important;
   color: #94A3B8 !important;
@@ -8820,7 +8892,7 @@ main,
 }
 
 .partner-badges-header h2 {
-  font-family: 'Outfit', Inter, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: clamp(28px, 4vw, 40px);
   font-weight: 900;
   color: #FFFFFF;
@@ -8875,7 +8947,7 @@ main,
 }
 
 .widget-card-top h3 {
-  font-family: 'Outfit', Inter, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 18px;
   font-weight: 800;
   color: #FFFFFF;
@@ -9465,7 +9537,7 @@ main,
   top: 6px;
   right: 14px;
   font-size: 38px;
-  font-family: Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
   color: rgba(0, 240, 255, 0.15);
   line-height: 1;
   pointer-events: none;
@@ -9568,7 +9640,7 @@ main,
   border-radius: 10px;
   background: linear-gradient(135deg, #00F0FF 0%, #3B82F6 100%);
   color: #040E1B;
-  font-family: 'Outfit', Inter, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 13px;
   font-weight: 800;
   cursor: pointer;
@@ -9600,7 +9672,7 @@ main,
 }
 
 .partner-guidelines-box h3 {
-  font-family: 'Outfit', Inter, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 18px;
   font-weight: 800;
   color: #FFFFFF;
@@ -12705,7 +12777,7 @@ body[data-market-theme="crypto"] .alloc-cell .bar i {
   overflow: hidden !important;
 }
 .page-hero h1 {
-  font-family: 'Outfit', 'Inter', system-ui, sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
   font-size: clamp(32px, 4.2vw, 54px) !important;
   line-height: 1.08 !important;
   letter-spacing: -0.04em !important;
@@ -12881,7 +12953,7 @@ body[data-market-theme="crypto"] .alloc-cell .bar i {
   font-size: 16px !important;
   font-weight: 800 !important;
   color: #FFF !important;
-  font-family: 'Outfit', sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
 }
 
 .reviews-count-badge .count-pill {
@@ -13045,7 +13117,7 @@ body[data-market-theme="crypto"] .alloc-cell .bar i {
   font-size: 14px !important;
   font-weight: 800 !important;
   color: #FFF !important;
-  font-family: 'Outfit', sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
 }
 
 .reviews-progress-track {
@@ -13147,7 +13219,7 @@ body[data-market-theme="crypto"] .alloc-cell .bar i {
   border-radius: 8px !important;
   font-size: 13.5px !important;
   font-weight: 900 !important;
-  font-family: 'Outfit', sans-serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
 }
 
 .rank-stars-mini {
@@ -13834,19 +13906,399 @@ textarea,
   color: var(--text-muted) !important;
 }
 
-/* 14. Typography Consistency */
+/* ==========================================================================
+   14. INTELLIX TYPOGRAPHY STYLE GUIDE
+   General Font: Inter | Primary Text Colour: #FFFFFF
+   ========================================================================== */
+
+/* Universal Font Assignment */
+html,
+body,
+button,
+input,
+select,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p,
 span,
+a,
+label,
+strong,
+b,
+th,
+td {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Primary Text Colour */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+th {
+  color: #FFFFFF !important;
+}
+
+/* 1. H1 L: 86px / 88px | Bold, Italic (Hero Display Headline) */
+#heroTitle,
+.hero h1,
+.hero-display-h1,
+.text-h1-l,
+.h1-l {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 86px !important;
+  line-height: 88px !important;
+  font-weight: 700 !important;
+  font-style: italic !important;
+  letter-spacing: -0.035em !important;
+  color: #FFFFFF !important;
+  margin: 0 auto 20px !important;
+  max-width: 1040px !important;
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  #heroTitle,
+  .hero h1,
+  .hero-display-h1,
+  .text-h1-l,
+  .h1-l {
+    font-size: clamp(48px, 6vw, 76px) !important;
+    line-height: clamp(52px, 6.2vw, 80px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #heroTitle,
+  .hero h1,
+  .hero-display-h1,
+  .text-h1-l,
+  .h1-l {
+    font-size: clamp(34px, 8.5vw, 48px) !important;
+    line-height: 1.08 !important;
+  }
+}
+
+/* 2. H1: 64px / 69px (Standard Page Heroes) */
+.page-hero h1,
+.page-intro h1,
+.payout-hub-head h1,
+.reviews-hub-head h1,
+.compare-head h1,
+.spreads-head h1,
+.market-empty-card h1,
+.reviews-hero-title,
+.hero-offers h1,
+.hero-best-sellers h1,
+.hero-favorites h1,
+.hero-payouts h1,
+.hero-compare h1,
+.hero-rules h1,
+.hero-spreads h1,
+.hero-widgets h1,
+.hero-reviews h1,
+.hero-tutorials h1,
+.profile-title-copy h1,
+.text-h1,
+.h1 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 64px !important;
+  line-height: 69px !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+  letter-spacing: -0.03em !important;
+  color: #FFFFFF !important;
+  margin: 0 auto 16px !important;
+  max-width: 960px !important;
+}
+
+@media (max-width: 1024px) {
+  .page-hero h1,
+  .page-intro h1,
+  .payout-hub-head h1,
+  .reviews-hub-head h1,
+  .compare-head h1,
+  .spreads-head h1,
+  .market-empty-card h1,
+  .reviews-hero-title,
+  .text-h1,
+  .h1 {
+    font-size: clamp(32px, 5vw, 48px) !important;
+    line-height: clamp(36px, 5.5vw, 54px) !important;
+  }
+}
+
+/* 3. H2 L: 72px / 70px (Prominent Display Section Headers) */
+.text-h2-l,
+.h2-l,
+.section-title-l h2 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 72px !important;
+  line-height: 70px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  color: #FFFFFF !important;
+}
+
+@media (max-width: 1024px) {
+  .text-h2-l,
+  .h2-l,
+  .section-title-l h2 {
+    font-size: clamp(38px, 5vw, 56px) !important;
+    line-height: clamp(42px, 5.2vw, 60px) !important;
+  }
+}
+
+/* 4. H2: 48px / 52px (Standard Major Section Headers) */
+.section-title h2,
+.favorites-head h2,
+.rank-head h2,
+.page-faq h2,
+#offersListTitle,
+.reviews-hub-section h2,
+.text-h2,
+.h2 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 48px !important;
+  line-height: 52px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  color: #FFFFFF !important;
+}
+
+@media (max-width: 1024px) {
+  .section-title h2,
+  .favorites-head h2,
+  .rank-head h2,
+  .page-faq h2,
+  #offersListTitle,
+  .reviews-hub-section h2,
+  .text-h2,
+  .h2 {
+    font-size: clamp(26px, 3.8vw, 38px) !important;
+    line-height: clamp(30px, 4.2vw, 44px) !important;
+  }
+}
+
+/* 5. H2 Blog: 36px / 46px (Card / Panel / Sub-section Headers) */
+.panel-head h2,
+.info-panel h2,
+.modal-card h2,
+.static-subscribe h2,
+.newsletter h2,
+.additional-info h2,
+.text-h2-blog,
+.h2-blog {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 36px !important;
+  line-height: 46px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: #FFFFFF !important;
+}
+
+@media (max-width: 768px) {
+  .panel-head h2,
+  .info-panel h2,
+  .modal-card h2,
+  .static-subscribe h2,
+  .newsletter h2,
+  .additional-info h2,
+  .text-h2-blog,
+  .h2-blog {
+    font-size: clamp(22px, 3vw, 28px) !important;
+    line-height: clamp(28px, 3.6vw, 36px) !important;
+  }
+}
+
+/* 6. H3 L: 30px / 1.2 (36px) */
+.text-h3-l,
+.h3-l,
+h3.large,
+.featured-card h3 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 30px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.015em !important;
+  color: #FFFFFF !important;
+}
+
+/* 7. H3: 25px / 1.3 (32.5px) */
+h3,
+.badge-item h3,
+.widget-card h3,
+.faq-card h3,
+.modal-card h3,
+.contact-card h3,
+.text-h3,
+.h3 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 25px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+}
+
+/* 8. H4: 21px / 1.2 (25.2px) */
+h4,
+.rank-card-title,
+.payout-stat-title,
+.metric-card h4,
+.text-h4,
+.h4 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 21px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+}
+
+/* 9. H5: 19px / 1.3 (24.7px) */
+h5,
+.business-name,
+.table-group-header,
+.text-h5,
+.h5 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 19px !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+  color: #FFFFFF !important;
+}
+
+/* 10. P 18: 18px / 1.4 (Lead & Intro Paragraphs) */
+#heroSubtitle,
 .hero p,
-.section-title p {
+.page-hero p,
+.lead,
+.page-intro p,
+.section-title p,
+.text-p-18,
+.p-18 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  color: var(--text-secondary) !important;
+}
+
+/* 11. P 17: 17px / 1.45 (Body Copy Default) */
+body,
+p,
+.info-panel p,
+.favorites-info p,
+.disclaimer-shell p,
+.text-p-17,
+.p-17 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 17px !important;
+  line-height: 1.45 !important;
   color: var(--text-secondary);
 }
 
+/* 12. P 16: 16px / 1.2 (Snug Content & Badge Numbers) */
+.reviews-count-badge,
+.menu-links a,
+.tab-title,
+.text-p-16,
+.p-16 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+}
+
+/* 13. P 16R: 16px / 1.4 (Relaxed Content, FAQ & Review Cards) */
+.faq-card p,
+.modal-card p,
+.profile-review-card p,
+.resource p,
+.text-p-16r,
+.p-16r {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  color: var(--text-secondary) !important;
+}
+
+/* 14. P 15: 15px / 1.4 (Descriptions & Excerpts) */
+.market-empty-card p,
+.review-excerpt,
+.card-desc,
+.payout-desc,
+.text-p-15,
+.p-15 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  color: var(--text-secondary) !important;
+}
+
+/* 15. P 14R: 14px / 1.4 (Controls & Status Cards) */
+.offer-desc,
+.stat b,
+.table-cell-text,
+.giveaway,
+.text-p-14r,
+.p-14r {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+/* 16. P 14: 14px / 1.3 (Interactive Buttons, Navlinks, Inputs) */
+button,
+.btn,
+button.primary,
+.btn-primary,
+.buy-link-btn,
+.top-offer-actions .buy-link-btn,
+.offers-top-card .buy-link-btn,
+.offer-row .buy-link-btn,
+.navlinks a,
+.searchbox,
+.login,
+.signup,
+.header-auth a,
+.header-auth .signup,
+.header-auth .login,
+.market-switch button,
+.head-pill,
+.text-p-14,
+.p-14 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.3 !important;
+}
+
+/* 17. P 12: 12px / 1.2 (Microcopy, Labels, Badges, Notes) */
+time,
+.time-ago,
+.form-note,
+.badge-text,
+.legend-text,
+.score-pill,
+.promo .copy,
+.footer-copy,
+.hero .stat span,
+.hero-stat-pill span,
 .stat span,
 .payout-muted,
 .row-rail-chip,
-.form-note,
-.time-ago {
+.country-cell span,
+.years-label,
+.alloc small,
+.text-p-12,
+.p-12 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
   color: var(--text-muted) !important;
 }
 
