@@ -9580,24 +9580,16 @@ main,
    CONTROLLED HOME PAGE POLISH DESIGN PASS
    ========================================================================== */
 
-/* Premium Dark Page Background with Signature Brand Color Gradient Mesh */
+/* Pure Dark Jet Black Page Background */
 html {
-  background: #060712 !important;
+  background: #000000 !important;
 }
 
 body,
 body[data-page] {
-  background-color: #060712 !important;
-  background-image:
-    radial-gradient(ellipse 1200px 600px at 50% -80px, rgba(107, 54, 248, 0.32) 0%, rgba(99, 102, 241, 0.18) 38%, rgba(0, 240, 255, 0.06) 62%, transparent 78%),
-    radial-gradient(circle 900px at -10% 25%, rgba(107, 54, 248, 0.16), transparent 60%),
-    radial-gradient(circle 850px at 110% 35%, rgba(0, 240, 255, 0.10), transparent 55%),
-    radial-gradient(ellipse 1300px 700px at 50% 55%, rgba(99, 102, 241, 0.12), rgba(124, 58, 237, 0.06) 45%, transparent 70%),
-    radial-gradient(circle 950px at 8% 85%, rgba(124, 58, 237, 0.13), transparent 60%),
-    radial-gradient(circle 800px at 95% 90%, rgba(30, 231, 252, 0.08), transparent 55%),
-    linear-gradient(180deg, #070714 0%, #060710 35%, #080816 70%, #05050C 100%) !important;
-  background-attachment: fixed !important;
-  background-repeat: no-repeat !important;
+  background-color: #000000 !important;
+  background-image: none !important;
+  background: #000000 !important;
   color: #EDEFF7 !important;
 }
 
@@ -10958,15 +10950,12 @@ span.firm-initial {
    Obsidian Glass Core & Specular White Lighting
    ========================================================================== */
 
-/* 1. Global Cosmic Obsidian Aurora Background */
+/* 1. Global Dark Jet Black Background */
 html,
 body {
-  background-color: #060812 !important;
-  background-image:
-    radial-gradient(circle at 14% 10%, rgba(0, 240, 255, 0.15) 0%, transparent 45%),
-    radial-gradient(circle at 86% 16%, rgba(77, 93, 251, 0.15) 0%, transparent 45%),
-    radial-gradient(circle at 50% 50%, rgba(0, 163, 255, 0.08) 0%, transparent 55%) !important;
-  background-attachment: fixed !important;
+  background-color: #000000 !important;
+  background-image: none !important;
+  background: #000000 !important;
 }
 
 /* 2. Logo Brand Typography (Flat, Clean, No Glow) */
@@ -13162,4 +13151,141 @@ body[data-market-theme="crypto"] .alloc-cell .bar i {
   border-color: #6B36F8 !important;
   box-shadow: 0 4px 14px rgba(107, 54, 248, 0.4) !important;
   transform: translateY(-1px) !important;
+}
+
+/* ==========================================================================
+   DARK JET BLACK BACKGROUND ON EVERY PAGE (#000000)
+   ONLY HOME HERO SECTION KEEPS VIDEO
+   ========================================================================== */
+
+:root {
+  --bg: #000000 !important;
+}
+
+html,
+body,
+body[data-page],
+main,
+[data-page-panel],
+.offers-page,
+.reviews-page,
+.favorites-page,
+.compare-page,
+.payout-hub,
+.payout-detail-page,
+.partner-badges-page,
+.firm-profile-page,
+.market-empty-page,
+#offers,
+#bestSellersPage,
+#reviewsPage,
+#favoritesPage,
+#comparePage,
+#spreadsPage,
+#rulesPage,
+#payoutsPage,
+#firmProfilePage {
+  background-color: #000000 !important;
+  background-image: none !important;
+  background: #000000 !important;
+  color: #EDEFF7 !important;
+}
+
+/* Page heroes: transparent background so they sit on pure jet black */
+.page-hero,
+.hero-offers,
+.hero-best-sellers,
+.hero-reviews,
+.hero-favorites,
+.hero-payouts,
+.hero-compare,
+.hero-rules,
+.hero-spreads,
+.hero-tutorials,
+.hero-widgets,
+.reviews-hero-3d {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.hero:before {
+  display: none !important;
+}
+
+/* Hide video wrap on all pages that are NOT home */
+body:not([data-page="home"]) .hero-video-bg-wrap,
+body[data-page="offers"] .hero-video-bg-wrap,
+body[data-page="best-sellers"] .hero-video-bg-wrap,
+body[data-page="reviews"] .hero-video-bg-wrap,
+body[data-page="favorites"] .hero-video-bg-wrap,
+body[data-page="payouts"] .hero-video-bg-wrap,
+body[data-page="compare"] .hero-video-bg-wrap,
+body[data-page="firm-profile"] .hero-video-bg-wrap,
+body[data-page="spreads"] .hero-video-bg-wrap,
+body[data-page="rules"] .hero-video-bg-wrap,
+body[data-page="tutorials"] .hero-video-bg-wrap,
+body[data-page="partner-badges"] .hero-video-bg-wrap,
+body[data-page="widgets"] .hero-video-bg-wrap,
+body[data-page="disclaimer"] .hero-video-bg-wrap {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* On Home Page, strictly scope video to the hero section */
+body[data-page="home"] .hero-video-bg-wrap,
+body:not([data-page]) .hero-video-bg-wrap {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 560px !important;
+  max-height: 580px !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+  body[data-page="home"] .hero-video-bg-wrap,
+  body:not([data-page]) .hero-video-bg-wrap {
+    height: 620px !important;
+    max-height: 640px !important;
+  }
+}
+
+/* Home hero video overlay fades into pure jet black #000000 */
+.hero-video-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(180deg, 
+    rgba(0, 0, 0, 0.40) 0%, 
+    rgba(0, 0, 0, 0.08) 25%, 
+    rgba(0, 0, 0, 0.20) 55%, 
+    rgba(0, 0, 0, 0.70) 80%, 
+    #000000 100%) !important;
+  pointer-events: none !important;
+}
+
+/* Content below home hero: strictly jet black */
+#rankings,
+#videos,
+#resources,
+#faq,
+.newsletter {
+  background-color: #000000 !important;
+}
+
+/* Sticky Header: Dark Glass on jet black */
+.site-head {
+  background: rgba(0, 0, 0, 0.90) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
 }

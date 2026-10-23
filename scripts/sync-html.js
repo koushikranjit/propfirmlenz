@@ -25,7 +25,7 @@ const htmlContent = `<!doctype html>
 ${css}
 </style>
 </head>
-<body data-market-theme="forex">
+<body data-market-theme="forex" data-page="home">
 ${body}
 <script>
 ${js}
