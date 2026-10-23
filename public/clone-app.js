@@ -51799,13 +51799,16 @@ function renderReviewsFeed() {
 
   feedEl.innerHTML = reviews.map(r => {
     const initials = (r.author || 'VT').split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+    const pic = r.picture || (r.avatar && r.avatar.startsWith('http') ? r.avatar : '');
+    const avatarContent = pic ? '<img src="' + safe(pic) + '" alt="' + safe(r.author || 'Trader') + '" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" referrerpolicy="no-referrer">' : initials;
+    const verifiedBadge = r.googleVerified ? '<span>✓ Verified Google Trader</span>' : '<span>✓ Verified Funded Trader</span>';
     return '<article class="feed-card-3d" data-review-id="' + safe(r.id) + '">' +
       '<div class="feed-card-header">' +
         '<div class="feed-author-wrap">' +
-          '<div class="feed-avatar">' + initials + '</div>' +
+          '<div class="feed-avatar" style="overflow:hidden;display:grid;place-items:center;">' + avatarContent + '</div>' +
           '<div class="feed-author-info">' +
             '<strong>' + safe(r.author || 'Verified Trader') + '</strong>' +
-            '<span>✓ Verified Funded Trader</span>' +
+            verifiedBadge +
           '</div>' +
         '</div>' +
         '<span class="feed-firm-pill">' + safe(r.firm) + '</span>' +
@@ -51843,6 +51846,8 @@ function renderReviews() {
   renderReviewsLeaderboard();
 }
 
+const GOOGLE_CLIENT_ID = '515121716820-7glsna5fucq01ttfuo1p60hq4h9m6qjs.apps.googleusercontent.com';
+
 function getPflGoogleUser() {
   try {
     const raw = localStorage.getItem('pfl_google_user');
@@ -51852,6 +51857,127 @@ function getPflGoogleUser() {
   }
 }
 
+function parseJwt(token) {
+  try {
+    const base64Url = token.split('.')[1];
+    if (!base64Url) return null;
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(
+      atob(base64)
+        .split('')
+        .map(function(c) {
+          return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        })
+        .join('')
+    );
+    return JSON.parse(jsonPayload);
+  } catch (err) {
+    console.error('Failed to parse Google JWT credential:', err);
+    return null;
+  }
+}
+
+function handleGoogleCredentialResponse(response) {
+  if (!response || !response.credential) {
+    showToast('Google Sign-In was not completed. Please try again.');
+    return;
+  }
+
+  const payload = parseJwt(response.credential);
+  if (!payload || !payload.email) {
+    showToast('Could not verify Google account details.');
+    return;
+  }
+
+  const user = {
+    name: payload.name || payload.given_name || payload.email.split('@')[0],
+    email: payload.email.toLowerCase(),
+    picture: payload.picture || '',
+    avatar: payload.picture || '',
+    googleId: payload.sub || ('g_' + Date.now()),
+    email_verified: Boolean(payload.email_verified)
+  };
+
+  try {
+    localStorage.setItem('pfl_google_user', JSON.stringify(user));
+  } catch (_) {}
+
+  initGoogleAuthForReviews();
+  checkReviewDuplicateForCurrentFirm();
+  showToast('✓ Signed in as ' + user.name + ' (' + user.email + ')');
+}
+
+function setupGoogleIdentityServices() {
+  if (typeof window === 'undefined') return false;
+  if (typeof google === 'undefined' || !google.accounts || !google.accounts.id) {
+    return false;
+  }
+
+  try {
+    google.accounts.id.initialize({
+      client_id: GOOGLE_CLIENT_ID,
+      callback: handleGoogleCredentialResponse,
+      auto_select: false,
+      cancel_on_tap_outside: true,
+      itp_support: true
+    });
+
+    renderGoogleSignInButton();
+    return true;
+  } catch (err) {
+    console.warn('Google Identity Services initialization warning:', err);
+    return false;
+  }
+}
+
+function renderGoogleSignInButton() {
+  const container = document.getElementById('googleSignInBtnContainer');
+  const fallbackBtn = document.getElementById('reviewGoogleAuthBtn');
+  if (!container) return;
+
+  if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+    try {
+      container.innerHTML = '';
+      google.accounts.id.renderButton(container, {
+        type: 'standard',
+        theme: 'filled_black',
+        size: 'large',
+        text: 'signin_with',
+        shape: 'pill',
+        logo_alignment: 'left',
+        width: 220
+      });
+      if (fallbackBtn) {
+        fallbackBtn.style.setProperty('display', 'none', 'important');
+        fallbackBtn.classList.add('is-hidden');
+      }
+      return;
+    } catch (err) {
+      console.warn('Google renderButton error:', err);
+    }
+  }
+
+  if (fallbackBtn) {
+    fallbackBtn.style.setProperty('display', 'inline-flex', 'important');
+    fallbackBtn.classList.remove('is-hidden');
+  }
+}
+
+// Auto-check GIS readiness
+(function initGISWatcher() {
+  if (typeof window === 'undefined') return;
+  let attempts = 0;
+  const poll = setInterval(function() {
+    attempts++;
+    if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+      clearInterval(poll);
+      setupGoogleIdentityServices();
+    } else if (attempts > 30) {
+      clearInterval(poll);
+    }
+  }, 250);
+})();
+
 function initGoogleAuthForReviews() {
   const user = getPflGoogleUser();
   const loggedOutEl = document.querySelector('#reviewAuthLoggedOut');
@@ -51859,16 +51985,106 @@ function initGoogleAuthForReviews() {
   const avatarEl = document.querySelector('#reviewAuthAvatar');
   const nameEl = document.querySelector('#reviewAuthName');
   const emailEl = document.querySelector('#reviewAuthEmail');
+  const authCard = document.querySelector('#reviewAuthCard');
+  const lockedNotice = document.querySelector('#reviewLockedNotice');
+
+  const titleInput = document.querySelector('#newReviewTitle');
+  const bodyInput = document.querySelector('#newReviewBody');
+  const payoutCheck = document.querySelector('#reviewPayoutReceived');
+  const starPicker = document.querySelector('#starRatingSelector');
+  const submitBtn = document.querySelector('#submitReviewBtn');
 
   if (user && user.email) {
-    if (loggedOutEl) loggedOutEl.style.display = 'none';
-    if (loggedInEl) loggedInEl.style.display = 'flex';
-    if (avatarEl) avatarEl.textContent = (user.name || user.email).charAt(0).toUpperCase();
+    // Authenticated state
+    if (loggedOutEl) {
+      loggedOutEl.style.setProperty('display', 'none', 'important');
+      loggedOutEl.classList.add('is-hidden');
+    }
+    if (loggedInEl) {
+      loggedInEl.style.setProperty('display', 'flex', 'important');
+      loggedInEl.classList.remove('is-hidden');
+    }
+    if (authCard) authCard.classList.remove('auth-prompt-highlight');
+    if (lockedNotice) {
+      lockedNotice.style.setProperty('display', 'none', 'important');
+      lockedNotice.classList.add('is-hidden');
+    }
+
+    if (avatarEl) {
+      const picUrl = user.picture || (user.avatar && user.avatar.startsWith('http') ? user.avatar : '');
+      if (picUrl) {
+        avatarEl.innerHTML = '<img src="' + safe(picUrl) + '" alt="' + safe(user.name) + '" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" referrerpolicy="no-referrer">';
+      } else {
+        avatarEl.textContent = (user.name || user.email).charAt(0).toUpperCase();
+      }
+    }
     if (nameEl) nameEl.textContent = user.name || 'Verified Google Trader';
     if (emailEl) emailEl.textContent = user.email;
+
+    // UNLOCK FORM INPUTS
+    if (titleInput) {
+      titleInput.disabled = false;
+      titleInput.classList.remove('input-locked');
+      titleInput.placeholder = 'e.g. Fast 2-hour payout & tight spreads on EURUSD';
+    }
+    if (bodyInput) {
+      bodyInput.disabled = false;
+      bodyInput.classList.remove('input-locked');
+      bodyInput.placeholder = 'Describe your experience with rules, execution, customer support, and payout withdrawal...';
+    }
+    if (payoutCheck) {
+      payoutCheck.disabled = false;
+    }
+    if (starPicker) {
+      starPicker.style.pointerEvents = 'auto';
+      starPicker.style.opacity = '1';
+    }
+    if (submitBtn) {
+      submitBtn.classList.remove('btn-submit-locked');
+      submitBtn.innerHTML = '🚀 Submit Verified Review';
+      submitBtn.disabled = false;
+    }
   } else {
-    if (loggedOutEl) loggedOutEl.style.display = 'flex';
-    if (loggedInEl) loggedInEl.style.display = 'none';
+    // Unauthenticated state: STRICT LOCK
+    if (loggedOutEl) {
+      loggedOutEl.style.setProperty('display', 'flex', 'important');
+      loggedOutEl.classList.remove('is-hidden');
+    }
+    if (loggedInEl) {
+      loggedInEl.style.setProperty('display', 'none', 'important');
+      loggedInEl.classList.add('is-hidden');
+    }
+    if (authCard) authCard.classList.add('auth-prompt-highlight');
+    if (lockedNotice) {
+      lockedNotice.style.setProperty('display', 'flex', 'important');
+      lockedNotice.classList.remove('is-hidden');
+    }
+
+    // LOCK FORM INPUTS
+    if (titleInput) {
+      titleInput.disabled = true;
+      titleInput.classList.add('input-locked');
+      titleInput.placeholder = '🔒 Sign in with Google above to enter subject...';
+    }
+    if (bodyInput) {
+      bodyInput.disabled = true;
+      bodyInput.classList.add('input-locked');
+      bodyInput.placeholder = '🔒 Sign in with Google above to write your review...';
+    }
+    if (payoutCheck) {
+      payoutCheck.disabled = true;
+    }
+    if (starPicker) {
+      starPicker.style.pointerEvents = 'none';
+      starPicker.style.opacity = '0.6';
+    }
+    if (submitBtn) {
+      submitBtn.classList.add('btn-submit-locked');
+      submitBtn.innerHTML = '🔒 Sign in with Google to Submit Review';
+      submitBtn.disabled = true;
+    }
+
+    renderGoogleSignInButton();
   }
 }
 
@@ -51879,50 +52095,81 @@ function checkReviewDuplicateForCurrentFirm() {
   const submitBtn = document.querySelector('#submitReviewBtn');
   const user = getPflGoogleUser();
 
+  if (!user || !user.email) {
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.classList.add('btn-submit-locked');
+      submitBtn.innerHTML = '🔒 Sign in with Google to Submit Review';
+    }
+    return false;
+  }
+
   if (user && user.email && firm && hasUserReviewedFirm(user.email, firm)) {
     if (errBox) {
       errBox.textContent = '⚠️ You have already submitted a review for ' + firm + ' with this Google account (' + user.email + '). To ensure fair and authentic community ratings, each trader can submit only one review per firm.';
       errBox.style.display = 'block';
     }
-    if (submitBtn) submitBtn.disabled = true;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.classList.add('btn-submit-locked');
+      submitBtn.innerHTML = '⚠️ Review Already Submitted For This Firm';
+    }
     return true;
   } else {
     if (errBox && errBox.textContent.includes('already submitted a review')) {
       errBox.style.display = 'none';
     }
-    if (submitBtn) submitBtn.disabled = false;
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('btn-submit-locked');
+      submitBtn.innerHTML = '🚀 Submit Verified Review';
+    }
     return false;
   }
 }
 
 function handleGoogleSignIn() {
-  const current = getPflGoogleUser();
-  const defaultEmail = current?.email || 'alex.trader@gmail.com';
-  const inputEmail = window.prompt('Sign in with Google Account to leave a verified review:\nEnter your Google Email address:', defaultEmail);
-  if (inputEmail === null) return;
-  const cleanEmail = inputEmail.trim().toLowerCase();
-  if (!cleanEmail || !cleanEmail.includes('@')) {
-    showToast('Please enter a valid Google email address');
-    return;
+  if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+    google.accounts.id.prompt(function(notification) {
+      if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
+        console.log('Google One Tap notice:', notification.getNotDisplayedReason?.());
+      }
+    });
+  } else {
+    // Fallback prompt if Google GIS script failed to load
+    const current = getPflGoogleUser();
+    const defaultEmail = current?.email || '';
+    const inputEmail = window.prompt('Sign in with Google Account to leave a verified review:\nEnter your Google Email address:', defaultEmail);
+    if (inputEmail === null) return;
+    const cleanEmail = inputEmail.trim().toLowerCase();
+    if (!cleanEmail || !cleanEmail.includes('@')) {
+      showToast('Please enter a valid Google email address');
+      return;
+    }
+    const cleanName = cleanEmail.split('@')[0].replace(/[._-]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const user = {
+      name: cleanName,
+      email: cleanEmail,
+      avatar: cleanName.charAt(0).toUpperCase(),
+      picture: '',
+      googleId: 'g_' + Math.random().toString(36).substring(2, 10),
+      email_verified: true
+    };
+    try {
+      localStorage.setItem('pfl_google_user', JSON.stringify(user));
+    } catch (_) {}
+    initGoogleAuthForReviews();
+    checkReviewDuplicateForCurrentFirm();
+    showToast('Signed in as ' + user.name + ' (' + user.email + ')');
   }
-  const cleanName = cleanEmail.split('@')[0].replace(/[._-]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-  const user = {
-    name: cleanName,
-    email: cleanEmail,
-    avatar: cleanName.charAt(0).toUpperCase(),
-    googleId: 'g_' + Math.random().toString(36).substring(2, 10)
-  };
-  try {
-    localStorage.setItem('pfl_google_user', JSON.stringify(user));
-  } catch (_) {}
-  initGoogleAuthForReviews();
-  checkReviewDuplicateForCurrentFirm();
-  showToast('Signed in as ' + user.name + ' (' + user.email + ')');
 }
 
 function handleGoogleSignOut() {
   try {
     localStorage.removeItem('pfl_google_user');
+    if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+      google.accounts.id.disableAutoSelect();
+    }
   } catch (_) {}
   initGoogleAuthForReviews();
   checkReviewDuplicateForCurrentFirm();
@@ -51957,6 +52204,7 @@ function openWriteReviewModal(firmName = '') {
   if (err) err.style.display = 'none';
   if (succ) succ.style.display = 'none';
 
+  setupGoogleIdentityServices();
   initGoogleAuthForReviews();
   checkReviewDuplicateForCurrentFirm();
 
@@ -53306,6 +53554,19 @@ document.addEventListener('click',e=>{  const nav=document.querySelector('#heade
     return;
   }
 
+  // Click on locked submit button or locked notice
+  if (e.target.closest('#submitReviewBtn.btn-submit-locked, #reviewLockedNotice')) {
+    e.preventDefault();
+    const authCard = document.querySelector('#reviewAuthCard');
+    if (authCard) {
+      authCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      authCard.classList.add('auth-prompt-highlight');
+    }
+    showToast('🔒 Please sign in with Google above to unlock review submission');
+    handleGoogleSignIn();
+    return;
+  }
+
   // Reviews Navigation Tabs
   const revTabBtn = e.target.closest('[data-review-tab]');
   if (revTabBtn) {
@@ -53516,8 +53777,13 @@ document.addEventListener('submit', function(e) {
 
     if (!user || !user.email) {
       if (errBox) {
-        errBox.textContent = 'Please sign in with your Google account above to post your verified review.';
+        errBox.textContent = '🔒 Google Sign-In is required to submit a review. Please authenticate with your Google account above.';
         errBox.style.display = 'block';
+      }
+      const authCard = document.querySelector('#reviewAuthCard');
+      if (authCard) {
+        authCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        authCard.classList.add('auth-prompt-highlight');
       }
       handleGoogleSignIn();
       return;
@@ -53556,6 +53822,8 @@ document.addEventListener('submit', function(e) {
       firm,
       author: user.name || 'Verified Trader',
       email: user.email.toLowerCase(),
+      avatar: user.picture || user.avatar || '',
+      picture: user.picture || '',
       rating,
       title,
       body,

@@ -7643,9 +7643,15 @@ footer#footer .bottom-copy {
 }
 
 .review-auth-status {
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-auth-status.is-hidden,
+.review-auth-status[style*="display: none"],
+.review-auth-status[style*="display:none"] {
+  display: none !important;
 }
 
 .review-auth-avatar {
@@ -7675,26 +7681,32 @@ footer#footer .bottom-copy {
 }
 
 .btn-google-sign-in {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  padding: 10px 18px !important;
-  border-radius: 10px !important;
-  background: #FFFFFF !important;
-  color: #1F2937 !important;
-  font-family: system-ui, -apple-system, sans-serif !important;
-  font-size: 13.5px !important;
-  font-weight: 700 !important;
-  border: 0 !important;
-  cursor: pointer !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
-  transition: all 0.2s ease !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  color: #1F2937;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-google-sign-in.is-hidden,
+.btn-google-sign-in[style*="display: none"],
+.btn-google-sign-in[style*="display:none"] {
+  display: none !important;
 }
 
 .btn-google-sign-in:hover {
-  background: #F3F4F6 !important;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45) !important;
-  transform: translateY(-1px) !important;
+  background: #F3F4F6;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  transform: translateY(-1px);
 }
 
 .btn-auth-switch {
@@ -7711,6 +7723,93 @@ footer#footer .bottom-copy {
 .btn-auth-switch:hover {
   background: rgba(255, 255, 255, 0.1) !important;
   color: #FFFFFF !important;
+}
+
+/* Google GIS Button Container & Verified Badge */
+.google-signin-btn-wrap {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 40px !important;
+}
+
+#googleSignInBtnContainer {
+  min-height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.auth-verified-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 2px 8px !important;
+  background: rgba(16, 185, 129, 0.15) !important;
+  border: 1px solid #10B981 !important;
+  border-radius: 999px !important;
+  font-size: 11px !important;
+  color: #10B981 !important;
+  font-weight: 700 !important;
+}
+
+.review-auth-card.auth-prompt-highlight {
+  border-color: rgba(66, 133, 244, 0.5) !important;
+  box-shadow: 0 0 20px rgba(66, 133, 244, 0.25) !important;
+  animation: authCardPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes authCardPulse {
+  0%, 100% { border-color: rgba(66, 133, 244, 0.4); box-shadow: 0 0 14px rgba(66, 133, 244, 0.15); }
+  50% { border-color: rgba(0, 240, 255, 0.7); box-shadow: 0 0 22px rgba(0, 240, 255, 0.3); }
+}
+
+.review-locked-notice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: rgba(234, 67, 53, 0.08);
+  border: 1px solid rgba(234, 67, 53, 0.3);
+  border-radius: 10px;
+  margin-bottom: 14px;
+  font-size: 12.5px;
+  color: #FCA5A5;
+  line-height: 1.4;
+}
+
+.review-locked-notice.is-hidden,
+.review-locked-notice[style*="display: none"],
+.review-locked-notice[style*="display:none"] {
+  display: none !important;
+}
+
+/* Review Form Locked Inputs & Locked Submit Button */
+.form-input-3d.input-locked,
+.form-textarea-3d.input-locked {
+  background: rgba(15, 23, 42, 0.45) !important;
+  border-color: rgba(148, 163, 184, 0.2) !important;
+  color: #64748B !important;
+  cursor: not-allowed !important;
+  opacity: 0.75 !important;
+}
+
+.form-input-3d.input-locked::placeholder,
+.form-textarea-3d.input-locked::placeholder {
+  color: #64748B !important;
+}
+
+.btn-publish-review-3d.btn-submit-locked {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.5), rgba(51, 65, 85, 0.5)) !important;
+  color: #94A3B8 !important;
+  border: 1px solid rgba(148, 163, 184, 0.25) !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+  opacity: 0.75 !important;
+  transform: none !important;
+}
+
+.btn-publish-review-3d.btn-submit-locked:hover {
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .star-rating-selector {

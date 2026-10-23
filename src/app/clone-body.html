@@ -1737,26 +1737,32 @@
     <div class="review-auth-card" id="reviewAuthCard">
       <div class="review-auth-status" id="reviewAuthLoggedOut" style="display:flex;align-items:center;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px;">
         <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:grid;place-items:center;">
+          <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:grid;place-items:center;flex-shrink:0;">
             <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2c0 2.8.7 5.5 1.9 7.8l3.7-2.9z"/><path fill="#34A853" d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 16.5C3.7 20.3 7.5 23.5 12 23.5z"/></svg>
           </div>
           <div>
             <strong style="color:#fff;font-size:13.5px;display:block;">Google Sign-In Required</strong>
-            <span style="color:#94a3b8;font-size:12px;display:block;">Sign in to verify your trader identity &amp; prevent spam</span>
+            <span style="color:#94a3b8;font-size:12px;display:block;">Sign in to verify your trader identity &amp; unlock review submission</span>
           </div>
         </div>
-        <button type="button" class="btn-google-sign-in" id="reviewGoogleAuthBtn">
-          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2c0 2.8.7 5.5 1.9 7.8l3.7-2.9z"/><path fill="#34A853" d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 16.5C3.7 20.3 7.5 23.5 12 23.5z"/></svg>
-          <span>Sign in with Google</span>
-        </button>
+        <div class="google-signin-btn-wrap" style="display:flex;align-items:center;min-height:40px;">
+          <div id="googleSignInBtnContainer"></div>
+          <button type="button" class="btn-google-sign-in" id="reviewGoogleAuthBtn" style="display:none;">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2c0 2.8.7 5.5 1.9 7.8l3.7-2.9z"/><path fill="#34A853" d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 16.5C3.7 20.3 7.5 23.5 12 23.5z"/></svg>
+            <span>Sign in with Google</span>
+          </button>
+        </div>
       </div>
 
       <div class="review-auth-status" id="reviewAuthLoggedIn" style="display:none;align-items:center;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px;">
         <div style="display:flex;align-items:center;gap:12px;">
-          <div class="review-auth-avatar" id="reviewAuthAvatar">G</div>
+          <div class="review-auth-avatar" id="reviewAuthAvatar" style="overflow:hidden;display:grid;place-items:center;">G</div>
           <div class="review-auth-meta">
-            <strong id="reviewAuthName">Alex Trader</strong>
-            <span id="reviewAuthEmail">alex.trader@gmail.com</span>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <strong id="reviewAuthName" style="color:#fff;font-size:14px;font-weight:700;">Verified Trader</strong>
+              <span class="auth-verified-pill" style="display:inline-flex;align-items:center;gap:3px;padding:2px 8px;background:rgba(16,185,129,0.15);border:1px solid #10b981;border-radius:999px;font-size:11px;color:#10b981;font-weight:700;">✓ Verified Google Trader</span>
+            </div>
+            <span id="reviewAuthEmail" style="color:#94a3b8;font-size:12px;">trader@gmail.com</span>
           </div>
         </div>
         <button type="button" class="btn-auth-switch" id="reviewAuthSwitchBtn">Sign Out</button>
@@ -1764,6 +1770,10 @@
     </div>
 
     <form id="newReviewForm" class="new-review-form-3d">
+      <div id="reviewLockedNotice" class="review-locked-notice" style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(234,67,53,0.08);border:1px solid rgba(234,67,53,0.3);border-radius:10px;margin-bottom:14px;font-size:12.5px;color:#fca5a5;">
+        <span style="font-size:16px;">🔒</span>
+        <span>Google Sign-In is required to submit a review. Please authenticate with your Google account above to unlock the form.</span>
+      </div>
       <div id="reviewFormError" class="review-form-alert error" style="display:none;"></div>
       <div id="reviewFormSuccess" class="review-form-alert success" style="display:none;"></div>
 
@@ -1792,25 +1802,25 @@
       <!-- 3. Subject -->
       <div class="form-field">
         <label for="newReviewTitle">Subject <span class="req">*</span></label>
-        <input type="text" id="newReviewTitle" placeholder="e.g. Fast 2-hour payout & tight spreads on EURUSD" required class="form-input-3d">
+        <input type="text" id="newReviewTitle" placeholder="🔒 Sign in with Google above to enter subject..." disabled required class="form-input-3d input-locked">
       </div>
 
       <!-- 4. Review Body -->
       <div class="form-field">
         <label for="newReviewBody">Review <span class="req">*</span></label>
-        <textarea id="newReviewBody" rows="4" placeholder="Describe your experience with rules, execution, customer support, and payout withdrawal..." required class="form-input-3d form-textarea-3d"></textarea>
+        <textarea id="newReviewBody" rows="4" placeholder="🔒 Sign in with Google above to write your review..." disabled required class="form-input-3d form-textarea-3d input-locked"></textarea>
       </div>
 
       <div class="form-checkbox-field">
         <label class="custom-checkbox-label">
-          <input type="checkbox" id="reviewPayoutReceived" checked>
+          <input type="checkbox" id="reviewPayoutReceived" checked disabled>
           <span>I have traded with or received a withdrawal from this firm</span>
         </label>
       </div>
 
       <div class="modal-form-actions">
-        <button type="submit" id="submitReviewBtn" class="btn-publish-review-3d">
-          🚀 Submit Verified Review
+        <button type="submit" id="submitReviewBtn" class="btn-publish-review-3d btn-submit-locked" disabled>
+          🔒 Sign in with Google to Submit Review
         </button>
       </div>
     </form>

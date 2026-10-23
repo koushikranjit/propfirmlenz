@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 :root{color-scheme:dark;--bg:#000000;--surface:#12121F;--card:#12121F;--card2:#1A1927;--ink:#EDEFF7;--muted:#9AA6BD;--line:#26263A;--accent:#6366F1;--purple:#6366F1;--green:#22C55E;--orange:#F59E0B;--shadow:0 4px 20px rgba(0,0,0,.35);--grad:#6366F1;--theme:#6366F1;--theme-mid:#7C3AED;--theme-deep:#4F46E5;--theme-rgb:99 102 241;--theme-mid-rgb:124 58 237;--theme-deep-rgb:79 70 229}
@@ -7658,9 +7659,15 @@ footer#footer .bottom-copy {
 }
 
 .review-auth-status {
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-auth-status.is-hidden,
+.review-auth-status[style*="display: none"],
+.review-auth-status[style*="display:none"] {
+  display: none !important;
 }
 
 .review-auth-avatar {
@@ -7690,26 +7697,32 @@ footer#footer .bottom-copy {
 }
 
 .btn-google-sign-in {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  padding: 10px 18px !important;
-  border-radius: 10px !important;
-  background: #FFFFFF !important;
-  color: #1F2937 !important;
-  font-family: system-ui, -apple-system, sans-serif !important;
-  font-size: 13.5px !important;
-  font-weight: 700 !important;
-  border: 0 !important;
-  cursor: pointer !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
-  transition: all 0.2s ease !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  color: #1F2937;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-google-sign-in.is-hidden,
+.btn-google-sign-in[style*="display: none"],
+.btn-google-sign-in[style*="display:none"] {
+  display: none !important;
 }
 
 .btn-google-sign-in:hover {
-  background: #F3F4F6 !important;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45) !important;
-  transform: translateY(-1px) !important;
+  background: #F3F4F6;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  transform: translateY(-1px);
 }
 
 .btn-auth-switch {
@@ -7726,6 +7739,93 @@ footer#footer .bottom-copy {
 .btn-auth-switch:hover {
   background: rgba(255, 255, 255, 0.1) !important;
   color: #FFFFFF !important;
+}
+
+/* Google GIS Button Container & Verified Badge */
+.google-signin-btn-wrap {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 40px !important;
+}
+
+#googleSignInBtnContainer {
+  min-height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.auth-verified-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 2px 8px !important;
+  background: rgba(16, 185, 129, 0.15) !important;
+  border: 1px solid #10B981 !important;
+  border-radius: 999px !important;
+  font-size: 11px !important;
+  color: #10B981 !important;
+  font-weight: 700 !important;
+}
+
+.review-auth-card.auth-prompt-highlight {
+  border-color: rgba(66, 133, 244, 0.5) !important;
+  box-shadow: 0 0 20px rgba(66, 133, 244, 0.25) !important;
+  animation: authCardPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes authCardPulse {
+  0%, 100% { border-color: rgba(66, 133, 244, 0.4); box-shadow: 0 0 14px rgba(66, 133, 244, 0.15); }
+  50% { border-color: rgba(0, 240, 255, 0.7); box-shadow: 0 0 22px rgba(0, 240, 255, 0.3); }
+}
+
+.review-locked-notice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: rgba(234, 67, 53, 0.08);
+  border: 1px solid rgba(234, 67, 53, 0.3);
+  border-radius: 10px;
+  margin-bottom: 14px;
+  font-size: 12.5px;
+  color: #FCA5A5;
+  line-height: 1.4;
+}
+
+.review-locked-notice.is-hidden,
+.review-locked-notice[style*="display: none"],
+.review-locked-notice[style*="display:none"] {
+  display: none !important;
+}
+
+/* Review Form Locked Inputs & Locked Submit Button */
+.form-input-3d.input-locked,
+.form-textarea-3d.input-locked {
+  background: rgba(15, 23, 42, 0.45) !important;
+  border-color: rgba(148, 163, 184, 0.2) !important;
+  color: #64748B !important;
+  cursor: not-allowed !important;
+  opacity: 0.75 !important;
+}
+
+.form-input-3d.input-locked::placeholder,
+.form-textarea-3d.input-locked::placeholder {
+  color: #64748B !important;
+}
+
+.btn-publish-review-3d.btn-submit-locked {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.5), rgba(51, 65, 85, 0.5)) !important;
+  color: #94A3B8 !important;
+  border: 1px solid rgba(148, 163, 184, 0.25) !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+  opacity: 0.75 !important;
+  transform: none !important;
+}
+
+.btn-publish-review-3d.btn-submit-locked:hover {
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .star-rating-selector {
@@ -14395,26 +14495,32 @@ body[data-market-theme="crypto"] .alloc-cell .bar i {
     <div class="review-auth-card" id="reviewAuthCard">
       <div class="review-auth-status" id="reviewAuthLoggedOut" style="display:flex;align-items:center;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px;">
         <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:grid;place-items:center;">
+          <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);display:grid;place-items:center;flex-shrink:0;">
             <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2c0 2.8.7 5.5 1.9 7.8l3.7-2.9z"/><path fill="#34A853" d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 16.5C3.7 20.3 7.5 23.5 12 23.5z"/></svg>
           </div>
           <div>
             <strong style="color:#fff;font-size:13.5px;display:block;">Google Sign-In Required</strong>
-            <span style="color:#94a3b8;font-size:12px;display:block;">Sign in to verify your trader identity &amp; prevent spam</span>
+            <span style="color:#94a3b8;font-size:12px;display:block;">Sign in to verify your trader identity &amp; unlock review submission</span>
           </div>
         </div>
-        <button type="button" class="btn-google-sign-in" id="reviewGoogleAuthBtn">
-          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2c0 2.8.7 5.5 1.9 7.8l3.7-2.9z"/><path fill="#34A853" d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 16.5C3.7 20.3 7.5 23.5 12 23.5z"/></svg>
-          <span>Sign in with Google</span>
-        </button>
+        <div class="google-signin-btn-wrap" style="display:flex;align-items:center;min-height:40px;">
+          <div id="googleSignInBtnContainer"></div>
+          <button type="button" class="btn-google-sign-in" id="reviewGoogleAuthBtn" style="display:none;">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2c0 2.8.7 5.5 1.9 7.8l3.7-2.9z"/><path fill="#34A853" d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 16.5C3.7 20.3 7.5 23.5 12 23.5z"/></svg>
+            <span>Sign in with Google</span>
+          </button>
+        </div>
       </div>
 
       <div class="review-auth-status" id="reviewAuthLoggedIn" style="display:none;align-items:center;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px;">
         <div style="display:flex;align-items:center;gap:12px;">
-          <div class="review-auth-avatar" id="reviewAuthAvatar">G</div>
+          <div class="review-auth-avatar" id="reviewAuthAvatar" style="overflow:hidden;display:grid;place-items:center;">G</div>
           <div class="review-auth-meta">
-            <strong id="reviewAuthName">Alex Trader</strong>
-            <span id="reviewAuthEmail">alex.trader@gmail.com</span>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <strong id="reviewAuthName" style="color:#fff;font-size:14px;font-weight:700;">Verified Trader</strong>
+              <span class="auth-verified-pill" style="display:inline-flex;align-items:center;gap:3px;padding:2px 8px;background:rgba(16,185,129,0.15);border:1px solid #10b981;border-radius:999px;font-size:11px;color:#10b981;font-weight:700;">✓ Verified Google Trader</span>
+            </div>
+            <span id="reviewAuthEmail" style="color:#94a3b8;font-size:12px;">trader@gmail.com</span>
           </div>
         </div>
         <button type="button" class="btn-auth-switch" id="reviewAuthSwitchBtn">Sign Out</button>
@@ -14422,6 +14528,10 @@ body[data-market-theme="crypto"] .alloc-cell .bar i {
     </div>
 
     <form id="newReviewForm" class="new-review-form-3d">
+      <div id="reviewLockedNotice" class="review-locked-notice" style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(234,67,53,0.08);border:1px solid rgba(234,67,53,0.3);border-radius:10px;margin-bottom:14px;font-size:12.5px;color:#fca5a5;">
+        <span style="font-size:16px;">🔒</span>
+        <span>Google Sign-In is required to submit a review. Please authenticate with your Google account above to unlock the form.</span>
+      </div>
       <div id="reviewFormError" class="review-form-alert error" style="display:none;"></div>
       <div id="reviewFormSuccess" class="review-form-alert success" style="display:none;"></div>
 
@@ -14450,25 +14560,25 @@ body[data-market-theme="crypto"] .alloc-cell .bar i {
       <!-- 3. Subject -->
       <div class="form-field">
         <label for="newReviewTitle">Subject <span class="req">*</span></label>
-        <input type="text" id="newReviewTitle" placeholder="e.g. Fast 2-hour payout & tight spreads on EURUSD" required class="form-input-3d">
+        <input type="text" id="newReviewTitle" placeholder="🔒 Sign in with Google above to enter subject..." disabled required class="form-input-3d input-locked">
       </div>
 
       <!-- 4. Review Body -->
       <div class="form-field">
         <label for="newReviewBody">Review <span class="req">*</span></label>
-        <textarea id="newReviewBody" rows="4" placeholder="Describe your experience with rules, execution, customer support, and payout withdrawal..." required class="form-input-3d form-textarea-3d"></textarea>
+        <textarea id="newReviewBody" rows="4" placeholder="🔒 Sign in with Google above to write your review..." disabled required class="form-input-3d form-textarea-3d input-locked"></textarea>
       </div>
 
       <div class="form-checkbox-field">
         <label class="custom-checkbox-label">
-          <input type="checkbox" id="reviewPayoutReceived" checked>
+          <input type="checkbox" id="reviewPayoutReceived" checked disabled>
           <span>I have traded with or received a withdrawal from this firm</span>
         </label>
       </div>
 
       <div class="modal-form-actions">
-        <button type="submit" id="submitReviewBtn" class="btn-publish-review-3d">
-          🚀 Submit Verified Review
+        <button type="submit" id="submitReviewBtn" class="btn-publish-review-3d btn-submit-locked" disabled>
+          🔒 Sign in with Google to Submit Review
         </button>
       </div>
     </form>
@@ -66282,13 +66392,16 @@ function renderReviewsFeed() {
 
   feedEl.innerHTML = reviews.map(r => {
     const initials = (r.author || 'VT').split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+    const pic = r.picture || (r.avatar && r.avatar.startsWith('http') ? r.avatar : '');
+    const avatarContent = pic ? '<img src="' + safe(pic) + '" alt="' + safe(r.author || 'Trader') + '" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" referrerpolicy="no-referrer">' : initials;
+    const verifiedBadge = r.googleVerified ? '<span>✓ Verified Google Trader</span>' : '<span>✓ Verified Funded Trader</span>';
     return '<article class="feed-card-3d" data-review-id="' + safe(r.id) + '">' +
       '<div class="feed-card-header">' +
         '<div class="feed-author-wrap">' +
-          '<div class="feed-avatar">' + initials + '</div>' +
+          '<div class="feed-avatar" style="overflow:hidden;display:grid;place-items:center;">' + avatarContent + '</div>' +
           '<div class="feed-author-info">' +
             '<strong>' + safe(r.author || 'Verified Trader') + '</strong>' +
-            '<span>✓ Verified Funded Trader</span>' +
+            verifiedBadge +
           '</div>' +
         '</div>' +
         '<span class="feed-firm-pill">' + safe(r.firm) + '</span>' +
@@ -66326,6 +66439,8 @@ function renderReviews() {
   renderReviewsLeaderboard();
 }
 
+const GOOGLE_CLIENT_ID = '515121716820-7glsna5fucq01ttfuo1p60hq4h9m6qjs.apps.googleusercontent.com';
+
 function getPflGoogleUser() {
   try {
     const raw = localStorage.getItem('pfl_google_user');
@@ -66335,6 +66450,127 @@ function getPflGoogleUser() {
   }
 }
 
+function parseJwt(token) {
+  try {
+    const base64Url = token.split('.')[1];
+    if (!base64Url) return null;
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(
+      atob(base64)
+        .split('')
+        .map(function(c) {
+          return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        })
+        .join('')
+    );
+    return JSON.parse(jsonPayload);
+  } catch (err) {
+    console.error('Failed to parse Google JWT credential:', err);
+    return null;
+  }
+}
+
+function handleGoogleCredentialResponse(response) {
+  if (!response || !response.credential) {
+    showToast('Google Sign-In was not completed. Please try again.');
+    return;
+  }
+
+  const payload = parseJwt(response.credential);
+  if (!payload || !payload.email) {
+    showToast('Could not verify Google account details.');
+    return;
+  }
+
+  const user = {
+    name: payload.name || payload.given_name || payload.email.split('@')[0],
+    email: payload.email.toLowerCase(),
+    picture: payload.picture || '',
+    avatar: payload.picture || '',
+    googleId: payload.sub || ('g_' + Date.now()),
+    email_verified: Boolean(payload.email_verified)
+  };
+
+  try {
+    localStorage.setItem('pfl_google_user', JSON.stringify(user));
+  } catch (_) {}
+
+  initGoogleAuthForReviews();
+  checkReviewDuplicateForCurrentFirm();
+  showToast('✓ Signed in as ' + user.name + ' (' + user.email + ')');
+}
+
+function setupGoogleIdentityServices() {
+  if (typeof window === 'undefined') return false;
+  if (typeof google === 'undefined' || !google.accounts || !google.accounts.id) {
+    return false;
+  }
+
+  try {
+    google.accounts.id.initialize({
+      client_id: GOOGLE_CLIENT_ID,
+      callback: handleGoogleCredentialResponse,
+      auto_select: false,
+      cancel_on_tap_outside: true,
+      itp_support: true
+    });
+
+    renderGoogleSignInButton();
+    return true;
+  } catch (err) {
+    console.warn('Google Identity Services initialization warning:', err);
+    return false;
+  }
+}
+
+function renderGoogleSignInButton() {
+  const container = document.getElementById('googleSignInBtnContainer');
+  const fallbackBtn = document.getElementById('reviewGoogleAuthBtn');
+  if (!container) return;
+
+  if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+    try {
+      container.innerHTML = '';
+      google.accounts.id.renderButton(container, {
+        type: 'standard',
+        theme: 'filled_black',
+        size: 'large',
+        text: 'signin_with',
+        shape: 'pill',
+        logo_alignment: 'left',
+        width: 220
+      });
+      if (fallbackBtn) {
+        fallbackBtn.style.setProperty('display', 'none', 'important');
+        fallbackBtn.classList.add('is-hidden');
+      }
+      return;
+    } catch (err) {
+      console.warn('Google renderButton error:', err);
+    }
+  }
+
+  if (fallbackBtn) {
+    fallbackBtn.style.setProperty('display', 'inline-flex', 'important');
+    fallbackBtn.classList.remove('is-hidden');
+  }
+}
+
+// Auto-check GIS readiness
+(function initGISWatcher() {
+  if (typeof window === 'undefined') return;
+  let attempts = 0;
+  const poll = setInterval(function() {
+    attempts++;
+    if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+      clearInterval(poll);
+      setupGoogleIdentityServices();
+    } else if (attempts > 30) {
+      clearInterval(poll);
+    }
+  }, 250);
+})();
+
 function initGoogleAuthForReviews() {
   const user = getPflGoogleUser();
   const loggedOutEl = document.querySelector('#reviewAuthLoggedOut');
@@ -66342,16 +66578,106 @@ function initGoogleAuthForReviews() {
   const avatarEl = document.querySelector('#reviewAuthAvatar');
   const nameEl = document.querySelector('#reviewAuthName');
   const emailEl = document.querySelector('#reviewAuthEmail');
+  const authCard = document.querySelector('#reviewAuthCard');
+  const lockedNotice = document.querySelector('#reviewLockedNotice');
+
+  const titleInput = document.querySelector('#newReviewTitle');
+  const bodyInput = document.querySelector('#newReviewBody');
+  const payoutCheck = document.querySelector('#reviewPayoutReceived');
+  const starPicker = document.querySelector('#starRatingSelector');
+  const submitBtn = document.querySelector('#submitReviewBtn');
 
   if (user && user.email) {
-    if (loggedOutEl) loggedOutEl.style.display = 'none';
-    if (loggedInEl) loggedInEl.style.display = 'flex';
-    if (avatarEl) avatarEl.textContent = (user.name || user.email).charAt(0).toUpperCase();
+    // Authenticated state
+    if (loggedOutEl) {
+      loggedOutEl.style.setProperty('display', 'none', 'important');
+      loggedOutEl.classList.add('is-hidden');
+    }
+    if (loggedInEl) {
+      loggedInEl.style.setProperty('display', 'flex', 'important');
+      loggedInEl.classList.remove('is-hidden');
+    }
+    if (authCard) authCard.classList.remove('auth-prompt-highlight');
+    if (lockedNotice) {
+      lockedNotice.style.setProperty('display', 'none', 'important');
+      lockedNotice.classList.add('is-hidden');
+    }
+
+    if (avatarEl) {
+      const picUrl = user.picture || (user.avatar && user.avatar.startsWith('http') ? user.avatar : '');
+      if (picUrl) {
+        avatarEl.innerHTML = '<img src="' + safe(picUrl) + '" alt="' + safe(user.name) + '" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" referrerpolicy="no-referrer">';
+      } else {
+        avatarEl.textContent = (user.name || user.email).charAt(0).toUpperCase();
+      }
+    }
     if (nameEl) nameEl.textContent = user.name || 'Verified Google Trader';
     if (emailEl) emailEl.textContent = user.email;
+
+    // UNLOCK FORM INPUTS
+    if (titleInput) {
+      titleInput.disabled = false;
+      titleInput.classList.remove('input-locked');
+      titleInput.placeholder = 'e.g. Fast 2-hour payout & tight spreads on EURUSD';
+    }
+    if (bodyInput) {
+      bodyInput.disabled = false;
+      bodyInput.classList.remove('input-locked');
+      bodyInput.placeholder = 'Describe your experience with rules, execution, customer support, and payout withdrawal...';
+    }
+    if (payoutCheck) {
+      payoutCheck.disabled = false;
+    }
+    if (starPicker) {
+      starPicker.style.pointerEvents = 'auto';
+      starPicker.style.opacity = '1';
+    }
+    if (submitBtn) {
+      submitBtn.classList.remove('btn-submit-locked');
+      submitBtn.innerHTML = '🚀 Submit Verified Review';
+      submitBtn.disabled = false;
+    }
   } else {
-    if (loggedOutEl) loggedOutEl.style.display = 'flex';
-    if (loggedInEl) loggedInEl.style.display = 'none';
+    // Unauthenticated state: STRICT LOCK
+    if (loggedOutEl) {
+      loggedOutEl.style.setProperty('display', 'flex', 'important');
+      loggedOutEl.classList.remove('is-hidden');
+    }
+    if (loggedInEl) {
+      loggedInEl.style.setProperty('display', 'none', 'important');
+      loggedInEl.classList.add('is-hidden');
+    }
+    if (authCard) authCard.classList.add('auth-prompt-highlight');
+    if (lockedNotice) {
+      lockedNotice.style.setProperty('display', 'flex', 'important');
+      lockedNotice.classList.remove('is-hidden');
+    }
+
+    // LOCK FORM INPUTS
+    if (titleInput) {
+      titleInput.disabled = true;
+      titleInput.classList.add('input-locked');
+      titleInput.placeholder = '🔒 Sign in with Google above to enter subject...';
+    }
+    if (bodyInput) {
+      bodyInput.disabled = true;
+      bodyInput.classList.add('input-locked');
+      bodyInput.placeholder = '🔒 Sign in with Google above to write your review...';
+    }
+    if (payoutCheck) {
+      payoutCheck.disabled = true;
+    }
+    if (starPicker) {
+      starPicker.style.pointerEvents = 'none';
+      starPicker.style.opacity = '0.6';
+    }
+    if (submitBtn) {
+      submitBtn.classList.add('btn-submit-locked');
+      submitBtn.innerHTML = '🔒 Sign in with Google to Submit Review';
+      submitBtn.disabled = true;
+    }
+
+    renderGoogleSignInButton();
   }
 }
 
@@ -66362,50 +66688,81 @@ function checkReviewDuplicateForCurrentFirm() {
   const submitBtn = document.querySelector('#submitReviewBtn');
   const user = getPflGoogleUser();
 
+  if (!user || !user.email) {
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.classList.add('btn-submit-locked');
+      submitBtn.innerHTML = '🔒 Sign in with Google to Submit Review';
+    }
+    return false;
+  }
+
   if (user && user.email && firm && hasUserReviewedFirm(user.email, firm)) {
     if (errBox) {
       errBox.textContent = '⚠️ You have already submitted a review for ' + firm + ' with this Google account (' + user.email + '). To ensure fair and authentic community ratings, each trader can submit only one review per firm.';
       errBox.style.display = 'block';
     }
-    if (submitBtn) submitBtn.disabled = true;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.classList.add('btn-submit-locked');
+      submitBtn.innerHTML = '⚠️ Review Already Submitted For This Firm';
+    }
     return true;
   } else {
     if (errBox && errBox.textContent.includes('already submitted a review')) {
       errBox.style.display = 'none';
     }
-    if (submitBtn) submitBtn.disabled = false;
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('btn-submit-locked');
+      submitBtn.innerHTML = '🚀 Submit Verified Review';
+    }
     return false;
   }
 }
 
 function handleGoogleSignIn() {
-  const current = getPflGoogleUser();
-  const defaultEmail = current?.email || 'alex.trader@gmail.com';
-  const inputEmail = window.prompt('Sign in with Google Account to leave a verified review:\nEnter your Google Email address:', defaultEmail);
-  if (inputEmail === null) return;
-  const cleanEmail = inputEmail.trim().toLowerCase();
-  if (!cleanEmail || !cleanEmail.includes('@')) {
-    showToast('Please enter a valid Google email address');
-    return;
+  if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+    google.accounts.id.prompt(function(notification) {
+      if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
+        console.log('Google One Tap notice:', notification.getNotDisplayedReason?.());
+      }
+    });
+  } else {
+    // Fallback prompt if Google GIS script failed to load
+    const current = getPflGoogleUser();
+    const defaultEmail = current?.email || '';
+    const inputEmail = window.prompt('Sign in with Google Account to leave a verified review:\nEnter your Google Email address:', defaultEmail);
+    if (inputEmail === null) return;
+    const cleanEmail = inputEmail.trim().toLowerCase();
+    if (!cleanEmail || !cleanEmail.includes('@')) {
+      showToast('Please enter a valid Google email address');
+      return;
+    }
+    const cleanName = cleanEmail.split('@')[0].replace(/[._-]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const user = {
+      name: cleanName,
+      email: cleanEmail,
+      avatar: cleanName.charAt(0).toUpperCase(),
+      picture: '',
+      googleId: 'g_' + Math.random().toString(36).substring(2, 10),
+      email_verified: true
+    };
+    try {
+      localStorage.setItem('pfl_google_user', JSON.stringify(user));
+    } catch (_) {}
+    initGoogleAuthForReviews();
+    checkReviewDuplicateForCurrentFirm();
+    showToast('Signed in as ' + user.name + ' (' + user.email + ')');
   }
-  const cleanName = cleanEmail.split('@')[0].replace(/[._-]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-  const user = {
-    name: cleanName,
-    email: cleanEmail,
-    avatar: cleanName.charAt(0).toUpperCase(),
-    googleId: 'g_' + Math.random().toString(36).substring(2, 10)
-  };
-  try {
-    localStorage.setItem('pfl_google_user', JSON.stringify(user));
-  } catch (_) {}
-  initGoogleAuthForReviews();
-  checkReviewDuplicateForCurrentFirm();
-  showToast('Signed in as ' + user.name + ' (' + user.email + ')');
 }
 
 function handleGoogleSignOut() {
   try {
     localStorage.removeItem('pfl_google_user');
+    if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+      google.accounts.id.disableAutoSelect();
+    }
   } catch (_) {}
   initGoogleAuthForReviews();
   checkReviewDuplicateForCurrentFirm();
@@ -66440,6 +66797,7 @@ function openWriteReviewModal(firmName = '') {
   if (err) err.style.display = 'none';
   if (succ) succ.style.display = 'none';
 
+  setupGoogleIdentityServices();
   initGoogleAuthForReviews();
   checkReviewDuplicateForCurrentFirm();
 
@@ -67789,6 +68147,19 @@ document.addEventListener('click',e=>{  const nav=document.querySelector('#heade
     return;
   }
 
+  // Click on locked submit button or locked notice
+  if (e.target.closest('#submitReviewBtn.btn-submit-locked, #reviewLockedNotice')) {
+    e.preventDefault();
+    const authCard = document.querySelector('#reviewAuthCard');
+    if (authCard) {
+      authCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      authCard.classList.add('auth-prompt-highlight');
+    }
+    showToast('🔒 Please sign in with Google above to unlock review submission');
+    handleGoogleSignIn();
+    return;
+  }
+
   // Reviews Navigation Tabs
   const revTabBtn = e.target.closest('[data-review-tab]');
   if (revTabBtn) {
@@ -67999,8 +68370,13 @@ document.addEventListener('submit', function(e) {
 
     if (!user || !user.email) {
       if (errBox) {
-        errBox.textContent = 'Please sign in with your Google account above to post your verified review.';
+        errBox.textContent = '🔒 Google Sign-In is required to submit a review. Please authenticate with your Google account above.';
         errBox.style.display = 'block';
+      }
+      const authCard = document.querySelector('#reviewAuthCard');
+      if (authCard) {
+        authCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        authCard.classList.add('auth-prompt-highlight');
       }
       handleGoogleSignIn();
       return;
@@ -68039,6 +68415,8 @@ document.addEventListener('submit', function(e) {
       firm,
       author: user.name || 'Verified Trader',
       email: user.email.toLowerCase(),
+      avatar: user.picture || user.avatar || '',
+      picture: user.picture || '',
       rating,
       title,
       body,
