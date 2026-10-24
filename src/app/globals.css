@@ -1,6 +1,29 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 :root {
+  /* Course Design Cards & Custom Tokens */
+  --clr-blue: #8F58FF;
+  --clr-green: #01c3a8;
+  --clr-orange: #ffb741;
+  --clr-red: #a63d2a;
+  --clr-purple: #8F58FF;
+  --clr-purple-dark: #7936FF;
+  --bg-dark: #0D0D1C;
+  --bg-footer: #080812;
+  --color-white: #fff;
+  --color-gray-light: #ddd;
+  --color-gray-medium: #363636;
+  --color-gray-dark: #1F1F2E;
+  --color-gray-very-dark: #0F101C;
+
+  /* Global Rebranded Gradients for All Pages */
+  --grad-brand: linear-gradient(135deg, #8F58FF 0%, #7936FF 100%);
+  --grad-brand-glow: radial-gradient(circle at 50% 0%, rgba(143, 88, 255, 0.24) 0%, transparent 70%);
+  --grad-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  --grad-border: linear-gradient(135deg, rgba(143, 88, 255, 0.45) 0%, rgba(121, 54, 255, 0.15) 50%, rgba(255, 255, 255, 0.05) 100%);
+  --grad-text: linear-gradient(135deg, #FFFFFF 0%, #D9D9D9 45%, #8F58FF 100%);
+
   /* Intellix Complete Colour Palette */
   --bg: #010117;                        /* BG: 100% */
   --surface: #0D0D1C;                   /* Black 2: 100% (Dark surfaces, cards, rows) */
@@ -187,4 +210,378 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ==========================================================================
+   COURSE DESIGN CARDS & GLOBAL CARD GRADIENT SYSTEM (ALL PAGES)
+   ========================================================================== */
+
+/* Grid container for course / feature cards */
+.course-cards-container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .course-cards-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .course-cards-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Outer Card Container */
+.card {
+  --card-accent: var(--clr-purple);
+  --card-accent-rgb: 143, 88, 255;
+  --card-bg-outer: #0D0D1C;
+  --card-bg-inner: #070712;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--card-bg-outer);
+  border-radius: 36px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.55);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px -12px rgba(0, 0, 0, 0.7), 0 0 30px -8px rgba(var(--card-accent-rgb), 0.25);
+}
+
+/* Color Accent Variables */
+.card.blue,
+.card.purple,
+.card.brand {
+  --card-accent: #8F58FF;
+  --card-accent-rgb: 143, 88, 255;
+}
+
+.card.purple-deep {
+  --card-accent: #7936FF;
+  --card-accent-rgb: 121, 54, 255;
+}
+
+.card.purple-light {
+  --card-accent: #B388FF;
+  --card-accent-rgb: 179, 136, 255;
+}
+
+.card.green {
+  --card-accent: #8F58FF;
+  --card-accent-rgb: 143, 88, 255;
+}
+
+.card.orange {
+  --card-accent: #7936FF;
+  --card-accent-rgb: 121, 54, 255;
+}
+
+.card.red {
+  --card-accent: #8F58FF;
+  --card-accent-rgb: 143, 88, 255;
+}
+
+/* Upper Main Card Surface with the Exact Ambient Corner Glow from Screenshot */
+.card .card-main,
+.card-ambient-gradient,
+.card-corner-glow {
+  position: relative;
+  border-radius: 28px;
+  padding: 24px 22px 26px 22px;
+  background-color: var(--card-bg-inner, #151419);
+  /* The Signature Top-Right Corner Radial Glow */
+  background-image: radial-gradient(
+    circle at 95% 5%,
+    rgba(var(--card-accent-rgb, 143, 88, 255), 0.48) 0%,
+    rgba(var(--card-accent-rgb, 143, 88, 255), 0.20) 28%,
+    rgba(var(--card-accent-rgb, 143, 88, 255), 0.06) 50%,
+    transparent 72%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top-color: rgba(var(--card-accent-rgb, 143, 88, 255), 0.45);
+  border-right-color: rgba(var(--card-accent-rgb, 143, 88, 255), 0.35);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+  transition: border-color 0.25s ease;
+}
+
+.card:hover .card-main {
+  border-top-color: rgba(var(--card-accent-rgb), 0.7);
+  border-right-color: rgba(var(--card-accent-rgb), 0.6);
+}
+
+/* Card Header */
+.card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.card .card-header .date {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #e6e6eb;
+  letter-spacing: -0.01em;
+}
+
+.card .card-header .btn-more {
+  cursor: pointer;
+}
+
+/* Card Body */
+.card .card-body {
+  text-align: center;
+  padding: 0 4px;
+}
+
+.card .card-body h3 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 0.375rem;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+}
+
+.card .card-body p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #9a9aa2;
+  margin-bottom: 2.25rem;
+  text-transform: capitalize;
+}
+
+/* Progress Layout (Left Title, Full Width Bar, Right Percentage) */
+.card .progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 1rem;
+}
+
+.card .progress .progress-label {
+  align-self: flex-start;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.card .progress .progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #27262d;
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card .progress .progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  background-color: var(--card-accent);
+  box-shadow: 0 0 12px rgba(var(--card-accent-rgb), 0.85);
+  transition: width 0.4s ease;
+}
+
+.card .progress .progress-value {
+  align-self: flex-end;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+/* Card Footer */
+.card .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 10px 4px 10px;
+}
+
+.card .card-footer ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card .card-footer ul li {
+  margin-left: -0.625rem;
+  position: relative;
+  transition: transform 0.2s ease, z-index 0.2s ease;
+}
+
+.card .card-footer ul li:first-child {
+  margin-left: 0;
+}
+
+.card .card-footer ul li:hover {
+  transform: translateY(-2px);
+  z-index: 10;
+}
+
+.card .card-footer ul li img {
+  width: 2.375rem;
+  height: 2.375rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 2px solid var(--card-bg-outer);
+}
+
+/* Add Button: Solid colored circular badge */
+.card .card-footer .btn-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.375rem;
+  height: 2.375rem;
+  border-radius: 9999px;
+  background-color: var(--card-accent);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(var(--card-accent-rgb), 0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card .card-footer .btn-add:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(var(--card-accent-rgb), 0.7);
+}
+
+/* Countdown Pill Button */
+.card .card-footer .btn-countdown {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.625rem 1.375rem;
+  border-radius: 9999px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #222127;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.card .card-footer .btn-countdown:hover {
+  background-color: #2b2a33;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* ==========================================================================
+   GLOBAL CARD & GRADIENT SYSTEM FOR ALL PAGES
+   ========================================================================== */
+
+/* 1. Brand Elevated Card */
+.card-brand,
+.brand-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card-brand:hover,
+.brand-card:hover {
+  border-color: var(--brand-tint-border);
+  box-shadow: 0 12px 36px -8px rgba(143, 88, 255, 0.22);
+  transform: translateY(-2px);
+}
+
+/* 2. Glassmorphism Card */
+.card-glass {
+  background: rgba(13, 13, 28, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+}
+
+/* 3. Gradient Border Card */
+.card-gradient-border {
+  position: relative;
+  background: var(--surface);
+  border-radius: 1.25rem;
+  z-index: 1;
+}
+
+.card-gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--grad-border);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* 4. Ambient Purple Glow Card */
+.card-glow {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  box-shadow: 0 0 40px -10px rgba(143, 88, 255, 0.35);
+}
+
+/* 5. Gradient Text Utility */
+.gradient-text,
+.brand-gradient-text {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-purple {
+  background: var(--grad-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 6. Section & Page Ambient Glow Backgrounds */
+.page-hero-gradient {
+  background-image: 
+    radial-gradient(circle at 50% -20%, rgba(143, 88, 255, 0.28) 0%, transparent 60%),
+    radial-gradient(circle at 85% 20%, rgba(121, 54, 255, 0.15) 0%, transparent 45%);
+}
+
+.page-ambient-glow {
+  position: relative;
+}
+
+.page-ambient-glow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  background: radial-gradient(ellipse at top, rgba(143, 88, 255, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
