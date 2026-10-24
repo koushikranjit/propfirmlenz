@@ -9993,11 +9993,40 @@ p, .text-muted, .section-title p,
   gap: 16px !important;
   flex-wrap: wrap !important;
 }
+.filters {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+.filter-sort-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  flex-wrap: wrap !important;
+}
+.desktop-meta-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-left: 6px !important;
+}
+.mobile-meta-links {
+  display: none !important;
+}
+@media (max-width: 991px) {
+  .desktop-meta-links {
+    display: none !important;
+  }
+  .mobile-meta-links {
+    display: flex !important;
+  }
+}
 .filter-label-chip {
   font-size: 12px !important;
   font-weight: 700 !important;
   color: #9AA6BD !important;
-  padding: 6px 10px !important;
+  padding: 6px 4px !important;
 }
 .filter-sort-pills {
   display: flex !important;
