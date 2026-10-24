@@ -13327,63 +13327,143 @@ main,
   color: var(--text) !important;
 }
 
-/* 2. Dark Surfaces: Black 2 (#0D0D1C), 1px Border (White 10), Hover Black 3 (#0F101C) */
-.panel,
-.offers-top-panel,
-.futures-panel,
+/* 2. Separate Gradient Cards Across All Pages (Top-Right Purple Ambient Glow) */
+.rank-card,
+.favorite-firm-row,
+.offer-row,
 .offer,
 #offers .offer,
 .exclusive-offer-card,
 .future,
 #offers .future,
 .alt-card,
-.rank-card,
+.payout-tracker-row,
+.payout-row,
 .payout-stat-card,
 .payout-block,
-.reviews-table-wrapper-match,
-.profile-card,
-.faq-card,
-.modal-card,
-.contact-card,
-.retired-program,
-.verify-step,
+.payout-headline,
+.rev-firm-row-match,
+.pfl-firm-row,
+.profile-review-card,
+.pfl-published-review,
+.compare-row,
+.info-panel,
 .resource,
 .resource-card-3d,
 .video,
-.profile-scorecard-grid > div,
-.profile-review-card,
-.payout-headline,
-.payout-table,
-.payout-row,
-.rev-firm-row-match,
-.challenge-row {
-  background-color: var(--surface) !important;
-  background: var(--surface) !important;
-  background-image: none !important;
-  border: 1px solid var(--border) !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.40) !important;
+.faq-card,
+.modal-card,
+.contact-card,
+.profile-card,
+.verify-step,
+.retired-program,
+.challenge-row,
+.panel,
+.offers-top-panel,
+.futures-panel {
+  background: radial-gradient(ellipse 65% 55% at 92% 10%, rgba(143, 88, 255, 0.22) 0%, rgba(121, 54, 255, 0.08) 42%, transparent 72%), linear-gradient(145deg, #161528 0%, #10101F 55%, #0B0B16 100%) !important;
+  border: 1px solid rgba(143, 88, 255, 0.22) !important;
+  border-top: 1px solid rgba(185, 145, 255, 0.38) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 10px 28px -4px rgba(0, 0, 0, 0.65), 0 0 18px -2px rgba(143, 88, 255, 0.12) !important;
+  margin-bottom: 12px !important;
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.24s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, background 0.2s ease !important;
 }
 
-.panel:hover,
+.rank-card:hover,
+.favorite-firm-row:hover,
+.offer-row:hover,
 .offer:hover,
 #offers .offer:hover,
 .exclusive-offer-card:hover,
 .future:hover,
 #offers .future:hover,
 .alt-card:hover,
-.rank-card:hover,
-.payout-stat-card:hover,
+.payout-tracker-row:hover,
 .payout-row:hover,
+.payout-stat-card:hover,
+.payout-block:hover,
 .rev-firm-row-match:hover,
-.challenge-row:hover,
+.pfl-firm-row:hover,
+.profile-review-card:hover,
+.compare-row:hover,
 .resource:hover,
 .resource-card-3d:hover,
 .video:hover,
-.profile-review-card:hover {
-  background-color: var(--surface-raised) !important;
-  background: var(--surface-raised) !important;
-  background-image: none !important;
-  border-color: var(--border-strong) !important;
+.faq-card:hover,
+.contact-card:hover,
+.profile-card:hover,
+.panel:hover {
+  transform: translateY(-2px) !important;
+  background: radial-gradient(ellipse 65% 55% at 92% 10%, rgba(143, 88, 255, 0.34) 0%, rgba(121, 54, 255, 0.14) 45%, transparent 75%), linear-gradient(145deg, #1C1934 0%, #131226 55%, #0E0E1B 100%) !important;
+  border-color: rgba(143, 88, 255, 0.55) !important;
+  border-top-color: rgba(215, 180, 255, 0.75) !important;
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.75), 0 0 28px -2px rgba(143, 88, 255, 0.28) !important;
+}
+
+/* First Rank Card Prestige Glow */
+.rank-card:first-child {
+  background: radial-gradient(ellipse 65% 55% at 92% 10%, rgba(245, 158, 11, 0.22) 0%, rgba(143, 88, 255, 0.15) 45%, transparent 72%), linear-gradient(145deg, #191629 0%, #10101F 55%, #0B0B16 100%) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+  border-top-color: rgba(251, 191, 36, 0.60) !important;
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.7), 0 0 24px -2px rgba(245, 158, 11, 0.22) !important;
+}
+.rank-card:first-child:hover {
+  background: radial-gradient(ellipse 65% 55% at 92% 10%, rgba(245, 158, 11, 0.34) 0%, rgba(143, 88, 255, 0.20) 45%, transparent 75%), linear-gradient(145deg, #201b34 0%, #141328 55%, #0E0E1B 100%) !important;
+  border-color: rgba(245, 158, 11, 0.65) !important;
+  border-top-color: rgba(251, 191, 36, 0.85) !important;
+  box-shadow: 0 16px 38px -4px rgba(0, 0, 0, 0.8), 0 0 32px -2px rgba(245, 158, 11, 0.35) !important;
+}
+
+/* Container Lists Transparency & Separation */
+#rankList:not(.alt-grid),
+.favorites-list,
+.offer-list,
+.payout-tracker-table,
+.payout-table,
+.pfl-directory,
+.reviews-table-wrapper-match,
+.compare-table {
+  background: transparent !important;
+  border: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+#rankList.alt-grid {
+  background: transparent !important;
+  border: none !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.alt-card {
+  display: grid !important;
+  grid-template-columns: 52px 1fr auto !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 16px 18px !important;
+}
+
+.alt-card .logo-wrap {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+}
+
+.alt-card .logo-wrap img,
+.alt-card .firm-logo {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
 }
 
 /* 3. Primary Buttons & Highlights: #8F58FF, Hover #7936FF */
